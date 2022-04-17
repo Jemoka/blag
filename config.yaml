@@ -3,6 +3,15 @@ languageCode: en-us
 title: knowledgebase
 refLinksErrorLevel: WARNING
 
+
+markup:
+  highlight:
+    codeFences: true
+    noClasses: true
+    noHl: false
+    style: monokailight
+    tabWidth: 4
+
 params:
   author: Houjun Liu
   description: eat a chicken efficiently

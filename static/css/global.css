@@ -157,3 +157,7 @@ footer {
     font-size: 12px;
     font-weight: 300;
 }
+
+.highlight>pre {
+    background-color: inherit !important;
+}
