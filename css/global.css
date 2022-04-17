@@ -201,7 +201,8 @@ footer {
 }
 
 #title {
-    margin-top: 23px;
+    margin-top: 27px;
+    font-style: italic;
 }
 
 @media only screen and (min-width: 820px) {
@@ -210,3 +211,30 @@ footer {
     }
 }
 
+#search-query {
+    width: 100%;
+    max-width: 550px;
+    border: 0;
+    border-radius: 4px;
+    height: 30px;
+    padding-left: 8px;
+    border: 2px solid transparent;
+    transition: border-color 0.5s;
+}
+
+#search-query:hover {
+    border-color: #f4f5ed;
+}
+
+#search-query:focus {
+    border-color: #eaedad;
+    outline:none;
+}
+
+mark {
+    background: #d3dff5;
+}
+
+#searchutil {
+    margin: 30px 0;
+}
