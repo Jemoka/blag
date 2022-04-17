@@ -24,13 +24,15 @@ main {
 
 header {
     padding-top: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    transform: translateY(10px);
 }
 
 #header-name {
     color: #434d5f;
     font-weight: 700;
     font-size: 35px;
+    padding-right: 10px;
 }
 
 img {
@@ -72,8 +74,8 @@ h1,h2,h3,h4,h5 {
 }
 
 #socialpanel {
-    display: flex;
-    gap: 17px;
+    display: inline-flex;
+    gap: 10px;
 }
 
 .ic {
@@ -86,7 +88,7 @@ h1,h2,h3,h4,h5 {
     outline:none;
     text-decoration:none;
     color: inherit;
-    font-size: min(16px, 3.9vw);
+    font-size: min(16px, 3.6vw);
     padding-top: 3px;
 }
 
@@ -141,14 +143,28 @@ p {
     text-decoration: none;
     color: #5c5e28;
     border-bottom: 1px dotted #bcbf7c;
+    transition: all 0.3s;
+}
 
+#TableOfContents a:hover {
+    border-color: #eaedad;
+    color: #a4a65d;
+}
+
+aside#toc > h1 {
+    margin: 0;
 }
 
 aside#toc {
     display:inline;
-    float:right;
-    padding-left: 30px;
-    padding-bottom: 30px;
+    padding: 15px;
+    padding-top: 0;
+}
+
+@media only screen and (min-width: 820px) {
+    aside#toc {
+        float:right;
+    }
 }
 
 footer {
@@ -158,6 +174,19 @@ footer {
     font-weight: 300;
 }
 
-.highlight>pre {
+.highlight pre {
     background-color: inherit !important;
+    white-space: pre-wrap
 }
+
+#title h1 {
+    box-shadow:
+        inset 0 -0.180em #eaedad;
+    display: inline;
+}
+
+#title {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
