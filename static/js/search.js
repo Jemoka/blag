@@ -1,3 +1,20 @@
+var searchQuery = "";
+// executeSearch(searchQuery);
+
+var res = $("#search-results");
+var timer = null;
+$("#search-query").keyup((e) => {
+    if (timer) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(function() {
+        res.html("");
+        searchQuery = e.target.value
+        if (searchQuery!="") 
+            executeSearch(searchQuery);
+    }, 200);
+})
+
 summaryInclude=60;
 var fuseOptions = {
   shouldSort: true,
@@ -16,14 +33,13 @@ var fuseOptions = {
   ]
 };
 
-
-var searchQuery = param("s");
-if(searchQuery){
-  $("#search-query").val(searchQuery);
-  executeSearch(searchQuery);
-}else {
-  $('#search-results').append("<p>Please enter a word or phrase above</p>");
-}
+// var searchQuery = param("s");
+// if(searchQuery){
+//   $("#search-query").val(searchQuery);
+//   executeSearch(searchQuery);
+// }else {
+//   $('#search-results').append("<p>Please enter a word or phrase above</p>");
+// }
 
 
 
@@ -32,7 +48,6 @@ function executeSearch(searchQuery){
     var pages = data;
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
-    console.log({"matches":result});
     if(result.length > 0){
       populateResults(result);
     }else{
