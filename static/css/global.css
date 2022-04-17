@@ -239,3 +239,9 @@ mark {
 #searchutil {
     margin: 30px 0;
 }
+
+hr {
+    height: 1px;
+    background-color: #e0e0e0;
+    border: none;
+}
