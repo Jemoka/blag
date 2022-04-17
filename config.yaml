@@ -1,0 +1,12 @@
+baseURL: 'http://example.org/'
+languageCode: en-us
+title: knowledgebase
+refLinksErrorLevel: WARNING
+
+params:
+  author: Houjun Liu
+  description: eat a chicken efficiently
+
+markup.goldmark.renderer:
+  unsafe: true
+

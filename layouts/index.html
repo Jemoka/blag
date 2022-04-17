@@ -1,0 +1,7 @@
+{{ define "main" }}
+	<main>
+          {{ with .Site.GetPage "/KBhindex.org"}}
+              {{.Content}}
+          {{ end }}
+	</main>
+{{ end }}

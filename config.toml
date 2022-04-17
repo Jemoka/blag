@@ -1,0 +1,16 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'knowledgebase'
+refLinksErrorLevel = "WARNING"
+
+[angolia]
+    index = "blog"
+    appID = "WMIN97VLG4"
+
+[params]
+    author = "Houjun Liu"
+    description = "eat a chicken efficiently"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
