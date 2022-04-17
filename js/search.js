@@ -15,6 +15,12 @@ $("#search-query").keyup((e) => {
     }, 200);
 })
 
+$("#search-query").change((e) => {
+    searchQuery = e.target.value
+    if (searchQuery!="") 
+        executeSearch(searchQuery);
+})
+
 summaryInclude=60;
 var fuseOptions = {
   shouldSort: true,
