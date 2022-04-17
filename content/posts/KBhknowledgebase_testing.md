@@ -327,3 +327,11 @@ We can see that this result agrees with that above.
 
 -   The object is currently rolling perfectly; apart from counteracting slide, friction does not translate the point of contact (otherwise, it would be doing sliding) at all---hence doing no work.
 -   The slope of the ramp, \\(\theta\\) is not in the expression for \\(\omega\_f\\) --- meaning it has no influence on the final angular velocity.
+
+
+## A table! {#a-table}
+
+| Here | Is   | a                                                           | table |
+|------|------|-------------------------------------------------------------|-------|
+| its  | just | [Authoritarianism]({{< relref "KBhauthoritarianism.md" >}}) | 12    |
+| 3    | 31   | ia                                                          | 4     |
