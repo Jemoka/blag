@@ -32,7 +32,7 @@ header {
     color: #434d5f;
     font-weight: 700;
     font-size: 35px;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 img {
@@ -76,6 +76,7 @@ h1,h2,h3,h4,h5 {
 #socialpanel {
     display: inline-flex;
     gap: 10px;
+    margin-top: 5px;
 }
 
 .ic {
@@ -89,7 +90,21 @@ h1,h2,h3,h4,h5 {
     text-decoration:none;
     color: inherit;
     font-size: min(16px, 3.6vw);
-    padding-top: 3px;
+    margin-top: 3px;
+    transform: translateY(-3px);
+}
+
+#header-search {
+    padding-right: 10px;
+    margin-right: 4px;
+    border-right: 1px solid #bababa;
+    padding-bottom: 3px;
+    color: #7d7d7d;
+    transition: color 0.5s;
+}
+
+#header-search:hover {
+    color: #454545;
 }
 
 #header-github {
