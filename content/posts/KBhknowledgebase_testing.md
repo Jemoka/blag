@@ -1,9 +1,10 @@
 +++
+title = "knowledgebase testing page"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-[knowledgebase testing]({{< relref "KBhknowledgebase_testing.md" >}}) is a space to test the knowledgebase.
+[knowledgebase testing]({{< relref "KBhknowledgebase_testing.md" >}}) is a space to test the knowledgebase!
 
 
 ## Hi its the index {#hi-its-the-index}
@@ -15,11 +16,11 @@ Studies indicate that cold exposure cold exposure can activate [AgRP]({{< relref
 
 However, cold exposure also trigger energy expenditure, and seems contradictory but _not really why?_ \\(12\chi\delta\\)
 
+[Federal Project Number One]({{< relref "KBhfederal_project_number_one.md" >}})
+
 \begin{equation}
    \iint\_0^1 \left(\frac{1}{331}\sqrt{32\chi}\right)
 \end{equation}
-
-eyooo
 
 {{< figure src="/ox-hugo/2022-04-16_18-22-10_screenshot.png" >}}
 

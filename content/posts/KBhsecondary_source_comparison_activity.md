@@ -1,4 +1,5 @@
 +++
+title = "Bluest Eye: secondary source comparison activity"
 author = ["Houjun Liu"]
 draft = false
 +++

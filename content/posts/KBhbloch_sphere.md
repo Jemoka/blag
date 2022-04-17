@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The [bloch sphere]({{< relref "KBhbloch_sphere.md" >}}) is a sphere encoding all possible probabilities shared between two axis, \\(|u\big>\\) and \\(|d\big>\\).
+The [bloch sphere]({{< relref "KBhbloch_sphere.md" >}}) is a sphere encoding all possible probabilities of a [qubit]({{< relref "KBhqubits.md" >}}) shared between two axis, \\(|u\big>\\) and \\(|d\big>\\).
 
 {{< figure src="/ox-hugo/2022-03-19_21-56-36_screenshot.png" >}}
 

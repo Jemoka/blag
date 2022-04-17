@@ -4,8 +4,6 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-:ID:       4AEBACF9-4715-4CF6-9538-585B31CBDA74
-
 criticized the [New Deal]({{< relref "KBhnew_deal.md" >}}) from all sides. Senator Huy P. Long claimed to "show our wealth." nullification from conservative supreme court, FDR threatened to restructure + hurts his coalition.
 
 -   FDR ordered cuts in spending

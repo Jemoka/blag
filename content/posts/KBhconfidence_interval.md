@@ -1,4 +1,5 @@
 +++
+title = "confidence interval"
 author = ["Houjun Liu"]
 draft = false
 +++
