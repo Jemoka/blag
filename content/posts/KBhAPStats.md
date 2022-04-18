@@ -31,3 +31,4 @@ draft = false
 ## Notes {#notes}
 
 -   [confidence interval]({{< relref "KBhconfidence_interval.md" >}})
+-   [hypothesis testing]({{< relref "KBhhypothesis_testing.md" >}})
