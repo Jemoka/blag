@@ -8,6 +8,13 @@ draft = false
 
 The core logic of [hypothesis testing]({{< relref "KBhhypothesis_testing.md" >}}): have a metric, do tests, calculate probability that the outcome could have happened given the metric is true.
 
+Examples include
+
+-   [t-test]({{< relref "KBht_test.md" >}}) (for sample means)
+-   [z-test]({{< relref "KBhz_test.md" >}}) (for sample proportions)
+
+Common to all [hypothesis tests]({{< relref "KBhhypothesis_testing.md" >}}) are the following terms.
+
 
 ## null hypothesis {#null-hypothesis}
 
@@ -29,33 +36,7 @@ the [p-value](#p-value) of a [hypothesis test]({{< relref "KBhhypothesis_testing
 
 To figure out the above probability, you could either simulate the occurrence and look at a histogram (more common for [AP Statistics]({{< relref "KBhAPStats.md" >}}) anyways) or measure a few other statistics. We will talk about them later.
 
-To use [p-value](#p-value) as a [hypothesis test]({{< relref "KBhhypothesis_testing.md" >}}), the sample has to meet the [conditions for inference](#conditions-for-inference).
-
-
-### conditions for inference {#conditions-for-inference}
-
--   has to be random
--   has to be reasonably normal
--   each sample has to be independent (or 10% rule)
-
-
-### use a z-statistic to find p-value {#use-a-z-statistic-to-find-p-value}
-
-1.  Given a sample proportion, calculate the sample proportion standard deviation (given on the formula sheet)
-2.  Then, divide the difference between measured and null proportions to figure \\(z\\)
-
-that is,
-
-\begin{equation}
-   z = \frac{\hat{p}-p\_0}{\sqrt{\frac{p\_0(1-p\_0)}{n}}}
-\end{equation}
-
-Look up the probability of \\(z\\) taking place on a \\(z\\) table. Then, \\(1-z\\) would yield the \\(p\\) vaule.
-
-
-## significance level {#significance-level}
-
-[significance level](#significance-level) is the level by which one would accept a [p-value](#p-value) is being indicative of the success of a test. We usually use the letter \\(\alpha\\) to denote this.
+To use [p-value](#p-value) as a [hypothesis test]({{< relref "KBhhypothesis_testing.md" >}}), the sample has to meet the [conditions for inference]({{< relref "KBhz_test.md#conditions-for-inference--z-test" >}}).
 
 
 ## Type I Error {#type-i-error}
@@ -70,6 +51,11 @@ The probability of having a [Type I Error](#type-i-error) is the [significance l
 A [Type II Error](#type-ii-error) takes place when you accept the [null hypothesis](#null-hypothesis) during [hypothesis testing]({{< relref "KBhhypothesis_testing.md" >}}) even while its false.
 
 The probability of having a [Type II Error](#type-ii-error) is the conjugate of the [power](#power--statistics) of a test.
+
+
+## significance level {#significance-level}
+
+[significance level](#significance-level) is the level by which one would accept a [p-value](#p-value) is being indicative of the success of a test. We usually use the letter \\(\alpha\\) to denote this.
 
 
 ## power (statistics) {#power--statistics}

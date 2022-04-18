@@ -18,13 +18,8 @@ draft = false
 
 ## Backlog {#backlog}
 
--   T-Tests, Z-Tests
 -   Chi-square
 -   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf
--   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf
--   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf
--   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf
--   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf, \\(\hat{p}\\)
 -   file:///Users/houliu/Documents/School Work/The Bible/APStats/APStats5Steps.pdf
 
 
@@ -32,3 +27,4 @@ draft = false
 
 -   [confidence interval]({{< relref "KBhconfidence_interval.md" >}})
 -   [hypothesis testing]({{< relref "KBhhypothesis_testing.md" >}})
+-   [t-statistics]({{< relref "KBht_statistics.md" >}})
