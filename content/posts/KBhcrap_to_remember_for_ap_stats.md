@@ -50,3 +50,5 @@ For lines:
 Note that p value from regression outputs are two-tailed. So divide by 2 if you want a one-tail result.
 
 {{< figure src="/ox-hugo/2022-04-20_23-45-38_screenshot.png" >}}
+
+<http://www.ltcconline.net/greenl/java/Statistics/catStatProb/categorizingStatProblemsJavaScript.html>

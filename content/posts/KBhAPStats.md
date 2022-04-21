@@ -32,3 +32,4 @@ See also [crap to remember for AP Stats]({{< relref "KBhcrap_to_remember_for_ap_
 -   [t-statistics]({{< relref "KBht_statistics.md" >}})
 -   [chi-square]({{< relref "KBhchi_square.md" >}})
 -   [data inference]({{< relref "KBhdata_inference.md" >}})
+-   [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}})

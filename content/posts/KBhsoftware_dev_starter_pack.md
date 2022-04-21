@@ -149,9 +149,9 @@ Frontend + Backend.
 
 ### Game development {#game-development}
 
-Game development is honestly one of the most horribly complicated and richly science-y part of CS. I am not super experience in game development but [[learning C++ and mastering [Unity](https://docs.unity3d.com/560/Documentation/Manual/UnityBasics.html), the game engine.
+Game development is honestly one of the most horribly complicated and richly science-y part of CS. I am not super experience in game development but learning C++ and mastering [Unity](https://docs.unity3d.com/560/Documentation/Manual/UnityBasics.html), the game engine. Oh, right, game dev is the _only_, and I repeat _only_ (with invisible footnotes and qualifications) reason why you should be writing code on Windows.
 
-A friend [is good at game dev](https://github.com/Radbuglet/), I can make in intro if needed.
+A friend [is good at game dev](https://github.com/Radbuglet/), I can make an intro if needed.
 
 
 ## Good Luck! {#good-luck}
