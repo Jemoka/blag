@@ -40,3 +40,25 @@ Once you have a \\(t\\) value, you look at the test and what its asking (above t
 A paired t-test looks at pairs of values as [statistic]({{< relref "KBhstastistic.md" >}}) in itself (i.e. substracts directly, etc.) Think about it as a compound statistic, so you are doing a \\(t\\) test on one value, it just happened to be composed/calculated by a pair of values. (for instance, "difference between mother-father glucose levels.")
 
 A two-staple t-test looks at two independent events and compares them. Hence, they are two random variables and should be manipulated as such.
+
+
+## t-tests for regression lines {#t-tests-for-regression-lines}
+
+regression lines can be imbibed with predictive power and confidence intervals:
+
+\begin{equation}
+   m \pm t^\* SE\_b
+\end{equation}
+
+where \\(m\\) is the slope and \\(SE\_b\\) is the [standard error]({{< relref "KBhstandard_error.md" >}}) of the line.
+
+
+### conditions for inference (slops) {#conditions-for-inference--slops}
+
+Acronym: LINEAR
+
+-   Linear
+-   Independent (observations are independent or \\(<10\\%\\))
+-   Normal (for a given \\(x\\), \\(y\\) is [normally distributed]({{< relref "KBhnormal_distribution.md" >}}))
+-   Equal variance (for any given \\(x\\), it should have a roughly equal standard deviation in \\(y\\))
+-   Random

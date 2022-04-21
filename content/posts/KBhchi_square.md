@@ -75,6 +75,10 @@ Awesome! Now, [calculate chi-square](#calculating-chi-square) with each cell of 
 
 The [chi-square test for independence](#chi-square-test-for-independence) is a test designed to accept-reject the null hypothesis of "no association between two variables."
 
+Essentially, you leverage the fact that "AND" relationships are multiplicative probabilities. Therefore, the expected outcomes are simply the multiplied/fraction of sums:
+
+{{< figure src="/ox-hugo/2022-04-20_22-37-43_screenshot.png" >}}
+
 
 ## calculating chi-square {#calculating-chi-square}
 
