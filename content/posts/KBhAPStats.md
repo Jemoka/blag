@@ -28,3 +28,4 @@ draft = false
 -   [confidence interval]({{< relref "KBhconfidence_interval.md" >}})
 -   [hypothesis testing]({{< relref "KBhhypothesis_testing.md" >}})
 -   [t-statistics]({{< relref "KBht_statistics.md" >}})
+-   [data inference]({{< relref "KBhdata_inference.md" >}})

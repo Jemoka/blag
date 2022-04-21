@@ -12,6 +12,7 @@ Examples include
 
 -   [t-test]({{< relref "KBht_test.md" >}}) (for sample means)
 -   [z-test]({{< relref "KBhz_test.md" >}}) (for sample proportions)
+-   [chi-square test]({{< relref "KBhchi_square.md#chi-square-test" >}}) (for sample categories)
 
 Common to all [hypothesis tests]({{< relref "KBhhypothesis_testing.md" >}}) are the following terms.
 

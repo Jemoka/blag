@@ -9,7 +9,7 @@ You can use atoms as many different types of [qubits]({{< relref "KBhqubits.md" 
 
 ## manipulating physical qubits {#manipulating-physical-qubits}
 
-To make [physical qubits]({{< relref "KBhphysical_qubits.md" >}}) go to different states, we will again use something in the ancillary states. Rotating it to $z$---leverage one lazer to make it fall; \\(rx\\), \\(ry\\), we leverage combinations of two light.
+To make [physical qubits]({{< relref "KBhphysical_qubits.md" >}}) go to different states, we will again use something in the ancillary states. Rotating it to \\(z\\) --- leverage one lazer to make it fall; \\(rx\\), \\(ry\\), we leverage combinations of two light.
 
 
 ## various qubit implementations {#various-qubit-implementations}
