@@ -21,7 +21,7 @@ To use [t-statistics]({{< relref "KBht_statistics.md" >}}), you have to meet thr
 Begin by finding a \\(t\\) statistic. Remember that:
 
 \begin{equation}
-   t = \frac{statistic-parameter}{stddev}
+   t = \frac{statistic-parameter}{std\ err}
 \end{equation}
 
 In this case, when we are dealing with sample means, then, we have:
@@ -30,7 +30,11 @@ In this case, when we are dealing with sample means, then, we have:
    t = \frac{\bar{x}-\mu\_0}{\frac{S\_x}{\sqrt{n}}}
 \end{equation}
 
-where \\(\bar{x}\\) is the measured mean, \\(\mu\_0\\) is the [null hypothesis]({{< relref "KBhhypothesis_testing.md#null-hypothesis" >}}) mean, and \\(S\_x\\) the sample standard deviation.
+where \\(\bar{x}\\) is the measured mean, \\(\mu\_0\\) is the [null hypothesis]({{< relref "KBhhypothesis_testing.md#null-hypothesis" >}}) mean, and \\(S\_x\\) the sample's sample standard deviation.
+
+Quick note:
+
+\\(SE = \frac{S}{\sqrt{n}}\\)  because the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) states that sample means for their own distribution, whose variance equals the original variance divided by the sample size. Hence, the standard deviation of the means would be the sample standard deviation divided by the square root of the sample size.
 
 Once you have a \\(t\\) value, you look at the test and what its asking (above the mean? below the mean? etc.) and add up the tail probabilities.
 
@@ -50,7 +54,9 @@ regression lines can be imbibed with predictive power and confidence intervals:
    m \pm t^\* SE\_b
 \end{equation}
 
-where \\(m\\) is the slope and \\(SE\_b\\) is the [standard error]({{< relref "KBhstandard_error.md" >}}) of the line.
+where \\(m\\) is the slope and \\(SE\_b\\) is the [standard error]({{< relref "KBhstandard_error.md" >}}) of the regression line.
+
+Note that the degrees of freedom used for \\(t^\*\\) is the number of data points, minus **two**.
 
 
 ### conditions for inference (slops) {#conditions-for-inference--slops}

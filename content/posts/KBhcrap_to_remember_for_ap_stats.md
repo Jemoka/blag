@@ -31,3 +31,22 @@ draft = false
 {{< figure src="/ox-hugo/2022-04-20_22-49-30_screenshot.png" >}}
 
 {{< figure src="/ox-hugo/2022-04-20_23-19-06_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-04-20_23-20-47_screenshot.png" >}}
+
+-   S: standard deviation of residuals
+-   R-sq: how much of varience in dep. var can be explained by indp. var
+
+{{< figure src="/ox-hugo/2022-04-20_23-21-56_screenshot.png" >}}
+
+SE: estimate of standard deviation of the random var. that is slope.
+
+{{< figure src="/ox-hugo/2022-04-20_23-34-45_screenshot.png" >}}
+
+For lines:
+
+{{< figure src="/ox-hugo/2022-04-20_23-39-50_screenshot.png" >}}
+
+Note that p value from regression outputs are two-tailed. So divide by 2 if you want a one-tail result.
+
+{{< figure src="/ox-hugo/2022-04-20_23-45-38_screenshot.png" >}}
