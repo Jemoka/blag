@@ -71,6 +71,11 @@ We will then figure the expected outcomes:
 Awesome! Now, [calculate chi-square](#calculating-chi-square) with each cell of measured outcomes. Calculate degrees of freedom by (num_row-1)\*(num_col-1).
 
 
+## chi-square test for independence {#chi-square-test-for-independence}
+
+The [chi-square test for independence](#chi-square-test-for-independence) is a test designed to accept-reject the null hypothesis of "no association between two variables."
+
+
 ## calculating chi-square {#calculating-chi-square}
 
 \begin{equation}
