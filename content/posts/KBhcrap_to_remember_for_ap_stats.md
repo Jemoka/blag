@@ -51,4 +51,21 @@ Note that p value from regression outputs are two-tailed. So divide by 2 if you 
 
 {{< figure src="/ox-hugo/2022-04-20_23-45-38_screenshot.png" >}}
 
-<http://www.ltcconline.net/greenl/java/Statistics/catStatProb/categorizingStatProblemsJavaScript.html>
+Multiplication changes mean as well as well as standard deviation. Adding changes mean but not standard deviation.
+
+Expected value of the sum and differences of random variables are just the sums and differences of their expected value. \\(S = X+Y, \bar{S} = \bar{X}+\bar{Y}\\).
+
+Variance of random variables are just the sum and differences of their variance. \\(S=X+Y,{\sigma^2}\_S = {\sigma^2}\_X+{\sigma^2}\_Y\\).
+
+\#WHAPS
+
+-   what test
+-   what hypothesis and what [significance level]({{< relref "KBhhypothesis_testing.md#significance-level" >}})
+-   assumptions and conditions; state!
+    -   random
+    -   independent: \\(\le 10\\%\\) of population.
+    -   t and z special: normal (z \\(np, n(1-p) \leq 10\\), t \\(n>30\\) or given)
+    -   chi-square special: \\(\forall\ EV > 5\\)
+-   p: z-statistic that would
+
+PICCI
