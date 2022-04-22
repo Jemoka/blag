@@ -68,4 +68,4 @@ Variance of random variables are just the sum and differences of their variance.
     -   chi-square special: \\(\forall\ EV > 5\\)
 -   p: z-statistic that would
 
-PICCI
+{{< figure src="/ox-hugo/2022-04-21_21-28-45_screenshot.png" >}}
