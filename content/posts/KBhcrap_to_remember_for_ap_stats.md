@@ -69,3 +69,33 @@ Variance of random variables are just the sum and differences of their variance.
 -   p: z-statistic that would
 
 {{< figure src="/ox-hugo/2022-04-21_21-28-45_screenshot.png" >}}
+
+XD: Control (control for confounding and bias, placebo, etc.), Randomization (spread uncontrolled variability), Replication (need to have adequate units and ability to be repeated)
+
+{{< figure src="/ox-hugo/2022-04-21_22-30-54_screenshot.png" >}}
+
+=&gt; Describing a distribution
+
+-   Center: Mean, Median, or Mode? figure by skew
+-   Shape: Symmetric vs Skewed? Unimodal vs Bimodal
+-   Spread: Range and Inter-Quartile Range
+-   Outlier: anything more than 1.5\*IQR away
+-   Context: what the distribution shows
+
+"Experimental Unit": a physic entity that's the primary unit of interest in a research objective.
+
+Conditions for [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}):
+
+-   Binary
+-   Independent
+-   Fixed number of trials
+-   All trials with same probability
+
+Conditions for geometric distrubiton
+
+-   Binary
+-   Independent
+-   Fixed number of successes
+-   All trials with same probability
+
+****state the thing, state the conditions****: "normal distribution with n= s=", [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) with n= p= etc.
