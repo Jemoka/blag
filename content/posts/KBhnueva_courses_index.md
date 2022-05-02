@@ -8,6 +8,8 @@ draft = false
 ## NUS Secondary School Other Duties {#nus-secondary-school-other-duties}
 
 -   [AP Statistics Index]({{< relref "KBhAPStats.md" >}})
+-   [AP Phys C Mech Index]({{< relref "KBhap_phys_c_mech_index.md" >}})
+-   [bioinformatics]({{< relref "KBhbioinformatics.md" >}})
 
 
 ## NUS-MATH580 QIC {#nus-math580-qic}
@@ -25,6 +27,7 @@ Backlog: [Finite State Machine]({{< relref "KBhfinite_state_machine.md" >}})
 | Date                                                                                         | Topic                                                                                                                                                    |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-07 Thu&gt;</span></span> | [stable matching problem]({{< relref "KBhstable_matching_problem.md" >}}), [stable matching algorithm]({{< relref "KBhstable_matching_algorithm.md" >}}) |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-02 Mon&gt;</span></span> | [dynamic programming]({{< relref "KBhdynamic_programming.md" >}})                                                                                        |
 
 
 ## NUS-HIST301 American History {#nus-hist301-american-history}
