@@ -20,14 +20,14 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-08 Fri&gt;</span></span> | [making qubits interact]({{< relref "KBhmaking_qubits_interact.md" >}})                                                                                        |
 
 
-## NUS-CS223 Computer Security {#nus-cs223-computer-security}
+## NUS-CS223 Algorithms {#nus-cs223-algorithms}
 
 Backlog: [Finite State Machine]({{< relref "KBhfinite_state_machine.md" >}})
 
 | Date                                                                                         | Topic                                                                                                                                                    |
 |----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-07 Thu&gt;</span></span> | [stable matching problem]({{< relref "KBhstable_matching_problem.md" >}}), [stable matching algorithm]({{< relref "KBhstable_matching_algorithm.md" >}}) |
-| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-02 Mon&gt;</span></span> | [dynamic programming]({{< relref "KBhdynamic_programming.md" >}})                                                                                        |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-02 Mon&gt;</span></span> | [dynamic programming]({{< relref "KBhdynamic_programming.md" >}}), [relaxation]({{< relref "KBhrelaxation_algorithums.md" >}})                           |
 
 
 ## NUS-HIST301 American History {#nus-hist301-american-history}
@@ -37,6 +37,7 @@ Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FD
 | Date                                                                                         | Topic                                                                                |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-04-07 Thu&gt;</span></span> | [WWII]({{< relref "KBhwwii.md" >}}), [propaganda]({{< relref "KBhpropaganda.md" >}}) |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-02 Mon&gt;</span></span> | [cold war]({{< relref "KBhcold_war.md" >}})                                          |
 
 
 ## NUS-PHYS301 Mech {#nus-phys301-mech}
