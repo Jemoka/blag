@@ -7,11 +7,6 @@ draft = false
 ## Reading notes {#reading-notes}
 
 
-### communism is working towards revolution {#communism-is-working-towards-revolution}
-
-mankind is a process of revolutionary changes
-
-
 ### Because feeling for self-endowment, they wish to build socialist society {#because-feeling-for-self-endowment-they-wish-to-build-socialist-society}
 
 As Communists considered themselves as a vanguard of the revolutionary proletariat – their “aim” was to build socialist society in the whole world.
@@ -50,6 +45,11 @@ Soviet concept first vivid steps, which signalized about the start of the confro
 ### believes its a fight against imperialism {#believes-its-a-fight-against-imperialism}
 
 bipolar confrontation had western roots and the Cold War was the policy of the US and other imperialistic countries against socialist countries.
+
+
+### communism is working towards revolution {#communism-is-working-towards-revolution}
+
+mankind is a process of revolutionary changes
 
 
 ### the soviet union believes only it can stop American aggression {#the-soviet-union-believes-only-it-can-stop-american-aggression}

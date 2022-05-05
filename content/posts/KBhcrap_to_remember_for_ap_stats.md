@@ -64,7 +64,7 @@ Variance of random variables are just the sum and differences of their variance.
 -   assumptions and conditions; state!
     -   random
     -   independent: \\(\le 10\\%\\) of population.
-    -   t and z special: normal (z \\(np, n(1-p) \leq 10\\), t \\(n>30\\) or given)
+    -   t and z special: normal (z tests: \\(np, n(1-p) \geq 10\\), t tests: \\(n>30\\) or given)
     -   chi-square special: \\(\forall\ EV > 5\\)
 -   p: z-statistic that would
 
