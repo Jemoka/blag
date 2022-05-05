@@ -6,6 +6,8 @@ draft = false
 
 [dynamic programming]({{< relref "KBhdynamic_programming.md" >}}) is a three-step algorithm to tackle large, multi-step problems; high level idea: guessing + caching + recursion.
 
+[dynamic programming]({{< relref "KBhdynamic_programming.md" >}}) can sometimes not be good enough, and it doesn't really give us fast enough to get what we need to use. That's when we need to deal with [relaxation]({{< relref "KBhrelaxation_algorithums.md" >}}), or possibly [greedy programming]({{< relref "KBhgreedy_programming.md" >}}).
+
 
 ## main steps of dynamic programming {#main-steps-of-dynamic-programming}
 
@@ -42,3 +44,8 @@ here's an example top-down [dynamic programming]({{< relref "KBhdynamic_programm
 here's a graph! how do we get to node \\(6\\)?
 
 {{< figure src="/ox-hugo/2022-05-02_10-28-04_screenshot.png" >}}
+
+1.  Guess that the shortest path goes through 10
+2.  Go recursively until you get to root, cache the solution
+3.  Do it again until you got to all subproblems
+4.  Look up cached result

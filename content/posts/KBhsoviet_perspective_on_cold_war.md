@@ -12,7 +12,7 @@ draft = false
 mankind is a process of revolutionary changes
 
 
-### Because feeling for self-endowment, they wish to {#because-feeling-for-self-endowment-they-wish-to}
+### Because feeling for self-endowment, they wish to build socialist society {#because-feeling-for-self-endowment-they-wish-to-build-socialist-society}
 
 As Communists considered themselves as a vanguard of the revolutionary proletariat – their “aim” was to build socialist society in the whole world.
 
