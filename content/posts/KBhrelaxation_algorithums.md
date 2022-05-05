@@ -77,4 +77,10 @@ Hence, to solve, we make it possible to solve for fractions of invitations. Henc
 
 ### Lagrangian relaxation {#lagrangian-relaxation}
 
-Motivating problem: shortest paths problem
+[Lagrangian relaxation](#lagrangian-relaxation) is a [relaxation]({{< relref "KBhrelaxation_algorithums.md" >}}) method to convert hard-limit constrains into flexible penalization (negative values).
+
+Motivating problem: shortest paths problem with a constraint.
+
+You need to drive the shortest number of miles as well as doing it in a hard constraint to complete the solution in a certain time.
+
+We can instead relax the problem into overtime driving being a negative value in the solution.
