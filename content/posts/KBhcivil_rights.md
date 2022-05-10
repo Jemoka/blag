@@ -25,3 +25,25 @@ Lunch counter boycotts. Nashville became the first desegregated lunch counter.
 ## SNICK {#snick}
 
 SNICK is a student organization founded by [Ella Baker]({{< relref "KBhella_baker.md" >}}) in the [civil rights movement]({{< relref "KBhcivil_rights.md" >}}) that sent students into the most dangerous areas of segregation and leading protests.
+
+
+## Motown Records {#motown-records}
+
+[Motown Records](#motown-records) is an African-American owned Detroit record business
+
+
+## Malcom X {#malcom-x}
+
+A [civil rights movement]({{< relref "KBhcivil_rights.md" >}}) activist, calling for more violent forms of protest and prosecuting specific white actions. [Malcom X](#malcom-x) and [Martin Luther King]({{< relref "KBhmartin_luther_king.md" >}}) contradicted each other in methods of active persecution vs. nonviolent integration.
+
+
+## Bloody Sunday {#bloody-sunday}
+
+[Bloody Sunday](#bloody-sunday) was a voting rights march from Selma to Montgomery. Peaceful protesters were attacked with nightsticks and tear gas. The event was widely televised: transforming the movement as a televised morality play.
+
+Nonviolence helps getting the clergy leaders as a form of leveraging religion in a show of unity.
+
+
+## Black Power Movement {#black-power-movement}
+
+A new chapter in the [civil rights movement]({{< relref "KBhcivil_rights.md" >}}) which incorporated less of the elements of integration but instead in wanted more sense of self-determination. [nonviolence movement]({{< relref "KBhnonviolence_movement.md" >}}), which the [Black Power Movement](#black-power-movement) overrided, had ran its course when [Martin Luther King]({{< relref "KBhmartin_luther_king.md" >}}) was assassinated.
