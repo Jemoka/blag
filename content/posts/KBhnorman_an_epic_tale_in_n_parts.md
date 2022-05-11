@@ -8,7 +8,7 @@ draft = false
 
 Hi there, internet traveler.
 
-The time is 2016, I was either in 5th or 6th grade. At that time, I was barely beginning to be actually comfortable using the language of English.
+The time is 2015/2016, I was either in 5th or 6th grade. At that time, I was barely beginning to be actually comfortable using the language of English.
 
 One of the ways I practiced English, which is also a habit I continue to do today, is to write. I write mostly expository prose now, but, back then, shining with childish naïvete, I decided to write a multi-part story as a means of practicing English.
 
