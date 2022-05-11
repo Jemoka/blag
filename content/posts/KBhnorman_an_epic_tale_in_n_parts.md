@@ -6,7 +6,7 @@ draft = false
 
 ## Forward {#forward}
 
-Hi there, internet traveler. I have a lot more work to do, but why am I doing this right now? IDK.
+Hi there, internet traveler.
 
 The time is 2016, I was either in 5th or 6th grade. At that time, I was barely beginning to be actually comfortable using the language of English.
 
