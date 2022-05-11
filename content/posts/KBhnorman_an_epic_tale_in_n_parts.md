@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Forward {#forward}
+## Foreword {#foreword}
 
 Hi there, internet traveler.
 
