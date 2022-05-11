@@ -12,7 +12,7 @@ The time is 2015/2016, I was either in 5th or 6th grade. At that time, I was bar
 
 One of the ways I practiced English, which is also a habit I continue to do today, is to write. I write mostly expository prose now, but, back then, shining with childish naïvete, I decided to write a multi-part story as a means of practicing English.
 
-At the time, I was fortunately supported by four very helpful adults---ESL instructors, teachers from the local government's ESL program, local students, family friends---who have supported me and edited this silly story as a means of helping me better English.
+At the time, I was fortunately supported by four very helpful adults---ESL instructors, teachers from the local government's ESL program, local students, family friends---who have supported me and edited this silly story as a means of helping me better my command of English.
 
 Ironically, this story is set in 2018, I think, two years after when I wrote it. Its now 2022, almost 7 years after. Make of that what you will.
 
