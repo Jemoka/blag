@@ -17,21 +17,6 @@ The question? What happens if [dynamic programming]({{< relref "KBhdynamic_progr
 Take, for instance, [Nueva Courses]({{< relref "KBhnueva_courses_index.md" >}}). The optimal solution is "most students get their highest possible preferences." However, this is impractical and pretty much impossible. Instead, what if we endeavor to figure a schedule that generally maximize happiness?
 
 
-## complexity theory {#complexity-theory}
-
-[complexity theory](#complexity-theory) is a theory in algorithms to analyze time classes.
-
-We know that \\(O(n\ log\ n)\\) is between \\(O(n)\\) and $O(n^2)$---so we can roughly call it "polynomial time."
-
-Since the optimal comparison cannot be faster than polynomial time, we say that comparison-based sorting is a _polynomial-time_ algorithm.
-
-From this information, we can come up with two main time classes: \\(P\\) for solutions with known polynomial time, \\(NP\\) for non-deterministic polynomial time.
-
-Think of it as \\(P\\) is solvable with polynomial time and \\(NP\\) is verifiable with polynomial time.
-
-The cool thing about \\(NP\\) problems is that solving a subset of them ("\\(NP\\) hard" problems) solves all \\(NP\\) problems.
-
-
 ## relaxation methods {#relaxation-methods}
 
 

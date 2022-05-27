@@ -47,3 +47,33 @@ draft = false
 
 
 ### Martin believes that the process of voilence is a form of naïve expression {#martin-believes-that-the-process-of-voilence-is-a-form-of-naïve-expression}
+
+
+### King believes that the "strong demagogic oratory" of Malcom was detrimental and extremist {#king-believes-that-the-strong-demagogic-oratory-of-malcom-was-detrimental-and-extremist}
+
+
+### Martin believes that the personal nature of assults from Malcom maybe result in physical assult {#martin-believes-that-the-personal-nature-of-assults-from-malcom-maybe-result-in-physical-assult}
+
+
+### Malcom was suspended during 1963, and became independent---wanted to combine religion and politics like King {#malcom-was-suspended-during-1963-and-became-independent-wanted-to-combine-religion-and-politics-like-king}
+
+
+### Malcom began forging ties with millitan Black movement {#malcom-began-forging-ties-with-millitan-black-movement}
+
+
+### Martin regretted that integration has not proceeded, but believed it would have been difficult anyways {#martin-regretted-that-integration-has-not-proceeded-but-believed-it-would-have-been-difficult-anyways}
+
+
+### Rejected nonviolent and intergrational movement {#rejected-nonviolent-and-intergrational-movement}
+
+
+### People saw King and X's ideas inrecosiliable {#people-saw-king-and-x-s-ideas-inrecosiliable}
+
+
+### But, King and X themselves made a possible shared ending by the end {#but-king-and-x-themselves-made-a-possible-shared-ending-by-the-end}
+
+
+### Believes that suicides were cut short {#believes-that-suicides-were-cut-short}
+
+
+### Racial pride was a centering point: while Malcom saw it as something to be harbored, Martin saw it as inate {#racial-pride-was-a-centering-point-while-malcom-saw-it-as-something-to-be-harbored-martin-saw-it-as-inate}
