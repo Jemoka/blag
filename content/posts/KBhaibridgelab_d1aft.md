@@ -178,3 +178,16 @@ reg.score(new_x, new_y)
 ```
 
 Evidently, it seems like about \\(94\\%\\) of the variation in our output data can be explained by the input features. This means that the relationship between septals are not _exactly_ a linear pattern!
+
+
+## Now you try {#now-you-try}
+
+-   Download the [wine quality dataset](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
+-   Predict the quality of wine given its chemical metrics
+-   Predict if its red or white wine given its chemical metrics
+
+
+### Thoughts to ponder {#thoughts-to-ponder}
+
+-   How much data do you nede for an accurate prediction?
+-   Does some features matter more than others?
