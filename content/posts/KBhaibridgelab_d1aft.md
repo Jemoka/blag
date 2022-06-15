@@ -185,9 +185,5 @@ Evidently, it seems like about \\(94\\%\\) of the variation in our output data c
 -   Download the [wine quality dataset](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
 -   Predict the quality of wine given its chemical metrics
 -   Predict if its red or white wine given its chemical metrics
-
-
-### Thoughts to ponder {#thoughts-to-ponder}
-
--   How much data do you nede for an accurate prediction?
--   Does some features matter more than others?
+-   Vary the amount of data used to .fit the model, how does that influence the results?
+-   Vary the amount in each "class" (red wine, white wine) to fit the model, how much does that influence the results.
