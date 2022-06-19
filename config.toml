@@ -1,6 +1,6 @@
 baseURL = "https://www.jemoka.com/"
 languageCode = "en-us"
-title = "knowledgebase"
+title = "jemoka.com"
 refLinksErrorLevel = "WARNING"
 
 [outputs]
@@ -18,4 +18,4 @@ unsafe = true
 
 [params]
 author = "Houjun Liu"
-description = "eat a chicken efficiently"
+description = "The personal site of Houjun \"Jack\" Liu"
