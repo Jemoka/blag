@@ -1,4 +1,4 @@
-baseURL = "https://kb.jemoka.com/"
+baseURL = "https://www.jemoka.com/"
 languageCode = "en-us"
 title = "knowledgebase"
 refLinksErrorLevel = "WARNING"
