@@ -4,23 +4,15 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Master Indexes {#master-indexes}
+Welcome to the personal site of ****Houjun "Jack" Liu****.
 
-The KB is a [zettlekasten]({{< relref "KBhzettlekasten.md" >}}), a connected series of notes that are atomic and links ideas together. This means that there are no "start" page.
+I'm on the blaggosphere as [@jemokajack](https://twitter.com/jemokajack) and, far more frequently, [u/jemoka](https://www.reddit.com/user/Jemoka/) and [@jemoka](https://github.com/Jemoka/).
 
-However, in the spirit of [zettlekasten]({{< relref "KBhzettlekasten.md" >}})s, there are indexes which select for main notes and link large atomic ideas together. Therefore, you maybe interested in the following indexes.
-
--   [Nueva Courses Index]({{< relref "KBhnueva_courses_index.md" >}})
--   [Projects Index]({{< relref "KBhprojects.md" >}})
-
-Tapping on either of these links would probably lead you somewhere interesting.
+---
 
 
-## Technology and Notes {#technology-and-notes}
+## Who's this guy? {#who-s-this-guy}
 
-The text of the page is set in `IBM Plex Sans`, or, when the font is unavailable, in `Helvetica`. Automatically compiled PDFs are set in `Helvetica Neue`, built via `xelatex`. The website is generated via `Hugo` with a custom-designed theme licensed under `GPL-3.0`. The content of the notes are licensed under `CC BY-NC-SA 4.0`. The compilation driver is `Emacs 28`, and notes are written with `Org Roam`. Autocompletion between modes inside the framework is provided by `Company Mode`.
+I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) [linguistic analysis](https://arxiv.org/abs/2104.10661), [L2 learning](https://en.wikipedia.org/wiki/Second-language_acquisition), and [user interfaces](https://www.shabang.cf/). [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Condution](https://www.condution.com/) and [Shabang](https://www.shabang.cf/)
 
-
-## Why this? {#why-this}
-
-You maybe interested in [Starting With Why: The Knowledgebase]({{< relref "KBhstarting_with_why_the_knowledgebase.md" >}}) as a short article on why this project was started.
+Teaching robots how to robot, and getting humans to click. eaedad, ba2769, 133499, 434d5f.
