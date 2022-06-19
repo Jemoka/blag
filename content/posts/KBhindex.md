@@ -35,7 +35,7 @@ Some friends and I started a small collection of fun internets that we made. [Ch
 
 ## How do I know you are you? {#how-do-i-know-you-are-you}
 
-Good question! `gpg --keyserver pgp.mit.edu --recv-keys 1807A0C6` and verify with my work email. Note that GNU pgp don't actually check fingerprints you received so do that yourself.
+Good question! `gpg --keyserver pgp.mit.edu --recv-keys 1807A0C6` and verify with my work email. Note that GPG don't actually check fingerprints you received so do that yourself.
 
 
 ## Bugga Bugga Bontehu? {#bugga-bugga-bontehu}
