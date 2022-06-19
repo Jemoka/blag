@@ -25,7 +25,7 @@ Take a look at my [GitHub profile](https://github.com/Jemoka/) for programming p
 
 ## Notes {#notes}
 
-This site also contains the vast majority of course notes. It is a organized in a [zettlekasten]({{< relref "KBhzettlekasten.md" >}}) format. To begin exploring, why don't you check out [Nueva Courses Index]({{< relref "KBhnueva_courses_index.md" >}}). Accompanying this index is the collection of assignments [found here](https://taproot3.jklsnt.com/) which a few friends has collected together.
+This site also contains the vast majority of my course notes. It is a organized in a [zettlekasten]({{< relref "KBhzettlekasten.md" >}}) format. To begin exploring, why don't you check out [Nueva Courses Index]({{< relref "KBhnueva_courses_index.md" >}}). Accompanying this index is the collection of assignments [found here](https://taproot3.jklsnt.com/) which a few friends has collected together.
 
 
 ## jklsnt {#jklsnt}
