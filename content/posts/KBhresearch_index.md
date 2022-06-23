@@ -72,3 +72,48 @@ Sorting and generating politically-motivated utterances. [Repo](https://github.c
 ****Collaborators****: Zachary Sayyah - Nueva School
 
 Work-in-progress.
+
+
+## Science Education {#science-education}
+
+
+### Project80 {#project80}
+
+A student-driven podcast protocol which trains students to digest scientific research. [Link](https://faseb.onlinelibrary.wiley.com/doi/10.1096/fasebj.2022.36.S1.L8013), [Internal Link]({{< relref "KBhproject80_abstract.md" >}}).
+
+****Title****: Project 80: a reproducible, student-driven framework for creating multimedia educational resources from primary literature
+
+****Collaborators****: Anoushka Krishnan, Micah Brown, Paul Hauser, Luke De - Nueva School
+
+****Status****: Published
+
+****Venue****: EB2022/FASEB Journal
+
+****Abstract****: [Project80 Abstract]({{< relref "KBhproject80_abstract.md" >}})
+
+
+### Research@Nueva {#research-nueva}
+
+A student-lead, student-taught independent program that trains high-school students as researchers and facilitates publish-quality student research.
+
+****Collaborators****: Michael, Flint, Kian, Vinca, Oliver - Nueva School
+
+Work-in-progress.
+
+
+## Parallel Computing/Blockchain {#parallel-computing-blockchain}
+
+
+### Coveather {#coveather}
+
+See also [coveather]({{< relref "KBhprojects.md#coveather" >}}). [Link](https://arxiv.org/abs/2205.02753).
+
+****Title****: Encrypted, Anonymized System for Protected Health Information Verification Built via Proof of Stake
+
+****Collaborators****: solo project
+
+****Status****: Pre-Print and Oral Presentation at the California STEM Fair
+
+****Venue****: Cornell ArXiV
+
+****Abstract****: [Coveather Abstract]({{< relref "KBhcoveather_abstract.md" >}})
