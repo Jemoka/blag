@@ -9,3 +9,66 @@ I have done various published academic research projects in the fields of natura
 
 
 ## Computational Linguistics {#computational-linguistics}
+
+
+### ConDef/Dictembed {#condef-dictembed}
+
+Wikipedia is a surprisingly good dictionary, and so we can mine it for building context-aware dictionary. [Repository](https://github.com/jklsnt/dictembed).
+
+****Title****: ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias
+
+****Collaborators****: Zachary Sayyah - Nueva School
+
+****Status****: Accepted for Oral Presentation and Publication
+
+****Venue****: SAI 2022 Computing Conference
+
+****Abstract****: [ConDef Abstract]({{< relref "KBhcondef_abstract.md" >}})
+
+
+### Replier {#replier}
+
+Using a logistic-increase mechanism to slowly blend data to fine-tune a transformer for psychotherapy. [Repo](https://github.com/jemoka/replier), [Link](https://arxiv.org/abs/2104.10661).
+
+****Title****: Towards Automated Psychotherapy via Language ModelingTowards Automated Psychotherapy via Language Modeling
+
+****Collaborators****: solo project
+
+****Status****: Pre-Print
+
+****Venue****: Cornell ArXiV
+
+****Abstract****: [Replier Abstract]({{< relref "KBhreplier_abstract.md" >}})
+
+
+### Gregarious {#gregarious}
+
+Using BPE over a huge convolutional neural network with skip connections for highly-accurate identification of chat-bots on the internet. [Repo](https://github.com/jemoka/gregarious), [Link](https://www.preprints.org/manuscript/202004.0214/v1).
+
+****Title****: Byte-Pair and N-Gram Convolutional Methods of Analysing Automatically Disseminated Content on Social Platforms
+
+****Collaborators****: solo project
+
+****Status****: Pre-Print
+
+****Venue****: Open Science Foundation Preprints
+
+****Abstract****: [Gregarious Abstract]({{< relref "KBhgregarious_abstract.md" >}})
+
+
+### BRANDON/nsm {#brandon-nsm}
+
+Using a method similar to power-iteration with reconstruction loss to figure the common basis between two languages. [Repo](https://github.com/Jemoka/BRANDON).
+
+****Collaborators****: Brandon Cho - Nueva School/Princeton
+
+Work-in-progress.
+
+
+### politisort {#politisort}
+
+Sorting and generating politically-motivated utterances. [Repo](https://github.com/PolitiSort/PolitiSort).
+
+****Collaborators****: Zachary Sayyah - Nueva School
+
+Work-in-progress.
