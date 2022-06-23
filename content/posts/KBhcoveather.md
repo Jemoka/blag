@@ -5,3 +5,5 @@ draft = false
 +++
 
 [coveather]({{< relref "KBhcoveather.md" >}}) is a novel consensus algorithm based on the [proof of work]({{< relref "KBhproof_of_work.md" >}}) mechanism.
+
+See also [minimum user base requirements for coveather]({{< relref "KBhminimum_user_base_requirements_for_coveather.md" >}}).

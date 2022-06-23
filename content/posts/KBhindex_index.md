@@ -11,3 +11,5 @@ Here's a list of all indexes:
 -   [Research Index]({{< relref "KBhresearch_index.md" >}})
 -   [Production Index]({{< relref "KBhproduction_index.md" >}})
 -   [About]({{< relref "KBhindex.md" >}})
+
+This should be reflected on a fancier way on [my home page.](https://www.jemoka.com/)
