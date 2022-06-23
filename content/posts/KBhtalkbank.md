@@ -35,7 +35,11 @@ Also cool to align:
 -   Here are the review papers: <https://drive.google.com/drive/u/1/folders/1pokU75aKt6vNdeSMpc-HfN9fkLvRyutt>
 -   Read this first: <https://drive.google.com/drive/u/1/folders/0B3XZtiQwQW4XMnlFN0ZGUndUamM?resourcekey=0-AlOCZb4q9TyG4KpaMQpeoA>
 
+-   Some PITT data have 3-4 recordings
+
 ****The best way to diagnosing alzhimers' is from language.****
+
+Why this field is needed: to analyze a pre-post test metric.
 
 Desired output: existence of dementia (a.k.a alzheimer's').
 
