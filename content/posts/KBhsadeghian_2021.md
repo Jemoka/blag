@@ -9,7 +9,7 @@ DOI: 10.3389/fcomp.2021.624594
 
 ## One-Liner {#one-liner}
 
-Using a [genetic algorithm]({{< relref "KBhgenetic_algorithum.md" >}}), picked features to optimize fore; achieved \\(94\\%\\) with just [MMSE]({{< relref "KBhmmse.md" >}}) data alone. Developed [ASR]({{< relref "KBhasr.md" >}}) tool.
+Using a [genetic algorithm]({{< relref "KBhgenetic_algorithum.md" >}}), picked features to optimize fore; achieved \\(94\\%\\) with just [MMSE]({{< relref "KBhmmse.md" >}}) data alone. Developed [ASR]({{< relref "KBhasr.md" >}}) tool to aid.
 
 
 ## Novelty {#novelty}
