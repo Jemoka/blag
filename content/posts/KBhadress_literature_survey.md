@@ -18,7 +18,10 @@ The [ADReSS Literature Survey]({{< relref "KBhadress_literature_survey.md" >}}) 
 -   [Shah 2021]({{< relref "KBhshah_2021.md" >}}): [late fusion]({{< relref "KBhfusion.md#late-fusion" >}}) of n-gram and [OpenSMILE]({{< relref "KBhopensmile.md" >}}) on std. classifiers
 -   [Lindsay 2021]({{< relref "KBhlindsay_2021.md" >}}): Cross-linguistic markers shared for AD patients between English and French
 -   [Zhu 2021]({{< relref "KBhzhu_2021.md" >}}): [late fusion]({{< relref "KBhfusion.md#late-fusion" >}}) of [CTP]({{< relref "KBhctp.md" >}}) task for AD clsf. w/ transf., mobilenet, yamnet, mockingjay
--   [Parvin 2020]({{< relref "KBhparvin_2020.md" >}}):
+-   [Guo 2021]({{< relref "KBhguo_2021.md" >}}): WLS data to augment [CTP]({{< relref "KBhctp.md" >}}) from [ADReSS Challenge]({{< relref "KBhadress_challenge.md" >}}) and trained it on a BERT
+-   [Balagopalan 2021]({{< relref "KBhbalagopalan_2021.md" >}}): lexo. and synt. features trained on a BERT and other models.
+-   [Mahajan 2021]({{< relref "KBhmahajan_2021.md" >}}):
+-   [Parvin 2020]({{< relref "KBhparvin_2020.md" >}}): excercize scheme effects on [theta/alpha ratio]({{< relref "KBhtheta_alpha_ratio.md" >}}) and Brain wave frequency.
 
 From [Meghanani 2021]({{< relref "KBhmeghanani_2021.md" >}}), a review:
 
