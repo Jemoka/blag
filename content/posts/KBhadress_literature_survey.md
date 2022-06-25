@@ -18,7 +18,7 @@ The [ADReSS Literature Survey]({{< relref "KBhadress_literature_survey.md" >}}) 
 | Jonell 2021    | Developed a kitchen sink of diag. tools and correlated it with biomarkers.                                                                                                     | [Jonell 2021]({{< relref "KBhjonell_2021.md" >}})       |
 | Laguarta 2021  | large multimodel ([OVBM]({{< relref "KBhopen_voice_brain_model.md" >}})) to embed auditory info + biomarkers for clsf.                                                         | [Laguarta 2021]({{< relref "KBhlaguarta_2021.md" >}})   |
 | Shah 2021      | [late fusion]({{< relref "KBhfusion.md#late-fusion" >}}) of n-gram and [OpenSMILE]({{< relref "KBhopensmile.md" >}}) on std. classifiers                                       | [Shah 2021]({{< relref "KBhshah_2021.md" >}})           |
-| Lindsay 2021   |                                                                                                                                                                                | [Lindsay 2021]({{< relref "KBhlindsay_2021.md" >}})     |
+| Lindsay 2021   | Cross-linguistic markers shared for AD patients between English and French                                                                                                     | [Lindsay 2021]({{< relref "KBhlindsay_2021.md" >}})     |
 
 From [Meghanani 2021]({{< relref "KBhmeghanani_2021.md" >}}), a review:
 
