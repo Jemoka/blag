@@ -74,6 +74,17 @@ Sorting and generating politically-motivated utterances. [Repo](https://github.c
 Work-in-progress.
 
 
+### dementia {#dementia}
+
+A task similar to [ADReSS Challenge]({{< relref "KBhadress_challenge.md" >}}), training on acoustic and possibly linguistic features. [internal link]({{< relref "KBhdementiabank_acoustics_project.md" >}})
+
+****Collaborators****: solo project
+
+****PI****: Prof. [Brian Macwinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
+
+Work-in-progress.
+
+
 ## Science Education {#science-education}
 
 
@@ -83,7 +94,11 @@ A student-driven podcast protocol which trains students to digest scientific res
 
 ****Title****: Project 80: a reproducible, student-driven framework for creating multimedia educational resources from primary literature
 
-****Collaborators****: Anoushka Krishnan, Micah Brown, Paul Hauser, Luke De - Nueva School
+****Collaborators****: Anoushka Krishnan, Micah Brown - Nueva School
+
+****Lab****: Paul Hauser - Nueva School
+
+****PI****: Luke De - Nueva School
 
 ****Status****: Published
 

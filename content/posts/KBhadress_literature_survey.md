@@ -20,7 +20,7 @@ The [ADReSS Literature Survey]({{< relref "KBhadress_literature_survey.md" >}}) 
 -   [Zhu 2021]({{< relref "KBhzhu_2021.md" >}}): [late fusion]({{< relref "KBhfusion.md#late-fusion" >}}) of [CTP]({{< relref "KBhctp.md" >}}) task for AD clsf. w/ transf., mobilenet, yamnet, mockingjay
 -   [Guo 2021]({{< relref "KBhguo_2021.md" >}}): WLS data to augment [CTP]({{< relref "KBhctp.md" >}}) from [ADReSS Challenge]({{< relref "KBhadress_challenge.md" >}}) and trained it on a BERT
 -   [Balagopalan 2021]({{< relref "KBhbalagopalan_2021.md" >}}): lexo. and synt. features trained on a BERT and other models.
--   [Mahajan 2021]({{< relref "KBhmahajan_2021.md" >}}):
+-   [Mahajan 2021]({{< relref "KBhmahajan_2021.md" >}}): a bimodal model on speech/text with GRU on speech and CNN-LSTM on text.
 -   [Parvin 2020]({{< relref "KBhparvin_2020.md" >}}): excercize scheme effects on [theta/alpha ratio]({{< relref "KBhtheta_alpha_ratio.md" >}}) and Brain wave frequency.
 
 From [Meghanani 2021]({{< relref "KBhmeghanani_2021.md" >}}), a review:
