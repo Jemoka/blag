@@ -38,4 +38,4 @@ The figure highlights the authors' proposed architecture
 
 {{< figure src="/ox-hugo/2022-06-25_12-17-25_screenshot.png" >}}
 
-In addition to validating prior work by Karlekar 2018 and Di Palo 2019, proposed model C and got accuracy of \\(73.92\\).
+In addition to validating prior work by Karlekar 2018 and Di Palo 2019, proposed model C and got accuracy of \\(73.92\\%\\).
