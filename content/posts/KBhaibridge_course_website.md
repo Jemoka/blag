@@ -31,8 +31,9 @@ When in doubt...
 
 Today we are going to cover the basics of Python so that we are all up to speed to perform basic ML with the Scikit Learn toolkit.
 
--   Link to Slides:
--   Link to Lab Work:
+-   Introductory Remarks: [Slides](https://drive.google.com/file/d/1XPkB9GL6rG2F5s5ydTsJOMg33y87HEBB/view?usp=sharing)
+-   Lecture on Python Basics: [Slides](https://drive.google.com/file/d/1udI-c1roIS7Fb1cgGQOzRc7a6dfYZWu8/view?usp=sharing)
+-
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
