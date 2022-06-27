@@ -33,7 +33,7 @@ Today we are going to cover the basics of Python so that we are all up to speed 
 
 -   Introductory Remarks: [Slides](https://drive.google.com/file/d/1XPkB9GL6rG2F5s5ydTsJOMg33y87HEBB/view?usp=sharing)
 -   Lecture on Python Basics: [Slides](https://drive.google.com/file/d/1udI-c1roIS7Fb1cgGQOzRc7a6dfYZWu8/view?usp=sharing)
--   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1oomPZGg9NUgDhi6S_RuTH60Vzlv5kD8z/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/drive/u/1/folders/17uKQfAjBpQ5LTRYvo3qZUz83qxV9qj81)
+-   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1oomPZGg9NUgDhi6S_RuTH60Vzlv5kD8z/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1nG_hQ02GDpHpIlwJ6VOGRqU8obv4dCx_/view?usp=sharing)
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
