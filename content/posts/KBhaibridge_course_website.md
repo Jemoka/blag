@@ -33,9 +33,6 @@ Today we are going to cover the basics of Python so that we are all up to speed 
 
 -   Link to Slides:
 -   Link to Lab Work:
--
-
-Additional Resources:
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
