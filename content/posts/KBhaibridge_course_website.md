@@ -38,7 +38,7 @@ Today we are going to cover the basics of Python so that we are all up to speed 
 -   Introductory Remarks: [Slides](https://drive.google.com/file/d/1XPkB9GL6rG2F5s5ydTsJOMg33y87HEBB/view?usp=sharing)
 -   Lecture on Python Basics: [Slides](https://drive.google.com/file/d/1udI-c1roIS7Fb1cgGQOzRc7a6dfYZWu8/view?usp=sharing)
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1oomPZGg9NUgDhi6S_RuTH60Vzlv5kD8z/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1nG_hQ02GDpHpIlwJ6VOGRqU8obv4dCx_/view?usp=sharing)
--   Colab Notebooks: [Morning Lecture Notebook](https://colab.research.google.com/drive/1EKSvewySaceQqSzy_sNJTWeWuEjE-T1n?usp=sharing), [Morning Lab Notebook](https://colab.research.google.com/drive/1jo5MMQsfkQ3IQ0pYI9G0pgp5bea6lUnZ?usp=sharing)
+-   Colab Notebooks: [Morning Lecture Notebook](https://colab.research.google.com/drive/1EKSvewySaceQqSzy_sNJTWeWuEjE-T1n?usp=sharing), [Morning Lab Notebook](https://colab.research.google.com/drive/1jo5MMQsfkQ3IQ0pYI9G0pgp5bea6lUnZ?usp=sharing), [Afternoon Lecture Notebook](https://colab.research.google.com/drive/1FuFlG5UnP3H0dgFyvBG9kb21deW2UHIU#scrollTo=rTxx-vWi-qct), [Afternoon Lab Notebook](https://colab.research.google.com/drive/1HxWScbDZ0AuBrIZ0N2QDlrVzJBXORFi_#scrollTo=TkGfQYJmI3j1)
 
 ****Day 1 feedback survey****: [Link](https://forms.gle/KAdWJLDM9saTZCrT8)
 
