@@ -40,6 +40,8 @@ Today we are going to cover the basics of Python so that we are all up to speed 
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1oomPZGg9NUgDhi6S_RuTH60Vzlv5kD8z/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1nG_hQ02GDpHpIlwJ6VOGRqU8obv4dCx_/view?usp=sharing)
 -   Colab Notebooks: [Morning Lecture Notebook](https://colab.research.google.com/drive/1EKSvewySaceQqSzy_sNJTWeWuEjE-T1n?usp=sharing), [Morning Lab Notebook](https://colab.research.google.com/drive/1jo5MMQsfkQ3IQ0pYI9G0pgp5bea6lUnZ?usp=sharing)
 
+****Day 1 feedback survey****: [Link](https://forms.gle/KAdWJLDM9saTZCrT8)
+
 
 ## More to come... {#more-to-come-dot-dot-dot}
 

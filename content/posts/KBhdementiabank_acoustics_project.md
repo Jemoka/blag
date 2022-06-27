@@ -16,7 +16,7 @@ I first began by doing a literature survey on the [ADReSS Challenge]({{< relref 
 
 [DementiaBank Acoustics Project Proposal]({{< relref "KBhdementiabank_acoustics_project_proposal.md" >}})
 
-## References
 
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-</div>
+## Ideas {#ideas}
+
+Can we correlate any longitudinal data with [NACC]({{< relref "KBhnacc.md" >}})?
