@@ -23,6 +23,7 @@ The course is taught by Prof. Xin Liu in collaboration with Houjun "Jack" Liu, S
 -   SciKit Documentation: [scikit-learn.org](https://scikit-learn.org/stable/getting_started.html)
 -   Iris Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/iris), or, for better user experience, [scikit](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
 -   Wine Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/wine)
+-   Class Discord: [Invite](https://discord.gg/DNj7masa)
 
 When in doubt...
 
