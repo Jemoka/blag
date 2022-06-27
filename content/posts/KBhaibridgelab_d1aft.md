@@ -1,10 +1,10 @@
 +++
-title = "AIBridgeLab D1Aft"
+title = "AIBridgeLab D2Aft"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-Welcome to the Day-1 Afternoon Lab! We are super excited to work through tasks in linear regression and logistic regression, as well as familiarize you with the Iris dataset.
+Welcome to the Day-2 Afternoon Lab! We are super excited to work through tasks in linear regression and logistic regression, as well as familiarize you with the Iris dataset.
 
 
 ## Iris Dataset {#iris-dataset}

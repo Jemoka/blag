@@ -1,10 +1,10 @@
 +++
-title = "AIBridgeLab D2Aft"
+title = "AIBridgeLab D3Morning"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-Welcome to the Day-2 Afternoon Lab! We are glad for you to join us. Today, we are learning about how Pandas, a data manipulation tool, works, and working on cleaning some data of your own!
+Welcome to the Day-3 Morning Lab! We are glad for you to join us. Today, we are learning about how Pandas, a data manipulation tool, works, and working on cleaning some data of your own!
 
 
 ## Iris Dataset {#iris-dataset}
