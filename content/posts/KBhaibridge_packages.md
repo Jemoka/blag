@@ -11,7 +11,7 @@ However, students have expressed interest in working with their own system's cop
 
 ## Python {#python}
 
-Our tools target Python 3.8. Use your system's package manager to install Python at version 3.8, or use [Python Foundation's](https://www.python.org/downloads/release/python-3813/) universal installers.
+Our tools target Python 3.8+. Use your system's package manager to install Python at least version 3.8, or use [Python Foundation's](https://www.python.org/downloads/) universal installers.
 
 
 ## Packages {#packages}
