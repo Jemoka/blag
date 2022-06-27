@@ -2,6 +2,7 @@
 title = "AIBridge Course Website"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 {{< figure src="/ox-hugo/2022-06-26_20-07-53_screenshot.png" >}}

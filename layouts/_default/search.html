@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "header" . }}
 
 <div id="searchutil" >
 <input id="search-query" name="s" autocomplete="off" placeholder="What are you looking for?" enterkeyhint="search"/>
@@ -17,4 +18,5 @@
       <p>${snippet}</p>
     </div>
 </script>
+{{ partial "footer" . }}
 {{ end }}
