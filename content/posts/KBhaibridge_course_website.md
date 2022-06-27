@@ -43,7 +43,7 @@ On Monday, 06/27/2022, we covered the basics of Python so that we are all up to 
 ****Day 1 feedback survey****: [Link](https://forms.gle/KAdWJLDM9saTZCrT8)
 
 
-## <span class="org-todo todo TODO">TODO</span> Day 2: OOP + Linear Models {#day-2-oop-plus-linear-models}
+## Day 2: OOP + Linear Models {#day-2-oop-plus-linear-models}
 
 Today, we are going to cover the basic intuition and terminology behind Object Oriented Programming, as well as introduce two simple, linear approaches to Machine Learning tasks: linear regression and logistic regression.
 
