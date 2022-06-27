@@ -48,3 +48,8 @@ We will be updating the course website over the span of this week to include mor
 -   Day 3: Data Manipulation + Classification
 -   Day 4: Classification cont'd + Clustering
 -   Day 5: Validation/Ops and Best Practices
+
+
+## Other Links and Resources {#other-links-and-resources}
+
+Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})

@@ -12,7 +12,7 @@ draft = false
 
 ## Research Projects {#research-projects}
 
-I have spent the last 6 years or so working as an actively-publishing member of the science research community; my research interests are mainly in textual data mining, semantic analysis, L2 learning, and science education. As a part of my work with Professor [Brian Macwinney]({{< relref "KBhbrian_macwinney.md" >}}), I have also recently taken up interest in acoustic modeling.
+I have spent the last 6 years or so working as an actively-publishing data science researcher; my research interests are mainly in textual data mining, semantic analysis, L2 learning, and science education. As a part of my work with Professor [Brian Macwinney]({{< relref "KBhbrian_macwinney.md" >}}), I have also recently taken up interest in acoustic modeling.
 
 For a list of my recent research, please head to the [Research Index]({{< relref "KBhresearch_index.md" >}}).
 
