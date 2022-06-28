@@ -149,3 +149,48 @@ And dump it to a CSV.
 ```python
 df.to_csv("./iris_variance.csv", index=False)
 ```
+
+Let's select for the input data again:
+
+```python
+X = df.iloc[:,0:5]
+X
+```
+
+```text
+     sepal length  sepal width  pedal length  pedal width       temp
+0             5.1          3.5           1.4          0.2  65.127515
+1             4.9          3.0           1.4          0.2  65.034572
+2             4.7          3.2           1.3          0.2  65.123271
+3             4.6          3.1           1.5          0.2  65.043985
+4             5.0          3.6           1.4          0.2  65.145743
+..            ...          ...           ...          ...        ...
+145           6.7          3.0           5.2          2.3  65.036410
+146           6.3          2.5           5.0          1.9  65.157172
+147           6.5          3.0           5.2          2.0  65.034925
+148           6.2          3.4           5.4          2.3  65.037373
+149           5.9          3.0           5.1          1.8  65.042466
+
+[150 rows x 5 columns]
+```
+
+And use the variance threshold tool:
+
+```python
+from sklearn.feature_selection import VarianceThreshold
+sel = VarianceThreshold(0.1)
+sel.fit_transform(X)
+```
+
+| 5.1 | 3.5 | 1.4 | 0.2 |
+|-----|-----|-----|-----|
+| 4.9 | 3   | 1.4 | 0.2 |
+| 4.7 | 3.2 | 1.3 | 0.2 |
+| 4.6 | 3.1 | 1.5 | 0.2 |
+| 5   | 3.6 | 1.4 | 0.2 |
+| 5.4 | 3.9 | 1.7 | 0.4 |
+| 4.6 | 3.4 | 1.4 | 0.3 |
+
+...
+
+As we expected.
