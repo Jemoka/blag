@@ -65,4 +65,5 @@ We will be updating the course website over the span of this week to include mor
 ## Other Links and Resources {#other-links-and-resources}
 
 -   Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})
+-   Cleaned Wine Dataset (try cleaning it yourself before using!): [Google Drive](https://drive.google.com/file/d/1K54C6QOZ2xlGJls59RRCLXr4OOa-8D1l/view?usp=sharing)
 -   Curious how we built the Iris-with-lowvariant-temp dataset? [AIBridge Iris Variance Worksheet]({{< relref "KBhaibridge_iris_variance_worksheet.md" >}})
