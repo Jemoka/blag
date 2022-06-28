@@ -22,6 +22,7 @@ The course is taught by Prof. Xin Liu in collaboration with Houjun "Jack" Liu, S
 -   Python Documentation: [Python.org](https://docs.python.org/3/)
 -   SciKit Documentation: [scikit-learn.org](https://scikit-learn.org/stable/getting_started.html)
 -   Iris Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/iris), or, for better user experience, [scikit](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
+-   Iris Data with Temperature (don't use without instructions, though!): [Google Drive](https://drive.google.com/file/d/1WgruhndN1M1md4vgS87Ho9WS3wAshROP/view?usp=sharing)
 -   Wine Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/wine+quality)
 -   Class Discord: [Invite](https://discord.gg/DNj7masa)
 
@@ -63,4 +64,5 @@ We will be updating the course website over the span of this week to include mor
 
 ## Other Links and Resources {#other-links-and-resources}
 
-Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})
+-   Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})
+-   Curious how we built the Iris-with-lowvariant-temp dataset: [AIBridge Iris Variance Worksheet]({{< relref "KBhaibridge_iris_variance_worksheet.md" >}})
