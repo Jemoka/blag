@@ -50,7 +50,7 @@ Today, we are going to cover the basic intuition and terminology behind Object O
 -   Lecture on OOP and more on functions (morning): [Slides](https://drive.google.com/file/d/1udI-c1roIS7Fb1cgGQOzRc7a6dfYZWu8/view?usp=sharing)
 -   Lecture on Linear and Logistic Regression (afternoon): [Slides](https://drive.google.com/file/d/1HXn7aat_bGzUh3vpQ7vQxNQvp6GrIi-6/view?usp=sharing)
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1nidC7fOeHMWnD_QZcSasiqRxUOEx-9Cx/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1-PD2ZRbxyZN3kclo4FPi-cbx-wBh5cbn/view?usp=sharing)
--   Colab Notebooks: [Morning Lab Notes](https://colab.research.google.com/drive/1KFotnZcEKyiRjY5fRKwjLLUbaYzc6Ogi?usp=sharing), [Afternoon Lab Notes](https://colab.research.google.com/drive/1gMAZPZs3y532sb3fdeXVqKNjOz-Ri8wa?usp=sharing)
+-   Colab Notebooks: [Morning Lecture Notes](https://colab.research.google.com/drive/1KFotnZcEKyiRjY5fRKwjLLUbaYzc6Ogi?usp=sharing), [Morning Lab Notes](https://colab.research.google.com/drive/1gMAZPZs3y532sb3fdeXVqKNjOz-Ri8wa?usp=sharing), [Afternoon Lab Notes](https://colab.research.google.com/drive/18f3vNcDg2WKRuip31TCPRHN_t7Fy07Q9?usp=sharing)
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
