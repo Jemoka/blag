@@ -4,6 +4,8 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+SPOILER ALERT for future labs!!
+
 We are going to create a copy of the iris dataset with a random variance.
 
 ```python
@@ -154,6 +156,7 @@ Let's select for the input data again:
 
 ```python
 X = df.iloc[:,0:5]
+y = df.iloc[:,5]
 X
 ```
 
@@ -194,3 +197,26 @@ sel.fit_transform(X)
 ...
 
 As we expected.
+
+And let's use the select k best tool:
+
+```python
+from sklearn.feature_selection import SelectKBest, chi2
+sel = SelectKBest(chi2, k=4)
+res = sel.fit_transform(X, y)
+res
+```
+
+| 5.1 | 3.5 | 1.4 | 0.2 |
+|-----|-----|-----|-----|
+| 4.9 | 3   | 1.4 | 0.2 |
+| 4.7 | 3.2 | 1.3 | 0.2 |
+| 4.6 | 3.1 | 1.5 | 0.2 |
+| 5   | 3.6 | 1.4 | 0.2 |
+| 5.4 | 3.9 | 1.7 | 0.4 |
+| 4.6 | 3.4 | 1.4 | 0.3 |
+| 5   | 3.4 | 1.5 | 0.2 |
+
+...
+
+Also, as we expected. Got rid of temp.
