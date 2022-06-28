@@ -48,9 +48,9 @@ On Monday, 06/27/2022, we covered the basics of Python so that we are all up to 
 
 Today, we are going to cover the basic intuition and terminology behind Object Oriented Programming, as well as introduce two simple, linear approaches to Machine Learning tasks: linear regression and logistic regression.
 
--   Lecture on OOP and more on functions (morning):
+-   Lecture on OOP and more on functions (morning): [Slides](https://drive.google.com/file/d/1udI-c1roIS7Fb1cgGQOzRc7a6dfYZWu8/view?usp=sharing)
 -   Lecture on Linear and Logistic Regression (afternoon): [Slides](https://drive.google.com/file/d/1HXn7aat_bGzUh3vpQ7vQxNQvp6GrIi-6/view?usp=sharing)
--   Lab Exercises: [Afternoon Lab Notes](https://drive.google.com/file/d/1-PD2ZRbxyZN3kclo4FPi-cbx-wBh5cbn/view?usp=sharing)
+-   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1nidC7fOeHMWnD_QZcSasiqRxUOEx-9Cx/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1-PD2ZRbxyZN3kclo4FPi-cbx-wBh5cbn/view?usp=sharing)
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
