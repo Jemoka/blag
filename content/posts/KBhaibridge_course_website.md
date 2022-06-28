@@ -52,6 +52,8 @@ Today, we are going to cover the basic intuition and terminology behind Object O
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/1nidC7fOeHMWnD_QZcSasiqRxUOEx-9Cx/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1-PD2ZRbxyZN3kclo4FPi-cbx-wBh5cbn/view?usp=sharing)
 -   Colab Notebooks: [Morning Lecture Notes](https://colab.research.google.com/drive/1KFotnZcEKyiRjY5fRKwjLLUbaYzc6Ogi?usp=sharing), [Morning Lab Notes](https://colab.research.google.com/drive/1gMAZPZs3y532sb3fdeXVqKNjOz-Ri8wa?usp=sharing), [Afternoon Lab Notes](https://colab.research.google.com/drive/18f3vNcDg2WKRuip31TCPRHN_t7Fy07Q9?usp=sharing)
 
+****Day 2 feedback survey****: [Link](https://forms.gle/VtHtozjqsB9Y113F9)
+
 
 ## More to come... {#more-to-come-dot-dot-dot}
 
