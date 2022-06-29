@@ -60,7 +60,8 @@ Today, we are going to cover the basic intuition and terminology behind Object O
 Today, we are going to cover data cleaning, and three more classifiers!
 
 -   Lecture on data cleaning and pandas (morning): [Slides](https://drive.google.com/file/d/1pMHtQo1iITFSMPRls2K7gc1JGd-LK2Nv/view?usp=sharing)
--   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing)
+-   Lecture on three classification algorithms (afternoon): [Slides](https://drive.google.com/file/d/16Vjr3sXnoBTv_2vaa7cEz_t9qn_3QsrC/view?usp=sharing)
+-   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1yHaSL73Tki_WULN0k85RY3wmyV3tlpLd/view?usp=sharing)
 -   Colab Notebooks: [Morning Lab Notebook](https://colab.research.google.com/drive/1i_OfqkrdfNU-fiIbz0bmrKMLf_sZV4xc?usp=sharing)
 
 
@@ -76,3 +77,5 @@ We will be updating the course website over the span of this week to include mor
 
 -   Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})
 -   Cleaned Wine Dataset (try cleaning it yourself before using!): [Google Drive](https://drive.google.com/file/d/1K54C6QOZ2xlGJls59RRCLXr4OOa-8D1l/view?usp=sharing)
+
+Can you train a logistic regression model to predict wine type on only red wine? Only white wine? Does it (hopefully it does) perform worse than training with both types of wine.
