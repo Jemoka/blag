@@ -62,6 +62,8 @@ Today, we are going to cover data cleaning, and three more classifiers!
 -   Lecture on data cleaning and pandas (morning): [Slides](https://drive.google.com/file/d/1pMHtQo1iITFSMPRls2K7gc1JGd-LK2Nv/view?usp=sharing)
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing)
 
+(we will upload the afternoon resources at lunch)
+
 
 ## More to come... {#more-to-come-dot-dot-dot}
 
