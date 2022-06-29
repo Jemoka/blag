@@ -43,7 +43,7 @@ On Monday, 06/27/2022, we covered the basics of Python so that we are all up to 
 ****Day 1 feedback survey****: [Link](https://forms.gle/KAdWJLDM9saTZCrT8)
 
 
-## Day 2: OOP + Linear Models {#day-2-oop-plus-linear-models}
+## <span class="org-todo done DONE">DONE</span> Day 2: OOP + Linear Models {#day-2-oop-plus-linear-models}
 
 Today, we are going to cover the basic intuition and terminology behind Object Oriented Programming, as well as introduce two simple, linear approaches to Machine Learning tasks: linear regression and logistic regression.
 
@@ -55,11 +55,18 @@ Today, we are going to cover the basic intuition and terminology behind Object O
 ****Day 2 feedback survey****: [Link](https://forms.gle/VtHtozjqsB9Y113F9)
 
 
+## Day 3: Data + Classifier {#day-3-data-plus-classifier}
+
+Today, we are going to cover data cleaning, and three more classifiers!
+
+-   Lecture on data cleaning and pandas (morning): [Slides](https://drive.google.com/file/d/1pMHtQo1iITFSMPRls2K7gc1JGd-LK2Nv/view?usp=sharing)
+-   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing)
+
+
 ## More to come... {#more-to-come-dot-dot-dot}
 
 We will be updating the course website over the span of this week to include more everyday before instruction starts. Based on the skills and pace of the class we may adjust our pacing, add, or change content.
 
--   Day 3: Data Manipulation + Classification
 -   Day 4: Classification cont'd + Clustering
 -   Day 5: Validation/Ops and Best Practices
 

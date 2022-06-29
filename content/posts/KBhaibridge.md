@@ -15,3 +15,8 @@ Course website: [AIBridge Course Website]({{< relref "KBhaibridge_course_website
 -   [AIBridgeLab D2Aft]({{< relref "KBhaibridgelab_d2aft.md" >}})
 -   [AIBridgeLab D3/D4]({{< relref "KBhaibridgelab_d3_d4.md" >}})
 -   [AIBridgeLab D4Aft]({{< relref "KBhaibridgelab_d4aft.md" >}})
+
+oeansut\n
+\n
+aosntegu\n
+\n
