@@ -62,7 +62,7 @@ Today, we are going to cover data cleaning, and three more classifiers!
 -   Lecture on data cleaning and pandas (morning): [Slides](https://drive.google.com/file/d/1pMHtQo1iITFSMPRls2K7gc1JGd-LK2Nv/view?usp=sharing)
 -   Lecture on three classification algorithms (afternoon): [Slides](https://drive.google.com/file/d/16Vjr3sXnoBTv_2vaa7cEz_t9qn_3QsrC/view?usp=sharing)
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1yHaSL73Tki_WULN0k85RY3wmyV3tlpLd/view?usp=sharing)
--   Colab Notebooks: [Morning Lab Notebook](https://colab.research.google.com/drive/1i_OfqkrdfNU-fiIbz0bmrKMLf_sZV4xc?usp=sharing)
+-   Colab Notebooks: [Morning Lab Notebook](https://colab.research.google.com/drive/1i_OfqkrdfNU-fiIbz0bmrKMLf_sZV4xc?usp=sharing), [Afternoon Lab Notebook](https://colab.research.google.com/drive/1aKjJVnmermrw5ysPQWHX5yUJHfVcR8FJ?usp=sharing)
 
 
 ## More to come... {#more-to-come-dot-dot-dot}
