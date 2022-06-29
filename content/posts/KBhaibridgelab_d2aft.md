@@ -323,5 +323,5 @@ Much better.
 
 -   Load the wine dataset into a DataFrame and manipulate it.
 -   Feed slices back into our functions yesterday! Can you make the subsets of the data you made yesterday via the `.iloc` notation to make slicing easier?
--   Is there any columns that need normalisation?
--   Create a balanced version of the wine dataset between red and white classes. Does fitting this normalized version into our model makes training easier?
+-   Is there any columns that need normalisation? Any outliers (2 std. dev away)? Why/why not?
+-   Create a balanced version of the wine dataset between red and white classes. Does fitting this normalized version into our model makes training results better?
