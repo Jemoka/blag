@@ -73,7 +73,7 @@ Today, we are going to work on the validation operations tools, and talk about c
 
 -   Lecture on training and data operations (morning): [Slides](https://drive.google.com/file/d/13CXp1pcXLjyAKTGq2ifimVbSeRsDnlGa/view?usp=sharing)
 -   Lecture on clustering and feature operations (afternoon): [Slides](https://drive.google.com/file/d/147eyCXJKx2tTEX_wzY-6L8jPbsZwNKZ2/view?usp=sharing)
--   Lab Exercises: [Afternoon Lab Notes](https://drive.google.com/file/d/1I61UAf1VnziMs7N7sTinXm-QXWzPKbyA/view?usp=sharing)
+-   Lab Exercises: [Morning Lab Notes]({{< relref "KBhaibridge_iris_variance_worksheet.md" >}}), [Afternoon Lab Notes](https://drive.google.com/file/d/1I61UAf1VnziMs7N7sTinXm-QXWzPKbyA/view?usp=sharing)
 
 ****Final Project Introduction****: [AIBridge Final Project]({{< relref "KBhaibridge_final_project.md" >}})
 
@@ -91,5 +91,6 @@ We will be updating the course website over the span of this week to include mor
 
 -   Tools we use: [AIBridge Packages and Tools]({{< relref "KBhaibridge_packages.md" >}})
 -   Cleaned Wine Dataset (try cleaning it yourself before using!): [Google Drive](https://drive.google.com/file/d/1K54C6QOZ2xlGJls59RRCLXr4OOa-8D1l/view?usp=sharing)
+-   Iris Data with Temperature (don't use without instructions, though!): [Google Drive](https://drive.google.com/file/d/1WgruhndN1M1md4vgS87Ho9WS3wAshROP/view?usp=sharing)
 
 Can you train a logistic regression model to predict wine type on only red wine? Only white wine? Does it (hopefully it does) perform worse than training with both types of wine.
