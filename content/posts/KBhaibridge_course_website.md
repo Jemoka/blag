@@ -69,7 +69,15 @@ Today, we are going to cover data cleaning, and three more classifiers!
 
 ## Day 4: Operations and Clustering {#day-4-operations-and-clustering}
 
-Today, we are going to work on the validation operations tools
+Today, we are going to work on the validation operations tools, and talk about clustering
+
+-   Lecture on training and data operations (morning): [Slides](https://drive.google.com/file/d/13CXp1pcXLjyAKTGq2ifimVbSeRsDnlGa/view?usp=sharing)
+-   Lecture on clustering and feature operations (afternoon): [Slides](https://drive.google.com/file/d/147eyCXJKx2tTEX_wzY-6L8jPbsZwNKZ2/view?usp=sharing)
+-   Lab Exercises: [Afternoon Lab Notes](https://drive.google.com/file/d/1I61UAf1VnziMs7N7sTinXm-QXWzPKbyA/view?usp=sharing)
+
+****Final Project Introduction****: [AIBridge Final Project]({{< relref "KBhaibridge_final_project.md" >}})
+
+****Day 4 feedback survey****: [Link](https://forms.gle/F7sGtFsJryeV3SEJ8)
 
 
 ## More to come... {#more-to-come-dot-dot-dot}

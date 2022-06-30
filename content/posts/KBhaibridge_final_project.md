@@ -2,6 +2,7 @@
 title = "AIBridge Final Project"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 ## Part 1: ML Training Practice {#part-1-ml-training-practice}
