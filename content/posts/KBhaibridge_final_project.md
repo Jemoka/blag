@@ -18,7 +18,7 @@ Good luck!
 
 ## Part 2: ML Project Walk-through {#part-2-ml-project-walk-through}
 
-Your own machine learning experiement. Begin with a problem in your field; go through the available/your own data, determine what type of problem it is, and discuss why machine learning could be a good solution for the problem. Research/quantify the baselines in the field for the task (remembering our discussion on ML validation methods), and determine a list of possible features of your data.
+Create your own machine learning experiement! Begin with a problem in your field; go through the available/your own data, determine what type of problem it is, and discuss why machine learning could be a good solution for the problem. Research/quantify the baselines in the field for the task (remembering our discussion on ML validation methods), and determine a list of possible features of your data.
 
 If we were to help collect data together, how can we best collect a representative sample? How expensive (resources, monetary, or temporal) would it be? What are some ethical issues?
 
