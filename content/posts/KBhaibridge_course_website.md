@@ -24,6 +24,7 @@ The course is taught by Prof. Xin Liu in collaboration with Houjun "Jack" Liu, S
 -   Iris Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/iris), or, for better user experience, [scikit](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html)
 -   Wine Dataset: [UCI DB](https://archive.ics.uci.edu/ml/datasets/wine+quality)
 -   Class Discord: [Invite](https://discord.gg/DNj7masa)
+-   Data-Loading Cheat-Sheet: [Colab](https://colab.research.google.com/drive/1VlnKSUgefcSUBPLgAvOYHvBjB9bjcUQh?usp=sharing)
 
 When in doubt...
 
