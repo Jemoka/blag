@@ -55,7 +55,7 @@ Today, we are going to cover the basic intuition and terminology behind Object O
 ****Day 2 feedback survey****: [Link](https://forms.gle/VtHtozjqsB9Y113F9)
 
 
-## Day 3: Data + Classifier {#day-3-data-plus-classifier}
+## <span class="org-todo done DONE">DONE</span> Day 3: Data + Classifier {#day-3-data-plus-classifier}
 
 Today, we are going to cover data cleaning, and three more classifiers!
 
