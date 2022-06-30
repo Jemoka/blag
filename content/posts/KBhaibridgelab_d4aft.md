@@ -49,6 +49,33 @@ kmeans.labels_
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2 | 0 | 2 | 2 | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 2 | 2 | 2 | 2 | 0 | 2 | 0 | 2 | 0 | 2 | 2 | 0 | 0 | 2 | 2 | 2 | 2 | 2 | 0 | 2 | 2 | 2 | 2 | 0 | 2 | 2 | 2 | 0 | 2 | 2 | 2 | 0 | 2 | 2 | 0 |
 
+Let's plot our results.
+
+```python
+import matplotlib.pyplot as plt
+```
+
+We then need to define some colours.
+
+```python
+colors=["red", "green", "blue"]
+```
+
+Recall from yesterday that we realized that inner Septal/Pedal differences are not as variable as intra Septal/Pedal differences. So, we will plot the first and third columns next to each other, and use `labels_` for coloring.
+
+```python
+# for each element
+for indx, element in enumerate(x):
+    # add a scatter point
+    plt.scatter(element[0], element[1], color=colors[kmeans.labels_[indx]])
+# save our figure
+plt.savefig("scatter.png")
+```
+
+{{< figure src="/ox-hugo/scatter.png" >}}
+
+Nice. These look like the main groups are captured!
+
 Let's compare that to intended classes
 
 ```python

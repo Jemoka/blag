@@ -64,12 +64,18 @@ Today, we are going to cover data cleaning, and three more classifiers!
 -   Lab Exercises: [Morning Lab Notes](https://drive.google.com/file/d/16ady6_tt96YgiraSzxtZ7CBdASy3SSOu/view?usp=sharing), [Afternoon Lab Notes](https://drive.google.com/file/d/1yHaSL73Tki_WULN0k85RY3wmyV3tlpLd/view?usp=sharing)
 -   Colab Notebooks: [Morning Lab Notebook](https://colab.research.google.com/drive/1i_OfqkrdfNU-fiIbz0bmrKMLf_sZV4xc?usp=sharing), [Afternoon Lab Notebook](https://colab.research.google.com/drive/1aKjJVnmermrw5ysPQWHX5yUJHfVcR8FJ?usp=sharing)
 
+****Day 3 feedback survey****: [Link](https://forms.gle/GybrD48kDkQbdcMi7)
+
+
+## Day 4: Operations and Clustering {#day-4-operations-and-clustering}
+
+Today, we are going to work on the validation operations tools
+
 
 ## More to come... {#more-to-come-dot-dot-dot}
 
 We will be updating the course website over the span of this week to include more everyday before instruction starts. Based on the skills and pace of the class we may adjust our pacing, add, or change content.
 
--   Day 4: Classification cont'd + Clustering
 -   Day 5: Validation/Ops and Best Practices
 
 
