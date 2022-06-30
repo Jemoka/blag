@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-SPOILER ALERT for future labs!!
+SPOILER ALERT for future labs!! Don't scroll down!
 
 We are going to create a copy of the iris dataset with a random variance.
 
