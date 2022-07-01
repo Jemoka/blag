@@ -68,7 +68,7 @@ Today, we are going to cover data cleaning, and three more classifiers!
 ****Day 3 feedback survey****: [Link](https://forms.gle/GybrD48kDkQbdcMi7)
 
 
-## Day 4: Operations and Clustering {#day-4-operations-and-clustering}
+## <span class="org-todo done DONE">DONE</span> Day 4: Operations and Clustering {#day-4-operations-and-clustering}
 
 Today, we are going to work on the validation operations tools, and talk about clustering
 
@@ -77,16 +77,18 @@ Today, we are going to work on the validation operations tools, and talk about c
 -   Lab Exercises: [Morning Lab Notes]({{< relref "KBhaibridge_iris_variance_worksheet.md" >}}), [Afternoon Lab Notes](https://drive.google.com/file/d/1I61UAf1VnziMs7N7sTinXm-QXWzPKbyA/view?usp=sharing)
 -   Colab Notebooks: [Afternoon Notebook](https://colab.research.google.com/drive/1zSGk2e3vFzFliNiSLCs-HxOGm7e-caLC?usp=sharing)
 
-****Final Project Introduction****: [AIBridge Final Project]({{< relref "KBhaibridge_final_project.md" >}})
-
 ****Day 4 feedback survey****: [Link](https://forms.gle/F7sGtFsJryeV3SEJ8)
 
 
-## More to come... {#more-to-come-dot-dot-dot}
+## Day 5: Closing Thoughts {#day-5-closing-thoughts}
 
-We will be updating the course website over the span of this week to include more everyday before instruction starts. Based on the skills and pace of the class we may adjust our pacing, add, or change content.
+Today, we are going to tie some loose ends with missing data, error analysis, semi supervised learning, cross validation, and ethics.
 
--   Day 5: Validation/Ops and Best Practices
+-   Closing thoughts lecture (morning): [Slides](https://drive.google.com/file/d/1-a6VSDlJRdUb9MPw1d6EMajld3Pnd86N/view?usp=sharing)
+
+****Final Project****: [AIBridge Final Project]({{< relref "KBhaibridge_final_project.md" >}})
+
+****Day 5/Bootcamp feedback survey****: [Link](https://forms.gle/qCA34bWjfFXxeAjZ8)
 
 
 ## Other Links and Resources {#other-links-and-resources}
