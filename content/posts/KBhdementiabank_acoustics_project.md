@@ -34,3 +34,17 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 -   Began by moving a subsample of [Pitt](https://dementia.talkbank.org/access/English/Pitt.html)'s [Cookie Theft]({{< relref "KBhctp.md" >}}) to `pitt-7-1` in the `raw` data folder
 -   Ran `flo` on all collected samples. Arguments used are the same as that for [batchalign]({{< relref "KBhbatchalign.md" >}}), except _we filter out the `INV` tier_ as we are detecting AD on patient and not investigator: so  `flo +d +ca +t* -tINV`
 -   Moved all collected samples (and changed extension to .txt) to the same sub-folder, but in `transcripts_nodisfluency`
+
+
+### July 2nd {#july-2nd}
+
+-   Used tencent/HuYong's `nghuyong/ernie-2.0-en` Ernie 2.0 model, the continuous language model from Baidu (Layer:12, Hidden:768, Heads:12)
+-
+
+
+## Concerns and Questions {#concerns-and-questions}
+
+
+### July 2nd {#july-2nd}
+
+-   `pitt7-1/dementia/493-0` PAR tier "tell me everything you see going on in that picture" doesn't seem to be labeled correctly; I am guessing that's supposed to be INV?
