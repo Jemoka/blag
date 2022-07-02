@@ -14,23 +14,19 @@ I first began by doing a literature survey on the [ADReSS Challenge]({{< relref 
 
 ## Proposal {#proposal}
 
-[DementiaBank Acoustics Project Proposal]({{< relref "KBhdementiabank_acoustics_project_proposal.md" >}})
+And then, we wrote a proposal: [DementiaBank Acoustics Project Proposal]({{< relref "KBhdementiabank_acoustics_project_proposal.md" >}})
 
 
-## Ideas {#ideas}
+## Brainstoming {#brainstoming}
 
-Can we correlate any longitudinal data with [NACC]({{< relref "KBhnacc.md" >}})?
+More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "KBhdementiabank_acoustics_brainstoming.md" >}})
 
 
-## Data {#data}
+## Protocol Notes {#protocol-notes}
 
--   dementia/English/Lanzi: Alyssa Lanzi's new data
--   dementia/English/Delaware
 
--   What are the standard for acoustic features?
--   Motor cortex/frontal control may also be impacted
--   Vocal tremer
+### July 1st {#july-1st}
 
-<!--listend-->
-
--   What are the predictors? How automatic can we make it?
+-   Began by moving a subsample of [Pitt](https://dementia.talkbank.org/access/English/Pitt.html)'s [Cookie Theft]({{< relref "KBhctp.md" >}}) to `pitt-7-1` in the `raw` data folder
+-   Ran `flo` on all collected samples. Arguments used are the same as that for [batchalign]({{< relref "KBhbatchalign.md" >}}), except _we filter out the `INV` tier_ as we are detecting AD on patient and not investigator: so  `flo +d +ca +t* -tINV`
+-   Moved all collected samples (and changed extension to .txt) to the same sub-folder, but in `transcripts_nodisfluency`
