@@ -38,8 +38,9 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 
 ### July 2nd {#july-2nd}
 
+-   Created a dataprep script `dataprep.py` which dumps a pickled copy of cleaned data to `transcripts_nodisfluency/pitt-7-1.dat`.
+-   Created sliding windows of 5 pieces of dialogue concatenated, stored it in `transcripts_nodisfluency/pitt-7-1-windowed.dat`
 -   Used tencent/HuYong's `nghuyong/ernie-2.0-en` Ernie 2.0 model, the continuous language model from Baidu (Layer:12, Hidden:768, Heads:12)
--
 
 
 ## Concerns and Questions {#concerns-and-questions}
@@ -48,3 +49,4 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 ### July 2nd {#july-2nd}
 
 -   `pitt7-1/dementia/493-0` PAR tier "tell me everything you see going on in that picture" doesn't seem to be labeled correctly; I am guessing that's supposed to be INV?
+-   Has anyone tried to include investigator/participant cross-dialogue?
