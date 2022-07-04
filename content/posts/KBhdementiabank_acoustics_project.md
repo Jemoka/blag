@@ -43,6 +43,11 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 -   Used tencent/HuYong's `nghuyong/ernie-2.0-en` Ernie 2.0 model, the continuous language model from Baidu (Layer:12, Hidden:768, Heads:12)
 
 
+### July 4th {#july-4th}
+
+-   Finalized training code. Selected base hyperparameters {bs: 8, epochs: 2, lr: 3e-3, length: 60}. Again, we are using Baidu's `nghuyong/ernie-2.0-en`.
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
