@@ -81,7 +81,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 {{< figure src="/ox-hugo/2022-07-04_20-35-54_screenshot.png" >}}
 
 -   Commentary: high recall, low precision. Perhaps classes aren't balanced?
--   But anyways, reporting these results as they seem to meet results we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}), even without top-N ensemble (though this is one trial, [LOOCV]({{< relref "KBhloo.md" >}}) may still show that we actually need it.)
+-   But anyways, one-off reporting these results as they seem to meet results we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}), even without top-N ensemble (though this is one trial, [LOOCV]({{< relref "KBhloo.md" >}}) may still show that we actually need it.)
 
 
 ## Concerns and Questions {#concerns-and-questions}
