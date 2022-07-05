@@ -47,7 +47,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 -   Started training fastcalculator on `24bc812`
 
 
-#### faithful-frog-3 {#faithful-frog-3}
+#### train: faithful-frog-3 {#train-faithful-frog-3}
 
 {bs: 8, epochs: 2, lr: 3e-3, length: 60, pitt-7-1-windowed.dat }
 
@@ -57,7 +57,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 -   Decision: dropping bs to `4` and lr to `1e-5`, similar to previous transformers. Also training for 3 epochs.
 
 
-#### revived-disco-5 {#revived-disco-5}
+#### train: revived-disco-5 {#train-revived-disco-5}
 
 {bs: 4, epochs: 3, lr: 1e-5, length: 60, pitt-7-1-windowed.dat }
 
@@ -72,7 +72,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
         -   For new data, window size is still `5`, splitting `10` cases out for testing now instead of `5`.
 
 
-#### vocal-oath-6 {#vocal-oath-6}
+#### train: vocal-oath-6 {#train-vocal-oath-6}
 
 {bs: 4, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed.dat}
 
@@ -87,7 +87,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
     -   Created `pitt-7-4-bal` and `pitt-7-4-windowed-bal` series of data based on dataprep.py on `703f79248a20fd7a13a5033ca2bf7f691f42c941`. This version force-crops to make sure that the dementia and control indicies have the exact same length for each class.
 
 
-#### helpful-leaf-7 {#helpful-leaf-7}
+#### train: helpful-leaf-7 {#train-helpful-leaf-7}
 
 {bs: 4, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed-bal.dat}
 
@@ -98,6 +98,28 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 Beautiful. Question now is whether or not there is data leakage/external heuristics. It is a good time to do some [LOOCV]({{< relref "KBhloo.md" >}}). Getting this result without any disfluency calculations seems unlikely.
 
 But anyways, going to discuss these results as they seem to meet results we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}), even without top-N ensemble; though this is one trial, [LOOCV]({{< relref "KBhloo.md" >}}) may still show that we actually need it.
+
+
+### July 5th {#july-5th}
+
+-   Began the day with creating the script k-fold validation; I originally hoped to exactly replicate the procedure of [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}) for comparability, but, not sure how they got the actual result of a min/max range with [LOOCV]({{< relref "KBhloo.md" >}}) on binary; therefore, we will instead create a 95% [confidence interval]({{< relref "KBhconfidence_interval.md" >}}) analysis via a single-variable [t test]({{< relref "KBht_statistics.md" >}}) on standard k-fold validation. K=50
+-   During one-off testing, another set of hyperparameters seems to work too: {bs: 72, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed-bal.dat}. As we have not begun tuning for hyperparameters, we are just going to use this set, K=50, for the first k-fold trial.
+
+
+#### k-fold: F4ZVbGfdBAQvtvXemWZCZD {#k-fold-f4zvbgfdbaqvtvxemwzczd}
+
+code: 55f77ff1dea03c3ed66967864dc52fd2c0062f23
+
+{{< figure src="/ox-hugo/2022-07-05_13-22-24_screenshot.png" >}}
+
+{bs: 72, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed-bal.dat}
+K = 50
+
+{{< figure src="/ox-hugo/2022-07-05_14-25-26_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-05_14-26-00_screenshot.png" >}}
+
+It seems like the results we got is consistent and validates in a manner which we expect.
 
 
 ## Concerns and Questions {#concerns-and-questions}
@@ -112,3 +134,4 @@ But anyways, going to discuss these results as they seem to meet results we see 
 ### July 4th {#july-4th}
 
 -   Is the model overfitting on antiquated language?
+-   Is the model overfitting on cooke-theft on-topic-ness?
