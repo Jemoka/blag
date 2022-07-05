@@ -107,3 +107,8 @@ But anyways, going to discuss these results as they seem to meet results we see 
 
 -   `pitt7-1/dementia/493-0` PAR tier "tell me everything you see going on in that picture" doesn't seem to be labeled correctly; I am guessing that's supposed to be INV?
 -   Has anyone tried to include investigator/participant cross-dialogue?
+
+
+### July 4th {#july-4th}
+
+-   Is the model overfitting on antiquated language?
