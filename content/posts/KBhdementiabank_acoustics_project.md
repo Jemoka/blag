@@ -57,6 +57,15 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 -   Decision: dropping bs to `4` and lr to `1e-5`, similar to previous transformers. Also training for 3 epochs.
 
 
+#### revived-disco-5 {#revived-disco-5}
+
+{bs: 4, epochs: 3, lr: 1e-5, length: 60, pitt-7-1-windowed.dat }
+
+{{< figure src="/ox-hugo/2022-07-04_19-28-07_screenshot.png" >}}
+
+-   Commentary: quintessential overfitting
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
