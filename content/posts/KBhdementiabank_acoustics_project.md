@@ -81,7 +81,24 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 {{< figure src="/ox-hugo/2022-07-04_20-35-54_screenshot.png" >}}
 
 -   Commentary: high recall, low precision. Perhaps classes aren't balanced?
+    -   Spoiler alert: they are not.
+    -   An inspection of data reveals that there is 3211 rows of dementia, 2397 rows of control
 -   But anyways, going to discuss these results as they seem to meet results we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}), even without top-N ensemble (though this is one trial, [LOOCV]({{< relref "KBhloo.md" >}}) may still show that we actually need it.)
+-   Decision:
+    -   Created `pitt-7-4-bal` and `pitt-7-4-windowed-bal` series of data based on dataprep.py on `703f79248a20fd7a13a5033ca2bf7f691f42c941`. This version force-crops to make sure that the dementia and control indicies have the exact same length for each class.
+
+
+#### helpful-leaf-7 {#helpful-leaf-7}
+
+{bs: 4, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-04_21-31-19_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-04_21-35-43_screenshot.png" >}}
+
+Beautiful. Question now is whether or not there is data leakage/external heuristics. It is a good time to do some [LOOCV]({{< relref "KBhloo.md" >}}). This result seems unlikely.
+
+But that's probably a tomorrow project.
 
 
 ## Concerns and Questions {#concerns-and-questions}
