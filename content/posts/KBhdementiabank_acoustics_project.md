@@ -44,6 +44,17 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 ### July 4th {#july-4th}
 
 -   Finalized training code. Selected base hyperparameters {bs: 8, epochs: 2, lr: 3e-3, length: 60}. Again, we are using Baidu's `nghuyong/ernie-2.0-en`.
+-   Started training fastcalculator on `24bc812`
+
+
+#### faithful-frog-3 {#faithful-frog-3}
+
+{bs: 8, epochs: 2, lr: 3e-3, length: 60, pitt-7-1-windowed.dat }
+
+{{< figure src="/ox-hugo/2022-07-04_19-20-13_screenshot.png" >}}
+
+-   Commentary: LR could be too high, looking at the divergent loss behavior.
+-   Decision: dropping bs to `4` and lr to `1e-5`, similar to previous transformers. Also training for 3 epochs.
 
 
 ## Concerns and Questions {#concerns-and-questions}
