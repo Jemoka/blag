@@ -96,7 +96,7 @@ More notes from the meeting: [DementiaBank Acoustics Brainstoming]({{< relref "K
 
 {{< figure src="/ox-hugo/2022-07-04_21-35-43_screenshot.png" >}}
 
-Beautiful. Question now is whether or not there is data leakage/external heuristics. It is a good time to do some [LOOCV]({{< relref "KBhloo.md" >}}). This result seems unlikely.
+Beautiful. Question now is whether or not there is data leakage/external heuristics. It is a good time to do some [LOOCV]({{< relref "KBhloo.md" >}}). Getting this result without any disfluency calculations seems unlikely.
 
 But that's probably a tomorrow project.
 
