@@ -99,8 +99,6 @@ Beautiful. Question now is whether or not there is data leakage/external heurist
 
 But anyways, going to discuss these results as they seem to meet results we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}), even without top-N ensemble; though this is one trial, [LOOCV]({{< relref "KBhloo.md" >}}) may still show that we actually need it.
 
-But that's probably a tomorrow project.
-
 
 ## Concerns and Questions {#concerns-and-questions}
 
