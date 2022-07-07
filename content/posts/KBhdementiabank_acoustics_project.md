@@ -195,6 +195,10 @@ Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
 
 {{< figure src="/ox-hugo/2022-07-07_15-30-07_screenshot.png" >}}
 
+{{< figure src="/ox-hugo/2022-07-07_16-18-44_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-07_16-20-23_screenshot.png" >}}
+
 
 ## Concerns and Questions {#concerns-and-questions}
 
