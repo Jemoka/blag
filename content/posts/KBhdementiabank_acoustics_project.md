@@ -122,6 +122,80 @@ K = 50
 It seems like the results we got is consistent and validates in a manner which we expect.
 
 
+### July 7th {#july-7th}
+
+Yesterday was a day filled with working on [batchalign]({{< relref "KBhbatchalign.md" >}}), but we are back now. Today, I aim to look into the heuristic that I identified yesterday by playing with the model, which is that it seems like the model prefers the use of long-focused sentences _about_ cookies, so the heruistic its picking up is probably on-topicness.
+
+I am going to first leverage the lovely `cdpierse/transformers-interpret` tool to help build some explainability by adding it to validate.py. Upon some human validation with random sampling, the model seem to do less well than I'd hoped. Running a train cycle with the new results/params seen above to see if it does better.
+
+
+#### train: brisk-oath-10 {#train-brisk-oath-10}
+
+{bs: 72, epochs: 3, lr: 1e-5, length: 60, pitt-7-4-windowed-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-07_11-39-18_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-07_11-48-40_screenshot.png" >}}
+
+-   Commentary: It seems like the model is doing overall worse from validation data, but it does fairly well during test data.
+-   Decision:
+    -   I can fairly confidently claim that the model is just fitting on topic. As in, if the topic is about cookies (theft/taking/cookie/mother/etc.), it will be classified as control.
+    -   One thing that we can do is to claim this task as directly task-controlled: that is, include **no** data except cookie and control for that difference
+    -   Then, the model would't be able to predict the result b/c the variation in topic won't have influence.
+    -   This is going to be prepared in the `cookiepitt-7-7-bal*` based on `dataprep.py` in commit `518dec82bb961c0a8ad02e3080289b56102aa1a2`
+
+
+#### train: super-durian-11 {#train-super-durian-11}
+
+{bs: 72, epochs: 3, lr: 1e-5, length: 60, cookiepitt-7-7-windowed-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-07_13-51-01_screenshot.png" >}}
+
+-   Commentary: the model is _no where near convergence_
+-   Decision: multiplying the LR by 10
+
+
+#### train: floral-sunset-12 {#train-floral-sunset-12}
+
+{bs: 72, epochs: 3, lr: 1e-4, length: 60, cookiepitt-7-7-windowed-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-07_13-54-38_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-07_14-02-47_screenshot.png" >}}
+
+-   Commentary: There we go. This seem to be more in line with what we see in [Yuan 2021]({{< relref "KBhyuan_2021.md" >}})
+-   Decision: ok, let's elongate the actual content. Perhaps we can try a 7-element search instead? This is written as `cookiepitt-7-7-*-long`. Code based on `9e31f4bc13c4bfe193dcc049059c3d9bda46c8d0`
+
+
+#### train: sweet-plasma-13 {#train-sweet-plasma-13}
+
+{bs: 72, epochs: 3, lr: 1e-4, length: 60, cookiepitt-7-7-windowed-long-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-07_15-05-28_screenshot.png" >}}
+
+-   Commentary: underfitting
+-   Dropping batch size down to 64 to add more steps
+
+
+#### train: smart-river-14 {#train-smart-river-14}
+
+{bs: 64, epochs: 3, lr: 1e-4, length: 60, cookiepitt-7-7-windowed-long-bal.dat}
+
+{{< figure src="/ox-hugo/2022-07-07_15-13-21_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-07_15-20-57_screenshot.png" >}}
+
+-   Commentary: this finally fits to the specifications which [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}) have revealed
+-   Decision: running k-fold on this architecture
+
+
+#### k-fold: XgsP4FVS6ScFxCZKFJoVQ5. {#k-fold-xgsp4fvs6scfxczkfjovq5-dot}
+
+Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
+
+{{< figure src="/ox-hugo/2022-07-07_15-30-07_screenshot.png" >}}
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
