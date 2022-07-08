@@ -200,6 +200,14 @@ Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
 {{< figure src="/ox-hugo/2022-07-07_16-20-23_screenshot.png" >}}
 
 
+### July 8th {#july-8th}
+
+-   Began the day with aligning the entirety of cookie for both control and dementia, named the dataset `alignedpit-7-8` in the RAW folder
+-   Per what we discussed, will add [pause] as a token to the model. Then, transcript the text such that it would contain normalized values to the pauses for pauses &gt; 0.250 seconds. Therefore, the data would look like
+
+    "hello my name is [pause] 262 [pause] bob"
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
