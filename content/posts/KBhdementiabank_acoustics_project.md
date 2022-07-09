@@ -202,10 +202,33 @@ Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
 
 ### July 8th {#july-8th}
 
--   Began the day with aligning the entirety of cookie for both control and dementia, named the dataset `alignedpit-7-8` in the RAW folder
+-   Began the day with aligning the entirety of cookie for both control and dementia, named the dataset `alignedpitt-7-8` in the RAW folder
 -   Per what we discussed, will add [pause] as a token to the model. Then, transcript the text such that it would contain normalized values to the pauses for pauses &gt; 0.250 seconds. Therefore, the data would look like
 
     "hello my name is [pause] 262 [pause] bob"
+
+
+### July 9th {#july-9th}
+
+-   Created transcript.py, which coverts the data in `raw` to `transcripts_pauses`, which contains pause values &gt; 250 msc and prepends them with [pause] tokens
+-   The code from above is taken from `check.py` in [batchalign]({{< relref "KBhbatchalign.md" >}}), used `transcript.py` from `7e19a4912cf0ad5d269c139da5ce018615495ebb` to clean out the dataset; placed it in similar txt format to `alignedpitt-7-8`
+-   Ran dataprep with window size of 5, created `alignedpitt-7-8.bat` and `alignedpitt-7-8-windowed.bat` as the dataprep file
+-   starting a new training run, with `[pause]` added as a new token, code `06846c6c95e6b1ccf17f0660c5da76aa50231567`
+
+
+#### golden-tree-16 {#golden-tree-16}
+
+{bs: 64, epochs: 3, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}
+
+{{< figure src="/ox-hugo/2022-07-09_11-48-01_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-09_11-51-24_screenshot.png" >}}
+
+But interestingly, if I used the original (non-pause-aware) tokenizer, we have
+
+{{< figure src="/ox-hugo/2022-07-09_11-52-03_screenshot.png" >}}
+
+So realistically, we have the same F1 between the two, but pause encoding increased the accuracy of prediction yet dropped recall dramatically.
 
 
 ## Concerns and Questions {#concerns-and-questions}
