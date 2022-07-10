@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-I was digging through my OneDrive recently for work, and found this piece fo writing.
+I was digging through my OneDrive recently for work, and found this piece of writing.
 
 ---
 
