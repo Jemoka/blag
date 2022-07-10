@@ -311,6 +311,7 @@ We can probably call the replication stage done, with no dramatically better eff
 -   FluCalc! Leonid's lovely new program can be an uberuseful feature extraction tool
 -   Let's try using to build a new dataset, and network. FluCalc + Pause Encoding + Textual Data [late fusion]({{< relref "KBhfusion.md#late-fusion" >}})
 -   This is becoming `alignedpitt-7-8-flucalc`. As the program is currently under heavy development to include results from [batchalign]({{< relref "KBhbatchalign.md" >}}), we will specify version `V 09-Jul-2022 11:00` for now.
+-   Done, the new data has the same i/o shape, but then has a bunch of features filtered for nulls which contains outputs from flucalc. Again, `alignedpitt-7-8-flucalc` from `4346fc07c4707343c507e32786b6769b6bd6fb49` does not take into account results from the `%wor` tier!
 
 
 ## Concerns and Questions {#concerns-and-questions}
