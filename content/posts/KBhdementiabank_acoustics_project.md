@@ -216,7 +216,7 @@ Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
 -   starting a new training run, with `[pause]` added as a new token, code `06846c6c95e6b1ccf17f0660c5da76aa50231567`
 
 
-#### golden-tree-16 {#golden-tree-16}
+#### train: golden-tree-16 {#train-golden-tree-16}
 
 {bs: 64, epochs: 3, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}
 
@@ -224,11 +224,86 @@ Code: 3870651ba71da8ddb3f481a7c3e046397a09d8b2
 
 {{< figure src="/ox-hugo/2022-07-09_11-51-24_screenshot.png" >}}
 
-But interestingly, if I used the original (non-pause-aware) tokenizer, we have
-
-{{< figure src="/ox-hugo/2022-07-09_11-52-03_screenshot.png" >}}
-
 So realistically, we have the same F1 between the two, but pause encoding increased the accuracy of prediction yet dropped recall dramatically.
+
+As a random check, let's find out if simple fine-tuning (only training on classifier) would work, so:
+
+{{< figure src="/ox-hugo/2022-07-09_12-07-31_screenshot.png" >}}
+
+
+#### train: jumping-blaze-17 {#train-jumping-blaze-17}
+
+{bs: 64, epochs: 3, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}. This time with only training classifier.
+
+{{< figure src="/ox-hugo/2022-07-09_12-09-22_screenshot.png" >}}
+
+-   Commentary: we did not like. start coverging
+-   Bumping LR by a factor of 10
+
+
+#### train: vital-water-18 {#train-vital-water-18}
+
+{bs: 64, epochs: 3, lr: 1e-3, length: 60, alignedpitt-7-8-windowed.dat}. This time with only training classifier.
+
+{{< figure src="/ox-hugo/2022-07-09_12-11-20_screenshot.png" >}}
+
+-   Commentary: barely started converging, seem to be a local
+-   Training for 2 more epochs
+
+
+#### train: fiery-smoke-19 {#train-fiery-smoke-19}
+
+{bs: 64, epochs: 5, lr: 1e-3, length: 60, alignedpitt-7-8-windowed.dat}. This time with only training classifier.
+
+{{< figure src="/ox-hugo/2022-07-09_12-14-14_screenshot.png" >}}
+
+-   Commentary: classic overfitting
+
+At this point, unlocking the model would probably be a good bet
+
+
+#### train: leafy-deluge-20 {#train-leafy-deluge-20}
+
+{bs: 64, epochs: 5, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}.
+
+Training once again with code without locking, and bump LR down
+
+{{< figure src="/ox-hugo/2022-07-09_13-14-39_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-09_13-17-36_screenshot.png" >}}
+
+-   Commentary: classic the recall is slowly creeping up
+-   Decision: let's go for 8 epochs
+
+
+#### train: royal-pond-21 {#train-royal-pond-21}
+
+{bs: 64, epochs: 8, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}.
+
+{{< figure src="/ox-hugo/2022-07-09_13-22-40_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-09_13-24-01_screenshot.png" >}}
+
+Commentary: let's run k-fold now, with these settings.
+
+
+#### k-fold: QskZWfEsML52ofcQgGujE2. {#k-fold-qskzwfesml52ofcqgguje2-dot}
+
+{{< figure src="/ox-hugo/2022-07-09_14-06-23_screenshot.png" >}}
+
+{bs: 64, epochs: 8, lr: 1e-4, length: 60, alignedpitt-7-8-windowed.dat}.
+
+{{< figure src="/ox-hugo/2022-07-09_16-08-09_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-09_16-08-31_screenshot.png" >}}
+
+Ok, the base hypothesis from [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}) is very much confirmed here. The same training, same content, but pause encoding is very beneficial to the quality of the results. The results that they reported contained an ensemble data, which is in the high 80s; we can now continue doing something new as [Yuan 2021]({{< relref "KBhyuan_2021.md" >}})'s conclusion is fairly achieved.
+
+{{< figure src="/ox-hugo/2022-07-09_16-15-07_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-09_18-26-57_screenshot.png" >}}
+
+We can probably call the replication stage done, with no dramatically better effect.
 
 
 ## Concerns and Questions {#concerns-and-questions}

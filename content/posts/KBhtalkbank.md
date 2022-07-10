@@ -48,3 +48,7 @@ Other research to read:
 -   Penn (julia parish something but they don't stare their data but they smile and things with Mark Libermann type of thing)
 -   Learning more about speech text
 -   <https://my.clevelandclinic.org/health/diagnostics/22327-differential-diagnosis>
+
+python3  ~/mfa_data/[batchalign]({{< relref "KBhbatchalign.md" >}})-dist/batchalign.py ~/mfa_data/my_corpus ~/mfa_data/my_corpus_aligned
+
+christan marr paper on MFA on child data
