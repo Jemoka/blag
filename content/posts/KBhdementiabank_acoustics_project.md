@@ -306,6 +306,13 @@ Ok, the base hypothesis from [Yuan 2021]({{< relref "KBhyuan_2021.md" >}}) is ve
 We can probably call the replication stage done, with no dramatically better effect.
 
 
+### July 10th {#july-10th}
+
+-   FluCalc! Leonid's lovely new program can be an uberuseful feature extraction tool
+-   Let's try using to build a new dataset, and network. FluCalc + Pause Encoding + Textual Data [late fusion]({{< relref "KBhfusion.md#late-fusion" >}})
+-   This is becoming `alignedpitt-7-8-flucalc`. As the program is currently under heavy development to include results from [batchalign]({{< relref "KBhbatchalign.md" >}}), we will specify version `V 09-Jul-2022 11:00` for now.
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
