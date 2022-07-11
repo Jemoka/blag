@@ -501,7 +501,9 @@ clsf.score(test_features, test_targets)
 0.4915254237288136
 ```
 
-Turns out, deep learning still does better.
+Turns out, deep learning still does better. I'm thinking maybe the output is being faulty, say, for something like the loss function.
+
+Decision: switching activation to sigmoid.
 
 
 ## Concerns and Questions {#concerns-and-questions}
