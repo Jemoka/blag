@@ -49,6 +49,6 @@ Other research to read:
 -   Learning more about speech text
 -   <https://my.clevelandclinic.org/health/diagnostics/22327-differential-diagnosis>
 
-python3  ~/mfa_data/[batchalign]({{< relref "KBhbatchalign.md" >}})-dist/batchalign.py ~/mfa_data/my_corpus ~/mfa_data/my_corpus_aligned
+python3 ~/mfa_data/[batchalign]({{< relref "KBhbatchalign.md" >}})-dist/batchalign.py ~/mfa_data/my_corpus ~/mfa_data/my_corpus_aligned
 
 christan marr paper on MFA on child data

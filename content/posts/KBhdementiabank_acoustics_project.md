@@ -314,6 +314,143 @@ We can probably call the replication stage done, with no dramatically better eff
 -   Done, the new data has the same i/o shape, but then has a bunch of features filtered for nulls which contains outputs from flucalc. Again, `alignedpitt-7-8-flucalc` from `4346fc07c4707343c507e32786b6769b6bd6fb49` does not take into account results from the `%wor` tier!
 
 
+### July 11th {#july-11th}
+
+-   `ab19abd6486884141c9ab4e4e185255a77ae833e` is the final-ish version of the late fusion model
+-   We are going to use `alignedpitt-7-8-flucalc` to start training
+
+
+#### train: royal-pond-21 {#train-royal-pond-21}
+
+{bs: 64, epochs: 8, lr: 1e-4, length: 60, alignedpitt-7-8-flucalc-windowed.dat}.
+
+{{< figure src="/ox-hugo/2022-07-11_10-15-58_screenshot.png" >}}
+
+-   Commentary: overfitting
+-   Decision, droping lr by a factor of 10, also increasing length to 70
+
+
+#### train: fallen-dust-25 {#train-fallen-dust-25}
+
+{bs: 64, epochs: 8, lr: 1e-5, length: 70, alignedpitt-7-8-flucalc-windowed.dat}.
+
+{{< figure src="/ox-hugo/2022-07-11_10-37-32_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_10-38-37_screenshot.png" >}}
+
+-   Commentary: overfitting
+-   Decision, droping lr by a factor of 10, dropping batch size to 32, training more to 10
+
+
+#### train: dainty-meadow-26 {#train-dainty-meadow-26}
+
+{bs: 32, epochs: 10, lr: 1e-6, length: 70, alignedpitt-7-8-flucalc-windowed.dat}.
+
+{{< figure src="/ox-hugo/2022-07-11_10-45-52_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_10-46-31_screenshot.png" >}}
+
+****ah****
+
+-   At this point, I think it'd be good to do some feature selection
+-   Let's do a chi^2 correlation, and select 3 best features
+
+<!--listend-->
+
+```python
+import pandas as pd
+
+DATA = "/Users/houliu/Documents/Projects/DBC/data/transcripts_pauses/alignedpitt-7-8-flucalc-windowed.bat"
+
+# read pickle
+df = pd.read_pickle(DATA)
+# also, get only train data
+df = df[df.split=="train"]
+df
+```
+
+```text
+              target  mor_Utts  ...  split                                          utterance
+trial sample                    ...
+120-2 1049         1 -0.179084  ...  train  well the boy is getting some cookies handing o...
+336-1 2492         0 -0.481740  ...  train  +oh okay, the the little girl askin(g) for the...
+076-4 786          1 -0.179084  ...  train  well the little boy was looking at that cookie...
+279-0 2250         1  1.980274  ...  train  kid's stool turnin(g) [pause]540[pause] over s...
+014-2 151          1  0.746355  ...  train  he's fallin(g) off the chair  down here or try...
+...              ...       ...  ...    ...                                                ...
+208-0 1655         0 -0.481740  ...  train  the boy [pause]920[pause] is going after [paus...
+492-0 2696         1 -0.179084  ...  train  oh yes quite a_lot the kid's tryin(g) to get t...
+497-1 2727         1  0.129396  ...  train  what else ? &uh the see the [pause]2400[pause]...
+175-2 1535         0  0.863668  ...  train  the window is open you can see out the curtain...
+279-0 2261         1  1.980274  ...  train  the other kid with [pause]610[pause] the stool...
+
+[2848 rows x 44 columns]
+```
+
+Let's slice out the bits which is labels, etc.
+
+```python
+in_data = df.drop(columns=["utterance", "target", "split"])
+in_data.columns
+```
+
+```text
+Index(['mor_Utts', 'mor_Words', 'mor_syllables', '#_Prolongation',
+       '%_Prolongation', '#_Broken_word', '%_Broken_word', '#_Block',
+       '%_Block', '#_PWR', '%_PWR', '#_PWR-RU', '%_PWR-RU', '#_WWR', '%_WWR',
+       '#_mono-WWR', '%_mono-WWR', '#_WWR-RU', '%_WWR-RU', '#_mono-WWR-RU',
+       '%_mono-WWR-RU', 'Mean_RU', '#_Phonological_fragment',
+       '%_Phonological_fragment', '#_Phrase_repetitions',
+       '%_Phrase_repetitions', '#_Word_revisions', '%_Word_revisions',
+       '#_Phrase_revisions', '%_Phrase_revisions', '#_Pauses', '%_Pauses',
+       '#_Filled_pauses', '%_Filled_pauses', '#_TD', '%_TD', '#_SLD', '%_SLD',
+       '#_Total_(SLD+TD)', '%_Total_(SLD+TD)', 'Weighted_SLD'],
+      dtype='object')
+```
+
+And the labels:
+
+```python
+out_data = df["target"]
+out_data
+```
+
+```text
+trial  sample
+120-2  1049      1
+336-1  2492      0
+076-4  786       1
+279-0  2250      1
+014-2  151       1
+                ..
+208-0  1655      0
+492-0  2696      1
+497-1  2727      1
+175-2  1535      0
+279-0  2261      1
+Name: target, Length: 2848, dtype: int64
+```
+
+And now, let's select 3 best features.
+
+```python
+from sklearn.feature_selection import SelectKBest, f_classif
+
+k_best_tool = SelectKBest(f_classif, k=3)
+k_best_tool.fit(in_data, out_data)
+
+k_best_tool.get_feature_names_out()
+```
+
+|       |            |                  |
+|-------|------------|------------------|
+| %_WWR | %_mono-WWR | %_Total_(SLD+TD) |
+
+OD = other disfluencies; SLD = stuttering-like disfluencies; TD = total disfluencies; WWR = whole-word-repetition
+
+ok, let's select those features
+
+
 ## Concerns and Questions {#concerns-and-questions}
 
 
