@@ -439,7 +439,8 @@ from sklearn.feature_selection import SelectKBest, f_classif
 k_best_tool = SelectKBest(f_classif, k=3)
 k_best_tool.fit(in_data, out_data)
 
-k_best_tool.get_feature_names_out()
+best_features = k_best_tool.get_feature_names_out()
+best_features
 ```
 
 |       |            |                  |
