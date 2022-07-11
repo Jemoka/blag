@@ -364,6 +364,8 @@ DATA = "/Users/houliu/Documents/Projects/DBC/data/transcripts_pauses/alignedpitt
 
 # read pickle
 df = pd.read_pickle(DATA)
+# test
+test_data = df[df.split=="test"]
 # also, get only train data
 df = df[df.split=="train"]
 df
@@ -450,6 +452,56 @@ best_features
 OD = other disfluencies; SLD = stuttering-like disfluencies; TD = total disfluencies; WWR = whole-word-repetition
 
 ok, let's select those features
+
+
+#### train: visionary-plasma-27 {#train-visionary-plasma-27}
+
+{bs: 32, epochs: 10, lr: 1e-6, length: 70, alignedpitt-7-8-flucalc-windowed.dat}. Also with feature selection.
+
+{{< figure src="/ox-hugo/2022-07-11_11-27-49_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_11-28-11_screenshot.png" >}}
+
+hmmm.
+
+I am curious if we just ran something like a decision tree, what happens.
+
+```python
+in_features = df[best_features]
+test_features = test_data[best_features]
+in_targets = df["target"]
+test_targets = test_data["target"]
+```
+
+seed the classifier, and fit.
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+clsf = RandomForestClassifier()
+clsf.fit(in_features, in_targets)
+clsf.score(test_features, test_targets)
+```
+
+```text
+0.423728813559322
+```
+
+OK nevermind. What about SVC?
+
+```python
+from sklearn.svm import SVC
+
+clsf = SVC()
+clsf.fit(in_features, in_targets)
+clsf.score(test_features, test_targets)
+```
+
+```text
+0.4915254237288136
+```
+
+Turns out, deep learning still does better.
 
 
 ## Concerns and Questions {#concerns-and-questions}
