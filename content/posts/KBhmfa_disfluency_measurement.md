@@ -65,4 +65,4 @@ However, if you take a look at a randomly sampled set of validation data (crosse
 
 We can therefore catch a lot of the "slow talking, long pausing" patients, but most speaking fluently will possibly need semantic information for prediction.
 
-I have some preliminary results on Pitt+ERNIE (a kindo f BERT) that indicate that a key semantic factor is "on-topicness." However, Pitt does not contain a lot of off-topic control data (say, fluency, which it has for dementia) for me to validate those claims easily. I will continue work on that front.
+I have some preliminary results on Pitt+ERNIE (a kind of BERT) that indicate that a key semantic factor is "on-topicness." However, Pitt does not contain a lot of off-topic control data (say, the fluency task, which it has for dementia) for me to validate those claims easily. I will continue work on that front.
