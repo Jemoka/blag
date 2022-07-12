@@ -467,8 +467,8 @@ hmmm.
 I am curious if we just ran something like a decision tree, what happens.
 
 ```python
-in_features = df[best_features]
-test_features = test_data[best_features]
+in_features = df.drop(columns=["utterance", "target", "split"])
+test_features = test_data.drop(columns=["utterance", "target", "split"])
 in_targets = df["target"]
 test_targets = test_data["target"]
 ```
@@ -484,7 +484,7 @@ clsf.score(test_features, test_targets)
 ```
 
 ```text
-0.423728813559322
+0.5932203389830508
 ```
 
 OK nevermind. What about SVC?
@@ -498,12 +498,77 @@ clsf.score(test_features, test_targets)
 ```
 
 ```text
-0.4915254237288136
+0.5932203389830508
 ```
 
 Turns out, deep learning still does better. I'm thinking maybe the output is being faulty, say, for something like the loss function.
 
 Decision: switching activation to sigmoid.
+
+
+#### train: sunny-bush-31 {#train-sunny-bush-31}
+
+{bs: 32, epochs: 10, lr: 1e-6, length: 70, alignedpitt-7-8-flucalc-windowed.dat}, selected features
+
+{{< figure src="/ox-hugo/2022-07-11_12-35-52_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_12-37-21_screenshot.png" >}}
+
+Ok let's think about this. Decision: added batch normalization.
+
+
+#### train: autumn-jazz-32 {#train-autumn-jazz-32}
+
+{bs: 32, epochs: 10, lr: 1e-6, length: 70, alignedpitt-7-8-flucalc-windowed.dat}, selected features
+
+{{< figure src="/ox-hugo/2022-07-11_12-50-10_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_12-50-56_screenshot.png" >}}
+
+The model maybe overfitting on some simple heuristic; some basic statistics revealed that these variables are actually quite differently distributed.
+
+{{< figure src="/ox-hugo/2022-07-11_13-06-06_screenshot.png" >}}
+
+Perhaps we should increase the complexity of the model?
+
+{{< figure src="/ox-hugo/2022-07-11_13-08-49_screenshot.png" >}}
+
+
+#### train: fallen-microwave-33 {#train-fallen-microwave-33}
+
+{bs: 32, epochs: 10, lr: 1e-6, length: 70, alignedpitt-7-8-flucalc-windowed.dat}, selected features
+
+Just to test, I am bumping the LR to 1e-5, just to see what happens. I am very confused.
+
+{{< figure src="/ox-hugo/2022-07-11_13-14-26_screenshot.png" >}}
+
+
+#### train: upbeat-flower-35 {#train-upbeat-flower-35}
+
+{bs: 32, epochs: 10, lr: 1e-5, length: 70, alignedpitt-7-8-flucalc-windowed.dat}, selected features
+
+{{< figure src="/ox-hugo/2022-07-11_13-21-53_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-07-11_13-23-35_screenshot.png" >}}
+
+The more we work on this, the more overfit it gets. (I FORGOT A RELUCTIFIER)
+
+
+#### a note {#a-note}
+
+{bs: 32, epochs: 10, lr: 1e-5, length: 70, alignedpitt-7-11-flucalc-windowed.dat}, selected features
+
+{{< figure src="/ox-hugo/2022-07-11_17-07-45_screenshot.png" >}}
+
+Pauses, no meta:
+
+{{< figure src="/ox-hugo/2022-07-11_17-09-23_screenshot.png" >}}
+
+Pauses, meta:
+
+{{< figure src="/ox-hugo/2022-07-11_17-08-41_screenshot.png" >}}
+
+so effectively cointoss
 
 
 ## Concerns and Questions {#concerns-and-questions}
@@ -519,3 +584,8 @@ Decision: switching activation to sigmoid.
 
 -   Is the model overfitting on antiquated language?
 -   Is the model overfitting on cooke-theft on-topic-ness?
+
+
+### July 11th {#july-11th}
+
+-   LSTM only on pauses?
