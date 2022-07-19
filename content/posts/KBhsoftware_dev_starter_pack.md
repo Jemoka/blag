@@ -119,7 +119,7 @@ Python would be your friend for all things of programming where the act of progr
 
 Its a language that's designed to be easy to write: is a very do-as-I-say language that sacrifices efficiency and elegance for getting crap done. This is how I started programming. [This is the book I started with.](https://www.amazon.com/Python-Programming-Absolute-Beginner-3rd/dp/1435455002) It teaches Python through programming a series of small projects that are mostly Terminal games.
 
-To learn data science, [Nueva's very own data science course](https://jennselby.github.io/MachineLearningCourseNotes/) give very good conceptual framework. A typical first project is to recognize pictures of handwritten digits, [for which there is a good guide](https://towardsdatascience.com/handwritten-digit-mnist-pytorch-977b5338e627).
+To learn data science, [Nueva's very own data science course](https://jennselby.github.io/MachineLearningCourseNotes/) give very good conceptual framework. A typical first project is to recognize pictures of handwritten digits, [for which there is a good guide](https://towardsdatascience.com/handwritten-digit-mnist-pytorch-977b5338e627). I also started something called [AIBridge]({{< relref "KBhaibridge_course_website.md" >}}) with [AIFS]({{< relref "KBhaifs.md" >}}), so if we ever publish the recordings I will put them here.
 
 Google also: pip, ipython, Jupyter.
 
