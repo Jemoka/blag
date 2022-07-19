@@ -37,6 +37,8 @@ If you ask a question, though, [be prepared to get yelled at](https://www.reddit
 
 Development on Windows is like cooking on campfire. Doable, useful for specific things, but not great overall. If you must use a PC, put [Debian/Ubuntu/some easy to use Linux](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) on it. Windows is just terrible.
 
+I should add that Microsoft started doing Windows Subsystem for Linux: <https://docs.microsoft.com/en-us/windows/wsl/install>, which apparently have been pretty good. So worth taking a shot if you are stuck on Windows.
+
 
 ### \*nix Terminal {#nix-terminal}
 

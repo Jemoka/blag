@@ -4,6 +4,27 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## QUESTIONS {#questions}
+
+-   implemented LubetichSagae, but how did they deal with variable-length inputs? i.e. data having a variable number of utterances, how to treat?
+
+
+## mar {#mar}
+
+-   mar has done a thing and its phoneme level
+-   We did it, now automated
+-   LEAP data
+
+
+## next actions {#next-actions}
+
+-   Aphasia (-apraxia?): classification
+-   Child data (EllisWeismer)
+-   Dementia
+
+
+## a {#a}
+
 -   `~Multiple @Begin/CHECK problem~`
 -   `~Placement of @Options~`
 -   `~Strange, missing period~`
