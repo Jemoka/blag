@@ -9,6 +9,41 @@ Gah I have to do this.
 
 ## Consequences {#consequences}
 
+
+### Not licensed {#not-licensed}
+
+-   If unlicensed person is drivnig your car, it maybe impounded for 30 days
+-   Hired to drive interstate commercially need to be older than 21, also need to be older than 21 to transport hazardous materials
+
+
+### Class C License {#class-c-license}
+
+
+#### Driving #knw {#driving-knw}
+
+-   Two axle vehicle with a GVWL of 26,000 lbs or less
+-   Three axle vehicle weighing 6,000 lbs or less
+-   House car &lt; 40 feet or less
+-   Three wheel motocycles
+-   Vanpool vehicle designed to carry between 10 and no more than 15 people
+
+
+#### Towing #knw {#towing-knw}
+
+-   Single vehicle of 10,000 or less
+-   Vehicle weighing 4000 lbs or more unladen
+    -   Trailer coach under 10,000 lbs
+    -   Fifth wheel trailer exceeding 10,000 lbs but under 15,000 lbs, with endorsement
+
+
+#### Mor ethings {#mor-ethings}
+
+-   Class C drivers can't tow more than one
+-   Motor vehile weigning under 4000 lbs cannot tow more than 6000 lbs
+
+
+### Getting in trouble {#getting-in-trouble}
+
 -   Get a traffic ticket and fail to show up to court: suspend driving
 -   One at fault collision or one at fault traffic violation: may take action?
 -   Two of either at fault collision or violation conviction: no driving for 30 days unless accompanied by 25 year old adult

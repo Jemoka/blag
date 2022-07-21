@@ -4,9 +4,10 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## QUESTIONS {#questions}
-
--   implemented LubetichSagae, but how did they deal with variable-length inputs? i.e. data having a variable number of utterances, how to treat?
+-   Initial segment repetition
+-   Extracting studdering
+-   Gramatically problematic
+-
 
 
 ## mar {#mar}
