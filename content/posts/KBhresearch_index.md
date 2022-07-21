@@ -13,7 +13,7 @@ I have done various published academic research projects in the fields of natura
 
 ### ConDef/Dictembed {#condef-dictembed}
 
-Wikipedia is a surprisingly good dictionary, and so we can mine it for building context-aware dictionary. [Repository](https://github.com/jklsnt/dictembed).
+Wikipedia is a surprisingly good dictionary, and so we can mine it for building context-aware dictionary. [Repository](https://github.com/jklsnt/dictembed), [Paper](https://link.springer.com/chapter/10.1007/978-3-031-10464-0_41).
 
 ****Title****: ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias
 
