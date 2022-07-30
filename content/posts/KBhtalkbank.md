@@ -4,10 +4,26 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+-   numbers
+-   &lt;affirmative&gt;
+-   'mo data!
+    -   CallFriend/CallHome (ca-data)
+    -   ISL?
+    -   SBCSAE
+    -   Aphasia + MICASE
+    -   TBI data
+-   Providing a Two-Pass Solution
+-   Writing
+    -   Big description of the pipeline
+    -   Notion of the pipeline
+    -   Better tokenization?
+-   8/18
+
+---
+
 -   Initial segment repetition
 -   Extracting studdering
 -   Gramatically problematic
--
 
 
 ## mar {#mar}
