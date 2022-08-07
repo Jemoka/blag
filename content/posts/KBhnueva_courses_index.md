@@ -35,7 +35,7 @@ Backlog: [Finite State Machine]({{< relref "KBhfinite_state_machine.md" >}})
 
 ## NUS-HIST301 American History {#nus-hist301-american-history}
 
-Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FDR)]({{< relref "KBhfdr.md" >}}), [Works Progress Administration]({{< relref "KBhwpa.md" >}}), [effects of the New Deal]({{< relref "KBheffects_of_the_new_deal.md" >}}), [Great Depression]({{< relref "KBhgreat_depression.md" >}}), [Herber Hoover]({{< relref "KBhherber_hoover.md" >}})
+Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FDR)]({{< relref "KBhfdr.md" >}}), [Works Progress Administration]({{< relref "KBhwpa.md" >}}), [effects of the New Deal]({{< relref "KBheffects_of_the_new_deal.md" >}}), [Great Depression]({{< relref "KBhgreat_depression.md" >}}), [Herber Hoover]({{< relref "KBhherber_hoover.md" >}}), [disinformation]({{< relref "KBhdisinformation.md" >}})
 
 | Date                                                                                         | Topic                                                                                |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -43,6 +43,7 @@ Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FD
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-02 Mon&gt;</span></span> | [cold war]({{< relref "KBhcold_war.md" >}})                                          |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-09 Mon&gt;</span></span> | [civil rights]({{< relref "KBhcivil_rights.md" >}})                                  |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-26 Thu&gt;</span></span> | [Richard Nixon]({{< relref "KBhrichard_nixon.md" >}})                                |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-06-01 Wed&gt;</span></span> | [Ronald Raegan]({{< relref "KBhronald_raegan.md" >}})                                |
 
 
 ## NUS-PHYS301 Mech {#nus-phys301-mech}

@@ -4,6 +4,35 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Andrew's Features {#andrew-s-features}
+
+-   Collapse two PAR tiers down
+-   ~~Checkpoint per file~~
+-   ~~One corpus prompt per run~~
+-   ~~Handle empty tiers~~
+-   ~~I/P selection crashes! contingency~~
+-   ~~preview the LONGEST segment instead of the top one~~
+-   ~~-i kill in the middle~~
+
+
+## fixes {#fixes}
+
+-   "my mom's cryin(g)" [&lt;] mm [l648] (also themmm after)
+-   "made her a nice dress" [&lt;] mhm [l1086]
+-   "when I was a kid I" &amp;=laughs [l1278]
+
+
+## Others {#others}
+
+-   chstring (for uh, mm-hmm)
+-   retrace (asr&amp;fa folder)
+-   lowcase (caps)
+-   rep-join.cut (fixes/)
+
+    {{< figure src="/ox-hugo/2022-08-02_12-55-55_screenshot.png" >}}
+
+<!--listend-->
+
 -   numbers
 -   &lt;affirmative&gt;
 -   'mo data!
