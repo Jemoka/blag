@@ -4,7 +4,8 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
--   "laws.als": "drumuomup"
+-   ~~"laws.als": "drumuomup"~~
+-   "ping.als": "walking down the street, eating children"""
 -   "planets.als": "sing a song among the starlight"
 -   "songs.als": "thank you klint for your discussion"
 
