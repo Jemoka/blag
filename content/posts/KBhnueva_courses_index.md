@@ -64,3 +64,8 @@ Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FD
 ### Essays {#essays}
 
 -   [Bluest Eye Essay Planning]({{< relref "KBhenglish_bluest_eye.md" >}})
+
+
+## NUS-MATH530 {#nus-math530}
+
+Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >}})
