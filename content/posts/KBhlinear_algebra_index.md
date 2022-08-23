@@ -10,8 +10,6 @@ Linear Algebra Done Right, Sheldon Axler
 
 ## 1 {#1}
 
--
-
 
 ## 2 {#2}
 
