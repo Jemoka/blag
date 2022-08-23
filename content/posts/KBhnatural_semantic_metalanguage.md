@@ -14,5 +14,10 @@ the theory of [NSM]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) rests 
 
 ## two pillars of [NSM]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) theory {#two-pillars-of-nsm--kbhnatural-semantic-metalanguage-dot-md--theory}
 
-1.  existence of [semantic primes]({{< relref "KBhsemantic_primes.md" >}})
-2.  the ability to perform the act of [reductive paraphrase]({{< relref "KBhreductive_paraphrase.md" >}})
+
+### existence of [semantic primes]({{< relref "KBhsemantic_primes.md" >}}) {#existence-of-semantic-primes--kbhsemantic-primes-dot-md}
+
+The existence of [semantic prime]({{< relref "KBhsemantic_primes.md" >}})s is codified more formally as the strong version of the [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}).
+
+
+### the ability to perform the act of [reductive paraphrase]({{< relref "KBhreductive_paraphrase.md" >}}) {#the-ability-to-perform-the-act-of-reductive-paraphrase--kbhreductive-paraphrase-dot-md}
