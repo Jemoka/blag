@@ -11,6 +11,4 @@ There are two versions of the [Lexicalization Hypothesis]({{< relref "KBhlexical
 
 ## Strong [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}) {#strong-lexicalization-hypothesis--kbhlexicalization-hypothesis-dot-md}
 
-The [Strong Lexicalization Hypothesis](#strong-lexicalization-hypothesis--kbhlexicalization-hypothesis-dot-md) states that _both_ derivational (changes meaning, bench=&gt;benching) or inflectional (changes grammar, eat=&gt;eating) words cannot be put together via syntatical rules.
-
-A
+The [Strong Lexicalization Hypothesis](#strong-lexicalization-hypothesis--kbhlexicalization-hypothesis-dot-md) states that _both_ derivational (changes meaning, bench=&gt;benching) or inflectional (changes grammar, eat=&gt;eating) words cannot be put together via syntatical rules. (<a href="#citeproc_bib_item_1">Geeraerts 2009</a>)
