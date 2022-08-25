@@ -29,3 +29,8 @@ Good to learn MatLab.
 ## Logistics {#logistics}
 
 Create a portfolio journal; supply one entry a week.
+
+
+## Introductory Reading {#introductory-reading}
+
+[How Did Economists Get It So Wrong?]({{< relref "KBhhow_did_economists_get_it_so_wrong.md" >}})
