@@ -73,6 +73,6 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 
 ## NUS-ECON320 Financial Econometrics {#nus-econ320-financial-econometrics}
 
-| Date                                                                                         | Topic                                                                     |
-|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [Financial Markets Intro]({{< relref "KBhfinancial_markets_intro.md" >}}) |
+| Date                                                                                         | Topic                                                                                                                                          |
+|----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [Financial Markets Intro]({{< relref "KBhfinancial_markets_intro.md" >}}), [ECON320 Architecture]({{< relref "KBhecon320_architecture.md" >}}) |
