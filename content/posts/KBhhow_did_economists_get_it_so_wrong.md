@@ -7,6 +7,21 @@ draft = false
 A reading: (<a href="#citeproc_bib_item_1">Krugman 2009</a>)
 
 
+## Reflection {#reflection}
+
+The discussion here of the conflict between "saltwater" and "freshwater" (Keynesian and Neoclassical) economists is very interesting when evaluated from the perspective of our recent impending recession.
+
+One particular statement that resonated with me in the essay was the fact that a crisis simply "pushed the freshwater economists into further absurdity." It is interesting to see that, once a theory has been well-established and insulated in a community, it becomes much more difficult to parcel out as something that could be wrong.
+
+As the same time, the forcibly-correcting "fudge" inconsistencies of the Keynesian model is also a strong weakness which perhaps further exacerbated the freshwater economists' dissent into their models. Modeling human behavior has been consistently quite messy, so it is unsurprising that both neoclassical and Keynesian economists strayed away from those models.
+
+Circling back to the COVID-trigger economic downturn: we definitely see a push towards increased "absurdity" in terms of increased polarization in the US; but not only that, the deeply rooted idea of "pandemics don't affect the States" or at least "the Feds/our supply chain have preparation for absurd events" is again shown to be false---despite the Obaman re-discovery of Keynesian management earlier.
+
+This all raises a question: under what circumstances is a tangibly "better" result going to surface and be accepted when one model is tangibly perfect yet wrong, the other requiring flawed corrections or unrigorous analysis. Must we reject one model completely before the other one can be used?
+
+I don't believe behavioral economics, though providing a partial solution as Krugman outlines, is the be-and-end-all of macroeconomic models during a depression. All of the models which were theorized (bar pure neoclassicalist "perfect agents") ostensibly do one thing: trying to "rationally" model the "irrational" behavior of market participants. I don't believe that this is ultimately going to be feasible on a macroeconomic scale to create models that will last (sans repeated, empirical testing---but there are not enough depressions to go around.) Perhaps, then, the basic Keynesian idea of simply creating fiscal corrections may very well be the best second thing.
+
+
 ## Reading notes {#reading-notes}
 
 
