@@ -83,3 +83,10 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | Date                                                                                         | Topic                                                     |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [User Interviews]({{< relref "KBhuser_interviews.md" >}}) |
+
+
+## NUS-MATH570 DiffEq {#nus-math570-diffeq}
+
+| Date                                                                                         | Topic                                               |
+|----------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-26 Fri&gt;</span></span> | [DiffEq Intro]({{< relref "KBhdiffeq_intro.md" >}}) |
