@@ -9,6 +9,8 @@ The bible stays the same: (<a href="#citeproc_bib_item_1">Axler 1997</a>)
 
 We will be less exploratory, Axler will pretty much tell us. However, we should try to say stuff in the class every single class period.
 
+There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
+
 
 ## Best Practices {#best-practices}
 
@@ -19,8 +21,10 @@ We will be less exploratory, Axler will pretty much tell us. However, we should 
 
 ## Misc knowledge not directly in a chapter {#misc-knowledge-not-directly-in-a-chapter}
 
+-   [algebra]({{< relref "KBhalgebra.md" >}})
 -   [vector]({{< relref "KBhvector.md" >}})
--
+-   [integer]({{< relref "KBhinteger.md" >}})
+-   [additive identity]({{< relref "KBhadditive_identity.md" >}})
 
 
 ## 1 {#1}
