@@ -76,3 +76,10 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | Date                                                                                         | Topic                                                                                                                                          |
 |----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [Financial Markets Intro]({{< relref "KBhfinancial_markets_intro.md" >}}), [ECON320 Architecture]({{< relref "KBhecon320_architecture.md" >}}) |
+
+
+## NUS-CS350 Software Studio {#nus-cs350-software-studio}
+
+| Date                                                                                         | Topic                                                     |
+|----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [User Interviews]({{< relref "KBhuser_interviews.md" >}}) |
