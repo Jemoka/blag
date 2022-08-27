@@ -19,13 +19,11 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 -   Make mistakes
 
 
-## Misc Dumping Ground for Knowledge {#misc-dumping-ground-for-knowledge}
+## Non-Axler but Important {#non-axler-but-important}
+
+Things we explicitly are told to know, but is not immediately in Axler. You bet you determinants are going to be here.
 
 -   [group]({{< relref "KBhgroup.md" >}})
--   [algebra]({{< relref "KBhalgebra.md" >}})
--   [vector]({{< relref "KBhvector.md" >}})
--   [integer]({{< relref "KBhinteger.md" >}})
--   [additive identity]({{< relref "KBhadditive_identity.md" >}})
 
 
 ## 1 {#1}
@@ -41,3 +39,11 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 
 
 ## 5 {#5}
+
+
+## Misc Knowledge {#misc-knowledge}
+
+-   [algebra]({{< relref "KBhalgebra.md" >}})
+-   [vector]({{< relref "KBhvector.md" >}})
+-   [integer]({{< relref "KBhinteger.md" >}})
+-   [additive identity]({{< relref "KBhadditive_identity.md" >}})

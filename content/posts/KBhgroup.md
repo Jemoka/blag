@@ -6,11 +6,11 @@ draft = false
 
 ## components {#components}
 
--   a set of [object]({{< relref "KBhobjects.md" >}})s
+-   a set of constituent [object]({{< relref "KBhobjects.md" >}})s
 -   an [operation]({{< relref "KBhoperation.md" >}})
 
 
-## requirement for group {#requirement-for-group}
+## requirements for group {#requirements-for-group}
 
 -   [closed]({{< relref "KBhclosed.md" >}})
 -   [identity]({{< relref "KBhidentity.md" >}})
