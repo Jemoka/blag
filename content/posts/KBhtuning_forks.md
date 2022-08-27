@@ -38,11 +38,18 @@ And therefore, the air around the [funing tork]({{< relref "KBhtuning_forks.md" 
 
 ## A Detour on Rigid Body Harmonic Motion {#a-detour-on-rigid-body-harmonic-motion}
 
+Ok we can probably
+
+
+## A Detour on the Temperature {#a-detour-on-the-temperature}
+
+We are really worried about two different things here.
+
+1.  Metal expands/contracts based on the temperature
+2.  Temperature affects speed of sound
+
 
 ## A Detour on Material Science {#a-detour-on-material-science}
-
-
-## A Detour on Human Hearing {#a-detour-on-human-hearing}
 
 
 ## Why are our [Tuning Fork]({{< relref "KBhtuning_forks.md" >}})s out of tune? {#why-are-our-tuning-fork--kbhtuning-forks-dot-md--s-out-of-tune}
