@@ -8,3 +8,5 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 
 -   [combining, comutting, splitting]({{< relref "KBhcomplex_number.md#insights-combining-and-splitting" >}})
 -   [construct then generalize]({{< relref "KBhcomplex_number.md#insights-construct-then-generalize" >}}) for uniqueness and existence
+-   [try to remember to go backwards]({{< relref "KBhcomplex_number.md#insights-try-to-remember-to-go-backwards" >}})
+-

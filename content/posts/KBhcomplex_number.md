@@ -33,7 +33,19 @@ there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\bet
 \\(\alpha + \beta = \beta + \alpha\\) and \\(\alpha\beta = \beta\alpha\\) for all \\(\alpha,\beta \in \mathbb{C}\\).
 
 
-#### Proof {#proof}
+#### Proof of [complex number]({{< relref "KBhcomplex_number.md" >}}) [commutativity]({{< relref "KBhcommutivity.md" >}}) {#proof-of-complex-number--kbhcomplex-number-dot-md--commutativity--kbhcommutivity-dot-md}
+
+We desire \\(\alpha + \beta = \beta + \alpha\\).
+
+\begin{align}
+    \alpha + \beta &= (a+bi)+(c+di) \\\\
+&=(a+c)+(b+d)i \\\\
+&=(c+a)+(d+b)i \\\\
+&=(c+di) + (a+bi) \\\\
+&=\beta+\alpha\ \blacksquare
+\end{align}
+
+leveraging the [commutativity]({{< relref "KBhcommutivity.md" >}}) inside [real number]({{< relref "KBhreal_number.md" >}})s.
 
 <!--list-separator-->
 
@@ -51,10 +63,20 @@ Proven via the same trick from last time
 
 ### [identities]({{< relref "KBhidentity.md" >}}) {#identities--kbhidentity-dot-md}
 
-\\(\lambda + 0 = 0\\), \\(\lambda 1 = \lambda\\)
+\\(\lambda + 0 = \lambda\\), \\(\lambda 1 = \lambda\\)
 
 
-#### Proof {#proof}
+#### Proof of [complex number]({{< relref "KBhcomplex_number.md" >}}) [additive identity]({{< relref "KBhadditive_identity.md" >}}) {#proof-of-complex-number--kbhcomplex-number-dot-md--additive-identity--kbhadditive-identity-dot-md}
+
+We desire that \\(\lambda + 0 = 0\\).
+
+\begin{align}
+    \lambda + 0 &= (e+fi) + (0+0i) \\\\
+&= (e+0) + (f+0)i \\\\
+&= e+fi\ \blacksquare
+\end{align}
+
+[multiplicative identity]({{< relref "KBhmultiplicative_identity.md" >}}) is proven in the same way
 
 
 ### additive [inverse]({{< relref "KBhinverses.md" >}}) {#additive-inverse--kbhinverses-dot-md}
@@ -62,7 +84,9 @@ Proven via the same trick from last time
 \\(\forall \alpha \in \mathbb{C}, \exists !\ \beta \in \mathbb{C}: \alpha + \beta = 0\\)
 
 
-#### Proof {#proof}
+#### Proof of [complex number]({{< relref "KBhcomplex_number.md" >}}) additive [inverse]({{< relref "KBhinverses.md" >}}) {#proof-of-complex-number--kbhcomplex-number-dot-md--additive-inverse--kbhinverses-dot-md}
+
+We desire to claim that \\(\forall \alpha \in \mathbb{C}, \exists !\ \beta \in \mathbb{C}: \alpha + \beta = 0\\), specifically that there _is_ a _unique_ \\(\beta\\) which is the additive [inverse]({{< relref "KBhinverses.md" >}}) of every \\(\alpha\\).
 
 Take a number \\(\alpha \in \mathbb{C}\\). We have that \\(\alpha\\) would then by definition be some \\((a+bi)\\) where \\(a,b \in \mathbb{R}\\).
 
@@ -86,4 +110,32 @@ We have created a unique definition of \\(c,d\\) and therefore \\(\beta\\) given
 
 \\(\forall \alpha \in \mathbb{C}, \alpha \neq 0, \exists!\ \beta \in \mathbb{C} : \alpha\beta =1\\)
 
-This is proven exactly in the same way as before
+This is proven exactly in the same way as before.
+
+
+### distributive property {#distributive-property}
+
+\\(\lambda(\alpha+\beta) = \lambda \alpha + \lambda \beta\ \forall\ \lambda, \alpha, \beta \in \mathbb{C}\\)
+
+
+#### Proof of [complex number]({{< relref "KBhcomplex_number.md" >}}) distributive property {#proof-of-complex-number--kbhcomplex-number-dot-md--distributive-property}
+
+We desire to claim that \\(\lambda(\alpha+\beta) = \lambda \alpha + \lambda \beta\\).
+
+\begin{align}
+    \lambda(\alpha+\beta) &= (e+fi)((a+bi)+(c+di))\\\\
+&=(e+fi)((a+c)+(b+d)i)\\\\
+&=((ea+ec)-(fb+fd))+((eb+ed)+(fa+fc))i\\\\
+&=ea+ec-fb-fd+(eb+ed+fa+fc)i\\\\
+&=ea-fb+ec-fd+(eb+fa+ed+fc)i\\\\
+&=(ea-fb)+(ec-fd)+((eb+fa)+(ed+fc))i\\\\
+&=((ea-fb)+(eb+fa)i) + ((ec-fd)+(ed+fc)i)\\\\
+&=(e+fi)(a+bi) + (e+fi)(c+di)\\\\
+&=\lambda \alpha + \lambda \beta\ \blacksquare
+\end{align}
+
+<!--list-separator-->
+
+-  Insights: try to remember to go backwards
+
+    At some point in this proof I had to reverse complex addition then multiplication, which actually tripped me up for a bit ("how does `i` distribute!!!", etc.) Turns out, there was already a definition for [addition and multiplication of complex numbers](#addition-and-multiplication-of-complex-number--kbhcomplex-number-dot-md--s) so we just needed to use that.
