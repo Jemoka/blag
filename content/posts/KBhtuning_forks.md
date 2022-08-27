@@ -36,6 +36,18 @@ And therefore, the air around the [funing tork]({{< relref "KBhtuning_forks.md" 
 2.  presumably the base is not vibrating; hence, how does the downward-bendy vibration cause perpendicular oscillation (does it?)
 
 
+## A Detour on Rigid Body Harmonic Motion {#a-detour-on-rigid-body-harmonic-motion}
+
+
+## A Detour on Material Science {#a-detour-on-material-science}
+
+
+## A Detour on Human Hearing {#a-detour-on-human-hearing}
+
+
+## Why are our [Tuning Fork]({{< relref "KBhtuning_forks.md" >}})s out of tune? {#why-are-our-tuning-fork--kbhtuning-forks-dot-md--s-out-of-tune}
+
+
 ## Fun, Relevant Factoids About the World {#fun-relevant-factoids-about-the-world}
 
 -   The range of human hearing from a youngen is about 20Hz to 20,000Hz.
