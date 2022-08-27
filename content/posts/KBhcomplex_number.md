@@ -25,6 +25,13 @@ where, \\(a,b,c,d\in\mathbb{R}\\).
 
 ## subtraction and division of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s}
 
+Let \\(\alpha, \beta \in \mathbb{C}\\), and \\(-a\\) be the additive inverse of \\(\alpha\\) and \\(\frac{1}{\alpha}\\) be the multiplicative inverse of \\(\alpha\\).
+
+-   ****subtraction****: \\(\beta-\alpha = \beta + (-\alpha)\\)
+-   ****division****: \\(\frac{\beta}{\alpha} = \beta\frac{1}{\alpha}\\)
+
+Simple enough, [subtraction and division of complex numbers](#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s) is just defined by applying the inverses of a number to a different number.
+
 
 ## properties of complex arithmetic {#properties-of-complex-arithmetic}
 
