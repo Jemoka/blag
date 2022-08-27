@@ -18,7 +18,7 @@ Let's figure out how it works. For us to be one same page, let's define some voc
 
 ## A Cursory Explanation {#a-cursory-explanation}
 
-Source: (<a href="#citeproc_bib_item_2">“Smithsonian - Tuning Forks” 2022</a>) (<a href="#citeproc_bib_item_1">“How Tuning Forks Work” 2011</a>)
+Source: [here](https://science.howstuffworks.com/tuning-fork2.htm) and [here](https://americanhistory.si.edu/science/tuningfork.htm). Both are not very scientific but a good first step.
 
 From a very basic perspective, hiting a tuning fork creates a transverse wave on the tine you hit, which vibrates and then compresses the air around it in a longitudinal fashion at a set frequency, which we hear as a sound.
 
