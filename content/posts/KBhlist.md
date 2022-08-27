@@ -9,8 +9,10 @@ A [list]({{< relref "KBhlist.md" >}}) is an ****ordered collection**** of \\(n\\
 
 ## requirements {#requirements}
 
--   Obviously \\(n \in \mathbb{N}\\) or \\(n=0\\), as list length cannot be negative
--   \\(n\\) is also not \\(\infty\\), list have finite length, so infinitely long ordered sets are not lists
+-   as list length cannot be negative
+-   list length cannot be  \\(\infty\\)
+-   repetition matters
+-   order matters
 
 
 ## additional info {#additional-info}

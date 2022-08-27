@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Key sequence:
+Key sequence: in this chapter, we defined [complex number]({{< relref "KBhcomplex_number.md" >}})s, their definition, their closeness under [addition]({{< relref "KBhadding.md" >}}) and [multiplication]({{< relref "KBhmultiplying.md" >}}), and their [properties]({{< relref "KBhcomplex_number.md#requirements" >}}): namely, [associativity]({{< relref "KBhassociative.md" >}}), [commutativity]({{< relref "KBhcommutivity.md" >}}), [identities]({{< relref "KBhidentity.md" >}}), [inverse]({{< relref "KBhinverses.md" >}})s, and distribution. These properties make them a [field]({{< relref "KBhfield.md" >}}). We then defined \\(\mathbb{F}^n\\),
 
 
 ## New Definitions {#new-definitions}
@@ -15,6 +15,12 @@ Key sequence:
 -   [field]({{< relref "KBhfield.md" >}}): \\(\mathbb{F}\\) is \\(\mathbb{R}\\) or \\(\mathbb{C}\\)
     -   [power]({{< relref "KBhpower_math.md" >}})
 -   [list]({{< relref "KBhlist.md" >}})
+-   \\(\mathbb{F}^n\\): [F^n]({{< relref "KBhlists_over_fields.md" >}})
+    -   [coordinate]({{< relref "KBhlists_over_fields.md" >}})
+    -   [addition in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#addition-in-mathbb-f-n" >}})
+    -   [additive inverse of \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#additive-inverse-of-mathbb-f-n" >}})
+    -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}})
+-   \\(0\\): [zero]({{< relref "KBhzero.md" >}})
 
 
 ## Results and Their Proofs {#results-and-their-proofs}
@@ -26,9 +32,11 @@ Key sequence:
     -   additive inverse
     -   multiplicative inverse
     -   distributive property
-
-
-## Questions for Jana {#questions-for-jana}
-
-
-## Exercises {#exercises}
+-   properties of \\(\mathbb{F}^n\\)
+    -   addition in \\(\mathbb{F}^n\\) is [associative]({{< relref "KBhassociative.md" >}})
+    -   [addition in \\(\mathbb{F}^n\\) is commutative]({{< relref "KBhlists_over_fields.md#addition-in-mathbb-f-n-is-commutative" >}})
+    -   [addition]({{< relref "KBhadding.md" >}}) in \\(\mathbb{F}^n\\) has an [identity]({{< relref "KBhidentity.md" >}}) ([zero]({{< relref "KBhzero.md" >}}))
+    -   [addition in \\(\mathbb{F}^n\\) has an inverse]({{< relref "KBhlists_over_fields.md#additive-inverse-of-mathbb-f-n" >}})
+    -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}}) is [associative]({{< relref "KBhassociative.md" >}})
+    -   scalar multiplication in \\(\mathbb{F}^n\\) has an [identity]({{< relref "KBhidentity.md" >}}) (one)
+    -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}}) is distributive
