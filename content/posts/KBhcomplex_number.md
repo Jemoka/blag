@@ -35,25 +35,26 @@ there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\bet
 
 #### Proof {#proof}
 
+<!--list-separator-->
 
-#### Insights {#insights}
+-  Insights
 
-This proof has the feature of combining, operating (commuting, here), the splitting.
+    This proof has the feature of combining, operating (commuting, here), the splitting.
 
 
 ### [associativity]({{< relref "KBhassociative.md" >}}) {#associativity--kbhassociative-dot-md}
 
 \\((\alpha +\beta) + \lambda = \alpha + (\beta +\lambda)\\) and \\((\alpha\beta) \lambda = (\alpha \beta) \lambda\\)
 
-
-#### Proof {#proof}
-
-Same trick as last time
+Proven via the same trick from last time
 
 
 ### [identities]({{< relref "KBhidentity.md" >}}) {#identities--kbhidentity-dot-md}
 
 \\(\lambda + 0 = 0\\), \\(\lambda 1 = \lambda\\)
+
+
+#### Proof {#proof}
 
 
 ### additive [inverse]({{< relref "KBhinverses.md" >}}) {#additive-inverse--kbhinverses-dot-md}
@@ -79,3 +80,10 @@ We have created a unique definition of \\(c,d\\) and therefore \\(\beta\\) given
 -  Insights
 
     In this case, the cool insight is the case-then-definition pattern. We are taking a single case \\(\alpha\\), manipulating it, and wrote the result we want in terms of the constituents of \\(\alpha\\). This creates both an existence and uniqueness proof.
+
+
+#### multiplicative inverse {#multiplicative-inverse}
+
+\\(\forall \alpha \in \mathbb{C}, \alpha \neq 0, \exists!\ \beta \in \mathbb{C} : \alpha\beta =1\\)
+
+This is proven exactly in the same way as before
