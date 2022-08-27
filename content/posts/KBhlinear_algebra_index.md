@@ -21,6 +21,8 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 
 ## Misc knowledge not directly in a chapter {#misc-knowledge-not-directly-in-a-chapter}
 
+-   [proof]({{< relref "KBhproof.md" >}})
+-   [group]({{< relref "KBhgroup.md" >}})
 -   [algebra]({{< relref "KBhalgebra.md" >}})
 -   [vector]({{< relref "KBhvector.md" >}})
 -   [integer]({{< relref "KBhinteger.md" >}})
