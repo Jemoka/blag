@@ -18,7 +18,7 @@ Let's figure out how it works. For us to be one same page, let's define some voc
 
 ## A Cursory Explanation {#a-cursory-explanation}
 
-Source: (NO_ITEM_DATA:noauthor_smithsonian_nodate) (NO_ITEM_DATA:noauthor_how_2011)
+Source: (<a href="#citeproc_bib_item_2">“Smithsonian - Tuning Forks” 2022</a>) (<a href="#citeproc_bib_item_1">“How Tuning Forks Work” 2011</a>)
 
 From a very basic perspective, hiting a tuning fork creates a transverse wave on the tine you hit, which vibrates and then compresses the air around it in a longitudinal fashion at a set frequency, which we hear as a sound.
 
@@ -51,77 +51,3 @@ And therefore, the air around the [funing tork]({{< relref "KBhtuning_forks.md" 
 ## Fun, Relevant Factoids About the World {#fun-relevant-factoids-about-the-world}
 
 -   The range of human hearing from a youngen is about 20Hz to 20,000Hz.
-
-
-
-## References
-
-<style>.csl-entry{text-indent: -1.5em; margi
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margi
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-le
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margi
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-lef
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-l
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-
-#+BEGIN_EXPORT html
-<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
-  <div class="csl-entry">NO_ITEM_DATA:noauthor_smithsonian_nodate</div>
-  <div class="csl-entry">NO_ITEM_DATA:noauthor_how_2011</div>
-</div>
-
-l-entry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-ntry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-y"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-ntry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-l-entry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-try"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-entry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-l-entry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-l-entry"&gt;NO_ITEM_DATA:noauthor_smithsonian_nodate&lt;/div&gt;
-  &lt;div class="csl-entry"&gt;NO_ITEM_DATA:noauthor_how_2011&lt;/div&gt;
-&lt;/div&gt;
-\#+END_EXPORT
-
-<~/Documents/knowledgebase/documents/bibs/ling.bib>
-<~/Documents/knowledgebase/documents/bibs/cs.bib>
-<~/Documents/knowledgebase/documents/bibs/biomed.bib>
-<~/Documents/knowledgebase/documents/bibs/chem.bib>
-<~/Documents/knowledgebase/documents/bibs/jc.bib>
-<~/Documents/knowledgebase/documents/bibs/phymath.bib>
-<~/Documents/knowledgebase/documents/bibs/socio.bib>
-<~/Documents/knowledgebase/documents/bibs/misc.bib>
-<~/Documents/knowledgebase/documents/oldrefs.bib>
