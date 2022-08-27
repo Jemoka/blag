@@ -9,7 +9,7 @@ draft = false
 Formally---
 
 \begin{equation}
-    \mathbb{F}^n = \\{(x1,\ldots,x\_n):x\_j\in\mathbb{F}, \for j =1,\ldots,n\\}
+    \mathbb{F}^n = \\{(x1,\ldots,x\_n):x\_j\in\mathbb{F}, \forall j =1,\ldots,n\\}
 \end{equation}
 
 For some \\((x\_1,\ldots,x\_n) \in \mathbb{F}^n\\) and \\(j \in \\{1,\ldots,n\\}\\), we say \\(x\_j\\) is the \\(j^{th}\\) **coordinate** in \\((x\_1,\ldots,x\_n)\\).
