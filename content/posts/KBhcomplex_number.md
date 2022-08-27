@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A [complex number]({{< relref "KBhcomplex_number.md" >}}) is an order pair of two elements \\((a,b)\\) where \\(a,b\in \mathbb{R}\\). They are usually written as \\(a+bi\\).
+A [complex number]({{< relref "KBhcomplex_number.md" >}}) is a type of [number]({{< relref "KBhnumber.md" >}}). They are usually written as \\(a+bi\\).
 
 Formally---
 
@@ -13,27 +13,12 @@ Formally---
 \end{equation}
 
 
-## addition and multiplication of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#addition-and-multiplication-of-complex-number--kbhcomplex-number-dot-md--s}
+## constituents {#constituents}
 
-\begin{align}
-    (a+bi) + (c+di) &= (a+c)+(b+d)i \\\\
-(a+bi)(c+di) &= (ac-bd)+(ad+bc)i
-\end{align}
-
-where, \\(a,b,c,d\in\mathbb{R}\\).
+an order pair of two elements \\((a,b)\\) where \\(a,b\in \mathbb{R}\\).
 
 
-## subtraction and division of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s}
-
-Let \\(\alpha, \beta \in \mathbb{C}\\), and \\(-a\\) be the additive inverse of \\(\alpha\\) and \\(\frac{1}{\alpha}\\) be the multiplicative inverse of \\(\alpha\\).
-
--   ****subtraction****: \\(\beta-\alpha = \beta + (-\alpha)\\)
--   ****division****: \\(\frac{\beta}{\alpha} = \beta\frac{1}{\alpha}\\)
-
-Simple enough, [subtraction and division of complex numbers](#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s) is just defined by applying the inverses of a number to a different number.
-
-
-## properties of complex arithmetic {#properties-of-complex-arithmetic}
+## requirements {#requirements}
 
 there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\beta=c+di\\), \\(\lambda = e+fi\\), where \\(a,b,c,d,e,f \in \mathbb{R}\\) and therefore \\(\alpha, \beta,\lambda \in \mathbb{C}\\).
 
@@ -149,3 +134,31 @@ We desire to claim that \\(\lambda(\alpha+\beta) = \lambda \alpha + \lambda \bet
 -  Insights: try to remember to go backwards
 
     At some point in this proof I had to reverse complex addition then multiplication, which actually tripped me up for a bit ("how does `i` distribute!!!", etc.) Turns out, there was already a definition for [addition and multiplication of complex numbers](#addition-and-multiplication-of-complex-number--kbhcomplex-number-dot-md--s) so we just needed to use that.
+
+
+## additional information {#additional-information}
+
+
+### addition and multiplication of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#addition-and-multiplication-of-complex-number--kbhcomplex-number-dot-md--s}
+
+\begin{align}
+    (a+bi) + (c+di) &= (a+c)+(b+d)i \\\\
+(a+bi)(c+di) &= (ac-bd)+(ad+bc)i
+\end{align}
+
+where, \\(a,b,c,d\in\mathbb{R}\\).
+
+
+### subtraction and division of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s}
+
+Let \\(\alpha, \beta \in \mathbb{C}\\), and \\(-a\\) be the additive inverse of \\(\alpha\\) and \\(\frac{1}{\alpha}\\) be the multiplicative inverse of \\(\alpha\\).
+
+-   ****subtraction****: \\(\beta-\alpha = \beta + (-\alpha)\\)
+-   ****division****: \\(\frac{\beta}{\alpha} = \beta\frac{1}{\alpha}\\)
+
+Simple enough, [subtraction and division of complex numbers](#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s) is just defined by applying the inverses of a number to a different number.
+
+
+### [complex number]({{< relref "KBhcomplex_number.md" >}})s form a [field]({{< relref "KBhfield.md" >}}) {#complex-number--kbhcomplex-number-dot-md--s-form-a-field--kbhfield-dot-md}
+
+See [properties of complex arithmetic](#requirements), how we proved that it satisfies a [field]({{< relref "KBhfield.md" >}}).
