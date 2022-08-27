@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Key sequence: in this chapter, we defined [complex number]({{< relref "KBhcomplex_number.md" >}})s, their definition, their closeness under [addition]({{< relref "KBhadding.md" >}}) and [multiplication]({{< relref "KBhmultiplying.md" >}}), and their [properties]({{< relref "KBhcomplex_number.md#requirements" >}}): namely, [associativity]({{< relref "KBhassociative.md" >}}), [commutativity]({{< relref "KBhcommutivity.md" >}}), [identities]({{< relref "KBhidentity.md" >}}), [inverse]({{< relref "KBhinverses.md" >}})s, and distribution. These properties make them a [field]({{< relref "KBhfield.md" >}}). We then defined \\(\mathbb{F}^n\\),
+Key sequence: in this chapter, we defined [complex number]({{< relref "KBhcomplex_number.md" >}})s, their definition, their closeness under [addition]({{< relref "KBhadding.md" >}}) and [multiplication]({{< relref "KBhmultiplying.md" >}}), and their [properties]({{< relref "KBhcomplex_number.md#requirements" >}}): namely, [associativity]({{< relref "KBhassociative.md" >}}), [commutativity]({{< relref "KBhcommutivity.md" >}}), [identities]({{< relref "KBhidentity.md" >}}), [inverse]({{< relref "KBhinverses.md" >}})s, and distribution. These properties make them a [field]({{< relref "KBhfield.md" >}}). We then defined \\(\mathbb{F}^n\\), defined   [addition]({{< relref "KBhlists_over_fields.md#addition-in-mathbb-f-n" >}}), [additive inverse]({{< relref "KBhlists_over_fields.md#additive-inverse-of-mathbb-f-n" >}}), and [zero]({{< relref "KBhzero.md" >}}). These combined (with some [algebra]({{< relref "KBhalgebra.md" >}})) shows that \\(\mathbb{F}^n\\) under [addition]({{< relref "KBhadding.md" >}}) is a [group]({{< relref "KBhgroup.md" >}}). Lastly, we show that there is this magical thing called [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}}) and that its [associative]({{< relref "KBhassociative.md" >}}), distributive, and has an [identity]({{< relref "KBhidentity.md" >}}).
 
 
 ## New Definitions {#new-definitions}
@@ -19,8 +19,8 @@ Key sequence: in this chapter, we defined [complex number]({{< relref "KBhcomple
     -   [coordinate]({{< relref "KBhlists_over_fields.md" >}})
     -   [addition in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#addition-in-mathbb-f-n" >}})
     -   [additive inverse of \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#additive-inverse-of-mathbb-f-n" >}})
+    -   \\(0\\): [zero]({{< relref "KBhzero.md" >}})
     -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}})
--   \\(0\\): [zero]({{< relref "KBhzero.md" >}})
 
 
 ## Results and Their Proofs {#results-and-their-proofs}
@@ -40,3 +40,8 @@ Key sequence: in this chapter, we defined [complex number]({{< relref "KBhcomple
     -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}}) is [associative]({{< relref "KBhassociative.md" >}})
     -   scalar multiplication in \\(\mathbb{F}^n\\) has an [identity]({{< relref "KBhidentity.md" >}}) (one)
     -   [scalar multiplication in \\(\mathbb{F}^n\\)]({{< relref "KBhlists_over_fields.md#scalar-multiplication-in-mathbb-f-n" >}}) is distributive
+
+
+## Question for Jana {#question-for-jana}
+
+-   [ ] No demonstration in exercises or book that scalar [multiplication]({{< relref "KBhmultiplying.md" >}}) is commutative, why?
