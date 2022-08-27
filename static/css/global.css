@@ -137,17 +137,12 @@ h1,h2,h3,h4,h5 {
 a:not(.header-social):not(#TableOfContents *):not(.csl-entry:first-child) {
     text-decoration: none;
     color: inherit;
-    padding: 1px 4px;
-    margin: 2px 1px;
-    border-radius: 5px;
-    background: #eaedad;
-    color: #4b4d22;
-    transition: color 0.3s;
+    border-bottom: solid 1.25px #dade8a;
+    transition: border-width 0.3s;
 }
 
 a:not(.header-social):not(#TableOfContents *):hover {
-    background: #eaedad;
-    color: #a4a65d;
+    border-bottom: solid 4px #dade8a !important;
 }
 
 
