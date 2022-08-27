@@ -37,7 +37,7 @@ there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\bet
 
 <!--list-separator-->
 
--  Insights
+-  Insights: combining and splitting
 
     This proof has the feature of combining, operating (commuting, here), the splitting.
 
@@ -77,12 +77,12 @@ We have created a unique definition of \\(c,d\\) and therefore \\(\beta\\) given
 
 <!--list-separator-->
 
--  Insights
+-  Insights: construct then generalize
 
-    In this case, the cool insight is the case-then-definition pattern. We are taking a single case \\(\alpha\\), manipulating it, and wrote the result we want in terms of the constituents of \\(\alpha\\). This creates both an existence and uniqueness proof.
+    In this case, the cool insight is the construct and generalize pattern. We are taking a single case \\(\alpha\\), manipulating it, and wrote the result we want in terms of the constituents of \\(\alpha\\). This creates both an existence and uniqueness proof.
 
 
-#### multiplicative inverse {#multiplicative-inverse}
+### multiplicative inverse {#multiplicative-inverse}
 
 \\(\forall \alpha \in \mathbb{C}, \alpha \neq 0, \exists!\ \beta \in \mathbb{C} : \alpha\beta =1\\)
 
