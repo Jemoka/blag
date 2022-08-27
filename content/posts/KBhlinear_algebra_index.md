@@ -19,9 +19,8 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 -   Make mistakes
 
 
-## Misc knowledge not directly in a chapter {#misc-knowledge-not-directly-in-a-chapter}
+## Misc Dumping Ground for Knowledge {#misc-dumping-ground-for-knowledge}
 
--   [proof]({{< relref "KBhproof.md" >}})
 -   [group]({{< relref "KBhgroup.md" >}})
 -   [algebra]({{< relref "KBhalgebra.md" >}})
 -   [vector]({{< relref "KBhvector.md" >}})
