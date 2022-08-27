@@ -13,6 +13,6 @@ draft = false
 ## requirements for group {#requirements-for-group}
 
 -   [closed]({{< relref "KBhclosed.md" >}})
--   [identity]({{< relref "KBhidentity.md" >}})
--   [inverses]({{< relref "KBhinverses.md" >}})
+-   existence of [identity]({{< relref "KBhidentity.md" >}})
+-   existence of [inverses]({{< relref "KBhinverses.md" >}})
 -   [associative]({{< relref "KBhassociative.md" >}})
