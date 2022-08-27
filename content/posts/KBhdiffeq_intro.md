@@ -13,3 +13,4 @@ The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 201
 ## Assignments {#assignments}
 
 -   [Challenge #1]({{< relref "KBhchallenge_1.md" >}})
+-   [The Unreasonable Effectiveness of Mathematics in the Natural Sciences]({{< relref "KBhthe_unreasonable_effectiveness_of_mathematics_in_the_natural_sciences.md" >}})
