@@ -23,6 +23,9 @@ Formally---
 where, \\(a,b,c,d\in\mathbb{R}\\).
 
 
+## subtraction and division of [complex number]({{< relref "KBhcomplex_number.md" >}})s {#subtraction-and-division-of-complex-number--kbhcomplex-number-dot-md--s}
+
+
 ## properties of complex arithmetic {#properties-of-complex-arithmetic}
 
 there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\beta=c+di\\), \\(\lambda = e+fi\\), where \\(a,b,c,d,e,f \in \mathbb{R}\\) and therefore \\(\alpha, \beta,\lambda \in \mathbb{C}\\).
