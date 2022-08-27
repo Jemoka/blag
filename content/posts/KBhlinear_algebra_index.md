@@ -17,6 +17,7 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 -   Ask questions
 -   Talk to each other
 -   Make mistakes
+-   Know the [Proof Design Patterns]({{< relref "KBhproof_design_patterns.md" >}})
 
 
 ## Non-Axler but Important {#non-axler-but-important}

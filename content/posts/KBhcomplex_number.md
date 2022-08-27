@@ -59,3 +59,23 @@ Same trick as last time
 ### additive [inverse]({{< relref "KBhinverses.md" >}}) {#additive-inverse--kbhinverses-dot-md}
 
 \\(\forall \alpha \in \mathbb{C}, \exists !\ \beta \in \mathbb{C}: \alpha + \beta = 0\\)
+
+
+#### Proof {#proof}
+
+Take a number \\(\alpha \in \mathbb{C}\\). We have that \\(\alpha\\) would then by definition be some \\((a+bi)\\) where \\(a,b \in \mathbb{R}\\).
+
+Take some \\(\beta\\) for which \\(\alpha + \beta = 0\\); by definition we again have \\(\beta\\) equals some \\((c+di)\\) where \\(c,d \in \mathbb{R}\\).
+
+-   \\(\because \alpha + \beta =0\\), \\(\therefore (a+bi) + (c+di) = 0\\).
+-   \\(\therefore (a+c) + (b+d)i = 0\\)
+-   \\(\therefore a+c = 0, b+d = 0\\)
+-   \\(\therefore c = -a, d = -b\\)
+
+We have created a unique definition of \\(c,d\\) and therefore \\(\beta\\) given any \\(\alpha\\), implying both uniqueness and existence.
+
+<!--list-separator-->
+
+-  Insights
+
+    In this case, the cool insight is the case-then-definition pattern. We are taking a single case \\(\alpha\\), manipulating it, and wrote the result we want in terms of the constituents of \\(\alpha\\). This creates both an existence and uniqueness proof.
