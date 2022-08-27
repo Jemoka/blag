@@ -28,6 +28,8 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 
 ## 1 {#1}
 
+-   [Axler 1.A]({{< relref "KBhaxler_a.md" >}})
+
 
 ## 2 {#2}
 
