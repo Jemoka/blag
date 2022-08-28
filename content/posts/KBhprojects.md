@@ -47,6 +47,28 @@ A R&amp;D team for fireline safety during emergency fires. [Repository](https://
 -   ****Key facts****: coordinated 5 engineers in developing new technology, supported by Dr. Robert G. Gann, Deputy Director, Center of Excellence for Advanced Technology Aerial Firefighting at the state of Colorado as well as Captain Mason of CalFire
 
 
+### CMU [batchalign]({{< relref "KBhbatchalign.md" >}}) {#cmu-batchalign--kbhbatchalign-dot-md}
+
+A pipeline for the automated preparation of annotated CHAT transcripts from raw audio. [Repository](https://github.com/talkbank/batchalign).
+
+****Motivation****: my work over the summer.
+
+-   ****Role****: Author
+-   ****Technologies****: Torch, Huggingface, NLTK, CLAN, computational linguistics
+-   ****Key facts****: work developed with and maintained under Prof. Brian MacWhinney at CMU's psycolinguistics department.
+
+
+### AIBridge {#aibridge}
+
+A bootcamp for non-CS students in data science. [Website]({{< relref "KBhaibridge_course_website.md" >}})
+
+****Motivation****:
+
+-   ****Role****: Co-Founder, Lecturer
+-   ****Technologies****: Python, ScyPy, Scikit-learn, Pandas
+-   ****Key facts****: worked with Prof. Xin Liu at UC Davis to develop an introductary one-week bootcamp in ML. We piloted the program this summer at Davis to an in-person group of 20 PhD students in food science sponsored by [AIFS]({{< relref "KBhaifs.md" >}}).
+
+
 ## Full-Stack Projects {#full-stack-projects}
 
 

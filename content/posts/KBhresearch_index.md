@@ -58,7 +58,7 @@ Using BPE over a huge convolutional neural network with skip connections for hig
 
 ### BRANDON/nsm {#brandon-nsm}
 
-Using a method similar to power-iteration with reconstruction loss to figure the common basis between two languages. [Repo](https://github.com/Jemoka/BRANDON).
+Investigating into the [Natural Semantic Metalanguage]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) theory, and how we can use deep-learning methods to deal with prooving/disprooving the [Lexicalist Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}). [Repo](https://github.com/Jemoka/BRANDON).
 
 ****Collaborators****: Brandon Cho - Nueva School/Princeton
 
