@@ -36,9 +36,7 @@ The remaining key assumption made in this study is that---should semantic primes
 
 ### Study Aims and Design {#study-aims-and-design}
 
-In this study, we aim to develop a protocol for lexicon-wide testing of the possibility of reductive paraphrasing
-
-whether or not a set of purported semantic primes can act as the lexical origins for the entire lexicon of a language by probabilistic modeling of reductive paraphrasing.
+In this study, we aim to develop a computational protocol for lexicon-wide testing of the possibility of reductive paraphrasing given a set of purported semantic primes. Practically, this means we are trying create a model to test whether all words in a language is lexicalizable using only a chosen subset of primes in the same language.
 
 Given this study operates using the "own-metalanguage" assumption (again, that one can write an English dictionary in English, etc.), we will use the entire lexicon of a given language as the control set of "primes", and the published version of the NSM primes as the alternate set to be tested. In accordance with the large body of work already in the language, we will use English as our target language.
 
