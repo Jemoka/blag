@@ -11,6 +11,12 @@ They are the "core of a universal mental lexicon".
 There are...
 
 
+## guidelines for identifying [semantic primes]({{< relref "KBhsemantic_primes.md" >}}) {#guidelines-for-identifying-semantic-primes--kbhsemantic-primes-dot-md}
+
+1.  A [semantic prime]({{< relref "KBhsemantic_primes.md" >}}) has to be found in every(ish?) natural language
+2.  A [semantic prime]({{< relref "KBhsemantic_primes.md" >}}) has to be indefinable by other primes
+
+
 ## proof for the existence of [semantic prime]({{< relref "KBhsemantic_primes.md" >}})s {#proof-for-the-existence-of-semantic-prime--kbhsemantic-primes-dot-md--s}
 
 Proof: given if the [Strong Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md#strong-id-09e74661-d561-4cec-af0f-84c82c0367a1-lexicalization-hypothesis" >}}) holds, [semantic prime]({{< relref "KBhsemantic_primes.md" >}})s must exist.
@@ -28,12 +34,6 @@ Therefore, given a word to lexicalize, it has to be defined by an syntatic trans
 Therefore, there exists some word that needs to be lexicalized by words that are not previously defined, which is absurd. (instead, these words are lexicalized via semantic primes.)
 
 QED
-
-
-## guidelines for identifying [semantic primes]({{< relref "KBhsemantic_primes.md" >}}) {#guidelines-for-identifying-semantic-primes--kbhsemantic-primes-dot-md}
-
-1.  A [semantic prime]({{< relref "KBhsemantic_primes.md" >}}) has to be found in every(ish?) natural language
-2.  A [semantic prime]({{< relref "KBhsemantic_primes.md" >}}) has to be indefinable by other primes
 
 
 ## problems with [semantic prime]({{< relref "KBhsemantic_primes.md" >}})s {#problems-with-semantic-prime--kbhsemantic-primes-dot-md--s}
