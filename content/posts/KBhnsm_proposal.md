@@ -21,6 +21,9 @@ The difficulty of sound investigations in the area of NSM is due the theory itse
 
 Yet, there are repeated empirical (again, non-standardized) confirmations of the existence of the original set (NO_ITEM_DATA:1974-seman-primit) of semantic primes in other languages (NO_ITEM_DATA:chappell-2002, NO_ITEM_DATA:peeters-1994-seman-lexic, NO_ITEM_DATA:travis-2002); there are also numerous demonstrations of the proposed applications (NO_ITEM_DATA:goddard_semantic_2012) of the theory in structural semantics. These facts has therefore maintained the relevance of NSM in current linguistic study but rendered the theory without a very clear path forward. Due to this reason, recent research has placed larger focus on functional (cognitive linguistical) theories (NO_ITEM_DATA:DivjakLevshinaKlavan+2016+447+463) and largely overlooked structuralist arguments like the NSM.
 
+
+### Broad Goals {#broad-goals}
+
 To complement the very large body of work already in the identification of semantic primes for NSM in numerous languages, we aim in this project to investigate the process of reductive paraphrasing to provide a baseline evaluation of the feasibility of NSM as a theory. The approach proposed is intended to very generally test the practicality of the act of reductive paraphrasing from the declared primes: whether it is even broadly possible given the existing set of semantic primes across the entire lexicon of a few languages for which it is purported to be possible. We aim to do this via _much_ newer approaches in computational linguistics, specifically model-based Natural Language Processing (NLP).
 
 In order to isolate the exact problem of reductive paraphrasing, we first will have to highlight a few key assumptions of the NSM theory and therefore this project.
@@ -30,13 +33,12 @@ The semantic metalanguage theory is built itself on the assumption that "each la
 The remaining key assumption made in this study is that---should semantic primes exist---the original set of NSM primes published (NO_ITEM_DATA:1974-seman-primit) (and in subsequent studies in various other languages highlighted before) are correct. As much of the demonstrations of NSM involves the manual reexamination of purportedly missing concepts from NSM via the theory's accepted primes (NO_ITEM_DATA:goddard1998bad, NO_ITEM_DATA:heine_natural_2015), it appears that the body of work in the theory has definitely taken the accepted primes as invariant. This assumption is carefully controlled for in the language of the design of the study to ensure that overly-broad conclusions are not reached.
 
 
-### Design {#design}
+### Study Aims and Design {#study-aims-and-design}
+
+In this study, we aim
 
 
-### Aim {#aim}
-
-
-### Checkpoint {#checkpoint}
+### Feasibility Checkpoint {#feasibility-checkpoint}
 
 
 ## Institution and Experience {#institution-and-experience}
