@@ -19,5 +19,14 @@ the theory of [NSM]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) rests 
 
 The existence of [semantic prime]({{< relref "KBhsemantic_primes.md" >}})s is codified more formally as the strong version of the [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}).
 
+Issues with it: [problems with semantic primes]({{< relref "KBhsemantic_primes.md#problems-with-id-4e587814-bfd1-458e-ba5f-67882832107b-semantic-prime-s" >}})
+
 
 ### the ability to perform the act of [reductive paraphrase]({{< relref "KBhreductive_paraphrase.md" >}}) {#the-ability-to-perform-the-act-of-reductive-paraphrase--kbhreductive-paraphrase-dot-md}
+
+Issues with that: [problems with reductive paraphrasing]({{< relref "KBhreductive_paraphrase.md#problems-with-reductive-paraphrasing" >}})
+
+
+## oh cool! {#oh-cool}
+
+(<a href="#citeproc_bib_item_1">Bohnemeyer 2004</a>)
