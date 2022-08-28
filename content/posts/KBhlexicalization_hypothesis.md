@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}) is a hypothesis proposed by [Chomsky]({{< relref "KBhchomsky.md" >}}) that states that syntactic transformations can only apply on [syntatic constituents]({{< relref "KBhsyntatic_constituents.md" >}}); therefore, the rules of putting words together is _different_ from the rules that puts phrases together.
+The [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}) is a hypothesis proposed by [Chomsky]({{< relref "KBhchomsky.md" >}}) that states that syntactic transformations can only apply on [syntatic constituents]({{< relref "KBhsyntatic_constituents.md" >}}); therefore, the rules of putting words together is _different_ from the rules that puts phrases together. This theory stands in opposition to [generative semantics]({{< relref "KBhgenerative_semantics.md" >}}).
 
 There are two versions of the [Lexicalization Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}):
 

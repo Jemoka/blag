@@ -30,3 +30,5 @@ Issues with that: [problems with reductive paraphrasing]({{< relref "KBhreductiv
 ## oh cool! {#oh-cool}
 
 (<a href="#citeproc_bib_item_1">Bohnemeyer 2004</a>)
+
+Also the fact that [NSM]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) is first found in English means that there is a certain anglo-centrism that comes with the language.
