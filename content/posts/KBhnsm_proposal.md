@@ -4,9 +4,10 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Approach and XD {#approach-and-xd}
+"Doing NSM analysis is a demanding process and there is no mechanical procedure for it. Published explications have often been through a dozen or more iterations over several months" --- (<a href="#citeproc_bib_item_9">Heine, Narrog, and Goddard 2015</a>)
 
-"Doing NSM analysis is a demanding process and there is no mechanical procedure for it. Published explications have often been through a dozen or more iterations over several months" --- Goddard 2015
+
+## Approach and XD {#approach-and-xd}
 
 
 ### Introduction and Background {#introduction-and-background}
