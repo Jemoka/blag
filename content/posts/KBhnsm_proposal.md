@@ -40,9 +40,9 @@ In this study, we aim to develop a computational protocol for lexicon-wide testi
 
 Given this study operates using the "own-metalanguage" assumption (again, that one can write an English dictionary in English, etc.), we will use the entire lexicon of a given language as the control set of "primes", and the published version of the NSM primes as the alternate set to be tested. In accordance with the large body of work already in the language, we will use English as our target language.
 
-To create a truly replicable test for lexicalizability, we turn to NLP approaches. For our problem, lexicalibility is defined by the ability to reconstruct the exactly word desired by only using a linear combination of the input "primes". In essence, we are verifying whether or not the entire lexicon of a language can be projected to the much lower-dimensional space of the primes losslessly.
+To create a truly replicable test for lexicalizability, we turn to NLP approaches. For our problem, lexicalibility is defined by the ability to reconstruct the exactly words desired by only using a linear combination of the input "primes". In essence, we are verifying whether or not the entire lexicon of a language can be projected to the much lower-dimensional space of the primes losslessly.
 
-This projection is not, in principle, impossible. In the high-dimensional space of the entire lexicon, individually lexicalized words represent only the basis vectors of the space (and indeed in one-hot encodings of words they are shown as the standard-basis of the lexicon-wide space.)
+This projection is not, in principle, impossible. In the high-dimensional space of the entire lexicon, individual lexicalized words represent only the basis vectors of the space (and indeed in one-hot encodings for deep learning they are shown as the standard-basis of the lexicon-wide space.) Whereas in the lower-dimensional subspace of primes, a linear combination of primes can be used to represent each lexicalized word in the full lexicon.
 
 We propose to leverage a variation upon the Conditional Variable Autoenconder (CVAE) architecture (<a href="#citeproc_bib_item_12">Sohn, Lee, and Yan 2015</a>) to frame the problem of lexicalizability testing as a unsupervised autoencoding problem.
 
