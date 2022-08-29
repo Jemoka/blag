@@ -47,10 +47,10 @@ Under this model, all words in the lexicon are lexicalizable by the set of prime
 That is, given we have a latent embedding space of \\(n\\) semantic primes \\(P^n\\) and some lexicon \\(W\\) with \\(m\\) words, we aim to identify a linear mapping \\(M\\) such that:
 
 \begin{equation}
-Mp = e\_W\_j\ |\ p \in P^n, \forall j=1\ldots m
+Mp = e\_{W\_j}\ |\ p \in P^n, \forall j=1\ldots m
 \end{equation}
 
-where, \\(e\_W\_j\\) is the \\(j\\) th standard basis of \\(W\\) (i.e. \\(j\\) th word in the lexicon.)
+where, \\(e\_{W\_j}\\) is the \\(j\\) th standard basis of \\(W\\) (i.e. \\(j\\) th word in the lexicon.)
 
 This projection is not, in principle, impossible. In the high-dimensional space of the entire lexicon, individual lexicalized words represent only the basis vectors of the space (and indeed in one-hot encodings for deep learning they are shown as the standard-basis of the lexicon-wide space.) Whereas in the lower-dimensional subspace of primes, a linear combination of primes can be used to represent each lexicalized word in the full lexicon.
 
@@ -73,7 +73,7 @@ We will restrict the output dimension of the shared encoder to \\(dim(P)\\) whic
 
 After training, the \\(L2\\) decoder would then be the candidate \\(W\\), mapping from the (proposed) latent embedding space of \\(P\\) to the lexicon \\(W\\).
 
-Following both (<a href="#citeproc_bib_item_1">Artetxe et al. 2018</a>; <a href="#citeproc_bib_item_4">Conneau and Lample, n.d.</a>) we will use cross-entropy as the objective function of training.
+Following both (<a href="#citeproc_bib_item_1">Artetxe et al. 2018</a>; <a href="#citeproc_bib_item_4">Conneau and Lample 2019</a>) we will use cross-entropy as the objective function of training.
 
 
 #### Feasibility Checkpoint {#feasibility-checkpoint}
@@ -135,7 +135,7 @@ Should lexicalization of all of the English lexicon via the semantic primes only
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Artetxe, Mikel, Gorka Labaka, Eneko Agirre, and Kyunghyun Cho. 2018. “UNSUPERVISED NEURAL MACHINE TRANSLATION,” 12.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Bohnemeyer, Jurgen. 1998. “Temporal Reference from a Radical Pragmatics Perspective: Why Yucatec Does Not Need to Express ’after’ and ’before’.” Walter de Gruyter, Berlin/New York Berlin, New York.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Chappell, Hilary. 2002. “5. The Universal Syntax of Semantic Primes in Mandarin Chinese.” In <i>Studies in Language Companion Series</i>, 243–322. Studies in Language Companion Series. John Benjamins Publishing Company. doi:<a href="https://doi.org/10.1075/slcs.60.12cha">10.1075/slcs.60.12cha</a>.</div>
-  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Conneau, Alexis, and Guillaume Lample. n.d. “Cross-Lingual Language Model Pretraining,” 11.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Conneau, Alexis, and Guillaume Lample. 2019. “Cross-Lingual Language Model Pretraining,” 11.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Divjak, Dagmar, Natalia Levshina, and Jane Klavan. 2016. <i>Cognitive Linguistics</i> 27 (4): 447–63. doi:<a href="https://doi.org/doi:10.1515/cog-2016-0095">doi:10.1515/cog-2016-0095</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Geeraerts, Dirk. 2009. “Neostructuralist Semantics.” In <i>Theories of Lexical Semantics</i>, 124–78. Theories of Lexical Semantics. Oxford University Press. doi:<a href="https://doi.org/10.1093/acprof:oso/9780198700302.003.0004">10.1093/acprof:oso/9780198700302.003.0004</a>.</div>
   <div class="csl-entry"><a id="citeproc_bib_item_7"></a>Goddard, Cliff. 2002. “The Search for the Shared Semantic Core of All Languages.” In <i>Meaning and Universal Grammar: Theory and Empirical Findings</i>. John Benjamins Publishing Company.</div>
