@@ -17,7 +17,7 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 -   Ask questions
 -   Talk to each other
 -   Make mistakes
--   Know the [Proof Design Patterns]({{< relref "KBhproof_design_patterns.md" >}})
+-   From Riley: know the [Proof Design Patterns]({{< relref "KBhproof_design_patterns.md" >}})
 
 
 ## Non-Axler but Important {#non-axler-but-important}
@@ -25,6 +25,7 @@ There is a ban on [number]({{< relref "KBhnumber.md" >}})s over 4 on this class.
 Things we explicitly are told to know, but is not immediately in Axler. You bet you determinants are going to be here.
 
 -   [group]({{< relref "KBhgroup.md" >}})
+-   [matricies]({{< relref "KBhmatricies.md" >}})
 
 
 ## 1 {#1}
@@ -50,3 +51,11 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [vector]({{< relref "KBhvector.md" >}})
 -   [integer]({{< relref "KBhinteger.md" >}})
 -   [additive identity]({{< relref "KBhadditive_identity.md" >}})
+
+
+
+## References
+
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Axler, Sheldon. 1997. <i>Linear Algebra Done Right</i>. Undergraduate Texts in Mathematics. Springer New York. doi:<a href="https://doi.org/10.1007/b97662">10.1007/b97662</a>.</div>
+</div>
