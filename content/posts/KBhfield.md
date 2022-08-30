@@ -23,3 +23,8 @@ A [field]({{< relref "KBhfield.md" >}}) is a special set.
 -   distribution
 
 Therefore, \\(\mathbb{R}\\) is a [field]({{< relref "KBhfield.md" >}}), and so is \\(\mathbb{C}\\) (which we proved in [properties of complex arithmetic]({{< relref "KBhcomplex_number.md#requirements" >}})).
+
+
+## additional information {#additional-information}
+
+Main difference between [group]({{< relref "KBhgroup.md" >}}): there is _one_ operation is [group]({{< relref "KBhgroup.md" >}}), a [field]({{< relref "KBhfield.md" >}}) has two operations.
