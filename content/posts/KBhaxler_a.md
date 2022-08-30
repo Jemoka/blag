@@ -51,3 +51,9 @@ draft = false
 ## Question for Jana {#question-for-jana}
 
 -   [ ] No demonstration in exercises or book that scalar [multiplication]({{< relref "KBhmultiplying.md" >}}) is commutative, why?
+
+
+## Interesting Factoids {#interesting-factoids}
+
+-   You can take a field, look at an operation, and take that (minus the other op's identity), and call it a group
+-   (groups (vector spaces (fields )))
