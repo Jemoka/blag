@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-\\(\mathbb{F}^n\\) is the set of all lists of length \\(n\\) with elements of \\(\mathbb{F}\\).
+\\(\mathbb{F}^n\\) is the set of all lists of length \\(n\\) with elements of \\(\mathbb{F}\\). These are a special case of [matricies]({{< relref "KBhmatricies.md" >}}).
 
 Formally---
 
