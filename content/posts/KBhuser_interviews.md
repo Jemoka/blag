@@ -39,6 +39,16 @@ The goal of user interviews is to understand the user even if they know what the
 
 ## User Story {#user-story}
 
--   A context
--   A motivation
--   A need
+The user story should contain....
+
+-   A main character (your user)
+-   Character background (motivation)
+-   A plot (context)
+-   Climax and Resolution
+
+
+### Framework {#framework}
+
+1.  describe the user; who are they; what do they like or not like
+2.  an iStudio classic need statement
+3.  finish with a description of the emotional impact of using our software

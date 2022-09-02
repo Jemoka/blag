@@ -58,3 +58,11 @@ We are really worried about two different things here.
 ## Fun, Relevant Factoids About the World {#fun-relevant-factoids-about-the-world}
 
 -   The range of human hearing from a youngen is about 20Hz to 20,000Hz.
+
+
+## Look into {#look-into}
+
+-   Young's Modulus
+    -   Density
+    -   Second
+-   overtones: six and a quarter
