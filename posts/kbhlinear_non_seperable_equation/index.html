@@ -1,22 +1,43 @@
 <!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
 <link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><title>Linear Non-Seperable Equation</title><meta name=description content="Take:
-\begin{equation} a(x) \frac{dy}{dx} + b(x)y = c(x) \end{equation}
-this is bad solving differential equations The following technique works for ALL first-order linear differential equations:
-To solve, first put your equation into the standard form (for the eqn above, divide by \(a(x)\):
-\begin{equation} \frac{dy}{dx} + P(x)y = Q(x) \end{equation}
-To solve a generic equation, we here are trying to UNDO the product rule.
-We first multiply the entire expression by something called the integrating factor \(\rho(x)\) (it helps us undo product rule, see the note to see requirements to be a candidate \(\rho(x)\)):"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><title>Linear Non-Seperable Equation</title><meta name=description content="A general linear, first-order, first-degree differential equation of the form:
+\begin{equation} \dv{y}{x} + P(x)y = Q(x) \end{equation}
+has a solution:
+\begin{equation} y(x) = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x} \end{equation}
+Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there. If its not, you maybe better served using the seperable methods to solve these things.
+this is bad This is difficult to deal with this!"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Linear Non-Seperable Equation</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#this-is-bad>this is bad</a></li><li><a href=#solving-differential-equations>solving differential equations</a></li></ul></nav></aside><main><article><div><p>Take:</p><p>\begin{equation}
-a(x) \frac{dy}{dx} + b(x)y = c(x)
-\end{equation}</p><h2 id=this-is-bad>this is bad</h2><h2 id=solving-differential-equations>solving differential equations</h2><p>The following technique works for ALL first-order linear differential equations:</p><p>To solve, first put your equation into the standard form (for the eqn above, divide by \(a(x)\):</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Linear Non-Seperable Equation</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#this-is-bad>this is bad</a></li><li><a href=#solving-differential-equations>solving differential equations</a></li></ul></nav></aside><main><article><div><p>A general linear, first-order, first-degree differential equation of the form:</p><p>\begin{equation}
+\dv{y}{x} + P(x)y = Q(x)
+\end{equation}</p><p>has a solution:</p><p>\begin{equation}
+y(x) = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x}
+\end{equation}</p><p>Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there. If its not, you maybe better served using the <a href=/posts/kbhlinear_constant_coefficient_equation/#solving-separable-differential-equations>seperable</a> methods to solve these things.</p><h2 id=this-is-bad>this is bad</h2><p>This is difficult to deal with this! What?? How?? Why does this work?? See below.</p><h2 id=solving-differential-equations>solving differential equations</h2><p>The following technique works for ALL first-order linear differential equations:</p><p>To solve, first put your equation into the standard form:</p><p>\begin{equation}
 \frac{dy}{dx} + P(x)y = Q(x)
-\end{equation}</p><p>To solve a generic equation, we here are trying to UNDO the product rule.</p><p>We first multiply the entire expression by something called the <a href=/posts/kbhintegrating_factor/>integrating factor</a> \(\rho(x)\) (it helps us undo product rule, see <a href=/posts/kbhintegrating_factor/>the note</a> to see requirements to be a candidate \(\rho(x)\)):</p><p>\begin{equation}
+\end{equation}</p><p>For an equation like:</p><p>\begin{equation}
+a(x) \dv{y}{x} + b(x)y = c(x)
+\end{equation}</p><p>a good way to do this is to apply \(\frac{1}{a(x)}\) to both sides, resulting in:</p><p>\begin{equation}
+\dv{y}{x} + \frac{b(x)}{a(x)} y = \frac{c(x)}{a(x)}
+\end{equation}</p><p>And then you can carry on solving like its an equation in standard form.</p><p>To solve such a generic equation, we here are trying to UNDO the product rule.</p><p>We first multiply the entire expression by something called the <a href=#solving-differential-equations>intergrating factor</a> \(\rho(x)\).</p><p>\begin{equation}
 \rho(x) \left(\frac{dy}{dx} + P(x)y\right) = \rho(x)Q(x)
-\end{equation}</p><p>Given the definition of <a href=/posts/kbhintegrating_factor/>integrating factor</a> and substituting in the result:</p><p>\begin{equation}
-e^{\int P dx} \left(\frac{dy}{dx} + P(x)y\right) = e^{\int P dx} Q(x)
-\end{equation}</p><p>\begin{equation}
-12^
-\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
+\end{equation}</p><p>A note on how this \(\rho(x)\) works. This <a href=#solving-differential-equations>intergrating factor</a> is actually defined with the following rule:</p><p>\begin{equation}
+\log (\rho (x)) = \int P(x) \dd{x}
+\end{equation}</p><p>(notably, \(\log\) is actually \(\ln\) in this case.)</p><p>Why so weird of an expression? This all springs from the fact that \(\dv x e^{x} = e^{x}\). See below on how this fact is stretched (to great lengths) to solve diffeqs.</p><p>From the above expression containing \(\rho (x)\), we naturally have that (based on the definition of the natural log, just expanding it out):</p><p>\begin{equation}
+e^{\int P(x)\dd{x}} = \rho (x)
+\end{equation}</p><p>Why is this useful? Remember, we are trying to <em>undo</em> the product rule. Let&rsquo;s replace our new definition for \(\rho (x)\) into the above expression we are trying to solve and see what happens!</p><p>\begin{align}
+&\rho (x)\qty (\dv{y}{x} + P(x)y) = \rho (x)Q(x) \\
+\Rightarrow\ & e^{\int P\dd{x}} \qty (\dv{y}{x} + P(x)y) = e^{\int P\dd{x}} Q(x)
+\end{align}</p><p>For a second now, let&rsquo;s just take an aside and deal with the left side. We are starting to <em>almost</em> clearly see the product rule at play here. Let&rsquo;s finish the job by finishing up the rest of the product rule. Remember, we want to <em>go opposite</em> the product rule at the next steps.</p><p>\begin{align}
+e^{\int P\dd{x}} \qty (\dv{y}{x} + P(x)y) &= \dv{y}{x}e^{\int p\dd{x}} + yPe^{\int P\dd{x}} \\
+&= \dv x \qty (ye^{\int P\dd{x}})
+\end{align}</p><p>Woah! Now we have something clearly in the favor of \(y\) separated out. Let&rsquo;s put this back to our original expression.</p><p>\begin{align}
+&e^{\int P\dd{x}} \qty (\dv{y}{x} + P(x)y) = e^{\int P\dd{x}} Q(x) \\
+\Rightarrow\ & \dv x \qty (ye^{\int P\dd{x}}) = e^{\int P\dd{x}} Q(x)
+\end{align}</p><p>Nice. Now, do you see the clear step to isolate \(y\) by itself? I do.</p><p>\begin{align}
+&\dv x \qty (ye^{\int P\dd{x}}) = e^{\int P\dd{x}} Q(x) \\
+\Rightarrow\ & \int \dv x \qty (ye^{\int P\dd{x}}) \dd{x}= \int e^{\int P\dd{x}} Q(x) \dd{x}\\
+\Rightarrow\ & ye^{\int P\dd{x}} = \int e^{\int P\dd{x}} Q(x) \dd{x}
+\end{align}</p><p>And finally, naturally and lastly, we divide the \(e^{\int P\dd{x}}\) to both sides.</p><p>\begin{align}
+& ye^{\int P\dd{x}} = \int e^{\int P\dd{x}} Q(x) \dd{x}\\
+\Rightarrow\ & y = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x}\ \blacksquare
+\end{align}</p><p>And there you have it. That&rsquo;s the general solution to our diffeq.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
