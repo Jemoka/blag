@@ -10,6 +10,11 @@ draft = false
 The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 2011</a>)
 
 
+## Content {#content}
+
+-   [solving differential equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}})
+
+
 ## Assignments {#assignments}
 
 -   [Challenge #1]({{< relref "KBhchallenge_1.md" >}})
