@@ -34,7 +34,7 @@ To solve, first put your equation into the standard form:
     \frac{dy}{dx} + P(x)y = Q(x)
 \end{equation}
 
-For an equation like:
+If you have an equation like:
 
 \begin{equation}
     a(x) \dv{y}{x} + b(x)y = c(x)
