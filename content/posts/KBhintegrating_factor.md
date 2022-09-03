@@ -10,20 +10,12 @@ The [integrating factor]({{< relref "KBhintegrating_factor.md" >}}) \\(\rho(x)\\
     log(\rho(x)) = \int P(x)dx
 \end{equation}
 
+for some function \\(P(x)\\).
+
 Separating the \\(\rho(x)\\) out, we have therefore:
 
 \begin{equation}
     e^{\int P dx} = \rho(x)
 \end{equation}
 
-Why is this helpful and undoes the product rule? Take if we have some
-
-\begin{equation}
-    \frac{d}{dx} \left(y\rho(x) \right) = \frac{d}{dx} \left(ye^{\int P dx} \right)
-\end{equation}
-
-By the product rule, we have:
-
-\begin{equation}
-    \frac{dy}{dx}e^{\int P dx} + yP(x)
-\end{equation}
+Why is this helpful and undoes the product rule? This is because of a very interesting property of how \\(\rho(x)\\) behaves.
