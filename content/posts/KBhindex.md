@@ -20,12 +20,12 @@ Need to catch me? Email me at `houjun at the current domain`. Please do email me
 
 ## Recent Projects {#recent-projects}
 
-Take a look at my [GitHub profile](https://github.com/Jemoka/) for programming projects. For larger scale things, take a look at the [Projects Index]({{< relref "KBhprojects.md" >}}) on this site.
+Take a look at my [GitHub profile](https://github.com/Jemoka/) for programming projects. For larger scale things, take a look at the [Projects Index]({{< relref "../../Dropbox/knowledgebase/KBhprojects.md" >}}) on this site.
 
 
 ## Notes {#notes}
 
-This site also contains the vast majority of my course notes. It is a organized in a [zettlekasten]({{< relref "KBhzettlekasten.md" >}}) format. To begin exploring, why don't you check out [Nueva Courses Index]({{< relref "KBhnueva_courses_index.md" >}}). Accompanying this index is the collection of assignments [found here](https://taproot3.jklsnt.com/) which a few friends has collected together.
+This site also contains the vast majority of my course notes. It is a organized in a [zettlekasten]({{< relref "../../Dropbox/knowledgebase/KBhzettlekasten.md" >}}) format. To begin exploring, why don't you check out [Nueva Courses Index]({{< relref "../../Dropbox/knowledgebase/KBhnueva_courses_index.md" >}}). Accompanying this index is the collection of assignments [found here](https://taproot3.jklsnt.com/) which a few friends has collected together.
 
 
 ## jklsnt {#jklsnt}
