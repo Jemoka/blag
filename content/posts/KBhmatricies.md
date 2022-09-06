@@ -42,3 +42,24 @@ Applying the definition of the identity:
 \end{equation}
 
 Therefore, to solve for some \\(A^{-1}\\), which would yield
+
+
+### determinants {#determinants}
+
+For a matrix, for instance, like:
+
+\begin{equation}
+\begin{bmatrix}
+a & b \\\\
+c & d
+\end{bmatrix}
+\end{equation}
+
+We wish to find the matrix's determinant; we write it down as:
+
+\begin{equation}
+\begin{vmatrix}
+a & b \\\\
+c & d
+\end{vmatrix}
+\end{equation}
