@@ -12,6 +12,7 @@ The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 201
 
 ## Content {#content}
 
+-   [Simple Differential Equations]({{< relref "KBhsimple_differential_equations.md" >}})
 -   [solving differential equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}})
 
 
