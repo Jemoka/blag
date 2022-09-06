@@ -5,15 +5,19 @@
 \begin{equation} \dv{y}{x} + P(x)y = Q(x) \end{equation}
 has a solution:
 \begin{equation} y(x) = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x} \end{equation}
-Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there. If its not, you maybe better served using the seperable methods to solve these things.
-this is bad This is difficult to deal with this!"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+the more general solution (for definite integrals):
+\begin{equation} x(t) = e^{-A(t)}x_{0} + e^{-A(t)}\int_{t_{0}}^{t}e^{A(s)}b(s)\dd{s} \end{equation}
+given the initial condition that \(x(0) = 0\). This is from the textbook.
+Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Linear Non-Seperable Equation</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#this-is-bad>this is bad</a></li><li><a href=#solving-differential-equations>solving differential equations</a></li></ul></nav></aside><main><article><div><p>A general linear, first-order, first-degree differential equation of the form:</p><p>\begin{equation}
 \dv{y}{x} + P(x)y = Q(x)
 \end{equation}</p><p>has a solution:</p><p>\begin{equation}
 y(x) = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x}
-\end{equation}</p><p>Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there. If its not, you maybe better served using the <a href=/posts/kbhlinear_constant_coefficient_equation/#solving-separable-differential-equations>seperable</a> methods to solve these things.</p><h2 id=this-is-bad>this is bad</h2><p>This is difficult to deal with this! What?? How?? Why does this work?? See below.</p><h2 id=solving-differential-equations>solving differential equations</h2><p>The following technique works for ALL first-order linear differential equations:</p><p>To solve, first put your equation into the standard form:</p><p>\begin{equation}
+\end{equation}</p><p>the more general solution (for definite integrals):</p><p>\begin{equation}
+x(t) = e^{-A(t)}x_{0} + e^{-A(t)}\int_{t_{0}}^{t}e^{A(s)}b(s)\dd{s}
+\end{equation}</p><p>given the initial condition that \(x(0) = 0\). This is from the textbook.</p><p>Before you go ham and start solving, though, make sure that pesky \(y\) term is actually there. If its not, you maybe better served using the <a href=/posts/kbhlinear_constant_coefficient_equation/#solving-separable-differential-equations>seperable</a> methods to solve these things.</p><h2 id=this-is-bad>this is bad</h2><p>This is difficult to deal with this! What?? How?? Why does this work?? See below.</p><h2 id=solving-differential-equations>solving differential equations</h2><p>The following technique works for ALL first-order linear differential equations:</p><p>To solve, first put your equation into the standard form:</p><p>\begin{equation}
 \frac{dy}{dx} + P(x)y = Q(x)
 \end{equation}</p><p>If you have an equation like:</p><p>\begin{equation}
 a(x) \dv{y}{x} + b(x)y = c(x)

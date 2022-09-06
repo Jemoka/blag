@@ -7,8 +7,7 @@ Or, perhaps, we have a second order differential equation which is the same thin
 \begin{equation} \dv[2]{x}{t} = f\qty(t,x,\dv{x}{t}) \end{equation}
 Then in which case, we have that the first most simple type of differential equation to be as follows:
 \begin{equation} \dv{x}{t} = x(t) \end{equation}
-where, the function \(f(t,x)=x(t)\).
-\begin{align} & \dv{x}{t} = x(t) \\ \Rightarrow\ & \frac{1}{x(t)}\dd{x} = \dd{t} \end{align}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+If we can solve this, we can generalize this to most of other First-Order Differential Equations."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Simple Differential Equations</h1></div><main><article><div><p>Here is the most simple <a href=/posts/kbhdiffeq_intro/>Differential Equation</a> one could imagine:</p><p>\begin{equation}
@@ -17,7 +16,7 @@ where, the function \(f(t,x)=x(t)\).
 \dv[2]{x}{t} = f\qty(t,x,\dv{x}{t})
 \end{equation}</p><p>Then in which case, we have that the first most simple type of <a href=/posts/kbhdiffeq_intro/>differential equation</a> to be as follows:</p><p>\begin{equation}
 \dv{x}{t} = x(t)
-\end{equation}</p><p>where, the function \(f(t,x)=x(t)\).</p><p>\begin{align}
+\end{equation}</p><p>If we can solve this, we can generalize this to most of other <a href=/posts/kbhlinear_non_seperable_equation/#solving-differential-equations>First-Order Differential Equations</a>.</p><p>where, the function \(f(t,x)=x(t)\).</p><p>\begin{align}
 & \dv{x}{t} = x(t) \\
 \Rightarrow\ & \frac{1}{x(t)}\dd{x} = \dd{t}
 \end{align}</p><p>At this point, you may ask yourself, why not construct it such that we have \(\dd{x} = x(t)\dd{t}\)? Well, its because our \(x\) is a variable in \(t\), so if we constructed it that way we&rsquo;d have to integrate a function \(\dd{t}\) with usub and the reverse chain rule, etc. etc. If we are instead integrating it on \(\dd{x}\), it becomes much easier because our variable of interest no longer considers the \(t\).</p><p>Continuing on, then:</p><p>\begin{align}
@@ -30,4 +29,10 @@ x(t) = e^{ct}
 \end{equation}</p><p>is the solution to all equations \(\dv{x}{t} = cx\).</p><p>Turns out (not proven in the book), this holds for complex valued equations as well. So, we have some:</p><p>\begin{align}
 &x(t) = e^{it} \\
 \Rightarrow\ & \dv{x}{t} = ix
-\end{align}</p><p>Of course, from elementary calculus we also learned the fact that \(e^{x}\) can be represented as a <a href=/posts/kbhpower_series/>power series</a>; so check that out for now we connect it.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
+\end{align}</p><p>Of course, from elementary calculus we also learned the fact that \(e^{x}\) can be represented as a <a href=/posts/kbhpower_series/>power series</a>; so check that out for now we connect it.</p><hr><p>This equation leads us to solve:</p><p>\begin{equation}
+\dv{x}{t} + ax = b(t)
+\end{equation}</p><p>In order to do this, we neeed to find a replacement of the property that:</p><p>\begin{equation}
+\dv t\qty(e^{at}x) = e^{at}\qty(\dv{x}{t} +at)
+\end{equation}</p><p>A more general result of the above form is</p><p>\begin{equation}
+\dv{x}{t} + a(t)x = b(t)
+\end{equation}</p><p>This is fine, but now we need to leverage to chain rule to have \(\dv t a(t)\) would be simply changing the above result to \(a&rsquo;(t)\).</p><p>But anyways through this we will end up with the same solution we get from <a href=/posts/kbhlinear_non_seperable_equation/#solving-differential-equations>solving differential equations</a>.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
