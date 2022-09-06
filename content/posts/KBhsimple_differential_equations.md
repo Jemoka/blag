@@ -47,3 +47,12 @@ x(t) = e^{ct}
 \end{equation}
 
 is the solution to all equations \\(\dv{x}{t} = cx\\).
+
+Turns out (not proven in the book), this holds for complex valued equations as well. So, we have some:
+
+\begin{align}
+&x(t) = e^{it} \\\\
+\Rightarrow\ & \dv{x}{t} = ix
+\end{align}
+
+Of course, from elementary calculus we also learned the fact that \\(e^{x}\\) can be represented as a [power series]({{< relref "KBhpower_series.md" >}}); so check that out for now we connect it.
