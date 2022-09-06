@@ -38,7 +38,10 @@ And therefore, the air around the [funing tork]({{< relref "KBhtuning_forks.md" 
 
 ## A Detour on Rigid Body Harmonic Motion {#a-detour-on-rigid-body-harmonic-motion}
 
-Ok we can probably
+Let's talk about [Bending.
+]({{< relref "KBhbending.md" >}})
+
+1.  How does this relate to springs/slinkies? [read this.](https://ccrma.stanford.edu/~jos/pasp/Young_s_Modulus_Spring_Constant.html)
 
 
 ## A Detour on the Temperature {#a-detour-on-the-temperature}
