@@ -30,4 +30,4 @@ So therefore, we have:
 x^{''} = v\dv{v}{x} = f(x,v)
 \end{equation}
 
-So turns out, the original input \\(t\\) is, given a specific equation.
+So turns out, the original input \\(t\\) is, given a specific equation above, we have no need to know it.
