@@ -16,6 +16,14 @@ has a solution:
 y(x) = e^{-\int P\dd{x}}\int e^{\int P\dd{x}} Q(x) \dd{x}
 \end{equation}
 
+the more general solution (for definite integrals):
+
+\begin{equation}
+x(t) = e^{-A(t)}x\_{0} + e^{-A(t)}\int\_{t\_{0}}^{t}e^{A(s)}b(s)\dd{s}
+\end{equation}
+
+given the initial condition that \\(x(0) = 0\\). This is from the textbook.
+
 Before you go ham and start solving, though, make sure that pesky \\(y\\) term is actually there. If its not, you maybe better served using the [seperable]({{< relref "KBhlinear_constant_coefficient_equation.md#solving-separable-differential-equations" >}}) methods to solve these things.
 
 

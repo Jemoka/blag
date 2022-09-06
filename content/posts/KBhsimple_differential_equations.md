@@ -22,6 +22,8 @@ Then in which case, we have that the first most simple type of [differential equ
 \dv{x}{t} = x(t)
 \end{equation}
 
+If we can solve this, we can generalize this to most of other [First-Order Differential Equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}}).
+
 where, the function \\(f(t,x)=x(t)\\).
 
 \begin{align}
@@ -56,3 +58,27 @@ Turns out (not proven in the book), this holds for complex valued equations as w
 \end{align}
 
 Of course, from elementary calculus we also learned the fact that \\(e^{x}\\) can be represented as a [power series]({{< relref "KBhpower_series.md" >}}); so check that out for now we connect it.
+
+---
+
+This equation leads us to solve:
+
+\begin{equation}
+\dv{x}{t} + ax = b(t)
+\end{equation}
+
+In order to do this, we neeed to find a replacement of the property that:
+
+\begin{equation}
+\dv t\qty(e^{at}x) = e^{at}\qty(\dv{x}{t} +at)
+\end{equation}
+
+A more general result of the above form is
+
+\begin{equation}
+\dv{x}{t} + a(t)x = b(t)
+\end{equation}
+
+This is fine, but now we need to leverage to chain rule to have \\(\dv t a(t)\\) would be simply changing the above result to \\(a'(t)\\).
+
+But anyways through this we will end up with the same solution we get from [solving differential equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}}).
