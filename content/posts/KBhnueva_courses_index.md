@@ -81,9 +81,10 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 
 ## NUS-CS350 Software Studio {#nus-cs350-software-studio}
 
-| Date                                                                                         | Topic                                                     |
-|----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [User Interviews]({{< relref "KBhuser_interviews.md" >}}) |
+| Date                                                                                         | Topic                                                                                                                      |
+|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [User Interviews]({{< relref "KBhuser_interviews.md" >}}), [User Story]({{< relref "KBhuser_interviews.md#user-story" >}}) |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-07 Wed&gt;</span></span> | [Software Engineering]({{< relref "KBhsoftware_engineering.md" >}})                                                        |
 
 
 ## NUS-MATH570 DiffEq {#nus-math570-diffeq}
