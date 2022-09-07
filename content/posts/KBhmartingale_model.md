@@ -42,7 +42,7 @@ versus
 E\qty [X\_{k}|X\_{k-1}] = X\_{k-1}
 \end{equation}
 
-is pretty big. The two will only be the same if the markets is assumed to be a [markovian process]({{< relref "KBhmarkovian_process.md" >}}), but that's n
+is pretty big. The two will only be the same if the markets is assumed to be a [markovian process]({{< relref "KBhmarkovian_process.md" >}}).
 
 
 ## [Martingale]({{< relref "KBhmartingale_model.md" >}}) historical conditioning {#martingale--kbhmartingale-model-dot-md--historical-conditioning}
