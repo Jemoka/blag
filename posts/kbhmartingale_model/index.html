@@ -22,4 +22,13 @@ E\qty [X_{k} | X_{k-2}] = \sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr
 E[X_{k}|X_{k-1},X_{k-1} = x] =x
 \end{equation}</p><p>Applying this, then, we have</p><p>\begin{equation}
 \sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr \qty(X_{k-1}=x|X_{k-2}) = \sum_{x} x \cdot Pr \qty(X_{k-1}=x|X_{k-2})
-\end{equation}</p><p>The right sum, then, is just the expected value of \(X_{k-1}\) given \(X_{k-2}\)!!</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
+\end{equation}</p><p>The right sum, then, is just the expected value of \(X_{k-1}\) given \(X_{k-2}\)!! Meaning:</p><p>\begin{equation}
+\sum_{x} x \cdot Pr \qty(X_{k-1}=x|X_{k-2}) = E[X_{k-1} | X_{k-2}]
+\end{equation}</p><p>Now, we are in a <a href=/posts/kbhmartingale_model/>Martingale Model</a>. Therefore:</p><p>\begin{equation}
+\sum_{x} x \cdot Pr \qty(X_{k-1}=x|X_{k-2}) = E[X_{k-1} | X_{k-2}] = X_{k-2}
+\end{equation}</p><p>And so, putting it all together, we have:</p><p>\begin{align}
+E\qty [X_{k} | X_{k-2}] &= \sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr \qty(X_{k-1}=x|X_{k-2}) \\
+&= \sum_{x} x \cdot Pr \qty(X_{k-1}=x|X_{k-2}) \\
+&= E[X_{k-1} | X_{k-2}] \\
+&= X_{k-2}
+\end{align}</p><p>Amazing. So <a href=/posts/kbhmartingale_model/>Martingale</a> holds over time</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
