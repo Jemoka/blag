@@ -43,3 +43,7 @@ Which is the better approach? There isn't one. However, here are some critical q
 -   Life-cycle: how long will the software get used?
 
 {{< figure src="/ox-hugo/2022-09-07_13-00-47_screenshot.png" >}}
+
+So---
+
+As consequences for deadline gets worse, trend towards fast; as consequences for failure gets worse, trend towards robust.
