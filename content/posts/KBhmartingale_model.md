@@ -75,4 +75,25 @@ Applying this, then, we have
 \sum\_{x} E\qty [X\_{k} | X\_{k-1}, X\_{k-1} = x] \cdot Pr \qty(X\_{k-1}=x|X\_{k-2}) = \sum\_{x} x \cdot Pr \qty(X\_{k-1}=x|X\_{k-2})
 \end{equation}
 
-The right sum, then, is just the expected value of \\(X\_{k-1}\\) given \\(X\_{k-2}\\)!!
+The right sum, then, is just the expected value of \\(X\_{k-1}\\) given \\(X\_{k-2}\\)!! Meaning:
+
+\begin{equation}
+\sum\_{x} x \cdot Pr \qty(X\_{k-1}=x|X\_{k-2}) = E[X\_{k-1} | X\_{k-2}]
+\end{equation}
+
+Now, we are in a [Martingale Model]({{< relref "KBhmartingale_model.md" >}}). Therefore:
+
+\begin{equation}
+\sum\_{x} x \cdot Pr \qty(X\_{k-1}=x|X\_{k-2}) = E[X\_{k-1} | X\_{k-2}] = X\_{k-2}
+\end{equation}
+
+And so, putting it all together, we have:
+
+\begin{align}
+E\qty [X\_{k} | X\_{k-2}] &= \sum\_{x} E\qty [X\_{k} | X\_{k-1}, X\_{k-1} = x] \cdot Pr \qty(X\_{k-1}=x|X\_{k-2})  \\\\
+&= \sum\_{x} x \cdot Pr \qty(X\_{k-1}=x|X\_{k-2})  \\\\
+&= E[X\_{k-1} | X\_{k-2}]  \\\\
+&= X\_{k-2}
+\end{align}
+
+Amazing. So [Martingale]({{< relref "KBhmartingale_model.md" >}}) holds over time
