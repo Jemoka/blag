@@ -50,23 +50,6 @@ Therefore, \\(r\_t\\) can achieve the same division by adding (see the [log laws
 But either way, with enough, we know that \\(r\_t\\) is independently, identity distributed.
 
 
-## Martingale Model {#martingale-model}
-
-The [Martingale Model](#martingale-model) comes from the idea that "true gambling is true equal conditions (money, opponents, bystanders, situations, die, and dice.)" Therefore, any amount of bias towards one direction/party is advantageous for that person.
-
-Therefore, we have that:
-
-\begin{equation}
-    E[P\_{t+1}-P\_t | P\_t, P\_{t-1},\ldots] = 0
-\end{equation}
-
-where, \\(P\_t\\) is one's wealth at time \\(t\\). This means that there is about a zero-sum fair game at every timestamp, even despite you knowing the historical performance.
-
-Therefore, we would expect the result of today's price to be exactly yesterday's price---even given the entire history. Therefore, the best predictor (to minimize square error) of today's price is yesterday's price.
-
-In fact, it was theorized that an efficient market should follow exactly this behavior.
-
-
 ## time series analysis {#time-series-analysis}
 
 Over some days \\(k\\), we have:
@@ -75,4 +58,4 @@ Over some days \\(k\\), we have:
 Y\_{k} = \sum\_{i=1}^{k} x\_{i}
 \end{equation}
 
-Given that \\(x\_{i}\\) is distributed randomly: \\(\\{x\_{i}\\}\_{i=1}^{N}\\). This becomes the foundation of [time series analysis](#time-series-analysis). The problem of course becomes harder when the values drift against each other, is nonindependent, etc.
+Given that \\(x\_{i}\\) is distributed randomly: \\(\\{x\_{i}\\}\_{i=1}^{N}\\). This becomes the foundation of [time series analysis](#time-series-analysis). The problem of course becomes harder when the values drift against each other, is nonindependent, etc.  We can use the [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) to take generic [random walk]({{< relref "KBhrandom_walk.md" >}}) to a more dependent model.
