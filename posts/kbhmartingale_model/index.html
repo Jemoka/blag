@@ -18,4 +18,8 @@ E\qty [X_{k}\middle|X_{k-1}] = X_{k-1}
 E\qty [X_{k} \middle | X_{k-2}] = ?
 \end{equation}</p><p>Turns out, there&rsquo;s a small trick you can do. Without even <a href=/posts/kbhmartingale_model/>Martingale</a>, we can claim that:</p><p>\begin{equation}
 E\qty [X_{k} \middle | X_{k-2}] = \sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr \qty(X_{k-1}=x|X_{k-2})
-\end{equation}</p><p>That, the price today is just the sum of all possible prices for day \(k-1\) we name small \(x\) times the probability \(Pr\) that it actually happens given the existing \(k-2\) observation.</p><p>Of course, given the <a href=/posts/kbhmartingale_model/>Martingale Model</a> now, given some possible price yesterday \(x\)</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
+\end{equation}</p><p>That, the price today is just the sum of all possible prices for day \(k-1\) we name small \(x\) times the probability \(Pr\) that it actually happens given the existing \(k-2\) observation.</p><p>Of course, given the <a href=/posts/kbhmartingale_model/>Martingale Model</a> now, given some possible price in day \(k-1\) named \(x\), price in \(k\) is also \(x\). Therefore:</p><p>\begin{equation}
+E[X_{k}|X_{k-1},X_{k-1} = x] =x
+\end{equation}</p><p>Applying this, then, we have</p><p>\begin{equation}
+\sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr \qty(X_{k-1}=x|X_{k-2}) = \sum_{x} x \cdot Pr \qty(X_{k-1}=x|X_{k-2})
+\end{equation}</p><p>The right sum, then, is just the expected value of \(X_{k-1}\) given \(X_{k-2}\)!!</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
