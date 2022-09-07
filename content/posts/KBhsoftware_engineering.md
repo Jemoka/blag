@@ -32,9 +32,14 @@ The [MIT vs. New Jersey](#fundamental-trade-off-of-software-engineering--kbhsoft
 
 Source: [here](https://www.dreamsongs.com/RiseOfWorseIsBetter.html).
 
+
+### how to choose? {#how-to-choose}
+
 Which is the better approach? There isn't one. However, here are some critical questions for you to answer:
 
 -   Deadline: what happens if you don't finish today?
 -   Release cycle: if you ship a bug, how long can you fix it?
 -   Consequences: if the software malfunctions, how bad is it?
 -   Life-cycle: how long will the software get used?
+
+{{< figure src="/ox-hugo/2022-09-07_13-00-47_screenshot.png" >}}
