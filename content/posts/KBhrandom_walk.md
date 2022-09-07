@@ -18,6 +18,8 @@ The [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}) tells us that, 
 
 So, all of the [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}) models would leverage the above result, that the two time info don't evolve together and they are independently, [random]({{< relref "KBhrandom.md" >}})ly distributed: they are [random variable]({{< relref "KBhrandom_variables.md" >}})s.
 
+For the market to be a typical [Random Walk]({{< relref "KBhrandom_walk.md" >}}), the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) has to hold on the value of [return](#return--finmetrics). This usually possible, but if the variance of the return is not finite, the [return](#return--finmetrics) will not hold the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) which means that the [return](#return--finmetrics) will not be [normal]({{< relref "KBhnormal_distribution.md" >}}). Of course the [return](#return--finmetrics) does not have to hold [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}), then we use other convergence distributions but still model it in the [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}) as a [random variable]({{< relref "KBhrandom_variables.md" >}}).
+
 
 ## return (FinMetrics) {#return--finmetrics}
 
@@ -62,4 +64,15 @@ where, \\(P\_t\\) is one's wealth at time \\(t\\). This means that there is abou
 
 Therefore, we would expect the result of today's price to be exactly yesterday's price---even given the entire history. Therefore, the best predictor (to minimize square error) of today's price is yesterday's price.
 
-In fact, it was theorized that an efficient
+In fact, it was theorized that an efficient market should follow exactly this behavior.
+
+
+## time series analysis {#time-series-analysis}
+
+Over some days \\(k\\), we have:
+
+\begin{equation}
+Y\_{k} = \sum\_{i=1}^{k} x\_{i}
+\end{equation}
+
+Given that \\(x\_{i}\\) is distributed randomly: \\(\\{x\_{i}\\}\_{i=1}^{N}\\). This becomes the foundation of [time series analysis](#time-series-analysis). The problem of course becomes harder when the values drift against each other, is nonindependent, etc.
