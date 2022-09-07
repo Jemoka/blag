@@ -28,6 +28,11 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [matricies]({{< relref "KBhmatricies.md" >}})
 
 
+## Homework {#homework}
+
+See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >}})
+
+
 ## 1 {#1}
 
 -   [Axler 1.A]({{< relref "KBhaxler_a.md" >}})

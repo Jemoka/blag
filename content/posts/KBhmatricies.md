@@ -63,3 +63,5 @@ a & b \\\\
 c & d
 \end{vmatrix}
 \end{equation}
+
+Geometrically, determinants are:
