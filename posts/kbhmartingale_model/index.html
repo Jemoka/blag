@@ -14,7 +14,7 @@ E\qty [X_{k}|X_{k-1}, X_{k-2},\ldots] = X_{k-1}
 E\qty [X_{k}|X_{k-1}, X_{k-2},\ldots] = X_{k-1}
 \end{equation}</p><p>versus</p><p>\begin{equation}
 E\qty [X_{k}|X_{k-1}] = X_{k-1}
-\end{equation}</p><p>is pretty big. The two will only be the same if the markets is assumed to be a <a href=/posts/kbhmarkovian_process/>markovian process</a>, but that&rsquo;s n</p><h2 id=martingale--kbhmartingale-model-dot-md--historical-conditioning><a href=/posts/kbhmartingale_model/>Martingale</a> historical conditioning</h2><p>Ok, if we are told that the process is <a href=/posts/kbhmartingale_model/>Martingale</a>, but we only have two days ago, what do we have?</p><p>i.e. what if we want to know:</p><p>\begin{equation}
+\end{equation}</p><p>is pretty big. The two will only be the same if the markets is assumed to be a <a href=/posts/kbhmarkovian_process/>markovian process</a>.</p><h2 id=martingale--kbhmartingale-model-dot-md--historical-conditioning><a href=/posts/kbhmartingale_model/>Martingale</a> historical conditioning</h2><p>Ok, if we are told that the process is <a href=/posts/kbhmartingale_model/>Martingale</a>, but we only have two days ago, what do we have?</p><p>i.e. what if we want to know:</p><p>\begin{equation}
 E\qty [X_{k} | X_{k-2}] = ?
 \end{equation}</p><p>Turns out, there&rsquo;s a small trick you can do. Without even <a href=/posts/kbhmartingale_model/>Martingale</a>, we can claim that:</p><p>\begin{equation}
 E\qty [X_{k} | X_{k-2}] = \sum_{x} E\qty [X_{k} | X_{k-1}, X_{k-1} = x] \cdot Pr \qty(X_{k-1}=x|X_{k-2})
