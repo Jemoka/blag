@@ -23,18 +23,44 @@ Two important conclusions:
 
 Therefore, the "randomness is fair", and therefore the "market is not drifting in favor/against you."
 
----
-
 The [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) comes from the idea that "true gambling is true equal conditions (money, opponents, bystanders, situations, die, and dice.)" Therefore, any amount of bias towards one direction/party is advantageous for that person.
 
-Therefore, we have that:
+In fact, it was theorized that an efficient market should follow exactly this behavior.
+
+
+## changes in history {#changes-in-history}
+
+Of course, the difference between the expression:
 
 \begin{equation}
-    E[P\_{t+1}-P\_t | P\_t, P\_{t-1},\ldots] = 0
+E\qty [X\_{k}\middle|X\_{k-1}, X\_{k-2},\ldots] = X\_{k-1}
 \end{equation}
 
-where, \\(P\_t\\) is one's wealth at time \\(t\\). This means that there is about a zero-sum fair game at every timestamp, even despite you knowing the historical performance.
+versus
 
-Therefore, we would expect the result of today's price to be exactly yesterday's price---even given the entire history. Therefore, the best predictor (to minimize square error) of today's price is yesterday's price.
+\begin{equation}
+E\qty [X\_{k}\middle|X\_{k-1}] = X\_{k-1}
+\end{equation}
 
-In fact, it was theorized that an efficient market should follow exactly this behavior.
+is pretty big. The two will only be the same if the markets is assumed to be a [markovian process]({{< relref "KBhmarkovian_process.md" >}}), but that's n
+
+
+## [Martingale]({{< relref "KBhmartingale_model.md" >}}) historical conditioning {#martingale--kbhmartingale-model-dot-md--historical-conditioning}
+
+Ok, if we are told that the process is [Martingale]({{< relref "KBhmartingale_model.md" >}}), but we only have two days ago, what do we have?
+
+i.e. what if we want to know:
+
+\begin{equation}
+E\qty [X\_{k} \middle | X\_{k-2}] = ?
+\end{equation}
+
+Turns out, there's a small trick you can do. Without even [Martingale]({{< relref "KBhmartingale_model.md" >}}), we can claim that:
+
+\begin{equation}
+E\qty [X\_{k} \middle | X\_{k-2}] = \sum\_{x} E\qty [X\_{k} | X\_{k-1}, X\_{k-1} = x] \cdot Pr \qty(X\_{k-1}=x|X\_{k-2})
+\end{equation}
+
+That, the price today is just the sum of all possible prices for day \\(k-1\\) we name small \\(x\\) times the probability \\(Pr\\) that it actually happens given the existing \\(k-2\\) observation.
+
+Of course, given the [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) now, given some possible price yesterday \\(x\\)
