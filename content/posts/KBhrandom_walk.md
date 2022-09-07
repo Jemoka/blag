@@ -59,3 +59,26 @@ Y\_{k} = \sum\_{i=1}^{k} x\_{i}
 \end{equation}
 
 Given that \\(x\_{i}\\) is distributed randomly: \\(\\{x\_{i}\\}\_{i=1}^{N}\\). This becomes the foundation of [time series analysis](#time-series-analysis). The problem of course becomes harder when the values drift against each other, is nonindependent, etc.  We can use the [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) to take generic [random walk]({{< relref "KBhrandom_walk.md" >}}) to a more dependent model.
+
+
+## CJ test {#cj-test}
+
+If you have some amount of volacitity measurement, we first know that, by the [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}), we have:
+
+\begin{equation}
+X\_{k} \sim N(0,\sigma^{2})
+\end{equation}
+
+Given some future return, you hope that:
+
+\begin{equation}
+Y\_{k}=\sum\_{i=1}^{k}X\_{k}\sim N(0,\sigma^{2})
+\end{equation}
+
+If so, if you have like \\(20\\%\\) of log returns, to have a statistically significant return, we have that:
+
+\begin{equation}
+\sigma =\frac{0.2}{\sqrt{12}}
+\end{equation}
+
+getting a statistically significant difference from it is _hard._

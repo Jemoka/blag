@@ -63,4 +63,16 @@ E\qty [X\_{k} \middle | X\_{k-2}] = \sum\_{x} E\qty [X\_{k} | X\_{k-1}, X\_{k-1}
 
 That, the price today is just the sum of all possible prices for day \\(k-1\\) we name small \\(x\\) times the probability \\(Pr\\) that it actually happens given the existing \\(k-2\\) observation.
 
-Of course, given the [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) now, given some possible price yesterday \\(x\\)
+Of course, given the [Martingale Model]({{< relref "KBhmartingale_model.md" >}}) now, given some possible price in day \\(k-1\\) named \\(x\\), price in \\(k\\) is also \\(x\\). Therefore:
+
+\begin{equation}
+E[X\_{k}|X\_{k-1},X\_{k-1} = x] =x
+\end{equation}
+
+Applying this, then, we have
+
+\begin{equation}
+\sum\_{x} E\qty [X\_{k} | X\_{k-1}, X\_{k-1} = x] \cdot Pr \qty(X\_{k-1}=x|X\_{k-2}) = \sum\_{x} x \cdot Pr \qty(X\_{k-1}=x|X\_{k-2})
+\end{equation}
+
+The right sum, then, is just the expected value of \\(X\_{k-1}\\) given \\(X\_{k-2}\\)!!
