@@ -10,11 +10,17 @@ draft = false
 -   .mp4
 -   mfa model downloading
 -   what's the difference between online docker install and manual install
+-   NLTK Huggingface transformers tokenizers
 
 
 ## DBA {#dba}
 
 -   See the data on the frequency of haphax legomina vs. COCA
+
+
+## ESPNet {#espnet}
+
+-   need to talk to Ji Yang
 
 
 ## Andrew's Features {#andrew-s-features}

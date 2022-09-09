@@ -41,7 +41,7 @@ Applying the definition of the identity:
     Ix = A^{-1}b
 \end{equation}
 
-Therefore, to solve for some \\(A^{-1}\\), which would yield
+Therefore, to solve for some \\(A^{-1}\\), which would yield \\(x\\).
 
 
 ### determinants {#determinants}
