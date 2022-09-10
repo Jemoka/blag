@@ -10,7 +10,13 @@ draft = false
 -   .mp4
 -   mfa model downloading
 -   what's the difference between online docker install and manual install
--   NLTK Huggingface transformers tokenizers
+-   NLTK Huggingface transformers tokenizers (versining)
+-   /opt/homebrew/Caskroom/miniforge/base/envs/aligner/lib/python3.9/site-packages/montreal_forced_aligner/corpus/text_corpus.py;  getattr(self, k).update(error_dict[k])
+
+AttributeError: 'list' object has no attribute 'update'
+FileArgumentNotFoundError: ; line 139
+
+-
 
 
 ## DBA {#dba}

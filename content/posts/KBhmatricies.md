@@ -65,3 +65,12 @@ c & d
 \end{equation}
 
 Geometrically, determinants are:
+
+
+### elementary matrix {#elementary-matrix}
+
+[elementary matricies](#elementary-matrix) are slight variations from the [identity]({{< relref "KBhidentity.md" >}}) matrix which performs the [elementary row operations](#elementary-matrix):
+
+-   swap rows
+-   add a row to another
+-   scale rows
