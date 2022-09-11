@@ -6,7 +6,7 @@ draft = false
 
 ## readme {#readme}
 
--   conda init zsh (close shell, open again)
+-   ~~conda init zsh (close shell, open again)~~
 -   .mp4
 -   mfa model downloading
 -   what's the difference between online docker install and manual install
