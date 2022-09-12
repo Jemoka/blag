@@ -69,3 +69,7 @@ We are really worried about two different things here.
     -   Density
     -   Second
 -   overtones: six and a quarter
+-   why no free vibrations just standing?
+
+
+##  {#d41d8c}

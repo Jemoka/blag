@@ -7,10 +7,12 @@ draft = false
 
 DOI: 10.3389/fcomp.2021.624594
 
+(<a href="#citeproc_bib_item_1">Sadeghian, Schaffer, and Zahorian 2021</a>)
+
 
 ## One-Liner {#one-liner}
 
-Using a [genetic algorithm]({{< relref "KBhgenetic_algorithum.md" >}}), picked features to optimize fore; achieved \\(94\\%\\) with just [MMSE]({{< relref "KBhmmse.md" >}}) data alone. Developed [ASR]({{< relref "KBhasr.md" >}}) tool to aid.
+Using a [genetic algorithm]({{< relref "KBhgenetic_algorithum.md" >}}), picked features to optimize fore; achieved \\(94\\%\\) with just [MMSE]({{< relref "KBhmmse.md" >}}) data alone (ok like duh me too). Developed [ASR]({{< relref "KBhasr.md" >}}) tool to aid.
 
 
 ## Novelty {#novelty}
