@@ -64,7 +64,10 @@ c & d
 \end{vmatrix}
 \end{equation}
 
-Geometrically, determinants are:
+
+#### geometric interpretation of determinants {#geometric-interpretation-of-determinants}
+
+Geometrically, determinants are how matrices send a unit object after its mapping; i.e. how does it transform the area of a unit square.
 
 
 ### elementary matrix {#elementary-matrix}
@@ -74,3 +77,6 @@ Geometrically, determinants are:
 -   swap rows
 -   add a row to another
 -   scale rows
+
+
+###  {#d41d8c}
