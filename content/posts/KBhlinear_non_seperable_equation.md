@@ -4,6 +4,27 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## general form of [First-Order Differential Equations](#solving-differential-equations) {#general-form-of-first-order-differential-equations--org9e796b5}
+
+This will depend on both unknown function \\(x\\), and the independent variable \\(t\\). These could and could not be separable.
+
+\begin{equation}
+\dv{x}{t} = F(t,x),\ x(t\_{0}) = x\_{0}
+\end{equation}
+
+Let's imagine \\(F\\) is "bounded" and "continuous" on \\(I \times \omega\\), where \\(I\\) is an open interval about \\(t\_{0}\\) and \\(\omega\\) is an open subset of \\(\mathbb{R}^{n}\\), containing \\(x\_{0}\\). \\(F\\) is bounded; the results are bounded??
+
+
+### functions embedded in [vector space]({{< relref "KBhvector_space.md" >}})s {#functions-embedded-in-vector-space--kbhvector-space-dot-md--s}
+
+We understand that such [First-Order Differential Equations](#solving-differential-equations) will describe a subset of an infinite dimensional [vector space]({{< relref "KBhvector_space.md" >}}).
+
+-   Given we are dealing with [First-Order Differential Equations](#solving-differential-equations), each function is a basis (if linear, otherwise, not quite the basis) of the subspace of the larger vector space; \\(+C\\) is how you create parametried variations
+-   However, our function is not linear, not all functions would suffice here: non-linear equations are difficult to deal with beacuse the arc length follows a certain pattern
+
+
+## General form of a first order ****linear**** differential equation {#general-form-of-a-first-order-linear-differential-equation}
+
 A general linear, first-order, first-degree differential equation of the form:
 
 \begin{equation}

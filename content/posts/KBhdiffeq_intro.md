@@ -14,6 +14,7 @@ The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 201
 
 -   [Simple Differential Equations]({{< relref "KBhsimple_differential_equations.md" >}})
 -   [solving differential equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}})
+-   [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}})
 
 
 ## Assignments {#assignments}
