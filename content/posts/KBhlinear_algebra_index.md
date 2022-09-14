@@ -28,6 +28,7 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [matricies]({{< relref "KBhmatricies.md" >}})
 -   [dot product]({{< relref "KBhdot_product.md" >}}) and [cross product]({{< relref "KBhcross_product.md" >}})
 -   [solving systems]({{< relref "KBhsolving_systems.md" >}})
+-   [binary operation]({{< relref "KBhbinary_operation.md" >}})
 
 
 ## Homework {#homework}

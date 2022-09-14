@@ -37,8 +37,8 @@ draft = false
 
 -   The way Axler presented the idea of "over" is a tad weird; is it really only scalar multiplication which hinders vector spaces without \\(\mathbb{F}\\)? In other words, do the sets that form vector spaces, apart from the \\(\lambda\\) used for scalar multiplication, need anything to do with the \\(\mathbb{F}\\) they are "over"?
 -   If lists have finite length \\(n\\), then what are the elements of \\(\mathbb{F}^{\infty}\\) called?
--   what's that thing called again in proofs where you just steal the property of a constituent element?
 -   Why is \\(1v=v\\) an axiom, whereas we say that _some_ \\(0\\) exists?
+-   what's that thing called again in proofs where you just steal the property of a constituent element?: inherits
 
 
 ## Interesting Factoids {#interesting-factoids}

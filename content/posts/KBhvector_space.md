@@ -38,4 +38,4 @@ such that...
 Therefore:
 
 -   A vector space over \\(\mathbb{R}\\) is called a _real vector space_
--   A vector space over \\(\mathbb{C}\\) is called a _complex vector space_
+-   A vector space over \\(\mathbb{C}\\) is called a _real vector space_

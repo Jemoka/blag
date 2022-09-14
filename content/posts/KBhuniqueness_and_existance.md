@@ -33,7 +33,7 @@ The [Lipschitz Condition](#lipschitz-condition) is a stronger test of [Continuit
 || F(t,x)-F(t,y)||  \leq L|| x- y||
 \end{equation}
 
-for all \\(t \in I\\), \\(x,y \in \omega\\), with \\(L \in  (0,\infty)\\).
+for all \\(t \in I\\), \\(x,y \in \omega\\), with \\(L \in  (0,\infty)\\) is a [Lipschitz Condition](#lipschitz-condition) in the **dependent** variable \\(x\\).
 
 Reshaping this into linear one-dimensional function, we have that:
 
@@ -96,7 +96,7 @@ We hope that the inductive sequence:
 x\_{n+1}(t) = x\_{0} + \int\_{t\_{0}}^{t} F(s,x\_{n}(s)) \dd{s}
 \end{equation}
 
-converges to the same result above (that is, the functions \\(x\_{n}(s)\\) stop varying and therefore we converge to a unique solution \\(x(s)\\).
+converges to the same result above (that is, the functions \\(x\_{n}(s)\\) stop varying and therefore we converge to a solution \\(x(s)\\) to show existance.
 
 This is hard!
 
