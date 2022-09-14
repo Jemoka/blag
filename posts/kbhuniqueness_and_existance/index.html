@@ -9,14 +9,14 @@ A function is continuous if and only if:
 Lipschitz Condition Stronger statement.
 The Lipschitz Condition is a stronger test of Continuity such that:
 \begin{equation} || F(t,x)-F(t,y)|| \leq L|| x- y|| \end{equation}
-for all \(t \in I\), \(x,y \in \omega\), with \(L \in (0,\infty)\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+for all \(t \in I\), \(x,y \in \omega\), with \(L \in (0,\infty)\) is a Lipschitz Condition in the dependent variable \(x\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Uniqueness and Existance</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#function-behavior-tests>function behavior tests</a><ul><li><a href=#continuity>Continuity</a></li><li><a href=#lipschitz-condition>Lipschitz Condition</a></li><li><a href=#differentiable>Differentiable</a></li></ul></li><li><a href=#existence-and-uniqueness-check-for-differential-equation--kbhdiffeq-intro-dot-md>Existence and Uniqueness Check for <a href=HAHAHUGOSHORTCODE-s2-HBHB>differential equation</a></a><ul><li><a href=#proof>Proof</a></li></ul></li></ul></nav></aside><main><article><div><p>Questions of <a href=/posts/kbhuniqueness_and_existance/>Uniqueness and Existance</a> are important elements in <a href=/posts/kbhdiffeq_intro/>Differential Equations</a>.</p><p>Here&rsquo;s a very general form of a differential equations. First, here&rsquo;s the:</p><h2 id=function-behavior-tests>function behavior tests</h2><h3 id=continuity>Continuity</h3><p>Weakest statement.</p><p>A function is <a href=#continuity>continuous</a> if and only if:</p><p>\begin{equation}
 \lim_{x \to y} f(x) =f(y)
 \end{equation}</p><h3 id=lipschitz-condition>Lipschitz Condition</h3><p>Stronger statement.</p><p>The <a href=#lipschitz-condition>Lipschitz Condition</a> is a stronger test of <a href=#continuity>Continuity</a> such that:</p><p>\begin{equation}
 || F(t,x)-F(t,y)|| \leq L|| x- y||
-\end{equation}</p><p>for all \(t \in I\), \(x,y \in \omega\), with \(L \in (0,\infty)\).</p><p>Reshaping this into linear one-dimensional function, we have that:</p><p>\begin{equation}
+\end{equation}</p><p>for all \(t \in I\), \(x,y \in \omega\), with \(L \in (0,\infty)\) is a <a href=#lipschitz-condition>Lipschitz Condition</a> in the <strong>dependent</strong> variable \(x\).</p><p>Reshaping this into linear one-dimensional function, we have that:</p><p>\begin{equation}
 \left | \frac{F(t,x)-F(t,y)}{x-y} \right | \leq L &lt; \infty
 \end{equation}</p><p>The important thing here is that its the same \(L\) of convergence \(\forall t\). However, \(L\) may not be stable&mdash;in can oscillate</p><h3 id=differentiable>Differentiable</h3><p>We finally have the strongest statement.</p><p>\begin{equation}
 \lim_{x \to y} \frac{f(x)-f(y)}{x-y} = C
@@ -31,7 +31,7 @@ for all \(t \in I\), \(x,y \in \omega\), with \(L \in (0,\infty)\)."><meta name=
 x(t)-x_{0}= \int_{t_{0}}^{t} F(s,x(s)) \dd{s}
 \end{equation}</p><p>We hope that the inductive sequence:</p><p>\begin{equation}
 x_{n+1}(t) = x_{0} + \int_{t_{0}}^{t} F(s,x_{n}(s)) \dd{s}
-\end{equation}</p><p>converges to the same result above (that is, the functions \(x_{n}(s)\) stop varying and therefore we converge to a unique solution \(x(s)\).</p><p>This is hard!</p><hr><p>Here&rsquo;s a digression/example:</p><p>if we fix a time \(t=10\):</p><p>we hope to say that:</p><p>\begin{equation}
+\end{equation}</p><p>converges to the same result above (that is, the functions \(x_{n}(s)\) stop varying and therefore we converge to a solution \(x(s)\) to show existance.</p><p>This is hard!</p><hr><p>Here&rsquo;s a digression/example:</p><p>if we fix a time \(t=10\):</p><p>we hope to say that:</p><p>\begin{equation}
 \lim_{n \to \infty } G_{n}(10) = G(10)
 \end{equation}</p><p>\(\forall \epsilon > 0\), \(\exists M &lt; \infty\), \(\forall n>M\),</p><p>\begin{equation}
 |G_{n}(10)-G(10)| &lt; \epsilon
