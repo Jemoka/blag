@@ -37,7 +37,7 @@ draft = false
 
 -   ~~The way Axler presented the idea of "over" is a tad weird; is it really only scalar multiplication which hinders vector spaces without \\(\mathbb{F}\\)? In other words, do the sets that form vector spaces, apart from the \\(\lambda\\) used for scalar multiplication, need anything to do with the \\(\mathbb{F}\\) they are "over"?~~ The **name** of the field and what its **over** do not have to be the same---"vector space \\(\mathbb{C}^2\\) over \\(\\{0,1\\}\\)" is a perfectly valid statement
 -   ~~If lists have finite length \\(n\\), then what are the elements of \\(\mathbb{F}^{\infty}\\) called?~~ "we could think about \\(\mathbb{F}^{\infty}\\), but we aren't gonna."
--   Why is \\(1v=v\\) an axiom, whereas we say that _some_ \\(0\\) exists?
+-   ~~Why is \\(1v=v\\) an axiom, whereas we say that _some_ \\(0\\) exists?~~ because we know 1 already, and you can follow the behavor of scalar multiplication
 -   what's that thing called again in proofs where you just steal the property of a constituent element?: inherits
 
 
