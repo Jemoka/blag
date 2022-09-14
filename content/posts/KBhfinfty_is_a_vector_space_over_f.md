@@ -1,5 +1,5 @@
 +++
-title = "$\mathbb{F}^{\infty}$ is a Vector Space over $\mathbb{F}$"
+title = "Finfinity is a Vector Space over F"
 author = ["Houjun Liu"]
 draft = false
 +++

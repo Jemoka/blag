@@ -1,5 +1,5 @@
 +++
-title = "$\mathbb{F}^{S}$ is a Vector Space Over $\mathbb{F}$"
+title = "F^s is a Vector Space Over F"
 author = ["Houjun Liu"]
 draft = false
 +++

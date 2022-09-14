@@ -1,5 +1,5 @@
 +++
-title = "$-1v=-v$"
+title = "-1v=-v"
 author = ["Houjun Liu"]
 draft = false
 +++
