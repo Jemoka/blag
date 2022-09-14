@@ -10,4 +10,8 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 -   [construct then generalize]({{< relref "KBhcomplex_number.md#insights-construct-then-generalize" >}}) for uniqueness and existence
 -   [try to remember to go backwards]({{< relref "KBhcomplex_number.md#insights-try-to-remember-to-go-backwards" >}})
 -   [to prove IFF]({{< relref "KBhequivalence.md" >}})
--   [zero is cool]({{< relref "KBhadditive_inverse_is_unique_in_a_vector_space.md" >}}), [and here too!]({{< relref "KBhzero_times_vector.md" >}})
+-   [zero is cool]({{< relref "KBhadditive_inverse_is_unique_in_a_vector_space.md" >}}), [and here too!]({{< relref "KBhzero_times_vector.md" >}}), also \\(1-1=0\\)
+    -   \\(0v = 0\\)
+    -   \\(1-1 = 0\\)
+    -   \\(v-v=0\\) a.k.a. \\(v+(-v)=0\\)
+    -   \\(v+0 = v\\)
