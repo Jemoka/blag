@@ -4,9 +4,4 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Bad statement: a [vector]({{< relref "KBhvector.md" >}}) is an object with a direction and a magnitude.
-
-
-## why our understanding of vectors is bad {#why-our-understanding-of-vectors-is-bad}
-
-...this is an Algebra: so its a study of symbols.
+A [vector]({{< relref "KBhvector.md" >}}) is an element of a [vector space]({{< relref "KBhvector_space.md" >}}). They are also called a [point]({{< relref "KBhvector.md" >}}).
