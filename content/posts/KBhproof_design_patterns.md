@@ -15,3 +15,4 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
     -   \\(1-1 = 0\\)
     -   \\(v-v=0\\) a.k.a. \\(v+(-v)=0\\)
     -   \\(v+0 = v\\)
+-   [distributivity]({{< relref "KBhdistributivity.md" >}}) is epic: it is essentially the only tool to connect scalar multiplication and addition in a [vector space]({{< relref "KBhvector_space.md" >}})
