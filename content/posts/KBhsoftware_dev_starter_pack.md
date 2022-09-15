@@ -102,7 +102,10 @@ Git is a decentralized "version-control" system. It is basically a timestamp-bac
 
 GitHub is a website where people like to back up their code. [Here's my profile on GitHub.](https://github.com/Jemoka/)
 
-Managing Git is pretty... Involved. It, for instance, assumes familiarity with the Terminal as described above. I suggest learning it, though: [learn git](https://www.freecodecamp.org/news/learn-the-basics-of-git-in-under-10-minutes-da548267cc91/) and [learn GitHub.](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources)
+Managing Git is pretty... Involved. It, for instance, assumes familiarity with the Terminal as described above. I suggest learning it, though. Here are some good resources:
+
+-   Morgan's [very very good](https://github.com/morgansierrasnyder/git-going) git tutorial... On GitHub!
+-   And [this article](https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/) on some commands you should know!
 
 
 ## Industry-Specific Skills {#industry-specific-skills}
