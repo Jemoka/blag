@@ -11,3 +11,4 @@ There's not one market, there is a host of different markets. This field is fill
 ## Knowledge {#knowledge}
 
 -   [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}})
+-   [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}})
