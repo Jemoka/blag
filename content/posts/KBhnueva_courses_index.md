@@ -55,7 +55,7 @@ Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FD
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-05-24 Tue&gt;</span></span> | [Gyroscopes]({{< relref "KBhgyroscopes.md" >}})                                                                                    |
 
 
-## NUS-ENG301 English {#nus-eng301-english}
+## NUS-ENG401 English {#nus-eng401-english}
 
 | Date                                                                                         | Topic                                                                                               |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
@@ -65,6 +65,7 @@ Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FD
 ### Essays {#essays}
 
 -   [Bluest Eye Essay Planning]({{< relref "KBhenglish_bluest_eye.md" >}})
+-   [I, Tituba Essay Planning]({{< relref "KBhi_tituba_essay_planning.md" >}})
 
 
 ## NUS-MATH530 {#nus-math530}
@@ -86,6 +87,7 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-25 Thu&gt;</span></span> | [User Interviews]({{< relref "KBhuser_interviews.md" >}}), [User Story]({{< relref "KBhuser_interviews.md#user-story" >}}) |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-07 Wed&gt;</span></span> | [Software Engineering]({{< relref "KBhsoftware_engineering.md" >}}), [Prototyping]({{< relref "KBhprototyping.md" >}})     |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-12 Mon&gt;</span></span> | [Task Estimation]({{< relref "KBhtask_estimation.md" >}})                                                                  |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-15 Thu&gt;</span></span> | [Documentation and Specification]({{< relref "KBhdocumentation_and_specification.md" >}})                                  |
 
 
 ## NUS-MATH570 DiffEq {#nus-math570-diffeq}

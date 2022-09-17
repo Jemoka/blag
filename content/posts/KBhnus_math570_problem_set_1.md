@@ -40,30 +40,17 @@ Taking first the top integral:
 Raising \\(e\\) to that power, we have that:
 
 \begin{equation}
-\sqrt[3]{e} \frac{x+3}{3-x}
+\sqrt[3]{e\frac{x+3}{3-x}}
 \end{equation}
 
 Multiplying \\(Q(x)\\) to that expression, we have that:
 
 \begin{equation}
-\int  \sqrt[3]{e} \frac{-3x-9}{3-x} \dd{x}
+\int \frac{-3}{2-x}\sqrt[3]{e\cdot \frac{x+3}{3-x}} \dd{x}
 \end{equation}
 
-As our right-side integral. We can take this integral using digital tools---
-
-```sage
-f(x) = e^(1/3)*((-3*x-9)/(3-x))
-latex(f.integrate(x))
-```
+Therefore, our entire answer is defined as the integral function that:
 
 \begin{equation}
-3 \\, {\left(x + 6 \\, \log\left(x - 3\right)\right)} e^{\frac{1}{3}}
+y = \frac{1}{\sqrt[3]{e\cdot \frac{x+3}{3-x}} } \int \frac{-3}{2-x}\sqrt[3]{e\cdot \frac{x+3}{3-x}} \dd{x}
 \end{equation}
-
-wonderful. Therefore, the final analytic solution would be:
-
-\begin{equation}
-y(x) = \qty(\frac{1}{\sqrt[3]{e}} \frac{3-x}{x+3})\qty(3 \\, {\left(x + 6 \\, \log\left(x - 3\right)\right)} e^{\frac{1}{3}})
-\end{equation}
-
-This function does _not_ appear to pass through the point \\((1,\pi \sqrt{3})\\).
