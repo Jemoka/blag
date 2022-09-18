@@ -105,11 +105,17 @@ In an interview, Maryse Conde explains, "I was attracted to write the particular
 
     "Death is a porte whereby we pass to joye; Lyfe is a lake that drowneth all in payne --John Harrington" (Cover Insert)
 
+<!--list-separator-->
+
+-  Plans for Abortion
+
+    There is no happiness in motherhood for a slave. It is little more than the expulsion of an innocent baby, who will have no chance to change its fate, into a world of slavery and abjection.... That night, my baby was carried out of my womb in a flow of black blood. I saw him wave his arms like a tadpole in distress and I burst into tears. (52)
+
 
 ### Subclaim Development {#subclaim-development}
 
 
-#### Birth Determines Capacity {#birth-determines-capacity}
+#### Tituba Realizes Birth is Involuntary {#tituba-realizes-birth-is-involuntary}
 
 -   Birth into live is a [deterministic process](#that-birth-determines-the-capacity-for-one-to-do-evil) for which those being "born" have no agency over.
 -   For African folks, Mama Yaya claims that [misfortune is one such](#mama-yaya-highlights-that-misfortune-lies-in-the-center-of-life-derived-from-birth) deterministic factor of their birth.
@@ -117,7 +123,7 @@ In an interview, Maryse Conde explains, "I was attracted to write the particular
 -   Despite the indeterminism, [Tituba believes that she is born as a healer](#tituba-believes-that-she-is-born-as-a-healer)
 
 
-#### Leveraging Birth-Power to Rebirth is Negative {#leveraging-birth-power-to-rebirth-is-negative}
+#### She leverages (Re)Birth to change others, to poor results {#she-leverages--re--birth-to-change-others-to-poor-results}
 
 Perhaps as an attempt to help others control ("choose") birth, she uses her power to reborn people; like
 
@@ -126,12 +132,14 @@ Perhaps as an attempt to help others control ("choose") birth, she uses her powe
 
 But Psych! Both of them turned on her. Especially [Betsy Parris](#the-evil-of-abortion-transferred-from-tituba-into-betsy).
 
+Also her [child was aborted](#plans-for-abortion).
 
-#### Involuntary Birth Actually Provides More Opportunities/Agency {#involuntary-birth-actually-provides-more-opportunities-agency}
 
-Notable exception of empowering rebirth is when the agency to choose to be born is again taken away. Like that [Tituba Herself](#tituba-s-freeing-from-prison-into-benjamin-is-described-an-rebirth) raised her station against those of Benjamin. Yet, this was not voluntary (see quote in section.)
+#### The work literally provides rebirth of Tituba and empowers her to give birth despite her abortion {#the-work-literally-provides-rebirth-of-tituba-and-empowers-her-to-give-birth-despite-her-abortion}
 
-Alternative forms of birth, which is often involuntary, provided more success unlike manual rebirth. Tituba's "real" story [begins only after forcible death/"rebirth"](#tituba-s-real-story-begins-only-after-death), and she considers it nobel to give this new form of birth [without giving birth](#successful-rebirth-only-without-birth), but without the request of the born either.
+[Tituba Herself](#tituba-s-freeing-from-prison-into-benjamin-is-described-an-rebirth) raised her station against those of Benjamin. Yet, this was not voluntary (see quote in section) and designed by Condé in the story.
+
+Tituba's "real" story [begins only after forcible death/"rebirth"](#tituba-s-real-story-begins-only-after-death), and she (author?) considers it nobel to give this new form of birth [without giving birth](#successful-rebirth-only-without-birth) (which didn't happen in real world), but without the request of the born either.
 
 
 #### Conclusiony bit {#conclusiony-bit}
@@ -140,3 +148,5 @@ So this whole book, [beginning at her birth](#book-opens-with-the-framing-of-her
 
 
 ### The Claim {#the-claim}
+
+The motive of birth and rebirth plays an important role in Maryse Condé's work _I, Tituba_. Despite Tituba's own failed attempt at controlling the (re)birth of herself and others to better their fate in history, Condé offers Tituba a renewed empowerment in birth by both illustrating her "rebirth" and providing her a chance to elect a descendant she wasn't originally able to bear.
