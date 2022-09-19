@@ -42,7 +42,7 @@ p\_{n}(t) = p\_{[\frac{t}{h}]} = p\_{[\frac{nt}{T}]}
 
 Descretized at integer intervals.
 
-At this current, discrete moments have expected value \\(E[p\_{n}(T)] = n(\pi -(1-\pi)\Delta\\) and variance \\(Var[p\_{n}(T)]=4n\pi (1-\pi)\Delta^{2}\\). #why
+At this current, discrete moments have expected value \\(E[p\_{n}(T)] = n(\pi -(1-\pi))\Delta\\) and variance \\(Var[p\_{n}(T)]=4n\pi (1-\pi)\Delta^{2}\\). #why
 
 Now, if we want to have a [continuous]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) version of the descretized interval above, we will maintain the finiteness of \\(p\_{n}(T)\\) but take \\(n\\) to \\(\infty\\). To get a continuous [random walk]({{< relref "KBhrandom_walk.md" >}}) needed for [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}}), we adjust \\(\Delta\\), \\(\pi\\), and \\(1-\pi\\) such that the expected value and variance tends towards the normal; that is, we hope to see that:
 
