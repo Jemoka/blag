@@ -49,6 +49,6 @@ Now, if we want to have a [continuous]({{< relref "KBhuniqueness_and_existance.m
 \begin{equation}
 \begin{cases}
 n(\pi -(1-\pi))\Delta \to \mu T \\\\
-4n\pi (1-\pi )\Delta ^{2} \to \sigma^{2} T \\\\
+4n\pi (1-\pi )\Delta ^{2} \to \sigma^{2} T
 \end{cases}
 \end{equation}
