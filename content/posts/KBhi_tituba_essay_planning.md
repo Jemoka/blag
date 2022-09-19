@@ -149,4 +149,4 @@ So this whole book, [beginning at her birth](#book-opens-with-the-framing-of-her
 
 ### The Claim {#the-claim}
 
-The motive of birth and rebirth plays an important role in Maryse Condé's work _I, Tituba_. Despite Tituba's own failed attempt at controlling the (re)birth of herself and others to better their fate in history, Condé offers Tituba a renewed empowerment in birth by both illustrating her "rebirth" and providing her a chance to elect a descendant she wasn't originally able to bear.
+The motif of birth and rebirth plays an important role in Maryse Condé's work _I, Tituba_. Despite Tituba's own failed attempt at controlling the (re)birth of herself and others to better their fate in history, Condé offers Tituba a renewed empowerment in birth by both illustrating her "rebirth" and providing her a chance to elect a descendant she wasn't originally able to bear.

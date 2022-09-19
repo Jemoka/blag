@@ -106,3 +106,8 @@ If we can show that there is only one unique combination of \\(u\\) and \\(w\\) 
 The expression above implies that \\(w\\) is the [additive inverse]({{< relref "KBhinverses.md" >}}) of \\(u\\); therefore; \\(u = -w\\). As both \\(U\\) and \\(W\\) are [vector space]({{< relref "KBhvector_space.md" >}})s, their elements all have [inverse]({{< relref "KBhinverses.md" >}})s. As \\(u\\) is the inverse of \\(w\\), and given the definition of [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}) that \\(u \in U\\) and \\(w \in W\\), \\(u\\) and \\(w\\) are both in both \\(U\\) and \\(W\\).
 
 As the intersection of \\(U\\) and \\(V\\) is \\(0\\), \\(u=w=0\\). Therefore, there is only one unique representation of \\(0\\), namely with \\(u=0,w=0\\), making \\(U+W\\) a [direct sum]({{< relref "KBhdirect_sum.md" >}}). \\(\blacksquare\\)
+
+
+### [direct sum]({{< relref "KBhdirect_sum.md" >}}) proofs are not pairwise! {#direct-sum--kbhdirect-sum-dot-md--proofs-are-not-pairwise}
+
+Those two proofs above only deal with pairs of [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}). If you have multiple subsets, they don't apply!
