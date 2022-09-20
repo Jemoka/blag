@@ -16,4 +16,4 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
     -   \\(v-v=0\\) a.k.a. \\(v+(-v)=0\\)
     -   \\(v+0 = v\\)
 -   [distributivity]({{< relref "KBhdistributivity.md" >}}) is epic: it is essentially the only tool to connect scalar multiplication and addition in a [vector space]({{< relref "KBhvector_space.md" >}})
--   ["smallest" proofs]({{< relref "KBhsum_of_subsets.md#sum-of-subspaces-is-the-smallest-subspace-with-both-subspaces" >}}) to show set [equivalence]({{< relref "KBhequivalence.md" >}}): prove one way, then prove the converse (\\(a \subset b, b\subset a \Rightarrow a=b\\))
+-   ["smallest" double containement proofs]({{< relref "KBhsum_of_subsets.md#sum-of-subspaces-is-the-smallest-subspace-with-both-subspaces" >}}) to show set [equivalence]({{< relref "KBhequivalence.md" >}}): prove one way, then prove the converse (\\(a \subset b, b\subset a \Rightarrow a=b\\))

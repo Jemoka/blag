@@ -31,6 +31,6 @@ draft = false
 
 ## Questions for Jana {#questions-for-jana}
 
--   Does the [additive identity]({{< relref "KBhadditive_identity.md" >}}) have be the same between different [subspace]({{< relref "KBhsubspace.md" >}})s of the same [vector space]({{< relref "KBhvector_space.md" >}})?
--   Does the [addition]({{< relref "KBhadding.md" >}}) and [multiplication]({{< relref "KBhmultiplying.md" >}}) operations in a [subspace]({{< relref "KBhsubspace.md" >}}) have to be the same as its constituent [vector space]({{< relref "KBhvector_space.md" >}})?
+-   ~~Does the [additive identity]({{< relref "KBhadditive_identity.md" >}}) have be the same between different [subspace]({{< relref "KBhsubspace.md" >}})s of the same [vector space]({{< relref "KBhvector_space.md" >}})?~~ yes, otherwise the larger [vector space]({{< relref "KBhvector_space.md" >}}) has two [additive identities]({{< relref "KBhadditive_identity.md" >}}).
+-   ~~Does the [addition]({{< relref "KBhadding.md" >}}) and [multiplication]({{< relref "KBhmultiplying.md" >}}) operations in a [subspace]({{< relref "KBhsubspace.md" >}}) have to be the same as its constituent [vector space]({{< relref "KBhvector_space.md" >}})?~~ by definition
 -   Why are [direct sum]({{< relref "KBhdirect_sum.md" >}})s defined on sub-****spaces**** and not [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}})?
