@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A [subspace]({{< relref "KBhsubspace.md" >}}) is a [vector space]({{< relref "KBhvector_space.md" >}}) inside a [vector space]({{< relref "KBhvector_space.md" >}}). Intuitively, a [subspace]({{< relref "KBhsubspace.md" >}}) of \\(\mathbb{R}^{2}\\) are all the lines through the origin as well as \\(\\{0\\}\\); a [subspace]({{< relref "KBhsubspace.md" >}}) of \\(\mathbb{R}^{3}\\) are all the planes through the origin as well as \\(\\{0\\}\\), etc. etc.
+A [subspace]({{< relref "KBhsubspace.md" >}}) is a [vector space]({{< relref "KBhvector_space.md" >}}) which is a subset of a [vector space]({{< relref "KBhvector_space.md" >}}), using the same [addition]({{< relref "KBhadding.md" >}}) and [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}) operations. Intuitively, a [subspace]({{< relref "KBhsubspace.md" >}}) of \\(\mathbb{R}^{2}\\) are all the lines through the origin as well as \\(\\{0\\}\\); a [subspace]({{< relref "KBhsubspace.md" >}}) of \\(\mathbb{R}^{3}\\) are all the planes through the origin as well as \\(\\{0\\}\\), etc. etc.
 
 
 ## constituents {#constituents}
@@ -15,11 +15,11 @@ A [subspace]({{< relref "KBhsubspace.md" >}}) is a [vector space]({{< relref "KB
 
 ## requirements {#requirements}
 
-You check if \\(U\\) is a [subspace]({{< relref "KBhsubspace.md" >}}) by checking [IFF]({{< relref "KBhequivalence.md" >}}) the following three conditions:
+You check if \\(U\\) is a [subspace]({{< relref "KBhsubspace.md" >}}) of \\(V\\) by checking [IFF]({{< relref "KBhequivalence.md" >}}) the following three conditions:
 
 -   [additive identity]({{< relref "KBhadditive_identity.md" >}}): \\(0 \in U\\)
--   [closed]({{< relref "KBhclosed.md" >}}) under [addition]({{< relref "KBhadding.md" >}}): \\(u,w \in U: u+w \in U\\)
--   [closed]({{< relref "KBhclosed.md" >}}) under [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}): \\(a \in \mathbb{F}\\) and \\(u \in U\\) means \\(au \in U\\)
+-   [closed]({{< relref "KBhclosed.md" >}}) under the same [addition]({{< relref "KBhadding.md" >}}) as in \\(V\\): \\(u,w \in U: u+w \in U\\)
+-   [closed]({{< relref "KBhclosed.md" >}}) under [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}) as in \\(V\\): \\(a \in \mathbb{F}\\) and \\(u \in U\\) means \\(au \in U\\)
 
 Yes, by only checking three you can prove everything else.
 

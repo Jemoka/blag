@@ -36,6 +36,11 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >}})
 
 
+## Quiz Errors {#quiz-errors}
+
+[Linear Algebra Errors]({{< relref "KBhlinear_algebra_errors.md" >}})
+
+
 ## 1 {#1}
 
 -   [Axler 1.A]({{< relref "KBhaxler_a.md" >}})

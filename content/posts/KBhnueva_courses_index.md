@@ -88,6 +88,7 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-07 Wed&gt;</span></span> | [Software Engineering]({{< relref "KBhsoftware_engineering.md" >}}), [Prototyping]({{< relref "KBhprototyping.md" >}})     |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-12 Mon&gt;</span></span> | [Task Estimation]({{< relref "KBhtask_estimation.md" >}})                                                                  |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-15 Thu&gt;</span></span> | [Documentation and Specification]({{< relref "KBhdocumentation_and_specification.md" >}})                                  |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-19 Mon&gt;</span></span> | [Testing]({{< relref "KBhtesting.md" >}})                                                                                  |
 
 
 ## NUS-MATH570 DiffEq {#nus-math570-diffeq}
