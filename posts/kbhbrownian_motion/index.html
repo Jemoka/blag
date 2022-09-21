@@ -15,9 +15,15 @@ Therefore, the expected return over each time \(k\) is:"><meta name=author conte
 p_{k} = p_{k-1}+\epsilon_{k}
 \end{equation}</p><p>and therefore the price follows a <a href=/posts/kbhrandom_walk/>random walk</a>.</p><p>Such a <a href=#discrete-random-walk>discrete random walk</a> can look like this:</p><figure><img src=/ox-hugo/2022-09-19_10-53-11_screenshot.png></figure><p>We can split this time from \([0,T]\) into \(n\) pieces; making each segment with length \(h=\frac{T}{n}\). Then, we can parcel out:</p><p>\begin{equation}
 p_{n}(t) = p_{[\frac{t}{h}]} = p_{[\frac{nt}{T}]}
-\end{equation}</p><p>Descretized at integer intervals.</p><p>At this current, discrete moments have expected value \(E[p_{n}(T)] = n(\pi -(1-\pi))\Delta\) and variance \(Var[p_{n}(T)]=4n\pi (1-\pi)\Delta^{2}\). #why</p><p>Now, if we want to have a <a href=/posts/kbhuniqueness_and_existance/#continuity>continuous</a> version of the descretized interval above, we will maintain the finiteness of \(p_{n}(T)\) but take \(n\) to \(\infty\). To get a continuous <a href=/posts/kbhrandom_walk/>random walk</a> needed for <a href=/posts/kbhbrownian_motion/>Brownian Motion</a>, we adjust \(\Delta\), \(\pi\), and \(1-\pi\) such that the expected value and variance tends towards the normal; that is, we hope to see that:</p><p>\begin{equation}
+\end{equation}</p><p>Descretized at integer intervals.</p><p>At this current, discrete moments have expected value \(E[p_{n}(T)] = n(\pi -(1-\pi))\Delta\) and variance \(Var[p_{n}(T)]=4n\pi (1-\pi)\Delta^{2}\). #why</p><p>Now, if we want to have a <a href=/posts/kbhuniqueness_and_existance/#continuity>continuous</a> version of the descretized interval above, we will maintain the finiteness of \(p_{n}(T)\) but take \(n\) to \(\infty\). To get a continuous <a href=/posts/kbhrandom_walk/>random walk</a> needed for <a href=/posts/kbhbrownian_motion/>Brownian Motion</a>, we adjust \(\Delta\), \(\pi\), and \(1-\pi\) such that the expected value and variance tends towards the normal (as we expect for a <a href=/posts/kbhrandom_walk/>random walk</a>); that is, we hope to see that:</p><p>\begin{equation}
 \begin{cases}
 n(\pi -(1-\pi))\Delta \to \mu T \\
 4n\pi (1-\pi )\Delta ^{2} \to \sigma^{2} T
 \end{cases}
-\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
+\end{equation}</p><p>To solve for these desired convergences into the normal, we have probabilities \(\pi, (1-\pi), \Delta\) such that:</p><p>\begin{equation}
+\begin{cases}
+\pi = \frac{1}{2}\qty(1+\frac{\mu \sqrt{h}}{\sigma})\\
+(1-\pi) = \frac{1}{2}\qty(1-\frac{\mu \sqrt{h}}{\sigma})\\
+\Delta = \sigma \sqrt{h}
+\end{cases}
+\end{equation}</p><p>where, \(h = \frac{1}{n}\).</p><p>So looking at the expression for \(\Delta\), we can see that as \(n\) in increases, \(h =\frac{1}{n}\) decreases and therefore \(\Delta\) decreases.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>
