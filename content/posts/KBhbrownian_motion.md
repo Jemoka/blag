@@ -44,7 +44,7 @@ Descretized at integer intervals.
 
 At this current, discrete moments have expected value \\(E[p\_{n}(T)] = n(\pi -(1-\pi))\Delta\\) and variance \\(Var[p\_{n}(T)]=4n\pi (1-\pi)\Delta^{2}\\). #why
 
-Now, if we want to have a [continuous]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) version of the descretized interval above, we will maintain the finiteness of \\(p\_{n}(T)\\) but take \\(n\\) to \\(\infty\\). To get a continuous [random walk]({{< relref "KBhrandom_walk.md" >}}) needed for [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}}), we adjust \\(\Delta\\), \\(\pi\\), and \\(1-\pi\\) such that the expected value and variance tends towards the normal; that is, we hope to see that:
+Now, if we want to have a [continuous]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) version of the descretized interval above, we will maintain the finiteness of \\(p\_{n}(T)\\) but take \\(n\\) to \\(\infty\\). To get a continuous [random walk]({{< relref "KBhrandom_walk.md" >}}) needed for [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}}), we adjust \\(\Delta\\), \\(\pi\\), and \\(1-\pi\\) such that the expected value and variance tends towards the normal (as we expect for a [random walk]({{< relref "KBhrandom_walk.md" >}})); that is, we hope to see that:
 
 \begin{equation}
 \begin{cases}
@@ -52,3 +52,17 @@ n(\pi -(1-\pi))\Delta \to \mu T \\\\
 4n\pi (1-\pi )\Delta ^{2} \to \sigma^{2} T
 \end{cases}
 \end{equation}
+
+To solve for these desired convergences into the normal, we have probabilities \\(\pi, (1-\pi), \Delta\\) such that:
+
+\begin{equation}
+\begin{cases}
+\pi = \frac{1}{2}\qty(1+\frac{\mu \sqrt{h}}{\sigma})\\\\
+(1-\pi) = \frac{1}{2}\qty(1-\frac{\mu \sqrt{h}}{\sigma})\\\\
+\Delta = \sigma \sqrt{h}
+\end{cases}
+\end{equation}
+
+where, \\(h = \frac{1}{n}\\).
+
+So looking at the expression for \\(\Delta\\), we can see that as \\(n\\) in increases, \\(h =\frac{1}{n}\\) decreases and therefore \\(\Delta\\) decreases.
