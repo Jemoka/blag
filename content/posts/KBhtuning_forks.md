@@ -68,8 +68,7 @@ We are really worried about two different things here.
 -   Young's Modulus
     -   Density
     -   Second
--   overtones: six and a quarter
+-   overtones: six and a quarter; why?
 -   why no free vibrations just standing?
-
-
-##  {#d41d8c}
+-   prove the equations given in [Rossing 1990]({{< relref "KBhrossing_1990.md" >}})
+-   why do high frequencies die faster?
