@@ -65,4 +65,26 @@ To solve for these desired convergences into the normal, we have probabilities \
 
 where, \\(h = \frac{1}{n}\\).
 
-So looking at the expression for \\(\Delta\\), we can see that as \\(n\\) in increases, \\(h =\frac{1}{n}\\) decreases and therefore \\(\Delta\\) decreases.
+So looking at the expression for \\(\Delta\\), we can see that as \\(n\\) in increases, \\(h =\frac{1}{n}\\) decreases and therefore \\(\Delta\\) decreases. In fact, we can see that the change in all three variables track the change in the rate of \\(\sqrt{h}\\); namely, they vary with [O(h)]({{< relref "KBhasymtotic_analysis.md#o--n" >}}).
+
+\begin{equation}
+\pi = (1-\pi) = \frac{1}{2}+\frac{\mu \sqrt{h}}{2\sigma} =  \frac{1}{2}+O\qty(\sqrt{h})
+\end{equation}
+
+Of course:
+
+\begin{equation}
+\Delta = O\qty(\sqrt{h})
+\end{equation}
+
+So, finally, we have the conclusion that:
+
+1.  as \\(n\\) (number of subdivision pieces of the time domain \\(T\\)) increases, \\(\frac{1}{n}\\) decreases, \\(O\qty(\sqrt{h})\\) decreases with the same proportion. Therefore, as \\(\lim\_{n \to \infty}\\) in the continuous-time case, the probability of _either_ positive or negative delta (\\(\pi\\) and \\(-\pi\\) trends towards each to \\(\frac{1}{2}\\))
+2.  by the same vein, as \\(\lim\_{n \to \infty}\\), \\(\Delta \to 0\\)
+
+Therefore, this is a cool result: in a continuous-time case of a [discrete random walk](#discrete-random-walk), the returns (NOT! just the expect value, but literal \\(\Delta\\)) trend towards \\(+0\\) and \\(-0\\) each with \\(\frac{1}{2}\\) probability.
+
+
+## actual Brownian motion {#actual-brownian-motion}
+
+Given the final results above for the limits of [discrete random walk](#discrete-random-walk), we can see that the price moment traced from the returns (i.e. \\(p\_{k} = p\_{k-1}+\epsilon\_{k}\\)) have the properties of normality (\\(p\_{n}(T) \to \mathcal{N}(\mu T, \sigma^{2}T)\\))

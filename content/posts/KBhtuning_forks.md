@@ -69,6 +69,18 @@ We are really worried about two different things here.
     -   Density
     -   Second
 -   overtones: six and a quarter; why?
--   why no free vibrations just standing?
 -   prove the equations given in [Rossing 1990]({{< relref "KBhrossing_1990.md" >}})
 -   why do high frequencies die faster?
+
+
+## experiments to do in the end {#experiments-to-do-in-the-end}
+
+-   measuring in water
+-   measuring
+
+
+## questions to ask {#questions-to-ask}
+
+-   why no free vibrations just standing?
+-   do the various tuning fork modes compose
+-   figure out phys1 physics of strings virbrating
