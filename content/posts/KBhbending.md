@@ -32,7 +32,7 @@ Solving this lovely [Differential Equation]({{< relref "KBhdiffeq_intro.md" >}})
 Tracing this out over \\((x,t)\\), we can get some trace of how the thing vibrates by measuring the behavior of \\(\omega\\).
 
 
-### free vibrations {#free-vibrations}
+### free vibrations in [Euler-Bernoulli Theory](#euler-bernoulli-theory) {#free-vibrations-in-euler-bernoulli-theory--org5f27273}
 
 If no time-varying \\(q\\) exists, we then have:
 

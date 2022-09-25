@@ -44,6 +44,11 @@ Let's talk about [Bending.
 1.  How does this relate to springs/slinkies? [read this.](https://ccrma.stanford.edu/~jos/pasp/Young_s_Modulus_Spring_Constant.html)
 
 
+## A Better Detour on Cantilever Beams {#a-better-detour-on-cantilever-beams}
+
+[Cantilever Beams]({{< relref "KBhcantilever_beams.md" >}})
+
+
 ## A Detour on the Temperature {#a-detour-on-the-temperature}
 
 We are really worried about two different things here.
@@ -71,6 +76,7 @@ We are really worried about two different things here.
 -   overtones: six and a quarter; why?
 -   prove the equations given in [Rossing 1990]({{< relref "KBhrossing_1990.md" >}})
 -   why do high frequencies die faster?
+-   Why are they FORKS? What's wrong with one prong
 
 
 ## experiments to do in the end {#experiments-to-do-in-the-end}
