@@ -14,6 +14,7 @@ For [Euler-Bernoulli Theory]({{< relref "KBheuler_bernoulli_theory.md" >}}) to a
 -   The "beam" you are bending is modeled as a 1d object; it is only long and is not wide
 -   For this page, \\(+x\\) is "right", \\(+y\\) is "in", and \\(+z\\) is "up"
 -   Probably more, but we only have this so far.
+-   the general form of the [Euler-Bernoulli Theory]({{< relref "KBheuler_bernoulli_theory.md" >}}) assumes a freestanding beam
 
 
 ## Basic Statement {#basic-statement}
@@ -37,6 +38,12 @@ Pretty much all the time, the [Elastic Modulus]({{< relref "KBhelastic_modulus.m
 \end{align}
 
 This is also apparently used everywhere in engineering to figure out how bendy something will be given some \\(q\\) put along the beam.
+
+Ok, let's take the original form of this equation and take some integrals to see the edges of this thing:
+
+\begin{equation}
+\dv[2]{x} \qty(EI \dv[2]{w}{x}) = q(x)
+\end{equation}
 
 ---
 
