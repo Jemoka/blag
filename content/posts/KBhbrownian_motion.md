@@ -88,3 +88,25 @@ Therefore, this is a cool result: in a continuous-time case of a [discrete rando
 ## actual Brownian motion {#actual-brownian-motion}
 
 Given the final results above for the limits of [discrete random walk](#discrete-random-walk), we can see that the price moment traced from the returns (i.e. \\(p\_{k} = p\_{k-1}+\epsilon\_{k}\\)) have the properties of normality (\\(p\_{n}(T) \to \mathcal{N}(\mu T, \sigma^{2}T)\\))
+
+True [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}}) follows, therefore, three basic properties:
+
+1.  \\(B\_{t}\\) is normally distributed by a mean of \\(0\\), and variance of \\(t\\)
+2.  For some \\(s<t\\), \\(B\_{t}-B\_{s}\\) is normally distributed by a mean of \\(0\\), and variance of \\(t-s\\)
+3.  Distributions \\(B\_{j}\\) and \\(B\_{t}-B\_{s}\\) is independent
+
+
+## Standard Brownian Motion {#standard-brownian-motion}
+
+Brownian motion that starts at \\(B\_0=0\\) is called [Standard Brownian Motion](#standard-brownian-motion)
+
+
+## quadratic variation {#quadratic-variation}
+
+The [quadratic variation](#quadratic-variation) of a sequence of values is the expression that:
+
+\begin{equation}
+\sum\_{i=0}^{N-1} (x\_{i+1}-x\_i)^{2}
+\end{equation}
+
+On any sequence of values \\(x\_0=0,\dots,x\_{N}=1\\) (with defined bounds), the quadratic variation becomes bounded.
