@@ -78,6 +78,8 @@ We are really worried about two different things here.
 -   why do high frequencies die faster?
 -   Why are they FORKS? What's wrong with one prong
 
+    {{< figure src="/ox-hugo/2022-09-25_16-17-35_screenshot.png" >}}
+
 
 ## experiments to do in the end {#experiments-to-do-in-the-end}
 
