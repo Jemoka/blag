@@ -17,3 +17,10 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
     -   \\(v+0 = v\\)
 -   [distributivity]({{< relref "KBhdistributivity.md" >}}) is epic: it is essentially the only tool to connect scalar multiplication and addition in a [vector space]({{< relref "KBhvector_space.md" >}})
 -   ["smallest" double containement proofs]({{< relref "KBhsum_of_subsets.md#sum-of-subspaces-is-the-smallest-subspace-with-both-subspaces" >}}) to show set [equivalence]({{< relref "KBhequivalence.md" >}}): prove one way, then prove the converse (\\(a \subset b, b\subset a \Rightarrow a=b\\))
+
+-   couple hints
+    -   step 1: identify
+        -   hypothesis (assumptions)
+        -   desired conclusion (results, trying/to/proof)
+    -   step 2: define
+        -   write down precise, mathematical notations

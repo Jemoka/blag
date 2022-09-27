@@ -24,6 +24,11 @@ We use \\(\oplus\\) to represent [direct sum]({{< relref "KBhdirect_sum.md" >}})
 ## additional information {#additional-information}
 
 
+### why is it _called_ a [direct sum?]({{< relref "KBhdirect_sum.md" >}}) {#why-is-it-called-a-direct-sum--kbhdirect-sum-dot-md}
+
+Something is _not_ a [direct sum]({{< relref "KBhdirect_sum.md" >}}) if any of its components can be described using the others. Its kind of line linear independence but! on entire spaces.
+
+
 ### a [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}) is a [direct sum]({{< relref "KBhdirect_sum.md" >}}) [IFF]({{< relref "KBhequivalence.md" >}}) there is only one way to write \\(0\\) {#a-sum-of-subsets--kbhsum-of-subsets-dot-md--is-a-direct-sum--kbhdirect-sum-dot-md--iff--kbhequivalence-dot-md--there-is-only-one-way-to-write-0}
 
 Given \\(U\_1, \dots, U\_{m}\\) are subspaces of \\(V\\), then \\(U\_1+\dots +U\_{m}\\) is a direct sum IFF the only way to write \\(0\\) as a sum \\(u\_1 +\dots +u\_{m}\\) is by taking each element to \\(0\\).
