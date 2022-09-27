@@ -45,6 +45,14 @@ Ok, let's take the original form of this equation and take some integrals to see
 \dv[2]{x} \qty(EI \dv[2]{w}{x}) = q(x)
 \end{equation}
 
+First things first, let's take a single integral:
+
+\begin{equation}
+\dv{x} \qty(EI \dv[2]{w}{x}) = -Q
+\end{equation}
+
+This is the total shear force on the material (the sum of all forces applied to all points \\(\int q(x)\\).) We have a sign difference
+
 ---
 
 old notes
