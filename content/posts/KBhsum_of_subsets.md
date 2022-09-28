@@ -8,6 +8,8 @@ The [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}) is the definition of
 
 Apparently, the unions of subsets are almost never [subspace]({{< relref "KBhsubspace.md" >}})s (they don't produce linearity?) Therefore, we like to work with [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}) more.
 
+Remember this has ****arbitrarily many things!!**** as a part of the content. When defining, remember to open that possibility.
+
 
 ## constituents {#constituents}
 

@@ -24,6 +24,3 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
         -   desired conclusion (results, trying/to/proof)
     -   step 2: define
         -   write down precise, mathematical notations
-
--   proving uniqueness: set up two distinct results, show that they are the same
--   proving negation: if the "negative" is distinct, but the direct case is more nebulous, use proves by contradiction
