@@ -7,11 +7,17 @@ draft = false
 Here's a general form:
 
 \begin{equation}
-a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
+a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}
 
 
-## solving {#solving}
+## solving, with a zero on the right side. {#solving-with-a-zero-on-the-right-side-dot}
+
+This problem because easier if the right side is \\(0\\).
+
+\begin{equation}
+a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
+\end{equation}
 
 The general goal to solve in this case is to make this a system of [First-Order Differential Equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}}).
 
@@ -69,3 +75,34 @@ v(t) = e^{tA} C
 \begin{equation}
 x(t) = {C\_1}e^{t\lambda+} + C\_2e^{t\lambda -}
 \end{equation}
+
+
+## method of undermentioned coefficients {#method-of-undermentioned-coefficients}
+
+This method is able to solve expressions of shape
+
+\begin{equation}
+a\dv[2]{x}{t} + b \dv{x}{t} + cx = B\sin (\sigma t)
+\end{equation}
+
+Step 1: solve the equation where the right side zero. Find such solutions.
+
+Step 2:
+
+solve the right side (TBD CC David)
+
+\begin{equation}
+\begin{pmatrix}
+A\_1\\\A\_2
+\end{pmatrix}  = \frac{B}{(c-a\sigma ^{2})^{2}+b^{2}\sigma^{2}} \begin{pmatrix}
+c-a\alpha ^{2) \\\\
+b\alpha
+\end{pmatrix}
+\end{equation}
+
+Then, add. Because a linear combination of solutions are solutions (because functions are linear objects.)
+
+
+## ok but what about non-sinusoids {#ok-but-what-about-non-sinusoids}
+
+If the function desired has a good fourier transform, use that. To make that work, any linear combinations of solutions are a solution of the overall expression.
