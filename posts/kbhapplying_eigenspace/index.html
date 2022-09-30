@@ -1,0 +1,22 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>applying eigenspace</title><meta name=description content="Show that:
+\begin{equation} \dv t e^{tA} = e^{tA}A \end{equation}
+We can apply the result we shown in eigenvalue:
+\begin{equation} \dv t \qty(e^{tA}) = \dv t \qty(I + \sum_{k=1}^{\infty} \frac{t^{k}}{k!}A^{k}) = \qty(\sum_{k=1}^{\infty }\frac{1}{k!}kt^{k-1}A^{k-1})A \end{equation}
+We do this separation because \(k=0\) would&rsquo;t make sense to raise \(A\) (\(k-1=-1\)) to as we are unsure about the invertability of \(A\). Obviously \(\frac{1}{k!}k = \frac{1}{(k-1)!}\). Therefore, we can shift our index back yet again:
+\begin{equation} \qty(\sum_{k=1}^{\infty }\frac{1}{k!"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>applying eigenspace</h1></div><main><article><div><p>Show that:</p><p>\begin{equation}
+\dv t e^{tA} = e^{tA}A
+\end{equation}</p><p>We can apply the result we shown in <a href=/posts/kbheigenvalue/>eigenvalue</a>:</p><p>\begin{equation}
+\dv t \qty(e^{tA}) = \dv t \qty(I + \sum_{k=1}^{\infty} \frac{t^{k}}{k!}A^{k}) = \qty(\sum_{k=1}^{\infty }\frac{1}{k!}kt^{k-1}A^{k-1})A
+\end{equation}</p><p>We do this separation because \(k=0\) would&rsquo;t make sense to raise \(A\) (\(k-1=-1\)) to as we are unsure about the <a href=/posts/kbhmatricies/#invertability>invertability</a> of \(A\). Obviously \(\frac{1}{k!}k = \frac{1}{(k-1)!}\). Therefore, we can shift our index back yet again:</p><p>\begin{equation}
+\qty(\sum_{k=1}^{\infty }\frac{1}{k!}kt^{k-1}A^{k-1})A = \qty(\sum_{j=0}^{\infty }\frac{1}{j!}t^{j}A^{j})A
+\end{equation}</p><p>Awesome. So now we have the taylor series in \(e^{tA}\) back, times \(A\).</p><p>So therefore:</p><p>\begin{equation}
+\qty(\sum_{j=0}^{\infty }\frac{1}{j!}t^{j}A^{j})A = e^{tA}A
+\end{equation}</p><hr><p>Be forewarned:</p><p>\begin{equation}
+e^{A}e^{B} \neq e^{A+B}
+\end{equation}</p><p>mostly because matrix multiplication is not commutative..</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></body></html>

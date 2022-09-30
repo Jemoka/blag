@@ -7,12 +7,12 @@ Prove or give a counterexample that \(U_1=U_2\)
 Result The statement is not true. The definition of direct sums makes it such that, \(\forall v \in V\), there exists a unique representation of \(v\) with \(u_{1i}+w_{i} = v\) for \(u_{1j}\in U_1, w_{j} \in W\) as well as another unique representation \(u_{2i} + w_{i}=v\) for \(u_{2j} \in U_{2}, w_{j} \in W\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH530 1.C Problem 23</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#statement>Statement</a></li><li><a href=#result>Result</a></li><li><a href=#counterexample>Counterexample</a></li></ul></nav></aside><main><article><div><h2 id=statement>Statement</h2><p>Suppose \(U_1\), \(U_2\), and \(W\) are subspaces of \(V\), such that:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH530 1.C Problem 23</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#statement>Statement</a></li><li><a href=#result>Result</a></li><li><a href=#counterexample>Counterexample</a><ul><li><a href=#constructing-u-1-as-a-subspace>Constructing \(U_1\) as a subspace</a></li><li><a href=#constructing-u-2-as-a-subspace>Constructing \(U_2\) as a subspace</a></li><li><a href=#constructing-w-as-a-subspace>Constructing \(W\) as a subspace</a></li><li><a href=#constructing-sum-of-subsets>Constructing Sum of Subsets</a></li><li><a href=#constructing-direct-sum>Constructing Direct Sum</a></li><li><a href=#creating-the-counterexample>Creating the Counterexample</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=statement>Statement</h2><p>Suppose \(U_1\), \(U_2\), and \(W\) are subspaces of \(V\), such that:</p><p>\begin{equation}
 \begin{cases}
 V = U_1 \oplus W\\
 V = U_2 \oplus W
 \end{cases}
-\end{equation}</p><p>Prove or give a counterexample that \(U_1=U_2\)</p><h2 id=result>Result</h2><p>The statement is not true. The definition of direct sums makes it such that, \(\forall v \in V\), there exists a unique representation of \(v\) with \(u_{1i}+w_{i} = v\) for \(u_{1j}\in U_1, w_{j} \in W\) as well as another unique representation \(u_{2i} + w_{i}=v\) for \(u_{2j} \in U_{2}, w_{j} \in W\).</p><p>However, the definition of direct sums doesn&rsquo;t guarantee that the distinct unique representations are equivalent; although \(V\) can only be represented uniquely by EITHER a sum of \(U_1+W\) or \(U_2+W\), it does not mean that each \(v \in V\) itself has only one unique representation.</p><h2 id=counterexample>Counterexample</h2><p>In constructing a counterexample, we turn to the fact that the sums of two variables creates a third free variable; therefore, we can figure two distinct ways of creating a third, final free variable that construct an equivalent space.</p><p>We begin with constructing:</p><p>\begin{equation}
+\end{equation}</p><p>Prove or give a counterexample that \(U_1=U_2\)</p><h2 id=result>Result</h2><p>The statement is not true. The definition of direct sums makes it such that, \(\forall v \in V\), there exists a unique representation of \(v\) with \(u_{1i}+w_{i} = v\) for \(u_{1j}\in U_1, w_{j} \in W\) as well as another unique representation \(u_{2i} + w_{i}=v\) for \(u_{2j} \in U_{2}, w_{j} \in W\).</p><p>However, the definition of direct sums doesn&rsquo;t guarantee that the distinct unique representations are equivalent; although \(V\) can only be represented uniquely by EITHER a sum of \(U_1+W\) or \(U_2+W\), it does not mean that each \(v \in V\) itself has only one unique representation.</p><h2 id=counterexample>Counterexample</h2><p>In constructing a counterexample, we turn to the fact that the sums of two variables creates a third free variable; therefore, we can figure two distinct ways of creating a third, final free variable that construct an equivalent space.</p><h3 id=constructing-u-1-as-a-subspace>Constructing \(U_1\) as a subspace</h3><p>We begin with constructing:</p><p>\begin{equation}
 U_1= \left\{\begin{pmatrix}
 x_1\\y_1\\2y_1
 \end{pmatrix}, x_1,y_1 \in \mathbb{F} \right\}
@@ -22,15 +22,15 @@ x_1 \\ y_1 \\ 2y_1
 \end{pmatrix} = \begin{pmatrix}
 \lambda x_1 \\ \lambda y_1\\ 2(\lambda y_1)
 \end{pmatrix}
-\end{equation}</p><p>by multiplication in \(\mathbb{F}\), scalar multiplication, commutativity, and associativity. We can show closure under addition by inheriting the operation in \(\mathbb{F}\) as well as applying distributive to the factor of \(2\).</p><p>Therefore, we show that \(U_1\) is a subspace of \(\mathbb{F}^{3}\). Then, we construct:</p><p>\begin{equation}
+\end{equation}</p><p>by multiplication in \(\mathbb{F}\), scalar multiplication, commutativity, and associativity. We can show closure under addition by inheriting the operation in \(\mathbb{F}\) as well as applying distributive to the factor of \(2\).</p><p>Therefore, we show that \(U_1\) is a subspace of \(\mathbb{F}^{3}\).</p><h3 id=constructing-u-2-as-a-subspace>Constructing \(U_2\) as a subspace</h3><p>Then, we construct:</p><p>\begin{equation}
 U_2=\left\{\begin{pmatrix}
 x_1 \\ y_1 \\ 0
 \end{pmatrix}, x_1,y_1\in \mathbb{F} \right\}
-\end{equation}</p><p>We again have \(0\) by setting free variables to create the additive identity. Addition and scalar multiplication is closed by inheriting them from \(\mathbb{F}\) (and the fact that \(0\) is the additive inverse and therefore \(\lambda 0 = 0\)).</p><p>Therefore, \(U_2\) is a subspace as well in \(\mathbb{F}^{3}\).</p><p>Finally, we have:</p><p>\begin{equation}
+\end{equation}</p><p>We again have \(0\) by setting free variables to create the additive identity. Addition and scalar multiplication is closed by inheriting them from \(\mathbb{F}\) (and the fact that \(0\) is the additive inverse and therefore \(\lambda 0 = 0\)).</p><p>Therefore, \(U_2\) is a subspace as well in \(\mathbb{F}^{3}\).</p><h3 id=constructing-w-as-a-subspace>Constructing \(W\) as a subspace</h3><p>Finally, we have:</p><p>\begin{equation}
 W = \left\{\begin{pmatrix}
 0 \\ 0 \\z_1
 \end{pmatrix}, z_1\in \mathbb{F} \right\}
-\end{equation}</p><p>By setting \(z_1=0\), we have the additive identity. As with above, addition and scalar multiplication is closed through inheritance and that \(\lambda 0=0\).</p><p>Let&rsquo;s construct:</p><p>\begin{equation}
+\end{equation}</p><p>By setting \(z_1=0\), we have the additive identity. As with above, addition and scalar multiplication is closed through inheritance and that \(\lambda 0=0\).</p><h3 id=constructing-sum-of-subsets>Constructing Sum of Subsets</h3><p>Let&rsquo;s construct:</p><p>\begin{equation}
 U_1+W = V
 \end{equation}</p><p>We have that:</p><p>\begin{equation}
 \begin{pmatrix}
@@ -40,7 +40,7 @@ x_{1} \\ y_1 \\ 2y_1
 \end{pmatrix} = \begin{pmatrix}
 x_1 \\ y_1 \\ 2y_1+z_1
 \end{pmatrix}
-\end{equation}</p><p>For all vectors in \(\mathbb{F}^{3}\), this is an equivalence with 3 free variables and 3 expressions&mdash;rendering each vector in \(\mathbb{F}^{3}\) to have a representation by \(U_1+W\). We can see this also with the unique \(0\) test:</p><p>We see that for:</p><p>\begin{equation}
+\end{equation}</p><h3 id=constructing-direct-sum>Constructing Direct Sum</h3><p>For all vectors in \(\mathbb{F}^{3}\), this is an equivalence with 3 free variables and 3 expressions&mdash;rendering each vector in \(\mathbb{F}^{3}\) to have a representation by \(U_1+W\). We can see this also with the unique \(0\) test:</p><p>We see that for:</p><p>\begin{equation}
 0 \in U_1+W
 \end{equation}</p><p>we have that:</p><p>\begin{equation}
 \begin{pmatrix}
@@ -62,7 +62,7 @@ x_1\\y_1\\0
 \end{pmatrix} = \begin{pmatrix}
 x_1\\y_1\\z_1
 \end{pmatrix}
-\end{equation}</p><p>for the first vector in \(U_2\), the second in \(W\). In fact, this is the statement made in example <code>1.41</code>.</p><p>Finally, we have that:</p><p>\begin{equation}
+\end{equation}</p><p>for the first vector in \(U_2\), the second in \(W\). In fact, this is the statement made in example <code>1.41</code>.</p><h3 id=creating-the-counterexample>Creating the Counterexample</h3><p>Finally, we have that:</p><p>\begin{equation}
 \begin{pmatrix}
 x_1 \\ y_1 \\ 2y_1
 \end{pmatrix} \neq \begin{pmatrix}
