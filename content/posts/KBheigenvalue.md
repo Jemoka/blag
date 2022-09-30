@@ -33,7 +33,9 @@ Tv = \lambda\_{j}v
 The right polynomial \\(det(\lambda\_{j} I-T) = 0\\) is named the "characteristic polynomial."
 
 
-### this allow us how to decompose a matrix {#this-allow-us-how-to-decompose-a-matrix}
+### this allow us how to decompose a matrix in diagonalizing it {#this-allow-us-how-to-decompose-a-matrix-in-diagonalizing-it}
+
+Given the eigenvectors \\((x+,y+), (x-,y-)\\), we can change coordinates of your matrix into the natural choordinates.
 
 \begin{equation}
 A = \begin{pmatrix}
@@ -44,3 +46,5 @@ x+ & x- \\\y+ & y-
 x+ & x- \\\y+ & y-
 \end{pmatrix}^{-1}
 \end{equation}
+
+This makes scaling matricides much much easier. If you think about multiplying the above matrix \\(n\\) times, the inverse and non-inverse cancells out.

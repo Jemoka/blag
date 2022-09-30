@@ -29,6 +29,9 @@ However, the definition of direct sums doesn't guarantee that the distinct uniqu
 
 In constructing a counterexample, we turn to the fact that the sums of two variables creates a third free variable; therefore, we can figure two distinct ways of creating a third, final free variable that construct an equivalent space.
 
+
+### Constructing \\(U\_1\\) as a subspace {#constructing-u-1-as-a-subspace}
+
 We begin with constructing:
 
 \begin{equation}
@@ -49,7 +52,12 @@ x\_1 \\\ y\_1 \\\ 2y\_1
 
 by multiplication in \\(\mathbb{F}\\), scalar multiplication, commutativity, and associativity. We can show closure under addition by inheriting the operation in \\(\mathbb{F}\\) as well as applying distributive to the factor of \\(2\\).
 
-Therefore, we show that \\(U\_1\\) is a subspace of \\(\mathbb{F}^{3}\\). Then, we construct:
+Therefore, we show that \\(U\_1\\) is a subspace of \\(\mathbb{F}^{3}\\).
+
+
+### Constructing \\(U\_2\\) as a subspace {#constructing-u-2-as-a-subspace}
+
+Then, we construct:
 
 \begin{equation}
 U\_2=\left\\{\begin{pmatrix}
@@ -61,6 +69,9 @@ We again have \\(0\\) by setting free variables to create the additive identity.
 
 Therefore, \\(U\_2\\) is a subspace as well in \\(\mathbb{F}^{3}\\).
 
+
+### Constructing \\(W\\) as a subspace {#constructing-w-as-a-subspace}
+
 Finally, we have:
 
 \begin{equation}
@@ -70,6 +81,9 @@ W = \left\\{\begin{pmatrix}
 \end{equation}
 
 By setting \\(z\_1=0\\), we have the additive identity. As with above, addition and scalar multiplication is closed through inheritance and that \\(\lambda 0=0\\).
+
+
+### Constructing Sum of Subsets {#constructing-sum-of-subsets}
 
 Let's construct:
 
@@ -88,6 +102,9 @@ x\_{1} \\\ y\_1 \\\ 2y\_1
 x\_1 \\\ y\_1 \\\ 2y\_1+z\_1
 \end{pmatrix}
 \end{equation}
+
+
+### Constructing Direct Sum {#constructing-direct-sum}
 
 For all vectors in \\(\mathbb{F}^{3}\\), this is an equivalence with 3 free variables and 3 expressions---rendering each vector in \\(\mathbb{F}^{3}\\) to have a representation by \\(U\_1+W\\). We can see this also with the unique \\(0\\) test:
 
@@ -138,6 +155,9 @@ x\_1\\\y\_1\\\z\_1
 \end{equation}
 
 for the first vector in \\(U\_2\\), the second in \\(W\\). In fact, this is the statement made in example `1.41`.
+
+
+### Creating the Counterexample {#creating-the-counterexample}
 
 Finally, we have that:
 

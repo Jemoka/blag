@@ -15,6 +15,9 @@ The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 201
 -   [Simple Differential Equations]({{< relref "KBhsimple_differential_equations.md" >}})
 -   [solving differential equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}})
 -   [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}})
+-   [eigenvalue]({{< relref "KBheigenvalue.md" >}})
+-   [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}})
+-   [Second-Order Linear Differential Equation]({{< relref "KBhsecond_order_linear_differential_equation.md" >}})
 
 
 ## Assignments {#assignments}
