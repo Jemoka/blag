@@ -39,3 +39,8 @@ Scaling a [linear combination]({{< relref "KBhlinear_combination.md" >}}), by [d
 Part 2: a [subspace]({{< relref "KBhsubspace.md" >}}) containing the list of vectors contain the span
 
 [subspace]({{< relref "KBhsubspace.md" >}})s are closed under [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}) and [addition]({{< relref "KBhadding.md" >}}). Therefore, we can just construct every [linear combination]({{< relref "KBhlinear_combination.md" >}}).
+
+
+### spans {#spans}
+
+If \\(span(v\_1, \dots v\_{m})\\) equals \\(V\\), we say that \\(v\_1, \dots, v\_{m}\\) [spans](#spans) \\(V\\).
