@@ -12,6 +12,7 @@ draft = false
 -   A list of vectors.... is just a list of vectors. We usually write them w/o parens
 -   [Linear Combination]({{< relref "KBhlinear_combination.md" >}})
 -   [span]({{< relref "KBhspan.md" >}}) + "[spans]({{< relref "KBhspan.md#spans" >}})"
+-   [finite-dimensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}})
 
 
 ## Results and Their Proofs {#results-and-their-proofs}
