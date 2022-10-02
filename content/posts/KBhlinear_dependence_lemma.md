@@ -54,4 +54,6 @@ Having written all arbitrary \\(u \in span(v\_1, \dots v\_{m})\\) as a linear co
 
 ## issue {#issue}
 
-note that if we chose \\(j=1\\) in the above result, \\(v\_1=0\\). The first condition in the lemma would therefore result in \\(v\_{1} \in span() = \\{0\\} \implies v\_1=0\\). This is fine, but then part \\(b\\) would have to be changed (how?)
+note that if we chose \\(j=1\\) in the above result, \\(v\_1=0\\). Contrapositively, if \\(v\_1 \neq 0\\), \\(j\neq 1\\). This is because of the fact that:
+
+if \\(j=1\\), the lemma tells us that \\(v\_{1} \in span(v\_{1-1}) \implies v\_1 \in span()\\). As per definition, the [span]({{< relref "KBhspan.md" >}}) of the empty set is \\(\\{0\\}\\). Therefore, \\(v\_1 \in \\{0\\} \implies v\_1=0\\).

@@ -39,7 +39,7 @@ A [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list should
 
 The canonical proof is one by induction.
 
-Suppose \\(u\_1, \dots u\_{m}\\) is an [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\). Take also a list \\(w\_1, \dots w\_{n}\\) [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\). We desire that \\(m\leq n\\).
+Suppose \\(u\_1, \dots u\_{m}\\) is an [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\). Take also a list \\(w\_1, \dots w\_{n}\\) [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\). We desire that \\(m\leq n\\). We create a list of length \\(n\\) containing all of the \\(w\\) thus far. Our invariant is that \\(len(B) = n\\). This proof essentially uses [Floyd's Invariant Method]({{< relref "KBhfloyd_s_invariant_method.md" >}}) (compsci topic for Jack's understanding only.)
 
 
 #### base case {#base-case}
@@ -54,7 +54,16 @@ Now, construct the list:
 u\_1, w\_1, \dots w\_{n}
 \end{equation}
 
-where, \\(u\_{1} \in V\\) is yoinked from that [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\).
+where, \\(u\_{1} \in V\\) is taken from that [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\). By the statement above, via applying the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}), we can create a list that [span]({{< relref "KBhspan.md" >}})s the same space by taking away one of the \\(w\_{j}\\) (we can't take \\(u\_1\\) because it is at the first position, and we can't grantee its $0$---see the [issue]({{< relref "KBhlinear_dependence_lemma.md#issue" >}}) with the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})). We now have a list \\(B\\) with length \\(n\\) with \\(u\_1\\) and the rest of the \\(w\\) not taken away which span \\(V\\)
 
 
 #### case number \\(j\\) {#case-number-j}
+
+Given a spanning list \\(B\\) of \\(V\\) with length \\(n\\), with some parts \\(u\_1, \dots, u\_{j-1}, w\_{j}, \dots w\_{n}\\). We now include \\(u\_{j}\\) in the list, placing it after \\(u\_{j-1}\\). As the list pre-inclusion is already a [spanning]({{< relref "KBhspan.md#spans" >}}) list of \\(V\\), any new [vector]({{< relref "KBhvector.md" >}})s from \\(V\\) added will necessarily be able to be written as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of the other vectors already in the list. Therefore, we know that---if not already pre-inclusion---the list is [linearly dependent](#linearly-dependent).
+
+Because the first half (\\(u\_1,\dots u\_{j}\\)) of this new list is [linearly independent]({{< relref "KBhlinear_independence.md" >}}) (given), the bit that "causes" the linear dependence is in the \\(w\\) (i.e. each \\(u\\) cannot be written by other \\(u\\).) Therefore, we can say that the first condition of [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) allows us to remove one of the \\(w\\) while [spanning]({{< relref "KBhspan.md#spans" >}}) the same space, creating again a [spanning]({{< relref "KBhspan.md#spans" >}}) list of length \\(n\\).
+
+
+#### induction {#induction}
+
+repeat the procedure \\(m\\) times, resulting in all the \\(u\_{j}\\) being included in our new list \\(B\\) of length still \\(n\\).

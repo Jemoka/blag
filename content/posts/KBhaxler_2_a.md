@@ -23,14 +23,13 @@ draft = false
 
 -   [span is the smallest subspace containing all vectors in the list]({{< relref "KBhspan.md#span-is-the-smallest-subspace-containing-all-vectors-in-the-list" >}})
 -   [\\(\mathcal{P}(\mathbb{F})\\) is a vector space over \\(\mathbb{F}\\)]({{< relref "KBhpolynomial.md#mathcal-p--mathbb-f--is-a-vector-space-over-mathbb-f" >}})
--   the world famous [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})
+-   the world famous [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) and its fun [issue]({{< relref "KBhlinear_dependence_lemma.md#issue" >}})
 
 
 ## Questions for Jana {#questions-for-jana}
 
 -   obviously [polynomial]({{< relref "KBhpolynomial.md" >}})s are non-linear structures; under what conditions make them nice to work with in linear algebra?
 -   what is the "obvious way" to change [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s part \\(b\\) to make \\(v\_1=0\\) work?
--   why is it that we must remove one of the
 
 
 ## Interesting Factoids {#interesting-factoids}
