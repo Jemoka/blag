@@ -31,3 +31,22 @@ a list is [linearly dependent](#linearly-dependent) if.... its not [linearly ind
 oh. my. god.
 
 Based on the same formal definition, this means that a [linearly dependent](#linearly-dependent) list is defined by the fact that there can be more than one way of writing \\(0\\) as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of that [list]({{< relref "KBhlist.md" >}}) of [vector]({{< relref "KBhvector.md" >}})s, where one of the ways makes it so that writing \\(0\\) does not require all zero scalars.
+
+
+### length of linearly-independent list \\(\leq\\) length of spanning list {#length-of-linearly-independent-list-leq-length-of-spanning-list}
+
+A [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list should be smaller or equal in length to a [spanning]({{< relref "KBhspan.md#spans" >}}) list.
+
+The canonical proof is one by induction.
+
+Suppose \\(u\_1, \dots u\_{m}\\) is an [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\). Take also a list \\(w\_1, \dots w\_{n}\\) [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\). We desire that \\(m\leq n\\).
+
+
+#### base case {#base-case}
+
+take the [spanning]({{< relref "KBhspan.md#spans" >}}) list of \\(V\\) we declared named \\(w\_1, \dots w\_{n}\\). Given it spans, adding any other vector in \\(V\\), if \\(w\_1, \dots w\_{n}\\) isn't already [linearly dependent](#linearly-dependent), will make it [linearly dependent](#linearly-dependent). This is because you can write the new vector \\(v \in V\\) which you add as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of the previous [vector]({{< relref "KBhvector.md" >}})s already as they already span \\(V\\).
+
+By the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}), you can remove one of the [vector]({{< relref "KBhvector.md" >}})s in the new [linearly dependent](#linearly-dependent) list while keeping the list still [spanning]({{< relref "KBhspan.md#spans" >}}) \\(V\\).
+
+
+#### case number \\(j\\) {#case-number-j}

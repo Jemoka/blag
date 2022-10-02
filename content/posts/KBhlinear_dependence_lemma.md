@@ -50,3 +50,8 @@ u = c\_1v\_1 + \dots c\_{j}v\_{j} + \dots + c\_{m}v\_{m}
 now we replace \\(v\_{j}\\) with the isolated expression for \\(v\_{j}\\) above.
 
 Having written all arbitrary \\(u \in span(v\_1, \dots v\_{m})\\) as a linear combination of \\(v\_1\dots v\_{m}\\) _without_ ... \\(v\_{j}\\), we see that the renaming vectors span the same space. \\(\blacksquare\\)
+
+
+## issue {#issue}
+
+note that if we chose \\(j=1\\) in the above result, \\(v\_1=0\\). The first condition in the lemma would therefore result in \\(v\_{1} \in span() = \\{0\\} \implies v\_1=0\\). This is fine, but then part \\(b\\) would have to be changed (how?)

@@ -29,6 +29,8 @@ draft = false
 ## Questions for Jana {#questions-for-jana}
 
 -   obviously [polynomial]({{< relref "KBhpolynomial.md" >}})s are non-linear structures; under what conditions make them nice to work with in linear algebra?
+-   what is the "obvious way" to change [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s part \\(b\\) to make \\(v\_1=0\\) work?
+-   why is it that we must remove one of the
 
 
 ## Interesting Factoids {#interesting-factoids}
