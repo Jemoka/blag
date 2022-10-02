@@ -40,6 +40,8 @@ Part 2: a [subspace]({{< relref "KBhsubspace.md" >}}) containing the list of vec
 
 [subspace]({{< relref "KBhsubspace.md" >}})s are closed under [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}) and [addition]({{< relref "KBhadding.md" >}}). Therefore, we can just construct every [linear combination]({{< relref "KBhlinear_combination.md" >}}).
 
+By double-containment, a [subspace]({{< relref "KBhsubspace.md" >}}) is the smallest [subspace]({{< relref "KBhsubspace.md" >}}) containing all vectors. \\(\blacksquare\\)
+
 
 ### spans {#spans}
 
