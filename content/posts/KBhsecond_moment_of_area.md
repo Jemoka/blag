@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The [second moment of area]({{< relref "KBhsecond_moment_of_area.md" >}}) is a value which---given an origin---describes how point masses are distributed around that origin. (i.e. a number for how point masses are distributed)
+The [second moment of area]({{< relref "KBhsecond_moment_of_area.md" >}}) is a value which---given an origin---describes how point masses are distributed around that origin. (i.e. a number for how point masses are distributed). It is in units \\(m^{4}\\).
 
 Take, for instance, the following picture:
 
