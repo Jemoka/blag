@@ -17,13 +17,13 @@ A [Cantilever]({{< relref "KBhcantilever_beams.md" >}}) beam is a rigid structur
 Let's first define a function:
 
 \begin{equation}
-\omega(x)
+w(x)
 \end{equation}
 
 this represents the deflection of the beam at point \\(x\\). We will begin by taking its derivative by location:
 
 \begin{equation}
-\Delta \omega = \pdv{\omega}{x}
+\Delta w = \pdv{w}{x}
 \end{equation}
 
 is the change in deflection over location. "How much deviation of the beam from the resting axi is there as you run along it?"
@@ -31,7 +31,7 @@ is the change in deflection over location. "How much deviation of the beam from 
 We now take another derivative:
 
 \begin{equation}
-k = \pdv[2]{\omega}{x}
+k = \pdv[2]{w}{x}
 \end{equation}
 
 \\(k\\) is defined as the "[Curvature](#curvature)" of the beam: the "change in the change of bentness." The intuition is essentially this:
@@ -59,11 +59,22 @@ And we bam! we multiply the two things together, creating a value \\(EI\\) in un
 Specifically, that:
 
 \begin{equation}
-M = -(EI)k = -EI\pdv[2]{\omega}{x}
+M = -(EI)k = -EI\pdv[2]{w}{x}
 \end{equation}
 
 "[bending moment](#bending-moment) is [flexural rigidity](#flexural-rigidity) times [curvature](#curvature)" =&gt; "[how much force per distance you exert] is the result of [how bendy your thing is] times [how much you bent it]."
 
-There is a negative in front because if you pull out your lovely little right hand, point your thumb forward (+y), start curling your nice fingers around your nice hand (-z), you will notice that you are wrapping them downwards (the - part of the z) which is rather not positive. If we want \\(\pdv[2]{\omega}{x}\\) to be positive (bend up), we will need to chuck a negative in front of it to make both things positive.
+There is a negative in front because if you pull out your lovely little right hand, point your thumb forward (+y), start curling your nice fingers around your nice hand (-z), you will notice that you are wrapping them downwards (the - part of the z) which is rather not positive. If we want \\(\pdv[2]{w}{x}\\) to be positive (bend up), we will need to chuck a negative in front of it to make both things positive.
 
 This relation, while intuitive, is not from first-principles. In order to get such a derivation, [you read Wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory#Derivation_of_the_bending_equation).
+
+
+### magic {#magic}
+
+We can take two derivatives by location---
+
+\begin{equation}
+\pdv[2] x \qty(EI \pdv[2]{w}{x}) = -\mu \pdv{w}{t}+q(x)
+\end{equation}
+
+where \\(\mu\\) is the mass density, \\(q(x)\\) is the force applied (in Newtons) by area. this is magic. Will come back to it.
