@@ -48,5 +48,13 @@ take the [spanning]({{< relref "KBhspan.md#spans" >}}) list of \\(V\\) we declar
 
 By the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}), you can remove one of the [vector]({{< relref "KBhvector.md" >}})s in the new [linearly dependent](#linearly-dependent) list while keeping the list still [spanning]({{< relref "KBhspan.md#spans" >}}) \\(V\\).
 
+Now, construct the list:
+
+\begin{equation}
+u\_1, w\_1, \dots w\_{n}
+\end{equation}
+
+where, \\(u\_{1} \in V\\) is yoinked from that [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\).
+
 
 #### case number \\(j\\) {#case-number-j}
