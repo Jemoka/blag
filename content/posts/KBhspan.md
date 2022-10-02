@@ -46,3 +46,8 @@ By double-containment, a [subspace]({{< relref "KBhsubspace.md" >}}) is the smal
 ### spans {#spans}
 
 If \\(span(v\_1, \dots v\_{m})\\) equals \\(V\\), we say that \\(v\_1, \dots, v\_{m}\\) [spans](#spans) \\(V\\).
+
+
+### length of linearly-independent list \\(\leq\\) length of spanning list {#length-of-linearly-independent-list-leq-length-of-spanning-list}
+
+[see here]({{< relref "KBhlinear_independence.md#length-of-linearly-independent-list-leq-length-of-spanning-list" >}}).

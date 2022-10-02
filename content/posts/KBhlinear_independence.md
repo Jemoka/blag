@@ -66,4 +66,4 @@ Because the first half (\\(u\_1,\dots u\_{j}\\)) of this new list is [linearly i
 
 #### induction {#induction}
 
-repeat the procedure \\(m\\) times, resulting in all the \\(u\_{j}\\) being included in our new list \\(B\\) of length still \\(n\\).
+repeat the procedure \\(m\\) times, resulting in all the \\(u\_{j}\\) being included in our new list \\(B\\) of length still \\(n\\). Given we contained a list of length \\(m\\) in a list of length \\(n\\), \\(m \leq n\\).

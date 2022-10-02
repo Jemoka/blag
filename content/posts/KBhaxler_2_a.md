@@ -12,11 +12,13 @@ draft = false
 -   [linear combination]({{< relref "KBhlinear_combination.md" >}})
 -   [span]({{< relref "KBhspan.md" >}}) + "[spans]({{< relref "KBhspan.md#spans" >}})"
 -   [finite-dimensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}}) + [infinite-demensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}})
+    -
 -   [polynomial]({{< relref "KBhpolynomial.md" >}})
     -   [\\(\mathcal{P}(\mathbb{F})\\)]({{< relref "KBhpolynomial.md#mathcal-p--mathbb-f" >}})
     -   [\\(\mathcal{P}\_{m}(\mathbb{F})\\)]({{< relref "KBhpolynomial.md#mathcal-p-m--mathbb-f" >}})
     -   [degree of a polynomial \\(\deg p\\)]({{< relref "KBhpolynomial.md#degree-of-a-polynomial-deg-p" >}})
 -   [linear independence]({{< relref "KBhlinear_independence.md" >}}) and [linear dependence]({{< relref "KBhlinear_independence.md#linearly-dependent" >}})
+-   [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})
 
 
 ## Results and Their Proofs {#results-and-their-proofs}
@@ -24,6 +26,7 @@ draft = false
 -   [span is the smallest subspace containing all vectors in the list]({{< relref "KBhspan.md#span-is-the-smallest-subspace-containing-all-vectors-in-the-list" >}})
 -   [\\(\mathcal{P}(\mathbb{F})\\) is a vector space over \\(\mathbb{F}\\)]({{< relref "KBhpolynomial.md#mathcal-p--mathbb-f--is-a-vector-space-over-mathbb-f" >}})
 -   the world famous [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) and its fun [issue]({{< relref "KBhlinear_dependence_lemma.md#issue" >}})
+-   [length of linearly-independent list \\(\leq\\) length of spanning list]({{< relref "KBhlinear_independence.md#length-of-linearly-independent-list-leq-length-of-spanning-list" >}})
 
 
 ## Questions for Jana {#questions-for-jana}
