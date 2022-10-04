@@ -58,7 +58,7 @@ Now! We have an equation:
 \dv{v}{t} = Av
 \end{equation}
 
-To finally find the actual solution \\(v\\), we have will apply the relation we saw in [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}).
+To finally find the actual solution \\(v\\) (i.e. \\((x,y)\\)), we have will apply the relation we saw in [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}).
 
 \begin{equation}
 \dv t e^{tA} = e^{tA}A
@@ -100,7 +100,7 @@ b\alpha
 \end{pmatrix}
 \end{equation}
 
-Then, add. Because a linear combination of solutions are solutions (because functions are linear objects.)
+Then, add. Because a linear combination of solutionsare solutions (because functions are linear objects.)
 
 
 ## ok but what about non-sinusoids {#ok-but-what-about-non-sinusoids}
