@@ -33,7 +33,7 @@ Tv = \lambda\_{j}v
 The right polynomial \\(det(\lambda\_{j} I-T) = 0\\) is named the "characteristic polynomial."
 
 
-### this allow us how to decompose a matrix in diagonalizing it {#this-allow-us-how-to-decompose-a-matrix-in-diagonalizing-it}
+### natural choordinates {#natural-choordinates}
 
 Given the eigenvectors \\((x+,y+), (x-,y-)\\), we can change coordinates of your matrix into the natural choordinates.
 

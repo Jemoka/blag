@@ -18,7 +18,7 @@ V = U\_2 \oplus W
 Prove or give a counterexample that \\(U\_1=U\_2\\)
 
 
-## Result {#result}
+## Intuition {#intuition}
 
 The statement is not true. The definition of direct sums makes it such that, \\(\forall v \in V\\), there exists a unique representation of \\(v\\) with \\(u\_{1i}+w\_{i} = v\\) for \\(u\_{1j}\in U\_1, w\_{j} \in W\\) as well as another unique representation \\(u\_{2i} + w\_{i}=v\\) for \\(u\_{2j} \in U\_{2}, w\_{j} \in W\\).
 
@@ -91,7 +91,7 @@ Let's construct:
 U\_1+W = V
 \end{equation}
 
-We have that:
+Take \\(u\_1 \in U\_1, w \in W\\), attempting to construct a \\(v\in V\\), we have that:
 
 \begin{equation}
 \begin{pmatrix}
@@ -100,6 +100,8 @@ x\_{1} \\\ y\_1 \\\ 2y\_1
 0 \\\ 0 \\\ z\_1
 \end{pmatrix} = \begin{pmatrix}
 x\_1 \\\ y\_1 \\\ 2y\_1+z\_1
+\end{pmatrix} = \begin{pmatrix}
+a \\\ b \\\ c
 \end{pmatrix}
 \end{equation}
 
@@ -114,7 +116,7 @@ We see that for:
 0 \in U\_1+W
 \end{equation}
 
-we have that:
+To solve for some \\(u\_1 \in U, w \in W : u\_1+w = 0\\) we have that:
 
 \begin{equation}
 \begin{pmatrix}
@@ -128,7 +130,7 @@ x\_{1} \\\ y\_1 \\\ 2y\_1
 
 where the first vector is in \\(U\_1\\) and the second is in \\(W\\). The first two expressions tell us that \\(x\_1=y\_1=0\\); the final equation requires that \\(2y\_1+z\_1=0+z\_1=0\Rightarrow z\_1=0\\) .
 
-Therefore, the only way to write \\(0\\) is to take each element in the sum to \\(0\\), making the above a direct sum.
+Therefore, the only way to write \\(0\\) is to take each element in the sum to \\(0\\) (i.e. in this case \\(u\_1=w=0 \implies u\_1+w = 0\\)), making the above a direct sum.
 
 Therefore:
 
@@ -142,7 +144,7 @@ In almost the same manner, we can show that:
 U\_2\oplus W = V
 \end{equation}
 
-That:
+That, for some \\(u\_2\in U\_2, w \in W, v \in V\\):
 
 \begin{equation}
 \begin{pmatrix}
@@ -162,11 +164,11 @@ for the first vector in \\(U\_2\\), the second in \\(W\\). In fact, this is the 
 Finally, we have that:
 
 \begin{equation}
-\begin{pmatrix}
+\left\\{\begin{pmatrix}
 x\_1 \\\ y\_1 \\\ 2y\_1
-\end{pmatrix} \neq \begin{pmatrix}
+\end{pmatrix}: x\_1,y\_1 \in \mathbb{F}\right\\} \neq\left\\{\begin{pmatrix}
 x\_1 \\\ y\_1 \\\ 0
-\end{pmatrix}
+\end{pmatrix}: x\_1,y\_1 \in \mathbb{F}\right\\}
 \end{equation}
 
-\\(\forall y\_1 \neq 0\\). Therefore, \\(U\_1 \neq U\_2\\), finishing the counterexample. \\(\blacksquare\\)
+\\(\forall y\_1 \neq 0\\) in the first expression. Therefore, \\(U\_1 \neq U\_2\\), finishing the counterexample. \\(\blacksquare\\)

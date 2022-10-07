@@ -55,54 +55,64 @@ x \\\ y
 Now! We have an equation:
 
 \begin{equation}
-\dv{v}{t} = Av
+\dv{t}v = Av
 \end{equation}
 
-To finally find the actual solution \\(v\\) (i.e. \\((x,y)\\)), we have will apply the relation we saw in [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}).
+The result above shows that the transformations \\(\dv{t}\\) and \\(A\\) are isomorphic. Therefore, we now attempt to characterize \\(A\\) to solve this expression.
+
+---
+
+Tangent:
+
+At this point, we want to recall the result we derived from [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}); that:
 
 \begin{equation}
 \dv t e^{tA} = e^{tA}A
 \end{equation}
 
----
+Ok. So, for the right side, recall that we can diagonalize \\(A\\) and \\(e^{tA}\\) using the same set of change-of-basis vectors.
+
+Therefore, the middle change-of-basis matrices cancel out, and the middle matricies are diagonal and hence commutative (multiplying the middle, inherits commutativity in \\(\mathbb{F}\\)).
+
+Hence:
 
 \begin{equation}
-v(t) = e^{tA} C
+e^{tA}A = Ae^{tA}
+\end{equation}
+
+So, we have that:
+
+\begin{equation}
+\dv t e^{tA} = Ae^{tA}
+\end{equation}
+
+Lastly, we can apply some initial conditions \\(\vec{C}\\) (why?), such that:
+
+\begin{equation}
+\qty(\dv t e^{tA}) \vec{C} = Ae^{tA} \vec{C}
 \end{equation}
 
 ---
 
-\begin{equation}
-x(t) = {C\_1}e^{t\lambda+} + C\_2e^{t\lambda -}
-\end{equation}
-
-
-## method of undermentioned coefficients {#method-of-undermentioned-coefficients}
-
-This method is able to solve expressions of shape
+Ok, so. We will use the above result to characterize what \\(v\\) is. We can apply the above exhibit of the behavior of \\(\dv{t}\\), we will set:
 
 \begin{equation}
-a\dv[2]{x}{t} + b \dv{x}{t} + cx = B\sin (\sigma t)
+\dv t v = \qty(\dv t e^{tA}) \vec{C}
 \end{equation}
 
-Step 1: solve the equation where the right side zero. Find such solutions.
+WHY can we do this?
 
-Step 2:
-
-solve the right side (TBD CC David)
+Then, we have that:
 
 \begin{equation}
-\begin{pmatrix}
-A\_1\\\A\_2
-\end{pmatrix}  = \frac{B}{(c-a\sigma ^{2})^{2}+b^{2}\sigma^{2}} \begin{pmatrix}
-c-a\alpha ^{2) \\\\
-b\alpha
-\end{pmatrix}
+\dv{t}v = Av = Ae^{tA} \vec{C}
 \end{equation}
 
-Then, add. Because a linear combination of solutionsare solutions (because functions are linear objects.)
+and so
 
+\begin{align}
+&Av = Ae^{tA} \vec{C} \\\\
+\Rightarrow\ & v = e^{tA} \vec{C}
+\end{align}
 
-## ok but what about non-sinusoids {#ok-but-what-about-non-sinusoids}
-
-If the function desired has a good fourier transform, use that. To make that work, any linear combinations of solutions are a solution of the overall expression.
+Great. Finally, we solve for

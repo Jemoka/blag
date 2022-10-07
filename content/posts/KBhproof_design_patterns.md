@@ -27,3 +27,5 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 
 -   proving uniqueness: set up two distinct results, show that they are the same
 -   proving negation: if the "negative" is distinct, but the direct case is more nebulous, use proves by contradiction
+
+-   [proof by induction]({{< relref "KBhproof_by_induction.md" >}})
