@@ -10,7 +10,7 @@ To do this, we begin by making:
 \begin{equation} y = \dv{x}{t} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-with-a-zero-on-the-right-side-dot>solving, with a zero on the right side.</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-with-a-zero-on-the-right-side-dot>solving, with a zero on the right side.</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}</p><h2 id=solving-with-a-zero-on-the-right-side-dot>solving, with a zero on the right side.</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
@@ -31,19 +31,23 @@ x \\ y
 \end{pmatrix}
 \end{equation}</p><p>Now! We have an equation:</p><p>\begin{equation}
 \dv{t}v = Av
-\end{equation}</p><p>The result above shows that the transformations \(\dv{t}\) and \(A\) are isomorphic. Therefore, we now attempt to characterize \(A\) to solve this expression.</p><hr><p>Tangent:</p><p>At this point, we want to recall the result we derived from <a href=/posts/kbhapplying_eigenspace/>applying eigenspace</a>; that:</p><p>\begin{equation}
-\dv t e^{tA} = e^{tA}A
-\end{equation}</p><p>Ok. So, for the right side, recall that we can diagonalize \(A\) and \(e^{tA}\) using the same set of change-of-basis vectors.</p><p>Therefore, the middle change-of-basis matrices cancel out, and the middle matricies are diagonal and hence commutative (multiplying the middle, inherits commutativity in \(\mathbb{F}\)).</p><p>Hence:</p><p>\begin{equation}
-e^{tA}A = Ae^{tA}
-\end{equation}</p><p>So, we have that:</p><p>\begin{equation}
-\dv t e^{tA} = Ae^{tA}
-\end{equation}</p><p>Lastly, we can apply some initial conditions \(\vec{C}\) (why?), such that:</p><p>\begin{equation}
-\qty(\dv t e^{tA}) \vec{C} = Ae^{tA} \vec{C}
-\end{equation}</p><hr><p>Ok, so. We will use the above result to characterize what \(v\) is. We can apply the above exhibit of the behavior of \(\dv{t}\), we will set:</p><p>\begin{equation}
-\dv t v = \qty(\dv t e^{tA}) \vec{C}
-\end{equation}</p><p>WHY can we do this?</p><p>Then, we have that:</p><p>\begin{equation}
-\dv{t}v = Av = Ae^{tA} \vec{C}
-\end{equation}</p><p>and so</p><p>\begin{align}
-&Av = Ae^{tA} \vec{C} \\
-\Rightarrow\ & v = e^{tA} \vec{C}
-\end{align}</p><p>Great. Finally, we solve for</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>The result above shows that the transformations \(\dv{t}\) and \(A\) are isomorphic. Therefore, we now attempt to characterize \(A\) to solve this expression.</p><hr><p>Ok, but to take this derivative, let&rsquo;s work with some diagonal matrix \(a\) first. Its nicer because diagonal matricies commutes, so its easier to work with.</p><p>So, the diagonal analogue of the expression above is:</p><p>\begin{equation}
+\dv{x}{t} = ax
+\end{equation}</p><p>Note that \(x\) is a function in \(t\), so actually take this equation we have to move the \(dx\) to the same side as the \(x\). So:</p><p>\begin{align}
+& \dv{x}{t} = ax \\
+\Rightarrow\ & \frac{1}{x}\dd{x} = a\dd{t} \\
+\Rightarrow\ & \int \frac{1}{x}\dd{x} = \int a\dd{t} \\
+\Rightarrow\ & \ln (x) = at + C \\
+\Rightarrow\ & x = e^{at+C} \\
+\Rightarrow\ & x = e^{at}e^{C} \\
+\Rightarrow\ & x = e^{at}x_0
+\end{align}</p><p>So now, we have:</p><p>\begin{equation}
+x = e^{at}x_0
+\end{equation}</p><hr><p>Given the above result, we will now revert to \(a \implies A\), and recover what the true \(\dv{x}{t}\) should be:</p><p>\begin{align}
+&v = e^{At}x_0 \\
+\Rightarrow\ & \dv{x}{t} = \dv{t} e^{At}x_0
+\end{align}</p><h2 id=method-of-undetermined-coefficients>method of undetermined coefficients</h2><p>\begin{equation}
+\dv{x}{t} = -2x+1
+\end{equation}</p><p>The solution would be something like:</p><p>\begin{equation}
+x = Ce^{-2t} + t
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
