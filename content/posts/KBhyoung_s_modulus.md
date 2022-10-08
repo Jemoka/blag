@@ -16,3 +16,4 @@ E = \frac{\sigma }{\epsilon }
 \end{equation}
 
 Thinking about this, silly puddy deforms very easily given a little stress, so it would have _low_ [Young's Modulus]({{< relref "KBhyoung_s_modulus.md" >}}) (\\(\sigma \ll \epsilon\\)); and visa versa.
+<https://aapt.scitation.org/doi/10.1119/1.17116?cookieSet=1>

@@ -62,57 +62,50 @@ The result above shows that the transformations \\(\dv{t}\\) and \\(A\\) are iso
 
 ---
 
-Tangent:
+Ok, but to take this derivative, let's work with some diagonal matrix \\(a\\) first. Its nicer because diagonal matricies commutes, so its easier to work with.
 
-At this point, we want to recall the result we derived from [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}); that:
+So, the diagonal analogue of the expression above is:
 
 \begin{equation}
-\dv t e^{tA} = e^{tA}A
+\dv{x}{t} = ax
 \end{equation}
 
-Ok. So, for the right side, recall that we can diagonalize \\(A\\) and \\(e^{tA}\\) using the same set of change-of-basis vectors.
+Note that \\(x\\) is a function in \\(t\\), so actually take this equation we have to move the \\(dx\\) to the same side as the \\(x\\). So:
 
-Therefore, the middle change-of-basis matrices cancel out, and the middle matricies are diagonal and hence commutative (multiplying the middle, inherits commutativity in \\(\mathbb{F}\\)).
+\begin{align}
+& \dv{x}{t} = ax  \\\\
+\Rightarrow\ & \frac{1}{x}\dd{x} = a\dd{t} \\\\
+\Rightarrow\ & \int \frac{1}{x}\dd{x} = \int a\dd{t}  \\\\
+\Rightarrow\ & \ln (x) = at + C \\\\
+\Rightarrow\ & x = e^{at+C}  \\\\
+\Rightarrow\ & x = e^{at}e^{C} \\\\
+\Rightarrow\ & x = e^{at}x\_0
+\end{align}
 
-Hence:
-
-\begin{equation}
-e^{tA}A = Ae^{tA}
-\end{equation}
-
-So, we have that:
-
-\begin{equation}
-\dv t e^{tA} = Ae^{tA}
-\end{equation}
-
-Lastly, we can apply some initial conditions \\(\vec{C}\\) (why?), such that:
+So now, we have:
 
 \begin{equation}
-\qty(\dv t e^{tA}) \vec{C} = Ae^{tA} \vec{C}
+x = e^{at}x\_0
 \end{equation}
 
 ---
 
-Ok, so. We will use the above result to characterize what \\(v\\) is. We can apply the above exhibit of the behavior of \\(\dv{t}\\), we will set:
-
-\begin{equation}
-\dv t v = \qty(\dv t e^{tA}) \vec{C}
-\end{equation}
-
-WHY can we do this?
-
-Then, we have that:
-
-\begin{equation}
-\dv{t}v = Av = Ae^{tA} \vec{C}
-\end{equation}
-
-and so
+Given the above result, we will now revert to \\(a \implies A\\), and recover what the true \\(\dv{x}{t}\\) should be:
 
 \begin{align}
-&Av = Ae^{tA} \vec{C} \\\\
-\Rightarrow\ & v = e^{tA} \vec{C}
+&v = e^{At}x\_0 \\\\
+\Rightarrow\ & \dv{x}{t} = \dv{t} e^{At}x\_0
 \end{align}
 
-Great. Finally, we solve for
+
+## method of undetermined coefficients {#method-of-undetermined-coefficients}
+
+\begin{equation}
+\dv{x}{t} = -2x+1
+\end{equation}
+
+The solution would be something like:
+
+\begin{equation}
+x = Ce^{-2t} + t
+\end{equation}

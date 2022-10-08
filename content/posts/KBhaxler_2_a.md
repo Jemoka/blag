@@ -41,6 +41,7 @@ draft = false
 -   obviously [polynomial]({{< relref "KBhpolynomial.md" >}})s are non-linear structures; under what conditions make them nice to work with in linear algebra?
 -   what is the "obvious way" to change [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s part \\(b\\) to make \\(v\_1=0\\) work?
 -   for the [finite-dimensional subspaces]({{< relref "KBhsubspace.md#finite-dimensional-subspaces" >}}) proof, though we know that the process terminates, how do we know that it terminates at a [spanning]({{< relref "KBhspan.md#spans" >}}) list of \\(U\\) and not just a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(U\\)?
+-   direct sum and linear independence related; how exactly?
 
 
 ## Interesting Factoids {#interesting-factoids}
