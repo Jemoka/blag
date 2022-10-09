@@ -3,16 +3,17 @@
 <script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
 <script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Second-Order Linear Differential Equations</title><meta name=description content="Here&rsquo;s a general form:
 \begin{equation} a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t) \end{equation}
-solving, with a zero on the right side. This problem because easier if the right side is \(0\).
+solving homogeneous higher-order differential equations This problem because easier if the right side is \(0\).
 \begin{equation} a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0 \end{equation}
 The general goal to solve in this case is to make this a system of First-Order Differential Equations.
 To do this, we begin by making:
-\begin{equation} y = \dv{x}{t} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+\begin{equation} y = \dv{x}{t} \end{equation}
+Therefore, we can change the first equation:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-with-a-zero-on-the-right-side-dot>solving, with a zero on the right side.</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
-\end{equation}</p><h2 id=solving-with-a-zero-on-the-right-side-dot>solving, with a zero on the right side.</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
+\end{equation}</p><h2 id=solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
 \end{equation}</p><p>The general goal to solve in this case is to make this a system of <a href=/posts/kbhlinear_non_seperable_equation/#solving-differential-equations>First-Order Differential Equations</a>.</p><p>To do this, we begin by making:</p><p>\begin{equation}
 y = \dv{x}{t}
@@ -31,23 +32,70 @@ x \\ y
 \end{pmatrix}
 \end{equation}</p><p>Now! We have an equation:</p><p>\begin{equation}
 \dv{t}v = Av
-\end{equation}</p><p>The result above shows that the transformations \(\dv{t}\) and \(A\) are isomorphic. Therefore, we now attempt to characterize \(A\) to solve this expression.</p><hr><p>Ok, but to take this derivative, let&rsquo;s work with some diagonal matrix \(a\) first. Its nicer because diagonal matricies commutes, so its easier to work with.</p><p>So, the diagonal analogue of the expression above is:</p><p>\begin{equation}
-\dv{x}{t} = ax
-\end{equation}</p><p>Note that \(x\) is a function in \(t\), so actually take this equation we have to move the \(dx\) to the same side as the \(x\). So:</p><p>\begin{align}
-& \dv{x}{t} = ax \\
-\Rightarrow\ & \frac{1}{x}\dd{x} = a\dd{t} \\
-\Rightarrow\ & \int \frac{1}{x}\dd{x} = \int a\dd{t} \\
-\Rightarrow\ & \ln (x) = at + C \\
-\Rightarrow\ & x = e^{at+C} \\
-\Rightarrow\ & x = e^{at}e^{C} \\
-\Rightarrow\ & x = e^{at}x_0
-\end{align}</p><p>So now, we have:</p><p>\begin{equation}
-x = e^{at}x_0
-\end{equation}</p><hr><p>Given the above result, we will now revert to \(a \implies A\), and recover what the true \(\dv{x}{t}\) should be:</p><p>\begin{align}
-&v = e^{At}x_0 \\
-\Rightarrow\ & \dv{x}{t} = \dv{t} e^{At}x_0
-\end{align}</p><h2 id=method-of-undetermined-coefficients>method of undetermined coefficients</h2><p>\begin{equation}
+\end{equation}</p><p>The result above shows that the transformations \(\dv{t}\) and \(A\) are isomorphic. Therefore, we now attempt to characterize \(A\) to solve this expression.</p><p>Let&rsquo;s begin. We will first shove that \(v\) on top of the differential for aesthetics:</p><p>\begin{equation}
+\dv{v}{t} = Av
+\end{equation}</p><p>This expression is actually nicely <a href=/posts/kbhlinear_constant_coefficient_equation/#solving-separable-differential-equations>seperable</a>, so we shall endeavor to separate it:</p><p>\begin{equation}
+\dd{v} = Av\dd{t}
+\end{equation}</p><p>Of course, \(v\) is a function of \(t\). Therefore, the right side would be woefully complicated. Therefore, we shall do this handwavy thing where we go:</p><p>\begin{equation}
+\frac{1}{v}\dd{v} = A\dd{t}
+\end{equation}</p><p>Now, \(A\) is not a function in $t$&mdash;its just some constants! So, we can integrate this safely without much trouble:</p><p>\begin{equation}
+\int \frac{1}{v}\dd{v} =\int A\dd{t}
+\end{equation}</p><p>To get:</p><p>\begin{equation}
+\ln v = t A + C
+\end{equation}</p><p>Note the order as \(t\) is a constant. Finally, we will invert the natural log and get \(v\) back:</p><p>\begin{equation}
+v = e^{tA+C}
+\end{equation}</p><p>Excellent. We will now apply some <a href=/posts/kbhlog_laws/>log/exponent laws</a>:</p><p>\begin{equation}
+v = e^{tA}e^{C} = e^{tA}C
+\end{equation}</p><p><del>this is so very handwavy. \(C\) is technically a vector here&mldr; long story and iffy understanding</del></p><p>Ok, how do we go about solving \(x\)?</p><p>Note now that \(v=(x\ y)\), so we will expand that:</p><p>\begin{equation}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} = e^{tA}\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix}
+\end{equation}</p><p>where, as we defined above \(y=\dv{x}{t}\) (each integral needing a different constant.)</p><p>Now. remember that \(A\) is diagonalizable; and so will \(tA\) (citation needed, but intuition is that scaling eigenvalues do nothing anyways). So, to make this exponentiation easier, we will diagonalize it.</p><p>We now have that</p><p>\begin{equation}
+e^{tA} = \mqty(v_1& \dots& v_{m})\mqty(\dmat{e^{t\lambda_{1}}, \dots, e^{t\lambda_{m}}})\mqty(v_1& \dots& v_{m})^{-1}
+\end{equation}</p><p>(<a href=/posts/kbhraising_e_to_a_matrix/>how?</a>)</p><p>Ok. Finally, we will take the binroller that is &ldquo;constancy&rdquo; and apply it to \(e^{tA}\). This took quite a bit of time for me to get, so feel free to take some time to get it too.</p><p>This all hinges upon the fact that \(C\) is a constant, so multiplying any constant to it still makes it \(C\).</p><p>So far, we have that:</p><p>\begin{equation}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} = e^{tA}\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix} = \qty(\mqty(v_1& \dots& v_{m})\mqty(\dmat{e^{t\lambda_{1}}, \dots, e^{t\lambda_{m}}})\mqty(v_1& \dots& v_{m})^{-1} )\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix}
+\end{equation}</p><p>Remember, now, that \(v_1\dots v_{}\) and its inverses are nothing but vectors filled with a lot of scalars. And any scalar \(\alpha\) times a constant still results in the (a new) constant: \(\alpha C =C\). So, we will steamroll \(\mqty(x_0&y_0)\) over the right side eigenbases matrix (multiplying a constant vector to any&rsquo;ol matrix will just get a new set of constants back) to get:</p><p>\begin{align}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} &= \qty(\mqty(v_1& \dots& v_{m})\mqty(\dmat{e^{t\lambda_{1}}, \dots, e^{t\lambda_{m}}})\mqty(v_1& \dots& v_{m})^{-1} )\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix} \\
+&= \mqty(v_1& \dots& v_{m})\mqty(\dmat{e^{t\lambda_{1}}, \dots, e^{t\lambda_{m}}}) \begin{pmatrix}
+C_1 \\ C_2
+\end{pmatrix}
+\end{align}</p><p>Now, the middle thing has \(t\) in it! (the input!) So, we can&rsquo;t just steamroll now. We have to preserve the middle part.</p><p>\begin{align}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} &= \mqty(v_1& \dots& v_{m})\mqty(\dmat{e^{t\lambda_{1}}, \dots, e^{t\lambda_{m}}}) \begin{pmatrix}
+C_1 \\ C_2
+\end{pmatrix} \\
+&= \mqty(v_1& \dots& v_{m}) \begin{pmatrix}
+C_1 e^{t\lambda_{1}} \\ C_2 e^{t\lambda_{2}}
+\end{pmatrix}
+\end{align}</p><p>And finally, we keep steamrolling:</p><p>\begin{align}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix} &= \mqty(v_1& \dots& v_{m}) \begin{pmatrix}
+C_1 e^{t\lambda_{1}} \\ C_2 e^{t\lambda_{2}} \end{pmatrix}\\
+&= \mqty({C_1_{x} e^{t\lambda_{1}} + C_2_{x} e^{t\lambda_{2}}} \\ {C_1_{y} e^{t\lambda_{1}} + C_2_{y} e^{t\lambda_{2}}})
+\end{align}</p><p>There is absolutely no difference in nature between \(C_{j_{x}}\) and \(C_{j_{y}}\) except for the fact that they are <em>different</em> constants (which we got by multiplying \(v_1 \dots v_{m}\)) to it.</p><p>Ok so:</p><p>\begin{equation}
+\begin{cases}
+x = C_1_{x} e^{t\lambda_{1}} + C_2_{x} e^{t\lambda_{2}}\\
+y = C_1_{y} e^{t\lambda_{1}} + C_2_{y} e^{t\lambda_{2}}\\
+\end{cases}
+\end{equation}</p><p>constructing the characteristic equation, as desired.</p><h2 id=method-of-undetermined-coefficients>method of undetermined coefficients</h2><p>\begin{equation}
 \dv{x}{t} = -2x+1
 \end{equation}</p><p>The solution would be something like:</p><p>\begin{equation}
 x = Ce^{-2t} + t
-\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>Given the above result, we will now revert to \(a \implies A\), and recover what the true \(\dv{x}{t}\) should be:</p><p>\begin{align}
+&v = e^{At}v_0 \\
+\Rightarrow\ & \dv{v}{t} = \qty(\dv{t} e^{At})x_0
+\end{align}</p><p>(as constants remain constant).</p><p>We now pull in the other expression we had from <a href=/posts/kbhapplying_eigenspace/>applying eigenspace</a>:</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
