@@ -11,7 +11,7 @@ To do this, we begin by making:
 Therefore, we can change the first equation:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}</p><h2 id=solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
@@ -85,17 +85,10 @@ C_1 e^{t\lambda_{1}} \\ C_2 e^{t\lambda_{2}}
 x \\ y
 \end{pmatrix} &= \mqty(v_1& \dots& v_{m}) \begin{pmatrix}
 C_1 e^{t\lambda_{1}} \\ C_2 e^{t\lambda_{2}} \end{pmatrix}\\
-&= \mqty({C_1_{x} e^{t\lambda_{1}} + C_2_{x} e^{t\lambda_{2}}} \\ {C_1_{y} e^{t\lambda_{1}} + C_2_{y} e^{t\lambda_{2}}})
+&= \mqty({C_{1_{x}} e^{t\lambda_{1}} + C_{2_{x}} e^{t\lambda_{2}}} \\ {C_{1_{y}} e^{t\lambda_{1}} + C_{2_{y}} e^{t\lambda_{2}}})
 \end{align}</p><p>There is absolutely no difference in nature between \(C_{j_{x}}\) and \(C_{j_{y}}\) except for the fact that they are <em>different</em> constants (which we got by multiplying \(v_1 \dots v_{m}\)) to it.</p><p>Ok so:</p><p>\begin{equation}
 \begin{cases}
-x = C_1_{x} e^{t\lambda_{1}} + C_2_{x} e^{t\lambda_{2}}\\
-y = C_1_{y} e^{t\lambda_{1}} + C_2_{y} e^{t\lambda_{2}}\\
+x = C_{1_{x}} e^{t\lambda_{1}} + C_{2_{x}} e^{t\lambda_{2}}\\
+y = C_{1_{y}} e^{t\lambda_{1}} + C_{2_{y}} e^{t\lambda_{2}}\\
 \end{cases}
-\end{equation}</p><p>constructing the characteristic equation, as desired.</p><h2 id=method-of-undetermined-coefficients>method of undetermined coefficients</h2><p>\begin{equation}
-\dv{x}{t} = -2x+1
-\end{equation}</p><p>The solution would be something like:</p><p>\begin{equation}
-x = Ce^{-2t} + t
-\end{equation}</p><p>Given the above result, we will now revert to \(a \implies A\), and recover what the true \(\dv{x}{t}\) should be:</p><p>\begin{align}
-&v = e^{At}v_0 \\
-\Rightarrow\ & \dv{v}{t} = \qty(\dv{t} e^{At})x_0
-\end{align}</p><p>(as constants remain constant).</p><p>We now pull in the other expression we had from <a href=/posts/kbhapplying_eigenspace/>applying eigenspace</a>:</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>constructing the characteristic equation, as desired.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
