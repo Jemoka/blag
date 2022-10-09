@@ -78,7 +78,7 @@ Of course, \\(v\\) is a function of \\(t\\). Therefore, the right side would be 
 \frac{1}{v}\dd{v} = A\dd{t}
 \end{equation}
 
-Now, \\(A\\) is not a function in $t$---its just some constants! So, we can integrate this safely without much trouble:
+Now, \\(A\\) is not a function in \\(t\\) --- its just some constants! So, we can integrate this safely without much trouble:
 
 \begin{equation}
 \int  \frac{1}{v}\dd{v} =\int  A\dd{t}
@@ -192,3 +192,42 @@ y = C\_{1\_{y}} e^{t\lambda\_{1}} + C\_{2\_{y}} e^{t\lambda\_{2}}\\\\
 \end{equation}
 
 constructing the characteristic equation, as desired.
+
+
+## method of undetermined coefficients {#method-of-undetermined-coefficients}
+
+Ok. This mechanism hinges upon the fact that **linear combinations of differential equation solutions are solutions themselves**. You can show this to yourself by illustrating diffeq solutions as [subspace]({{< relref "KBhsubspace.md" >}})s of [F^S]({{< relref "KBhfs_is_a_vector_space.md" >}}), which are linear objects.
+
+Therefore, for a non-homogeneous second-order linear equation, we attempt to find two sets of solutions---
+
+namely, the general solution to the homogeneous case (using method above):
+
+\begin{equation}
+a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
+\end{equation}
+
+as well attempting to fit **particular** solutions to the general case:
+
+\begin{equation}
+a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
+\end{equation}
+
+the linear combination of both solutions would construct the final solution space.
+
+We already know how to do step 1---[solve homogeneous higher-order differential equations](#solving-homogeneous-higher-order-differential-equations)---so we won't harp on it here. However, how do we find _particular_ solutions to the general equations?
+
+Well, we guess! Here's a general table to help illustrate how:
+
+| \\(f(t)\\)                     | \\(x(t)\\)                                          |
+|--------------------------------|-----------------------------------------------------|
+| \\(ae^{bt}\\)                  | \\(Ae^{bt}\\)                                       |
+| \\(a \cos (ct) + b\sin (ct)\\) | \\(A\cos(ct) + B\sin (ct)\\)                        |
+| \\(kt^{n}\\)                   | \\(A\_{n}t^{n} + A\_{n-1}x^{n-1} \dots  + A\_{0}\\) |
+
+you can show these to yourself by taking derivatives. \\(a,b,c, k,A,B\\) are distinct constants.
+
+Now, once you make an educated guess for what \\(x(t)\\) is, perhaps aided by the homogeneous solution, you would take the number of derivatives needed to plug it back to the original expression. Then, equate the left expression and right \\(f(t)\\) and match [coefficient]({{< relref "KBhpolynomial.md" >}})s of equal-degree terms to solve for the final constants \\(A\\), \\(B\\), etc.
+
+After you finally got the specific solution for \\(A\\) and \\(B\\) , we add the degree of freedom back by adding the homogenous solution in.
+
+Look for "Example 1 (again)" on [this page](https://www.mathsisfun.com/calculus/differential-equations-undetermined-coefficients.html) (silly, I know, but worth it) to see end-to-end such a solution.
