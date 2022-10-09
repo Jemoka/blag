@@ -14,3 +14,4 @@ There's not one market, there is a host of different markets. This field is fill
 -   [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}})
 -   [Arbitrage Pricing]({{< relref "KBharbitrage_pricing.md" >}})
 -   [Derivative Pricing]({{< relref "KBhderivative_pricing.md" >}})
+-   [options]({{< relref "KBhoptions.md" >}})
