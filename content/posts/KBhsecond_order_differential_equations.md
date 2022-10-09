@@ -31,3 +31,5 @@ x^{''} = v\dv{v}{x} = f(x,v)
 \end{equation}
 
 So turns out, the original input \\(t\\) is, given a specific equation above, we have no need to know it.
+
+To actually go about solving it, see [solving homogeneous higher-order differential equations]({{< relref "KBhsecond_order_linear_differential_equation.md#solving-homogeneous-higher-order-differential-equations" >}}).

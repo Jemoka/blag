@@ -177,7 +177,7 @@ And finally, we keep steamrolling:
 x \\\ y
 \end{pmatrix} &= \mqty(v\_1& \dots& v\_{m}) \begin{pmatrix}
 C\_1 e^{t\lambda\_{1}} \\\ C\_2 e^{t\lambda\_{2}} \end{pmatrix}\\\\
-&= \mqty({C\_1\_{x} e^{t\lambda\_{1}} + C\_2\_{x} e^{t\lambda\_{2}}} \\\ {C\_1\_{y} e^{t\lambda\_{1}} + C\_2\_{y} e^{t\lambda\_{2}}})
+&= \mqty({C\_{1\_{x}} e^{t\lambda\_{1}} + C\_{2\_{x}} e^{t\lambda\_{2}}} \\\ {C\_{1\_{y}} e^{t\lambda\_{1}} + C\_{2\_{y}} e^{t\lambda\_{2}}})
 \end{align}
 
 There is absolutely no difference in nature between \\(C\_{j\_{x}}\\) and \\(C\_{j\_{y}}\\) except for the fact that they are _different_ constants (which we got by multiplying \\(v\_1 \dots v\_{m}\\)) to it.
@@ -186,33 +186,9 @@ Ok so:
 
 \begin{equation}
 \begin{cases}
-x = C\_1\_{x} e^{t\lambda\_{1}} + C\_2\_{x} e^{t\lambda\_{2}}\\\\
-y = C\_1\_{y} e^{t\lambda\_{1}} + C\_2\_{y} e^{t\lambda\_{2}}\\\\
+x = C\_{1\_{x}} e^{t\lambda\_{1}} + C\_{2\_{x}} e^{t\lambda\_{2}}\\\\
+y = C\_{1\_{y}} e^{t\lambda\_{1}} + C\_{2\_{y}} e^{t\lambda\_{2}}\\\\
 \end{cases}
 \end{equation}
 
 constructing the characteristic equation, as desired.
-
-
-## method of undetermined coefficients {#method-of-undetermined-coefficients}
-
-\begin{equation}
-\dv{x}{t} = -2x+1
-\end{equation}
-
-The solution would be something like:
-
-\begin{equation}
-x = Ce^{-2t} + t
-\end{equation}
-
-Given the above result, we will now revert to \\(a \implies A\\), and recover what the true \\(\dv{x}{t}\\) should be:
-
-\begin{align}
-&v = e^{At}v\_0 \\\\
-\Rightarrow\ & \dv{v}{t} = \qty(\dv{t} e^{At})x\_0
-\end{align}
-
-(as constants remain constant).
-
-We now pull in the other expression we had from [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}}):
