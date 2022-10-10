@@ -7,8 +7,6 @@ draft = false
 
 [Projects Index]({{< relref "KBhprojects.md" >}}) is a [index]({{< relref "KBhzettlekasten_index.md" >}}) that contains a list of almost all projects for which I have ever worked on. Major categories are highlighted from chapter titles.
 
-****This index does not include my jobs****; it is meant to be a list of endeavors for which I had key designing or founding impact---not including many paid-jobs with an existing structure but including small one-off scripts and utilities.
-
 
 ## Research Projects {#research-projects}
 
