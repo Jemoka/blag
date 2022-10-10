@@ -4,7 +4,12 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-People have been trading [option]({{< relref "KBhoptions.md" >}})s for a very long time, but there wasn't a good way of quantify the value of an [option]({{< relref "KBhoptions.md" >}}). Let's first determine the variable.
+People have been trading [option]({{< relref "KBhoptions.md" >}})s for a very long time, but there wasn't a good way of quantify the value of an [option]({{< relref "KBhoptions.md" >}}).
+
+There are two main types of uses for [Black-Scholes Formula]({{< relref "KBhblack_scholes_formula.md" >}})
+
+1.  you can use all variables and determine the value of [option]({{< relref "KBhoptions.md" >}})s
+2.  you can get the price of [option]({{< relref "KBhoptions.md" >}})s being traded, then compute the $&sigma;$---the market's estimation of volatility (how much they want the [insurance policy]({{< relref "KBhoptions.md#analyze-options-as-insurance" >}}) that is the options)
 
 
 ## constituents {#constituents}
@@ -13,7 +18,7 @@ People have been trading [option]({{< relref "KBhoptions.md" >}})s for a very lo
 -   \\(X\\): exercise price
 -   \\(r\\): risk-free interest rate
 -   \\(T\\): maturity time
--   \\(\sigma\\): standard-deviation of log [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}})s
+-   \\(\sigma\\): standard-deviation of log [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}})s---"volatility"
 
 
 ## [Black-Scholes Formula]({{< relref "KBhblack_scholes_formula.md" >}}) for an [European "Call" Option]({{< relref "KBhoptions.md#american-vs-european-options" >}}) {#black-scholes-formula--kbhblack-scholes-formula-dot-md--for-an-european-call-option--kbhoptions-dot-md}
