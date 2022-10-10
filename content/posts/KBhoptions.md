@@ -28,6 +28,8 @@ The nice thing here is that little \\(Max\\) term. An [option]({{< relref "KBhop
 
 NOTE!!! \\(C\_{t}\\) at SMALL \\(t\\) is measured at \\(Max[0,S\_{\*T\*}, K}]\\), using \\(S\\) of LARGE \\(T\\). This is because, even when---currently---the stock is trading at $60, the right to buy the stock in \\(T\\) months for $70 is not worthless as the price may go up.
 
+To analyze options, we usually use the [Black-Scholes Formula]({{< relref "KBhblack_scholes_formula.md" >}}).
+
 
 ## American vs European Options {#american-vs-european-options}
 
