@@ -26,8 +26,6 @@ span(v\_{1}..v\_{m}) = \\{a\_1v\_1+\dots +a\_{m}v\_{m}:a\_1\dots a\_{m} \in \mat
 
 ### span is the smallest subspace containing all vectors in the list {#span-is-the-smallest-subspace-containing-all-vectors-in-the-list}
 
-Technique wise, this is not necessarily dissimilar to [sum of subspaces is the smallest subspace with both subspaces]({{< relref "KBhsum_of_subsets.md#sum-of-subspaces-is-the-smallest-subspace-with-both-subspaces" >}}): double containmentish.
-
 Part 1: that a [span]({{< relref "KBhspan.md" >}}) of a list of vectors is a [subspace]({{< relref "KBhsubspace.md" >}}) containing those [vector]({{< relref "KBhvector.md" >}})s
 
 By taking all \\(a\_{n}\\) as \\(0\\), we show that the additive identity exists.
@@ -46,6 +44,8 @@ By double-containment, a [subspace]({{< relref "KBhsubspace.md" >}}) is the smal
 ### spans {#spans}
 
 If \\(span(v\_1, \dots v\_{m})\\) equals \\(V\\), we say that \\(v\_1, \dots, v\_{m}\\) [spans](#spans) \\(V\\).
+
+NOTE! the two things have to be equal---if the [span]({{< relref "KBhspan.md" >}}) of a set of [vector]({{< relref "KBhvector.md" >}})s is _larger_ than \\(V\\), they do **not** span \\(V\\).
 
 
 ### length of linearly-independent list \\(\leq\\) length of spanning list {#length-of-linearly-independent-list-leq-length-of-spanning-list}
