@@ -39,6 +39,12 @@ with \\(a\_{m} \neq 0\\), the [degree](#degree-of-a-polynomial-deg-p) of it is \
 
 A polynomial \\(=0\\) is defined to have degree \\(-\infty\\)
 
+Of course, a polynomial with [degree](#degree-of-a-polynomial-deg-p) \\(n\\), times a [polynomial]({{< relref "KBhpolynomial.md" >}}) of degree \\(m\\), has degree \\(mn\\). We see that:
+
+\begin{equation}
+x^{n}x^{m} = x^{n+m}
+\end{equation}
+
 
 ### \\(\mathcal{P}(\mathbb{F})\\) {#mathcal-p--mathbb-f}
 
