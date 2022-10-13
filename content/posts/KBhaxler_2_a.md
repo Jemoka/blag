@@ -34,12 +34,13 @@ draft = false
 -   [\\(\mathcal{P}(\mathbb{F})\\) is a vector space over \\(\mathbb{F}\\)]({{< relref "KBhpolynomial.md#mathcal-p--mathbb-f--is-a-vector-space-over-mathbb-f" >}})
 -   the world famous [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) and its fun [issue]({{< relref "KBhlinear_dependence_lemma.md#issue" >}})
 -   [length of linearly-independent list \\(\leq\\) length of spanning list]({{< relref "KBhlinear_independence.md#length-of-linearly-independent-list-leq-length-of-spanning-list" >}})
+-   [subspaces of inite-dimensional vector spaces is finite dimensional]({{< relref "KBhsubspace.md#finite-dimensional-subspaces" >}})
 
 
 ## Questions for Jana {#questions-for-jana}
 
 -   ~~obviously [polynomial]({{< relref "KBhpolynomial.md" >}})s are non-linear structures; under what conditions make them nice to work with in linear algebra?~~
--   what is the "obvious way" to change [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s part \\(b\\) to make \\(v\_1=0\\) work?
+-   ~~what is the "obvious way" to change [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s part \\(b\\) to make \\(v\_1=0\\) work?~~
 -   for the [finite-dimensional subspaces]({{< relref "KBhsubspace.md#finite-dimensional-subspaces" >}}) proof, though we know that the process terminates, how do we know that it terminates at a [spanning]({{< relref "KBhspan.md#spans" >}}) list of \\(U\\) and not just a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(U\\)?
 -   direct sum and linear independence related; how exactly?
 
