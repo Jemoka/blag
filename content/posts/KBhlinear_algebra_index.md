@@ -51,6 +51,7 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 ## 2 {#2}
 
 -   [Axler 2.A]({{< relref "KBhaxler_2_a.md" >}})
+-   [Axler 2.B]({{< relref "KBhaxler_2_b.md" >}})
 
 
 ## 3 {#3}

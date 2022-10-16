@@ -327,20 +327,20 @@ z = var("z")
 N(x) = 1/sqrt(2*pi)*definite_integral(e^(-z^2/2), z, -infinity, x)
 ```
 
-We will then leverage the Euopean call Black-Shoes model to calculate the expected put price. We first instantiate variables \\(T\\), and we will set current time to be \\(0\\).
+We will then leverage the Euopean call Black-Scholes model to calculate the optimal put price. We first instantiate variables \\(T\\), and we will set current time to be \\(0\\).
 
-We will use \\(v\\) for \\(\sigma\\), the volatility of the security. We will use \\(S\\) for current price. Lastly, we define \\(C\\) to be our call price. We will call \\(r\\) our risk-free rate.
+We will use \\(v\\) for \\(\sigma\\), the volatility of the security. We will use \\(S\\) for current price. Lastly, we define \\(P\\) to be our put price. We will call \\(r\\) our risk-free rate.
 
 To determine the discount factor, we first implement symbolically our expression for desired strike price.
 
 ```sage
-v,T,S,C,r = var("v T S C r")
-K = S+C
+v,T,S,P,r = var("v T S P r")
+K = S+P
 K
 ```
 
 ```text
-C + S
+P + S
 ```
 
 Great. Now we will implement our discount factors.
@@ -352,8 +352,19 @@ d1, d2
 ```
 
 ```text
-(1/2*((v^2 + 2*r)*T + 2*log(S/(C + S)))*sqrt(T)/v,
- -T*v + 1/2*((v^2 + 2*r)*T + 2*log(S/(C + S)))*sqrt(T)/v)
+(1/2*((v^2 + 2*r)*T + 2*log(S/(P + S)))*sqrt(T)/v,
+ -T*v + 1/2*((v^2 + 2*r)*T + 2*log(S/(P + S)))*sqrt(T)/v)
 ```
 
-And lastly, we the
+And lastly, we will implement the Black-Scholes expression for puts as a logical expression.
+
+```sage
+expr = P == N(-d2)*K*e^(-r*T)-N(-d1)*S
+expr
+```
+
+\begin{equation}
+P = \frac{{\left({\left(\operatorname{erf}\left(\frac{\sqrt{2} {\left(T v^{2} + 2 \\, T r + 2 \\, \log\left(\frac{S}{P + S}\right)\right)} \sqrt{T}}{4 \\, v}\right) - 1\right)} e^{\left(T r\right)} - \operatorname{erf}\left(-\frac{\sqrt{2} {\left(2 \\, T v^{2} - {\left(T v^{2} + 2 \\, T r + 2 \\, \log\left(\frac{S}{P + S}\right)\right)} \sqrt{T}\right)}}{4 \\, v}\right) + 1\right)} S}{\operatorname{erf}\left(-\frac{\sqrt{2} {\left(2 \\, T v^{2} - {\left(T v^{2} + 2 \\, T r + 2 \\, \log\left(\frac{S}{P + S}\right)\right)} \sqrt{T}\right)}}{4 \\, v}\right) + 2 \\, e^{\left(T r\right)} - 1}
+\end{equation}
+
+Numerical solutions to this expression---fitting for each of the values from before---would then indicate the correct price of the option to generate the hedging effect desired.
