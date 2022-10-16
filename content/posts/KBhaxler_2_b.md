@@ -24,3 +24,5 @@ I mean its a chapter on [bases]({{< relref "KBhbasis.md" >}}) not sure what you 
 
 
 ## Questions for Jana {#questions-for-jana}
+
+-   Is the [subspace]({{< relref "KBhsubspace.md" >}}) [direct sum]({{< relref "KBhdirect_sum.md" >}}) [proof]({{< relref "KBhproof.md" >}}) a unique relationship? That is, is every complement \\(W\\) for each \\(U \subset  V\\) unique?

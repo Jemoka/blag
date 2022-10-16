@@ -116,3 +116,36 @@ As the intersection of \\(U\\) and \\(V\\) is \\(0\\), \\(u=w=0\\). Therefore, t
 ### [direct sum]({{< relref "KBhdirect_sum.md" >}}) proofs are not pairwise! {#direct-sum--kbhdirect-sum-dot-md--proofs-are-not-pairwise}
 
 Those two proofs above only deal with pairs of [sum of subsets]({{< relref "KBhsum_of_subsets.md" >}}). If you have multiple subsets, they don't apply!
+
+
+### every [subspace]({{< relref "KBhsubspace.md" >}}) of \\(V\\) is a part of a [direct sum]({{< relref "KBhdirect_sum.md" >}}) equaling to \\(V\\) {#every-subspace--kbhsubspace-dot-md--of-v-is-a-part-of-a-direct-sum--kbhdirect-sum-dot-md--equaling-to-v}
+
+For every [subspace]({{< relref "KBhsubspace.md" >}}) \\(U\\) of a ****finite-dimensional**** \\(V\\), there is a [subspace]({{< relref "KBhsubspace.md" >}}) \\(W\\) of \\(V\\) for which \\(V = U \oplus W\\).
+
+Because \\(V\\) is defined to be [finite-dimensional]({{< relref "KBhfinite_dimensional_vector_space.md" >}}), and the fact that a [finite-dimensional subspace]({{< relref "KBhsubspace.md#finite-dimensional-subspaces" >}}) is [finite-dimensional]({{< relref "KBhfinite_dimensional_vector_space.md" >}}), \\(U\\) is [finite-dimensional]({{< relref "KBhfinite_dimensional_vector_space.md" >}}).
+
+Therefore, because [every finite-dimensional vector space has a basis]({{< relref "KBhfinite_dimensional_vector_space.md#every-id-4ed27ed5-4edc-4ef4-afd7-9b8e3bcd9b96-finite-dimensional-vector-space-has-a-id-f88170b1-08b5-48a7-a7b5-1ace768e7b28-basis" >}}), \\(U\\) has a basis \\(u\_1, \dots u\_{m}\\).
+
+Because [bases]({{< relref "KBhbasis.md" >}}) are [linearly independent]({{< relref "KBhlinear_independence.md" >}}), and \\(U \subset V\\), \\(u\_1, \dots u\_{m}\\) is a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\).
+
+Because [a linearly independent list expends to a basis]({{< relref "KBhbasis.md#a-id-45384b28-f1e3-4fb1-aeb2-21c875834744-linearly-independent-list-expends-to-a-id-f88170b1-08b5-48a7-a7b5-1ace768e7b28-basis" >}}), we can construct \\(u\_1, \dots u\_{m}, w\_{1}, \dots w\_{n}\\) as the [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\). We will construct a \\(W = span(w\_1, \dots w\_{n})\\) --- the space formed as the [span]({{< relref "KBhspan.md" >}}) of the "extension" vectors to make the [basis]({{< relref "KBhbasis.md" >}}) in \\(V\\).
+
+Because the list \\(u\_{j}\dots w\_{k}\\) we made is a [basis]({{< relref "KBhbasis.md" >}}) in \\(V\\), \\(U+W=V\\).
+
+You can see this because every element \\(v \in V\\) can be constructed with a [linear combination]({{< relref "KBhlinear_combination.md" >}}) \\(u\_1, \dots u\_{m}, w\_{1}, \dots w\_{n}\\) (again, because this list shown to be a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\) therefore it [span]({{< relref "KBhspan.md" >}})s \\(V\\).) Then, to show that \\(U+W=V\\), we can collapse \\(a\_{1}u\_1\dots + a\_{m}u\_{m}=u \in U\\), and \\(c\_{1}w\_1 \dots +c\_{m}w\_{m} = w \in W\\). Hence, every element \\(v \in V\\) can be constructed by some \\(u \in U + w \in W\\), making \\(U+W=V\\).
+
+Now, we have to show that the combination is a [direct sum]({{< relref "KBhdirect_sum.md" >}}). There is a few ways of going about this, the one presented by [Axler]({{< relref "KBhlinear_algebra_index.md" >}}) is leveraging the fact that [a sum of subsets is only a direct sum IFF their intersection is set containing \\(0\\)](#a-sum-of-subsets--kbhsum-of-subsets-dot-md--is-only-a-direct-sum--kbhdirect-sum-dot-md--iff--kbhequivalence-dot-md--their-intersection-is-set-containing-0)---that \\(U \cap W = \\{0\\}\\).
+
+Given some element \\(v\\) that lives in the intersection between \\(U\\) and \\(W\\), it must be formed as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of two [linearly independent]({{< relref "KBhlinear_independence.md" >}}) lists (as \\(u\_j, \dots w\_{j}\\) is a [basis]({{< relref "KBhbasis.md" >}}), they are [linearly independent]({{< relref "KBhlinear_independence.md" >}}).)
+
+Intuition: if an non-zero element lives in the intersection between two [linearly independent]({{< relref "KBhlinear_independence.md" >}}) lists which together is still [linearly independent]({{< relref "KBhlinear_independence.md" >}}), it must be able to be written by a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of other elements of that [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list to live in the intersection of the two lists---which is absurd (violates the definition of [linearly dependent]({{< relref "KBhlinear_independence.md#linearly-dependent" >}})). The only element for which this is an exception is \\(0\\).
+
+Actual proof:
+
+suppose \\(v \in U \cap W\\), so \\(v = a\_1u\_1\dots +a\_{m}v\_{m}\\) as well as \\(v=b\_1w\_{1} + \dots b\_{n}w\_{n}\\). Subtracting the two lists results in:
+
+\begin{equation}
+0 = a\_1u\_1+ \dots a\_{m} u\_{m} - b\_1w\_1+ \dots +b\_{n}w\_{n}
+\end{equation}
+
+having already declared this list [linearly independent]({{< relref "KBhlinear_independence.md" >}}), we see that each scalar \\(a\_1, \dots -b\_{n}\\) must equal to \\(0\\) for this expression. Therefore, the intersection \\(v\\) must be \\(\\{0\\}\\) as \\(0u\_1 + \dots +0u\_{m}=0\\).
