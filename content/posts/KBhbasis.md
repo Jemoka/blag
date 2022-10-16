@@ -79,7 +79,12 @@ Of course, we are given that \\(v\_1, \dots v\_{n}\\) uniquely constructs each \
 By definition of [linear independence]({{< relref "KBhlinear_independence.md" >}}), then, \\(v\_1, \dots v\_{n}\\) is [linearly independent]({{< relref "KBhlinear_independence.md" >}}). Having constructed that \\(v\_1, \dots v\_{n}\\) is both a [spanning]({{< relref "KBhspan.md#spans" >}}) set in \\(V\\) and are [linearly independent]({{< relref "KBhlinear_independence.md" >}}), we have that they are a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\). \\(\blacksquare\\)
 
 
-### all [spanning]({{< relref "KBhspan.md#spans" >}}) lists contains a [basis]({{< relref "KBhbasis.md" >}}) of which you are [spanning]({{< relref "KBhspan.md#spans" >}}) {#all-spanning--kbhspan-dot-md--lists-contains-a-basis--kbhbasis-dot-md--of-which-you-are-spanning--kbhspan-dot-md}
+### Dualing Basis Construction {#dualing-basis-construction}
+
+These are two results that says: "you can build up a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list to a [basis]({{< relref "KBhbasis.md" >}}) or you can pluck away a [spanning]({{< relref "KBhspan.md#spans" >}}) list to a [basis]({{< relref "KBhbasis.md" >}})".
+
+
+#### all [spanning]({{< relref "KBhspan.md#spans" >}}) lists contains a [basis]({{< relref "KBhbasis.md" >}}) of which you are [spanning]({{< relref "KBhspan.md#spans" >}}) {#all-spanning--kbhspan-dot-md--lists-contains-a-basis--kbhbasis-dot-md--of-which-you-are-spanning--kbhspan-dot-md}
 
 Every [spanning]({{< relref "KBhspan.md#spans" >}}) list in \\(V\\) contains the [basis]({{< relref "KBhbasis.md" >}}) (and possibly some more) in \\(V\\).
 
@@ -87,21 +92,35 @@ Read: "apply [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md
 
 Begin with a [spanning]({{< relref "KBhspan.md#spans" >}}) list \\(v\_1, \dots v\_{m}\\) of \\(V\\). We run a for loop for the list.
 
+<!--list-separator-->
 
-#### Step 0: {#step-0}
+-  Step 0:
 
-If \\(v\_1=0\\) (i.e. \\(v\_1 \in span(\\{\\})\\)), delete \\(v\_1\\). Otherwise, do nothing.
+    If \\(v\_1=0\\) (i.e. \\(v\_1 \in span(\\{\\})\\)), delete \\(v\_1\\). Otherwise, do nothing.
+
+<!--list-separator-->
+
+-  Step \\(j\\):
+
+    If \\(v\_{j}\\) is in \\(span(v\_1, \dots v\_{j-1})\\), \\(v\_{j}\\) satisfies the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s first condition, and therefore naturally satisfies the second condition (removal from list keeps the same [span]({{< relref "KBhspan.md" >}}) because \\(v\_{j}\\) can just be rewritten from \\(v\_1, \dots v\_{j-1}\\)).
+
+    So we remove \\(v\_{j}\\) if it is indeed in the span of the previous vectors. By the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}), the new list [spans]({{< relref "KBhspan.md#spans" >}}) the same space the old list.
+
+<!--list-separator-->
+
+-  Conclusion
+
+    By the end of this process, no vectors left in the list will satisfy the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) (read: we got rid of all of them.) Therefore, the list is [linearly independent]({{< relref "KBhlinear_independence.md" >}}). However, every step of the way the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) ensures that the new list [spans]({{< relref "KBhspan.md#spans" >}}) the same space; therefore, the new list still [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\). Having constructed a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list that [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\), we declare the new list as a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\).
+
+    As all we did was pluck vectors out of the old list, the new list is a sublist of the old list. This means that the [spanning]({{< relref "KBhspan.md#spans" >}}) list (old list) contains the new list, which is a basis. \\(\blacksquare\\)
 
 
-#### Step \\(j\\): {#step-j}
+#### a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list expends to a [basis]({{< relref "KBhbasis.md" >}}) {#a-linearly-independent--kbhlinear-independence-dot-md--list-expends-to-a-basis--kbhbasis-dot-md}
 
-If \\(v\_{j}\\) is in \\(span(v\_1, \dots v\_{j-1})\\), \\(v\_{j}\\) satisfies the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}})'s first condition, and therefore naturally satisfies the second condition (removal from list keeps the same [span]({{< relref "KBhspan.md" >}}) because \\(v\_{j}\\) can just be rewritten from \\(v\_1, \dots v\_{j-1}\\)).
+Every [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list of [vector]({{< relref "KBhvector.md" >}})s in [finite-dimensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}})s can be extended to a basis.
 
-So we remove \\(v\_{j}\\) if it is indeed in the span of the previous vectors. By the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}), the new list [spans]({{< relref "KBhspan.md#spans" >}}) the same space the old list.
+Recall first that [every finite-dimensional vector space has a basis]({{< relref "KBhfinite_dimensional_vector_space.md#every-id-4ed27ed5-4edc-4ef4-afd7-9b8e3bcd9b96-finite-dimensional-vector-space-has-a-id-f88170b1-08b5-48a7-a7b5-1ace768e7b28-basis" >}}).
 
+Let's begin with a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list in \\(V\\) \\(u\_1, \dots u\_{m}\\). Let's recruit also a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\): \\(w\_{1}, \dots w\_{m}\\).
 
-#### Conclusion {#conclusion}
-
-By the end of this process, no vectors left in the list will satisfy the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) (read: we got rid of all of them.) Therefore, the list is [linearly independent]({{< relref "KBhlinear_independence.md" >}}). However, every step of the way the [Linear Dependence Lemma]({{< relref "KBhlinear_dependence_lemma.md" >}}) ensures that the new list [spans]({{< relref "KBhspan.md#spans" >}}) the same space; therefore, the new list still [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\). Having constructed a [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list that [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\), we declare the new list as a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\).
-
-As all we did was pluck vectors out of the old list, the new list is a sublist of the old list. This means that the [spanning]({{< relref "KBhspan.md#spans" >}}) list (old list) contains the new list, which is a basis. \\(\blacksquare\\)
+Naturally: \\(u\_1, \dots u\_{m}, w\_1, \dots w\_{m}\\) [spans]({{< relref "KBhspan.md#spans" >}}) \\(V\\) (as the \\(w\\) vectors already [span]({{< relref "KBhspan.md" >}}) \\(V\\)). We will now apply the fact that [all spanning lists contains a basis of which you are spanning](#all-spanning--kbhspan-dot-md--lists-contains-a-basis--kbhbasis-dot-md--of-which-you-are-spanning--kbhspan-dot-md) (the order of \\(u\\) vectors first and \\(w\\) vectors second ensuring that you try to remove the \\(w\\), and, as \\(u\\) are [linearly independent]({{< relref "KBhlinear_independence.md" >}}), none of them will be removed) to get back a [basis]({{< relref "KBhbasis.md" >}}) in \\(V\\) consisting of all \\(u\\) and some \\(w\\). \\(\blacksquare\\)
