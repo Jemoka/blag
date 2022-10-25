@@ -89,3 +89,7 @@ We then try to plug stuff into that Euler-Lagrange expression. We can calculate 
 Finally, then:
 
 {{< figure src="/ox-hugo/2022-10-25_00-33-15_screenshot.png" >}}
+
+literally... the end. We just move stuff around and that's literally it.
+
+{{< figure src="/ox-hugo/2022-10-25_00-33-34_screenshot.png" >}}
