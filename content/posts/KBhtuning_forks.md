@@ -80,6 +80,8 @@ We are really worried about two different things here.
 
     {{< figure src="/ox-hugo/2022-09-25_16-17-35_screenshot.png" >}}
 
+[Lagrangian Mechanics]({{< relref "KBhlagrangian_mechanics.md" >}})
+
 
 ## experiments to do in the end {#experiments-to-do-in-the-end}
 
