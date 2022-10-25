@@ -44,3 +44,8 @@ Begin with a [spanning]({{< relref "KBhspan.md#spans" >}}) list in \\(V\\) of le
 As we know all [basis]({{< relref "KBhbasis.md" >}}) in \\(V\\) must have length \\(\dim V\\), and the list is already length \\(\dim V\\), no reduction is needed to form a [basis]({{< relref "KBhbasis.md" >}}).
 
 As [all spanning lists contains a basis of which you are spanning]({{< relref "KBhbasis.md#all-id-e8109222-5548-4d08-b6df-8f933f2dbb36-spanning-lists-contains-a-id-f88170b1-08b5-48a7-a7b5-1ace768e7b28-basis-of-which-you-are-id-e8109222-5548-4d08-b6df-8f933f2dbb36-spanning" >}}), we conclude that the list is a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\), as desired \\(\blacksquare\\).
+
+
+### [dimension]({{< relref "KBhdimension.md" >}}) of sums {#dimension--kbhdimension-dot-md--of-sums}
+
+See [dimension of sums]({{< relref "KBhsum_of_subsets.md#id-07b04334-5ae7-457c-bc3e-92feed8fc2cc-dimension-of-sums" >}})
