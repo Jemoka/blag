@@ -17,6 +17,8 @@ draft = false
 -   [Length of Basis Doesn't Depend on Basis]({{< relref "KBhlength_of_basis_doesn_t_depend_on_basis.md" >}})
 -   lists of right length are [basis]({{< relref "KBhbasis.md" >}})
     -   [linearly independent list of length dim V are a basis of V]({{< relref "KBhdimension.md#linearly-independent-list-of-length-dim-v-are-a-basis-of-v" >}})
+    -   [spanning list of length of dim V are a basis of V]({{< relref "KBhdimension.md#spanning-list-of-length-of-dim-v-are-a-basis-of-v" >}})
+-   [dimension of sums]({{< relref "KBhsum_of_subsets.md#id-07b04334-5ae7-457c-bc3e-92feed8fc2cc-dimension-of-sums" >}})
 
 
 ## Questions for Jana {#questions-for-jana}
