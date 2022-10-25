@@ -73,3 +73,19 @@ We begin with this Euler-Lagrange expression:
 these are a series of expressions derived to semiautomatically solve Largrangian expressions of expressions derived to semiautomatically solve Largrangian expressions: they are the pre-figured-out [stationary-action principle]({{< relref "KBhstationary_action_principle.md" >}}) "stationary points" with the least energy.
 
 We want to create a [Lagrangian]({{< relref "KBhlagrangian_mechanics.md" >}}) of our system, and plug it in there.
+
+We define the [Lagrangian]({{< relref "KBhlagrangian_mechanics.md" >}}) for this system to be
+
+{{< figure src="/ox-hugo/2022-10-25_00-31-04_screenshot.png" >}}
+
+Recall that the [Lagrangian]({{< relref "KBhlagrangian_mechanics.md" >}}) is defined by all kinetic energy sum minus all potential energy sum. Will investigate deeper later, but the first term is obviously the kinetic energy (1/2 mass-density velocity squared), then the subtracted potential energy term is the spring potential of the system (1/2 kx^2).
+
+Then there's this third term. No idea.
+
+We then try to plug stuff into that Euler-Lagrange expression. We can calculate for ourselves that:
+
+{{< figure src="/ox-hugo/2022-10-25_00-33-06_screenshot.png" >}}
+
+Finally, then:
+
+{{< figure src="/ox-hugo/2022-10-25_00-33-15_screenshot.png" >}}
