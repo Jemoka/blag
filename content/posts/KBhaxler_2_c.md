@@ -6,6 +6,10 @@ draft = false
 
 ## Key Sequence {#key-sequence}
 
+-   Because [Length of Basis Doesn't Depend on Basis]({{< relref "KBhlength_of_basis_doesn_t_depend_on_basis.md" >}}), we defined [dimension]({{< relref "KBhdimension.md" >}}) as the same, shared length of [basis]({{< relref "KBhbasis.md" >}}) in a [vector space]({{< relref "KBhvector_space.md" >}})
+-   We shown that lists of the right length (i.e. dim that space) that is _either_ [spanning]({{< relref "KBhdimension.md#spanning-list-of-length-of-dim-v-are-a-basis-of-v" >}}) or [linearly independent]({{< relref "KBhdimension.md#linearly-independent-list-of-length-dim-v-are-a-basis-of-v" >}}) must be a basis---"half is good enough" theorems
+-   we also shown that \\(dim(U\_1+U\_2) = dim(U\_1)+dim(U\_2) - dim(U\_1 \cap U\_2)\\): [dimension of sums]({{< relref "KBhsum_of_subsets.md#id-07b04334-5ae7-457c-bc3e-92feed8fc2cc-dimension-of-sums" >}})
+
 
 ## New Definitions {#new-definitions}
 
