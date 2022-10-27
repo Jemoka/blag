@@ -6,35 +6,43 @@ draft = false
 
 [CAPM]({{< relref "KBhcapm.md" >}}) is a method of portfolio selection analysis which focuses on _maximizing_ [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) given some fixed variance.
 
-The version of [CAPM]({{< relref "KBhcapm.md" >}}), as presented here, assumes that there is a non-zero risk-free-rate (i.e. savings interest.)
 
-Let's define some \\(\beta\_{im}\\):
+## Sharpe Ratio {#sharpe-ratio}
 
-\begin{equation}
-\beta\_{im} := \frac{Cov[R\_{i}, R\_{m}]}{Var[R\_{m}]}
-\end{equation}
+The [Sharpe Ratio](#sharpe-ratio) is a measure of the risk-adjusted performance of an asset---given the rate of return of some risk-free asset.
 
-And construct:
+It is defined as:
 
 \begin{equation}
-E[R\_{i}] = R\_{f} + \beta\_{im}(E[R\_{m}]-R\_{f})
+S\_{a} = \frac{E[R\_{a}-R\_{b}]}{\sigma\_{a}}
 \end{equation}
 
-where, \\(R\_{i}\\) is the return of asset \\(i\\), \\(R\_{m}\\) is the return of the market portfolio, and \\(R\_{f}\\) is the risk-free rate.
+where, \\(R\_{a}\\) is the raw [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) of the asset, \\(R\_{b}\\) is the risk-free rate of [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}), and \\(\sigma\_{a}\\) is the standard deviation of the asset "excess" return (i.e. standard deviation actual return - expected return---how much extra there is).
 
-This is a bit of a scary result which is hard to interpreter. Given we are dealing with the **change** in the pricing, it is actually easier to model the change in value. That is, we have that:
+
+## Capital Market Line {#capital-market-line}
+
+The [Capital Market Line](#capital-market-line) is a line that uses the [Sharpe Ratio](#sharpe-ratio) of a **market** as a whole (how the market is performing against the risk-free rate) to analyze the performance of portfolio. It plots the performance of an "optimal portfolio" in a given market.
+
+Let's construct first the [Sharpe Ratio](#sharpe-ratio) of a hypothetical market:
 
 \begin{equation}
-Z\_{i} := R\_{i}-R\_{f}
+\frac{R\_{t}-r\_{f}}{\sigma\_{t}}
 \end{equation}
 
-Now, we can rewrite our results above as simply:
+where \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, and \\(\sigma\_{t}\\) is standard-deviation of the market returns.
+
+We will multiply this value by the standard-deviation of your portfolio to calculate what the market claims should be your expected return. Then, we shift the line by the risk-free rate (as you are expected also to get that rate back in your return.
+
+So an "effecient" portfolio should behave like:
 
 \begin{equation}
-\begin{cases}
-E[Z\_{i}] = \beta\_{im}E[Z\_{m}] \\\\
-\beta\_{im} = \frac{Cov[Z\_{i}, Z\_{m}]}{Var(Z\_{mr})}
-\end{cases}
+R\_{p} = r\_{f}+\frac{R\_{T}-r\_{f}}{\sigma\_{T}}\sigma\_{p}
 \end{equation}
 
-This is defined explicitly
+(the risk-free rate, plus how much you are expected to get minus the r
+
+{{< figure src="/ox-hugo/2022-10-27_10-35-03_screenshot.png" >}}
+
+
+## Tangency Portfolio {#tangency-portfolio}
