@@ -498,7 +498,13 @@ Given both \(e_1\) and \(e_2\) are identities, we have that:
 as well as
 \begin{equation} a * e_2 = a \end{equation}
 Therefore, we have by the transitive property that:
-\begin{equation} a * e_1 = a*e_2 \end{equation}</description></item><item><title>NUS-MATH570 Problem Set 1</title><link>https://www.jemoka.com/posts/kbhnus_math570_problem_set_1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math570_problem_set_1/</guid><description>We have:
+\begin{equation} a * e_1 = a*e_2 \end{equation}</description></item><item><title>NUS-MATH570 Circuits</title><link>https://www.jemoka.com/posts/kbhnus_math570_circuts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math570_circuts/</guid><description>We declare known battery voltage \(E(t)\).
+Here are the \(y\) values.
+\begin{equation} \begin{cases} \dv{x_1}{t} = y_{4}\\ \dv{x_2}{t} = y_{3}\\ \dv{x_3}{t} = y_{1}\\ \dv{x_4}{t} = y_{2}\\ \end{cases} \end{equation}
+And here are some of the \(x\) values.
+\begin{equation} \begin{cases} \dv{x_4}{t}=-\frac{2}{RC}x_2-\frac{1}{RC}x_{3}-\frac{2E(t)}{R} \\ \dv{y_1}{t}=-\frac{1}{LC}x_2-\frac{E(t)}{C} \\ \dv{y_4}{t} = -\frac{R}{L}y_2-\frac{2E(t)}{L} \end{cases} \end{equation}
+Right off the bat, we can see that we can make one substitution. That, given:
+\begin{equation} \begin{cases} \dv{x_4}{t}=-\frac{2}{RC}x_2-\frac{1}{RC}x_{3}-\frac{2E(t)}{R} \\ \dv{x_4}{t} = y_{2} \end{cases} \end{equation}</description></item><item><title>NUS-MATH570 Problem Set 1</title><link>https://www.jemoka.com/posts/kbhnus_math570_problem_set_1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math570_problem_set_1/</guid><description>We have:
 \begin{equation} \frac{2y^{2}}{9-x^{2}} + y \dv{y}{x} + \frac{3y}{2-x} = 0 \end{equation}
 We want to get rid of things; let&amp;rsquo;s begin by dividing the whole thing by \(y\).
 \begin{equation} \frac{2y}{9-x^{2}} + \dv{y}{x} + \frac{3}{2-x} = 0 \end{equation}
