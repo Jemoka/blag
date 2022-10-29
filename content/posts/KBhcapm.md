@@ -6,7 +6,13 @@ draft = false
 
 [CAPM]({{< relref "KBhcapm.md" >}}) is a method of portfolio selection analysis which focuses on _maximizing_ [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) given some fixed variance.
 
-It deals with optimizing the [Capital Market Line](#capital-market-line).
+It deals with optimizing the [Capital Market Line](#capital-market-line), given here:
+
+\begin{equation}
+E[R\_{p}] = r\_{f}+\frac{E[R\_{T}]-r\_{f}}{\sigma\_{T}}\sigma\_{p}
+\end{equation}
+
+Which describes \\(E[R\_{p}]\\), the expected return of an optimal portfolio in a market, given, \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, and \\(\sigma\_{t}\\) is standard-deviation of the market returns.
 
 
 ## Sharpe Ratio {#sharpe-ratio}
