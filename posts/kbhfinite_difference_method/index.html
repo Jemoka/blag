@@ -1,0 +1,32 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Finite Difference Method</title><meta name=description content="The Finite Difference Method is a method of solving partial Differential Equations. It follows two steps:
+Develop discrete difference equations for the desired expression Algebraically solve these equations to yield stepped solutions https://www.youtube.com/watch?v=ZSNl5crAvsw
+Follow Along We will try to solve:
+\begin{equation} \pdv{p(t,x)}{t} = \frac{1}{2}\pdv[2]{p(t,x)}{x} \end{equation}
+To aid in notation, let us:
+\begin{equation} p(t_{i}, x_{j}) := p_{i,j} \end{equation}
+to represent one distinct value of our function \(p\).
+Let&rsquo;s begin by writing our expression above via our new notation:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Finite Difference Method</h1></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#follow-along>Follow Along</a></li></ul></nav></aside><main><article><div><p>The <a href=/posts/kbhfinite_difference_method/>Finite Difference Method</a> is a method of solving partial <a href=/posts/kbhdiffeq_intro/>Differential Equations</a>. It follows two steps:</p><ol><li>Develop discrete <a href=/posts/kbhdifference_equation/>difference equation</a>s for the desired expression</li><li>Algebraically solve these equations to yield stepped solutions</li></ol><p><a href="https://www.youtube.com/watch?v=ZSNl5crAvsw">https://www.youtube.com/watch?v=ZSNl5crAvsw</a></p><h2 id=follow-along>Follow Along</h2><p>We will try to solve:</p><p>\begin{equation}
+\pdv{p(t,x)}{t} = \frac{1}{2}\pdv[2]{p(t,x)}{x}
+\end{equation}</p><p>To aid in notation, let us:</p><p>\begin{equation}
+p(t_{i}, x_{j}) := p_{i,j}
+\end{equation}</p><p>to represent one distinct value of our function \(p\).</p><p>Let&rsquo;s begin by writing our expression above via our new notation:</p><p>\begin{equation}
+\pdv{p_{i,j}}{t}= \frac{1}{2} \pdv[2]{p_{i,j}}{x}
+\end{equation}</p><p>Great. Now, let&rsquo;s think about the left side and try to turn it into a difference eqn:</p><p>What exactly is&mdash;</p><p>\begin{equation}
+\pdv{p_{i,j}}{t}
+\end{equation}</p><p>as a finite difference? Well, it is just:</p><p>\begin{equation}
+\frac{p_{i+1,j}-p_{i,{j}}}{\Delta t}
+\end{equation}</p><p>What about second partials?</p><p>Well, what is&mdash;</p><p>\begin{equation}
+\pdv[2]{p_{i,j}}{x}
+\end{equation}</p><p>It is:</p><p>\begin{equation}
+\frac{\pdv{p_{i,j+1}}{x}- \pdv{p_{i,j}}{x}}{\Delta x}
+\end{equation}</p><p>Expanding the top expressions even more difference expressions:</p><p>\begin{equation}
+\frac{\frac{p_{i,{j+2}}-p_{i,{j+1}}}{\Delta x}- \frac{p_{i,{j+1}}-p_{i,{j}}}{\Delta x}}{\Delta x}
+\end{equation}</p><p>This equals to:</p><p>\begin{equation}
+\frac{\frac{p_{i,{j+2}}-p_{i,{j+1}} - p_{i,{j+1}}+p_{i,{j}}}{(\Delta x)^{2}}
+\end{equation}</p><p>Finally, substitute this into our expression, then solve for some \(p_{{i+1}, j}\) in terms of \(p_{i, ?}\). We will treat the entire &ldquo;row&rdquo; of \(p_{i,?}\) as our initial condition, then solve for the rest + propagate forward.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
