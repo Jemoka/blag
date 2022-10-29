@@ -77,3 +77,17 @@ The one liner is: "the return of your portfolio should be the base return by ris
 There is a portfolio, which is named the [Tangency Portfolio](#tangency-portfolio). This portfolio is the tangent point between the [Capital Market Line](#capital-market-line) and the [Effecient Frontier](#minimum-variance-boundary).
 
 It represents the point where you can get the highest return given some risk, but also control the risk at the market's [Sharpe Ratio](#sharpe-ratio).
+
+
+## Black's CAPM {#black-s-capm}
+
+[CAPM]({{< relref "KBhcapm.md" >}}) depends on a risk-free asset. Black of [Black-Scholes Formula]({{< relref "KBhblack_scholes_formula.md" >}}) fame derived another formulation of CAPM which doesn't dependent on a risk-free asset.
+
+
+### Zero-Beta Portfolio {#zero-beta-portfolio}
+
+To work with [Black's CAPM](#black-s-capm), we first define \\(0m\\), the [Zero-Beta Portfolio](#zero-beta-portfolio) (used in the formula as \\(R\_{0m}\\), the return of the [Zero-Beta Portfolio](#zero-beta-portfolio)).
+
+It is defined to be the portfolio with the minimum variance of all portfolios not correlated with \\(m\\).
+
+{{< figure src="/ox-hugo/2022-10-29_16-52-14_screenshot.png" >}}
