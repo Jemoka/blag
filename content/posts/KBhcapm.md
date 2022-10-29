@@ -6,6 +6,8 @@ draft = false
 
 [CAPM]({{< relref "KBhcapm.md" >}}) is a method of portfolio selection analysis which focuses on _maximizing_ [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) given some fixed variance.
 
+It deals with optimizing the [Capital Market Line](#capital-market-line).
+
 
 ## Sharpe Ratio {#sharpe-ratio}
 
@@ -18,6 +20,21 @@ S\_{a} = \frac{E[R\_{a}-R\_{b}]}{\sigma\_{a}}
 \end{equation}
 
 where, \\(R\_{a}\\) is the raw [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) of the asset, \\(R\_{b}\\) is the risk-free rate of [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}), and \\(\sigma\_{a}\\) is the standard deviation of the asset "excess" return (i.e. standard deviation actual return - expected return---how much extra there is).
+
+
+## Minimum-Variance Boundary {#minimum-variance-boundary}
+
+For a given a weighted-average portfolio of stocks their waited averages, and correlations between the stocks you can draw this curvy curve. Let pink dots represent the two securities in your portfolio, and various curves highlighting possible linear combinations thereof---
+
+{{< figure src="/ox-hugo/2022-10-29_16-04-23_screenshot.png" >}}
+
+Let's observe the boundary conditions of this curve.
+
+If the two stocks are exactly negatively correlated, then the more risk you take the more return you have for one while less return you have for the other (hence, two straight divergent lines.)
+
+If you have an exactly correlated portfolio, the two assets will will form a line.
+
+The [Effecient Frontier](#minimum-variance-boundary) is the top half of this curve (i.e. higher risk/higher return is not a fun place to be, so that's an inefficient frontier.)
 
 
 ## Capital Market Line {#capital-market-line}
@@ -34,15 +51,23 @@ where \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, and
 
 We will multiply this value by the standard-deviation of your portfolio to calculate what the market claims should be your expected return. Then, we shift the line by the risk-free rate (as you are expected also to get that rate back in your return.
 
-So an "effecient" portfolio should behave like:
+So an "effecient" portfolio (getting the max expected return per unit risk as measured by the market [Sharpe Ratio](#sharpe-ratio)) should behave like:
 
 \begin{equation}
-R\_{p} = r\_{f}+\frac{R\_{T}-r\_{f}}{\sigma\_{T}}\sigma\_{p}
+E[R\_{p}] = r\_{f}+\frac{E[R\_{T}]-r\_{f}}{\sigma\_{T}}\sigma\_{p}
 \end{equation}
 
-(the risk-free rate, plus how much you are expected to get minus the r
+again, \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, and \\(\sigma\_{t}\\) is standard-deviation of the market returns.
 
-{{< figure src="/ox-hugo/2022-10-27_10-35-03_screenshot.png" >}}
+The one liner is: "the return of your portfolio should be the base return by risk-free rate, plus how much excess risk you are taking on (and therefore [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) you should be getting back by the [Sharpe Ratio](#sharpe-ratio))"
+
+(how much you are expected to get (i.e. market [Sharpe Ratio](#sharpe-ratio) times your portfolio volatility), shifted back up by the risk-free rate.
 
 
 ## Tangency Portfolio {#tangency-portfolio}
+
+{{< figure src="/ox-hugo/2022-10-27_10-35-03_screenshot.png" >}}
+
+There is a portfolio, which is named the [Tangency Portfolio](#tangency-portfolio). This portfolio is the tangent point between the [Capital Market Line](#capital-market-line) and the [Effecient Frontier](#minimum-variance-boundary).
+
+It represents the point where you can get the highest return given some risk, but also control the risk at the market's [Sharpe Ratio](#sharpe-ratio).

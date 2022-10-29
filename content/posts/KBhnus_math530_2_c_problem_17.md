@@ -11,7 +11,7 @@ Proof or give a counter example for the statement that:
 \begin{align}
 \dim\qty(U\_1+U\_2+U\_3) = &\dim U\_1+\dim U\_2+\dim U\_3\\\\
 &-\dim(U\_1 \cap U\_2) - \dim(U\_1 \cap U\_3) - \dim(U\_2 \cap U\_3) \\\\
-&+dim(U\_1 \cap U\_2 \cap U\_3)
+&+\dim(U\_1 \cap U\_2 \cap U\_3)
 \end{align}
 
 
@@ -72,7 +72,7 @@ For \\(U\_3\\) ---
 \end{equation}
 
 
-### counterexample by construction {#counterexample-by-construction}
+### constructing the counterexample {#constructing-the-counterexample}
 
 For both sections, recall that:
 
@@ -179,13 +179,13 @@ So: \\(\dim \qty(U\_1+U\_2+U\_3)=2\\)
     \begin{align}
     \dim &U\_1+\dim U\_2+\dim U\_3\\\\
     &-\dim(U\_1 \cap U\_2) - \dim(U\_1 \cap U\_3) - \dim(U\_2 \cap U\_3) \\\\
-    &+dim(U\_1 \cap U\_2 \cap U\_3)\\\\
+    &+\dim(U\_1 \cap U\_2 \cap U\_3)\\\\
     =1&+1+1-0-0-0+0 \\\\
     =3
     \end{align}
 
 
-#### constructing counterexample {#constructing-counterexample}
+### showing the counterexample {#showing-the-counterexample}
 
 We have now that:
 
@@ -198,7 +198,7 @@ But:
 \begin{align}
 \dim &U\_1+\dim U\_2+\dim U\_3\\\\
 &-\dim(U\_1 \cap U\_2) - \dim(U\_1 \cap U\_3) - \dim(U\_2 \cap U\_3) \\\\
-&+dim(U\_1 \cap U\_2 \cap U\_3)\\\\
+&+\dim(U\_1 \cap U\_2 \cap U\_3)\\\\
 =3
 \end{align}
 
@@ -209,7 +209,7 @@ So:
 \begin{align}
 \dim(U\_1+U\_2+U\_3) \neq  \dim &U\_1+\dim U\_2+\dim U\_3\\\\
 &-\dim(U\_1 \cap U\_2) - \dim(U\_1 \cap U\_3) - \dim(U\_2 \cap U\_3) \\\\
-&+dim(U\_1 \cap U\_2 \cap U\_3)\\\\
+&+\dim(U\_1 \cap U\_2 \cap U\_3)\\\\
 \end{align}
 
 Finishing the counter example. \\(\blacksquare\\)
