@@ -50,3 +50,15 @@ This renders the last expression:
 &= \qty(\frac{2}{LC}x\_2+\frac{1}{LC}x\_{3}+\frac{2E(t)}{L})-\frac{2E(t)}{L}  \\\\
 &=  \frac{2}{LC}x\_2+\frac{1}{LC}x\_{3}
 \end{align}
+
+So now, we have the final unused expressions:
+
+\begin{equation}
+\begin{cases}
+\dv{x\_1}{t} = y\_4 \\\\
+\dv{x\_2}{t} = y\_3 \\\\
+\dv{x\_{3}}{t} = y\_1 \\\\
+\dv{y\_1}{t} = -\frac{1}{LC}x\_2-\frac{E(t)}{C} \\\\
+\dv{y\_4}{t} = \frac{2}{LC}x\_2+\frac{1}{LC}x\_3
+\end{cases}
+\end{equation}

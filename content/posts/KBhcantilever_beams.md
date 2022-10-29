@@ -78,3 +78,8 @@ We can take two derivatives by location---
 \end{equation}
 
 where \\(\mu\\) is the mass density, \\(q(x)\\) is the force applied (in Newtons) by area. this is magic. Will come back to it.
+
+
+## Solving this? {#solving-this}
+
+See [Finite Difference Method]({{< relref "KBhfinite_difference_method.md" >}})
