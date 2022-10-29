@@ -11,3 +11,4 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-13 Tue&gt;</span></span> | [NUS-MATH530 Linear Vehicles]({{< relref "KBhnus_math530_linear_vehicles.md" >}})                   |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-15 Thu&gt;</span></span> | [NUS-MATH530 Plane and 1.B]({{< relref "KBhnus_math530_plane_and_1_b.md" >}})                       |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-27 Tue&gt;</span></span> | [NUS-MATH530 1.C Problem 23]({{< relref "KBhnus_math530_1_c_proof_preso.md" >}})                    |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-29 Sat&gt;</span></span> | [NUS-MATH530 2.C Problem 17]({{< relref "KBhnus_math530_2_c_problem_17.md" >}})                     |
