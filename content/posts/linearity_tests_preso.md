@@ -1,10 +1,10 @@
 +++
-title = "NUS-ECON320 Linearity Tests"
+title = "Linearity Tests"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-Let's begin. We want to create test for the linearity of a few assets, for whether or not they follow the CAPM.
+## CAPM, a Review {#capm-a-review}
 
 Note that we will be using the Sharpe-Linter version of CAPM:
 
@@ -19,6 +19,9 @@ E[R\_{i}-R\_{f}] = \beta\_{im} E[(R\_{m}-R\_{f})]
 Recall that we declare \\(R\_{f}\\) (the risk-free rate) to be non-stochastic.
 
 Let us begin. We will create a generic function to analyze some given stock.
+
+
+## Data Import {#data-import}
 
 We will first import our utilities
 
@@ -63,6 +66,9 @@ load_stock("LMT").head()
 4  11/13/2013 16:00:00  137.26
 ```
 
+
+## Raw Data {#raw-data}
+
 And now, let's load all three stocks, then concatenate them all into a big-ol DataFrame.
 
 ```python
@@ -99,34 +105,14 @@ df
 [2159 rows x 6 columns]
 ```
 
+
+## Log Returns {#log-returns}
+
 Excellent. Now, let's convert all of these values into daily log-returns (we don't really care about the actual pricing.)
 
 ```python
 log_returns = df[["NYSE", "TBill", "LMT", "TWTR", "MCD"]].apply(np.log, inplace=True)
 df.loc[:, ["NYSE", "TBill", "LMT", "TWTR", "MCD"]] = log_returns
-df
-```
-
-```text
-                     Date      NYSE     TBill       LMT      TWTR       MCD
-0      11/7/2013 16:00:00  9.202749  3.263084  4.914124  3.804438  4.576771
-1      11/8/2013 16:00:00  9.213549  3.312730  4.928050  3.729301  4.574814
-2     11/11/2013 16:00:00  9.214626  3.314550  4.921075  3.758872  4.575638
-3     11/12/2013 16:00:00  9.211324  3.320710  4.921658  3.735286  4.581492
-4     11/13/2013 16:00:00  9.218298  3.305054  4.921877  3.751854  4.586089
-...                   ...       ...       ...       ...       ...       ...
-2154  10/24/2022 16:00:00  9.562834  3.415758  6.087025  3.678829  5.530262
-2155  10/25/2022 16:00:00  9.577805  3.451890  6.085183  3.671225  5.518577
-2156  10/26/2022 16:00:00  9.584087  3.516310  6.089294  3.686627  5.522980
-2157  10/27/2022 16:00:00  9.586713  3.550479  6.092870  3.692871  5.514879
-2158  10/28/2022 16:00:00  9.602087  3.524889  6.094495  3.677819  5.513711
-
-[2159 rows x 6 columns]
-```
-
-We will now calculate the log daily returns. But before---the dates are no longer relavent here so we drop them.
-
-```python
 df
 ```
 
@@ -172,9 +158,10 @@ returns
 [2158 rows x 5 columns]
 ```
 
-We are now ready to run the correlation study.
 
-Let's now subtract everything by the risk-free rate (dropping the rfr itself):
+## Risk-Free Excess {#risk-free-excess}
+
+Recall that we want to be working with the excess-to-risk-free rates \\(R\_{T}-R\_{f}\\), where \\(R\_{T}\\) is some security. So, we will go through and subtract everything by the risk-free rate (and drop the RFR itself):
 
 ```python
 risk_free_excess = returns.drop(columns="TBill").apply(lambda x: x-returns.TBill)
@@ -201,13 +188,16 @@ risk_free_excess
 
 ## Actual Regression {#actual-regression}
 
-It is now time to perform the actual linear regression!
+It is now time to perform the actual linear regression! We will use statsmodels' Ordinary Least Squares API to make our work easier, but we will go through a full regression in the end.
 
 ```python
 import statsmodels.api as sm
 ```
 
-Let's work with Lockheed Martin first, fitting an ordinary least squares. Remember that the OLS functions reads the _endogenous_ variable first (for us, the return of the asset.)
+
+## CAPM Regression: Lockheed Martin {#capm-regression-lockheed-martin}
+
+Let's work with Lockheed Martin first for regression, fitting an ordinary least squares. Remember that the OLS functions reads the _endogenous_ variable first (for us, the return of the asset.)
 
 ```python
 # add a column of ones to our input market excess returns
@@ -239,7 +229,8 @@ NYSE           0.9449      0.008    114.552      0.000       0.929       0.961
 
 Based on the constants row, we can see that---within \\(95\\%\\) confidence---the intercept is generally \\(0\\) and CAPM applies. However, we do see a slight positive compared to the market. Furthermore, we can see that the regression has a beta value of \\(0.9449\\) --- according the CAPM model, it being _slightly_ undervarying that the market.
 
-We can continue with the other stocks.
+
+## CAPM Regression: MacDonald's {#capm-regression-macdonald-s}
 
 ```python
 # perform linreg
@@ -267,6 +258,9 @@ NYSE           0.9651      0.007    130.287      0.000       0.951       0.980
 ```
 
 Same thing as before, we are within \\(95\\%\\) confidence having a intercept of \\(0\\) (with a slight positive edge), and it looks like MacDonald's vary a little bit more than Lockheed Martin. The food industry is probably a tougher business than that in defense.
+
+
+## CAPM Regression: Twitter {#capm-regression-twitter}
 
 Lastly, to analyze the recently delisted Twitter!
 
@@ -298,7 +292,7 @@ NYSE           1.0173      0.021     48.549      0.000       0.976       1.058
 Evidently, Twitter is _much_ more variable. It looks like it has a nontrivial bias (the intercept being -0.001 being within the \\(95\\%\\) confidence band --- that the security is possibly significantly underperforming the CAPM expectation in the market.) Furthermore, we have a positive beta value: that the asset is more variable than the market.
 
 
-## manual regression {#manual-regression}
+## Manual Checking {#manual-checking}
 
 We can also use the betas formula to manually calculate what we _expect_ for the beta values (i.e. as if they were one IID random variable.)
 
@@ -351,14 +345,11 @@ dtype: float64
 Apparently, all of our assets swing less than the overall NYSE market! Especially Lockheed---it is only \\(94.4\\%\\) of the market variation. Furthermore, it is interesting to see that Twitter swings much more dramatically compared to the market.
 
 
-## Fund creation {#fund-creation}
+## Equal-Part Fund {#equal-part-fund}
 
 We will now create two funds with the three securities, one with equal parts and one which attempts to maximizes the bias (max returns) while minimizing the beta variance value compared to the market.
 
-
-### "Equal-Parts Fund" ("Fund 1") {#equal-parts-fund--fund-1}
-
-We will now create a fund in equal parts. Here it is:
+First, let's create a baseline fund in equal parts. Here it is:
 
 ```python
 fund_1_returns = returns.LMT + returns.TWTR + returns.MCD
@@ -402,7 +393,8 @@ fund_1_excess
 Length: 2158, dtype: float64
 ```
 
-And then perform a regression
+
+## Performance of the Equal-Part Fund {#performance-of-the-equal-part-fund}
 
 ```python
 # perform linreg
@@ -432,7 +424,7 @@ NYSE           1.1290      0.026     43.993      0.000       1.079       1.179
 Surprisingly, we have now created a **significantly** riskier investment that, though riskier, generates a much higher probability of reward (\\(+0.001\\) is now within the \\(99\\%\\) band!)
 
 
-### A Better Fund {#a-better-fund}
+## A More Optimized Fund {#a-more-optimized-fund}
 
 To me, this is the payoff of this assignment. We will now use CAPM to create the "best" fund combination---given some variance, the funds which match CAPM. To do this, let's create a generic linear combination of the assets.
 
@@ -481,6 +473,9 @@ Y
 
 We cast this type to a numpy array because we are about to perform some matrix operations upon it.
 
+
+## Optimizing the Optimized Fund: Linreg {#optimizing-the-optimized-fund-linreg}
+
 Now, let us perform the actual linear regression ourselves. Recall that the pseudoinverse linear regression estimator is:
 
 \begin{equation}
@@ -518,6 +513,9 @@ linear_model
 
 Excellent. So we now have two rows; the top row represents the "bias"---how much deviation there is from CAPM, and the bottom row represents the "rate"---the "beta" value which represents how much excess variance there is.
 
+
+## Optimizing the Optimized Fund: Picking Optimizing Parameters {#optimizing-the-optimized-fund-picking-optimizing-parameters}
+
 We can will solve for a combination of solutions to give us specific values of returns vs risk. For instance, we can fix the variance to 1 (i.e. we can vary as much as the market.) We subtract one here for the solver, which expects the expressions equaling to \\(0\\).
 
 ```python
@@ -540,7 +538,8 @@ deviance_expr
 0.000544056413840724*x - 6.62061061591867e-5*y + 0.000429966553373172*z - 0.00117862072546534
 ```
 
-This makes our system:
+
+## Optimizing the Optimized Fund: Optimize! {#optimizing-the-optimized-fund-optimize}
 
 ```python
 solution = sym.solvers.solve([deviance_expr, risk_expr], x,y,z)
@@ -552,6 +551,9 @@ solution
 ```
 
 We have one degree of freedom here: how much MacDonald's we want! Let's say we want none (which would, according to this, be an equally efficient solution.)
+
+
+## How Does Our Fund Do? {#how-does-our-fund-do}
 
 This would create the following plan:
 
@@ -582,6 +584,9 @@ fund_1_returns.mean()
 ```
 
 So, for market-level risk (\\(\beta =1\\), instead of the balanced portfolio's \\(\beta =1.1290\\)), this is a pretty good deal!
+
+
+## Some Plots {#some-plots}
 
 Finally, let's plot the _prices_ of our various funds:
 
