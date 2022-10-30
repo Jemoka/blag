@@ -483,7 +483,9 @@ Date Topic &amp;lt;2022-04-07 Thu&amp;gt; stable matching problem, stable matchi
 Note that we will be using the Sharpe-Linter version of CAPM:
 \begin{equation} E[R_{i}-R_{f}] = \beta_{im} E[(R_{m}-R_{f})] \end{equation}
 \begin{equation} \beta_{im} := \frac{Cov[(R_{i}-R_{f}),(R_{m}-R_{f})]}{Var[R_{m}-R_{f}]} \end{equation}
-Recall that we declare \(R_{f}\) (the risk-free rate) to be non-stochastic.</description></item><item><title>NUS-ECON320 Stochastic Integration</title><link>https://www.jemoka.com/posts/kbhnus_econ320_stochastic_integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_econ320_stochastic_integration/</guid><description>The code created for this problem can be found here.
+Recall that we declare \(R_{f}\) (the risk-free rate) to be non-stochastic.
+Let us begin. We will create a generic function to analyze some given stock.
+We will first import our utilities</description></item><item><title>NUS-ECON320 Stochastic Integration</title><link>https://www.jemoka.com/posts/kbhnus_econ320_stochastic_integration/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_econ320_stochastic_integration/</guid><description>The code created for this problem can be found here.
 Problem 1 Let&amp;rsquo;s begin with a normal function:
 \begin{equation} f(x) = (\sqrt{x}-1)^{2} \end{equation}
 Taking just a normal Riemann sum, we see that, as expected, it converges to about \(0.167\) by the following values between bounds \([0,1]\) at different \(N\):
