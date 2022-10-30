@@ -6,13 +6,13 @@ draft = false
 
 [CAPM]({{< relref "KBhcapm.md" >}}) is a method of portfolio selection analysis which focuses on _maximizing_ [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) given some fixed variance.
 
-It deals with optimizing the [Capital Market Line](#capital-market-line), given here:
+It deals with optimal [Capital Market Line](#capital-market-line), given here:
 
 \begin{equation}
-E[R\_{p}] = r\_{f}+\frac{E[R\_{T}]-r\_{f}}{\sigma\_{T}}\sigma\_{p}
+E[R\_{p}] = r\_{f}+\frac{\sigma\_{p}}{\sigma\_{T}}\qty(E[R\_{T}]-r\_{f})
 \end{equation}
 
-Which describes \\(E[R\_{p}]\\), the expected return of an optimal portfolio in a market, given, \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, and \\(\sigma\_{t}\\) is standard-deviation of the market returns.
+Which describes \\(E[R\_{p}]\\), the expected return of an optimal portfolio in a market, given, \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, \\(\sigma\_{p}\\) is the portfolio returns, and \\(\sigma\_{t}\\) is standard-deviation of the market returns.
 
 
 ## Sharpe Ratio {#sharpe-ratio}
@@ -68,6 +68,15 @@ again, \\(R\_{T}\\) is the market return, \\(r\_{f}\\) is the risk-free rate, an
 The one liner is: "the return of your portfolio should be the base return by risk-free rate, plus how much excess risk you are taking on (and therefore [return]({{< relref "KBhrandom_walk.md#return--finmetrics" >}}) you should be getting back by the [Sharpe Ratio](#sharpe-ratio))"
 
 (how much you are expected to get (i.e. market [Sharpe Ratio](#sharpe-ratio) times your portfolio volatility), shifted back up by the risk-free rate.
+
+
+## Sharpe-Lintner CAPM {#sharpe-lintner-capm}
+
+A linear formulation of CAPM base on market-excess return (i.e. if you want to beat the market, you will have to sustain proportionally the same amount of risk.)
+
+{{< figure src="/ox-hugo/2022-10-29_18-44-41_screenshot.png" >}}
+
+{{< figure src="/ox-hugo/2022-10-29_18-45-03_screenshot.png" >}}
 
 
 ## Tangency Portfolio {#tangency-portfolio}
