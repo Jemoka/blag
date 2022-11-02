@@ -18,6 +18,7 @@ The textbook that we will be using is (<a href="#citeproc_bib_item_1">Taylor 201
 -   [eigenvalue]({{< relref "KBheigenvalue.md" >}})
 -   [applying eigenspace]({{< relref "KBhapplying_eigenspace.md" >}})
 -   [Second-Order Linear Differential Equation]({{< relref "KBhsecond_order_linear_differential_equation.md" >}})
+-   [Non-Linear Systems]({{< relref "KBhnon_linear_systems.md" >}})
 
 
 ## Assignments {#assignments}

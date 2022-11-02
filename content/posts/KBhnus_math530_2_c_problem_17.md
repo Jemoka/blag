@@ -14,9 +14,6 @@ Proof or give a counter example for the statement that:
 &+\dim(U\_1 \cap U\_2 \cap U\_3)
 \end{align}
 
-
-## Counterexample {#counterexample}
-
 This statement is false.
 
 Take the following three subspaces of \\(\mathbb{F}^{2}\\):
