@@ -27,7 +27,7 @@ draft = false
 
 ## Questions for Jana {#questions-for-jana}
 
--   Example 2.41: why is it that \\(\dim U \neq 4\\)? We only know that \\(\dim \mathcal{P}\_{3}(\mathbb{R}) = 4\\), and \\(\dim U \leq 4\\). Is it because \\(U\\) (i.e. [basis]({{< relref "KBhbasis.md" >}}) of \\(U\\) doesn't [span]({{< relref "KBhspan.md" >}}) the polynomial) is strictly a subset of \\(\mathcal{P}\_{3}(\mathbb{R})\\), so there must be _some_ extension needed?
+-   ~~Example 2.41: why is it that \\(\dim U \neq 4\\)? We only know that \\(\dim \mathcal{P}\_{3}(\mathbb{R}) = 4\\), and \\(\dim U \leq 4\\). Is it because \\(U\\) (i.e. [basis]({{< relref "KBhbasis.md" >}}) of \\(U\\) doesn't [span]({{< relref "KBhspan.md" >}}) the polynomial) is strictly a subset of \\(\mathcal{P}\_{3}(\mathbb{R})\\), so there must be _some_ extension needed?~~ because we know that \\(U\\) isn't all of \\(\mathcal{P}\_{3}\\).
 
 
 ## Interesting Factoids {#interesting-factoids}

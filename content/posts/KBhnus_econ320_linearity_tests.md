@@ -225,16 +225,26 @@ lmt_model.summary()
 Dep. Variable:                    LMT   R-squared:                       0.859
 Model:                            OLS   Adj. R-squared:                  0.859
 Method:                 Least Squares   F-statistic:                 1.312e+04
+Date:                Mon, 31 Oct 2022   Prob (F-statistic):               0.00
+Time:                        10:39:24   Log-Likelihood:                 6318.9
 No. Observations:                2158   AIC:                        -1.263e+04
 Df Residuals:                    2156   BIC:                        -1.262e+04
-Df Model:                           1   Prob (F-statistic):               0.00
-Covariance Type:            nonrobust   Log-Likelihood:                 6318.9
+Df Model:                           1
+Covariance Type:            nonrobust
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
 const          0.0004      0.000      1.311      0.190      -0.000       0.001
 NYSE           0.9449      0.008    114.552      0.000       0.929       0.961
 ==============================================================================
+Omnibus:                      423.969   Durbin-Watson:                   1.965
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            11575.074
+Skew:                          -0.160   Prob(JB):                         0.00
+Kurtosis:                      14.341   Cond. No.                         29.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 ```
 
 Based on the constants row, we can see that---within \\(95\\%\\) confidence---the intercept is generally \\(0\\) and CAPM applies. However, we do see a slight positive compared to the market. Furthermore, we can see that the regression has a beta value of \\(0.9449\\) --- according the CAPM model, it being _slightly_ undervarying that the market.
@@ -254,16 +264,26 @@ mcd_model.summary()
 Dep. Variable:                    MCD   R-squared:                       0.887
 Model:                            OLS   Adj. R-squared:                  0.887
 Method:                 Least Squares   F-statistic:                 1.697e+04
+Date:                Mon, 31 Oct 2022   Prob (F-statistic):               0.00
+Time:                        10:39:24   Log-Likelihood:                 6551.1
 No. Observations:                2158   AIC:                        -1.310e+04
 Df Residuals:                    2156   BIC:                        -1.309e+04
-Df Model:                           1   Prob (F-statistic):               0.00
-Covariance Type:            nonrobust   Log-Likelihood:                 6551.1
+Df Model:                           1
+Covariance Type:            nonrobust
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
 const          0.0003      0.000      1.004      0.315      -0.000       0.001
 NYSE           0.9651      0.007    130.287      0.000       0.951       0.980
 ==============================================================================
+Omnibus:                      323.911   Durbin-Watson:                   1.988
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             3032.550
+Skew:                           0.395   Prob(JB):                         0.00
+Kurtosis:                       8.753   Cond. No.                         29.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 ```
 
 Same thing as before, we are within \\(95\\%\\) confidence having a intercept of \\(0\\) (with a slight positive edge), and it looks like MacDonald's vary a little bit more than Lockheed Martin. The food industry is probably a tougher business than that in defense.
@@ -283,16 +303,26 @@ twtr_model.summary()
 Dep. Variable:                   TWTR   R-squared:                       0.522
 Model:                            OLS   Adj. R-squared:                  0.522
 Method:                 Least Squares   F-statistic:                     2357.
+Date:                Mon, 31 Oct 2022   Prob (F-statistic):               0.00
+Time:                        10:39:24   Log-Likelihood:                 4307.1
 No. Observations:                2158   AIC:                            -8610.
 Df Residuals:                    2156   BIC:                            -8599.
-Df Model:                           1   Prob (F-statistic):               0.00
-Covariance Type:            nonrobust   Log-Likelihood:                 4307.1
+Df Model:                           1
+Covariance Type:            nonrobust
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
 const         -0.0002      0.001     -0.346      0.730      -0.002       0.001
 NYSE           1.0173      0.021     48.549      0.000       0.976       1.058
 ==============================================================================
+Omnibus:                      661.205   Durbin-Watson:                   1.986
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            15925.609
+Skew:                          -0.883   Prob(JB):                         0.00
+Kurtosis:                      16.191   Cond. No.                         29.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 ```
 
 Evidently, Twitter is _much_ more variable. It looks like it has a nontrivial bias (the intercept being -0.001 being within the \\(95\\%\\) confidence band --- that the security is possibly significantly underperforming the CAPM expectation in the market.) Furthermore, we have a positive beta value: that the asset is more variable than the market.
@@ -417,16 +447,26 @@ fund_1_model.summary()
 Dep. Variable:                      y   R-squared:                       0.473
 Model:                            OLS   Adj. R-squared:                  0.473
 Method:                 Least Squares   F-statistic:                     1935.
+Date:                Mon, 31 Oct 2022   Prob (F-statistic):          3.01e-302
+Time:                        10:39:24   Log-Likelihood:                 3869.5
 No. Observations:                2158   AIC:                            -7735.
 Df Residuals:                    2156   BIC:                            -7724.
-Df Model:                           1   Prob (F-statistic):          3.01e-302
-Covariance Type:            nonrobust   Log-Likelihood:                 3869.5
+Df Model:                           1
+Covariance Type:            nonrobust
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
 const          0.0007      0.001      0.841      0.401      -0.001       0.002
 NYSE           1.1290      0.026     43.993      0.000       1.079       1.179
 ==============================================================================
+Omnibus:                      600.456   Durbin-Watson:                   2.022
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8416.514
+Skew:                          -0.914   Prob(JB):                         0.00
+Kurtosis:                      12.501   Cond. No.                         29.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 ```
 
 Surprisingly, we have now created a **significantly** riskier investment that, though riskier, generates a much higher probability of reward (\\(+0.001\\) is now within the \\(99\\%\\) band!)
@@ -518,7 +558,18 @@ linear_model
 
 Excellent. So we now have two rows; the top row represents the "bias"---how much deviation there is from CAPM, and the bottom row represents the "rate"---the "beta" value which represents how much excess variance there is.
 
-We can will solve for a combination of solutions to give us specific values of returns vs risk. For instance, we can fix the variance to 1 (i.e. we can vary as much as the market.) We subtract one here for the solver, which expects the expressions equaling to \\(0\\).
+We can will solve for a combination of solutions to give us specific values of returns vs risk. We will set the asset to learn exactly as much as the market (i.e. no bias).
+
+```python
+deviance_expr = linear_model[0]
+deviance_expr
+```
+
+```text
+0.000544056413840724*x - 6.62061061591867e-5*y + 0.000429966553373172*z - 0.000178620725465344
+```
+
+We will now try to make variance exactly as much as that in the market.
 
 ```python
 risk_expr = linear_model[1] - 1
@@ -529,18 +580,7 @@ risk_expr
 0.0457830563134785*x + 0.118178191274045*y + 0.0659651260604729*z - 0.100884280899719
 ```
 
-Now, we will set a certain earning value, and solve for possible solutions. We will try to get the largest possible bias without needing to short something (i.e. cause a negative solution). By hand-fisting a value, it seems 0.001 is a good bet.
-
-```python
-deviance_expr = linear_model[0] - 0.001
-deviance_expr
-```
-
-```text
-0.000544056413840724*x - 6.62061061591867e-5*y + 0.000429966553373172*z - 0.00117862072546534
-```
-
-This makes our system:
+Let us now calculate the boundary condition of our optimization problem by solving an expression in these two expressions.
 
 ```python
 solution = sym.solvers.solve([deviance_expr, risk_expr], x,y,z)
@@ -548,27 +588,54 @@ solution
 ```
 
 ```text
-{x: 2.16803104555387 - 0.819584899551304*z, y: 0.0137520589394366 - 0.24067066980814*z}
+{x: 0.412737013327711 - 0.819584899551304*z, y: 0.693765220909132 - 0.24067066980814*z}
 ```
 
-We have one degree of freedom here: how much MacDonald's we want! Let's say we want none (which would, according to this, be an equally efficient solution.)
+Excellent. Let us recalculate our optimization objective ("deviance"---return) in terms of these new solutions. We aim now to maximize this expression by _minimizing_ (i.e. our optimizer minimizes) the negative thereof---recalling that scypy works as a minimizer.
+
+```python
+optim_objective = deviance_expr.subs(solution)-1e2
+optim_objective
+```
+
+```text
+-5.04831636563563e-19*z - 100.0
+```
+
+We can now use this value to solve for a \\(z\\) value.
+
+```python
+optim_solution = sym.solvers.solve([optim_objective], z)
+optim_solution
+```
+
+```text
+{z: -1.98085842402250e+20}
+```
+
+Excellent. We can now solve for the rest of our values.
+
+```python
+z0 = float(optim_solution[z])
+x0 = solution[x].subs(z, z0)
+y0 = solution[y].subs(z, z0)
+(x0,y0,z0)
+```
+
+```text
+(1.62348165247784e+16, 4.76734523704593e+15, -1.980858424022502e+16)
+```
 
 This would create the following plan:
 
 ```python
-# for our case
-z_val = 0
-# numerical solutions
-s_x = solution[x].subs(z,z_val)
-s_y = solution[y].subs(z,z_val)
-
 # solution
-fund_2_nobias_nomac = s_x*returns.LMT + s_y*returns.TWTR + z_val*returns.MCD
-fund_2_nobias_nomac.mean()
+fund_2_nobias = x0*returns.LMT + y0*returns.TWTR + z0*returns.MCD
+fund_2_nobias.mean()
 ```
 
 ```text
-0.001185050286566688
+0.009168283711770158
 ```
 
 Recall that this is the performance of the balanced portfolio:
@@ -581,8 +648,6 @@ fund_1_returns.mean()
 0.0009224705380695683
 ```
 
-So, for market-level risk (\\(\beta =1\\), instead of the balanced portfolio's \\(\beta =1.1290\\)), this is a pretty good deal!
-
 Finally, let's plot the _prices_ of our various funds:
 
 ```python
@@ -593,7 +658,7 @@ from datetime import datetime
 
 sns.set()
 
-fund_2_price = s_x*df.LMT + s_y*df.TWTR + z_val*df.MCD
+fund_2_price = x0*df.LMT + y0*df.TWTR + z0*df.MCD
 fund_1_price = df.LMT + df.TWTR
 fund_l_price = df.LMT
 fund_t_price = df.TWTR
@@ -610,6 +675,10 @@ plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 plt.gca().set_ylabel("Price")
 
 plt.show()
+```
+
+```text
+None
 ```
 
 {{< figure src="/ox-hugo/2022-10-29_23-33-46_screenshot.png" >}}

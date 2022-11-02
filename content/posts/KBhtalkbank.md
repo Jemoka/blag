@@ -4,6 +4,14 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## stuff {#stuff}
+
+-   chocolaty (noadmin, <https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install>)
+-   miniconda
+-   setx path "%path%;C:\tools\miniconda3\condabin"
+-   curl env first, the install (Windows can't do it from a URL)
+
+
 ## readme {#readme}
 
 -   ~~conda init zsh (close shell, open again)~~
