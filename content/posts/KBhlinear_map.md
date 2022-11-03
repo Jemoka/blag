@@ -145,3 +145,59 @@ We construct \\(T \in \mathcal{L}(\mathbb{F}^{n}, \mathbb{F}^{m})\\) by: \\(T(x\
 -  [homogeneity]({{< relref "KBhhomogeneity.md" >}})
 
     Proof left to the reader. Pretty much just expand and more algebra.
+
+
+### "[basis of domain]({{< relref "KBhbasis_of_domain.md" >}})" {#basis-of-domain--kbhbasis-of-domain-dot-md}
+
+This result tells us that we can find a [Linear Map]({{< relref "KBhlinear_map.md" >}}) for wherever we want to take the [basis]({{< relref "KBhbasis.md" >}}) of a [vector space]({{< relref "KBhvector_space.md" >}}), and that a [Linear Map]({{< relref "KBhlinear_map.md" >}})'s behavior on [basis]({{< relref "KBhbasis.md" >}}) uniquely determines that [Linear Map]({{< relref "KBhlinear_map.md" >}}).
+
+See [basis of domain]({{< relref "KBhbasis_of_domain.md" >}}).
+
+
+### addition and scalar multiplication on \\(\mathcal{L}(V,W)\\) {#addition-and-scalar-multiplication-on-mathcal-l--v-w}
+
+Suppose \\(S,T \in \mathcal{L}(V,W); \lambda \in \mathbb{F}\\).
+
+"Sum" and "Product" are defined in the way that one would expect:
+
+\begin{equation}
+(S+T)(v) = Sv+Tv
+\end{equation}
+
+and
+
+\begin{equation}
+(\lambda T)(v) = \lambda (Tv)
+\end{equation}
+
+for all \\(v \in V\\).
+
+These two operations make \\(\mathcal{L}(V,W)\\) a [vector space]({{< relref "KBhvector_space.md" >}}) (\\(1Tv = Tv\\), \\(0+Tv=Tv\\), \\(Tv + (-1)Tv = 0\\), associativity, commutativity, distributive inherits from \\(V\\).)
+
+
+### linear maps take \\(0\\) to \\(0\\) {#linear-maps-take-0-to-0}
+
+We desire that \\(T(0) = 0\\) for any linear map \\(T\\)
+
+Proof:
+
+\begin{equation}
+T(0) = T(0+0)
+\end{equation}
+
+Then, by additivity:
+
+\begin{equation}
+T(0) = T (0 + 0) = T (0) + T (0)
+\end{equation}
+
+Given \\(\mathcal{L}(V,W)\\) is a [vector space]({{< relref "KBhvector_space.md" >}}) for any \\(V,W\\), \\(\exists -T(0)\\) such that \\(T(0)+(-T(0)) = 0\\). Applying that here:
+
+\begin{equation}
+T(0) = T(0)+T(0) \implies T(0) -T(0) = T(0)+T(0)-T(0) \implies 0 = T(0)
+\end{equation}
+
+
+### Product of Linear Maps {#product-of-linear-maps}
+
+See [Product of Linear Maps]({{< relref "KBhproduct_of_linear_maps.md" >}})
