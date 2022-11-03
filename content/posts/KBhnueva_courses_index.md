@@ -36,7 +36,7 @@ Backlog: [Finite State Machine]({{< relref "KBhfinite_state_machine.md" >}})
 
 ## NUS-HIST301 American History {#nus-hist301-american-history}
 
-Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FDR)]({{< relref "KBhfdr.md" >}}), [Works Progress Administration]({{< relref "KBhwpa.md" >}}), [effects of the New Deal]({{< relref "KBheffects_of_the_new_deal.md" >}}), [Great Depression]({{< relref "KBhgreat_depression.md" >}}), [Herber Hoover]({{< relref "KBhherber_hoover.md" >}}), [disinformation]({{< relref "KBhdisinformation.md" >}})
+Backlog: [New Deal]({{< relref "KBhnew_deal.md" >}}), [Franklin D. Roosevelt (FDR)]({{< relref "KBhfdr.md" >}}), [Works Progress Administration]({{< relref "KBhwpa.md" >}}), [effects of the New Deal]({{< relref "KBheffects_of_the_new_deal.md" >}}), [Great Depression]({{< relref "KBhgreat_depression.md" >}}), [Herber Hoover]({{< relref "KBhherber_hoover.md" >}}), [disinformation]({{< relref "KBhdisinformation.md" >}}), [Guilded Age]({{< relref "KBhguilded_age.md" >}})
 
 | Date                                                                                         | Topic                                                                                |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -89,6 +89,8 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-12 Mon&gt;</span></span> | [Task Estimation]({{< relref "KBhtask_estimation.md" >}})                                                                  |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-15 Thu&gt;</span></span> | [Documentation and Specification]({{< relref "KBhdocumentation_and_specification.md" >}})                                  |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-19 Mon&gt;</span></span> | [Testing]({{< relref "KBhtesting.md" >}})                                                                                  |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-06 Thu&gt;</span></span> | [Defensive Programming]({{< relref "KBhdefensive_programming.md" >}})                                                      |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-11-03 Thu&gt;</span></span> | [Code Review]({{< relref "KBhcode_review.md" >}})                                                                          |
 
 
 ## NUS-MATH570 DiffEq {#nus-math570-diffeq}
