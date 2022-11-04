@@ -1,5 +1,5 @@
 +++
-title = "Non-Linear Systems"
+title = "Non-Linear System"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -7,34 +7,57 @@ draft = false
 "Chaotic Dynamics" Because the word is sadly nonlinear.
 
 
-## General Dynamical System {#general-dynamical-system}
-
-Here's a very general nonlinear system:
+## motivating non-linearity {#motivating-non-linearity}
 
 \begin{equation}
-\dv t \vec{x} = F(\vec{x}, t)
+\dv t \mqty(x \\\ y) = f\qty(\mqty(x\\\y))
+\end{equation}
+
+This function is a function from \\(f: \mathbb{R}^{2}\to \mathbb{R}^{2}\\). All the work on [Second-Order Linear Differential Equations]({{< relref "KBhsecond_order_linear_differential_equation.md" >}}), has told us that the above system can serve as a "linearization" of a second order differential equation that looks like the follows:
+
+\begin{equation}
+\dv t \mqty(x \\\y) = A \mqty(x \\\ y) +b
+\end{equation}
+
+Actually going about deriving a solution to this requires powers of \\(A\\) to commute. If \\(A\\) has a independent variable in it, or if its a time-varying function \\(A(t)\\), you can't actually perform the linearization technique (raising diagonalized \\(A\\) to powers) [highlighted here]({{< relref "KBhsecond_order_linear_differential_equation.md#solving-homogeneous-higher-order-differential-equations" >}}).
+
+So we need something new.
+
+
+## Sudden Review of Vector Functions {#sudden-review-of-vector-functions}
+
+Let's take some function:
+
+\begin{equation}
+f: \mathbb{R}^{2} \to  \mathbb{R}^{2}
+\end{equation}
+
+It will output a vector:
+
+\begin{equation}
+f(x,y) = \mqty(f\_1(x,y)\\\ f\_{2}(x,y))
 \end{equation}
 
 
-## aaaaa {#aaaaa}
+## Solving [Non-Linear Systems]({{< relref "KBhnon_linear_systems.md" >}}), actually {#solving-non-linear-systems--kbhnon-linear-systems-dot-md--actually}
 
-So Let us set up a second-degree system:
+Let's take a non-linear system:
 
-\begin{align}
+\begin{equation}
+\begin{cases}
 \dv{x}{t} = F(x,y) \\\\
 \dv{y}{t} = G(x,y)
-\end{align}
-
-we want to solve for critical points---
-
-\begin{equation}
-F(x\*,y\*) = G(x\*, y\*) = 0
+\end{cases}
 \end{equation}
 
-where, \\((x\*, y\*)\\) is the critical point for functions \\(x,y\\).
+****Overarching Idea****: To actually solve this, we go about taking a Taylor Series (i.e. linearize) the [function]({{< relref "KBhfunction.md" >}})s next to its critical points. Then, we use an epsilon-delta proof to show that the linearization next to those critical points are a good approximation.
 
-We then create:
+So! Let us begin.
+
+Let \\((x\*,y\*)\\) be a critical point of \\(F\\). Naturally, \\(d 0=0\\), so it is also a critical point of \\(G\\).
+
+So we have:
 
 \begin{equation}
-\dv{y}{x} = \frac{y'}{xy} = \frac{G(x,y)}{F(x,y)}
+F(x\*,y\*)=G(x\*,y\*) = 0
 \end{equation}
