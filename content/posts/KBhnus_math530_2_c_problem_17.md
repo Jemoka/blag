@@ -15,7 +15,7 @@ Proof or give a counter example for the statement that:
 \end{align}
 
 
-## Counterproof {#counterproof}
+## Counterexample {#counterexample}
 
 This statement is false.
 
@@ -74,7 +74,15 @@ For \\(U\_3\\) ---
 
 ### constructing the counterexample {#constructing-the-counterexample}
 
-For both sections, recall that:
+Let us calculate the value of both sides of:
+
+\begin{align}
+\dim\qty(U\_1+U\_2+U\_3) = &\dim U\_1+\dim U\_2+\dim U\_3\\\\
+&-\dim(U\_1 \cap U\_2) - \dim(U\_1 \cap U\_3) - \dim(U\_2 \cap U\_3) \\\\
+&+\dim(U\_1 \cap U\_2 \cap U\_3)
+\end{align}
+
+Recall that:
 
 \begin{align}
 U\_1 = \qty{\mqty(a \\\ 0): a \in \mathbb{F}}\\\\
@@ -132,7 +140,7 @@ So: \\(\dim \qty(U\_1+U\_2+U\_3)=2\\)
 
 -  dimension of the unions
 
-    These subspaces were picked because of a uprising convenience. Their unions are all the zero vector!
+    These subspaces were picked because of a surprising convenience. Their unions are all the zero vector!
 
     \begin{equation}
     U\_1 \cap U\_2 = \qty{\mqty(a \\\ 0): a \in \mathbb{F}} \cap \qty{\mqty(0 \\\ b): b \in \mathbb{F}} = \qty{\mqty(0 \\\ 0)}
