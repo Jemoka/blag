@@ -61,3 +61,33 @@ So we have:
 \begin{equation}
 F(x\*,y\*)=G(x\*,y\*) = 0
 \end{equation}
+
+Now, we will begin building the "slope" of this function to eliminate the independent variable wholesale---by dividing:
+
+\begin{equation}
+\dv{y}{x} = \dv{y}{t} / \dv{x}{t} = \frac{G(x,y)}{F(x,y)}
+\end{equation}
+
+---
+
+a divergence into epsilon delta proof
+
+
+### stable {#stable}
+
+A critical point is considered "stable" because, for each \\(\epsilon >0\\), \\(\exists  \delta >0\\), such that:
+
+\begin{equation}
+|x\_0-x\*| < \delta \implies |x(t)-x\*| < \epsilon
+\end{equation}
+
+
+#### asymptotically stable {#asymptotically-stable}
+
+For every trajectory that begins close to the critical point, it will end up at the critical point as time increases. That is, \\(\exists \delta >0\\) such that:
+
+\begin{equation}
+|x-x\*| < \delta \implies  \lim\_{t \to \infty } x(t)=x\*
+\end{equation}
+
+This is essentially epsilon delta, but the limit traces out the entire process descending so the critical point is [stable](#stable) through the whole descend.
