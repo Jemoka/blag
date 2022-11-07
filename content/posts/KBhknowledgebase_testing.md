@@ -1,7 +1,6 @@
 +++
 title = "knowledgebase testing page"
 author = ["Houjun Liu"]
-tags = ["index", "pie", "chicken", "test"]
 draft = false
 +++
 
