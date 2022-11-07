@@ -83,3 +83,8 @@ where \\(\mu\\) is the mass density, \\(q(x)\\) is the force applied (in Newtons
 ## Solving this? {#solving-this}
 
 See [Finite Difference Method]({{< relref "KBhfinite_difference_method.md" >}})
+
+
+## Actually attempting to solve it {#actually-attempting-to-solve-it}
+
+[Numerical Cantileaver Simulations]({{< relref "KBhnumerical_cantileaver_simulations.md" >}})

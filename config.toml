@@ -2,6 +2,8 @@ baseURL = "https://www.jemoka.com/"
 languageCode = "en-us"
 title = "jemoka.com"
 refLinksErrorLevel = "WARNING"
+enableGitInfo = true
+paginate = 5
 
 [outputs]
 home = [ "html", "rss", "json" ]

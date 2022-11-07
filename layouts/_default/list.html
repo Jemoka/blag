@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ partial "header" . }}
+<main>
+    <div id="title">
+        <h1><span class="listhash">#</span>{{.Title}}</h1>
+    </div>
+    <!-- Ranges through content/posts/*.md -->
+    {{ range sort .Paginator.Pages "Lastmod" "desc" }}
+    <div class="pageview" onclick="window.location.href='{{.Permalink}}'">
+        <span class="top">
+        <h1><a class="noannot">{{.Title}}</a></h1>
+        <span class="modbox right">Last edited: <span class="moddate">{{.Lastmod.Format "January 1, 2006"}}</span></span>
+        </span>
+        <span class="summary">{{.Summary}}</span>
+    </div> 
+    {{ end }}
+    {{ partial "pagination" . }}
+</main>
+{{ partial "footer" . }}
+{{ end }}
