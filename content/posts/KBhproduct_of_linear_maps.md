@@ -28,7 +28,7 @@ The following there properties hold on linear-map products (_note that commutati
 TI = IT = T
 \end{equation}
 
-for \\(T \in \mathcal{L}(V,W)\\) and \\(I \in \mathcal{L}(V,V)\\) is the [identity]({{< relref "KBhidentity.md" >}}) map in \\(V\\).
+for \\(T \in \mathcal{L}(V,W)\\) and \\(I \in \mathcal{L}(V,V)\\) (OR \\(I \in \mathcal{L}(W,W)\\) depending on the order) is the [identity]({{< relref "KBhidentity.md" >}}) map in \\(V\\).
 
 [identity]({{< relref "KBhidentity.md" >}}) commutes, as always.
 

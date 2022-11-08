@@ -33,7 +33,7 @@ We define some \\(T: V \to W\\) as follows:
 T(c\_1v\_1 + \dots + c\_{n}v\_{n}) = c\_1 w\_1 + \dots + c\_{n} w\_{n}
 \end{equation}
 
-where, \\(c\_1, \dots c\_{n} \in \mathbb{F}\\).
+where, \\(c\_1, \dots c\_{n} \in \mathbb{F}\\). Note that the actual _values_ of \\(c\\) doesn't actually matter here.
 
 
 ### Existence {#existence}
@@ -57,4 +57,4 @@ Now, the additivity of \\(T\\) also indicates that we can string these \\(c\_{j}
 
 given \\(T(c\_{j}v\_{j}) = c\_{j}w\_{j}\\), we can just string it all together to get \\(T(c\_1v\_1 + \dots + c\_{n}v\_{n}) = c\_1w\_1+ \dots + c\_{n}w\_{n}\\).
 
-This means that there is only one \\(T\\) that behaves in the way that we desire, on the span of \\(v\_1 \dots v\_{n}\\). Those vectors being the basis, their span is just the domain \\(V\\). This makes \\(T\\) uniquely determined on \\(V\\).
+This means that there is only one \\(T\\) that behaves in the way that we desire, on the span of \\(v\_1 \dots v\_{n}\\). Those vectors being the basis, their span is just the domain \\(V\\). This makes \\(T\\) uniquely determined on \\(V\\) as we were able to construct the original given map simply by following the rules of the [Linear Map]({{< relref "KBhlinear_map.md" >}}).

@@ -29,6 +29,8 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 -   proving negation: if the "negative" is distinct, but the direct case is more nebulous, use proves by contradiction
 
 -   [proof by induction]({{< relref "KBhproof_by_induction.md" >}})
--   messing with list length
     -   especially if you are dealing with polynomials, try factoring
     -   tools to help includes [length of linearly-independent list \\(\leq\\) length of spanning list]({{< relref "KBhlinear_independence.md#length-of-linearly-independent-list-leq-length-of-spanning-list" >}})
+-   Uniqueness by construction: uniqueness part of [basis of domain]({{< relref "KBhbasis_of_domain.md" >}})
+    -   pick one element that does exist
+    -   pick arbitrary elements and construct a result

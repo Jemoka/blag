@@ -10,7 +10,7 @@ A [Linear Map]({{< relref "KBhlinear_map.md" >}}) (a.k.a. [Linear Transformation
 ## constituents {#constituents}
 
 -   [vector space]({{< relref "KBhvector_space.md" >}})s \\(V\\) and \\(W\\) (they <span class="underline">don't</span> have to be [subspace]({{< relref "KBhsubspace.md" >}})s)
--   A [function]({{< relref "KBhfunction.md" >}}) \\(T: V \to W\\)
+-   A [function]({{< relref "KBhfunction.md" >}}) \\(T: V \to W\\) (when we put something in, it only goes to one place)
 
 
 ## requirements {#requirements}
