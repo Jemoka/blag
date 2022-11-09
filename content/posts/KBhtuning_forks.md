@@ -94,3 +94,8 @@ We are really worried about two different things here.
 -   why no free vibrations just standing?
 -   do the various tuning fork modes compose
 -   figure out phys1 physics of strings virbrating
+
+
+## things {#things}
+
+-   we can use far field because the wavelength is much mucm much much larger than the seperation between the two tines; what is the wavelength? function of frequency and hertz
