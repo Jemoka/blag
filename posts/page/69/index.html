@@ -10,7 +10,7 @@
 After Fourier decomposition, we have that:
 \begin{equation} EI \dv[4]{\hat{w}}{x} - \mu f^{2}\hat{w} = 0 \end{equation}
 Let&rsquo;s solve this!
-E,I,u,f = var("E I u f") x = var("x") w = function('w')(x) w0, w1, w2, w3 = var("w0 w1 w2 w3") fourier_cantileaver = (E*I*diff(w, x, 4) - u*f^2*w == 0) fourier_cantileaver -f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0 And now, we can go about solving this result.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_econ320_linearity_tests/"'><span class=top><h1><a class=noannot>NUS-ECON320 Linearity Tests</a></h1><span class="modbox right">Last edited: <span class=moddate>November 11, 2022</span></span></span>
+E,I,u,f = var("E I u f") x, L = var("x L") w = function('w')(x) _c0, _c1, _c2, _c3 = var("_C0 _C1 _C2 _C3") fourier_cantileaver = (E*I*diff(w, x, 4) - u*f^2*w == 0) fourier_cantileaver -f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0 And now, we can go about solving this result.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_econ320_linearity_tests/"'><span class=top><h1><a class=noannot>NUS-ECON320 Linearity Tests</a></h1><span class="modbox right">Last edited: <span class=moddate>November 11, 2022</span></span></span>
 <span class=summary>Let&rsquo;s begin. We want to create test for the linearity of a few assets, for whether or not they follow the CAPM.
 Note that we will be using the Sharpe-Linter version of CAPM:
 \begin{equation} E[R_{i}-R_{f}] = \beta_{im} E[(R_{m}-R_{f})] \end{equation}
