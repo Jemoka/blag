@@ -78,9 +78,20 @@ Work-in-progress.
 
 A task similar to [ADReSS Challenge]({{< relref "KBhadress_challenge.md" >}}), training on acoustic and possibly linguistic features. [internal link]({{< relref "KBhdementiabank_acoustics_project.md" >}})
 
-****Collaborators****: solo project
+****Lab****: PsychLing - CMU Dietrich
 
-****PI****: Prof. [Brian Macwinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
+****PI****: Prof. [Brian MacWhinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
+
+Work-in-progress.
+
+
+### batchalign {#batchalign}
+
+Suite of software tools for the automatic transcription, tokenization, alignment, and morphosyntactical analysis of raw audio files. Main goal is to make the process of CHAT transcription entirely automated. [Repo](https://github.com/TalkBank/batchalign), [internal Link]({{< relref "KBhbatchalign.md" >}}).
+
+****Lab****: PsychLing - CMU Dietrich
+
+****PI****: Prof. [Brian MacWhinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
 
 Work-in-progress.
 
@@ -96,9 +107,9 @@ A student-driven podcast protocol which trains students to digest scientific res
 
 ****Collaborators****: Anoushka Krishnan, Micah Brown - Nueva School
 
-****Lab****: Paul Hauser - Nueva School
+****Lab****: XRT - Nueva School
 
-****PI****: Luke De - Nueva School
+****PI****: Paul Hauser, Luke De - Nueva School
 
 ****Status****: Published
 
@@ -111,9 +122,19 @@ A student-driven podcast protocol which trains students to digest scientific res
 
 A student-lead, student-taught independent program that trains high-school students as researchers and facilitates publish-quality student research.
 
-****Collaborators****: Michael, Flint, Kian, Vinca, Oliver - Nueva School
+****Title****: R@N: an Asynchronous, Student-Led Program to Train Students to Conduct Independent Research
 
-Work-in-progress.
+****Collaborators****: Michael, Flint, Kian, Vinca, Oliver, Zach, Albert - Nueva School
+
+****Lab****: XRT - Nueva School
+
+****PI****: Paul Hauser - Nueva School
+
+****Status****: Accepted
+
+****Venue****: DiscoverBMB2023/Journal of Biological Chemistry
+
+****Abstract****: [R@N Abstract]({{< relref "KBhr_n_abstract.md" >}})
 
 
 ## Parallel Computing/Blockchain {#parallel-computing-blockchain}
