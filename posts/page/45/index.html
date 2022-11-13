@@ -8,8 +8,7 @@
 <span class=summary>(Py)Torch is a great C++/Python library to construct and train complex neural networks. It has taken over academia over the last few years:
 (source)
 and is slowly taking over industry. Let&rsquo;s learn about how it works!
-The chapters below take you through large chapters in a machine-learning journey. But, to do anything, we need to import some stuff which we will need:
-import numpy as np import torch Autograd I believe that anybody learning a new ML framework should learn how its differentiation tools work.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgeometric_brownian_motion/"'><span class=top><h1><a class=noannot>Geometric Brownian Motion</a></h1><span class="modbox right">Last edited: <span class=moddate>October 10, 2022</span></span></span>
+This document is meant to be read cover-to-cover. It makes NO SENSE unless read like that. I focus on building intuition about why PyTorch works, so we will be writing unorthodox code until the very end where we put all ideas together.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgeometric_brownian_motion/"'><span class=top><h1><a class=noannot>Geometric Brownian Motion</a></h1><span class="modbox right">Last edited: <span class=moddate>October 10, 2022</span></span></span>
 <span class=summary>A Geometric Brownian Motion is a Brownian Motion with a drift.
 It is determined by:
 \begin{equation} \dd{S_{t}} = \mu S_{t} \dd{t} + \sigma \dd{S_{t}} \dd{W_{t}} \end{equation}
