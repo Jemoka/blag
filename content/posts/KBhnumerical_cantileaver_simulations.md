@@ -50,7 +50,23 @@ _C1*e^(sqrt(f)*x*(u/(E*I))^(1/4)) + _C0*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C2*e^
 \_{C\_{1}} e^{\left(\sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + \_{C\_{0}} e^{\left(i \\, \sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + \_{C\_{2}} e^{\left(-i \\, \sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + \_{C\_{3}} e^{\left(-\sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)}
 \end{equation}
 
-So, valid solutions to this expression for \\(f\\) would be valid modes. Let's solve it!
+We will simplify the repeated, constant top of this expression into a single variable \\(b\\):
+
+```sage
+b = var("b")
+top = sqrt(f)*(u/E*I)*(1/4)
+
+w = _c1*e^(b*x) + _c0*e^(i*b*x) + _c2*e^(-i*b*x) + _c3*e^(-b*x)
+w
+```
+
+```text
+_C1*e^(b*x) + _C0*e^(I*b*x) + _C2*e^(-I*b*x) + _C3*e^(-b*x)
+```
+
+\begin{equation}
+\_{C\_{1}} e^{\left(b x\right)} + \_{C\_{0}} e^{\left(i \\, b x\right)} + \_{C\_{2}} e^{\left(-i \\, b x\right)} + \_{C\_{3}} e^{\left(-b x\right)}
+\end{equation}
 
 We have one equation, four unknowns. The way that we will go about this is by
 taking three derivatives and supplying the following initial conditions:
@@ -65,9 +81,9 @@ wppp = diff(w,x,3)
 ```
 
 ```text
-(_C1*sqrt(f)*(u/(E*I))^(1/4)*e^(sqrt(f)*x*(u/(E*I))^(1/4)) + I*_C0*sqrt(f)*(u/(E*I))^(1/4)*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) - I*_C2*sqrt(f)*(u/(E*I))^(1/4)*e^(-I*sqrt(f)*x*(u/(E*I))^(1/4)) - _C3*sqrt(f)*(u/(E*I))^(1/4)*e^(-sqrt(f)*x*(u/(E*I))^(1/4)),
- _C1*f*sqrt(u/(E*I))*e^(sqrt(f)*x*(u/(E*I))^(1/4)) - _C0*f*sqrt(u/(E*I))*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) - _C2*f*sqrt(u/(E*I))*e^(-I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C3*f*sqrt(u/(E*I))*e^(-sqrt(f)*x*(u/(E*I))^(1/4)),
- _C1*f^(3/2)*(u/(E*I))^(3/4)*e^(sqrt(f)*x*(u/(E*I))^(1/4)) - I*_C0*f^(3/2)*(u/(E*I))^(3/4)*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) + I*_C2*f^(3/2)*(u/(E*I))^(3/4)*e^(-I*sqrt(f)*x*(u/(E*I))^(1/4)) - _C3*f^(3/2)*(u/(E*I))^(3/4)*e^(-sqrt(f)*x*(u/(E*I))^(1/4)))
+(_C1*b*e^(b*x) + I*_C0*b*e^(I*b*x) - I*_C2*b*e^(-I*b*x) - _C3*b*e^(-b*x),
+ _C1*b^2*e^(b*x) - _C0*b^2*e^(I*b*x) - _C2*b^2*e^(-I*b*x) + _C3*b^2*e^(-b*x),
+ _C1*b^3*e^(b*x) - I*_C0*b^3*e^(I*b*x) + I*_C2*b^3*e^(-I*b*x) - _C3*b^3*e^(-b*x))
 ```
 
 And then, we have a system:
@@ -84,34 +100,61 @@ conds
 
 ```text
 (_C0 + _C1 + _C2 + _C3 == 0,
- I*_C0*sqrt(f)*(u/(E*I))^(1/4) + _C1*sqrt(f)*(u/(E*I))^(1/4) - I*_C2*sqrt(f)*(u/(E*I))^(1/4) - _C3*sqrt(f)*(u/(E*I))^(1/4) == 0,
- _C1*f*sqrt(u/(E*I))*e^(L*sqrt(f)*(u/(E*I))^(1/4)) - _C0*f*sqrt(u/(E*I))*e^(I*L*sqrt(f)*(u/(E*I))^(1/4)) - _C2*f*sqrt(u/(E*I))*e^(-I*L*sqrt(f)*(u/(E*I))^(1/4)) + _C3*f*sqrt(u/(E*I))*e^(-L*sqrt(f)*(u/(E*I))^(1/4)) == 0,
- _C1*f^(3/2)*(u/(E*I))^(3/4)*e^(L*sqrt(f)*(u/(E*I))^(1/4)) - I*_C0*f^(3/2)*(u/(E*I))^(3/4)*e^(I*L*sqrt(f)*(u/(E*I))^(1/4)) + I*_C2*f^(3/2)*(u/(E*I))^(3/4)*e^(-I*L*sqrt(f)*(u/(E*I))^(1/4)) - _C3*f^(3/2)*(u/(E*I))^(3/4)*e^(-L*sqrt(f)*(u/(E*I))^(1/4)) == 0)
+ I*_C0*b + _C1*b - I*_C2*b - _C3*b == 0,
+ _C1*b^2*e^(L*b) - _C0*b^2*e^(I*L*b) - _C2*b^2*e^(-I*L*b) + _C3*b^2*e^(-L*b) == 0,
+ _C1*b^3*e^(L*b) - I*_C0*b^3*e^(I*L*b) + I*_C2*b^3*e^(-I*L*b) - _C3*b^3*e^(-L*b) == 0)
 ```
 
-Finally, we can solve.
+There are multiple solutions that exist for this function, we will solve for when solutions exist. We do this by gradually substituting and removing variables from each expression.
 
 ```sage
-solve(conds, _c0, _c1, _c2, _c3, algorithm="sympy")
+c0 = solve(cond_1, _c0)[0].rhs()
+c0
 ```
 
 ```text
-[{_C0: 0, _C1: 0, _C2: 0, _C3: 0}]
+-_C1 - _C2 - _C3
 ```
 
+We will substitute this to the second expression.
+
 ```sage
-w
+c1 = solve(cond_2.subs(_C0=c0), _c1)[0].rhs()
+c1
 ```
 
 ```text
-w(x)
+(I - 1)*_C2 + I*_C3
 ```
 
+And the third
+
 ```sage
-t(x) = sin(x)
-solve(sin(x)==0, x)
+c2 = solve(cond_3.subs(_C0=c0).subs(_C1=c1), _c2)[0].rhs()
+c2
 ```
 
 ```text
-[x == 0]
+(-I*_C3*e^((I + 2)*L*b) - (I + 1)*_C3*e^((2*I + 1)*L*b) - _C3*e^(I*L*b))/((I - 1)*e^((I + 2)*L*b) + I*e^((2*I + 1)*L*b) - e^(L*b))
+```
+
+And lastly,
+
+```sage
+c3 = solve(cond_4.subs(_C0=c0).subs(_C1=c1).subs(_C2=c2), _c3)[0].rhs()
+c3
+```
+
+```text
+0
+```
+
+At this point, we realise that this will gets us the trivial solution. So instead, let us simplify this and see when we can make \\(c\_3\\) non-zero:
+
+```sage
+cond_4.subs(_C0=c0).subs(_C1=c1).subs(_C2=c2).full_simplify()
+```
+
+```text
+(-(I - 1)*_C3*b^3*e^(2*L*b) - (I - 1)*_C3*b^3 - (-(I - 1)*_C3*b^3*e^(2*L*b) - (I - 1)*_C3*b^3)*e^(6*I*L*b) - 4*(_C3*b^3*e^(3*L*b) - (I - 2)*_C3*b^3*e^(L*b))*e^(5*I*L*b) + (-(2*I + 2)*_C3*b^3*e^(4*L*b) - (3*I + 21)*_C3*b^3*e^(2*L*b) - (I + 3)*_C3*b^3)*e^(4*I*L*b) + 12*(-(I + 1)*_C3*b^3*e^(3*L*b) - (I + 1)*_C3*b^3*e^(L*b))*e^(3*I*L*b) + (-(2*I + 2)*_C3*b^3*e^(4*L*b) - (21*I + 3)*_C3*b^3*e^(2*L*b) - (3*I + 1)*_C3*b^3)*e^(2*I*L*b) + 4*(-I*_C3*b^3*e^(3*L*b) - (2*I - 1)*_C3*b^3*e^(L*b))*e^(I*L*b))/(3*(2*e^(3*L*b) + e^(L*b))*e^(4*I*L*b) - 2*(-(I + 1)*e^(4*L*b) - (3*I + 3)*e^(2*L*b))*e^(3*I*L*b) - 3*(-2*I*e^(3*L*b) - I*e^(L*b))*e^(2*I*L*b) - (3*I - 3)*e^((5*I + 2)*L*b) + (3*I - 3)*e^((I + 2)*L*b) - I*e^((6*I + 1)*L*b) - e^(L*b)) == 0
 ```
