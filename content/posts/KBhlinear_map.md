@@ -201,3 +201,62 @@ T(0) = T(0)+T(0) \implies T(0) -T(0) = T(0)+T(0)-T(0) \implies 0 = T(0)
 ### Product of Linear Maps {#product-of-linear-maps}
 
 See [Product of Linear Maps]({{< relref "KBhproduct_of_linear_maps.md" >}})
+
+
+### "sizes" of maps {#sizes-of-maps}
+
+
+#### map to smaller space is not [injective]({{< relref "KBhinjectivity.md" >}}) {#map-to-smaller-space-is-not-injective--kbhinjectivity-dot-md}
+
+Suppose \\(V,W\\) are [finite-dimensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}})s, and \\(\dim V > \dim W\\). Then, all \\(T \in \mathcal{L}(V,W)\\) are **not** [injective]({{< relref "KBhinjectivity.md" >}}).
+
+We first have that:
+
+\begin{align}
+&\dim V = \dim null\ T + \dim range\ T \\\\
+\Rightarrow\ &  \dim null\ T  = \dim V - \dim range\ T
+\end{align}
+
+recall at this point that \\(\dim range\ T \leq \dim W\\) (the [range]({{< relref "KBhrange.md" >}}) is a [subspace]({{< relref "KBhsubspace.md" >}}) of the codomain.) Therefore, subtracting a bigger value means that the value will be smaller. So we have that:
+
+\begin{align}
+&  \dim null\ T  = \dim V - \dim range\ T   \\\\
+\Rightarrow\ & \dim null\ T  \geq   \dim V - \dim W
+\end{align}
+
+Now, recall that \\(\dim V > \dim W\\). Therefore, \\(\dim V - \dim W\\) is strictly bigger than \\(0\\). So:
+
+\begin{align}
+ \dim null\ T  &\geq   \dim V - \dim W \\\\
+ &>   0
+\end{align}
+
+And so, the [dimension]({{< relref "KBhdimension.md" >}}) of the [null space]({{< relref "KBhnull_space.md" >}}) of \\(T\\) is not \\(0\\). Therefore, the [null space]({{< relref "KBhnull_space.md" >}}) of \\(T\\) can't have been \\(\\{0\\}\\) because that does have [dimension]({{< relref "KBhdimension.md" >}}) \\(0\\). This makes the map not [injective]({{< relref "KBhinjectivity.md" >}}) because [injectivity implies that null space is \\(\\{0\\}\\)]({{< relref "KBhinjectivity.md#injectivity-implies-that-id-767a441d-4931-4fad-aa8e-c6b001e8b507-null-space-is-0" >}})
+
+
+#### map to bigger space is not [surjective]({{< relref "KBhsurjectivity.md" >}}) {#map-to-bigger-space-is-not-surjective--kbhsurjectivity-dot-md}
+
+Its basically the same thing as the one above. Suppose \\(V,W\\) are [finite-dimensional vector space]({{< relref "KBhfinite_dimensional_vector_space.md" >}})s, and \\(\dim V < \dim W\\). Then, all \\(T \in \mathcal{L}(V,W)\\) are **not** [injective]({{< relref "KBhinjectivity.md" >}}).
+
+We first have that:
+
+\begin{align}
+&\dim V = \dim null\ T + \dim range\ T \\\\
+\Rightarrow\ &  \dim range\ T  = \dim V - \dim null\ T
+\end{align}
+
+Because the [dimension]({{< relref "KBhdimension.md" >}}) of \\(null\ T\\) is larger than \\(0\\) (or, for that matter, the [dimension]({{< relref "KBhdimension.md" >}}) of anything), \\(\dim V - \dim\ null\ T \leq  \dim\ V\\). Hence:
+
+\begin{align}
+&  \dim range\ T  = \dim V - \dim null\ T   \\\\
+\Rightarrow\ & \dim range\ T  \leq \dim V
+\end{align}
+
+Now, recall that \\(\dim V < \dim W\\).
+
+\begin{align}
+&  \dim range\ T  = \dim V - \dim null\ T   \\\\
+\Rightarrow\ & \dim range\ T  \leq \dim V < \dim W
+\end{align}
+
+Given the [range]({{< relref "KBhrange.md" >}}) of \\(T\\) is smaller than the codomain of \\(T\\), they cannot be equal spaces. So, \\(T\\) is not [surjective]({{< relref "KBhsurjectivity.md" >}}).

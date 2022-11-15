@@ -57,6 +57,6 @@ This completes the [subspace]({{< relref "KBhsubspace.md" >}}) proof,  making \\
 I mean duh. The [zero]({{< relref "KBhzero.md" >}}) map maps literally everything to zero.
 
 
-### Injectivity implies that [null space]({{< relref "KBhnull_space.md" >}}) is \\(\\{0\\}\\) {#injectivity-implies-that-null-space--kbhnull-space-dot-md--is-0}
+### Injectivity IFF implies that [null space]({{< relref "KBhnull_space.md" >}}) is \\(\\{0\\}\\) {#injectivity-iff-implies-that-null-space--kbhnull-space-dot-md--is-0}
 
-See [injectivity implies that null space is \\(\\{0\\}\\)]({{< relref "KBhinjectivity.md#injectivity-implies-that-id-767a441d-4931-4fad-aa8e-c6b001e8b507-null-space-is-0" >}})
+See [injectivity IFF implies that null space is \\(\\{0\\}\\)]({{< relref "KBhinjectivity.md#injectivity-implies-that-id-767a441d-4931-4fad-aa8e-c6b001e8b507-null-space-is-0" >}})

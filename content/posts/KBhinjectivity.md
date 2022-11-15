@@ -43,3 +43,8 @@ Suppose we have some \\(Tu = Tv\\), we desire to proof that \\(u=v\\) to show th
 Given \\(Tu=Tv\\), we have that \\(Tu-Tv\\). Given additivity, \\(T(u-v) = 0\\). This makes \\((u-v) \in\ null\ T\\).
 
 Given only \\(0\\) is in the [null space]({{< relref "KBhnull_space.md" >}}) of \\(T\\), \\(u-v = 0\\), so \\(u=v\\), as desired. \\(\blacksquare\\).
+
+
+### [map to smaller space is not injective]({{< relref "KBhlinear_map.md#map-to-smaller-space-is-not-id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injective" >}}) {#map-to-smaller-space-is-not-injective--kbhlinear-map-dot-md}
+
+See [map to smaller space is not injective]({{< relref "KBhlinear_map.md#map-to-smaller-space-is-not-id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injective" >}})
