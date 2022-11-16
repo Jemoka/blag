@@ -11,6 +11,7 @@ draft = false
 -   [AP Phys C Mech Index]({{< relref "KBhap_phys_c_mech_index.md" >}})
 -   [Tuning Forks]({{< relref "KBhtuning_forks.md" >}})
 -   [bioinformatics]({{< relref "KBhbioinformatics.md" >}})
+-   [PKM]({{< relref "KBhpkm.md" >}})
 
 
 ## NUS-MATH580 QIC {#nus-math580-qic}
