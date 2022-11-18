@@ -40,4 +40,4 @@ draft = false
 
 ## Questions for Jana {#questions-for-jana}
 
--   "To prove the inclusion in the other direction, suppose v 2 null T." for 3.16; what is the _first_ direction?
+-   ~~"To prove the inclusion in the other direction, suppose v 2 null T." for 3.16; what is the _first_ direction?~~ maybe nothing maps to \\(0\\)

@@ -16,3 +16,4 @@ There's not one market, there is a host of different markets. This field is fill
 -   [Derivative Pricing]({{< relref "KBhderivative_pricing.md" >}})
 -   [options]({{< relref "KBhoptions.md" >}})
 -   [CAPM]({{< relref "KBhcapm.md" >}})
+-   [Stochastic Discount Factor]({{< relref "KBhstochastic_discount_factor.md" >}})

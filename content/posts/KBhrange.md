@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The [range]({{< relref "KBhrange.md" >}}) ([image]({{< relref "KBhrange.md" >}})) is the set that some [function]({{< relref "KBhfunction.md" >}}) \\(T\\) maps to.
+The [range]({{< relref "KBhrange.md" >}}) ([image]({{< relref "KBhrange.md" >}}), [column space]({{< relref "KBhrange.md" >}})) is the set that some [function]({{< relref "KBhfunction.md" >}}) \\(T\\) maps to.
 
 
 ## constituents {#constituents}

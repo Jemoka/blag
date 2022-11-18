@@ -105,56 +105,100 @@ conds
  _C1*b^3*e^(L*b) - I*_C0*b^3*e^(I*L*b) + I*_C2*b^3*e^(-I*L*b) - _C3*b^3*e^(-L*b) == 0)
 ```
 
+Ok so, we notice that out of all of these boundary expressions the \\(b^{n}\\) term drop out.
+
+Then, we are left with a mix-and-match of the following components. Let us first work on the bottom two expressions.
+
+\begin{equation}
+\begin{cases}
+x\_1 = C\_1e^{Lb} \\\\
+x\_2 = C\_0Ie^{ILb} \\\\
+x\_3 = C\_2Ie^{-ILb} \\\\
+x\_4 = C\_3e^{-Lb} \\\\
+\end{cases}
+\end{equation}
+
+We can then change the last two expressions above to the following:
+
+\begin{equation}
+\begin{cases}
+x\_1-x\_2-x\_3+x\_4 = 0 \\\\
+x\_1-x\_2+x\_3-x\_4 = 0
+\end{cases}
+\end{equation}
+
+Moving things around, we have then:
+
+\begin{equation}
+\begin{cases}
+x\_1+x\_4 = x\_2+x\_3 \\\\
+x\_1+x\_3 = x\_2+x\_4
+\end{cases}
+\end{equation}
+
+These expressions then tell us that by pairwise subtraction:
+
+\begin{equation}
+\begin{cases}
+x\_1=x\_2 \\\\
+x\_3=x\_4
+\end{cases}
+\end{equation}
+
+Stating those back to the original expressions, we have:
+
+\begin{equation}
+\begin{cases}
+C\_1e^{Lb}=C\_0Ie^{ILb} \\\\
+C\_2Ie^{-ILb} = C\_3e^{-Lb}
+\end{cases}
+\end{equation}
+
+Recall that the \\(e^{-x}\\) is just \\(\frac{1}{e^{x}}\\), so we will "multiply" the results below over to get:
+
+\begin{equation}
+\begin{cases}
+C\_1e^{Lb}=C\_0Ie^{ILb} \\\\
+C\_2Ie^{Lb} = C\_3e^{ILb}
+\end{cases}
+\end{equation}
+
 There are multiple solutions that exist for this function, we will solve for when solutions exist. We do this by gradually substituting and removing variables from each expression.
 
 ```sage
-c0 = solve(cond_1, _c0)[0].rhs()
-c0
+# w = solve(cond_1, w)
+w
 ```
 
 ```text
--_C1 - _C2 - _C3
+[]
 ```
 
 We will substitute this to the second expression.
 
 ```sage
-c1 = solve(cond_2.subs(_C0=c0), _c1)[0].rhs()
+c1 = solve(cond_3.subs(_C0=c0), _c1)[0].rhs()
 c1
 ```
 
 ```text
-(I - 1)*_C2 + I*_C3
+-(1/2*I - 1/2)*(2*_C2*e^(L*b) + (I - 1)*_C3*e^(I*L*b))*e^(-(I + 2)*L*b)
 ```
 
 And the third
 
 ```sage
-c2 = solve(cond_3.subs(_C0=c0).subs(_C1=c1), _c2)[0].rhs()
+c2 = solve(cond_3.subs(_C2=c0).subs(_C1=c1), _c2)[0].rhs()
 c2
-```
-
-```text
-(-I*_C3*e^((I + 2)*L*b) - (I + 1)*_C3*e^((2*I + 1)*L*b) - _C3*e^(I*L*b))/((I - 1)*e^((I + 2)*L*b) + I*e^((2*I + 1)*L*b) - e^(L*b))
 ```
 
 And lastly,
 
 ```sage
-c3 = solve(cond_4.subs(_C0=c0).subs(_C1=c1).subs(_C2=c2), _c3)[0].rhs()
+c3 = solve(cond_4.subs(_C1=c0).subs(_C1=c1).subs(_C2=c2), _c3)[0].rhs()
 c3
 ```
 
 ```text
-0
-```
-
-At this point, we realise that this will gets us the trivial solution. So instead, let us simplify this and see when we can make \\(c\_3\\) non-zero:
-
-```sage
-cond_4.subs(_C0=c0).subs(_C1=c1).subs(_C2=c2).full_simplify()
-```
-
-```text
-(-(I - 1)*_C3*b^3*e^(2*L*b) - (I - 1)*_C3*b^3 - (-(I - 1)*_C3*b^3*e^(2*L*b) - (I - 1)*_C3*b^3)*e^(6*I*L*b) - 4*(_C3*b^3*e^(3*L*b) - (I - 2)*_C3*b^3*e^(L*b))*e^(5*I*L*b) + (-(2*I + 2)*_C3*b^3*e^(4*L*b) - (3*I + 21)*_C3*b^3*e^(2*L*b) - (I + 3)*_C3*b^3)*e^(4*I*L*b) + 12*(-(I + 1)*_C3*b^3*e^(3*L*b) - (I + 1)*_C3*b^3*e^(L*b))*e^(3*I*L*b) + (-(2*I + 2)*_C3*b^3*e^(4*L*b) - (21*I + 3)*_C3*b^3*e^(2*L*b) - (3*I + 1)*_C3*b^3)*e^(2*I*L*b) + 4*(-I*_C3*b^3*e^(3*L*b) - (2*I - 1)*_C3*b^3*e^(L*b))*e^(I*L*b))/(3*(2*e^(3*L*b) + e^(L*b))*e^(4*I*L*b) - 2*(-(I + 1)*e^(4*L*b) - (3*I + 3)*e^(2*L*b))*e^(3*I*L*b) - 3*(-2*I*e^(3*L*b) - I*e^(L*b))*e^(2*I*L*b) - (3*I - 3)*e^((5*I + 2)*L*b) + (3*I - 3)*e^((I + 2)*L*b) - I*e^((6*I + 1)*L*b) - e^(L*b)) == 0
+(_C0*((I + 1)*e^((4*I + 3)*L*b) + e^((5*I + 2)*L*b)) + I*_C0*e^((3*I + 2)*L*b))/(e^((I + 4)*L*b) - (I - 2)*e^((2*I + 3)*L*b) + (I - 1)*e^((3*I + 2)*L*b) + e^((I + 2)*L*b) + I*e^((4*I + 1)*L*b) + (I - 1)*e^((2*I + 1)*L*b))
 ```

@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The [Null Space]({{< relref "KBhnull_space.md" >}}) is the subset of vectors which get mapped to \\(0\\) by some [Linear Map]({{< relref "KBhlinear_map.md" >}}).
+The [Null Space]({{< relref "KBhnull_space.md" >}}), also known as the [kernel]({{< relref "KBhnull_space.md" >}}), is the subset of vectors which get mapped to \\(0\\) by some [Linear Map]({{< relref "KBhlinear_map.md" >}}).
 
 
 ## constituents {#constituents}

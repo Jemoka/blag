@@ -34,3 +34,5 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 -   Uniqueness by construction: uniqueness part of [basis of domain]({{< relref "KBhbasis_of_domain.md" >}})
     -   pick one element that does exist
     -   pick arbitrary elements and construct a result
+
+-   if we are trying to prove equivalence, double-containment is a good bet
