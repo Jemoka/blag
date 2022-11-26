@@ -14,3 +14,8 @@ draft = false
 ## Linear Independence Quiz {#linear-independence-quiz}
 
 -   Connection between linear independence and systems equations (error: beated around the bush) --- the matrix of an nxn system of equations has a solution IFF the matrix's column vectors is linearly independent
+
+
+## To Review {#to-review}
+
+-   [direct sum]({{< relref "KBhdirect_sum.md" >}})

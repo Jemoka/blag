@@ -1,5 +1,5 @@
 +++
-title = "Numerical Cantileaver Simulations"
+title = "Numerical Cantilever Simulations"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -39,11 +39,6 @@ And now, we can go about solving this result.
 ```sage
 solution = desolve(fourier_cantileaver, w, ivar=x, algorithm="fricas").expand()
 w = solution
-w
-```
-
-```text
-_C1*e^(sqrt(f)*x*(u/(E*I))^(1/4)) + _C0*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C2*e^(-I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C3*e^(-sqrt(f)*x*(u/(E*I))^(1/4))
 ```
 
 \begin{equation}
@@ -112,8 +107,8 @@ Then, we are left with a mix-and-match of the following components. Let us first
 \begin{equation}
 \begin{cases}
 x\_1 = C\_1e^{Lb} \\\\
-x\_2 = C\_0Ie^{ILb} \\\\
-x\_3 = C\_2Ie^{-ILb} \\\\
+x\_2 = C\_0ie^{iLb} \\\\
+x\_3 = C\_2ie^{-iLb} \\\\
 x\_4 = C\_3e^{-Lb} \\\\
 \end{cases}
 \end{equation}
@@ -149,18 +144,83 @@ Stating those back to the original expressions, we have:
 
 \begin{equation}
 \begin{cases}
-C\_1e^{Lb}=C\_0Ie^{ILb} \\\\
-C\_2Ie^{-ILb} = C\_3e^{-Lb}
+C\_1e^{Lb}=C\_0ie^{iLb} \\\\
+C\_2ie^{-iLb} = C\_3e^{-Lb}
 \end{cases}
 \end{equation}
 
-Recall that the \\(e^{-x}\\) is just \\(\frac{1}{e^{x}}\\), so we will "multiply" the results below over to get:
+We now Euler's formula! This will help us get that \\(i\\) next to the exponential function.
+
+Recall that:
+
+\begin{equation}
+e^{ix} = \cos x + i\sin x\\\\
+\end{equation}
+
+And so:
+
+\begin{equation}
+i = e^{\frac{i\pi}{2}}
+\end{equation}
+
+(i.e. because \\(\cos \frac{\pi}{2} = 0, \sin \frac{\pi}{2} = 1\\) so \\(0+1i=i\\)).
+
+And therefore, applying that to our expressions:
 
 \begin{equation}
 \begin{cases}
-C\_1e^{Lb}=C\_0Ie^{ILb} \\\\
-C\_2Ie^{Lb} = C\_3e^{ILb}
+C\_1e^{Lb}=C\_0e^{i(Lb+\frac{\pi}{2})} \\\\
+C\_2e^{i(\frac{\pi}{2}-Lb)} = C\_3e^{-Lb}
 \end{cases}
+\end{equation}
+
+We now 1) swap the bottom expression, and 2) divide:
+
+\begin{equation}
+\frac{C\_1}{C\_3}e^{2Lb} = \frac{C\_0}{C\_2} e^{i2Lb}
+\end{equation}
+
+Finally, divide again:
+
+\begin{equation}
+\frac{C\_1}{C\_3}\frac{C\_2}{C\_0} =  e^{(i-1)2Lb}
+\end{equation}
+
+Excellent. We now move on to the top two expressions (dividing out the extra \\(b\\)):
+
+\begin{align}
+i C\_0 + C\_1 - i C\_2 - C\_3 = 0 \\\\
+C\_0+C\_1+C\_2+C\_3=0
+\end{align}
+
+Equating these values above (as they are both \\(0\\)):
+
+\begin{equation}
+i C\_0 + C\_1 - i C\_2 - C\_3 = C\_0 + C\_1 + C\_2 + C\_3
+\end{equation}
+
+Simplfying more:
+
+\begin{align}
+&(i-1) C\_0  = (i+1) C\_2 + 2C\_3  \\\\
+\Rightarrow\ & (i-1)C\_0-2C\_3 = (i+1)C\_2 \\\\
+\Rightarrow\ & i C\_0 - (1-i)C\_3 = C\_2 \\\\
+\Rightarrow\ & i C\_0 + (i-1)C\_3 = C\_2
+\end{align}
+
+Ok, substituting this into the original expression:
+
+\begin{align}
+&\frac{C\_1}{C\_3}\frac{C\_2}{C\_0} =  e^{(i-1)2Lb} \\\\
+\Rightarrow\ & \frac{C\_1}{C\_3}\frac{(i C\_0 + (i-1)C\_3)}{C\_0} =  e^{(i-1)2Lb}  \\\\
+\Rightarrow\ & \frac{C\_1}{C\_3} \qty(i+(i-1)\frac{C\_3}{C\_0}) =e^{(i-1)2Lb} \\\\
+\Rightarrow\ & \qty(\frac{C\_1}{C\_3} i+\frac{C\_1}{C\_0}(i-1)) =e^{(i-1)2Lb}
+\end{align}
+
+And dividing:
+
+\begin{equation}
+C\_0  = -i C\_2 + \frac{2}{i-1}C\_3
 \end{equation}
 
 There are multiple solutions that exist for this function, we will solve for when solutions exist. We do this by gradually substituting and removing variables from each expression.

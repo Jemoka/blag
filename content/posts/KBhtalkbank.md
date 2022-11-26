@@ -4,6 +4,16 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## results {#results}
+
+-   ~ contraction
+-   &amp; fused
+-   - suffix
+-   getting rid of punkt in mor
+    -   , =&gt; cm
+    -   . =&gt; no PUNKT, stays
+
+
 ## stuff {#stuff}
 
 -   chocolaty (noadmin, <https://docs.chocolatey.org/en-us/choco/setup#non-administrative-install>)
