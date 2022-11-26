@@ -1,7 +1,7 @@
 <!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
 <link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
-<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Numerical Cantileaver Simulations</title><meta name=description content="Here&rsquo;s the characteristic equation again:
+<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Numerical Cantilever Simulations</title><meta name=description content="Here&rsquo;s the characteristic equation again:
 \begin{equation} \pdv[2] x \qty(EI \pdv[2]{w}{x}) = -\mu \pdv{w}{t}+q(x) \end{equation}
 After Fourier decomposition, we have that:
 \begin{equation} EI \dv[4]{\hat{w}}{x} - \mu f^{2}\hat{w} = 0 \end{equation}
@@ -9,7 +9,7 @@ Let&rsquo;s solve this!
 E,I,u,f = var(&#34;E I u f&#34;) x, L = var(&#34;x L&#34;) w = function('w')(x) _c0, _c1, _c2, _c3 = var(&#34;_C0 _C1 _C2 _C3&#34;) fourier_cantileaver = (E*I*diff(w, x, 4) - u*f^2*w == 0) fourier_cantileaver -f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0 And now, we can go about solving this result."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Numerical Cantileaver Simulations</h1><span class=tagbox></span></div><main><article><div><p>Here&rsquo;s the characteristic equation again:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Numerical Cantilever Simulations</h1><span class=tagbox></span></div><main><article><div><p>Here&rsquo;s the characteristic equation again:</p><p>\begin{equation}
 \pdv[2] x \qty(EI \pdv[2]{w}{x}) = -\mu \pdv{w}{t}+q(x)
 \end{equation}</p><p>After Fourier decomposition, we have that:</p><p>\begin{equation}
 EI \dv[4]{\hat{w}}{x} - \mu f^{2}\hat{w} = 0
@@ -22,8 +22,6 @@ EI \dv[4]{\hat{w}}{x} - \mu f^{2}\hat{w} = 0
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>-f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0
 </span></span></code></pre></div><p>And now, we can go about solving this result.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sage data-lang=sage><span style=display:flex><span><span style=color:#111>solution</span> <span style=color:#f92672>=</span> <span style=color:#111>desolve</span><span style=color:#111>(</span><span style=color:#111>fourier_cantileaver</span><span style=color:#111>,</span> <span style=color:#111>w</span><span style=color:#111>,</span> <span style=color:#111>ivar</span><span style=color:#f92672>=</span><span style=color:#111>x</span><span style=color:#111>,</span> <span style=color:#111>algorithm</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;fricas&#34;</span><span style=color:#111>)</span><span style=color:#f92672>.</span><span style=color:#111>expand</span><span style=color:#111>()</span>
 </span></span><span style=display:flex><span><span style=color:#111>w</span> <span style=color:#f92672>=</span> <span style=color:#111>solution</span>
-</span></span><span style=display:flex><span><span style=color:#111>w</span>
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>_C1*e^(sqrt(f)*x*(u/(E*I))^(1/4)) + _C0*e^(I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C2*e^(-I*sqrt(f)*x*(u/(E*I))^(1/4)) + _C3*e^(-sqrt(f)*x*(u/(E*I))^(1/4))
 </span></span></code></pre></div><p>\begin{equation}
 _{C_{1}} e^{\left(\sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + _{C_{0}} e^{\left(i \, \sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + _{C_{2}} e^{\left(-i \, \sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)} + _{C_{3}} e^{\left(-\sqrt{f} x \left(\frac{u}{E I}\right)^{\frac{1}{4}}\right)}
 \end{equation}</p><p>We will simplify the repeated, constant top of this expression into a single variable \(b\):</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sage data-lang=sage><span style=display:flex><span><span style=color:#111>b</span> <span style=color:#f92672>=</span> <span style=color:#111>var</span><span style=color:#111>(</span><span style=color:#d88200>&#34;b&#34;</span><span style=color:#111>)</span>
@@ -56,8 +54,8 @@ taking three derivatives and supplying the following initial conditions:</p><fig
 </span></span></code></pre></div><p>Ok so, we notice that out of all of these boundary expressions the \(b^{n}\) term drop out.</p><p>Then, we are left with a mix-and-match of the following components. Let us first work on the bottom two expressions.</p><p>\begin{equation}
 \begin{cases}
 x_1 = C_1e^{Lb} \\
-x_2 = C_0Ie^{ILb} \\
-x_3 = C_2Ie^{-ILb} \\
+x_2 = C_0ie^{iLb} \\
+x_3 = C_2ie^{-iLb} \\
 x_4 = C_3e^{-Lb} \\
 \end{cases}
 \end{equation}</p><p>We can then change the last two expressions above to the following:</p><p>\begin{equation}
@@ -77,14 +75,39 @@ x_3=x_4
 \end{cases}
 \end{equation}</p><p>Stating those back to the original expressions, we have:</p><p>\begin{equation}
 \begin{cases}
-C_1e^{Lb}=C_0Ie^{ILb} \\
-C_2Ie^{-ILb} = C_3e^{-Lb}
+C_1e^{Lb}=C_0ie^{iLb} \\
+C_2ie^{-iLb} = C_3e^{-Lb}
 \end{cases}
-\end{equation}</p><p>Recall that the \(e^{-x}\) is just \(\frac{1}{e^{x}}\), so we will &ldquo;multiply&rdquo; the results below over to get:</p><p>\begin{equation}
+\end{equation}</p><p>We now Euler&rsquo;s formula! This will help us get that \(i\) next to the exponential function.</p><p>Recall that:</p><p>\begin{equation}
+e^{ix} = \cos x + i\sin x\\
+\end{equation}</p><p>And so:</p><p>\begin{equation}
+i = e^{\frac{i\pi}{2}}
+\end{equation}</p><p>(i.e. because \(\cos \frac{\pi}{2} = 0, \sin \frac{\pi}{2} = 1\) so \(0+1i=i\)).</p><p>And therefore, applying that to our expressions:</p><p>\begin{equation}
 \begin{cases}
-C_1e^{Lb}=C_0Ie^{ILb} \\
-C_2Ie^{Lb} = C_3e^{ILb}
+C_1e^{Lb}=C_0e^{i(Lb+\frac{\pi}{2})} \\
+C_2e^{i(\frac{\pi}{2}-Lb)} = C_3e^{-Lb}
 \end{cases}
+\end{equation}</p><p>We now 1) swap the bottom expression, and 2) divide:</p><p>\begin{equation}
+\frac{C_1}{C_3}e^{2Lb} = \frac{C_0}{C_2} e^{i2Lb}
+\end{equation}</p><p>Finally, divide again:</p><p>\begin{equation}
+\frac{C_1}{C_3}\frac{C_2}{C_0} = e^{(i-1)2Lb}
+\end{equation}</p><p>Excellent. We now move on to the top two expressions (dividing out the extra \(b\)):</p><p>\begin{align}
+i C_0 + C_1 - i C_2 - C_3 = 0 \\
+C_0+C_1+C_2+C_3=0
+\end{align}</p><p>Equating these values above (as they are both \(0\)):</p><p>\begin{equation}
+i C_0 + C_1 - i C_2 - C_3 = C_0 + C_1 + C_2 + C_3
+\end{equation}</p><p>Simplfying more:</p><p>\begin{align}
+&(i-1) C_0 = (i+1) C_2 + 2C_3 \\
+\Rightarrow\ & (i-1)C_0-2C_3 = (i+1)C_2 \\
+\Rightarrow\ & i C_0 - (1-i)C_3 = C_2 \\
+\Rightarrow\ & i C_0 + (i-1)C_3 = C_2
+\end{align}</p><p>Ok, substituting this into the original expression:</p><p>\begin{align}
+&\frac{C_1}{C_3}\frac{C_2}{C_0} = e^{(i-1)2Lb} \\
+\Rightarrow\ & \frac{C_1}{C_3}\frac{(i C_0 + (i-1)C_3)}{C_0} = e^{(i-1)2Lb} \\
+\Rightarrow\ & \frac{C_1}{C_3} \qty(i+(i-1)\frac{C_3}{C_0}) =e^{(i-1)2Lb} \\
+\Rightarrow\ & \qty(\frac{C_1}{C_3} i+\frac{C_1}{C_0}(i-1)) =e^{(i-1)2Lb}
+\end{align}</p><p>And dividing:</p><p>\begin{equation}
+C_0 = -i C_2 + \frac{2}{i-1}C_3
 \end{equation}</p><p>There are multiple solutions that exist for this function, we will solve for when solutions exist. We do this by gradually substituting and removing variables from each expression.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sage data-lang=sage><span style=display:flex><span><span style=color:#75715e># w = solve(cond_1, w)</span>
 </span></span><span style=display:flex><span><span style=color:#111>w</span>
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>[]
