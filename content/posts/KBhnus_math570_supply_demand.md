@@ -138,43 +138,14 @@ To check the Lipschitz Continuity is actually not super difficult. Research indi
 The actual partials of the terms on the right, though, are really only discontinuous in this case when we have something under a fraction---there is fortunately no weird exponential/log/sinusoidal/radical here. Evidently, then, we loose Lipschitz continuity at \\(w=0\\). As long as we don't cross that line, anything to the left or right of it exists and is unique(?) is each dimension.
 
 
-### Hand-fisting Dimensional Analysis {#hand-fisting-dimensional-analysis}
+### Ham-fisting Dimensional Analysis {#ham-fisting-dimensional-analysis}
 
-So, we are starting with \\(w(0)=5\sqrt 5\\). Recall that we are interested in the value of \\(w\\) at \\((x,y)=(0,0)\\).
+The initial conditions asks us for starting with \\(w(0)=5\sqrt 5\\). Recall that we are interested in the value of \\(w\\) at \\((x,y)=(0,0)\\).
 
-Recall that \\(w\\) evolves with \\(\dv{w}{t} = \beta y\\). All initial conditions are positive, and \\(\beta y\\) will be negative IFF \\(\beta\\) is negative. This means that \\(w\\), initially, increases and decreases at the command of \\(\beta\\) only. As such, one would assume that at all negative \\(\beta\\), \\(w\\) will eventually decrease towards the negative, containing the system.
+Furthermore, recall the Lipschitz condition we discussed above. That the function is Lipschitz continuous at two boundary intervals: between \\((-\infty, 0)\\) and \\((0, \infty )\\). Starting at the conditions of \\(w(0) = 5\sqrt{5}\\) indicates that there will be no way for \\(w\\) to cross into \\(\frac{1}{w} <0\\) territory.
 
-This is not always the case. The critical elements that control this is how negative \\(\beta\\) is---resulting in whether or not \\(w\\) can be negative in time when the system reaches the critical point of \\((x,y) = (0,0)\\). Here's a table to keep track of possible conditions:
+Note, again, that the eigenvalues of the Jacobian of the system are \\(\\{0, \frac{1}{w}\\}\\), therefore, a positive \\(\frac{1}{w}\\) will indicate that the system tends towards infinity as there is one positive eigenvalue.
 
+However, if we started at a negative \\(w\\) in the first place, we will equally be unable to use the same initial conditions to cross into \\(\frac{1}{w} > 0\\) territory. Because of this, conditions that begin with negative \\(w\\) will be unstable but not asymptotically increasing as there will be no positive eigenvalues of its Jacobian at any given point.
 
-#### positive \\(\beta\\) {#positive-beta}
-
-\\(\frac{1}{w}\\) is never \\(<0\\) at the critical point (as \\(w\\) is initially positive, it only grows, and Lipschitz is guaranteed \\(\to +\infty\\)). System will trend towards asymptotic instability.
-
-
-#### small negative \\(\beta\\) {#small-negative-beta}
-
-\\(\frac{1}{w}\\) cannot approach \\(<0\\) at the critical point as \\(w\\) does not decrease fast enough to make \\(w\\) negative when the system hits the critical point.
-
-By analyzing the expressions above, this will be a fun one because \\(y\\) will get progressively larger by larger steps as the slowly-smaller \\(w\\) in the denominator make both the value of \\(\dv{y}{t}\\) and \\(\dv{x}{t}\\) larger. The system will trend towards asymptotic instability after some wild oscillations (which renders the \\(w\\) on the bottom of \\(\dv{y}{t}\\) and \\(\dv{x}{t}\\) progressively smaller, sending both \\(y\\) and \\(x\\) to be huge).
-
-
-#### large negative \\(\beta\\) {#large-negative-beta}
-
-\\(\frac{1}{w}\\) approaches \\(<0\\) at the critical point. This means our system will remain unstable but not asymptotically infinite (i.e. \\(\frac{1}{w}\\) became negative "in time" for the critical point). To show what happened, we continue to hand-fist some dimensional analysis:
-
-Recall that:
-
-\begin{equation}
-\dv{y}{t} = \frac{xz}{w}
-\end{equation}
-
-and that:
-
-\begin{equation}
-\dv{w}{t} = \beta y
-\end{equation}
-
-Take some large, negative \\(\beta\\). As \\(w\\) becomes negative, \\(\dv{y}{t}\\) becomes negative as well. This means that that will push \\(y\\) to more negative values, eventually combining with the negative \\(\beta\\) to make \\(\dv{w}{t}\\) positive and eventually bring growth to \\(w\\) again. This cycle then continues.
-
-This is, theoretically, what happens when---at our critical point---\\(\frac{1}{w} <0\\). We will have a oscillating non-stable behavior, not spiraling with clean imaginary components but instead with this uneven distribution.
+{{< figure src="/ox-hugo/2022-11-27_16-28-45_screenshot.png" >}}

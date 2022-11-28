@@ -63,8 +63,42 @@ _C1*e^(b*x) + _C0*e^(I*b*x) + _C2*e^(-I*b*x) + _C3*e^(-b*x)
 \_{C\_{1}} e^{\left(b x\right)} + \_{C\_{0}} e^{\left(i \\, b x\right)} + \_{C\_{2}} e^{\left(-i \\, b x\right)} + \_{C\_{3}} e^{\left(-b x\right)}
 \end{equation}
 
-We have one equation, four unknowns. The way that we will go about this is by
-taking three derivatives and supplying the following initial conditions:
+We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+Recall that:
+
+\begin{equation}
+\begin{cases}
+\cosh x = \frac{e^{x}+e^{-x}}{2} \\\\
+\cos x = \frac{e^{ix}+e^{-ix}}{2}\\\\
+\sinh x = \frac{e^{x}-e^{-x}}{2} \\\\
+\sin x = \frac{e^{ix}-e^{-ix}}{2i}\\\\
+\end{cases}
+\end{equation}
+
+With a new set of scaling constants \\(d\_0\dots d\_3\\), and some rearranging, we can rewrite the above expressions into just a linear combination of those elements. That is, the same expression for \\(w(x)\\) at a specific frequency can be written as:
+
+\begin{equation}
+d\_0\cosh bx +d\_1\sinh bx +d\_2\cos bx +d\_3\sin bx  = w
+\end{equation}
+
+No more imaginaries!!
+
+So, let us redefine the expression:
+
+```sage
+d0, d1, d2, d3 = var("d0 d1 d2 d3")
+w = d0*cosh(b*x)+d1*sinh(b*x)+d2*cos(b*x)+d3*sin(b*x)
+w
+```
+
+```text
+d2*cos(b*x) + d0*cosh(b*x) + d3*sin(b*x) + d1*sinh(b*x)
+```
+
+Now, we need to move onto solving when there will be valid solutions to this expression. However, we currently have four unknowns, and only one equation (at \\(x=0\\), \\(w=0\\), because the cantilever is fixed at base); so, to get a system in four elements, we will take some derivatives.
+
+The way that we will go about this is by taking three derivatives and supplying the following initial conditions to get four equations:
 
 {{< figure src="/ox-hugo/2022-11-10_13-38-40_screenshot.png" >}}
 
@@ -76,9 +110,9 @@ wppp = diff(w,x,3)
 ```
 
 ```text
-(_C1*b*e^(b*x) + I*_C0*b*e^(I*b*x) - I*_C2*b*e^(-I*b*x) - _C3*b*e^(-b*x),
- _C1*b^2*e^(b*x) - _C0*b^2*e^(I*b*x) - _C2*b^2*e^(-I*b*x) + _C3*b^2*e^(-b*x),
- _C1*b^3*e^(b*x) - I*_C0*b^3*e^(I*b*x) + I*_C2*b^3*e^(-I*b*x) - _C3*b^3*e^(-b*x))
+(b*d3*cos(b*x) + b*d1*cosh(b*x) - b*d2*sin(b*x) + b*d0*sinh(b*x),
+ -b^2*d2*cos(b*x) + b^2*d0*cosh(b*x) - b^2*d3*sin(b*x) + b^2*d1*sinh(b*x),
+ -b^3*d3*cos(b*x) + b^3*d1*cosh(b*x) + b^3*d2*sin(b*x) + b^3*d0*sinh(b*x))
 ```
 
 And then, we have a system:
@@ -94,171 +128,123 @@ conds
 ```
 
 ```text
-(_C0 + _C1 + _C2 + _C3 == 0,
- I*_C0*b + _C1*b - I*_C2*b - _C3*b == 0,
- _C1*b^2*e^(L*b) - _C0*b^2*e^(I*L*b) - _C2*b^2*e^(-I*L*b) + _C3*b^2*e^(-L*b) == 0,
- _C1*b^3*e^(L*b) - I*_C0*b^3*e^(I*L*b) + I*_C2*b^3*e^(-I*L*b) - _C3*b^3*e^(-L*b) == 0)
+(d0 + d2 == 0,
+ b*d1 + b*d3 == 0,
+ -b^2*d2*cos(L*b) + b^2*d0*cosh(L*b) - b^2*d3*sin(L*b) + b^2*d1*sinh(L*b) == 0,
+ -b^3*d3*cos(L*b) + b^3*d1*cosh(L*b) + b^3*d2*sin(L*b) + b^3*d0*sinh(L*b) == 0)
 ```
 
-Ok so, we notice that out of all of these boundary expressions the \\(b^{n}\\) term drop out.
-
-Then, we are left with a mix-and-match of the following components. Let us first work on the bottom two expressions.
+Ok so, we notice that out of all of these boundary expressions the \\(b^{n}\\) term drop out. Therefore, we have the system:
 
 \begin{equation}
 \begin{cases}
-x\_1 = C\_1e^{Lb} \\\\
-x\_2 = C\_0ie^{iLb} \\\\
-x\_3 = C\_2ie^{-iLb} \\\\
-x\_4 = C\_3e^{-Lb} \\\\
+d\_0 + d\_2 = 0 \\\\
+d\_1 + d\_3 = 0 \\\\
+-d\_2 \cos Lb + d\_0 \cosh Lb - d\_3 \sin  Lb + d\_1 \sinh Lb = 0 \\\\
+-d\_3 \cos Lb + d\_1 \cosh Lb + d\_2 \sin  Lb + d\_0 \sinh Lb = 0 \\\\
 \end{cases}
 \end{equation}
 
-We can then change the last two expressions above to the following:
+Now, taking the top expressions, we gather that:
 
 \begin{equation}
 \begin{cases}
-x\_1-x\_2-x\_3+x\_4 = 0 \\\\
-x\_1-x\_2+x\_3-x\_4 = 0
+d\_0 = -d\_2 \\\\
+d\_1 = -d\_3
 \end{cases}
 \end{equation}
 
-Moving things around, we have then:
+Performing these substitutions:
 
 \begin{equation}
 \begin{cases}
-x\_1+x\_4 = x\_2+x\_3 \\\\
-x\_1+x\_3 = x\_2+x\_4
+d\_0 (\cos Lb + \cosh Lb) + d\_1 (\sin Lb + \sinh Lb) = 0 \\\\
+d\_1 (\cos Lb + \cosh Lb) + d\_0 (\sinh Lb- \sin Lb ) = 0 \\\\
 \end{cases}
 \end{equation}
 
-These expressions then tell us that by pairwise subtraction:
-
-\begin{equation}
-\begin{cases}
-x\_1=x\_2 \\\\
-x\_3=x\_4
-\end{cases}
-\end{equation}
-
-Stating those back to the original expressions, we have:
-
-\begin{equation}
-\begin{cases}
-C\_1e^{Lb}=C\_0ie^{iLb} \\\\
-C\_2ie^{-iLb} = C\_3e^{-Lb}
-\end{cases}
-\end{equation}
-
-We now Euler's formula! This will help us get that \\(i\\) next to the exponential function.
-
-Recall that:
-
-\begin{equation}
-e^{ix} = \cos x + i\sin x\\\\
-\end{equation}
-
-And so:
-
-\begin{equation}
-i = e^{\frac{i\pi}{2}}
-\end{equation}
-
-(i.e. because \\(\cos \frac{\pi}{2} = 0, \sin \frac{\pi}{2} = 1\\) so \\(0+1i=i\\)).
-
-And therefore, applying that to our expressions:
-
-\begin{equation}
-\begin{cases}
-C\_1e^{Lb}=C\_0e^{i(Lb+\frac{\pi}{2})} \\\\
-C\_2e^{i(\frac{\pi}{2}-Lb)} = C\_3e^{-Lb}
-\end{cases}
-\end{equation}
-
-We now 1) swap the bottom expression, and 2) divide:
-
-\begin{equation}
-\frac{C\_1}{C\_3}e^{2Lb} = \frac{C\_0}{C\_2} e^{i2Lb}
-\end{equation}
-
-Finally, divide again:
-
-\begin{equation}
-\frac{C\_1}{C\_3}\frac{C\_2}{C\_0} =  e^{(i-1)2Lb}
-\end{equation}
-
-Excellent. We now move on to the top two expressions (dividing out the extra \\(b\\)):
+Now we are going to do some cursed algebra to get rid of all the rest of the \\(d\\). We want to do this because we don't really care much _what_ the constants are; instead, we care about when a solution _exists_ (hopefully, then, telling us what the \\(f\\) baked inside \\(b\\) is). So:
 
 \begin{align}
-i C\_0 + C\_1 - i C\_2 - C\_3 = 0 \\\\
-C\_0+C\_1+C\_2+C\_3=0
+&d\_0 (\cos Lb + \cosh Lb) + d\_1 (\sin Lb + \sinh Lb) = 0  \\\\
+\Rightarrow\ & \frac{-d\_0}{d\_1} = \frac{(\sin Lb + \sinh Lb)}{(\cos Lb + \cosh Lb)}
 \end{align}
 
-Equating these values above (as they are both \\(0\\)):
-
-\begin{equation}
-i C\_0 + C\_1 - i C\_2 - C\_3 = C\_0 + C\_1 + C\_2 + C\_3
-\end{equation}
-
-Simplfying more:
+and
 
 \begin{align}
-&(i-1) C\_0  = (i+1) C\_2 + 2C\_3  \\\\
-\Rightarrow\ & (i-1)C\_0-2C\_3 = (i+1)C\_2 \\\\
-\Rightarrow\ & i C\_0 - (1-i)C\_3 = C\_2 \\\\
-\Rightarrow\ & i C\_0 + (i-1)C\_3 = C\_2
+&d\_1 (\cos Lb + \cosh Lb) + d\_0 (\sinh Lb- \sin Lb ) = 0  \\\\
+\Rightarrow\ & \frac{-d\_0}{d\_1} = \frac{(\cos Lb + \cosh Lb)}{(\sinh Lb- \sin Lb )}
 \end{align}
 
-Ok, substituting this into the original expression:
-
-\begin{align}
-&\frac{C\_1}{C\_3}\frac{C\_2}{C\_0} =  e^{(i-1)2Lb} \\\\
-\Rightarrow\ & \frac{C\_1}{C\_3}\frac{(i C\_0 + (i-1)C\_3)}{C\_0} =  e^{(i-1)2Lb}  \\\\
-\Rightarrow\ & \frac{C\_1}{C\_3} \qty(i+(i-1)\frac{C\_3}{C\_0}) =e^{(i-1)2Lb} \\\\
-\Rightarrow\ & \qty(\frac{C\_1}{C\_3} i+\frac{C\_1}{C\_0}(i-1)) =e^{(i-1)2Lb}
-\end{align}
-
-And dividing:
+therefore, we have:
 
 \begin{equation}
-C\_0  = -i C\_2 + \frac{2}{i-1}C\_3
+\frac{(\sin Lb + \sinh Lb)}{(\cos Lb + \cosh Lb)} = \frac{(\cos Lb + \cosh Lb)}{(\sinh Lb- \sin Lb )}
 \end{equation}
 
-There are multiple solutions that exist for this function, we will solve for when solutions exist. We do this by gradually substituting and removing variables from each expression.
+Multiplying each side by the other:
 
-```sage
-# w = solve(cond_1, w)
-w
-```
+\begin{equation}
+(\sin Lb + \sinh Lb)(\sinh Lb- \sin Lb ) = (\cos Lb + \cosh Lb)^{2}
+\end{equation}
 
-```text
-[]
-```
+Expanding both sides now:
 
-We will substitute this to the second expression.
+\begin{equation}
+(\sinh^{2} Lb-\sin^{2} Lb) = (\cos^{2} Lb + 2\cos Lb\ \cosh Lb + \cosh ^{2}Lb)
+\end{equation}
 
-```sage
-c1 = solve(cond_3.subs(_C0=c0), _c1)[0].rhs()
-c1
-```
+Moving everything finally to one side:
 
-```text
--(1/2*I - 1/2)*(2*_C2*e^(L*b) + (I - 1)*_C3*e^(I*L*b))*e^(-(I + 2)*L*b)
-```
+\begin{equation}
+\sinh^{2} Lb - \cosh^{2} Lb -\sin ^{2} Lb - \cos ^{2}Lb - 2\cos Lb \cosh Lb = 0
+\end{equation}
 
-And the third
+Ok, this is where the satisfying "candy crush" begins when things cancel out. Recall pythagoras:
 
-```sage
-c2 = solve(cond_3.subs(_C2=c0).subs(_C1=c1), _c2)[0].rhs()
-c2
-```
+\begin{equation}
+\begin{cases}
+\cosh^{2}x - \sinh^{2} x = 1 \\\\
+\sin^{2}x + \cos^{2} x = 1
+\end{cases}
+\end{equation}
 
-And lastly,
+To apply these effectively, multiply both sides by \\(1\\):
 
-```sage
-c3 = solve(cond_4.subs(_C1=c0).subs(_C1=c1).subs(_C2=c2), _c3)[0].rhs()
-c3
-```
+\begin{equation}
+-\sinh^{2} Lb + \cosh^{2} Lb +\sin ^{2} Lb + \cos ^{2}Lb + 2\cos Lb \cosh Lb = 0
+\end{equation}
 
-```text
-(_C0*((I + 1)*e^((4*I + 3)*L*b) + e^((5*I + 2)*L*b)) + I*_C0*e^((3*I + 2)*L*b))/(e^((I + 4)*L*b) - (I - 2)*e^((2*I + 3)*L*b) + (I - 1)*e^((3*I + 2)*L*b) + e^((I + 2)*L*b) + I*e^((4*I + 1)*L*b) + (I - 1)*e^((2*I + 1)*L*b))
-```
+Finally, we substitute!
+
+\begin{align}
+& -\sinh^{2} Lb + \cosh^{2} Lb +\sin ^{2} Lb + \cos ^{2}Lb + 2\cos Lb \cosh Lb = 0  \\\\
+\Rightarrow\ & 1 + 1 + 2\cos Lb \cosh Lb = 0 \\\\
+\Rightarrow\ & 2 + 2\cos Lb \cosh Lb = 0  \\\\
+\Rightarrow\ & 1 + \cos Lb \cosh Lb = 0
+\end{align}
+
+Finally, we replace \\(b\\) with our original expression for \\(b\\). Recall that:
+
+\begin{equation}
+b = \sqrt{f} \qty(\frac{\mu}{EI})^{\frac{1}{4}}
+\end{equation}
+
+Simplifying some:
+
+\begin{align}
+b &= f^{\frac{1}{2}} \qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
+&= \qty(f^{2})^{\frac{1}{4}}\qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
+&= \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}}
+\end{align}
+
+Substituting this into the result:
+
+\begin{equation}
+1 + \cos L \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}} \cosh L \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}} = 0 \ \blacksquare
+\end{equation}
+
+Valid solutions for \\(f\\) in this expression represents valid modes for the cantilever. Why did I subject myself to this? IDFK. I deserve a brownie.
+
+Ok, we now try to make sense of Sasha's data with this expression.
