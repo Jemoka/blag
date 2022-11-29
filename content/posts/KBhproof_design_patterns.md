@@ -36,3 +36,4 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
     -   pick arbitrary elements and construct a result
 
 -   if we are trying to prove equivalence, double-containment is a good bet
+-   see [fundamental theorem of linear maps]({{< relref "KBhfundamental_theorem_of_linear_maps.md" >}}): but basically wehnever you need to construct [basis]({{< relref "KBhbasis.md" >}}) of things start with an arbiturary [basis]({{< relref "KBhbasis.md" >}}) of the subspace and expand into that of the whole space
