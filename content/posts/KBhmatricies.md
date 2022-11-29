@@ -38,6 +38,16 @@ Quick memory of this result: inputs across columns, outputs across rows; think a
 IF the [basis]({{< relref "KBhbasis.md" >}}) being used in the [matrix]({{< relref "KBhmatricies.md" >}}) is unclear (i.e. if we had a change of [basis]({{< relref "KBhbasis.md" >}}), so didn't use the standard basis, etc.), then the [matrix]({{< relref "KBhmatricies.md" >}}) of a _SPECIFIC_ set of [basis]({{< relref "KBhbasis.md" >}}) is written as: \\(\mathcal{M}(T, (v\_1, \dots, v\_n), (w\_1, \dots, w\_{m}))\\).
 
 
+### column notation {#column-notation}
+
+One can use a dot to index [matricies]({{< relref "KBhmatricies.md" >}})' columns and rows.
+
+Suppose \\(A\\) is an \\(m\\) by \\(n\\) matrix.
+
+-   AT \\(1 \leq j \leq m\\), \\(A\_{j ,.}\\) denotes the \\(1\\) by \\(n\\) matrix consisting only row \\(j\\) of \\(A\\)
+-   AT \\(1 \leq k \leq n\\), \\(A\_{. ,k}\\) denotes the \\(m\\) by \\(k\\) matrix consisting only column \\(k\\) of \\(A\\)
+
+
 ### sums and scalar multiplication of [matricies]({{< relref "KBhmatricies.md" >}}) {#sums-and-scalar-multiplication-of-matricies--kbhmatricies-dot-md}
 
 According to Jana, a third grader can add and scalar multiply [matricies]({{< relref "KBhmatricies.md" >}}). So I am not going to write them here.
@@ -54,17 +64,16 @@ Recall that matricies encode where each input [basis]({{< relref "KBhbasis.md" >
 [scalar multiplication]({{< relref "KBhscalar_multiplication.md" >}}) works in the same darn way.
 
 
-### matrix multiplication {#matrix-multiplication}
+### [matrix multiplication]({{< relref "KBhmatrix_multiplication.md" >}}) {#matrix-multiplication--kbhmatrix-multiplication-dot-md}
 
--   its always row-by-column, move down rows first then columns
--   multiply element-wise and add (row times column and add)
+See [matrix multiplication]({{< relref "KBhmatrix_multiplication.md" >}})
 
 
 ### \\(\mathbb{F}^{m,n}\\) {#mathbb-f-m-n}
 
 For \\(m\\) and \\(n\\) positive integers, the set of all \\(m,n\\) matricies with entries in \\(\mathbb{F}\\) is called \\(\mathbb{F}^{m,n}\\).
 
-This is a [vector space]({{< relref "KBhvector_space.md" >}})!
+This is a [vector space]({{< relref "KBhvector_space.md" >}})! "obviously" its [basis]({{< relref "KBhbasis.md" >}}) is the set of all [matrix]({{< relref "KBhmatricies.md" >}}) with \\(1\\) in one slot and \\(0\\) in all others. There are \\(m\cdot n\\) of those [matricies]({{< relref "KBhmatricies.md" >}}) so \\(\dim \mathbb{F}^{m,n}=m\cdot n\\).
 
 
 ### invertability {#invertability}
