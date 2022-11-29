@@ -147,6 +147,11 @@ We construct \\(T \in \mathcal{L}(\mathbb{F}^{n}, \mathbb{F}^{m})\\) by: \\(T(x\
     Proof left to the reader. Pretty much just expand and more algebra.
 
 
+### [matricies]({{< relref "KBhmatricies.md" >}}) to encode [Linear Map]({{< relref "KBhlinear_map.md" >}}) {#matricies--kbhmatricies-dot-md--to-encode-linear-map--kbhlinear-map-dot-md}
+
+we can use [matricies]({{< relref "KBhmatricies.md" >}}) to represent [Linear Map]({{< relref "KBhlinear_map.md" >}})s. See [matrix of Linear Map]({{< relref "KBhmatricies.md#matrix-of-id-17f3b01c-4945-4268-8da4-9887d960596b-linear-map" >}})
+
+
 ### "[basis of domain]({{< relref "KBhbasis_of_domain.md" >}})" {#basis-of-domain--kbhbasis-of-domain-dot-md}
 
 This result tells us that we can find a [Linear Map]({{< relref "KBhlinear_map.md" >}}) for wherever we want to take the [basis]({{< relref "KBhbasis.md" >}}) of a [vector space]({{< relref "KBhvector_space.md" >}}), and that a [Linear Map]({{< relref "KBhlinear_map.md" >}})'s behavior on [basis]({{< relref "KBhbasis.md" >}}) uniquely determines that [Linear Map]({{< relref "KBhlinear_map.md" >}}).

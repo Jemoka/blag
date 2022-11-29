@@ -225,7 +225,45 @@ Finally, we substitute!
 \Rightarrow\ & 1 + \cos Lb \cosh Lb = 0
 \end{align}
 
-Finally, we replace \\(b\\) with our original expression for \\(b\\). Recall that:
+Of course, there is oscillating results here. We will numerically locate them. Why did we subject ourselves to tall of this algebra? No idea. As soon as we got rid of all the \\(d\\) we could have just stopped simplifying and just went to the numerical root solving. But here we are.
+
+We will try to locate a root for \\(Lb\\) for every \\(\pi\\) for two rounds around the circle (until \\(4 \pi\\))---there is a solution for every \\(\pi\\), if you don't believe me, plot it or change the bottom to try to find it for every \\(\frac{\pi}{2}\\), sage will crash:
+
+```sage
+intervals = [jj*pi for jj in range(0, 5)]
+intervals
+```
+
+```text
+[0, pi, 2*pi, 3*pi, 4*pi]
+```
+
+We will now declare \\(x=Lb\\), and create a nonlinear expression in it:
+
+```sage
+x = var("x")
+characteristic_eqn = 1 + cos(x)*cosh(x) == 0
+characteristic_eqn
+```
+
+```text
+cos(x)*cosh(x) + 1 == 0
+```
+
+Root finding time!
+
+```sage
+characteristic_solutions = [characteristic_eqn.find_root(i,j) for (i,j) in zip(intervals,intervals[1:])]
+characteristic_solutions
+```
+
+```text
+[1.8751040687120917, 4.6940911329739246, 7.854757438237603, 10.995540734875457]
+```
+
+These are possible \\(Lb\\) candidates.
+
+Recall now that:
 
 \begin{equation}
 b = \sqrt{f} \qty(\frac{\mu}{EI})^{\frac{1}{4}}
@@ -239,12 +277,33 @@ b &= f^{\frac{1}{2}} \qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
 &= \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}}
 \end{align}
 
-Substituting this into the result:
+To solve for \\(f\\), give all other expressions and set one of the above characteristic solutions to \\(Lb\\). Then, solve for \\(f\\).
 
-\begin{equation}
-1 + \cos L \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}} \cosh L \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}} = 0 \ \blacksquare
-\end{equation}
+Let us create a code snippet to do that consistently:
 
-Valid solutions for \\(f\\) in this expression represents valid modes for the cantilever. Why did I subject myself to this? IDFK. I deserve a brownie.
+```sage
+# constants https://www.mit.edu/~6.777/matprops/aluminum.htm
+_E = 7e10 # modulus (pascals)
+_I = 31 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
+_u = 2700 # length mass density (kg/m^3)
 
-Ok, we now try to make sense of Sasha's data with this expression.
+# target
+LENGTH = 0.09284 # length of tine (meters)
+
+# mode to index
+nth_mode = 0
+
+# variable declaration
+
+# solution eqn
+solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*b.subs(u=_u,
+                                                                    E=_E,
+                                                                    I=_I))
+
+# as frequency is squared, we take the SECOND (the non-negative) result, and round it
+solve(solution_eqn, f)[1].rhs().n()
+```
+
+```text
+373049.772775954
+```
