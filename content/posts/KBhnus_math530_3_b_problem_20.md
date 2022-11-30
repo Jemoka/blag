@@ -19,7 +19,7 @@ Given an injective \\(T \in \mathcal{L}(V,W)\\), we desire that \\(\exists S \in
 
 #### Creating \\(S\\) {#creating-s}
 
-Define a map \\(S:range\ T\to V\\) in the following manner:
+Define a relation \\(S:range\ T\to V\\) in the following manner:
 
 \begin{equation}
 S(v) = a \mid Ta = v

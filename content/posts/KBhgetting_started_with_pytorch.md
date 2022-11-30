@@ -6,13 +6,7 @@ draft = false
 layout = "blank"
 +++
 
-(Py)Torch is a great C++/Python library to construct and train complex neural networks. It has taken over academia over the last few years:
-
-{{< figure src="/ox-hugo/2022-11-12_23-39-31_screenshot.png" >}}
-
-([source](https://paperswithcode.com/trends))
-
-and is slowly taking over industry. Let's learn about how it works!
+(Py)Torch is a great C++/Python library to construct and train complex neural networks. It has [taken over academia](https://paperswithcode.com/trends) over the last few years and is slowly taking over industry. Let's learn about how it works!
 
 ****This document is meant to be read cover-to-cover. It makes NO SENSE unless read like that. I focus on building intuition about why PyTorch works, so we will be writing unorthodox code until the very end where we put all ideas together.****
 
@@ -25,6 +19,8 @@ import torch
 
 
 ## Autograd {#autograd}
+
+[source](https://pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html)
 
 I believe that anybody learning a new ML framework should learn how its differentiation tools work. Yes, this means that we should first understand how it works with not a giant matrix, but with just two simple variables.
 
@@ -62,36 +58,9 @@ tensor(12., grad_fn=<MulBackward0>)
 
 Wouldyalookatthat! Another tensor, with the value \\(12\\).
 
-Now. Onto the main event. Backpropagation! The point of backprop is that, by just telling Torch that you want one variable in your network to be some value, it can adjust ("proper gate backwards") all other variables which contributed to the value of that variable to make sure that reapplying the same computations would arrive at the new, desired values.
+Now. Onto the main event. Back-Propagation! The core idea of a neural network is actually quite simple: figure out how much each input parameter (for us `var_1`, `var_2`) influence the output, then adjust the inputs accordingly to get the output to be \\(0\\).
 
-Let's see a practical example. What if we want `var_mult` to be... \\(7\\)? Recall that there are two variables that contributed to the current value of `var_mult`: 1) `var_1` and 2) `var_2` (because `var_mult` is just the product of those variables!)
-
-We don't want to be numpties and go about adjusting `var_1` and `var_2` ourselves to get `var_mult` to be \\(7\\). That's so lame! We want to let _PyTorch_ do it for us---through the magic of backpropagation.
-
-Let's first of all figure out how much we need to adjust `var_mult` in the first place:
-
-```python
-diff = var_mult-3
-diff
-```
-
-```text
-tensor(9., grad_fn=<SubBackward0>)
-```
-
-Apparently, \\(12\\) is \\(5\\) away from \\(7\\). Our goal now is to ask PyTorch to adjust `var_1` and `var_2` accordingly to make that difference \\(0\\) (i.e. to make `var_mult` not different at all from \\(7\\).)
-
-Now, this is the beauty of PyTorch. To do this, we just write....
-
-```python
-diff.backward()
-```
-
-```text
-None
-```
-
-Woosh! Now, PyTorch has't actually changed anything---
+To see what I mean, recall our output `tensor` named:
 
 ```python
 var_mult
@@ -101,28 +70,62 @@ var_mult
 tensor(12., grad_fn=<MulBackward0>)
 ```
 
-but, what it did was add a `.grad` option to each of our variables for which we told that it could update (i.e. that has a `requires_grad` option.)
+How much does changing `var_1` and `var_2`, its inputs, influence this output `tensor`? This is not immediately obvious, so let's write what we are doing out:
 
-Let's take a look at those variables:
+\begin{equation}
+v\_1 \cdot v\_2 = v\_{m} \implies 3 \cdot 4 = 12
+\end{equation}
+
+with \\(v\_1\\) being `var_1`, \\(v\_2\\) being `var_2`, and \\(v\_{m}\\) being `var_mult`.
+
+As you vary `var_1`, by **what factor** does the output change? For instance, if `var_1` (the \\(3\\)) suddenly became a \\(2\\), how much _less_ will `var_mult` be? Well, \\(2\cdot 4=8\\), the output is exactly \\(4\\) less than before less than before. Hence, `var_1` influences the value of `var_mult` by a factor of \\(4\\); meaning every time you add/subtract \\(1\\) to the value of `var_1`, `var_mult` gets added/subtracted by a value of \\(4\\).
+
+Similarly, as you vary `var_2`, by what factor does the output change? For instance, if `var_2` (the \\(4\\)) suddenly became a \\(5\\), how much _less_ will `var_mult` be? Well, \\(3\cdot 3=5\\), the output is exactly \\(3\\) more than before less than before. Hence, `var_2` influences the value of `var_mult` by a factor of \\(3\\); meaning every time you add/subtract \\(1\\) to the value of `var_3`, `var_mult` gets added/subtracted by a value of \\(3\\).
+
+Those of you who have exposure to Multi-Variable Calculus---this is indeed the same concept as a partial derivative of `var_mult` w.r.t. `var_1` and `var_2` for the previous two paragraphs respectively.
+
+These relative-change-units (\\(4\\) and \\(3\\)) are called **gradients**: the factor by which changing any given variable change the output.
+
+Now, gradient calculation is awfully manual! Surely we don't want to keep track of these tiny rates-of-change ourselves! This is where PyTorch autograd comes in. Autograd is the automated tool that helps you figure out these relative changes! It is built in to all PyTorch tensors.
+
+In the previous paragraphs, we figured out the relative influences `var_1` and `var_2` on `var_multi`. Now let's ask a computer to give us the same result, in much less time.
+
+First, we will ask PyTorch to calculate gradients for all variables that contributed to `var_mult`.
 
 ```python
-(var_1.grad, var_2.grad)
+var_mult.backward()
+```
+
+The `backward` function is a magical function that finds and calculates these relative-change-values of `var_multi` with respect to every variable that contributed to its values. To view the actual relative values, we will use `.grad` now on the actual variables:
+
+```python
+var_1.grad
 ```
 
 ```text
-(tensor(4.), tensor(3.))
+tensor(4.)
 ```
 
----
+Recall! We used our big brains to deduce above that changing `var_1` by \\(1\\) unit will change `var_mult` by \\(4\\) units. So this works!
 
-!!!!!!!!the rest of this document is in construction!!!!!!!
+The other variables works as expected:
 
-TODO explain what this means.
+```python
+var_2.grad
+```
+
+```text
+tensor(3.)
+```
+
+Yayyy! Still what we expected.
 
 
 ## Gradient Descent {#gradient-descent}
 
-Ok but manually applying these gradients is kind of hard and also rather silly. To actually do it slowly and measurably, we use optimizer.
+Relative changes are cool, but it isn't all that useful unless we are actually doing some changing. We want to use our epic knowledge about the relative influences of `var_1` and `var_2`, to manipulate those variables such that `var_mult` is the value we want.
+
+********THE REST OF THIS DOCUMENT IS IN CONSTRUCTION********
 
 ```python
 import torch.optim as optim
