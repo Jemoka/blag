@@ -92,6 +92,7 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-19 Mon&gt;</span></span> | [Testing]({{< relref "KBhtesting.md" >}})                                                                                  |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-06 Thu&gt;</span></span> | [Defensive Programming]({{< relref "KBhdefensive_programming.md" >}})                                                      |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-11-03 Thu&gt;</span></span> | [Code Review]({{< relref "KBhcode_review.md" >}})                                                                          |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-12-01 Thu&gt;</span></span> | [UX Design]({{< relref "KBhux_design.md" >}})                                                                              |
 
 
 ## NUS-MATH570 DiffEq {#nus-math570-diffeq}
