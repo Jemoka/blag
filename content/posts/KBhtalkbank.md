@@ -4,6 +4,13 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## next steps {#next-steps}
+
+-   deal with \`n\`
+-   +... fix
+-   remove bullets
+
+
 ## results {#results}
 
 -   ~ contraction

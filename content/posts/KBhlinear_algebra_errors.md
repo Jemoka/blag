@@ -19,3 +19,9 @@ draft = false
 ## To Review {#to-review}
 
 -   [direct sum]({{< relref "KBhdirect_sum.md" >}})
+
+
+## Basis and Dimension Quiz {#basis-and-dimension-quiz}
+
+-   put 0 into a basis AAAA not lin. indep; figure out what the basis for a polynomial with a certain root is
+-   missing some inequality about basis?
