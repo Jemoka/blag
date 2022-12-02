@@ -23,5 +23,5 @@ draft = false
 
 ## Basis and Dimension Quiz {#basis-and-dimension-quiz}
 
--   put 0 into a basis AAAA not lin. indep; figure out what the basis for a polynomial with a certain root is
+-   put 0 into a basis AAAA not lin. indep; figure out what the basis for a polynomial with a certain root is: it is probably of dimension m (instead of m+1), because scalars doesn't work in the case of p(3)=0; so basis is just the scalars
 -   missing some inequality about basis?
