@@ -16,12 +16,7 @@ draft = false
 -   Connection between linear independence and systems equations (error: beated around the bush) --- the matrix of an nxn system of equations has a solution IFF the matrix's column vectors is linearly independent
 
 
-## To Review {#to-review}
-
--   [direct sum]({{< relref "KBhdirect_sum.md" >}})
-
-
 ## Basis and Dimension Quiz {#basis-and-dimension-quiz}
 
 -   put 0 into a basis AAAA not lin. indep; figure out what the basis for a polynomial with a certain root is: it is probably of dimension m (instead of m+1), because scalars doesn't work in the case of p(3)=0; so basis is just the scalars
--   missing some inequality about basis?
+-   missing some inequality about basis?  to be decided
