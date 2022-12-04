@@ -4,18 +4,25 @@
 <script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Posts</title><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css><link rel=alternate type=application/rss+xml href=/posts/index.xml title=jemoka.com></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><main><div id=title><h1><span class=listhash>#</span>Posts</h1></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgaussian_elimination/"'><span class=top><h1><a class=noannot>Gaussian elimination</a></h1><span class="modbox right">Last edited: <span class=moddate>November 11, 2022</span></span></span>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><main><div id=title><h1><span class=listhash>#</span>Posts</h1></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgarch/"'><span class=top><h1><a class=noannot>GARCH</a></h1><span class="modbox right">Last edited: <span class=moddate>December 12, 2022</span></span></span>
+<span class=summary>The GARCH model is a model for the heteroskedastic variations where the changes in variance is assumed to be auto correlated: that, though the variance changes, it changes in a predictable manner.
+It is especially useful to
+GARCH 1,1 Conditional mean:
+\begin{equation} y_{t} = x&rsquo;_{t} \theta + \epsilon_{t} \end{equation}
+Then, the epsilon parameter:
+\begin{equation} \epsilon_{t} = \sigma_{t}z_{t} \end{equation}
+where:
+\begin{equation} z_{t} \sim \mathcal{N}(0,1) \end{equation}
+and:
+conditional variance
+\begin{equation} {\sigma_{t}}^{2} = \omega + \lambda {\sigma_{t-1}}^{2} + \beta {\sigma_{t-1}}^{2} \end{equation}</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgaussian_elimination/"'><span class=top><h1><a class=noannot>Gaussian elimination</a></h1><span class="modbox right">Last edited: <span class=moddate>November 11, 2022</span></span></span>
 <span class=summary>The point of Gaussian elimination is to solve/identiy-ify a linear equation. Take, if you have a matrix expression:
 \begin{equation} Ax = b \end{equation}
 We can apply \(A^{-1}\) to both side, we then have:
 \begin{equation} A^{-1}Ax = A^{-1} b \end{equation}
 Applying the definition of the identity:
 \begin{equation} Ix = A^{-1}b \end{equation}
-Therefore, to solve for some \(A^{-1}\), which would yield \(x\).</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgeometric_brownian_motion/"'><span class=top><h1><a class=noannot>Geometric Brownian Motion</a></h1><span class="modbox right">Last edited: <span class=moddate>October 10, 2022</span></span></span>
-<span class=summary>A Geometric Brownian Motion is a Brownian Motion with a drift.
-It is determined by:
-\begin{equation} \dd{S_{t}} = \mu S_{t} \dd{t} + \sigma \dd{S_{t}} \dd{W_{t}} \end{equation}
-where, \(S_{t}\) is a Geometric Brownian Motion, \(\mu\) is its drift, \(\sigma\) the volatility, and \(W_{t}\) a centered Brownian Motion.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgenerative_semantics/"'><span class=top><h1><a class=noannot>generative semantics</a></h1><span class="modbox right">Last edited: <span class=moddate>August 8, 2022</span></span></span>
+Therefore, to solve for some \(A^{-1}\), which would yield \(x\).</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhgenerative_semantics/"'><span class=top><h1><a class=noannot>generative semantics</a></h1><span class="modbox right">Last edited: <span class=moddate>August 8, 2022</span></span></span>
 <span class=summary>a hissyfight with the transformational generative syntax.
 generative semantics states that structure is in support of meaning, rather than the other way around that transformational generative syntax suggests.
 This means that you need to first come up with a meaning then imbew the best structure to support the expression of that meaning.
