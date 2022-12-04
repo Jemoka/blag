@@ -179,4 +179,4 @@ for _ in tqdm(range(50)):
     optimizer.zero_grad()
 ```
 
-These values continue to be imaginary, which we will discuss next time.
+These values continue to be imaginary, which we will investigate further.
