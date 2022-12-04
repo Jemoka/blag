@@ -4,8 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[power utility]({{< relref "KBhpower_utility.md" >}}), or [isoelastic utility]({{< relref "KBhpower_utility.md" >}}), is a [financial econometric]({{< relref "KBhfinancial_markets_intro.md" >}})
- is a utility that results absolute, constant relative risk aversion. i.e.: you tell me how risk averse you are exogenously, I tell you how much utility some consumption is.
+[power utility]({{< relref "KBhpower_utility.md" >}}), or [isoelastic utility]({{< relref "KBhpower_utility.md" >}}), is a [financial econometric]({{< relref "KBhfinancial_markets_intro.md" >}}) is a utility that results absolute, constant relative risk aversion. i.e.: you tell me how risk averse you are exogenously, I tell you how much utility some consumption is.
 
 
 ## constituents {#constituents}

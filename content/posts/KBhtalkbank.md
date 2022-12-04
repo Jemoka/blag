@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+{{< figure src="/ox-hugo/2022-12-03_00-17-14_screenshot.png" >}}
+
+
 ## next steps {#next-steps}
 
 -   deal with \`n\`
