@@ -117,7 +117,9 @@ Recall that the scipy optimizer MINIMIZES, so we will make the loss the negative
 optim_variables = list(k.values())
 optim_variables.reverse()
 
-def u_total_loss_numeric(x):
+# this function is also the callback, so it returning
+# True terminates execution
+def u_total_loss(x):
     # the optimizer's current step
     # we want to take [1:], because we need to keep k1 the same at _k the
     # initial value
@@ -129,19 +131,22 @@ def u_total_loss_numeric(x):
     substitution_dict[d] = _d
     # we want to keep the initial value k1 the same
     substitution_dict[k[1]] = _k
-    # get value
-    content = (-1*u_total).subs(substitution_dict)
+    try:
+        # get value
+        content = (-1*u_total).subs(substitution_dict)
 
-    # recall we multiply by -1 because we are MINIMIZING, so the loss is
-    # the inverse of the maximization utility target
-    return float(content.n())
+        # recall we multiply by -1 because we are MINIMIZING, so the loss is
+        # the inverse of the maximization utility target
+        return float(content.n()), False
+    except:
+        return 0, True
 ```
 
 Finally, we are ready to start. We will now create the other initial conditions k1...k10 and : we will set the initial value to all be 1000 (i.e. do nothing) and have the optimizer work it out from there:
 
 ```sage
 from scipy.optimize import minimize
-target = minimize(u_total_loss_numeric, [_k for _ in range(T-1)])
+target = minimize(lambda x:u_total_loss(x)[0], [_k for _ in range(T-1)], callback=lambda x:u_total_loss(x)[1])
 target
 ```
 
@@ -199,7 +204,8 @@ c(k0, k1) = k0 - k1/(_m+1)
 So, let us translate our list to the actual values consumed:
 
 ```sage
-capital_over_time = [_k]+target.x.tolist() # we need to add the initial condition _k
+capital_over_time = [_k]+target.x.tolist() # we need to add the initial condition _k back to the
+                                           # inventory list
 consumption_over_time = [c(i,j) for i,j in zip(capital_over_time, capital_over_time[1:])]
 consumption_over_time
 ```
@@ -215,3 +221,122 @@ consumption_over_time
  72.5477032414004,
  64.3848282779261]
 ```
+
+
+## Examples of Output {#examples-of-output}
+
+```sage
+_m = 0.01 # 1% period-to-period increase
+_k = 1000 # $1000 capital
+_y = 0.8 # generally risk averse
+_d = 0.9 # the future matters slightly less
+```
+
+```text
+[167.107941529699,
+ 148.324379643989,
+ 131.608611479784,
+ 116.835018601197,
+ 103.699164584812,
+ 92.1059288329209,
+ 81.7161261514775,
+ 72.5477032414004,
+ 64.3848282779261]
+```
+
+---
+
+```sage
+_m = 0.1 # 1% period-to-period increase
+_k = 1000 # $1000 capital
+_y = 0.8 # generally risk averse
+_d = 0.9 # the future matters slightly less
+```
+
+```text
+[154.860597149863,
+ 152.989432556196,
+ 151.010433069881,
+ 149.201249715528,
+ 147.329750167852,
+ 145.539019666462,
+ 143.739371599600,
+ 141.984228587213,
+ 140.243839963791]
+```
+
+---
+
+```sage
+_m = 0.01 # 1% period-to-period increase
+_k = 1000 # $1000 capital
+_y = 0.2 # generally risky
+_d = 0.9 # the future matters slightly less
+```
+
+```text
+[388.525041338376,
+ 241.124420093987,
+ 149.632568775223,
+ 92.8644259086613,
+ 57.6330459746870,
+ 35.7667230511026,
+ 22.1970017374152,
+ 13.7754327365677,
+ 8.54930907023498]
+```
+
+---
+
+```sage
+_m = -0.01 # this is a loosing stock
+_k = 1000 # $1000 capital
+_y = 0.9 # very safe
+_d = 0.9 # the future matters
+```
+
+```text
+      fun: 0
+ hess_inv: array([[1, 0, 0, 0, 0, 0, 0, 0, 0],
+       [0, 1, 0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 1, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 1, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 1, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0, 1, 0],
+       [0, 0, 0, 0, 0, 0, 0, 0, 1]])
+      jac: array([0., 0., 0., 0., 0., 0., 0., 0., 0.])
+  message: 'Optimization terminated successfully.'
+     nfev: 10
+      nit: 0
+     njev: 1
+   status: 0
+  success: True
+        x: array([1000., 1000., 1000., 1000., 1000., 1000., 1000., 1000., 1000.])
+```
+
+Evidently: do nothing if we have a loosing cause.
+
+---
+
+```sage
+_m = 1.00 # this is SUPER winning stock
+_k = 1000 # $1000 capital
+_y = 0.9 # very safe
+_d = 0.9 # the future matters
+```
+
+```text
+[125.667556437602,
+ 241.474827418105,
+ 460.068836905327,
+ 868.972817783791,
+ 4540.45893314523,
+ 4219.93058738029,
+ 3988.05775624984,
+ 3996.89431939885,
+ 3615.74982832315]
+```
+
+We made so much money that we are spending a lot of it and still spending it.
