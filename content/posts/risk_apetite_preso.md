@@ -1,22 +1,28 @@
 +++
-title = "NUS-ECON320 Inter-Temporal Choice"
+title = "Inter-Temporal Choice"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-We want to construct a combined agent
+## Goal {#goal}
 
-\begin{equation}
-(k\_1+k\_2)x^{\*}(k\_1+k\_2, \gamma^{\*}) = x^{\*}(k\_1,\gamma\_{1})k\_1+x^{\*}(k\_2, \gamma\_{2})k\_2
-\end{equation}
+We are going to solve the inter-temporal choice problem, for ten time stamps, and perform some numerical optimization of the results
 
-which combines the relative risk of \\(\gamma\_{1}, \gamma\_{2}\\) into some new \\(\gamma^{\*}\\), which produces the same combined consumption of both agents \\(k\_1+k\_2\\).
 
-Let us create some CAS tools to solve the inter-temporal choice problem generically for 10 steps in the past.
+## Main Methods {#main-methods}
 
 We do this by solving backwards. We will create a variable \\(k\\) to measure asset, and \\(k\_{t}\\) the remaining asset at time \\(t\\).
 
 Let us first declare the function for [power utility]({{< relref "KBhpower_utility.md" >}}). \\(k\\) is our asset holding, \\(\gamma\\) our relative margin of risk, and \\(U\\) the power utility.
+
+The power utility function is defined by:
+
+\begin{equation}
+U( C) = \frac{c^{1-\gamma}-1}{1-\gamma}
+\end{equation}
+
+
+## Implementing Power Utility {#implementing-power-utility}
 
 ```sage
 # risk aversion
@@ -43,12 +49,18 @@ u
 c |--> -(c^(-y + 1) - 1)/(y - 1)
 ```
 
+
+## End Boundary Conditions {#end-boundary-conditions}
+
 At the final time stamp, we desire to consume all of our assets. Therefore, we will seed our investment amount at \\(I=0\\). We will optimize for eventual global utility, therefore, we will talley our utility; starting this talley at \\(0\\).
 
 ```sage
 # at the final time, leave nothing for investment
 I=0; u_total = 0
 ```
+
+
+## Bottom-Up Dynamic Programming {#bottom-up-dynamic-programming}
 
 From every step from here, we will discount this utility by \\(d\\), then solve for the _previous_ step's target consumption that would maximize utility. That is, at every step, we desire:
 
@@ -68,7 +80,8 @@ Recall also that \\((1+\mu)I\_{t} = k\_{t+1}\\)  (as \\(\mu\\) is the mean log-r
 I\_{t-1} = \frac{k\_t}{(1+m)}
 \end{equation}
 
-Enough talk, let's get to it:
+
+## Actual implementation {#actual-implementation}
 
 ```sage
 # create an dictionary to keep track of all the capital variables
@@ -95,6 +108,9 @@ u_total
 -(((((((d*(d*(k_10^(-y + 1) - 1)/(y - 1) + ((k_9 - k_10/(m + 1))^(-y + 1) - 1)/(y - 1)) + ((k_8 - k_9/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_7 - k_8/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_6 - k_7/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_5 - k_6/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_4 - k_5/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_3 - k_4/(m + 1))^(-y + 1) - 1)/(y - 1))*d + ((k_2 - k_3/(m + 1))^(-y + 1) - 1)/(y - 1))*d - ((k_1 - k_2/(m + 1))^(-y + 1) - 1)/(y - 1)
 ```
 
+
+## Optimization with some constants {#optimization-with-some-constants}
+
 We can now use the scipy numerical optimizer to minimize this target. Recall that we can recover the actual value of consumption at each step as \\(c=k-\frac{k}{m+1}\\).
 
 We will set some initial conditions:
@@ -106,7 +122,12 @@ _y = 0.8 # generally risk averse
 _d = 0.9 # the future matters slightly less
 ```
 
-Recall that the scipy optimizer MINIMIZES, so we will make the loss the negative of utility. Before we finally start, we need to make the actual, numerical loss function that performs the substitution:
+
+## Optimization Target Function {#optimization-target-function}
+
+Recall that the scipy optimizer MINIMIZES, so we will make the loss the negative of utility. Before we finally start, we need to make the actual, numerical loss function that performs the substitution.
+
+The code is actually just doing some function substitution, so its not very exciting.
 
 ```sage
 # we reverse the k_* variables because it is stored in the dictionary
@@ -139,6 +160,9 @@ def u_total_loss(x):
         return 0, True
 ```
 
+
+## Optimize! {#optimize}
+
 Finally, we are ready to start. We will now create the other initial conditions k1...k10 and : we will set the initial value to all be 1000 (i.e. do nothing) and have the optimizer work it out from there:
 
 ```sage
@@ -152,28 +176,8 @@ target
  hess_inv: array([[ 9518.97596212,  7617.14636381,  5964.42171873,  4433.87331935,
          4253.91810669,  3528.72923763,  2329.61846616,  1769.85078017,
          1126.51562458],
-       [ 7617.14636381, 14333.33933517, 11251.71278723,  8073.31207641,
-         7444.53071922,  6481.03236385,  4347.35353474,  2644.39855553,
-         1359.86586059],
-       [ 5964.42171873, 11251.71278723, 15011.27497355, 10093.46973099,
-         9229.06386286,  8371.07459024,  5510.14654004,  3480.74298654,
-         1639.19265606],
-       [ 4433.87331935,  8073.31207641, 10093.46973099, 12434.28059884,
-        11689.33288295, 10711.57399875,  7440.7461982 ,  4810.57094062,
-         2255.16306648],
-       [ 4253.91810669,  7444.53071922,  9229.06386286, 11689.33288295,
-        14840.59602968, 12519.06872583,  8708.9160148 ,  5688.83339388,
-         2598.27394651],
-       [ 3528.72923763,  6481.03236385,  8371.07459024, 10711.57399875,
-        12519.06872583, 14999.44881857, 10630.30739223,  6512.62254338,
-         2293.45506703],
-       [ 2329.61846616,  4347.35353474,  5510.14654004,  7440.7461982 ,
-         8708.9160148 , 10630.30739223, 12147.11811342,  7149.37937935,
-         2657.8129831 ],
-       [ 1769.85078017,  2644.39855553,  3480.74298654,  4810.57094062,
-         5688.83339388,  6512.62254338,  7149.37937935,  7260.90962516,
-         2422.66762041],
-       [ 1126.51562458,  1359.86586059,  1639.19265606,  2255.16306648,
+         ...
+          [ 1126.51562458,  1359.86586059,  1639.19265606,  2255.16306648,
          2598.27394651,  2293.45506703,  2657.8129831 ,  2422.66762041,
          2911.30717272]])
       jac: array([ 0.00000000e+00, -3.81469727e-06,  2.38418579e-06,  0.00000000e+00,
@@ -189,6 +193,9 @@ target
        361.51493714, 272.10309839, 192.29084196, 120.94057011,
         57.12129925])
 ```
+
+
+## Recovering Actual Dollar Consumption Amount {#recovering-actual-dollar-consumption-amount}
 
 _Awesome!_ We now can recover \\(c\\) at each point by a nice helpful function:
 
@@ -222,6 +229,11 @@ consumption_over_time
 
 ## Examples of Output {#examples-of-output}
 
+The next set of slides show examples of possible optimization outputs---how decisions by the inter-temporal choice problem changes based on the inputs.
+
+
+## Risk Averse {#risk-averse}
+
 ```sage
 _m = 0.01 # 1% period-to-period increase
 _k = 1000 # $1000 capital
@@ -241,7 +253,11 @@ _d = 0.9 # the future matters slightly less
  64.3848282779261]
 ```
 
----
+
+## More Return {#more-return}
+
+
+## Winning Game {#winning-game}
 
 ```sage
 _m = 0.1 # 1% period-to-period increase
@@ -262,7 +278,8 @@ _d = 0.9 # the future matters slightly less
  140.243839963791]
 ```
 
----
+
+## More Risk {#more-risk}
 
 ```sage
 _m = 0.01 # 1% period-to-period increase
@@ -283,7 +300,8 @@ _d = 0.9 # the future matters slightly less
  8.54930907023498]
 ```
 
----
+
+## Loosing Game {#loosing-game}
 
 ```sage
 _m = -0.01 # this is a loosing stock
@@ -315,7 +333,8 @@ _d = 0.9 # the future matters
 
 Evidently: do nothing if we have a loosing cause.
 
----
+
+## Winning Game {#winning-game}
 
 ```sage
 _m = 1.00 # this is SUPER winning stock

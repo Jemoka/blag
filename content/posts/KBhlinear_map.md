@@ -15,7 +15,7 @@ A [Linear Map]({{< relref "KBhlinear_map.md" >}}) (a.k.a. [Linear Transformation
 
 ## requirements {#requirements}
 
-\\(T\\) is considered a [Linear Map]({{< relref "KBhlinear_map.md" >}}) if it follows...
+\\(T\\) is considered a [Linear Map]({{< relref "KBhlinear_map.md" >}}) if it follows... (properties of "linearity")
 
 
 ### additivity {#additivity}
@@ -250,7 +250,7 @@ We first have that:
 \Rightarrow\ &  \dim range\ T  = \dim V - \dim null\ T
 \end{align}
 
-Because the [dimension]({{< relref "KBhdimension.md" >}}) of \\(null\ T\\) is non-negative (or, for that matter, the [dimension]({{< relref "KBhdimension.md" >}}) of anything), \\(\dim V - \dim\ null\ T \leq  \dim\ V\\). Hence:
+Because the [dimension]({{< relref "KBhdimension.md" >}}) of \\(null\ T\\) is larger than \\(0\\) (or, for that matter, the [dimension]({{< relref "KBhdimension.md" >}}) of anything), \\(\dim V - \dim\ null\ T \leq  \dim\ V\\). Hence:
 
 \begin{align}
 &  \dim range\ T  = \dim V - \dim null\ T   \\\\
