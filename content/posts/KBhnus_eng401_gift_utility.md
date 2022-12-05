@@ -21,7 +21,7 @@ To play the game, here are what you need to know--
 ## Validate a Token! {#validate-a-token}
 
 
-<input id="token" placeholder="s_0000_0x03"></input> <button id="validate">Validate</button>
+<input id="token" placeholder="s_0000_0e"></input> <button id="validate">Validate</button>
 
 <div id="result" style="font-size: 13px">please enter a token</div>
 
