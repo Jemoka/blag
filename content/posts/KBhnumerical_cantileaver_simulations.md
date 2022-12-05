@@ -284,8 +284,8 @@ Let us create a code snippet to do that consistently:
 ```sage
 # constants https://www.mit.edu/~6.777/matprops/aluminum.htm
 _E = 7e10 # modulus (pascals)
-_I = 31 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
-_u = 2700 # length mass density (kg/m^3)
+_I = 0.0000000001302083333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
+_u = 1.521355063 # length mass density (kg/m^3)
 
 # target
 LENGTH = 0.09284 # length of tine (meters)
@@ -296,14 +296,14 @@ nth_mode = 0
 # variable declaration
 
 # solution eqn
-solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*b.subs(u=_u,
-                                                                    E=_E,
-                                                                    I=_I))
+solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*top.subs(u=_u,
+                                                                      E=_E,
+                                                                      I=_I))
 
 # as frequency is squared, we take the SECOND (the non-negative) result, and round it
-solve(solution_eqn, f)[1].rhs().n()
+solve(solution_eqn, f)[0].rhs().n()
 ```
 
 ```text
-373049.772775954
+8.15000402967991e44
 ```
