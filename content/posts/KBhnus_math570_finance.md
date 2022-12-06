@@ -6,31 +6,109 @@ draft = false
 
 We need to solve this system:
 
+\begin{equation}
+\begin{cases}
+\dv{I}{t} = -0.73U + 0.0438 + 0.4 \dv{M}{t} \\\\
+\dv{U}{t} = 0.4I - 0.012 \\\\
+\dv{G}{t} = \dv{M}{t}- I \\\\
+M(t)=0.02\sin (1.15t + \phi)
+\end{cases}
+\end{equation}
+
+To be able to work on this, let us create some functions:
+
 ```sage
-# variables
-s = var("s")
-# constants
-I0, U0, G0, M0 = var("I0 U0 G0 M0")
-# extrinsic variables
+# variable
+t = var("t")
+
+# functions
+I = function("_I")(t) # _I because i is imaginary
+U = function("U")(t)
+M = function("M")(t)
+G = function("G")(t)
+
+# parameter
 phi = var("phi", latex_name="\phi")
 
-# random functions
+# our equations
+eqns = [
+    diff(I,t) == -0.73*U + 0.0438 + 0.4*diff(M,t),
+    diff(U,t) == 0.4*I - 0.012,
+    diff(G,t) == diff(M,t) - I,
+    M == 0.02*sin(1.15*t+phi)
+]
+
+eqns
+```
+
+```text
+[diff(_I(t), t) == -0.730000000000000*U(t) + 0.400000000000000*diff(M(t), t) + 0.0438000000000000,
+ diff(U(t), t) == 0.400000000000000*_I(t) - 0.0120000000000000,
+ diff(G(t), t) == -_I(t) + diff(M(t), t),
+ M(t) == 0.0200000000000000*sin(phi + 1.15000000000000*t)]
+```
+
+Great, now, we will run the laplace transform upon these equations:
+
+```sage
+# laplace variable
+s = var("s")
+
+# laplaced functions
 Fi = var("Fi")
 Fu = var("Fu")
 Fg = var("Fg")
 Fm = var("Fm")
 
-# equations
-eqns = [
-    Fm == (0.02*s*sin(phi)+0.023*cos(phi))/(s^2+1.3225),
-    s*Fi - I0 == -0.73*Fu+(0.0438/s)+0.4*(s*Fm-M0),
-    s*Fu - U0 == 0.4*Fi - 0.012/s,
-    s*Fg - G0 == (s*Fm-M0)-Fi
-]
+# constants
+I0, U0, G0, M0 = var("I0 U0 G0 M0")
 
-# solve!
-solution = solve(eqns, Fi, Fu, Fg, Fm, solution_dict=True)[0]
-solution
+# substitution dictionary
+subs = {
+    laplace(I,t,s): Fi,
+    laplace(U,t,s): Fu,
+    laplace(G,t,s): Fg,
+    laplace(M,t,s): Fm,
+    I(0): I0,
+    G(0): G0,
+    U(0): U0,
+    M(0): M0,
+}
+
+# laplace eqns
+laplace_eqns = [i.laplace(t, s).subs(subs) for i in eqns]
+laplace_eqns
+```
+
+```text
+<ipython-input-236-2a2ddfe91635>:20: DeprecationWarning: Substitution using function-call syntax and unnamed arguments is deprecated and will be removed from a future release of Sage; you can use named arguments instead, like EXPR(x=..., y=...)
+See http://trac.sagemath.org/5930 for details.
+  I(Integer(0)): I0,
+<ipython-input-236-2a2ddfe91635>:21: DeprecationWarning: Substitution using function-call syntax and unnamed arguments is deprecated and will be removed from a future release of Sage; you can use named arguments instead, like EXPR(x=..., y=...)
+See http://trac.sagemath.org/5930 for details.
+  G(Integer(0)): G0,
+<ipython-input-236-2a2ddfe91635>:22: DeprecationWarning: Substitution using function-call syntax and unnamed arguments is deprecated and will be removed from a future release of Sage; you can use named arguments instead, like EXPR(x=..., y=...)
+See http://trac.sagemath.org/5930 for details.
+  U(Integer(0)): U0,
+<ipython-input-236-2a2ddfe91635>:23: DeprecationWarning: Substitution using function-call syntax and unnamed arguments is deprecated and will be removed from a future release of Sage; you can use named arguments instead, like EXPR(x=..., y=...)
+See http://trac.sagemath.org/5930 for details.
+  M(Integer(0)): M0,
+[Fi*s - I0 == 0.4*Fm*s - 0.73*Fu - 0.4*M0 + 0.0438/s,
+ Fu*s - U0 == 0.4*Fi - 0.012/s,
+ Fg*s - G0 == Fm*s - Fi - M0,
+ Fm == (0.02*s*sin(phi) + 0.023*cos(phi))/(s^2 + 1.3225)]
+```
+
+And then, let us solve the Laplace solutions:
+
+```sage
+# substitute
+laplace_solutions = solve(laplace_eqns,
+                          Fi,
+                          Fu,
+                          Fg,
+                          Fm, solution_dict=True)[0]
+laplace_solutions
 ```
 
 ```text
@@ -43,13 +121,12 @@ solution
 Now we inverse Laplace transform:
 
 ```sage
-t = var("t")
-I(t) = inverse_laplace(solution[Fi], s, t)
-U(t) = inverse_laplace(solution[Fu], s, t)
-G(t) = inverse_laplace(solution[Fg], s, t)
-M(t) = inverse_laplace(solution[Fm], s, t)
+I_s(t) = inverse_laplace(laplace_solutions[Fi], s, t)
+U_s(t) = inverse_laplace(laplace_solutions[Fu], s, t)
+G_s(t) = inverse_laplace(laplace_solutions[Fg], s, t)
+M_s(t) = inverse_laplace(laplace_solutions[Fm], s, t)
 
-(I,U,G,M)
+(I_s,U_s,G_s,M_s)
 ```
 
 ```text
@@ -62,24 +139,14 @@ M(t) = inverse_laplace(solution[Fm], s, t)
 Some plots.
 
 ```sage
-I_specific = I.subs(I0=0.24, U0=0.39, M0=0, G0=0, phi=2.35)
-U_specific = U.subs(I0=0.24, U0=0.39, M0=0, G0=0, phi=2.35)
-G_specific = G.subs(I0=0.24, U0=0.39, M0=0, G0=0, phi=2.35)
-M_specific = M.subs(I0=0.24, U0=0.39, M0=0, G0=0, phi=2.35)
+I_specific = I_s.subs(I0=0.024, U0=0.039, M0=0, G0=0, phi=2.35)
+U_specific = U_s.subs(I0=0.024, U0=0.039, M0=0, G0=0, phi=2.35)
+G_specific = G_s.subs(I0=0.024, U0=0.039, M0=0, G0=0, phi=2.35)
+M_specific = M_s.subs(I0=0.024, U0=0.039, M0=0, G0=0, phi=2.35)
 
-plot(I_specific, t, 0, 100, color="blue") + plot(U_specific, t, 0, 100, color="orange") + plot(G_specific, t, 0, 100, color="green") + plot(M_specific, t, 0, 100, color="red")
+plot(I_specific, t, 0, 10, color="blue") + plot(U_specific, t, 0, 10, color="orange") + plot(G_specific, t, 0, 10, color="green") + plot(M_specific, t, 0, 10, color="red")
 ```
 
 ```text
-/Users/houliu/.sage/temp/baboon.jemoka.com/80287/tmp_nxtuomzj.png
-```
-
-{{< figure src="/ox-hugo/2022-12-02_15-01-11_screenshot.png" >}}
-
-```sage
-derivative(I, t)
-```
-
-```text
-t |--> -1/51525000*sqrt(730)*(1030500*I0 - 412200*M0 - 2336*sin(phi) - 30915)*sin(1/50*sqrt(730)*t) - 73/10305000*(103050*U0 + 368*cos(phi) - 6183)*cos(1/50*sqrt(730)*t) + 12167/1030500*cos(phi)*cos(23/20*t) - 12167/1030500*sin(phi)*sin(23/20*t)
+/Users/houliu/.sage/temp/baboon.jemoka.com/16964/tmp_sei9raar.png
 ```

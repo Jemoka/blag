@@ -49,7 +49,7 @@ We will simplify the repeated, constant top of this expression into a single var
 
 ```sage
 b = var("b")
-top = sqrt(f)*(u/E*I)*(1/4)
+top = sqrt(f)*(u/(E*I))**(1/4)
 
 w = _c1*e^(b*x) + _c0*e^(i*b*x) + _c2*e^(-i*b*x) + _c3*e^(-b*x)
 w
@@ -305,5 +305,34 @@ solve(solution_eqn, f)[0].rhs().n()
 ```
 
 ```text
-8.15000402967991e44
+998.466749241917
+```
+
+Let's plot with these constants
+
+```sage
+# mode to index
+nth_mode = 0
+
+plot_eqn = characteristic_solutions[nth_mode] == (L*top.subs(u=_u,
+                                                             E=_E,
+                                                             I=_I))
+assume(L>0)
+
+f_l(L) = solve(plot_eqn, f)[0].rhs()
+f_l
+```
+
+```text
+L |--> 13918781399001701932544983201/1617325164275816577175516836/L^2
+```
+
+Great, let us plot this!
+
+```sage
+plot(f_l, (L, -1, 20))
+```
+
+```text
+/Users/houliu/.sage/temp/baboon.jemoka.com/16964/tmp_cj6w2hdz.png
 ```
