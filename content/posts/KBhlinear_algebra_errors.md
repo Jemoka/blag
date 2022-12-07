@@ -20,3 +20,9 @@ draft = false
 
 -   put 0 into a basis AAAA not lin. indep; figure out what the basis for a polynomial with a certain root is: it is probably of dimension m (instead of m+1), because scalars doesn't work in the case of p(3)=0; so basis is just the scalars
 -   missing some inequality about basis? --- its just that lin.idp sets is shorter or equal to basis and spanning sets is longer or equal to basis
+
+
+## Final, part 1 {#final-part-1}
+
+-   straight forgot \\(dim(U+V) = dim U + dim V - dim (U\cap V)\\)
+-   proof: det A det B = det AB
