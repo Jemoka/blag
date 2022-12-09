@@ -76,9 +76,9 @@ For \\(m\\) and \\(n\\) positive integers, the set of all \\(m,n\\) matricies wi
 This is a [vector space]({{< relref "KBhvector_space.md" >}})! "obviously" its [basis]({{< relref "KBhbasis.md" >}}) is the set of all [matrix]({{< relref "KBhmatricies.md" >}}) with \\(1\\) in one slot and \\(0\\) in all others. There are \\(m\cdot n\\) of those [matricies]({{< relref "KBhmatricies.md" >}}) so \\(\dim \mathbb{F}^{m,n}=m\cdot n\\).
 
 
-### invertability {#invertability}
+### [invertability]({{< relref "KBhinvertability.md" >}}) {#invertability--kbhinvertability-dot-md}
 
-Matrices whose determinants are not \\(0\\) (i.e. it is invertable) is called "[nonsingular matrix](#invertability)". If it doesn't have an [inverse]({{< relref "KBhinverses.md" >}}), it is called a [singular matrix](#invertability).
+See [matrix invertability]({{< relref "KBhinvertability.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matrix-id-ff05739c-6e70-46ba-9d56-0958ef847f57-invertability" >}})
 
 
 ### elementary matrix {#elementary-matrix}

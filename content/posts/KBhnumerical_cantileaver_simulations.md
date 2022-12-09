@@ -279,13 +279,15 @@ b &= f^{\frac{1}{2}} \qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
 
 To solve for \\(f\\), give all other expressions and set one of the above characteristic solutions to \\(Lb\\). Then, solve for \\(f\\).
 
+Also, to get the constant for the elastic modulus from our force measurements, see [calculating shear's modulus.]({{< relref "KBhcalculating_shear_s_modulus.md" >}})
+
 Let us create a code snippet to do that consistently:
 
 ```sage
 # constants https://www.mit.edu/~6.777/matprops/aluminum.htm
 _E = 7e10 # modulus (pascals)
 _I = 0.0000000001302083333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
-_u = 1.521355063 # length mass density (kg/m^3)
+_u = 1.521355063 # length mass density (kg/m)
 
 # target
 LENGTH = 0.09284 # length of tine (meters)
