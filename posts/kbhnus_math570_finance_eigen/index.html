@@ -1,0 +1,53 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>NUS-MATH570 Finance (Eigen)</title><meta name=description content="We have a system of differential equations:
+\begin{equation} \begin{cases} \dv{I}{t} = -0.73 U(t) + 0.0438 + 0.4 \dv{M}{t} \\ \dv{U}{t} = 0.4I-0.012 \\ \dv{G}{t} = \dv{M}{t} - I(t) \end{cases} \end{equation}
+where, \(M\) is a sinusoidal function which we can control.
+We hope for this system to be as stable as possible.
+First, let&rsquo;s try to get a general solution of the system. The linearized(ish) solution takes the shape of:
+\begin{equation} \dv t \mqty(I \\ U \\ G) = \mqty(0 & -x_1 & 0 \\ x_4 & 0 & 0 \\ -1 & 0 & 0 ) \mqty(I \\ U \\ G)+ \dv{M}{t}\mqty(x_3 \\ 0 \\ 1) + \mqty(x_2 \\ x_5 \\ 0) \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH570 Finance (Eigen)</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#homogeneous-system>Homogeneous System</a></li></ul></nav></aside><main><article><div><p>We have a system of differential equations:</p><p>\begin{equation}
+\begin{cases}
+\dv{I}{t} = -0.73 U(t) + 0.0438 + 0.4 \dv{M}{t} \\
+\dv{U}{t} = 0.4I-0.012 \\
+\dv{G}{t} = \dv{M}{t} - I(t)
+\end{cases}
+\end{equation}</p><p>where, \(M\) is a sinusoidal function which we can control.</p><p>We hope for this system to be as stable as possible.</p><p>First, let&rsquo;s try to get a general solution of the system. The linearized(ish) solution takes the shape of:</p><p>\begin{equation}
+\dv t \mqty(I \\ U \\ G) = \mqty(0 & -x_1 & 0 \\ x_4 & 0 & 0 \\ -1 & 0 & 0 ) \mqty(I \\ U \\ G)+ \dv{M}{t}\mqty(x_3 \\ 0 \\ 1) + \mqty(x_2 \\ x_5 \\ 0)
+\end{equation}</p><p>With:</p><p>\begin{equation}
+\begin{cases}
+x_1 = 0.73 \\
+x_2 = 0.0438 \\
+x_3 = 0.4 \\
+x_4 = 0.4 \\
+x_5 = 0.012
+\end{cases}
+\end{equation}</p><p>as input parameters. We will follow the method of underdetermined coefficients: taking the homogeneous solution first and then using it to get the general solution.</p><h2 id=homogeneous-system>Homogeneous System</h2><p>To get the characteristic equation of the <a href=/posts/kbhhomogeneity/>homogeneous</a> system, we take the <a href=/posts/kbheigenvalue/>eigenvalue</a> of the system:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sage data-lang=sage><span style=display:flex><span><span style=color:#111>x1</span><span style=color:#111>,</span><span style=color:#111>x2</span><span style=color:#111>,</span><span style=color:#111>x3</span><span style=color:#111>,</span><span style=color:#111>x4</span><span style=color:#111>,</span><span style=color:#111>x5</span> <span style=color:#f92672>=</span> <span style=color:#111>var</span><span style=color:#111>(</span><span style=color:#d88200>&#34;x1 x2 x3 x4 x5&#34;</span><span style=color:#111>)</span>
+</span></span><span style=display:flex><span><span style=color:#111>matrix</span> <span style=color:#f92672>=</span> <span style=color:#111>matrix</span><span style=color:#111>([[</span><span style=color:#ae81ff>0</span><span style=color:#111>,</span> <span style=color:#f92672>-</span><span style=color:#111>x1</span><span style=color:#111>,</span> <span style=color:#ae81ff>0</span><span style=color:#111>],</span> <span style=color:#111>[</span><span style=color:#111>x4</span><span style=color:#111>,</span> <span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#ae81ff>0</span><span style=color:#111>],</span> <span style=color:#111>[</span><span style=color:#f92672>-</span><span style=color:#ae81ff>1</span><span style=color:#111>,</span> <span style=color:#ae81ff>0</span><span style=color:#111>,</span><span style=color:#ae81ff>0</span><span style=color:#111>]])</span>
+</span></span><span style=display:flex><span><span style=color:#111>matrix</span><span style=color:#f92672>.</span><span style=color:#111>eigenvalues</span><span style=color:#111>()</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>[-sqrt(-x1*x4), sqrt(-x1*x4), 0]
+</span></span></code></pre></div><p>Awesome. So we can see that our characteristic equation will be:</p><p>\begin{align}
+\mqty(I \\ U \\ G) &= \vec{c_0} e^{0t} + \vec{c_1} e^{\sqrt{-x_1x_4}t} + \vec{c_2} e^{-\sqrt{-x_1x_4}t} \\
+&= \vec{c_0} + \vec{c_1}e^{i \sqrt{x_1x_4}t} + \vec{c_2} e^{-i \sqrt{x_1x_4}t}
+\end{align}</p><p>Now, the two \(e^{ix}\) functions, one positive and one negative, inspires us to the following results:</p><p>\begin{equation}
+\begin{cases}
+\cos x = \frac{e^{ix}+e^{-ix}}{2}\\
+\sin x = \frac{e^{ix}-e^{-ix}}{2i}\\
+\end{cases}
+\end{equation}</p><p>Treating \(\frac{1}{2}\) and \(\frac{1}{2i}\) (which we can do, because the constants can be defined on any space desired), we have:</p><p>\begin{align}
+\cos x + \sin x &= \frac{e^{ix}+e^{-ix}}{2} + \frac{e^{ix}-e^{-ix}}{2i} \\
+&= A_1e^{ix}+A_2e^{-ix}
+\end{align}</p><p>for some constant scalars \(A_1\) and \(A_2\)</p><p>&ldquo;Wait, doesn&rsquo;t the \(e^{-ix}\) and \(-e^{-ix}\) subtract each other out on the numerator? No, notice the denominator is different, so we will have \((A-B)e^{-ix}\) after we add the two expressions for some constants \(A\) and \(B\), it doesn&rsquo;t cancel out.&rdquo;</p><p>Performing this substitution allows us to reveal the sinusoidal nature of our characteristic equation, and get rid of those pesky \(i\).</p><p>\begin{align}
+\mqty(I \\ U \\ G) &= \vec{c_0} e^{0t} + \vec{c_1} e^{\sqrt{-x_1x_4}t} + \vec{c_2} e^{-\sqrt{-x_1x_4}t} \\
+&= \vec{c_0} + \vec{c_1}e^{i \sqrt{x_1x_4}t} + \vec{c_2} e^{-i \sqrt{x_1x_4}t} \\
+&= \vec{c_0} + \vec{c_1&rsquo;} \cos (\sqrt{x_1x_4} t)+ \vec{c_2&rsquo;} \sin (\sqrt{x_1x_4} t)
+\end{align}</p><p>The primes here indicate that \(\vec{c_1} \neq \vec{c_1&rsquo;}\) because the initial conditions shift when we move to sinusoidal functions.</p><p>Writing this out completely, ditching the vector expressions, we have</p><p>\begin{equation}
+\begin{cases}
+I(t) = I_0 + I_1\cos(\sqrt{x_1x_4}t) + I_2\sin (\sqrt{x_1x_4}t) \\
+U(t) = U_0 + U_1\cos(\sqrt{x_1x_4}t) + U_2\sin (\sqrt{x_1x_4}t) \\
+G(t) = G_0 + G_1\cos(\sqrt{x_1x_4}t) + G_2\sin (\sqrt{x_1x_4}t)
+\end{cases}
+\end{equation}</p><p>i</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
