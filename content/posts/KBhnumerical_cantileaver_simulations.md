@@ -285,7 +285,7 @@ Let us create a code snippet to do that consistently:
 
 ```sage
 # constants https://www.mit.edu/~6.777/matprops/aluminum.htm
-_E = 7e10 # modulus (pascals)
+_E = 1 # modulus (pascals)
 _I = 0.0000000001302083333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
 _u = 1.521355063 # length mass density (kg/m)
 
@@ -307,7 +307,7 @@ solve(solution_eqn, f)[0].rhs().n()
 ```
 
 ```text
-998.466749241917
+0.00377384958694459
 ```
 
 Let's plot with these constants
@@ -330,11 +330,3 @@ L |--> 13918781399001701932544983201/1617325164275816577175516836/L^2
 ```
 
 Great, let us plot this!
-
-```sage
-plot(f_l, (L, -1, 20))
-```
-
-```text
-/Users/houliu/.sage/temp/baboon.jemoka.com/16964/tmp_cj6w2hdz.png
-```
