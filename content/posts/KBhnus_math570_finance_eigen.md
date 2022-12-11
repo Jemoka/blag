@@ -56,7 +56,7 @@ matrix.eigenvalues()
 Awesome. So we can see that our characteristic equation will be:
 
 \begin{align}
-\mqty(I \\\ U \\\ G) &= \vec{c\_0} e^{0t} + \vec{c\_1} e^{\sqrt{-x\_1x\_4}t} + \vec{c\_2} e^{-\sqrt{-x\_1x\_4}t} \\\\
+\mqty(I \\\ U \\\ G)\_{h} &= \vec{c\_0} e^{0t} + \vec{c\_1} e^{\sqrt{-x\_1x\_4}t} + \vec{c\_2} e^{-\sqrt{-x\_1x\_4}t} \\\\
 &= \vec{c\_0} + \vec{c\_1}e^{i \sqrt{x\_1x\_4}t} + \vec{c\_2} e^{-i \sqrt{x\_1x\_4}t}
 \end{align}
 
@@ -83,7 +83,7 @@ for some constant scalars \\(A\_1\\) and \\(A\_2\\)
 Performing this substitution allows us to reveal the sinusoidal nature of our characteristic equation, and get rid of those pesky \\(i\\).
 
 \begin{align}
-\mqty(I \\\ U \\\ G) &= \vec{c\_0} e^{0t} + \vec{c\_1} e^{\sqrt{-x\_1x\_4}t} + \vec{c\_2} e^{-\sqrt{-x\_1x\_4}t} \\\\
+\mqty(I \\\ U \\\ G)\_{h} &= \vec{c\_0} e^{0t} + \vec{c\_1} e^{\sqrt{-x\_1x\_4}t} + \vec{c\_2} e^{-\sqrt{-x\_1x\_4}t} \\\\
 &= \vec{c\_0} + \vec{c\_1}e^{i \sqrt{x\_1x\_4}t} + \vec{c\_2} e^{-i \sqrt{x\_1x\_4}t}  \\\\
 &= \vec{c\_0} + \vec{c\_1'} \cos (\sqrt{x\_1x\_4} t)+ \vec{c\_2'} \sin (\sqrt{x\_1x\_4} t)
 \end{align}
@@ -94,10 +94,118 @@ Writing this out completely, ditching the vector expressions, we have
 
 \begin{equation}
 \begin{cases}
-I(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) \\\\
-U(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) \\\\
-G(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t)
+I\_{h}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) \\\\
+U\_{h}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) \\\\
+G\_{h}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t)
 \end{cases}
 \end{equation}
 
-i
+as the homogenous solutions for the equation.
+
+
+## Underdetermined Coefficients {#underdetermined-coefficients}
+
+Recall the expression we are trying to solve is:
+
+\begin{equation}
+\begin{cases}
+\dv{I}{t} = -0.73 U(t) + 0.0438 + 0.4 \dv{M}{t} \\\\
+\dv{U}{t} = 0.4I-0.012 \\\\
+\dv{G}{t} = \dv{M}{t} - I(t)
+\end{cases}
+\end{equation}
+
+We dealt with the homongenous part... but _not_ the next two parts! Let's do that.
+
+In order to do that, we will use the method of underdetermined coefficients. Recall that:
+
+\begin{equation}
+\dv t \mqty(I \\\ U \\\ G) = \mqty(0 & -x\_1 & 0 \\\ x\_4 & 0 & 0 \\\ -1 & 0 & 0 ) \mqty(I \\\ U \\\ G)+ \dv{M}{t}\mqty(x\_3 \\\ 0 \\\ 1) + \mqty(x\_2 \\\ x\_5 \\\ 0)
+\end{equation}
+
+For now, we will add the extra \\(\dv{M}{t}\\) term explicitly later. Let us solve for the undetermined coefficients based on the assumption that each function (except for the attenuation by \\(M\\)) is linear:
+
+\begin{equation}
+y(t) = at
+\end{equation}
+
+("it linearly changes over time")
+
+Its derivative by time is:
+
+\begin{equation}
+y'(t) = a
+\end{equation}
+
+Plugging that into our expressions above:
+
+\begin{equation}
+\mqty(a\_{I} \\\ a\_{U} \\\ a\_{G} ) = \mqty(0 & -x\_1 & 0 \\\ x\_4 & 0 & 0 \\\ -1 & 0 & 0 ) \mqty(a\_{I}t \\\ a\_{U}t \\\ a\_{G} t) + \dv{M}{t} \mqty(x\_3 \\\ 0 \\\ 1) + \mqty(x\_2 \\\ x\_5 \\\ 0)
+\end{equation}
+
+And now, arranging the right expressions such that we can clearly see each coefficient line up, relegating \\(M\\) to the side, and actually multiplying:
+
+\begin{equation}
+\mqty(a\_{I} \\\ a\_{U} \\\ a\_{G} ) = \mqty(0 & -x\_1 & 0 \\\ x\_4 & 0 & 0 \\\ -1 & 0 & 0 ) \mqty(a\_{I}t + x\_2 \\\ a\_{U}t + x\_5 \\\ a\_{G} t) + \dv{M}{t} \mqty(x\_3 \\\ 0 \\\ 1)
+\end{equation}
+
+\begin{equation}
+\mqty(a\_{I} \\\ a\_{U} \\\ a\_{G} ) = \mqty(-x\_1  (a\_{U}t + x\_5) \\\ x\_4 (a\_{I}t + x\_2 )\\\ 1 a\_{G} t)  + \dv{M}{t} \mqty(x\_3 \\\ 0 \\\ 1)
+\end{equation}
+
+Awesome, so now, matching coefficients, we have:
+
+\begin{equation}
+\begin{cases}
+a\_{I} = -x\_1x\_5 \\\\
+a\_{U} = x\_4x\_2 \\\\
+a\_{G} = 0
+\end{cases}
+\end{equation}
+
+Which I honestly could have told you by.... Just staring at the equations. furthermore, we will add the requisite shift of \\(\dv{M}{t}\\) to the right equations when appropriate.
+
+So, adding the \\(M(t)\\) in place, our particular solutions are:
+
+\begin{equation}
+\begin{cases}
+I\_{p}(t) = -x\_1x\_5 t + 0.4M(t) \\\\
+U\_{p}(t) = x\_4x\_2t \\\\
+G\_{p}(t) = M(t)
+\end{cases}
+\end{equation}
+
+as the homogenous solutions for the equation.
+
+
+## General Solution {#general-solution}
+
+Let us know put the general and particular solutions together:
+
+Recall that:
+
+\begin{equation}
+\begin{cases}
+I\_{h}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) \\\\
+U\_{h}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) \\\\
+G\_{h}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t)
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+I\_{p}(t) = -x\_1x\_5 t + 0.4M(t) \\\\
+U\_{p}(t) = x\_4x\_2t \\\\
+G\_{p}(t) = M(t)
+\end{cases}
+\end{equation}
+
+So, by linear additivity, we have:
+
+\begin{equation}
+\begin{cases}
+I}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) -x\_1x\_5 t + 0.4M(t)  \\\\
+U}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) + x\_4x\_2t\\\\
+G}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t) + M(t)
+\end{cases}
+\end{equation}
