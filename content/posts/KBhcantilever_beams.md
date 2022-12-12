@@ -88,3 +88,6 @@ See [Finite Difference Method]({{< relref "KBhfinite_difference_method.md" >}})
 ## Actually attempting to solve it {#actually-attempting-to-solve-it}
 
 [Numerical Cantileaver Simulations]({{< relref "KBhnumerical_cantileaver_simulations.md" >}})
+
+
+## Working on Deformation {#working-on-deformation}
