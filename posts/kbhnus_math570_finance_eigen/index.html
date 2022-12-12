@@ -9,7 +9,7 @@ First, let&rsquo;s try to get a general solution of the system. The linearized(i
 \begin{equation} \dv t \mqty(I \\ U \\ G) = \mqty(0 & -x_1 & 0 \\ x_4 & 0 & 0 \\ -1 & 0 & 0 ) \mqty(I \\ U \\ G)+ \dv{M}{t}\mqty(x_3 \\ 0 \\ 1) + \mqty(x_2 \\ x_5 \\ 0) \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH570 Finance (Eigen)</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#homogeneous-system>Homogeneous System</a></li><li><a href=#underdetermined-coefficients>Underdetermined Coefficients</a></li><li><a href=#general-solution>General Solution</a></li></ul></nav></aside><main><article><div><p>We have a system of differential equations:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH570 Finance (Eigen)</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#homogeneous-system>Homogeneous System</a></li><li><a href=#underdetermined-coefficients>Underdetermined Coefficients</a></li><li><a href=#general-solution>General Solution</a></li><li><a href=#simplification>Simplification</a><ul><li><a href=#aside-a-cos--x--plus-b-sin--x>Aside: \(A\cos (x)+B\sin (x)\)</a></li><li><a href=#using-the-above-result>Using the above result</a></li></ul></li></ul></nav></aside><main><article><div><p>We have a system of differential equations:</p><p>\begin{equation}
 \begin{cases}
 \dv{I}{t} = -0.73 U(t) + 0.0438 + 0.4 \dv{M}{t} \\
 \dv{U}{t} = 0.4I-0.012 \\
@@ -98,4 +98,41 @@ I}(t) = I_0 + I_1\cos(\sqrt{x_1x_4}t) + I_2\sin (\sqrt{x_1x_4}t) -x_1x_5 t + 0.4
 U}(t) = U_0 + U_1\cos(\sqrt{x_1x_4}t) + U_2\sin (\sqrt{x_1x_4}t) + x_4x_2t\\
 G}(t) = G_0 + G_1\cos(\sqrt{x_1x_4}t) + G_2\sin (\sqrt{x_1x_4}t) + M(t)
 \end{cases}
-\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><h2 id=simplification>Simplification</h2><p>Recall that our function \(M(t)\) is a sinusoidal function. And it is being added to some linear combination of sinusoidal functions in each term of our general solution above. Meaning, each of our equations are of the shape:</p><p>[some vertical shift] + [cosine something] + [sine something] + [optional linear drift] + [M(t)]</p><p>For us to use \(M(t)\) to attenuate/stabilize the system, the best we can do is to dampen the sinusoidal part (because \(M\) itself is sinusoidal). We can&rsquo;t do much of anything else.</p><p>To do this, we want ideally \(M(t)\) be \(\pi\) ahead of the \(\cos + \sin\) waves in each of the functions; that is, we want \(M\) to be out of phase exactly.</p><p>\(\cos +\sin\) is harder to be out of phase than just \(\sin\); if the latter, we can just figure out its frequency and shift, and be \(\pi\) ahead of it.</p><p>Fortunately, our \(\cos\) and \(\sin\) terms have exactly the same contents; therefore, their sum form just another shifted sine wave (don&rsquo;t believe me, plot it!). Therefore, we will now endeavor to combine them.</p><h3 id=aside-a-cos--x--plus-b-sin--x>Aside: \(A\cos (x)+B\sin (x)\)</h3><p>Here&rsquo;s how you go about the combination. We desire that \(A\cos (x) + B \sin (x)\) be a single shifted sine function; we know this is true (by plottingish or using imaginary numbers), so we will set the sum to some arbitrary sine function and solve for its correct coefficients to mimic the sum; that is:</p><p>\begin{equation}
+r \sin (x + \alpha) := A\cos (x) + B \sin (x)
+\end{equation}</p><p>we know desire the coefficients \(r, \alpha\) that would make this true.</p><p>Recall \(\sin a+b = \cos a\sin b + \sin a\cos b\); so:</p><p>\begin{align}
+r \sin (x+\alpha) & = r(\cos x \sin \alpha + \sin x \cos \alpha ) \\
+&= r \sin x \cos \alpha + r \cos x \sin \alpha \\
+&= (r \sin \alpha) \cos x + (r \cos \alpha) \sin x
+\end{align}</p><p>Now, we have:</p><p>\begin{equation}
+(r \sin \alpha) \cos x + (r \cos \alpha) \sin x := A\cos (x) + B \sin (x)
+\end{equation}</p><p>Therefore:</p><p>\begin{equation}
+\begin{cases}
+r\sin \alpha = A \\
+r \cos \alpha = B
+\end{cases}
+\end{equation}</p><p>And we desire correct coefficients \(r, \alpha\) in terms of \(A, B\).</p><p>Dividing the two expressions:</p><p>\begin{equation}
+\frac{\sin \alpha }{\cos \alpha } = \frac{A}{B}
+\end{equation}</p><p>Therefore, \(\alpha = \tan^{-1}\qty(\frac{A}{B})\).</p><p>Finally, recall that \(\sin^{2} x +\cos^{2} x =1\) for any \(x\). We will use this fact to get \(r\).</p><p>\begin{align}
+&\sin^{2} \alpha + \cos^{2} \alpha = 1 \\
+\Rightarrow\ & \qty(\frac{A}{r})^{2} + \qty(\frac{B}{r})^{2} =1
+\end{align}</p><p>By rearranging our pair of expressions above to get \(\sin \alpha\) and \(\cos \alpha\) by itself.</p><p>Finally, we have:</p><p>\begin{align}
+1 &= \qty(\frac{A}{r})^{2} + \qty(\frac{B}{r})^{2} \\
+&= \frac{A^{2} + B^{2}}{r^{2}}
+\end{align}</p><p>So:</p><p>\begin{equation}
+r^{2} = \sqrt{A^{2}+B^{2}}
+\end{equation}</p><p>Finally, we have that:</p><p>\begin{equation}
+A\cos (x)+B\sin (x) = \sqrt{A^{2}+B^{2}} \sin \qty(x + \tan^{-1}\qty(\frac{A}{B}))
+\end{equation}</p><h3 id=using-the-above-result>Using the above result</h3><p>Recall we are working with:</p><p>\begin{equation}
+\begin{cases}
+I}(t) = I_0 + I_1\cos(\sqrt{x_1x_4}t) + I_2\sin (\sqrt{x_1x_4}t) -x_1x_5 t + 0.4M(t) \\
+U}(t) = U_0 + U_1\cos(\sqrt{x_1x_4}t) + U_2\sin (\sqrt{x_1x_4}t) + x_4x_2t\\
+G}(t) = G_0 + G_1\cos(\sqrt{x_1x_4}t) + G_2\sin (\sqrt{x_1x_4}t) + M(t)
+\end{cases}
+\end{equation}</p><p>And we desire to use the above to simplify it. Plugging this expression directly in, for instance, to the first expression, we have:</p><p>\begin{equation}
+I(t) = I_0 + \sqrt{ {I_{1}}^{2} + {I_{2}}^{2} } \sin \qty(\sqrt{x_1x_4}t + \tan^{-1} \qty(\frac{I_1}{I_2})) -x_1x_5 t + 0.4M(t)
+\end{equation}</p><p>Notice! Even if the shift changes based on each function, the <em>frequency</em> of the oscillation of each function is the same&mdash;</p><p>as each \(\cos x + \sin x\) sinusoidal, after applying the identity derived above, takes the form of:</p><p>\begin{equation}
+A\sin (\sqrt{x_1x_4}t + \tan^{-1}(B))
+\end{equation}</p><p>we can see that they all oscillate with frequency of</p><p>\begin{equation}
+\frac{\sqrt{x_1x_4}}{2\pi}
+\end{equation}</p><p>&ldquo;how many \(2\pi\) can our function go in \(1\) second?&rdquo;</p><p>Therefore, the control mechanism must work in frequencies of \(\frac{\sqrt{x_1x_4}}{2\pi}\) (and best be exactly or as best as possible out of phase by being phase shifted by \(\tan^{-1}(B) + \pi\)) to be able to attenuate the sinusoidal the best.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
