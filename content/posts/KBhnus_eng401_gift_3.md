@@ -1,5 +1,5 @@
 +++
-title = "NUS-ENG401 Perusing Education"
+title = "NUS-ENG401 Pursuing Education"
 author = ["Houjun Liu"]
 draft = false
 +++

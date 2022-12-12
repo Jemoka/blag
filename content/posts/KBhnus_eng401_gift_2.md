@@ -2,6 +2,7 @@
 title = "NUS-ENG401 Gender and Education"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 Literacy rates differ significantly between genders in Central Africa. In rural Nigeria, there is a 24.1% difference in literacy rates between men and women.
