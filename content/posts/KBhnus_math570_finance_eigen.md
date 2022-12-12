@@ -209,3 +209,127 @@ U}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) + x\_4x\
 G}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t) + M(t)
 \end{cases}
 \end{equation}
+
+
+## Simplification {#simplification}
+
+Recall that our function \\(M(t)\\) is a sinusoidal function. And it is being added to some linear combination of sinusoidal functions in each term of our general solution above. Meaning, each of our equations are of the shape:
+
+[some vertical shift] + [cosine something] + [sine something] + [optional linear drift] + [M(t)]
+
+For us to use \\(M(t)\\) to attenuate/stabilize the system, the best we can do is to dampen the sinusoidal part (because \\(M\\) itself is sinusoidal). We can't do much of anything else.
+
+To do this, we want ideally \\(M(t)\\) be \\(\pi\\) ahead of the \\(\cos  + \sin\\) waves in each of the functions; that is, we want \\(M\\) to be out of phase exactly.
+
+\\(\cos +\sin\\) is harder to be out of phase than just \\(\sin\\); if the latter, we can just figure out its frequency and shift, and be \\(\pi\\) ahead of it.
+
+Fortunately, our \\(\cos\\) and \\(\sin\\) terms have exactly the same contents; therefore, their sum form just another shifted sine wave (don't believe me, plot it!). Therefore, we will now endeavor to combine them.
+
+
+### Aside: \\(A\cos (x)+B\sin (x)\\) {#aside-a-cos--x--plus-b-sin--x}
+
+Here's how you go about the combination. We desire that \\(A\cos (x) + B \sin (x)\\) be a single shifted sine function; we know this is true (by plottingish or using imaginary numbers), so we will set the sum to some arbitrary sine function and solve for its correct coefficients to mimic the sum; that is:
+
+\begin{equation}
+r \sin (x + \alpha) := A\cos (x) + B \sin (x)
+\end{equation}
+
+we know desire the coefficients \\(r, \alpha\\) that would make this true.
+
+Recall \\(\sin a+b =  \cos a\sin b + \sin a\cos b\\); so:
+
+\begin{align}
+r \sin (x+\alpha) & = r(\cos x \sin \alpha + \sin x \cos \alpha )  \\\\
+&= r \sin x \cos \alpha  + r \cos x \sin \alpha \\\\
+&= (r \sin \alpha) \cos x + (r \cos \alpha) \sin x
+\end{align}
+
+Now, we have:
+
+\begin{equation}
+(r \sin \alpha) \cos x + (r \cos \alpha) \sin x := A\cos (x) + B \sin (x)
+\end{equation}
+
+Therefore:
+
+\begin{equation}
+\begin{cases}
+r\sin \alpha = A \\\\
+r \cos \alpha = B
+\end{cases}
+\end{equation}
+
+And we desire correct coefficients \\(r, \alpha\\) in terms of \\(A, B\\).
+
+Dividing the two expressions:
+
+\begin{equation}
+\frac{\sin \alpha }{\cos \alpha } = \frac{A}{B}
+\end{equation}
+
+Therefore, \\(\alpha = \tan^{-1}\qty(\frac{A}{B})\\).
+
+Finally, recall that \\(\sin^{2} x +\cos^{2} x =1\\) for any \\(x\\). We will use this fact to get \\(r\\).
+
+\begin{align}
+&\sin^{2} \alpha + \cos^{2} \alpha = 1  \\\\
+\Rightarrow\ & \qty(\frac{A}{r})^{2} + \qty(\frac{B}{r})^{2}  =1
+\end{align}
+
+By rearranging our pair of expressions above to get \\(\sin \alpha\\) and \\(\cos \alpha\\) by itself.
+
+Finally, we have:
+
+\begin{align}
+1 &= \qty(\frac{A}{r})^{2} + \qty(\frac{B}{r})^{2}  \\\\
+&= \frac{A^{2} + B^{2}}{r^{2}}
+\end{align}
+
+So:
+
+\begin{equation}
+r^{2} = \sqrt{A^{2}+B^{2}}
+\end{equation}
+
+Finally, we have that:
+
+\begin{equation}
+A\cos (x)+B\sin (x) = \sqrt{A^{2}+B^{2}} \sin \qty(x + \tan^{-1}\qty(\frac{A}{B}))
+\end{equation}
+
+
+### Using the above result {#using-the-above-result}
+
+Recall we are working with:
+
+\begin{equation}
+\begin{cases}
+I}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) -x\_1x\_5 t + 0.4M(t)  \\\\
+U}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) + x\_4x\_2t\\\\
+G}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t) + M(t)
+\end{cases}
+\end{equation}
+
+And we desire to use the above to simplify it. Plugging this expression directly in, for instance, to the first expression, we have:
+
+\begin{equation}
+I(t) = I\_0 + \sqrt{ {I\_{1}}^{2} + {I\_{2}}^{2} } \sin \qty(\sqrt{x\_1x\_4}t + \tan^{-1} \qty(\frac{I\_1}{I\_2})) -x\_1x\_5 t + 0.4M(t)
+\end{equation}
+
+Notice! Even if the shift changes based on each function, the _frequency_ of the oscillation of each function is the same---
+
+as each \\(\cos x + \sin x\\) sinusoidal, after applying the identity derived above, takes the form of:
+
+\begin{equation}
+A\sin (\sqrt{x\_1x\_4}t + \tan^{-1}(B))
+\end{equation}
+
+we can see that they all oscillate with frequency of
+
+\begin{equation}
+\frac{\sqrt{x\_1x\_4}}{2\pi}
+\end{equation}
+
+"how many \\(2\pi\\) can our function go in \\(1\\) second?"
+
+Therefore, the control mechanism must work in frequencies of \\(\frac{\sqrt{x\_1x\_4}}{2\pi}\\) (and best be exactly or as best as possible out of phase by being phase shifted by \\(\tan^{-1}(B) + \pi\\)) to be able to attenuate the sinusoidal the best.
