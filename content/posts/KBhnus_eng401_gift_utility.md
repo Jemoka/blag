@@ -55,10 +55,7 @@ To check whether or not a token you received through the game is valid, use the 
 
 ## The Game {#the-game}
 
-There is a determinism when it comes to the game. To aid in this, please go down the following one of two paths; please choose one of the following to get started:
-
--   ENTRYPOINT 1
--   ENTRYPOINT 2
+Please go ahead to [this link]({{< relref "KBhnus_eng401_gift_1.md" >}}) to get started.
 
 
 ## Generate a Valid Token! {#generate-a-valid-token}
