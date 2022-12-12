@@ -7,18 +7,19 @@ layout = "blank"
 
 ## Welcome! {#welcome}
 
-The device of birth—or birthright station—plays a large part of all four of the senior carrion seminar's texts. In _I, Tituba_, the author granted Tituba renewed empowerment through her birth; in _Black Shack Alley_, Jose’s birth in the Alley forced him to leverage the racially unequal devices of the French regime to gain social advancement; Sophie’s trauma in _Breath, Eyes, Memory_ is propagated by her violent conception—which resulted in her mother’s forced testing upon her; Nnu Ego's family in _Joys of Motherhood_ was loving, yet with conservative values which forced a crippling sense of motherly duty that almost drove her to death. Birth, and challenging the station assigned at birth, is a fundamental value pervasive through the texts.
+The device of the station of birth plays a large part in all four of the works we read over the semester. In I, Tituba, the author grants Tituba renewed empowerment through her birth; in Black Shack Alley, Jose’s birth in the Alley forces him to leverage the racially unequal devices of the French regime to gain social advancement; Sophie’s trauma in Breath, Eyes, Memory is propagated by her violent conception—which results in her mother’s forced testing upon her; Joys of Motherhood’s Nnu Ego’s family is loving, yet with conservative values which forces a crippling sense of motherly duty that almost drove her to death. Birth, and challenging the station assigned at birth, is a fundamental value pervasive through the texts.
 
-This game aims to explore some of the dynamics in the book, while exploring some aspects of Haitian, Martinican, or Nigerian culture.
+This game aims to explore some of the dynamics found in all four of the works, while exploring some aspects of Haitian, Martinican, or Nigerian culture.
 
 To play the game, here are what you need to know--
 
 -   The game works like a CTF: through the game, you are hunting for game tokens that look like this: **s_[numbers]_[numbersletters]**
 -   You can validate whether or not the token is correct with the tool provided below
--   Before the start of the game, you are given a "path" number; this number determines your path through the game, you can generate the number with the tool provided below
 
 
 ## Validate a Token! {#validate-a-token}
+
+To check whether or not a token you received through the game is valid, use the utility below:
 
 
 <input id="token" placeholder="s_0000_0e"></input> <button id="validate">Validate</button>
