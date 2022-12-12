@@ -9,6 +9,8 @@ draft = false
 
 ## Generate a Valid Token! {#generate-a-valid-token}
 
+s_8652_15
+
 
 <input id="code" placeholder="s_0000_0x03"></input> <button id="generate">Generate</button>
 
