@@ -14,4 +14,4 @@ In _Breath, Eyes, Memory_, the high rate of fatalities from birth is included as
 
 Token: s_6285_15
 
-Follow [this link](https://tinyurl.com/nuseng401giftbounce1) for the next step.
+Follow [this link](https://tinyurl.com/nuseng401giftbounceextra1) for the next step. You maybe able to continue to the next phrase of the game; it is also possible that you may have died during birth and would have to restart.
