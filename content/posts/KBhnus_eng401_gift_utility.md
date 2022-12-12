@@ -56,36 +56,3 @@ To check whether or not a token you received through the game is valid, use the 
 ## The Game {#the-game}
 
 Please go ahead to [this link]({{< relref "KBhnus_eng401_gift_1.md" >}}) to get started.
-
-
-## Generate a Valid Token! {#generate-a-valid-token}
-
-TODO remove this when production
-
-
-<input id="code" placeholder="s_0000_0x03"></input> <button id="generate">Generate</button>
-
-<script>
-    function sumDigits(n) {
-        let sum = 0;
-        while (n) {
-            digit = n % 10;
-            sum += digit;
-            n = (n - digit) / 10;
-        }
-        return sum;
-    }
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-    }
-
-
-    $("#generate").click(() => {
-        let digits = getRandomInt(1000, 9999);
-        let sumVal = sumDigits(digits);
-        let mod18_str = (sumVal % 50117).toString(16);
-        $("#code").val(`s_${digits}_${mod18_str}`);
-    })
-</script>
