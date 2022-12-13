@@ -135,4 +135,15 @@ I(t) = I_0 + \sqrt{ {I_{1}}^{2} + {I_{2}}^{2} } \sin \qty(\sqrt{x_1x_4}t + \tan^
 A\sin (\sqrt{x_1x_4}t + \tan^{-1}(B))
 \end{equation}</p><p>we can see that they all oscillate with frequency of</p><p>\begin{equation}
 \frac{\sqrt{x_1x_4}}{2\pi}
-\end{equation}</p><p>&ldquo;how many \(2\pi\) can our function go in \(1\) second?&rdquo;</p><p>Therefore, the control mechanism must work in frequencies of \(\frac{\sqrt{x_1x_4}}{2\pi}\) (and best be exactly or as best as possible out of phase by being phase shifted by \(\tan^{-1}(B) + \pi\)) to be able to attenuate the sinusoidal the best.</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>&ldquo;how many \(2\pi\) can our function go in \(1\) second?&rdquo;</p><p>Therefore, the control mechanism must work in frequencies of \(\frac{\sqrt{x_1x_4}}{2\pi}\) (and best be exactly or as best as possible out of phase by being phase shifted by \(\tan^{-1}(B) + \pi\)) to be able to attenuate the sinusoidal the best.</p><p>We can allow \(M(t)\) to go to any sinusoidal function, and compose them together:</p><p>\begin{equation}
+I(t) = I_0 + \sqrt{ {I_{1}}^{2} + {I_{2}}^{2} } \sin \qty(\sqrt{x_1x_4}t + \tan^{-1} \qty(\frac{I_1}{I_2})) -x_1x_5 t + 0.4 (c \sin(ax+b))
+\end{equation}</p><p>Ok, let us now spend another aside to figure out the frequency and amplitude of this new curve, which will be our target upon which we are optimizing:</p><h4 id=sums-of-sinusoidals>Sums of Sinusoidals</h4><p>We now have:</p><p>\begin{equation}
+a_1\sin (b_1t + c_1) + a_2 \sin (b_2t+c_2)
+\end{equation}</p><p>We are curious to figure out this function&rsquo;s amplitude and frequency. To do this, let us solve for the critical points of this system, which is the location of the peaks and troughs.</p><p>Its derivative is:</p><p>\begin{equation}
+a_1b_1 \cos (b_1t + c_1) + a_2b_2 \cos (b_2t + c_2)
+\end{equation}</p><p>Now, \(\cos x = 0\) when \(x = k\frac{\pi}{2}\). Solving for the contents:</p><p>\begin{equation}
+\begin{cases}
+b_1t + c_1 = k \frac{\pi}{2} \\
+b_2t + c_2 = k \frac{\pi}{2}
+\end{cases}
+\end{equation}</p><p>Regardless of what the shift is, this solution is valid every \(\frac{\pi}{2b_{\{1,2\}}}\).</p></div></article></main><footer><p id=footer>&copy; 2019-2022 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
