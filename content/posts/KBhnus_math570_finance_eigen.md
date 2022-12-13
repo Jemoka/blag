@@ -169,7 +169,7 @@ So, adding the \\(M(t)\\) in place, our particular solutions are:
 
 \begin{equation}
 \begin{cases}
-I\_{p}(t) = -x\_1x\_5 t + 0.4M(t) \\\\
+I\_{p}(t) = -x\_1x\_5 t + x\_3 M(t) \\\\
 U\_{p}(t) = x\_4x\_2t \\\\
 G\_{p}(t) = M(t)
 \end{cases}
@@ -304,9 +304,9 @@ Recall we are working with:
 
 \begin{equation}
 \begin{cases}
-I}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) -x\_1x\_5 t + 0.4M(t)  \\\\
-U}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) + x\_4x\_2t\\\\
-G}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t) + M(t)
+{I}(t) = I\_0 + I\_1\cos(\sqrt{x\_1x\_4}t) + I\_2\sin (\sqrt{x\_1x\_4}t) -x\_1x\_5 t + 0.4M(t)  \\\\
+{U}(t) = U\_0 + U\_1\cos(\sqrt{x\_1x\_4}t) + U\_2\sin (\sqrt{x\_1x\_4}t) + x\_4x\_2t\\\\
+{G}(t) = G\_0 + G\_1\cos(\sqrt{x\_1x\_4}t) + G\_2\sin (\sqrt{x\_1x\_4}t) + M(t)
 \end{cases}
 \end{equation}
 

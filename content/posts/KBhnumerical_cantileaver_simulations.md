@@ -285,7 +285,7 @@ Let us create a code snippet to do that consistently:
 
 ```sage
 # constants https://www.mit.edu/~6.777/matprops/aluminum.htm
-_E = 1 # modulus (pascals)
+_E = 3e10 # modulus (pascals)
 _I = 0.0000000001302083333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
 _u = 1.521355063 # length mass density (kg/m)
 
@@ -307,7 +307,7 @@ solve(solution_eqn, f)[0].rhs().n()
 ```
 
 ```text
-0.00377384958694459
+843.858421326760
 ```
 
 Let's plot with these constants
