@@ -333,3 +333,39 @@ we can see that they all oscillate with frequency of
 "how many \\(2\pi\\) can our function go in \\(1\\) second?"
 
 Therefore, the control mechanism must work in frequencies of \\(\frac{\sqrt{x\_1x\_4}}{2\pi}\\) (and best be exactly or as best as possible out of phase by being phase shifted by \\(\tan^{-1}(B) + \pi\\)) to be able to attenuate the sinusoidal the best.
+
+We can allow \\(M(t)\\) to go to any sinusoidal function, and compose them together:
+
+\begin{equation}
+I(t) = I\_0 + \sqrt{ {I\_{1}}^{2} + {I\_{2}}^{2} } \sin \qty(\sqrt{x\_1x\_4}t + \tan^{-1} \qty(\frac{I\_1}{I\_2})) -x\_1x\_5 t + 0.4 (c \sin(ax+b))
+\end{equation}
+
+Ok, let us now spend another aside to figure out the frequency and amplitude of this new curve, which will be our target upon which we are optimizing:
+
+
+#### Sums of Sinusoidals {#sums-of-sinusoidals}
+
+We now have:
+
+\begin{equation}
+a\_1\sin (b\_1t + c\_1) + a\_2 \sin (b\_2t+c\_2)
+\end{equation}
+
+We are curious to figure out this function's amplitude and frequency. To do this, let us solve for the critical points of this system, which is the location of the peaks and troughs.
+
+Its derivative is:
+
+\begin{equation}
+a\_1b\_1 \cos (b\_1t + c\_1) + a\_2b\_2 \cos (b\_2t + c\_2)
+\end{equation}
+
+Now, \\(\cos x = 0\\) when \\(x = k\frac{\pi}{2}\\). Solving for the contents:
+
+\begin{equation}
+\begin{cases}
+b\_1t + c\_1 = k \frac{\pi}{2} \\\\
+b\_2t + c\_2 = k \frac{\pi}{2}
+\end{cases}
+\end{equation}
+
+Regardless of what the shift is, this solution is valid every \\(\frac{\pi}{2b\_{\\{1,2\\}}}\\).

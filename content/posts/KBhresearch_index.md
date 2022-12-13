@@ -5,7 +5,7 @@ tags = ["index"]
 draft = false
 +++
 
-I have done various published academic research projects in the fields of natural language processing and science education. Specifically, I have an interest in textual data mining, semantic analysis, L2 acquisition, and science education.
+I have done various published academic research projects in the fields of natural language processing and science education. Specifically, I have an interest in textual data mining, semantic analysis, L2 acquisition, and flipped/alternative learning.
 
 
 ## Computational Linguistics {#computational-linguistics}

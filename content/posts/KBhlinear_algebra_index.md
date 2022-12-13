@@ -29,6 +29,8 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [dot product]({{< relref "KBhdot_product.md" >}}) and [cross product]({{< relref "KBhcross_product.md" >}})
 -   [solving systems]({{< relref "KBhsolving_systems.md" >}})
 -   [binary operation]({{< relref "KBhbinary_operation.md" >}})
+-   [modular arithmetic]({{< relref "KBhmodular_arithmetic.md" >}})
+-   [quotient group]({{< relref "KBhquotient_group.md" >}})
 
 
 ## Homework {#homework}
