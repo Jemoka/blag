@@ -343,7 +343,7 @@ I(t) = I\_0 + \sqrt{ {I\_{1}}^{2} + {I\_{2}}^{2} } \sin \qty(\sqrt{x\_1x\_4}t + 
 Ok, let us now spend another aside to figure out the frequency and amplitude of this new curve, which will be our target upon which we are optimizing:
 
 
-#### Sums of Sinusoidals {#sums-of-sinusoidals}
+#### Attenuating the Sums of Sinusoidals {#attenuating-the-sums-of-sinusoidals}
 
 We now have:
 
@@ -351,21 +351,4 @@ We now have:
 a\_1\sin (b\_1t + c\_1) + a\_2 \sin (b\_2t+c\_2)
 \end{equation}
 
-We are curious to figure out this function's amplitude and frequency. To do this, let us solve for the critical points of this system, which is the location of the peaks and troughs.
-
-Its derivative is:
-
-\begin{equation}
-a\_1b\_1 \cos (b\_1t + c\_1) + a\_2b\_2 \cos (b\_2t + c\_2)
-\end{equation}
-
-Now, \\(\cos x = 0\\) when \\(x = k\frac{\pi}{2}\\). Solving for the contents:
-
-\begin{equation}
-\begin{cases}
-b\_1t + c\_1 = k \frac{\pi}{2} \\\\
-b\_2t + c\_2 = k \frac{\pi}{2}
-\end{cases}
-\end{equation}
-
-Regardless of what the shift is, this solution is valid every \\(\frac{\pi}{2b\_{\\{1,2\\}}}\\).
+The question is how we can make the first wave destructively interfere with the second one.

@@ -19,12 +19,11 @@ To be able to work on this, let us create some functions:
 
 ```sage
 # variable
-t = var("t")
+t, dm = var("t dm")
 
 # functions
 I = function("_I")(t) # _I because i is imaginary
 U = function("U")(t)
-M = function("M")(t)
 G = function("G")(t)
 
 # parameter
@@ -32,20 +31,13 @@ phi = var("phi", latex_name="\phi")
 
 # our equations
 eqns = [
-    diff(I,t) == -0.73*U + 0.0438 + 0.4*diff(M,t),
+    diff(I,t) == -0.73*U + 0.0438 + 0.4*dm,
     diff(U,t) == 0.4*I - 0.012,
-    diff(G,t) == diff(M,t) - I,
-    M == 0.02*sin(1.15*t+phi)
+    diff(G,t) == dm - I
 ]
 
 eqns
-```
-
-```text
-[diff(_I(t), t) == -0.730000000000000*U(t) + 0.400000000000000*diff(M(t), t) + 0.0438000000000000,
- diff(U(t), t) == 0.400000000000000*_I(t) - 0.0120000000000000,
- diff(G(t), t) == -_I(t) + diff(M(t), t),
- M(t) == 0.0200000000000000*sin(phi + 1.15000000000000*t)]
+desolve(eqns, U, ivar=t, algorithm="fricas").expand()
 ```
 
 Great, now, we will run the laplace transform upon these equations:

@@ -13,6 +13,7 @@ Some exploration of invertibility before we formally read the chapter is always 
 ## New Definitions {#new-definitions}
 
 -   [invertability]({{< relref "KBhinvertability.md" >}})
+-   [isomorphism]({{< relref "KBhisomorphism.md" >}})
 
 
 ## Results and Their Proofs {#results-and-their-proofs}
