@@ -14,22 +14,20 @@ First, let&rsquo;s try to get a general solution of the system. The linearized(i
 <span class=summary>We need to solve this system:
 \begin{equation} \begin{cases} \dv{I}{t} = -0.73U + 0.0438 + 0.4 \dv{M}{t} \\ \dv{U}{t} = 0.4I - 0.012 \\ \dv{G}{t} = \dv{M}{t}- I \\ M(t)=0.02\sin (1.15t + \phi) \end{cases} \end{equation}
 To be able to work on this, let us create some functions:
-# variable t = var("t") # functions I = function("_I")(t) # _I because i is imaginary U = function("U")(t) M = function("M")(t) G = function("G")(t) # parameter phi = var("phi", latex_name="\phi") # our equations eqns = [ diff(I,t) == -0.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math570_circuts/"'><span class=top><h1><a class=noannot>NUS-MATH570 Circuits</a></h1><span class="modbox right">Last edited: <span class=moddate>October 10, 2022</span></span></span>
+# variable t, dm = var("t dm") # functions I = function("_I")(t) # _I because i is imaginary U = function("U")(t) G = function("G")(t) # parameter phi = var("phi", latex_name="\phi") # our equations eqns = [ diff(I,t) == -0.</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math570_circuts/"'><span class=top><h1><a class=noannot>NUS-MATH570 Circuits</a></h1><span class="modbox right">Last edited: <span class=moddate>October 10, 2022</span></span></span>
 <span class=summary>We declare known battery voltage \(E(t)\).
 Here are the \(y\) values.
 \begin{equation} \begin{cases} \dv{x_1}{t} = y_{4}\\ \dv{x_2}{t} = y_{3}\\ \dv{x_3}{t} = y_{1}\\ \dv{x_4}{t} = y_{2}\\ \end{cases} \end{equation}
 And here are some of the \(x\) values.
 \begin{equation} \begin{cases} \dv{x_4}{t}=-\frac{2}{RC}x_2-\frac{1}{RC}x_{3}-\frac{2E(t)}{R} \\ \dv{y_1}{t}=-\frac{1}{LC}x_2-\frac{E(t)}{C} \\ \dv{y_4}{t} = -\frac{R}{L}y_2-\frac{2E(t)}{L} \end{cases} \end{equation}
 Right off the bat, we can see that we can make one substitution. That, given:
-\begin{equation} \begin{cases} \dv{x_4}{t}=-\frac{2}{RC}x_2-\frac{1}{RC}x_{3}-\frac{2E(t)}{R} \\ \dv{x_4}{t} = y_{2} \end{cases} \end{equation}</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math570_problem_set_1/"'><span class=top><h1><a class=noannot>NUS-MATH570 Problem Set 1</a></h1><span class="modbox right">Last edited: <span class=moddate>September 9, 2022</span></span></span>
-<span class=summary>We have:
-\begin{equation} \frac{2y^{2}}{9-x^{2}} + y \dv{y}{x} + \frac{3y}{2-x} = 0 \end{equation}
-We want to get rid of things; let&rsquo;s begin by dividing the whole thing by \(y\).
-\begin{equation} \frac{2y}{9-x^{2}} + \dv{y}{x} + \frac{3}{2-x} = 0 \end{equation}
-Finally, then, moving the right expression to the right, we have:
-\begin{equation} \frac{2y}{9-x^{2}} + \dv{y}{x} = \frac{-3}{2-x} \end{equation}
-In this case, we have functions:
-\begin{equation} \begin{cases} P(x) = \frac{2}{9-x^{2}}\\ Q(x) = \frac{-3}{2-x}\\ \end{cases} \end{equation}</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math530_some_matrix_manipulation/"'><span class=top><h1><a class=noannot>NUS-MATH530 Some Matrix Manipulation</a></h1><span class="modbox right">Last edited: <span class=moddate>August 8, 2022</span></span></span>
+\begin{equation} \begin{cases} \dv{x_4}{t}=-\frac{2}{RC}x_2-\frac{1}{RC}x_{3}-\frac{2E(t)}{R} \\ \dv{x_4}{t} = y_{2} \end{cases} \end{equation}</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math530_solving_systems/"'><span class=top><h1><a class=noannot>NUS-MATH530 Solving Systems</a></h1><span class="modbox right">Last edited: <span class=moddate>September 9, 2022</span></span></span>
+<span class=summary>Two Variables Let&rsquo;s begin with the equations:
+\begin{equation} \begin{cases} 2x+y = 3 \\ x - y = 0 \end{cases} \end{equation}
+We will first change this into a matrix equation:
+\begin{equation} \begin{pmatrix} 2 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 3 \\ 0 \end{pmatrix} \end{equation}
+We need to find, then, the inverse of:
+\begin{equation} \begin{pmatrix} 2 & 1 \\ 1 & -1 \end{pmatrix} \end{equation}</span></div><div class=pageview onclick='window.location.href="https://www.jemoka.com/posts/kbhnus_math530_some_matrix_manipulation/"'><span class=top><h1><a class=noannot>NUS-MATH530 Some Matrix Manipulation</a></h1><span class="modbox right">Last edited: <span class=moddate>August 8, 2022</span></span></span>
 <span class=summary>Proof: identity of a group is unique Assume for contradiction that there exists two identities \(e_1\) and \(e_2\) which are identities of the group \(A\). Take also an \(a \in A\).
 Given both \(e_1\) and \(e_2\) are identities, we have that:
 \begin{equation} a * e_1 = a \end{equation}
