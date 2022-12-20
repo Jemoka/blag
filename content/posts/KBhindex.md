@@ -15,7 +15,7 @@ I'm on the blaggosphere as [@jemokajack](https://twitter.com/jemokajack) and, fa
 
 I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) interested in [linguistic analysis](https://arxiv.org/abs/2104.10661), [L2 learning](https://en.wikipedia.org/wiki/Second-language_acquisition), and [user interfaces](https://www.shabang.cf/). [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Condution](https://www.condution.com/), [Shabang](https://www.shabang.cf/), and [MODAP](https://www.modap.io), do [research in NLP and education pedagogy](https://orcid.org/0000-0002-2156-5903), direct Science Friday [streams](https://www.youtube.com/playlist?list=PLB5KLodjBbZ40P-1R3LjMSxRbhwpS7tWu), captain an [entrepreneurship studio](https://youtu.be/CIjqZno8Noc), and recently began working for [Brian MacWhinney](https://en.wikipedia.org/wiki/Brian_MacWhinney) on projects in linguistics. Oh, right, I also go to school at [Nueva](https://www.nuevaschool.org/), a small high school in San Mateo. Apparently I'm being sent away to a [farm](https://www.stanford.edu/) next year.
 
-Need to catch me? Email me at `houjun at the current domain`. Please do email me, I actually check.
+Need to catch me? Email me at `houjun@jemoka.com`. Please do email me, I actually check.
 
 
 ## Recent Projects {#recent-projects}
