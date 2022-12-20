@@ -4,6 +4,15 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## more {#more}
+
+-   Move shua to d(e)
+-   Include instructions on how to recreate a broken Conda environment
+-   Update the package to conda somehow without access
+
+
+## move {#move}
+
 {{< figure src="/ox-hugo/2022-12-03_00-17-14_screenshot.png" >}}
 
 
