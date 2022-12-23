@@ -9,32 +9,87 @@ draft = false
 
 ## Generate a Valid Token! {#generate-a-valid-token}
 
-s_8652_15
+1:nah 2:
+
+what is there to do?
+oenutonsetuhaoeu
+o
+ooensutahoeu
 
 
-<input id="code" placeholder="s_0000_0x03"></input> <button id="generate">Generate</button>
 
-<script>
-    function sumDigits(n) {
-        let sum = 0;
-        while (n) {
-            digit = n % 10;
-            sum += digit;
-            n = (n - digit) / 10;
-        }
-        return sum;
-    }
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-    }
+****type**** _faces_ for <span class="underline">everybody</span> ~~everywhere~~
+
+<span class="underline">****yes indeed****</span> _****we stan type faces****_
+
+Here's the characteristic equation again:
 
 
-    $("#generate").click(() => {
-        let digits = getRandomInt(1000, 9999);
-        let sumVal = sumDigits(digits);
-        let mod18_str = (sumVal % 50117).toString(16);
-        $("#code").val(`s_${digits}_${mod18_str}`);
-    })
-</script>
+## Math! {#math}
+
+What? we do math here?
+
+\begin{equation}
+\pdv[2] x \qty(EI \pdv[2]{w}{x}) = -\mu \pdv{w}{t}+q(x)
+\end{equation}
+
+After Fourier decomposition, we have that:
+
+\begin{equation}
+EI \dv[4]{\hat{w}}{x} - \mu f^{2}\hat{w} = 0
+\end{equation}
+
+Let's solve this!
+
+```sage
+E,I,u,f = var("E I u f")
+x, L = var("x L")
+w = function('w')(x)
+_c0, _c1, _c2, _c3 = var("_C0 _C1 _C2 _C3")
+```
+
+```sage
+fourier_cantileaver = (E*I*diff(w, x, 4) - u*f^2*w == 0)
+fourier_cantileaver
+```
+
+```text
+-f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0
+```
+
+And now, we can go about solving this result.
+
+
+### More Math! {#more-math}
+
+We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+\begin{equation}
+\_{C\_{1}} e^{\left(b x\right)} + \_{C\_{0}} e^{\left(i \\, b x\right)} + \_{C\_{2}} e^{\left(-i \\, b x\right)} + \_{C\_{3}} e^{\left(-b x\right)}
+\end{equation}
+
+We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+
+#### _Even_ 0More Math! {#even-0more-math}
+
+Recall that:
+
+\begin{equation}
+\begin{cases}
+\cosh x = \frac{e^{x}+e^{-x}}{2} \\\\
+\cos x = \frac{e^{ix}+e^{-ix}}{2}\\\\
+\sinh x = \frac{e^{x}-e^{-x}}{2} \\\\
+\sin x = \frac{e^{ix}-e^{-ix}}{2i}\\\\
+\end{cases}
+\end{equation}
+
+We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+<!--list-separator-->
+
+-  So much more math!
+
+    We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+    We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.

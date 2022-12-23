@@ -4,11 +4,20 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## errors? {#errors}
+
+-   words without features needs to be correctly handled (done in the middle of meeting)
+-   04111 (me ma SOS)
+-   nouns shouldn't mark if it is Com,Neut, should'nt mark if its Com
+-   fix PASTP =&gt; PAST
+-   and does past participles exist?
+
+
 ## more {#more}
 
 -   Move shua to d(e)
 -   Include instructions on how to recreate a broken Conda environment
--   Update the package to conda somehow without access
+-   Update the package to conda somehow
 
 
 ## move {#move}
