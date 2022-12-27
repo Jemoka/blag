@@ -1,5 +1,5 @@
 +++
-title = "NUS-MATH570 Finance (Eigen)"
+title = "Finance (Eigen)"
 author = ["Houjun Liu"]
 draft = false
 +++

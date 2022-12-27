@@ -4,6 +4,22 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## errors! {#errors}
+
+{{< figure src="/ox-hugo/2022-12-23_20-22-46_screenshot.png" >}}
+
+line 1492
+
+\*PAR:	so ‡ anyway I tiptoe to the front door , open the front door and
+	walk in . •1045194_1050644•
+%mor:	co|so beg|beg adv|anyway pro:sub|I v|+n|tip+n|toe prep|to
+	det:art|the n|front n|door cm|cm adj|open det:art|the n|front n|door
+	coord|and n|walk adv|in .
+%gra:	1|0|BEG 2|1|BEGP 3|5|JCT 4|5|SUBJ 5|0|ROOT 6|5|JCT 7|9|DET 8|9|MOD
+	9|6|POBJ 10|5|LP 11|14|MOD 12|14|DET 13|14|MOD 14|5|OBJ 15|14|CONJ
+	16|15|COORD 17|16|NJCT 18|5|PUNCT
+
+
 ## errors? {#errors}
 
 -   words without features needs to be correctly handled (done in the middle of meeting)

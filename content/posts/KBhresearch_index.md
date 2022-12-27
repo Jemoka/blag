@@ -93,7 +93,7 @@ Suite of software tools for the automatic transcription, tokenization, alignment
 
 ****PI****: Prof. [Brian MacWhinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
 
-Work-in-progress.
+In Review
 
 
 ## Science Education {#science-education}
