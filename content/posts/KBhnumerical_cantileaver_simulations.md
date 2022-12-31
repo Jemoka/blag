@@ -309,24 +309,3 @@ solve(solution_eqn, f)[0].rhs().n()
 ```text
 843.858421326760
 ```
-
-Let's plot with these constants
-
-```sage
-# mode to index
-nth_mode = 0
-
-plot_eqn = characteristic_solutions[nth_mode] == (L*top.subs(u=_u,
-                                                             E=_E,
-                                                             I=_I))
-assume(L>0)
-
-f_l(L) = solve(plot_eqn, f)[0].rhs()
-f_l
-```
-
-```text
-L |--> 13918781399001701932544983201/1617325164275816577175516836/L^2
-```
-
-Great, let us plot this!

@@ -4,6 +4,14 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## next {#next}
+
+-   ignore any words that goes wrong in the pipeline
+-   `~change: noun => n; verb => v, etc.~`
+-   DET: ignore "DEF", or perhaps the entir featureless
+-   unbulleted VAD exprimentents
+
+
 ## errors! {#errors}
 
 {{< figure src="/ox-hugo/2022-12-23_20-22-46_screenshot.png" >}}
