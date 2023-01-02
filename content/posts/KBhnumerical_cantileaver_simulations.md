@@ -257,10 +257,6 @@ characteristic_solutions = [characteristic_eqn.find_root(i,j) for (i,j) in zip(i
 characteristic_solutions
 ```
 
-```text
-[1.8751040687120917, 4.6940911329739246, 7.854757438237603, 10.995540734875457]
-```
-
 These are possible \\(Lb\\) candidates.
 
 Recall now that:
@@ -304,8 +300,4 @@ solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*top.subs(u=_u,
 
 # as frequency is squared, we take the SECOND (the non-negative) result, and round it
 solve(solution_eqn, f)[0].rhs().n()
-```
-
-```text
-843.858421326760
 ```
