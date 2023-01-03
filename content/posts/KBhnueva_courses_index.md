@@ -12,6 +12,7 @@ draft = false
 -   [Tuning Forks]({{< relref "KBhtuning_forks.md" >}})
 -   [bioinformatics]({{< relref "KBhbioinformatics.md" >}})
 -   [PKM]({{< relref "KBhpkm.md" >}})
+-   [Intersession 2023]({{< relref "KBhintersession_2023.md" >}})
 
 
 ## NUS-MATH580 QIC {#nus-math580-qic}
