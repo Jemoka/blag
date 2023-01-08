@@ -1,15 +1,23 @@
 +++
-title = "Financial Markets"
+title = "Financial Market"
 author = ["Houjun Liu"]
 tags = ["index"]
 draft = false
 +++
 
-There's not one market, there is a host of different markets. This field is filled with interesting markets which unique dynamics. The field can really be seen as an advanced [statistic]({{< relref "KBhstastistic.md" >}})s application, but its just happening to be modeling the case of financial dynamics.
+## Why do we have a market? {#why-do-we-have-a-market}
+
+Basically: it allows society to make decisions about the value of things---with the wisdom of the crowd. The stock market is how we (as people) decide what to make and how to make it.
+
+
+## Misc. Questions About the Market {#misc-dot-questions-about-the-market}
+
+[Misc. Financial Market Questions]({{< relref "KBhmisc_financial_market_questions.md" >}})
 
 
 ## Knowledge {#knowledge}
 
+-   [price]({{< relref "KBhprice.md" >}})
 -   [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}})
 -   [Brownian Motion]({{< relref "KBhbrownian_motion.md" >}})
 -   [Arbitrage Pricing]({{< relref "KBharbitrage_pricing.md" >}})
@@ -18,3 +26,15 @@ There's not one market, there is a host of different markets. This field is fill
 -   [CAPM]({{< relref "KBhcapm.md" >}})
 -   [Stochastic Discount Factor]({{< relref "KBhstochastic_discount_factor.md" >}})
 -   [GARCH]({{< relref "KBhgarch.md" >}})
+-   [ETF]({{< relref "KBhetf.md" >}})
+-   [accounting price]({{< relref "KBhaccounting_price.md" >}})
+-   [stock indicies]({{< relref "KBhstock_indicies.md" >}})
+-   [VWAP]({{< relref "KBhvwap.md" >}})
+-   [short selling]({{< relref "KBhshort_selling.md" >}})
+-   [darkpool]({{< relref "KBhdarkpool.md" >}})
+-   [fundamental investing]({{< relref "KBhfundimental_investing.md" >}})
+    -   [Second-Level Thinking]({{< relref "KBhfundimental_investing.md#second-level-thinking" >}})
+-   [stock market survey]({{< relref "KBhstock_market_survey.md" >}})
+-   [OTC markets]({{< relref "KBhotc_markets.md" >}})
+-   [NBBO]({{< relref "KBhnbbo.md" >}})
+-   [LiquidNet]({{< relref "KBhliquidnet.md" >}})

@@ -94,6 +94,7 @@ We are really worried about two different things here.
 -   why no free vibrations just standing?
 -   do the various tuning fork modes compose
 -   figure out phys1 physics of strings virbrating
+-   what happened to the harmonics of the fundimental? I know the overotens are 6/14, but where did the harmonics go?
 
 
 ## things {#things}

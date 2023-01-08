@@ -26,7 +26,7 @@ _c0, _c1, _c2, _c3 = var("_C0 _C1 _C2 _C3")
 ```
 
 ```sage
-fourier_cantileaver = (E*I*diff(w, x, 4) - u*f^2*w == 0)
+fourier_cantileaver = (E*I*diff(w, x, 2) - u*f^2*w == 0)
 fourier_cantileaver
 ```
 
@@ -102,6 +102,8 @@ The way that we will go about this is by taking three derivatives and supplying 
 
 {{< figure src="/ox-hugo/2022-11-10_13-38-40_screenshot.png" >}}
 
+NOTE: these are NOT the initial conditions we are using!!! At the base of OUR beam, its bent! (the fork!), so we will supply two extra constants.
+
 ```sage
 wp = diff(w,x,1)
 wpp = diff(w,x,2)
@@ -118,8 +120,10 @@ wppp = diff(w,x,3)
 And then, we have a system:
 
 ```sage
-cond_1 = w.subs(x=0) == 0
-cond_2 = wp.subs(x=0) == 0
+c1,c2 = var("c1 c2")
+
+cond_1 = w.subs(x=0) == c1
+cond_2 = wp.subs(x=0) == c2
 cond_3 = wpp.subs(x=L) == 0
 cond_4 = wppp.subs(x=L) == 0
 
@@ -128,10 +132,14 @@ conds
 ```
 
 ```text
-(d0 + d2 == 0,
- b*d1 + b*d3 == 0,
+(d0 + d2 == c1,
+ b*d1 + b*d3 == c2,
  -b^2*d2*cos(L*b) + b^2*d0*cosh(L*b) - b^2*d3*sin(L*b) + b^2*d1*sinh(L*b) == 0,
  -b^3*d3*cos(L*b) + b^3*d1*cosh(L*b) + b^3*d2*sin(L*b) + b^3*d0*sinh(L*b) == 0)
+```
+
+```sage
+solve(conds, d0, d1, d2, d3).full_simplify()
 ```
 
 Ok so, we notice that out of all of these boundary expressions the \\(b^{n}\\) term drop out. Therefore, we have the system:
