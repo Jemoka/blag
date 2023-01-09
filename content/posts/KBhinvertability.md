@@ -65,3 +65,8 @@ We now desire \\(ST = I\\). We have \\((TSTv) = (TS)(Tv) = ITv = Tv\\) by associ
 We then can show \\(S\\) is a linear map in the usual way.
 
 Having constructed the desired result, \\(\blacksquare\\)
+
+
+#### Alternate Proof for Finite Dimensional {#alternate-proof-for-finite-dimensional}
+
+So given [map to bigger space is not surjective]({{< relref "KBhlinear_map.md#map-to-bigger-space-is-not-id-1af529ce-e2fb-43a4-8f13-aee1dc743b5f-surjective" >}}) and [map to smaller space is not injective]({{< relref "KBhlinear_map.md#map-to-smaller-space-is-not-id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injective" >}}), we have that the dimension of \\(W = V\\), we leverage the [basis]({{< relref "KBhbasis.md" >}}) of each and build the <inverse> using the [basis of domain]({{< relref "KBhbasis_of_domain.md" >}}).
