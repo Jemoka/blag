@@ -16,7 +16,7 @@ A linear map \\(T \in \mathcal{L}(V,W)\\)
 
 A [Linear Map]({{< relref "KBhlinear_map.md" >}}) \\(T \in \mathcal{L}(V,W)\\) is called [invertable]({{< relref "KBhinvertability.md" >}}) if \\(\exists T^{-1} \in \mathcal{L}(W,V): T^{-1}T=I \in \mathcal{L}(V), TT^{-1} = I \in \mathcal{L}(W)\\).
 
-"a map is [invertable]({{< relref "KBhinvertability.md" >}}) if there is an inverse
+"a map is [invertable]({{< relref "KBhinvertability.md" >}}) if there is an inverse": that combining the **commutable** inverse and itself will result in the [identity]({{< relref "KBhidentity.md" >}}) map.
 
 
 ## additional information {#additional-information}
