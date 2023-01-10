@@ -274,10 +274,192 @@ Weird solution, but we got there! The product of these two values is indeed very
 
 ### So why the heck are we doing all this {#so-why-the-heck-are-we-doing-all-this}
 
-So why did we go through all the effort of like 25 lines of code to get two numbers to multiply to \\(15\\)?
+So why did we go through all the effort of like 25 lines of code to get two numbers to multiply to \\(15\\)? If you think about Neural Networks as a process of _function fitting_, we are essentially asking our very basic "network" (as indeed, the chain of tensors to build up to our latent value, then to compute our loss, _is_ a network!) to achieve a measurable task ("take the product of these numbers to \\(15\\)"). Though the relationships we will be modeling in this class will be more complex than literal multiplication, it will be just using more fancy mechanics of doing the same thing---taking tensors values which was undesirable, and moving them to more desirable values to model our relationship.
 
 
-## y=mx+b {#y-mx-plus-b}
+## y=mx+b and your first neural network "module" {#y-mx-plus-b-and-your-first-neural-network-module}
 
 
-## Your First Neural Network {#your-first-neural-network}
+### `nn.Linear` {#nn-dot-linear}
+
+The power of neural networks actually comes when a BUNCH of numbers gets multiplied together, all at once! using... VECTORS and MATRICIES! Don't remember what they are? Ask your friendly neighborhood Matt/Jack.
+
+Recall, a **matrix** is how you can transform a **vector** from one space to another. Turns out, the brunt of everything you will be doing involves asking SGD to move a bunch of matricies around (like we did before!) such that our input vector(s) gets mapped to the right place.
+
+Let's create a matrix with PyTorch! A "matrix" is referred to as a **linear layer** in the world of neural networks. This is because a matrix will take every single value in the input vector into producing its output (for Linear Algebra fans, this is a result of the basis of domain), it is considered a **fully connected layer**.
+
+When you ask PyTorch to make a matrix for you, you use the `nn` sublibrary which we imported before. Furthermore, and this is confusing for many people who have worked with matricies before, you specify the **input dimension first**.
+
+```python
+my_matrix_var_1 = nn.Linear(3, 2)
+my_matrix_var_1
+```
+
+```text
+Linear(in_features=3, out_features=2, bias=True)
+```
+
+`my_matrix_var_1` is a linear map from three dimensions to two dimensions; it will take a vector of three things as input and spit out a vector of two.
+
+Note! Although `my_matrix_var_1` _is_ a tensor under the hood just like `var_1`, we 1) didn't have to set initial values for it 2) didn't have to mark it as `requires_grad`. This is because, unlike a raw Tensor which often does not require to be changed (such as, for instance, the input value, which you can't change), a matrix is basically ALWAYS a tensor that needs to be changed.
+
+So, since you are asking SGD to change it anyways, PyTorch just filled a bunch of random numbers in for you and set `requires_grad` on for you to `my_matrix_var_1`. If you want to see the actual underlying tensor, you can:
+
+```python
+my_matrix_var_1.weight
+```
+
+```text
+Parameter containing:
+tensor([[-0.2634,  0.3729,  0.5019],
+        [ 0.2796,  0.5425, -0.4337]], requires_grad=True)
+```
+
+As you can see, we have indeed what we expect: a tensor containing a \\(2\times 3\\) matrix with `requires_grad` on filled with random values.
+
+How do we actually optimize over this tensor? You can do all the shenanigans we did before and pass `my_matrix_var_1` to SVG, but this will _quickly_ get unwieldy as you have more parameters. Remember how we had to give SVG a list of EVERYTHING it had to keep track of? `var_1` and `var_2` was simple enough, but what if we had to do `var_1.weight`, `var_2.weight`, `var_3.weight`... ... ... _ad nausium_ for every parameter we use on our large graph? GPT3 has 1.5 billion parameters. Do you really want to type that?
+
+No.
+
+There is, of course, a better way.
+
+
+### `nn.Module` {#nn-dot-module}
+
+This, by the way, is the standard of how a Neural Network is properly built from now on until the industry moves on from PyTorch. You will want to remember this.
+
+Let's replicate the example of our previous 3=&gt;2 dimensional linear map, but with a whole lot more code.
+
+```python
+class MyNetwork(nn.Module):
+    def __init__(self):
+        # important: runs early calls to make sure that
+        # the module is correct
+        super().__init__()
+
+        # we declare our layers. we will use them below
+        self.m1 = nn.Linear(3,2)
+
+    # this is a special function that you don't actually call
+    # manually, but as you use this module Torch will call
+    # on your behalf. It passes the input through to the layers
+    # of your network.
+    def forward(self, x):
+        # we want to pass whatever input we get, named x
+        # through to every layer. right now there is only
+        # one fully-connected layer
+        x = self.m1(x)
+
+        return x
+```
+
+What this does, behind the scenes, is to wrap our matrix and all of its parameters into one giant **module**. (NOTE! This is PyTorch-specific language. Unlike all other vocab before, this term is specific to PyTorch.) A module is an operation on tensors which can retain gradients (i.e. it can change, i.e. `requires_grad=True`).
+
+Let's see it in action. Recall that our matrix takes a vector of 3 things as input, and spits out a vector of 2 things. So let's make a vector of three things:
+
+```python
+three_vector = torch.tensor([1.,2.,3.])
+three_vector
+```
+
+```text
+tensor([1., 2., 3.])
+```
+
+By the way, notice the period I'm putting after numbers here? That's a shorthand for `.0`. So `3.0 = 3.`. I want to take this opportunity to remind you that the tensor operations all take FLOATING POINT tensors as input, because the matrices themselves as initialized with random floating points.
+
+Let's get a copy of the new `MyNetwork` module.
+
+```python
+my_network = MyNetwork()
+my_network
+```
+
+```text
+MyNetwork(
+  (m1): Linear(in_features=3, out_features=2, bias=True)
+)
+```
+
+And apply this operation we designed to our three-vector!
+
+```python
+my_network(three_vector)
+```
+
+```text
+tensor([0.3850, 1.4120], grad_fn=<AddBackward0>)
+```
+
+Woah! It mapped our vector tensor in three dimensions to a vector tensor in two! Cool. This may not seem all that amazing to you... yet. But, remember, we can encode _any number_ of matrix operations in our `forward()` function above. Let's design another module that uses two matricies---or two **fully-connected layers**, or **layers** for short (when we don't specify what kind of layer it is, it is fully connected)---to perform a transformation.
+
+We will transform a vector from 3 dimensions to 2 dimensions, then from 2 dimensions to 5 dimensions:
+
+```python
+class MyNetwork(nn.Module):
+    def __init__(self):
+        # important: runs early calls to make sure that
+        # the module is correct
+        super().__init__()
+
+        # we declare our layers. we will use them below
+        self.m1 = nn.Linear(3,2)
+        self.m2 = nn.Linear(2,5)
+
+    # this is a special function that you don't actually call
+    # manually, but as you use this module Torch will call
+    # on your behalf. It passes the input through to the layers
+    # of your network.
+    def forward(self, x):
+        # we want to pass whatever input we get, named x
+        # through to every layer. right now there is only
+        # one fully-connected layer
+        x = self.m1(x)
+        x = self.m2(x)
+
+        return x
+```
+
+Doing everything else we did before again, we should end up a vector in 5 dimensions, having been transformed twice behind the scenes!
+
+```python
+my_network = MyNetwork()
+my_network
+```
+
+```text
+MyNetwork(
+  (m1): Linear(in_features=3, out_features=2, bias=True)
+  (m2): Linear(in_features=2, out_features=5, bias=True)
+)
+```
+
+And apply this operation we designed to our three-vector!
+
+```python
+my_network(three_vector)
+```
+
+```text
+tensor([ 0.8241, -0.1014,  0.2940, -0.2019,  0.6749], grad_fn=<AddBackward0>)
+```
+
+Nice.
+
+
+### How to Train Your ~~Dragon~~ Neural Network {#how-to-train-your-neural-network}
+
+Now, the `MyNetwork` transformation is currently kind of useless. We know it maps the vector `[1,2,3]` to some arbitrary numbers above. That's quite lame.
+
+We want our network to model some relationship between numbers, that's why we are here. Let's, arbitrarily and for fun, ask SGD to update `my_network` such that it will return `[1,2,3,4,5]` given `[1,2,3]`.
+
+By the way, from here on, I will use `MyNetwork` to refer to the model 3=&gt;2=&gt;5 network we made above generally, and `my_network` the specific _instantiation_ of `MyNetwork` whose parameters we will ask SGD to update.
+
+
+## Challange {#challange}
+
+Now that you know how to get the network to map two specific vectors in three dimensions to two specific places in five dimensions, can you do that more generally? Can you generate and give your own network enough examples such that it will learn to do that for ALL vectors in three dimensions?
+
+Specifically, generate a training set of in python and train your neural network now to perform the following operation:
+
+Given a vector \\([a,b,c]\\), return \\([a,b,c,c+1,c+2]\\), for every integer \\([a,b,c]\\). Can you do it?
