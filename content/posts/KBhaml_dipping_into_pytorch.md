@@ -22,7 +22,7 @@ The top line here import PyTorch generally, and the bottom line imports the Neur
 
 ## Tensors and AutoGrad {#tensors-and-autograd}
 
-The most basic element we will be working with in Torch is something called a **tensor**. A tensor is a variable, which holds either a single number (**scalar**) or a list of numbers (**vector**), that _can change_. We will see what that means in a sec.
+The most basic element we will be working with in Torch is something called a **tensor**. A tensor is a variable, which holds either a single number (**scalar**, or a single **neuron**) or a list of numbers (**vector**, or a **layer** of neurons), that _can change_. We will see what that means in a sec.
 
 
 ### Your First Tensors {#your-first-tensors}
