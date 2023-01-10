@@ -149,7 +149,7 @@ What cloud that be... Well, the _squared difference_ between \\(15\\) and `my_la
 
 Why do we use squared differences? Well, because if we used "normal" difference, it is easy to overshoot the other way and make `my_latent_value` too big! (Because we can overshoot \\(0\\) and get to the negatives. Yet, squaring the difference means we can never accidentally get negative, and so `my_latent_value` will actually be \\(15\\)).
 
-Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is called the **loss**. We used the "subtract and square" operation here to compute the loss, so "subtract and square", properly called **sum of squared errors**, is our **loss function** for this toy problem.
+Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is called the **loss**. We used the "subtract and square" operation here to compute the loss, so "subtract and square", properly called **sum of squared errors**, is our **loss function** for this toy problem. We will go deeper into loss functions in the future, in this metric is often not appropriate given the problem you are working worth.
 
 So let's do it! Let's create a tensor our loss:
 
