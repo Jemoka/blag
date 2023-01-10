@@ -101,3 +101,13 @@ Please refer to [Linear Algebra Index]({{< relref "KBhlinear_algebra_index.md" >
 | Date                                                                                         | Topic                                               |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-08-26 Fri&gt;</span></span> | [DiffEq Intro]({{< relref "KBhdiffeq_intro.md" >}}) |
+
+
+## NUS-LANG250 Translation {#nus-lang250-translation}
+
+[Translation Studies Index]({{< relref "KBhtranslation_studies_index.md" >}})
+
+
+## NUS-MATH575 CompBio {#nus-math575-compbio}
+
+[Computational Biology Index]({{< relref "KBhcomputational_biology_index.md" >}})
