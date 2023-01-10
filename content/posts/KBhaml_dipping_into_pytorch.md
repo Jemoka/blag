@@ -446,14 +446,92 @@ tensor([ 0.8241, -0.1014,  0.2940, -0.2019,  0.6749], grad_fn=<AddBackward0>)
 
 Nice.
 
+And here's the magical thing: when we are asking SVG to optimize this network, instead of needing to pass every darn parameter used in this network into SVG, we can just pass in:
+
+```python
+my_network.parameters()
+```
+
+```text
+<generator object Module.parameters at 0x115214270>
+```
+
+This is actually a list of every single `tensor` that has `requires_grad=True` that we secretly created. No more typing out a list of every parameter to SVG like we did with `var_1` and `var_2`! We will see this in action shortly.
+
 
 ### How to Train Your ~~Dragon~~ Neural Network {#how-to-train-your-neural-network}
 
-Now, the `MyNetwork` transformation is currently kind of useless. We know it maps the vector `[1,2,3]` to some arbitrary numbers above. That's quite lame.
+Note, the `MyNetwork` transformation is currently kind of useless. We know it maps the vector `[1,2,3]` to some arbitrary numbers above (i.e. `0.8241` an such). That's quite lame.
 
 We want our network to model some relationship between numbers, that's why we are here. Let's, arbitrarily and for fun, ask SGD to update `my_network` such that it will return `[1,2,3,4,5]` given `[1,2,3]`.
 
 By the way, from here on, I will use `MyNetwork` to refer to the model 3=&gt;2=&gt;5 network we made above generally, and `my_network` the specific _instantiation_ of `MyNetwork` whose parameters we will ask SGD to update.
+
+Let's get a clean copy of `MyNetwork` first:
+
+```python
+my_network = MyNetwork()
+my_network
+```
+
+```text
+MyNetwork(
+  (m1): Linear(in_features=3, out_features=2, bias=True)
+  (m2): Linear(in_features=2, out_features=5, bias=True)
+)
+```
+
+And, let's create a _static_ (i.e. SGD cannot change it) input and output vector pair which we will pass into our operation:
+
+```python
+my_input = torch.tensor([1.,2.,3.])
+my_desired_output = torch.tensor([1.,2.,3.,4.,5.])
+
+my_input,my_desired_output
+```
+
+```text
+(tensor([1., 2., 3.]), tensor([1., 2., 3., 4., 5.]))
+```
+
+We will pass our input through the `my_network` operation:
+
+```python
+my_network_output = my_network(my_input)
+my_network_output
+```
+
+```text
+tensor([-0.1204,  0.3889, -0.3019,  0.2998, -0.5278], grad_fn=<AddBackward0>)
+```
+
+Now, recall we want _these_ values to be the same as `my_output`. They are decidedly not so right now. Let's fix that.
+
+Can you guess what loss function we will use? ... That's right, the same exact thing as before! Squaring the difference.
+
+```python
+loss = (my_network_output-my_desired_output)**2
+loss
+```
+
+```text
+tensor([ 1.2553,  2.5957, 10.9026, 13.6918, 30.5568], grad_fn=<PowBackward0>)
+```
+
+Waiiiit. There's a problem. Remember, SVG can take a single latent value to \\(0\\). That's a whole lotta latent values in a vector! Which one will it take to \\(0\\)?
+
+In reality, instead of taking one of these to \\(0\\), we want to take them all to \\(0\\)! To do this, we just... add the values up using the `torch.sum` function!
+
+```python
+loss = torch.sum((my_network_output-my_desired_output)**2)
+loss
+```
+
+```text
+tensor(59.0021, grad_fn=<SumBackward0>)
+```
+
+Nice. We now have something to optimize against.
 
 
 ## Challange {#challange}
