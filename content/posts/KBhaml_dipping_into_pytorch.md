@@ -145,25 +145,136 @@ What if we want `my_latent_value` to be... \\(15\\)? That sounds like a good num
 
 Waaait. I mentioned that the optimizers can only take things to \\(0\\). How could it take `my_latent_value` to \\(15\\) then? Recall! I said SGD takes _a_ latent variable to \\(0\\). So, we can just build another latent variable such that, when `my_latent_value` is \\(15\\), our new latent variable will be \\(0\\), and then ask SGD optimize on that!
 
-What cloud that be... Well, the _difference_ between \\(15\\) and `my_latent_value` is a good one. If `my_latent_value` is \\(15\\), the _difference_ between it and \\(15\\) will be \\(0\\), as desired!
+What cloud that be... Well, the _squared difference_ between \\(15\\) and `my_latent_value` is a good one. If `my_latent_value` is \\(15\\), the _squared difference_ between it and \\(15\\) will be \\(0\\), as desired!
 
-Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is called the **loss**. We used the "subtract from 15" operation here to compute the loss, so "subtract from 15" is our **loss function** for this toy problem. For a multitude of reasons, this loss function is a baaad idea when you are actually doing ML. But for demonstration purposes this is OK.
+Why do we use squared differences? Well, because if we used "normal" difference, it is easy to overshoot the other way and make `my_latent_value` too big! (Because we can overshoot \\(0\\) and get to the negatives. Yet, squaring the difference means we can never accidentally get negative, and so `my_latent_value` will actually be \\(15\\)).
+
+Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is called the **loss**. We used the "subtract and square" operation here to compute the loss, so "subtract and square", properly called **sum of squared errors**, is our **loss function** for this toy problem.
 
 So let's do it! Let's create a tensor our loss:
 
 ```python
-loss = 15-my_latent_value
+loss = (15-my_latent_value)**2
 loss
 ```
 
 ```text
-tensor(3., grad_fn=<RsubBackward1>)
+tensor(9., grad_fn=<PowBackward0>)
 ```
 
-Nice. So our loss is at \\(3\\) right now; when `my_latent_value` is correctly at \\(15\\), our loss will be at \\(0\\)! So, to get `my_latent_value` to \\(15\\), we will ask SGD to take
+Nice. So our loss is at \\(3\\) right now; when `my_latent_value` is correctly at \\(15\\), our loss will be at \\(0\\)! So, to get `my_latent_value` to \\(15\\), we will ask SGD to take `loss` to \\(0\\).
+
+To do this, there are three steps. **COMMIT THIS TO MEMORY**, as it will be basis of literally everything else in the future.
+
+1.  Backpropagate: "please tell SGD to take this variable to \\(0\\), and mark the correct tensors to change"
+2.  Optimize: "SGD, please update the marked tensors such that the variable I asked you to take to \\(0\\) is closer to \\(0\\)"
+3.  Reset: "SGD, please get ready for step 1 again by unmarking everything that you have changed"
+
+Again! Is it commited to memory yet?
+
+1.  Backprop
+2.  Optimize
+3.  Reset
+
+I am stressing this here because a _lot_ of people 1) miss one of these steps 2) do them out of order. Doing these in any other order will cause your desired result to not work. Why? Think about what each step does, and think about doing them out of order.
+
+One more time for good luck:
+
+1.  Backprop!
+2.  Optimize!
+3.  Reset!
+
+Let's do it.
+
+
+#### Backprop! {#backprop}
+
+Backpropergation marks the correct loss value to take to \\(0\\), and marks all tensors with `requires_grad` set to True which make up the value of that loss value for update.
+
+Secretly, this steps takes the **partial derivative** of our loss against each of the tensors we marked `requires_grad`, allowing SGD to "slide down the gradient" based on those partial derivatives. Don't worry if you didn't get that sentence.
+
+To do this, we call `.backward()` on the loss we want to take to \\(0\\):
+
+```python
+loss.backward()
+```
+
+```text
+None
+```
+
+This call will produce nothing. And that's OK, because here comes...
+
+
+#### Optimize! {#optimize}
+
+The next step is tell SGD to update all of the tensors marked for update in the previous step to get `loss` closer to \\(0\\). To do this, we simply:
+
+```python
+my_sgd.step()
+```
+
+```text
+None
+```
+
+This call will produce nothing. But, if you check now, the tensors should updated.
+
+Although... You should't check! Because we have one more step left:
+
+
+#### Reset! {#reset}
+
+```python
+my_sgd.zero_grad()
+```
+
+```text
+None
+```
+
+I cannot stress this enough. People often stop at the previous step because "ooo look my tensors updated!!!" and forget to do this step. THIS IS BAD. We won't go into why for now, but basically not resetting the update mark results in a tensor being updated twice, then thrice, etc. each time you call `.step()`, which will cause double-updates, which will cause you to overshoot (handwavy, but roughly), which is bad.
+
+
+#### ooo look my tensors updated!!! {#ooo-look-my-tensors-updated}
+
+```python
+var_1, var_2
+```
+
+```text
+(tensor(3.0720, requires_grad=True), tensor(4.0540, requires_grad=True))
+```
+
+WOAH! Look at that! Without us telling SGD, it figured out that `var_1` and `var_2` both need to be BIGGER for `my_latent_value`, the product of `var_1` and `var_2` to change from \\(12\\) to \\(15\\). Yet, the product of \\(3.0720\\) and \\(4.0540\\) is hardly close to \\(15\\).
+
+Why? Because our step size. It was _tiny!_ To get `my_latent_value` to be properly \\(15\\), we have to do the cycle of 1) calculating new latent value 2) calculating new loss 3) backprop, optimize, reset, a LOT of times.
+
+
+### Now do that a lot of times. {#now-do-that-a-lot-of-times-dot}
+
+```python
+for _ in range(100):
+    my_latent_value = var_1*var_2
+    loss = (15-my_latent_value)**2
+
+    loss.backward() # BACKPROP!
+    my_sgd.step() # OPTIMIZE!
+    my_sgd.zero_grad() # RESET!
+
+var_1, var_2
+```
+
+```text
+(tensor(3.4505, requires_grad=True), tensor(4.3472, requires_grad=True))
+```
+
+Weird solution, but we got there! The product of these two values is indeed very close to \\(15\\)! Give yourself a pat on the back.
 
 
 ### So why the heck are we doing all this {#so-why-the-heck-are-we-doing-all-this}
+
+So why did we go through all the effort of like 25 lines of code to get two numbers to multiply to \\(15\\)?
 
 
 ## y=mx+b {#y-mx-plus-b}
