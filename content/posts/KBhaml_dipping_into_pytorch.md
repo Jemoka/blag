@@ -317,7 +317,7 @@ tensor([[-0.2634,  0.3729,  0.5019],
 
 As you can see, we have indeed what we expect: a tensor containing a \\(2\times 3\\) matrix with `requires_grad` on filled with random values.
 
-How do we actually optimize over this tensor? You can do all the shenanigans we did before and pass `my_matrix_var_1` to SVG, but this will _quickly_ get unwieldy as you have more parameters. Remember how we had to give SVG a list of EVERYTHING it had to keep track of? `var_1` and `var_2` was simple enough, but what if we had to do `var_1.weight`, `var_2.weight`, `var_3.weight`... ... ... _ad nausium_ for every parameter we use on our large graph? GPT3 has 1.5 billion parameters. Do you really want to type that?
+How do we actually optimize over this tensor? You can do all the shenanigans we did before and pass `my_matrix_var_1` to SGD, but this will _quickly_ get unwieldy as you have more parameters. Remember how we had to give SVG a list of EVERYTHING it had to keep track of? `var_1` and `var_2` was simple enough, but what if we had to do `var_1.weight`, `var_2.weight`, `var_3.weight`... ... ... _ad nausium_ for every parameter we use on our large graph? GPT3 has 1.5 billion parameters. Do you really want to type that?
 
 No.
 
@@ -446,7 +446,7 @@ tensor([ 0.8241, -0.1014,  0.2940, -0.2019,  0.6749], grad_fn=<AddBackward0>)
 
 Nice.
 
-And here's the magical thing: when we are asking SVG to optimize this network, instead of needing to pass every darn parameter used in this network into SVG, we can just pass in:
+And here's the magical thing: when we are asking SGD to optimize this network, instead of needing to pass every darn parameter used in this network into SVG, we can just pass in:
 
 ```python
 my_network.parameters()
@@ -456,7 +456,7 @@ my_network.parameters()
 <generator object Module.parameters at 0x115214270>
 ```
 
-This is actually a list of every single `tensor` that has `requires_grad=True` that we secretly created. No more typing out a list of every parameter to SVG like we did with `var_1` and `var_2`! We will see this in action shortly.
+This is actually a list of every single `tensor` that has `requires_grad=True` that we secretly created. No more typing out a list of every parameter to SGD like we did with `var_1` and `var_2`! We will see this in action shortly.
 
 
 ### How to Train Your ~~Dragon~~ Neural Network {#how-to-train-your-neural-network}
@@ -502,7 +502,7 @@ my_network_output
 ```
 
 ```text
-tensor([-0.1204,  0.3889, -0.3019,  0.2998, -0.5278], grad_fn=<AddBackward0>)
+tensor([-1.4672, -0.7089, -0.2645, -0.0598,  0.1239], grad_fn=<AddBackward0>)
 ```
 
 Now, recall we want _these_ values to be the same as `my_output`. They are decidedly not so right now. Let's fix that.
@@ -515,10 +515,10 @@ loss
 ```
 
 ```text
-tensor([ 1.2553,  2.5957, 10.9026, 13.6918, 30.5568], grad_fn=<PowBackward0>)
+tensor([ 6.0869,  7.3380, 10.6571, 16.4821, 23.7766], grad_fn=<PowBackward0>)
 ```
 
-Waiiiit. There's a problem. Remember, SVG can take a single latent value to \\(0\\). That's a whole lotta latent values in a vector! Which one will it take to \\(0\\)?
+Waiiiit. There's a problem. Remember, SGD can take a single latent value to \\(0\\). That's a whole lotta latent values in a vector! Which one will it take to \\(0\\)?
 
 In reality, instead of taking one of these to \\(0\\), we want to take them all to \\(0\\)! To do this, we just... add the values up using the `torch.sum` function!
 
@@ -528,16 +528,89 @@ loss
 ```
 
 ```text
-tensor(59.0021, grad_fn=<SumBackward0>)
+tensor(64.3406, grad_fn=<SumBackward0>)
 ```
 
-Nice. We now have something to optimize against.
+Nice. We now have something to optimize against, let's actually create our optimizer! Remember that, instead of passing in every single parameter we want PyTorch to change manually, we just pass in `my_network.parameters()` and PyTorch will scan for every single parameter that lives in `MyNetwork` and give it all to SGD:
+
+```python
+my_sgd = SGD(my_network.parameters(), lr=1e-6)
+my_sgd
+```
+
+```text
+SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    lr: 1e-06
+    maximize: False
+    momentum: 0
+    nesterov: False
+    weight_decay: 0
+)
+```
+
+Because of the precision required to get \\(5\\) numbers in the vector to be exactly right, we will set our learning rate to be lower and take more steps (we will take \\(50000\\) steps, in fact). We will not worry about it too much for now, and dive into discussing it further for network parameter tuning.
+
+So, let's make the actual training loop now that will take the latent variable named `my_network_output`, created by applying `my_network` on `my_input`, to take on the value of `my_desired_output`! Can you do it without looking?
+
+```python
+for _ in range(50000):
+    # calculate new latent variable
+    my_network_output = my_network(my_input)
+    # calculate loss
+    loss = torch.sum((my_network_output-my_desired_output)**2)
+
+    # Backprop!
+    loss.backward()
+    # Optimize!
+    my_sgd.step()
+    # Reset!
+    my_sgd.zero_grad()
+
+my_network(my_input)
+```
+
+```text
+tensor([-0.9814,  0.4252,  1.8085,  2.7022,  3.5517], grad_fn=<AddBackward0>)
+```
+
+Not great! But---we are both _ordered_ correctly and --- if you just kept running this loop, we will eventually **converge** (arrive at) the right answer! For kicks, let's run it \\(50000\\) more times:
+
+```python
+for _ in range(50000):
+    # calculate new latent variable
+    my_network_output = my_network(my_input)
+    # calculate loss
+    loss = torch.sum((my_network_output-my_desired_output)**2)
+
+    # Backprop!
+    loss.backward()
+    # Optimize!
+    my_sgd.step()
+    # Reset!
+    my_sgd.zero_grad()
+
+my_network(my_input)
+```
+
+```text
+tensor([0.9975, 1.9986, 3.0006, 4.0026, 5.0052], grad_fn=<AddBackward0>)
+```
+
+Would you look at that! What did I promise you :)
+
+Your network _learned_ something! Specifically, the skill of mapping \\([1,2,3]\\) to \\([1,2,3,4,5]\\)! Congrats!
 
 
-## Challange {#challange}
+## Challenge {#challenge}
 
-Now that you know how to get the network to map two specific vectors in three dimensions to two specific places in five dimensions, can you do that more generally? Can you generate and give your own network enough examples such that it will learn to do that for ALL vectors in three dimensions?
+Now that you know how to get the network to map a specific vector in three dimensions to a specific place in five dimensions, can you do that more generally? Can you generate and give your own network enough examples such that it will learn to do that for ALL vectors in three dimensions?
 
 Specifically, generate a training set of in python and train your neural network now to perform the following operation:
 
-Given a vector \\([a,b,c]\\), return \\([a,b,c,c+1,c+2]\\), for every integer \\([a,b,c]\\). Can you do it?
+Given a vector \\([a,b,c]\\), return \\([a,b,c,c+1,c+2]\\), for every integer \\([a,b,c]\\).
+
+Hint: pass in many examples for correct behavior sequentially during each of your training loops, calculating loss and running the **optimization step** (i.e. back! optimize! reset!) after each example you give.
