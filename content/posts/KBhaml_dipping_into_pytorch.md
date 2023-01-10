@@ -288,9 +288,9 @@ The power of neural networks actually comes when a BUNCH of numbers gets multipl
 
 Recall, a **matrix** is how you can transform a **vector** from one space to another. Turns out, the brunt of everything you will be doing involves asking SGD to move a bunch of matricies around (like we did before!) such that our input vector(s) gets mapped to the right place.
 
-Let's create a matrix with PyTorch! A "matrix" is referred to as a **linear layer** in the world of neural networks. This is because a matrix will take every single value in the input vector into producing its output (for Linear Algebra fans, this is a result of the basis of domain), it is considered a **fully connected layer**.
+A **matrix**, in neural network world, is referred to as a **linear layer**. It holds a whole _series_ of neurons, taking every single value of the input into account to producing a whole set of output. Because of this property, it is considered a **fully connected layer**.
 
-When you ask PyTorch to make a matrix for you, you use the `nn` sublibrary which we imported before. Furthermore, and this is confusing for many people who have worked with matricies before, you specify the **input dimension first**.
+Let's create such a fully-connected layer (matrix) in PyTorch! When you ask PyTorch to make a matrix for you, you use the `nn` sublibrary which we imported before. Furthermore, and this is confusing for many people who have worked with matricies before, you specify the **input dimension first**.
 
 ```python
 my_matrix_var_1 = nn.Linear(3, 2)
