@@ -27,7 +27,9 @@ The most basic element we will be working with in Torch is something called a **
 
 ### Your First Tensors {#your-first-tensors}
 
-Let's create two scalar tensors!
+Let's create two tensors, each holding a neuron, and connect them together!
+
+Here are two lovely scalar tensors:
 
 ```python
 var_1 = torch.tensor(3.0, requires_grad=True)
@@ -44,7 +46,7 @@ We initialized two numbers, `3`, which we named `var_1`, and `4`, which we named
 
 The value `requires_grad` here tells PyTorch that these values can change, which we need it to do... very shortly!
 
-First, though, let's create a **latent** variable. A "latent" value is a value that is the _result_ of operations on other non-latent tensors. For instance, if I multiplied our two tensors together, we can create our very own latent tensor.
+First, though, let's create a **latent** variable. A "latent" value is a value that is the _result_ of operations on other non-latent tensors---connecting the activation of some neurons together with a new one. For instance, if I multiplied our two tensors together, we can create our very own latent tensor.
 
 ```python
 my_latent_value = var_1*var_2
