@@ -37,3 +37,5 @@ Based on the wise words of a crab, I will start writing down some [Proof Design 
 
 -   if we are trying to prove equivalence, double-containment is a good bet
 -   see [fundamental theorem of linear maps]({{< relref "KBhfundamental_theorem_of_linear_maps.md" >}}): but basically wehnever you need to construct [basis]({{< relref "KBhbasis.md" >}}) of things start with an arbiturary [basis]({{< relref "KBhbasis.md" >}}) of the subspace and expand into that of the whole space
+
+-   [a loop in the statements makes them all equivalent]({{< relref "KBhoperator.md#id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injectivity-is-id-1af529ce-e2fb-43a4-8f13-aee1dc743b5f-surjectivity-in-id-4ed27ed5-4edc-4ef4-afd7-9b8e3bcd9b96-finite-dimensional-id-36e84a46-76f1-481e-b031-8ab2f0da0aa8-operator-s" >}})
