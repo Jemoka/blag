@@ -100,3 +100,8 @@ We are really worried about two different things here.
 ## things {#things}
 
 -   we can use far field because the wavelength is much mucm much much larger than the seperation between the two tines; what is the wavelength? function of frequency and hertz
+
+
+## Questions from Mark {#questions-from-mark}
+
+-   sum of 1/2 kx^2's potential energies; see the sum of the torque over distance

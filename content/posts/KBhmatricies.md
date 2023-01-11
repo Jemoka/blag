@@ -38,6 +38,25 @@ Quick memory of this result: inputs across columns, outputs across rows; think a
 IF the [basis]({{< relref "KBhbasis.md" >}}) being used in the [matrix]({{< relref "KBhmatricies.md" >}}) is unclear (i.e. if we had a change of [basis]({{< relref "KBhbasis.md" >}}), so didn't use the standard basis, etc.), then the [matrix]({{< relref "KBhmatricies.md" >}}) of a _SPECIFIC_ set of [basis]({{< relref "KBhbasis.md" >}}) is written as: \\(\mathcal{M}(T, (v\_1, \dots, v\_n), (w\_1, \dots, w\_{m}))\\).
 
 
+### [matrix]({{< relref "KBhmatricies.md" >}}) of a vector {#matrix--kbhmatricies-dot-md--of-a-vector}
+
+The [matrix of a vector](#matrix--kbhmatricies-dot-md--of-a-vector) is just an encoding of scalars which needed to scale the [basis]({{< relref "KBhbasis.md" >}}) of the space to add up to that vector.
+
+More formally---
+
+Suppose \\(v \in V\\), and \\(v\_1 \dots v\_{n}\\) is a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\). The [matrix]({{< relref "KBhmatricies.md" >}}) representing vector \\(v\\) is the n-by-1 matrix:
+
+\begin{equation}
+\mathcal{M}(v) = \mqty(c\_1 \\\ \dots \\\ c\_{n})
+\end{equation}
+
+where \\(c\_1 \dots c\_{n}\\) are the scalars such that:
+
+\begin{equation}
+v = c\_1v\_1 + \dots +c\_{n}v\_{n}
+\end{equation}
+
+
 ### column notation {#column-notation}
 
 One can use a dot to index [matricies]({{< relref "KBhmatricies.md" >}})' columns and rows.
