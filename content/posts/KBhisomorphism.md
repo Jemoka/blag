@@ -8,6 +8,8 @@ An [isomorphism]({{< relref "KBhisomorphism.md" >}}) is an [invertable]({{< relr
 
 "A linear map that maintain the correct structure of the structure."
 
+This makes the [vector space]({{< relref "KBhvector_space.md" >}})s that are [isomorphic]({{< relref "KBhisomorphism.md" >}}) "equivalent", because the [isomorphism]({{< relref "KBhisomorphism.md" >}}) is the [equivalence]({{< relref "KBhequivalence.md" >}}) relationship. Of course, they are still not equal.
+
 
 ## additional information {#additional-information}
 
