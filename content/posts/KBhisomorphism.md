@@ -10,6 +10,8 @@ An [isomorphism]({{< relref "KBhisomorphism.md" >}}) is an [invertable]({{< relr
 
 This makes the [vector space]({{< relref "KBhvector_space.md" >}})s that are [isomorphic]({{< relref "KBhisomorphism.md" >}}) "equivalent", because the [isomorphism]({{< relref "KBhisomorphism.md" >}}) is the [equivalence]({{< relref "KBhequivalence.md" >}}) relationship. Of course, they are still not equal.
 
+Generally, [isomorphism]({{< relref "KBhisomorphism.md" >}})s can only be built between [vector space]({{< relref "KBhvector_space.md" >}})s over the same [field]({{< relref "KBhfield.md" >}}).
+
 
 ## additional information {#additional-information}
 
@@ -30,6 +32,8 @@ In this case, the \\(I\\) is the [identity]({{< relref "KBhidentity.md" >}}) map
 
 
 ### two vector spaces are isomorphic IFF they have the same dimension {#two-vector-spaces-are-isomorphic-iff-they-have-the-same-dimension}
+
+**note: this relationship works over the SAME field \\(\mathbb{F}\\), otherwise lin comb can't work**
 
 
 #### Given vector spaces \\(I,W\\) [isomorphic]({{< relref "KBhisomorphism.md" >}}), we desire \\(dim V = dim W\\) {#given-vector-spaces-i-w-isomorphic--kbhisomorphism-dot-md--we-desire-dim-v-dim-w}

@@ -37,16 +37,17 @@ draft = false
 -   [\\(\dim \mathcal{L}(V,W) = (\dim V)(\dim W)\\)]({{< relref "KBhisomorphism.md#dim-mathcal-l--v-w----dim-v----dim-w" >}})
 -   \\(\mathcal{M}(T)\_{.,k} = \mathcal{M}(Tv\_{k})\\), a result of how everything is defined (see [matrix of a vector]({{< relref "KBhmatricies.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matrix-of-a-vector" >}}))
     -   "each column of a [matrix]({{< relref "KBhmatricies.md" >}}) represents where each of the [basis]({{< relref "KBhbasis.md" >}}) of the input gets taken to"
+    -   So applying a vector to a matrix shows the linear combination of what where the basis sent
 -   [linear maps are like matrix multiplication]({{< relref "KBhmatrix_multiplication.md#linear-maps-are-like-matrix-multiplication" >}})
 -   [injectivity is surjectivity in finite-dimensional operators]({{< relref "KBhoperator.md#id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injectivity-is-id-1af529ce-e2fb-43a4-8f13-aee1dc743b5f-surjectivity-in-id-4ed27ed5-4edc-4ef4-afd7-9b8e3bcd9b96-finite-dimensional-id-36e84a46-76f1-481e-b031-8ab2f0da0aa8-operator-s" >}})
 
 
 ## Questions for Jana {#questions-for-jana}
 
--   why doesn't axler just say the "[basis of domain]({{< relref "KBhbasis_of_domain.md" >}})" directly (i.e. he did a lin comb instead) for the second direction for the [two vector spaces are isomorphic IFF they have the same dimension]({{< relref "KBhisomorphism.md#two-vector-spaces-are-isomorphic-iff-they-have-the-same-dimension" >}}) proof?
--   clarify the [matricies and Linear Maps from the right dimensions are isomorphic]({{< relref "KBhisomorphism.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matricies-and-id-17f3b01c-4945-4268-8da4-9887d960596b-linear-map-s-from-the-right-id-07b04334-5ae7-457c-bc3e-92feed8fc2cc-dimension-s-are-id-3f5ba3a5-15d4-4b58-99de-09eb1e4713cb-isomorphic" >}}) proof
--   what is the "multiplication by \\(x^{2}\\)" [operator]({{< relref "KBhoperator.md" >}})?
--   how does the [matrix of a vector]({{< relref "KBhmatricies.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matrix-of-a-vector" >}}) detour relate to the content before and after? I suppose an [isomorphism]({{< relref "KBhisomorphism.md" >}}) exists but it isn't explicitly used in the [linear maps are like matrix multiplication]({{< relref "KBhmatrix_multiplication.md#linear-maps-are-like-matrix-multiplication" >}}) proof, which is the whole point
+-   ~~why doesn't axler just say the "[basis of domain]({{< relref "KBhbasis_of_domain.md" >}})" directly (i.e. he did a lin comb instead) for the second direction for the [two vector spaces are isomorphic IFF they have the same dimension]({{< relref "KBhisomorphism.md#two-vector-spaces-are-isomorphic-iff-they-have-the-same-dimension" >}}) proof?~~ because the next steps for [spanning]({{< relref "KBhspan.md#spans" >}}) ([surjectivity]({{< relref "KBhsurjectivity.md" >}})) and [linear independence]({{< relref "KBhlinear_independence.md" >}}) ([injectivity]({{< relref "KBhinjectivity.md" >}})) is made more obvious
+-   ~~clarify the [matricies and Linear Maps from the right dimensions are isomorphic]({{< relref "KBhisomorphism.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matricies-and-id-17f3b01c-4945-4268-8da4-9887d960596b-linear-map-s-from-the-right-id-07b04334-5ae7-457c-bc3e-92feed8fc2cc-dimension-s-are-id-3f5ba3a5-15d4-4b58-99de-09eb1e4713cb-isomorphic" >}}) proof~~
+-   ~~what is the "multiplication by \\(x^{2}\\)" [operator]({{< relref "KBhoperator.md" >}})?~~ literally multiplying by \\(x^{2}\\)
+-   ~~how does the [matrix of a vector]({{< relref "KBhmatricies.md#id-7a09bc5f-6de2-485f-8c29-b94999299cc6-matrix-of-a-vector" >}}) detour relate to the content before and after? I suppose an [isomorphism]({{< relref "KBhisomorphism.md" >}}) exists but it isn't explicitly used in the [linear maps are like matrix multiplication]({{< relref "KBhmatrix_multiplication.md#linear-maps-are-like-matrix-multiplication" >}}) proof, which is the whole point~~ because we needed to close the loop of being able to linear algebra with [matricies]({{< relref "KBhmatricies.md" >}}) completely, which we didn't know without the [isomorphism]({{< relref "KBhisomorphism.md" >}}) between matricies and maps
 
 
 ## Interesting Factoids {#interesting-factoids}
