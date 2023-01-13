@@ -27,7 +27,43 @@ The most basic element we will be working with in Torch is something called a **
 
 ### Your First Tensors {#your-first-tensors}
 
-Let's create two tensors, each holding a neuron, and connect them together!
+Everything that you are going to put through to PyTorch needs to be in a tensor. Therefore, we will need to get good at making them! As we discussed, a tensor can hold an number (scalar), a list (vector) or a (matrix).
+
+Here are a bunch of them!
+
+```python
+scalar_tensor = torch.tensor(2.2)
+vector_tensor = torch.tensor([1,3,4])
+matrix_tensor = torch.tensor([[3,1,4],[1,7,4]])
+```
+
+You can perform operations on these tensors, like adding them together:
+
+```python
+torch.tensor(2.2) + torch.tensor(5.1)
+```
+
+```text
+tensor(7.3000)
+```
+
+Vector and Matrix tensors work like NumPy arrays. You can add them pairwise:
+
+```python
+torch.tensor([[3,1,4],[1,7,4]]) + torch.tensor([[0,2,1],[3,3,4]])
+```
+
+```text
+tensor([[ 3,  3,  5],
+        [ 4, 10,  8]])
+```
+
+
+### Connecting Tensors {#connecting-tensors}
+
+A single number can't be a neural network! ([citation needed]) So, to be able to actually build networks, we have to connect tensors together.
+
+So, let's create two tensors, each holding a neuron, and connect them together!
 
 Here are two lovely scalar tensors:
 
@@ -80,7 +116,7 @@ SGD
 <class 'torch.optim.sgd.SGD'>
 ```
 
-Excellent. By the way, from the `torch.optim` package, there's tonnes (like at least 20) different "optimizer" algorithms that all to the same thing ("take this latent variable to \\(0\\) by updating its constituents please") but do them in important different ways. We will explore some of them through this semester, and others you can Google for yourself by looking up "PyTorch optimizers".
+Excellent. By the way, from the `torch.optim` package, there's tonnes (like at least 20) different "optimizer" algorithms that all do the same thing ("take this latent variable to \\(0\\) by updating its constituents") but do them in important different ways. We will explore some of them through this semester, and others you can Google for yourself by looking up "PyTorch optimizers".
 
 Ok, to get this SGD thing up and spinning, we have to tell it every tensor it gets to play with in a list. For us, let's ask PyTorch SGD to update `var_1` and `var_2` such that `my_latent_value` (which, remember, is var1 times var2) becomes a new value.
 
@@ -147,11 +183,11 @@ What if we want `my_latent_value` to be... \\(15\\)? That sounds like a good num
 
 Waaait. I mentioned that the optimizers can only take things to \\(0\\). How could it take `my_latent_value` to \\(15\\) then? Recall! I said SGD takes _a_ latent variable to \\(0\\). So, we can just build another latent variable such that, when `my_latent_value` is \\(15\\), our new latent variable will be \\(0\\), and then ask SGD optimize on that!
 
-What cloud that be... Well, the _squared difference_ between \\(15\\) and `my_latent_value` is a good one. If `my_latent_value` is \\(15\\), the _squared difference_ between it and \\(15\\) will be \\(0\\), as desired!
+What could that be... Well, the _squared difference_ between \\(15\\) and `my_latent_value` is a good one. If `my_latent_value` is \\(15\\), the _squared difference_ between it and \\(15\\) will be \\(0\\), as desired!
 
-Why do we use squared differences? Well, because if we used "normal" difference, it is easy to overshoot the other way and make `my_latent_value` too big! (Because we can overshoot \\(0\\) and get to the negatives. Yet, squaring the difference means we can never accidentally get negative, and so `my_latent_value` will actually be \\(15\\)).
+So, similar to what we explored last semester, we use **sum of squared difference** as our **loss** because it will be able to account for errors of fit in both directions: a \\(-4\\) difference in predicted and actual output is just as bad as a \\(+4\\) difference.
 
-Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is called the **loss**. We used the "subtract and square" operation here to compute the loss, so "subtract and square", properly called **sum of squared errors**, is our **loss function** for this toy problem. We will go deeper into loss functions in the future, in this metric is often not appropriate given the problem you are working worth.
+Turns out, the "objective" for SGD optimization, the thing that we ask SGD to take to \\(0\\) on our behalf by updating the parameters we allowed it to update (again, they are `var_1` and `var_2` in our case here), is indeed the **loss** value of our model. **Sum of squared errors** is, therefore, called our **loss function** for this toy problem.
 
 So let's do it! Let's create a tensor our loss:
 
@@ -191,7 +227,7 @@ Let's do it.
 
 #### Backprop! {#backprop}
 
-Backpropergation marks the correct loss value to take to \\(0\\), and marks all tensors with `requires_grad` set to True which make up the value of that loss value for update.
+Backpropergation marks the correct loss value to minimize (optimze towards being \\(0\\)), and marks all tensors with `requires_grad` set to True which make up the value of that loss value for update.
 
 Secretly, this steps takes the **partial derivative** of our loss against each of the tensors we marked `requires_grad`, allowing SGD to "slide down the gradient" based on those partial derivatives. Don't worry if you didn't get that sentence.
 
@@ -303,7 +339,7 @@ Linear(in_features=3, out_features=2, bias=True)
 
 `my_matrix_var_1` is a linear map from three dimensions to two dimensions; it will take a vector of three things as input and spit out a vector of two.
 
-Note! Although `my_matrix_var_1` _is_ a tensor under the hood just like `var_1`, we 1) didn't have to set initial values for it 2) didn't have to mark it as `requires_grad`. This is because, unlike a raw Tensor which often does not require to be changed (such as, for instance, the input value, which you can't change), a matrix is basically ALWAYS a tensor that needs to be changed.
+Note! Although `my_matrix_var_1` _is_ a tensor under the hood just like `var_1`, we 1) didn't have to set default values for it 2) didn't have to mark it as `requires_grad`. This is because, unlike a raw Tensor which often does not require to be changed (such as, for instance, the input value, which you can't change), a matrix is basically ALWAYS a tensor that encodes the **weights** of a model we are working with---so it is always going to be something that we will ask SGD to change on our behalf.
 
 So, since you are asking SGD to change it anyways, PyTorch just filled a bunch of random numbers in for you and set `requires_grad` on for you to `my_matrix_var_1`. If you want to see the actual underlying tensor, you can:
 
@@ -370,7 +406,7 @@ tensor([1., 2., 3.])
 
 By the way, notice the period I'm putting after numbers here? That's a shorthand for `.0`. So `3.0 = 3.`. I want to take this opportunity to remind you that the tensor operations all take FLOATING POINT tensors as input, because the matrices themselves as initialized with random floating points.
 
-Let's get a copy of the new `MyNetwork` module.
+Let's get an instance of the new `MyNetwork` module.
 
 ```python
 my_network = MyNetwork()
@@ -393,7 +429,11 @@ my_network(three_vector)
 tensor([0.3850, 1.4120], grad_fn=<AddBackward0>)
 ```
 
-Woah! It mapped our vector tensor in three dimensions to a vector tensor in two! Cool. This may not seem all that amazing to you... yet. But, remember, we can encode _any number_ of matrix operations in our `forward()` function above. Let's design another module that uses two matricies---or two **fully-connected layers**, or **layers** for short (when we don't specify what kind of layer it is, it is fully connected)---to perform a transformation.
+Woah! It mapped our vector tensor in three dimensions to a vector tensor in two!
+
+The above code, by the way, is how we actually use our model to run **predictions**: `my_network` is _transforming_ the input vector to the desired output vector.
+
+Cool. This may not seem all that amazing to you... yet. But, remember, we can encode _any number_ of matrix operations in our `forward()` function above. Let's design another module that uses two matricies---or two **fully-connected layers**, or **layers** for short (when we don't specify what kind of layer it is, it is fully connected)---to perform a transformation.
 
 We will transform a vector from 3 dimensions to 2 dimensions, then from 2 dimensions to 5 dimensions:
 
@@ -421,6 +461,8 @@ class MyNetwork(nn.Module):
 
         return x
 ```
+
+Of course, this network topology is kind of randomly tossed into the network.
 
 Doing everything else we did before again, we should end up a vector in 5 dimensions, having been transformed twice behind the scenes!
 
@@ -496,7 +538,7 @@ my_input,my_desired_output
 (tensor([1., 2., 3.]), tensor([1., 2., 3., 4., 5.]))
 ```
 
-We will pass our input through the `my_network` operation:
+We will pass our input through the `my_network` operation, and figure out what our inputs currently map to:
 
 ```python
 my_network_output = my_network(my_input)
@@ -507,7 +549,7 @@ my_network_output
 tensor([-1.4672, -0.7089, -0.2645, -0.0598,  0.1239], grad_fn=<AddBackward0>)
 ```
 
-Now, recall we want _these_ values to be the same as `my_output`. They are decidedly not so right now. Let's fix that.
+Ah, clearly not `[1,2,3,4,5]`. Recall we want these values to be the same as `my_output`, which they isn't doing right now. Let's fix that.
 
 Can you guess what loss function we will use? ... That's right, the same exact thing as before! Squaring the difference.
 
@@ -520,9 +562,9 @@ loss
 tensor([ 6.0869,  7.3380, 10.6571, 16.4821, 23.7766], grad_fn=<PowBackward0>)
 ```
 
-Waiiiit. There's a problem. Remember, SGD can take a single latent value to \\(0\\). That's a whole lotta latent values in a vector! Which one will it take to \\(0\\)?
+Waiiiit. There's a problem. Remember, SGD can take a single latent value to \\(0\\). That's a whole lotta latent values in a vector! Which one will it take to \\(0\\)? Stop to think about this for a bit: we _want_ to take all of these values to \\(0\\), but we can take only a single value to \\(0\\) with SGD. How can we do it?
 
-In reality, instead of taking one of these to \\(0\\), we want to take them all to \\(0\\)! To do this, we just... add the values up using the `torch.sum` function!
+To do this, we just... add the values up using the `torch.sum` function!
 
 ```python
 loss = torch.sum((my_network_output-my_desired_output)**2)
@@ -554,9 +596,9 @@ Parameter Group 0
 )
 ```
 
-Because of the precision required to get \\(5\\) numbers in the vector to be exactly right, we will set our learning rate to be lower and take more steps (we will take \\(50000\\) steps, in fact). We will not worry about it too much for now, and dive into discussing it further for network parameter tuning.
+Just for running this model, we are going to run our network with more steps (\\(50,000\\)), but with smaller step sizes (\\(1 \times 10^{-6}\\)). We will not worry about it too much for now, and dive into discussing it further for network parameter tuning.
 
-So, let's make the actual training loop now that will take the latent variable named `my_network_output`, created by applying `my_network` on `my_input`, to take on the value of `my_desired_output`! Can you do it without looking?
+So, let's make the actual training loop now that will take the latent variable named `my_network_output`, created by applying `my_network` on `my_input`, to take on the value of `my_desired_output`! Can you do it without looking? This will be _almost_ the same as our first training loop, except we are asking our network to calculate the current latent output (instead of computing it from scratch each time.)
 
 ```python
 for _ in range(50000):
