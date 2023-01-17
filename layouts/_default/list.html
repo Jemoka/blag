@@ -5,7 +5,8 @@
         <h1><span class="listhash">#</span>{{.Title}}</h1>
     </div>
     <!-- Ranges through content/posts/*.md -->
-    {{ range sort .Paginator.Pages "Lastmod" "desc" }}
+    {{ range (.Paginate (sort .Pages "Lastmod" "desc") ).Pages  }}
+<!-- "Lastmod" "desc" -->
     <div class="pageview" onclick="window.location.href='{{.Permalink}}'">
         <span class="top">
         <h1><a class="noannot">{{.Title}}</a></h1>

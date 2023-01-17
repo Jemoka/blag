@@ -31,7 +31,7 @@ fourier_cantileaver
 ```
 
 ```text
--f^2*u*w(x) + E*I*diff(w(x), x, x, x, x) == 0
+-f^2*u*w(x) + E*I*diff(w(x), x, x) == 0
 ```
 
 And now, we can go about solving this result.
@@ -102,8 +102,6 @@ The way that we will go about this is by taking three derivatives and supplying 
 
 {{< figure src="/ox-hugo/2022-11-10_13-38-40_screenshot.png" >}}
 
-NOTE: these are NOT the initial conditions we are using!!! At the base of OUR beam, its bent! (the fork!), so we will supply two extra constants.
-
 ```sage
 wp = diff(w,x,1)
 wpp = diff(w,x,2)
@@ -120,10 +118,8 @@ wppp = diff(w,x,3)
 And then, we have a system:
 
 ```sage
-c1,c2 = var("c1 c2")
-
-cond_1 = w.subs(x=0) == c1
-cond_2 = wp.subs(x=0) == c2
+cond_1 = w.subs(x=0) == 0
+cond_2 = wp.subs(x=0) == 0
 cond_3 = wpp.subs(x=L) == 0
 cond_4 = wppp.subs(x=L) == 0
 
@@ -132,8 +128,8 @@ conds
 ```
 
 ```text
-(d0 + d2 == c1,
- b*d1 + b*d3 == c2,
+(d0 + d2 == 0,
+ b*d1 + b*d3 == 0,
  -b^2*d2*cos(L*b) + b^2*d0*cosh(L*b) - b^2*d3*sin(L*b) + b^2*d1*sinh(L*b) == 0,
  -b^3*d3*cos(L*b) + b^3*d1*cosh(L*b) + b^3*d2*sin(L*b) + b^3*d0*sinh(L*b) == 0)
 ```
@@ -265,6 +261,10 @@ characteristic_solutions = [characteristic_eqn.find_root(i,j) for (i,j) in zip(i
 characteristic_solutions
 ```
 
+```text
+[1.8751040687120917, 4.6940911329739246, 7.854757438237603, 10.995540734875457]
+```
+
 These are possible \\(Lb\\) candidates.
 
 Recall now that:
@@ -289,12 +289,12 @@ Let us create a code snippet to do that consistently:
 
 ```sage
 # constants https://www.mit.edu/~6.777/matprops/aluminum.htm
-_E = 3e10 # modulus (pascals)
-_I = 0.0000000001302083333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
-_u = 1.521355063 # length mass density (kg/m)
+_E = 44062894805 # modulus (pascals)
+_I = 0.0000000001365333333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
+_u = 3.521355063 # length mass density (kg/m)
 
 # target
-LENGTH = 0.09284 # length of tine (meters)
+LENGTH = 0.09373 # length of tine (meters)
 
 # mode to index
 nth_mode = 0
@@ -302,10 +302,12 @@ nth_mode = 0
 # variable declaration
 
 # solution eqn
-solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*top.subs(u=_u,
-                                                                      E=_E,
-                                                                      I=_I))
+solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*(sqrt(f)*(_u/(_E*_I))^(1/4)))
 
 # as frequency is squared, we take the SECOND (the non-negative) result, and round it
 solve(solution_eqn, f)[0].rhs().n()
+```
+
+```text
+523.111742363715
 ```
