@@ -281,39 +281,38 @@ The takeaway here is that:
 
 the second overtone will be six and a quarter times ("much") higher than the fundamental---so it will be able to dissipate much quicker.
 
-\begin{equation}
-\sqrt{f}\qty(\frac{u}{EI})^{\frac{1}{4}} L = s
-\end{equation}
+Recall now that:
 
 \begin{equation}
-\sqrt{f} = \frac{s}{L} \qty(\frac{EI}{u})^{\frac{1}{4}}
+b = \sqrt{f} \qty(\frac{\mu}{EI})^{\frac{1}{4}}
 \end{equation}
+
+Simplifying some:
+
+\begin{align}
+b &= f^{\frac{1}{2}} \qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
+&= \qty(f^{2})^{\frac{1}{4}}\qty(\frac{\mu}{EI})^{\frac{1}{4}} \\\\
+&= \qty(\frac{\mu f^{2}}{EI})^{\frac{1}{4}}
+\end{align}
+
+To solve for \\(f\\), give all other expressions and set one of the above characteristic solutions to \\(Lb\\). Then, solve for \\(f\\).
+
+Solving for frequency to get things to be correct, substituting the fact that \\(bh \rho = \mu\\):
+
+\begin{align}
+&Lb = s  \\\\
+\Rightarrow\ & L f^{\frac{1}{2}} \qty(\frac{\mu}{EI})^{\frac{1}{4}} = s  \\\\
+\Rightarrow\ & f^{\frac{1}{2}} = \frac{s}{L} \qty(\frac{EI}{\mu})^{\frac{1}{4}}  \\\\
+\Rightarrow\ & f = \frac{s^{2}}{L^{2}} \qty(\frac{EI}{\mu})^{\frac{1}{2}} \\\\
+\Rightarrow\ & f = \frac{s^{2}}{L^{2}} \qty(\frac{E(\frac{bh^{3}}{12})}{\mu})^{\frac{1}{2}}  \\\\
+\Rightarrow\ & f = \frac{s^{2}}{L^{2}} \qty(\frac{E(\frac{bh^{3}}{12})}{\rho bh})^{\frac{1}{2}}  \\\\
+\Rightarrow\ & f = \frac{s^{2}}{L^{2}} \qty(\frac{Eh^{2}}{12\rho })^{\frac{1}{2}}
+\end{align}
 
 ```sage
 _E = 70000000000 # pascals
-_p = 2766 # kg/m^3
-_h = 0.006 # m
-_I = 0.0000000001302083333 # m^4
-_u = 0.10388 # kg/m, approximate
-
-# target
-LENGTH = 0.095
-
-# mode to index
-nth_mode = 0
-_s = characteristic_solutions[nth_mode]
-
-((3.5160)/(LENGTH^2))*((_E*_I)/_u)^(1/2)
-```
-
-```text
-3649.25402142506
-```
-
-```sage
-_E = 70000000000 # pascals
-_p = 2766 # kg/m^3
-_h = 0.006 # m
+_p = 2666 # kg/m^3
+_h = 0.0064 # m
 
 # target
 LENGTH = 0.095
@@ -326,5 +325,34 @@ _s = characteristic_solutions[nth_mode]
 ```
 
 ```text
-3394.58823149786
+3688.17772197722
+```
+
+Also, to get the constant for the elastic modulus from our force measurements, see [calculating shear's modulus.]({{< relref "KBhcalculating_shear_s_modulus.md" >}})
+
+Let us create a code snippet to do that consistently:
+
+```sage
+# constants https://www.mit.edu/~6.777/matprops/aluminum.htm
+_E = 44062894805 # modulus (pascals)
+_I = 0.0000000001365333333 # second moment (m^4) https://amesweb.info/section/second-moment-of-area-calculator.aspx
+_u = 3.521355063 # length mass density (kg/m)
+
+# target
+LENGTH = 0.09573 # length of tine (meters)
+
+# mode to index
+nth_mode = 0
+
+# variable declaration
+
+# solution eqn
+solution_eqn = characteristic_solutions[nth_mode] == (LENGTH*(sqrt(f)*(_u/(_E*_I))^(1/4)))
+
+# as frequency is squared, we take the SECOND (the non-negative) result, and round it
+solve(solution_eqn, f)[0].rhs().n()
+```
+
+```text
+501.482272272831
 ```
