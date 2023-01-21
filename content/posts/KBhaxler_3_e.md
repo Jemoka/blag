@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-No idea why this is so long
+No idea why this is so long!!!
 
 
 ## Key Sequence {#key-sequence}
@@ -21,7 +21,7 @@ Firehose of a chapter.
     -   we learned an important and useful result that [two affine subsets parallel to \\(U\\) are either equal or disjoint]({{< relref "KBhparallel_linear_algebra.md#two-id-4c9e8fea-cd23-4a41-b85e-bb5be3867c96-affine-subset-s-id-4c9e8fea-cd23-4a41-b85e-bb5be3867c96-parallel-to-u-are-either-equal-or-disjoint" >}}) (\\(v-w \in U\\) means \\(v+U = w+U\\) means \\(v+U \cap w+U \neq \emptyset\\), means the first thing)
     -   we defined the [operations on quotient space]({{< relref "KBhquotient_space.md#operations-on-id-53548f85-b3c8-42ce-81e7-9016ed7bd280-quotient-space" >}}), and showed that [quotient space operations behave uniformly on equivalent affine subsets]({{< relref "KBhquotient_space.md#id-53548f85-b3c8-42ce-81e7-9016ed7bd280-quotient-space-operations-behave-uniformly-on-equivalent-id-4c9e8fea-cd23-4a41-b85e-bb5be3867c96-affine-subset-s" >}}). This, and the usual closer proof, demonstrates that [quotient space]({{< relref "KBhquotient_space.md" >}})s is a [vector space]({{< relref "KBhvector_space.md" >}})
     -   with the help of the [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}})ification map (the [quotient map]({{< relref "KBhquotient_map.md" >}}) \\(\pi\\)), we show that the [dimension of a quotient space is the difference between dimensions of its constituents]({{< relref "KBhquotient_space.md#dimension-of-a-quotient-space-is-the-difference-between-dimensions-of-its-constituents" >}}) essentially by invoking [rank-nullity theorem]({{< relref "KBhfundamental_theorem_of_linear_maps.md" >}}) after knowing the fact that \\(null\ \pi = U\\) (because \\(u+U\\) is an [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}}) that has not been shifted (think about a line moving along itself... it doesn't move))
--   Then, and I'm not quite sure why, we defined \\(\widetilde{T}: V / null\ T \to W\\), for some \\(T: V\to W\\), defined as \\(\widetilde{T}(v+\null T) = Tv\\).
+-   Then, and I'm not quite sure why, we defined \\(\widetilde{T}: V / null\ T \to W\\), for some \\(T: V\to W\\), defined as \\(\widetilde{T}(v+null\ T) = Tv\\).
     -   We show that the map is [Linear]({{< relref "KBhlinear_map.md" >}}), [injective]({{< relref "KBhinjectivity.md" >}}), its range is \\(range\ T\\), and so it forms an [isomorphism]({{< relref "KBhisomorphism.md" >}}) between \\(V / null\ T\\) and \\(range\ T\\).
 
 
