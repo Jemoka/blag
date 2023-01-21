@@ -1,5 +1,5 @@
 +++
-title = "$\widetilde{T}$"
+title = "T twiddle"
 author = ["Houjun Liu"]
 draft = false
 +++

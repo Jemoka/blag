@@ -1,5 +1,5 @@
 +++
-title = "Divide by $2\pi$"
+title = "Divide by 2pi"
 author = ["Houjun Liu"]
 draft = false
 +++
