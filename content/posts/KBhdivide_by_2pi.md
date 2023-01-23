@@ -290,26 +290,33 @@ But, enough idling, onto our main event. Using standard reference values for alu
 ```sage
 # measured values----
 # thickness
-h = 0.006 # meters
+h = 0.0065 # meters
 # length
-L = 0.095 # meters
+L0 = 0.09373 # meters
+L1 = 0.08496 # meters
 
 # theoretical values---
 # elastic modulus
-E = 7e10 # pascals = kg/m^2
+E = 46203293995 # pascals = kg/m^2
 # density
-p = 2700 # kg/m^3
+p = 2597 # kg/m^3
 
 # our solved characteristic value (s)
 # mode to index
 nth_mode = 0
 s = characteristic_solutions[nth_mode]
 
-(((s^2)/(2*pi*L^2))*((E*h^2)/(12*p))^(1/2)).n()
+zero = (((s^2)/(2*pi*L0^2))*((E*h^2)/(12*p))^(1/2)).n()
+one = (((s^2)/(2*pi*L1^2))*((E*h^2)/(12*p))^(1/2)).n()
+
+zero, one
+
+mean([zero,one])
 ```
 
 ```text
-546.828874398618
+(504.123425101814, 613.571395642254)
+558.847410372034
 ```
 
 Close enough for a night. Thank you ~~sorry~~ about everything.

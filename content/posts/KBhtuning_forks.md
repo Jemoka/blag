@@ -93,8 +93,8 @@ We are really worried about two different things here.
 
 -   why no free vibrations just standing?
 -   do the various tuning fork modes compose
--   figure out phys1 physics of strings virbrating
--   what happened to the harmonics of the fundimental? I know the overotens are 6/14, but where did the harmonics go?
+-   what happened to the harmonics of the fundimental? I know the overotens are 6/14, but where did the harmonics go? do they compose?
+-   what if we did it in a vaccume? of course the tuning fork is not going to be heard, but will it keep vibrating forever?
 
 
 ## things {#things}
@@ -102,6 +102,7 @@ We are really worried about two different things here.
 -   we can use far field because the wavelength is much mucm much much larger than the seperation between the two tines; what is the wavelength? function of frequency and hertz
 
 
-## Questions from Mark {#questions-from-mark}
+## Questions for Mark {#questions-for-mark}
 
--   sum of 1/2 kx^2's potential energies; see the sum of the torque over distance
+-   cuw tuning forks' freq is not the predicted freq of its shortest tine. urg how
+-   driven oscellation. how would it actually work?

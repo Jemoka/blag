@@ -24,6 +24,8 @@ Firehose of a chapter.
 -   Then, and I'm not quite sure why, we defined \\(\widetilde{T}: V / null\ T \to W\\), for some \\(T: V\to W\\), defined as \\(\widetilde{T}(v+null\ T) = Tv\\).
     -   We show that the map is [Linear]({{< relref "KBhlinear_map.md" >}}), [injective]({{< relref "KBhinjectivity.md" >}}), its range is \\(range\ T\\), and so it forms an [isomorphism]({{< relref "KBhisomorphism.md" >}}) between \\(V / null\ T\\) and \\(range\ T\\).
 
+Here's something: [products and quotients, the intuition]({{< relref "KBhproducts_and_quotients_the_intuition.md" >}})
+
 
 ## New Definitions {#new-definitions}
 
@@ -63,6 +65,7 @@ Firehose of a chapter.
 
 -   what's the point of learning about \\(\widetilde{T}\\)?
 -   and, for that matter, [Product of Vector Space]({{< relref "KBhproduct_of_vector_spaces.md" >}})s?
+-   how are [Product of Vector Space]({{< relref "KBhproduct_of_vector_spaces.md" >}})s and [quotient space]({{< relref "KBhquotient_space.md" >}}) duals of each other?: [products and quotients, the intuition]({{< relref "KBhproducts_and_quotients_the_intuition.md" >}})
 
 
 ## Interesting Factoids {#interesting-factoids}
