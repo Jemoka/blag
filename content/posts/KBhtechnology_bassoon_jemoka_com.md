@@ -11,7 +11,7 @@ Technology: Teenage Engineering OP-Z
 
 Serial: X3C-KJFBB
 
-Description: Rectangular Grey Portable Synthesizer
+Description: Gray Portable Synthesizer
 
 
 ## Lost {#lost}
