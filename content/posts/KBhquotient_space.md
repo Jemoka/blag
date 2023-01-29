@@ -60,6 +60,8 @@ Given the name! (jk)
 
 Bleh I give up just prove it yourself given the above operations and the fact that the [additive identity]({{< relref "KBhadditive_identity.md" >}}) is \\(0+U = U\\), the [additive inverse]({{< relref "KBhinverses.md" >}}) is \\(-v+U\\).
 
+"instead of the elements single vectors, we fuse the whole [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}}) together. instead of counting the contents, we count the bucket."
+
 
 ### dimension of a quotient space is the difference between dimensions of its constituents {#dimension-of-a-quotient-space-is-the-difference-between-dimensions-of-its-constituents}
 

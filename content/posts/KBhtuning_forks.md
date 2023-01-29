@@ -95,6 +95,7 @@ We are really worried about two different things here.
 -   do the various tuning fork modes compose
 -   what happened to the harmonics of the fundimental? I know the overotens are 6/14, but where did the harmonics go? do they compose?
 -   what if we did it in a vaccume? of course the tuning fork is not going to be heard, but will it keep vibrating forever?
+-   Nyquist limit (FFT is only accurate to half the sampling rate; 10000 hz sampling (default on logger pro) means max is 5000 Hz)
 
 
 ## things {#things}

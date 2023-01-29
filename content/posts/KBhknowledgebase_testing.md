@@ -93,3 +93,28 @@ We have one equation, four unknowns. However, we are not yet done. We will make 
     We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
 
     We have one equation, four unknowns. However, we are not yet done. We will make one more simplifying assumption---try to get the \\(e^{x}\\) into sinusoidal form. We _know_ this is supposed to oscillate, and it being in sinusoidal makes the process of solving for periodic solutions easier.
+
+
+## error prop for tuning forks {#error-prop-for-tuning-forks}
+
+```sage
+E = var("E")
+h = var("h")
+p = var("p")
+L = var("L")
+s = var("s")
+
+Ee = var("Ee")
+he = var("he")
+pe = var("pe")
+Le = var("Le")
+
+f = (s^2)/(2*pi*L^2)*((E*h^2)/(12*p))^(1/2)
+
+fd = ((f.diff(E)*Ee)^2 + (f.diff(h)*he)^2 + (f.diff(pe)*pe)^2 + (f.diff(Le)*Le)^2)^(1/2)
+fd.subs(E==46203293995, h==0.0065, p==2597, L==0.11604, s==1.8751040687120917, Ee==4620329399, he==5e-5, pe==1, Le==5e-5).n()
+```
+
+```text
+16.6390442077208
+```

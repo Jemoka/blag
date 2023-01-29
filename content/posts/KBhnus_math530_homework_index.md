@@ -13,3 +13,4 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-09-27 Tue&gt;</span></span> | [NUS-MATH530 1.C Problem 23]({{< relref "KBhnus_math530_1_c_proof_preso.md" >}})                    |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-10-29 Sat&gt;</span></span> | [NUS-MATH530 2.C Problem 17]({{< relref "KBhnus_math530_2_c_problem_17.md" >}})                     |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2022-11-16 Wed&gt;</span></span> | [NUS-MATH530 3.B Problem 20]({{< relref "KBhnus_math530_3_b_problem_20.md" >}})                     |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-01-23 Mon&gt;</span></span> | [NUS-MATH530 3.E Problem 1]({{< relref "KBhnus_math530_3_e_problem_1.md" >}})                       |

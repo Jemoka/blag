@@ -64,7 +64,6 @@ Here's something: [products and quotients, the intuition]({{< relref "KBhproduct
 ## Questions for Jana {#questions-for-jana}
 
 -   what's the point of learning about \\(\widetilde{T}\\)?
--   and, for that matter, [Product of Vector Space]({{< relref "KBhproduct_of_vector_spaces.md" >}})s?
 -   how are [Product of Vector Space]({{< relref "KBhproduct_of_vector_spaces.md" >}})s and [quotient space]({{< relref "KBhquotient_space.md" >}}) opposites of each other?: [products and quotients, the intuition]({{< relref "KBhproducts_and_quotients_the_intuition.md" >}})
 
 

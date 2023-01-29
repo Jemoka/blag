@@ -8,6 +8,12 @@ an [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}}) of \\(V\\) is
 
 for \\(v \in V\\) and \\(U \subset V\\), an [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}}) \\(v+U\\) is said to be [parallel]({{< relref "KBhparallel_linear_algebra.md" >}}) to \\(U\\).
 
+that is, an [affine subset]({{< relref "KBhparallel_linear_algebra.md" >}}) for \\(U \subset V\\) and \\(v \in V\\):
+
+\begin{equation}
+v + U = \\{v+u : u \in U\\}
+\end{equation}
+
 
 ## additional information {#additional-information}
 
