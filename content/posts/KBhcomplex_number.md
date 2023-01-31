@@ -162,3 +162,23 @@ Simple enough, [subtraction and division of complex numbers](#subtraction-and-di
 ### [complex number]({{< relref "KBhcomplex_number.md" >}})s form a [field]({{< relref "KBhfield.md" >}}) {#complex-number--kbhcomplex-number-dot-md--s-form-a-field--kbhfield-dot-md}
 
 See [properties of complex arithmetic](#requirements), how we proved that it satisfies a [field]({{< relref "KBhfield.md" >}}).
+
+
+### complex conjugate {#complex-conjugate}
+
+The [complex conjugate](#complex-conjugate) of a [complex number]({{< relref "KBhcomplex_number.md" >}}) is defined as
+
+\begin{equation}
+\bar{z} = \text{Re}\ z - (\text{Im}\ z)i
+\end{equation}
+
+i.e. taking the complex part to be negative. Say, \\(z = 3+2i\\), then \\(\bar{z}=3-2i\\).
+
+
+### absolute value ([complex number]({{< relref "KBhcomplex_number.md" >}})s) {#absolute-value--complex-number-kbhcomplex-number-dot-md--s}
+
+The [absolute value (complex numbers)](#absolute-value--complex-number-kbhcomplex-number-dot-md--s) of a [complex number]({{< relref "KBhcomplex_number.md" >}}) is:
+
+\begin{equation}
+|z| = \sqrt{{(\text{Re}\ z)^{2} + (\text{Im}\ z)^{2}}}
+\end{equation}

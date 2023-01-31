@@ -320,3 +320,30 @@ mean([zero,one])
 ```
 
 Close enough for a night. Thank you ~~sorry~~ about everything.
+
+
+## temperature {#temperature}
+
+```sage
+# mode to index
+nth_mode = 0
+s = characteristic_solutions[nth_mode]
+
+# change to L and h (distances measures) by increases in degrees C
+d(t) = 2.4e-5
+Ed(t) = (-3.9*0.0033)*e^(0.0033*t)
+
+f(E, L, h, p) = (((s^2)/(2*pi*L^2))*((E*h^2)/(12*p))^(1/2))
+
+E,L,h,p = var("E L h p")
+
+t = var("t")
+dt = var("dt")
+
+diff(t, dt, E,L,h,p) = sqrt((f.diff(E)*Ed(t)*dt)^2 + (f.diff(E)*Ed(t)*dt)^2 + (f.diff(L)*d(t)*dt)^2 + (f.diff(h)*d(t)*dt)^2)
+diff(10, 1, 42661456706, 0.09833, 0.00643, 2545.454545).n()
+```
+
+```text
+1.65553122010461
+```

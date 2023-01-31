@@ -68,6 +68,8 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 
 ## 4 {#4}
 
+[Thoughts on Axler 4]({{< relref "KBhthoughts_on_axler_4.md" >}})
+
 
 ## 5 {#5}
 

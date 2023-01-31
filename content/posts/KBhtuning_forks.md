@@ -107,3 +107,13 @@ We are really worried about two different things here.
 
 -   cuw tuning forks' freq is not the predicted freq of its shortest tine. urg how
 -   driven oscellation. how would it actually work?
+
+
+## last minute tuning forks {#last-minute-tuning-forks}
+
+-   easy explanation of FFT "wrapping around circle"
+-   backup slide on octahedral scress
+-   explain beta
+-   how to get wavelength from sinusoidal equation
+-   how does wavelength change with temp; how does our ear compensate?
+-   <https://en.wikipedia.org/wiki/Residual_stress>
