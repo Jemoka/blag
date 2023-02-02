@@ -4,6 +4,13 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## corpuses {#corpuses}
+
+-   **SABSAE**: santa barbara english
+-   **CABNC**: British english
+-
+
+
 ## next {#next}
 
 -   ignore any words that goes wrong in the pipeline

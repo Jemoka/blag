@@ -33,9 +33,9 @@ If you ask a question, though, [be prepared to get yelled at](https://www.reddit
 
 ### macOS {#macos}
 
-[Get a macBook](https://www.apple.com/macbook-air/). Even the cheapest one.
+For the quick-start type of hardware fitting for this guide: [get a macBook](https://www.apple.com/macbook-air/). Even the cheapest one.
 
-Development on Windows is like cooking on campfire. Doable, useful for specific things, but not great overall. If you must use a PC, put [Debian/Ubuntu/some easy to use Linux](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) on it. Windows is just terrible.
+Development on Windows is like cooking on campfire. Doable, useful for specific things, but not great overall. If you have a PC, I would (and recommend! its great for advanced users especially) to put [Debian/Ubuntu/some easy to use Linux](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview) on it. Windows is just terrible.
 
 I should add that Microsoft started doing Windows Subsystem for Linux: <https://docs.microsoft.com/en-us/windows/wsl/install>, which apparently have been pretty good. So worth taking a shot if you are stuck on Windows.
 

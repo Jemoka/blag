@@ -327,23 +327,52 @@ Close enough for a night. Thank you ~~sorry~~ about everything.
 ```sage
 # mode to index
 nth_mode = 0
-s = characteristic_solutions[nth_mode]
+# s = characteristic_solutions[nth_mode]
+s = var("s")
 
 # change to L and h (distances measures) by increases in degrees C
-d(t) = 2.4e-5
-Ed(t) = (-3.9*0.0033)*e^(0.0033*t)
+d(t,x) = (2.4e-5)*x
+rho(t,x) = ((2.4e-5))*x
+a,b = var("a b")
+# a = -3.9
+# b = 0.0033
+Ed(t) = ((a*b)*e^(b*t))*1e9
 
 f(E, L, h, p) = (((s^2)/(2*pi*L^2))*((E*h^2)/(12*p))^(1/2))
 
 E,L,h,p = var("E L h p")
 
-t = var("t")
-dt = var("dt")
+# (a * b * /g)c
 
-diff(t, dt, E,L,h,p) = sqrt((f.diff(E)*Ed(t)*dt)^2 + (f.diff(E)*Ed(t)*dt)^2 + (f.diff(L)*d(t)*dt)^2 + (f.diff(h)*d(t)*dt)^2)
-diff(10, 1, 42661456706, 0.09833, 0.00643, 2545.454545).n()
+t = var("t")
+
+# diff(t, dt, E,L,h,p) = sqrt((f.diff(E)*Ed(t)*dt)^2 + (f.diff(E)*Ed(t)*dt)^2 + (f.diff(L)*d(t)*dt)^2 + (f.diff(h)*d(t)*dt)^2)
+# diff(10, 1, 42661456706, 0.09833, 0.00643, 2545.454545).n()
+
+subdict = {
+a: -3.9, b:0.0033, L:0.09833, h:0.00643, p:2545.454545, E:42661456706, s:characteristic_solutions[nth_mode], t:50
+}
+
+(f.diff(E)*Ed(t)).subs(subdict).full_simplify().n()
+(f.diff(L)*d(t,L)).subs(subdict).full_simplify().n()
+(f.diff(h)*d(t,h)).subs(subdict).full_simplify().n()
+(f.diff(p)*rho(t,p)).subs(subdict).full_simplify().n()
 ```
 
 ```text
-1.65553122010461
+-0.0782394489394635
+-0.0211103561467420
+0.0105551780733710
+-0.00527758903668550
+```
+
+```sage
+expansion = var("x")
+l,w,h,m = var("l w h m")
+density(l,w,h) = (l*w*h)/m
+density.diff(l)*expansion + density.diff(w)*expansion + density.diff(h)*expansion
+```
+
+```text
+(l, w, h) |--> h*l*x/m + h*w*x/m + l*w*x/m
 ```
