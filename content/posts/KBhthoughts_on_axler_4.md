@@ -20,7 +20,7 @@ So we are not going to go through everything very very carefully. Instead, I'm j
 
 ### polynomial coefficients {#polynomial-coefficients}
 
--   **polynomial coefficients are unique**; namely, if a polynomial is the zero function, all of its coefficients have to be 0
+-   **polynomial coefficients are unique**; namely, if a polynomial is the zero function, all of its coefficients have to be \\(0\\)
 
 
 ### division, zero, and factoring {#division-zero-and-factoring}
