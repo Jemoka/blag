@@ -42,7 +42,7 @@ draft = false
 ## Product Spaces Quiz {#product-spaces-quiz}
 
 -   Need more specific description: explain why we use product and quotient to describe product and quotient spaces?
--   Prove that \\(\mathcal{L}(V\_1 \times V\_2 \times \dots \times V\_{m}, W)\\) and \\(\mathcal{L}(V\_1, W) \times  \dots \times \mathcal{L}(V\_{m}, W)\\) are [isomorphic]({{< relref "KBhisomorphism.md" >}}). Error: didn't do it
+-   Prove that \\(\mathcal{L}(V\_1 \times V\_2 \times \dots \times V\_{m}, W)\\) and \\(\mathcal{L}(V\_1, W) \times  \dots \times \mathcal{L}(V\_{m}, W)\\) are [isomorphic]({{< relref "KBhisomorphism.md" >}}). Error: didn't do it correctly for infinite dimensional
 
 
 ## Quotient Spaces Quiz {#quotient-spaces-quiz}
