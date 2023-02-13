@@ -15,7 +15,7 @@ So we are not going to go through everything very very carefully. Instead, I'm j
 -   fundamental theorem of algebra: "if you have an nth-degree polynomial, you can factor it into n factors" (over the complex numbers, you have as many roots as the degree of the polynomials)
     -   these coefficients are unique barring ordering
     -   factoring real polynomials can be treated in two pieces: one piece, the reals, which can be treated usually; then one other piece, the complexes, can be multiplied pairwise together (as over real coeffs they always come in conjugate pairs) into quadratics. This is why all real polynormials can always be factored as \\((x-\lambda)(x-\lambda) \dots (x^{2}+ax+b) (x^{2}+ax+b)\dots\\)
-    -   the number of complex rules has to be even
+    -   the number of complex polynomials has to be even
 
 
 ## key sequence {#key-sequence}
