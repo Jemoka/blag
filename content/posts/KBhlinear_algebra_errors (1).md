@@ -41,8 +41,9 @@ draft = false
 
 ## Product Spaces Quiz {#product-spaces-quiz}
 
--   Need more specific description: explain why we use product and quotient to describe product and quotient spaces?
--   Prove that \\(\mathcal{L}(V\_1 \times V\_2 \times \dots \times V\_{m}, W)\\) and \\(\mathcal{L}(V\_1, W) \times  \dots \times \mathcal{L}(V\_{m}, W)\\) are [isomorphic]({{< relref "KBhisomorphism.md" >}}). Error: didn't do it
+-   Prove that \\(\mathcal{L}(V\_1 \times V\_2 \times \dots \times V\_{m}, W)\\) and \\(\mathcal{L}(V\_1, W) \times  \dots \times \mathcal{L}(V\_{m}, W)\\) are [isomorphic]({{< relref "KBhisomorphism.md" >}})
+
+    error: didn't do it
 
 
 ## Quotient Spaces Quiz {#quotient-spaces-quiz}
@@ -50,4 +51,4 @@ draft = false
 {{< figure src="/ox-hugo/2023-02-09_10-24-09_screenshot.png" >}}
 
 -   Couldn't prove that the list in linearly independent: the linear combinations is some \\(c\_1v\_1 + \dots c\_{m}v\_{m} + U\\); as \\(v\_1 \dots v\_{m}\\) is a basis of \\(V / U\\), \\(c\_1 \dots c\_{m} = 0\\), now the second part is also a basis so they are \\(0\\) too.
-    -   The spanning proof: \\(v + U =\\) , rewrite as basis, etc.
+-   The spanning proof: \\(v + U =\\) , rewrite as basis, etc.
