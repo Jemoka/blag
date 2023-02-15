@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+Require: analyze movie + quote [story + bellows]
+
+
 ## Childhood Flashback {#childhood-flashback}
 
 -   "memory is a strange thing"
@@ -89,4 +92,43 @@ draft = false
 
 ## Dialogue Between the two {#dialogue-between-the-two}
 
--   "Sapire-Wolf Hypothesis": being used incorrectly; hallucinating
+-   "Sapire-Wolf Hypothesis": being used incorrectly; hallucinating Louis'
+    -   China mobilizing forces
+    -   Majiong is a form of mobiling forces
+
+
+## Final Message Group {#final-message-group}
+
+-   "offer" vs "use" --- the **US** understands it as "offer" and **China** understands it as "use"
+    -   contextual intepretation varies how the use of linguistics
+    -   language as something contextually dependent
+-   large amounts of communication can be packed very densely
+
+
+## Non-Zero Sum Game {#non-zero-sum-game}
+
+-   the ask to work together need to be interpreted differently
+-   different parts of time fold together to become hole: "non zero sum game"
+-   The alien speech is being subtitled!
+
+
+## Final communication {#final-communication}
+
+-   Result becomes "objective": i.e. there is a direct understanding of the aliens, suddenly
+-   Also, palendromic names: "Hannah" for daughter, not translatable
+-   Seeing into the future
+
+
+## Seeing into Time {#seeing-into-time}
+
+-   Being able to understand heptopod + time properly means that they are able to understand time
+-   Gave private number in the future allow you to see the past: General Shang can see into the future
+-   Why is the banquet colored yellow
+
+
+## Finale {#finale}
+
+-   Repeat of the opener scene: pan down as a trope that cycles from the beginning
+-   Ian is in Louise's house!
+-   The house+baby scenes (which is different from baby nature scenes) is lit orange in the same way as the banquet scene
+    -   whereas the hospital scene and the house scene were lit blue

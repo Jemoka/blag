@@ -1,5 +1,5 @@
 +++
-title = "eigenvalue"
+title = "1-d invariant subspace"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -13,6 +13,10 @@ Tv = \lambda v
 Note we require \\(v \neq 0\\) because otherwise all scalars count.
 
 [eigenvector]({{< relref "KBheigenvalue.md" >}}) is a [vector]({{< relref "KBhvector.md" >}}) that forms the [basis]({{< relref "KBhbasis.md" >}}) list of length 1 of that 1-D [invariant subspace]({{< relref "KBhinvariant_subspace.md" >}}) under \\(T\\).
+
+"[operator]({{< relref "KBhoperator.md" >}})s own [eigenvalue]({{< relref "KBheigenvalue.md" >}})s, [eigenvalue]({{< relref "KBheigenvalue.md" >}})s own [eigenvector]({{< relref "KBheigenvalue.md" >}})s"
+
+Why is [eigenvalue]({{< relref "KBheigenvalue.md" >}}) consistent per [eigenvector]({{< relref "KBheigenvalue.md" >}})? Because a linear map has to act on the same way to something's basis as it does to the whole space.
 
 
 ## Motivation {#motivation}
