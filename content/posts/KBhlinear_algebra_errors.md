@@ -51,3 +51,6 @@ draft = false
 
 -   Couldn't prove that the list in linearly independent: the linear combinations is some \\(c\_1v\_1 + \dots c\_{m}v\_{m} + U\\); as \\(v\_1 \dots v\_{m}\\) is a basis of \\(V / U\\), \\(c\_1 \dots c\_{m} = 0\\), now the second part is also a basis so they are \\(0\\) too.
     -   The spanning proof: \\(v + U =\\) , rewrite as basis, etc.
+-   she graded wrong: what's the importance of \\(\widetilde{T}\\)?
+-   Give two statements equivalent to \\(v+U = w+U\\), prove equivalence betewen this statement and the others
+    -   didn't prove both directions!
