@@ -151,6 +151,15 @@ And yet, substituting this back into the expression for \\(v\_{j}\\), we have \\
 As a corollary of the above result, suppose \\(V\\) is finite dimensional; then, each [operator]({{< relref "KBhoperator.md" >}}) on \\(V\\) has at most \\(dim\ V\\) distinct [eigenvalue]({{< relref "KBheigenvalue.md" >}})s because their [eigenvector]({{< relref "KBheigenvalue.md" >}})s form an [linearly independent]({{< relref "KBhlinear_independence.md" >}}) list and [length of linearly-independent list \\(\leq\\) length of spanning list]({{< relref "KBhlinear_independence.md#length-of-linearly-independent-list-leq-length-of-spanning-list" >}}).
 
 
+#### eigenspaces are disjoint {#eigenspaces-are-disjoint}
+
+the [eigenspace]({{< relref "KBheigenspace.md" >}})s of a [Linear Map]({{< relref "KBhlinear_map.md" >}}) form a [direct sum]({{< relref "KBhdirect_sum.md" >}}):
+
+proof:
+
+Corollary of result above. Because [eigenvector]({{< relref "KBheigenvalue.md" >}})s (i.e. bases) from distinct [eigenspace]({{< relref "KBheigenspace.md" >}})s are [linearly independent]({{< relref "KBhlinear_independence.md" >}}). So the only way to write \\(0\\) is by taking each to \\(0\\). So by taking the bases all to \\(0\\), you take the \\(0\\) vector from each space, which shows that the [eigenspace]({{< relref "KBheigenspace.md" >}})s are a [direct sum]({{< relref "KBhdirect_sum.md" >}}). \\(\blacksquare\\)
+
+
 ### finding eigenvalues with actual numbers {#finding-eigenvalues-with-actual-numbers}
 
 \begin{equation}

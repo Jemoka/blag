@@ -4,6 +4,12 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## stuff {#stuff}
+
+-   make Spanish names list
+-   name, city, countries
+
+
 ## corpuses {#corpuses}
 
 -   **SABSAE**: santa barbara english

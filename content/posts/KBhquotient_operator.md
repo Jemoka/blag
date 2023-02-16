@@ -12,6 +12,8 @@ Suppose \\(T \in \mathcal{L}(V)\\), and \\(U \subset V\\), an [invariant subspac
 
 where \\(T / U \in \mathcal{L}(V / U)\\)
 
+"if you can [operator]({{< relref "KBhoperator.md" >}}) on \\(V\\), you can [operator]({{< relref "KBhoperator.md" >}}) on \\(V / U\\) in the same way." Yes I just verbed [operator]({{< relref "KBhoperator.md" >}}).
+
 
 ## [quotient operator]({{< relref "KBhquotient_operator.md" >}}) is well-defined {#quotient-operator--kbhquotient-operator-dot-md--is-well-defined}
 

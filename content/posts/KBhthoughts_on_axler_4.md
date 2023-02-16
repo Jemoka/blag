@@ -18,7 +18,7 @@ So we are not going to go through everything very very carefully. Instead, I'm j
     -   the number of complex polynomials has to be even
 
 -   complex polynomials have \\(deg\ p\\) factors
--   real polynomials have \\(deg\ p\\) real/complex factors
+-   real polynomials have \\(deg\ p\\) real/complex factors, but complex factors come in pairs
 -   we can squish the complex part of the real polynomials together, and get---wlog $m$---first-degree real roots and \\(\frac{deg\ p - m}{2}\\) second-degree real roots where \\(b^{2} < 4c\\)
 -   \\(x^{2} + bx + c\\) has a factor of \\((x-\lambda\_{1})(x-\lambda\_{2})\\) under reals \\(b^{2} \geq 4c\\)
 

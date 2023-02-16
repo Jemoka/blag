@@ -21,7 +21,7 @@ Sometimes, if we can break the domain of a linear map down to its eigenvalues, w
 
 -   [invariant subspace]({{< relref "KBhinvariant_subspace.md" >}})
     -   conditions for [nontrivial invariant subspace]({{< relref "KBhinvariant_subspace.md#nontrivial-id-731fad15-1ec3-4619-8532-1290fefd3b89-invariant-subspace" >}})
--   [eigenvalue]({{< relref "KBheigenvalue.md" >}})s + [eigenvector]({{< relref "KBheigenvalue.md" >}})s
+-   [eigenvalue]({{< relref "KBheigenvalue.md" >}})s + [eigenvector]({{< relref "KBheigenvalue.md" >}})s + [eigenspace]({{< relref "KBheigenspace.md" >}})
 -   two new operators: [map restriction operator]({{< relref "KBhmap_restriction_operator.md" >}}) and [quotient operator]({{< relref "KBhquotient_operator.md" >}})
 
 
@@ -29,7 +29,8 @@ Sometimes, if we can break the domain of a linear map down to its eigenvalues, w
 
 -   [properties of eigenvalues]({{< relref "KBheigenvalue.md#properties-of-id-7d742b39-4a4a-4a9d-a55b-07e2030dfdeb-eigenvalue-s" >}})
 -   [list of eigenvectors are linearly independent]({{< relref "KBheigenvalue.md#list-of-eigenvectors-are-id-45384b28-f1e3-4fb1-aeb2-21c875834744-linearly-independent" >}})
--   [operators on finite dimensional V has at most dim V eigenvalues]({{< relref "KBheigenvalue.md#operators-on-finite-dimensional-v-has-at-most-dim-v-id-7d742b39-4a4a-4a9d-a55b-07e2030dfdeb-eigenvalue-s" >}})
+    -   [eigenspaces are disjoint]({{< relref "KBheigenvalue.md#eigenspaces-are-disjoint" >}})
+    -   [operators on finite dimensional V has at most dim V eigenvalues]({{< relref "KBheigenvalue.md#operators-on-finite-dimensional-v-has-at-most-dim-v-id-7d742b39-4a4a-4a9d-a55b-07e2030dfdeb-eigenvalue-s" >}})
 -   [quotient operator is well-defined]({{< relref "KBhquotient_operator.md#id-84dca125-e64f-48d7-b71e-858ad5c3db6c-quotient-operator-is-well-defined" >}})
 
 
