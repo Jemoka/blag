@@ -7,6 +7,35 @@ draft = false
 Require: analyze movie + quote [story + bellows]
 
 
+## Stuff from Chaing {#stuff-from-chaing}
+
+-   "you will be twenty-five then"
+-   "Over time, the sentences I wrote grew shapelier, more cohesive. I had reached the point where it worked better when I didn't think about it too much. Instead of carefully trying to design a sentence before writing, I could simply begin putting down strokes immediately; my initial strokes almost always turned out to be compatible with an elegant rendition of what I was trying to say. I was developing a faculty like that of the heptapods."
+-   "I could understand that: the physical attributes that humans found intuitive, like kinetic energy or acceleration, were all properties of an objectat a given moment in time."
+-   "And these were conducive to a teleological interpretation of events: by viewing events over a period of time, one recognized that there was a requirement that had to be satisfied, a goal of minimizing or maximizing. And one had to know the initial and final states to meet that goal; one needed knowledge of the effects before the causes could be initiated. I was growing to understand that, too."
+-   "Gary once told me that the fundamental laws of physics were time-symmetric, that there was no physical difference between past and future."
+-   "Explain it by saying that light minimized the time needed to travel to its destination, and one saw the world as the heptapods saw it."
+
+
+## Stuff from Bellows {#stuff-from-bellows}
+
+-   "A reader who says that poetry is what has been lost in translation is also claiming to be simultaneously in full possession of the original (which is poetry) and of the translation (which is not). Otherwise there would be no knowing if anything has been lost, let alone knowing that it was poetry."
+-   "Because if the inhabitants of the distant planet did have a language, and if the space crew had learned it, then it must be possible for them to say what the aliens had said. Must, not should: radically untranslatable sounds do not make a language simply because we could not know it was a language unless we could translate it, even if only roughly"
+-   "The tonal and rhythmic patterns of whale song are of such complexity as to make it quite impossible to believe that what we can hear (and pick up on instruments more sensitive than human ears) is just random noise."
+-   nobody knows how to translate “animal signals” into human speech or vice versa. When and if we ever can translate nonhuman noises into human speech, species-related ineffabilities will evaporate like the morning haze.
+-   Translation is the enemy of the ineffable. One causes the other to cease to exist.
+
+
+## Movie Script {#movie-script}
+
+-   LOUISE "We are so bound by time; by its order."
+-   DR. KETTLER "Not everyone is wired for what you're about to do. Our brains aren't always able to process experiences like this."
+-   RUSSIAN SCIENTIST: "Their final words translate to, "There is no time, many become one." I fear we have all been given weapons because we answered the timeline wrong, please, if you - -"
+-
+
+---
+
+
 ## Childhood Flashback {#childhood-flashback}
 
 -   "memory is a strange thing"
@@ -132,3 +161,5 @@ Require: analyze movie + quote [story + bellows]
 -   Ian is in Louise's house!
 -   The house+baby scenes (which is different from baby nature scenes) is lit orange in the same way as the banquet scene
     -   whereas the hospital scene and the house scene were lit blue
+
+---
