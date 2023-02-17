@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       C413BA69-50E4-4F0F-A76B-5320ECFC21E0
+:END:
+#+title: Nueva Kindness: 1fmicsa
+#+author: Houjun Liu
+
+#+hugo_custom_front_matter: :layout blank
+
+
