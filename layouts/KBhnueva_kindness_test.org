@@ -4,3 +4,6 @@
 #+title: Nueva Kindness: test
 #+author: Houjun Liu
 
+#+hugo_custom_front_matter: :layout blank
+
+Test
