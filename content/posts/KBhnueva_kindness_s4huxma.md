@@ -2,6 +2,7 @@
 title = "Nueva Kindness: s4huxma"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 {{< figure src="/ox-hugo/2023-02-16_22-52-25_screenshot.png" >}}

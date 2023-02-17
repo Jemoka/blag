@@ -2,6 +2,7 @@
 title = "Nueva Kindness: s4zbus5"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 <https://github.com/Shabang-Systems/Condution>

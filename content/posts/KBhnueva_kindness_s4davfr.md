@@ -2,6 +2,7 @@
 title = "Nueva Kindness: s4davfr"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 <https://discord.com/channels/@me/737841367098720358/1025266460500693065>
