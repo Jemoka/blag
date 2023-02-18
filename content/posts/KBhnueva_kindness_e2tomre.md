@@ -1,5 +1,5 @@
 +++
-title = "Nueva Kindness: e2tomre"
+title = "e2tomre"
 author = ["Houjun Liu"]
 draft = false
 layout = "blank"
