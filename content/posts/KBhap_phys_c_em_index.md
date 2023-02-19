@@ -11,6 +11,7 @@ draft = false
 ### Other Factoids {#other-factoids}
 
 -   [charged]({{< relref "KBhcharged.md" >}})
+-   [flux]({{< relref "KBhflux.md" >}})
 
 
 ### Chapters {#chapters}
@@ -18,3 +19,4 @@ draft = false
 -   [coulomb's law]({{< relref "KBhcoulomb_s_law.md" >}})
 -   [superposition]({{< relref "KBhcoulomb_s_law.md#superposition" >}})
 -   [electric field]({{< relref "KBhelectric_field.md" >}})
+-   [Gauss' Law]({{< relref "KBhgauss_law.md" >}})
