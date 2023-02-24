@@ -494,3 +494,35 @@ torch.Size([1, 6663800])
 ```
 
 Nice and flat, just the way we expect for a **dense-neural-network**.
+
+---
+
+Aside: **woah! that's awfully large!**
+
+The natural next layer to this would be something like
+
+```python
+nn.Dense(6663800, 256)
+```
+
+which would result in us using a matrix to project this **GIGANTIC!** processed input into a comparatively _tiny_ output dimension. The whole point, as we discussed, of CNNs is to prevent the need to flatten an image right up front into giant, hard-to-process input vectors. How is this output serving that need?
+
+We will discuss strategies of projecting large samples downwards very shortly, but even if we didn't, this large input vector is not at all the same thing as just flattening the raw input vector: it has been processed with many filters and a pooling layer already, which means that the information contained in it is probably much more readily accessible for a neural network.
+
+---
+
+
+## A Typical CNN {#a-typical-cnn}
+
+It is always very hard to name what exact architecture will work for a problem. However, these guidelines can help you architect a good CNN:
+
+1.  Start with convolutional layers that has a _tiny_ **kernel**, but projects the input into a _large_ amount of channels (i.e. hyper-dimensional **filters**); good candidates looks like \\(32\\) output channels, but with kernels of \\(2\times 2\\). Think of these as the "edge detection", "face detection", etc. layers as Grant outlined in his video we saw at the beginning of the class.
+2.  **Gradually** _decrease_ the number of output channels (**filters**), but _increase_ your **kernel** size; good candidates look like \\(2\\) output channels, but with kernels of \\(32 \times 32\\). Think of these as the "structural" layers that detect large structures like "loops" or "shadows", etc.
+3.  Put a pooling layer (which algorithm is to taste of the problem) between 3-5 convolutional layers
+
+If you want to end up with a smaller sample, try taking larger **strides**. Always try to keep your **kernel size** larger then your **stride size**, or you will end up missing values in the data (thinking break: why?)
+
+
+## Challenge + First Project {#challenge-plus-first-project}
+
+Now that you have learned three new layers, its time to see them in action. Build a neural network to [classify tiny images](https://drive.google.com/drive/folders/1U7RUybsCGpZCTYejnGGzSB_6HnQetmlj?usp=sharing)! Use at least one **convolutional** layer, and one **pooling** layer. No need to do a full write-up, just the model is fine.
