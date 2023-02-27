@@ -526,3 +526,5 @@ If you want to end up with a smaller sample, try taking larger **strides**. Alwa
 ## Challenge + First Project {#challenge-plus-first-project}
 
 Now that you have learned three new layers, its time to see them in action. Build a neural network to [classify tiny images](https://drive.google.com/drive/folders/1U7RUybsCGpZCTYejnGGzSB_6HnQetmlj?usp=sharing)! Use at least one **convolutional** layer, one **pooling** layer, and the typical architecture of the network that we discussed last time. No need to do a full write-up, just the model, explanation and the associated colab is fine.
+
+Data: <https://drive.google.com/drive/folders/1U7RUybsCGpZCTYejnGGzSB_6HnQetmlj>
