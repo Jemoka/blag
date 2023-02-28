@@ -730,7 +730,13 @@ The union between \(\{0\} \cup \{p \in \mathcal{P}(\mathbb{F}): deg\ p = m\}\) i
 The union between \(\{0\} \cup \{p \in \mathcal{P}(\mathbb{F}): deg\ p\ even\}\) is not closed also under addition, for the same reason:</description></item><item><title>NUS-MATH530 5.A Problem 14</title><link>https://www.jemoka.com/posts/kbhnus_math530_5_a_problem_14/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_5_a_problem_14/</guid><description>Suppose \(V = U \oplus W\), where \(U\) and \(W\) are nonzero subspaces of \(V\). Define \(P \in \mathcal{L}(V)\) by \(P(u+w) = u\) for \(u \in U\), \(w \in W\). Find all eigenvalues and eigenvectors of \(P\).
 Solutions:
 \(\lambda = 1\), \(v = u \in U\) \(\lambda = 0\), \(v = w \in W\) For \(\lambda\) to be an eigenvalue of \(P\), we have to have:
-\begin{equation} Pv = \lambda v \end{equation}</description></item><item><title>NUS-MATH530 Geometric Intepretations</title><link>https://www.jemoka.com/posts/kbhnus_math530_geometric_intepretations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_geometric_intepretations/</guid><description>Dot product Calculations Let&amp;rsquo;s calculate some dot products!
+\begin{equation} Pv = \lambda v \end{equation}</description></item><item><title>NUS-MATH530 5.A Problem 35/36</title><link>https://www.jemoka.com/posts/kbhnus_math530_5_a_problem_35_36/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_5_a_problem_35_36/</guid><description>Warmup: 35
+Suppose \(V\) is finite dimensional, \(T \in \mathcal{L}(V)\) and \(U\) is invariant under \(T\). Prove each eigenvalue of \(T / U\) is an eigenvalue of \(T\).
+Now, \(\lambda\) is an eigenvalue of \(T / U\). That is:
+\begin{equation} Tv + U = \lambda v + U \end{equation}
+Meaning:
+\begin{equation} (T-\lambda I) v \in U, \forall v \in V \end{equation}
+Suppose for the sake of contradiction \(\lambda\) is not an eigenvalue of \(T\).</description></item><item><title>NUS-MATH530 Geometric Intepretations</title><link>https://www.jemoka.com/posts/kbhnus_math530_geometric_intepretations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_geometric_intepretations/</guid><description>Dot product Calculations Let&amp;rsquo;s calculate some dot products!
 \begin{equation} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \cdot \begin{pmatrix} 0 \\ 1 \end{pmatrix} = 0 \end{equation}
 \begin{equation} \begin{pmatrix} 1 \\2 \end{pmatrix} \cdot \begin{pmatrix} 2 \\1 \end{pmatrix} = 4 \end{equation}
 \begin{equation} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \cdot \begin{pmatrix} -1 \\1 \end{pmatrix} = 0 \end{equation}
