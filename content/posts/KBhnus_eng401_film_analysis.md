@@ -13,7 +13,7 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 
 -   Light on Iago's face when he is scheming
 -   Extreme closeup on Othello and Iago is close together
--   drums + violin to build tension; happy violin to show happiness
+-   Drums + violin to build tension; happy violin to show happiness
 -   Iago: "I know what you are talking about, I've been there"
     -   BOTH interrogation
     -   and the scene with Cass
@@ -45,7 +45,7 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
     -   Extreme close ups
     -   When Othello was about to kill Iago, lots of light on hisface
 
--   Death scene, repeat from the beginning, replaying the intro
+-   Death scene, repeat from the beginning, replaying the intro, but with DIFFERENT MUSIC
 -   So desdemona looks the same as in life or death
 
 -   Also Emilia didn't die??
