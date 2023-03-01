@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+Based only on the framing analysis of Sax's Othello, I want to write a piece analyzing collectively grip (lighting) and gaffing (framing) of the films, specifically with a contrast as much as possible to the original text's discussion of framing in, for instance, stage directions. In Sax's Othello, Iago's musings are always framed medium-close from below, with lighting coming from above: the framing helps show a sense of "ascension" (perhaps not unintentionally biblical, like an ascension to heaven), showing how Iago's schemes are helping him rise through the ranks: a sign of his desire for power. I want to continue to analyses these types of connection between the grip and gaffing throughout the films to help reveal the differing power welded by the various screenwriters' differing analysis on Shakespeare's characters.
+
+
 ## Geoffrey Sax's Othello {#geoffrey-sax-s-othello}
 
 <span class="underline">****Geoffrey Sax's Othello****</span> Symbols
@@ -16,20 +19,36 @@ draft = false
     -   and the scene with Cass
 -   Iago: "And that's a promise
 -   The Iago/Othello closeups are very close
+-   Othello gave the impetus that he is afraid of marriage falling apart explicitly, and Iago explicitly planted into Cassio that their marrage is failing
+    -   **Cassio in this version is much more active, it is not entirely a misunderstanding**
+-   "TLC": shot from above---kind of pressure overpushing
+-   **Dessie** _bought_ the gown
+-   moment whenever light comes across Iago's face
 
--   Who's billi coats (the man that's dead)
-
-****repeating violin theme in happiness****!!!!
+-   ****repeating violin theme in happiness****!!!!
+-   ****repeating vocal theme in sadness****!!!!
 
 -   "It's a shame really, really. He's a broken man."
     -   Who is Iago talking to?
 -   Is Othello really rushed to his head?
 -   "I want an example made": kind of a way of cracking
 -   Advanced interrogation methods: methods of guaranteeing trust
--   "I know what you are talking about, I've been there"
-    -   BOTH interrogation
+-   **"I know what you are talking about, I've been there"**
+    -   interrogation
     -   and the scene with Cass
--   "Scares me"
+    -   and towards Othehllo
+-   I don't think I can handle it
+    -   before otherllo's "death" (unraveling)
+    -   before the constable's actual death
+
+-   Othello realization
+    -   Extreme close ups
+    -   When Othello was about to kill Iago, lots of light on hisface
+
+-   Death scene, repeat from the beginning, replaying the intro
+-   So desdemona looks the same as in life or death
+
+-   Also Emilia didn't die??
 
 With remember
 
@@ -39,6 +58,8 @@ With remember
 
 -   Rainy, "hello"
 -   The hankerchief is "Dessie's early days"
+
+-   What does the swimming symbolize?
 
 
 ### Opening {#opening}
@@ -95,4 +116,13 @@ With remember
 -   Cassio's character is very indirect: uncomportable angles
 
 
-##  {#d41d8c}
+### Shell Marriage {#shell-marriage}
+
+-   "Shell marriage": Iago priming Cassio
+-   "Happy ending": interview suspending as a way of pretense... of sexual hints?
+
+
+### Robe {#robe}
+
+-   Robe is the hankerchief
+-   a
