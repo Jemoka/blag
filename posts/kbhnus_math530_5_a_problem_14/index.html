@@ -10,11 +10,11 @@ Solutions:
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>NUS-MATH530 5.A Problem 14</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#w-0>\(w=0\)</a></li><li><a href=#u-0>\(u=0\)</a></li></ul></nav></aside><main><article><div><p>Suppose \(V = U \oplus W\), where \(U\) and \(W\) are nonzero subspaces of \(V\). Define \(P \in \mathcal{L}(V)\) by \(P(u+w) = u\) for \(u \in U\), \(w \in W\). Find all eigenvalues and eigenvectors of \(P\).</p><p>Solutions:</p><ul><li>\(\lambda = 1\), \(v = u \in U\)</li><li>\(\lambda = 0\), \(v = w \in W\)</li></ul><hr><p>For \(\lambda\) to be an eigenvalue of \(P\), we have to have:</p><p>\begin{equation}
 Pv = \lambda v
 \end{equation}</p><p>Meaning, for WLOG \(v = u+w\):</p><p>\begin{align}
-&Pv = \lambda v \\
+&amp;Pv = \lambda v \\
 \Rightarrow\ & P(u+w) = \lambda (u+w) \\
 \Rightarrow\ & u = \lambda u + \lambda w
 \end{align}</p><p>Now, let&rsquo;s rewrite this expression to equal to \(0\) to take advantage of the fact that \(V = U \oplus W\).</p><p>\begin{align}
-&u = \lambda u + \lambda w \\
+&amp;u = \lambda u + \lambda w \\
 \Rightarrow\ & 0 = (\lambda -1) u + \lambda w
 \end{align}</p><p>Now, recall that a sum of subsets in a direct sum if and only if the only way to write \(0\) is for each of the elements of the sums to be \(0\). In this case, it means that:</p><p>\begin{equation}
 \begin{cases}
@@ -22,7 +22,7 @@ Pv = \lambda v
 \lambda w = 0
 \end{cases}
 \end{equation}</p><p>We have two cases here: either \(w=0\) or \(u=0\).</p><hr><p>Aside: why can&rsquo;t \(u = w = 0\)? Suppose for the sake of contradiction let&rsquo;s take \(u=0, w=0\). Then, \(Pv = \lambda v\), so \(v=u+w\), and so \(v=0\). This would make \(v\) no longer an eigenvector, by definition of eigenvector; this also makes \(\lambda\) no longer an eigenvalue. Hence, one of \(u\) or \(w\) is not \(0\).</p><hr><h2 id=w-0>\(w=0\)</h2><p>We have that \(w=0\). Replacing that in the above expression, we have that:</p><p>\begin{align}
-&Pv = \lambda v \\
+&amp;Pv = \lambda v \\
 \Rightarrow\ & P(u+w) = \lambda u + \lambda w \\
 \Rightarrow\ & u = \lambda u + 0 \\
 \Rightarrow\ & u = \lambda u
@@ -30,11 +30,11 @@ Pv = \lambda v
 Pv &= \lambda v \\
 &= v
 \end{align}</p><p>Any valid solution for \(v\) is an eigenvector.</p><p>So:</p><p>\begin{align}
-&Pv = v \\
+&amp;Pv = v \\
 \Rightarrow\ & P(u+w) = v \\
 \Rightarrow\ & u = v
 \end{align}</p><p>Hence, all \(u \in U\) is an eigenvector of \(P\) with eigenvalue \(1\).</p><h2 id=u-0>\(u=0\)</h2><p>We now have that \(u=0\). So, we have that:</p><p>\begin{align}
-&Pv = \lambda v \\
+&amp;Pv = \lambda v \\
 \Rightarrow\ & P(u+w) = \lambda u + \lambda w \\
 \Rightarrow\ & u = \lambda u + \lambda w \\
 \Rightarrow\ & 0 = \lambda w
@@ -42,7 +42,7 @@ Pv &= \lambda v \\
 Pv &= \lambda v \\
 &= 0
 \end{align}</p><p>Any valid solution for \(v\) is an eigenvector.</p><p>So:</p><p>\begin{align}
-&Pv = 0 \\
+&amp;Pv = 0 \\
 \Rightarrow\ & P(u+w) = 0 \\
 \Rightarrow\ & u = 0
 \end{align}</p><p>Recall now that \(v = u+w\), so \(v = 0 +w\), making \(v = w\).</p><p>Hence, all \(w \in W\) is an eigenvector of \(P\) with eigenvalue \(0\).</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>

@@ -20,7 +20,7 @@ A^{n} = \mqty(v_1& \dots& v_{m})\mqty(\dmat{{\lambda_{1}}^{n}, \dots, {\lambda_{
 e^{tA} = \sum_{k=0}^{\infty} \frac{1}{k!}(tA)^{k} = \sum_{k=0}^{\infty} \frac{t^{k}}{k!}A^{k}
 \end{equation}</p><p>Ok. We now apply our definition of \(A^{n}\) derived above:</p><p>\begin{equation}
 e^{tA} = \sum_{k=0}^{\infty} \frac{t^{k}}{k!}\mqty(v_1& \dots& v_{m})\mqty(\dmat{{\lambda_{1}}^{k}, \dots, {\lambda_{m}}^{k}})\mqty(v_1& \dots& v_{m})^{-1}
-\end{equation}</p><p>See now that \(\mqty(v_1 & \dots &v_{m})\) and its inverse is both constant in the sum, so we take it out:</p><p>\begin{equation}
+\end{equation}</p><p>See now that \(\mqty(v_1 & \dots &amp;v_{m})\) and its inverse is both constant in the sum, so we take it out:</p><p>\begin{equation}
 e^{tA} = \mqty(v_1& \dots& v_{m})\qty(\sum_{k=0}^{\infty}\frac{t^{k}}{k!} \mqty(\dmat{{\lambda_{1}}^{k}, \dots, {\lambda_{m}}^{k}}))\mqty(v_1& \dots& v_{m})^{-1}
 \end{equation}</p><p>And now, the actual mechanics of adding a <a href=/posts/kbhmatricies/>matrix</a> is just adding it elementwise, so we will put the summations into the matrix:</p><p>\begin{equation}
 e^{tA} = \mqty(v_1& \dots& v_{m})\mqty(\dmat{\sum_{k=0}^{\infty}\frac{t^{k}}{k!} {\lambda_{1}}^{k}, \dots, \sum_{k=0}^{\infty}\frac{t^{k}}{k!} {\lambda_{m}}^{k}})\mqty(v_1& \dots& v_{m})^{-1}
