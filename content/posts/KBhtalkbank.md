@@ -4,6 +4,27 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## featurize {#featurize}
+
+-   saturnino
+-   fausa
+
+
+### Questions {#questions}
+
+-   What features?
+-   Where to put them?
+-   TalkBankDB
+-   How to encode the features?
+
+
+### "How informative are your features" {#how-informative-are-your-features}
+
+-   Start coming up with features (TRESTLE, perhaps)
+-   Encode them into xarray
+-   &lt;&gt; saturnino
+
+
 ## stuff {#stuff}
 
 -   make Spanish names list
