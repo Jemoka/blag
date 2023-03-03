@@ -7,6 +7,47 @@ draft = false
 Based only on the framing analysis of Sax's Othello, I want to write a piece analyzing collectively grip (lighting) and gaffing (framing) of the films, specifically with a contrast as much as possible to the original text's discussion of framing in, for instance, stage directions. In Sax's Othello, Iago's musings are always framed medium-close from below, with lighting coming from above: the framing helps show a sense of "ascension" (perhaps not unintentionally biblical, like an ascension to heaven), showing how Iago's schemes are helping him rise through the ranks: a sign of his desire for power. I want to continue to analyses these types of connection between the grip and gaffing throughout the films to help reveal the differing power welded by the various screenwriters' differing analysis on Shakespeare's characters.
 
 
+## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
+
+Timing: 1962, after the war.
+
+Rex + Delia: Othello and Desdemona
+
+Iago want to break off from Othello's band, but his financeeer will only finance him if Desdemona will join Iago's new band instead of staying with Othello's band.
+
+Gift: cigerette case.
+
+Brazillan pistol drums: mark of
+
+
+### Introductory party scene {#introductory-party-scene}
+
+-   Stairs; what does rising a lot of stairs mean symbolistically?
+-   framing: xylophone; poster; bass --- marrige celebrating poster meaning?
+-   "Cause I want you, always have" --- new angle: Iago is in love Desdemona
+-   Cassio introduced Desdemona to Othello
+    -   "Here's to the two men in my life" --- Desdemona; does she have affection for Cassio too?
+
+
+### Rodrigo and Iago {#rodrigo-and-iago}
+
+-   Iago planting in Rodrigo the idea Cassio is in love with Desdemona
+-   weed is an important plot point
+-   Emilia breaking the fourth wall
+-   Iago picks up the cigarette case manually
+
+
+### Iago handed MJ to Cassio {#iago-handed-mj-to-cassio}
+
+-   Cigarette case handed to Cassio too
+-   Rex does not want Cassio to smoke
+-   Uses the idea of smoke
+-   Iago's gaze looks down below Othello when speaking to him
+    -   Iago looks to the side/in front a lot when talking normally
+-   Alcohol and MJ is swapped, but the point is about the same
+    -   Instead of fighting Cassio, fought a different person
+
+
 ## Geoffrey Sax's Othello {#geoffrey-sax-s-othello}
 
 <span class="underline">****Geoffrey Sax's Othello****</span> Symbols

@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A [grammar]({{< relref "KBhgrammar.md" >}}) is a set of logical rules that form a language. (more precisely defined in [goals of a grammar](#goals-of-a-grammar--kbhgrammar-dot-md))
+A [grammar]({{< relref "KBhgrammar.md" >}}) is a set of logical rules that form a [language]({{< relref "KBhlanguage.md" >}}). (more precisely defined in [goals of a grammar](#goals-of-a-grammar--kbhgrammar-dot-md))
 
 
 ## goals of a [grammar]({{< relref "KBhgrammar.md" >}}) {#goals-of-a-grammar--kbhgrammar-dot-md}
