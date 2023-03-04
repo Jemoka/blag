@@ -117,3 +117,8 @@ See [determinants]({{< relref "KBhdeterminants.md" >}})
 ### [Gaussian elimination]({{< relref "KBhgaussian_elimination.md" >}}) {#gaussian-elimination--kbhgaussian-elimination-dot-md}
 
 See [Gaussian elimination]({{< relref "KBhgaussian_elimination.md" >}})
+
+
+### diagonal {#diagonal}
+
+the [diagonal](#diagonal) of a square matrix consists of entries from the upper-left to the bottom-right

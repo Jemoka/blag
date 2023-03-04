@@ -10,9 +10,9 @@ Every [operator]({{< relref "KBhoperator.md" >}}) on a [finite-dimensional]({{< 
 
 Proof:
 
-Suppose \\(V\\) is a [complex vector space]({{< relref "KBhvector_space.md#vector-space-over-fields" >}}) with [dimension]({{< relref "KBhdimension.md" >}}) \\(n > 0\\), and \\(T \in \mathcal{L}(V)\\). Choose \\(v \in V, v\neq 0\\).
+Suppose \\(V\\) is a [complex vector space]({{< relref "KBhvector_space.md#vector-space-over-fields" >}}) with [dimension]({{< relref "KBhdimension.md" >}}) \\(n > 0\\), and \\(T \in \mathcal{L}(V)\\). Choose \\(v \in V, v\neq 0\\) (possible as \\(V\\) is non-zero):
 
-Construct a list of \\(n+1\\) [vector]({{< relref "KBhvector.md" >}})s
+Construct a list of \\(n+1\\) [vector]({{< relref "KBhvector.md" >}})s:
 
 \begin{equation}
 v, Tv, \dots T^{n} v
