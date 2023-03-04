@@ -190,6 +190,7 @@ aside#toc {
 @media only screen and (min-width: 820px) {
     aside#toc {
         float:right;
+        max-width: 20vw;
     }
 }
 

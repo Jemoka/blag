@@ -7,6 +7,9 @@ draft = false
 Based only on the framing analysis of Sax's Othello, I want to write a piece analyzing collectively grip (lighting) and gaffing (framing) of the films, specifically with a contrast as much as possible to the original text's discussion of framing in, for instance, stage directions. In Sax's Othello, Iago's musings are always framed medium-close from below, with lighting coming from above: the framing helps show a sense of "ascension" (perhaps not unintentionally biblical, like an ascension to heaven), showing how Iago's schemes are helping him rise through the ranks: a sign of his desire for power. I want to continue to analyses these types of connection between the grip and gaffing throughout the films to help reveal the differing power welded by the various screenwriters' differing analysis on Shakespeare's characters.
 
 
+## Vishal Bhardwaj's Omkara {#vishal-bhardwaj-s-omkara}
+
+
 ## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
 
 Timing: 1962, after the war.
