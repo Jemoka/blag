@@ -42,3 +42,8 @@ Then, we have that \\(T\\) is [invertable]({{< relref "KBhinvertability.md" >}})
 Now, we have that \\(T\\) is [surjective]({{< relref "KBhsurjectivity.md" >}}), we desire that \\(T\\) is [invertable]({{< relref "KBhinvertability.md" >}}). We essentially reverse-engineer the step before. Given [rank-nullity theorem]({{< relref "KBhfundamental_theorem_of_linear_maps.md" >}}), we have that: \\(\dim V = \dim range\ T + \dim null\ T\\). Now, given \\(T\\) is [surjective]({{< relref "KBhsurjectivity.md" >}}), \\(\dim range\ T = \dim V\\). Therefore, we have that \\(\dim V = \dim V + \dim null\ T \implies 0 = \dim null\ T\\). This makes the [null space]({{< relref "KBhnull_space.md" >}}) of \\(T\\) be \\(\\{0\\}\\). This makes \\(T\\) [injective]({{< relref "KBhinjectivity.md" >}}). Having shown \\(T\\) to be both [surjective]({{< relref "KBhsurjectivity.md" >}}) and [injective]({{< relref "KBhinjectivity.md" >}}), \\(T\\) is [invertable]({{< relref "KBhinvertability.md" >}}), as desired. So \\(3 \implies 1\\).
 
 Having shown a loop in the statements, all of them are equivalent.
+
+
+### [operators on complex vector spaces have an eigenvalue]({{< relref "KBhoperators_on_complex_vector_spaces_have_an_eigenvalue.md" >}}) {#operators-on-complex-vector-spaces-have-an-eigenvalue--kbhoperators-on-complex-vector-spaces-have-an-eigenvalue-dot-md}
+
+See [operators on complex vector spaces have an eigenvalue]({{< relref "KBhoperators_on_complex_vector_spaces_have_an_eigenvalue.md" >}})

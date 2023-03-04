@@ -1,5 +1,5 @@
 +++
-title = "raising operators to powers"
+title = "T^m"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -44,3 +44,5 @@ T^{m}T^{n} = T^{m+n} \\\\
 (T^{m})^{n} = T^{mn}
 \end{cases}
 \end{equation}
+
+This can be shown by counting the number of times \\(T\\) is repeated by writing each \\(T^{m}\\) out.

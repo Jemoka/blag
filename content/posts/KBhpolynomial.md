@@ -69,3 +69,13 @@ Having satisfied the conditions of [subspace]({{< relref "KBhsubspace.md" >}}), 
 ### \\(\mathcal{P}\_{m}(\mathbb{F})\\) {#mathcal-p-m--mathbb-f}
 
 For \\(m\geq 0\\), \\(\mathcal{P}\_{m}(\mathbb{F})\\) denotes the set of all [polynomial]({{< relref "KBhpolynomial.md" >}})s with [coefficient]({{< relref "KBhpolynomial.md" >}})s \\(\mathbb{F}\\) and degree at most \\(m\\).
+
+
+### [product of polynomials]({{< relref "KBhproduct_of_polynomial.md" >}}) {#product-of-polynomials--kbhproduct-of-polynomial-dot-md}
+
+see [product of polynomials]({{< relref "KBhproduct_of_polynomial.md" >}})
+
+
+### [polynomial of operator]({{< relref "KBhpolynomial_operator.md" >}}) {#polynomial-of-operator--kbhpolynomial-operator-dot-md}
+
+see [polynomial of operator]({{< relref "KBhpolynomial_operator.md" >}})
