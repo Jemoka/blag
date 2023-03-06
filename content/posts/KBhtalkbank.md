@@ -4,6 +4,11 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Silence duration? {#silence-duration}
+
+-   does it include inter-utterance pauses?
+
+
 ## featurize {#featurize}
 
 -   saturnino

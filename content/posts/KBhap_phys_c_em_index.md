@@ -20,3 +20,4 @@ draft = false
 -   [superposition]({{< relref "KBhcoulomb_s_law.md#superposition" >}})
 -   [electric field]({{< relref "KBhelectric_field.md" >}})
 -   [Gauss' Law]({{< relref "KBhgauss_law.md" >}})
+-   [electric potential]({{< relref "KBhelectric_potential_energy.md" >}})
