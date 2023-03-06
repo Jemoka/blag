@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-The computation model behind [quantum theory]({{< relref "KBhquantum_theory.md" >}}). It proposes [quantum computer](#quantum-computer)s, proposed during the 80s. Theoretically, [quantum computer](#quantum-computer)s have [quantum supremacy](#quantum-supremacy), which is exciting. It is a theory that works with [counterfactual]({{< relref "KBhcounterfactual.md" >}}) information.
+The [information theory]({{< relref "KBhinformation_theory.md" >}}) computational model behind [quantum theory]({{< relref "KBhquantum_theory.md" >}}). It proposes [quantum computer](#quantum-computer)s, proposed during the 80s. Theoretically, [quantum computer](#quantum-computer)s have [quantum supremacy](#quantum-supremacy), which is exciting. It is a theory that works with [counterfactual]({{< relref "KBhcounterfactual.md" >}}) information.
 
 
 ## quantum computer {#quantum-computer}
