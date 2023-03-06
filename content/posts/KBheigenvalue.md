@@ -184,3 +184,27 @@ x+ & x- \\\y+ & y-
 \end{equation}
 
 This makes scaling matricides much much easier. If you think about multiplying the above matrix \\(n\\) times, the inverse and non-inverse cancells out.
+
+
+### similar matrices {#similar-matrices}
+
+Let \\(A,B\\) be defined:
+
+\begin{equation}
+A = C B C^{-1}
+\end{equation}
+
+and of course:
+
+\begin{equation}
+B = C^{-1} B C
+\end{equation}
+
+where, \\(A,B,C \in \mathcal{L}(V)\\)
+
+\\(A, B\\) has the same [eigenvalue]({{< relref "KBheigenvalue.md" >}})s.
+
+
+### invertable matricies {#invertable-matricies}
+
+Let \\(T \in \mathcal{L}(V)\\) be [invertable]({{< relref "KBhinvertability.md" >}}). If \\(\lambda\\) is an [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(T\\), then \\(\frac{1}{\lambda}\\) is an [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(T\\). Furthermore, \\(T\\) and \\(T^{-1}\\) share [eigenvector]({{< relref "KBheigenvalue.md" >}})s with eigenvalues \\(\lambda\\) and \\(\frac{1}{\lambda}\\)
