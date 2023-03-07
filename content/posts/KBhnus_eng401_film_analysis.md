@@ -48,7 +48,52 @@ Brazillan pistol drums: mark of
 -   Iago's gaze looks down below Othello when speaking to him
     -   Iago looks to the side/in front a lot when talking normally
 -   Alcohol and MJ is swapped, but the point is about the same
-    -   Instead of fighting Cassio, fought a different person
+    -   Cassio, instead of fighting Rodrigo, fought a different person
+
+
+### First drum solo {#first-drum-solo}
+
+-   Contrast: Iago looking very ominously **forward** **towards** othello, Othello looks to the **side**
+-   Symbolic meaning of drum solo?
+-   Triangle between Othello vs. Desdemona vs. Iago
+
+
+### Tape Editing {#tape-editing}
+
+-   Talk to Delia; "ocular proof" out of the audio recording
+-   "I know how you feel" --- similar to Ben Jago in the previous film
+-   The tape editing as a part of **Rodrigo's setup**, so Rodrigo funded Iago's things
+-   "Drop that Sherlock Holmes bit, that hat looks funny"
+
+
+### All Night Long Song {#all-night-long-song}
+
+-   All night long song --- why so sad?
+-   Othello looks at Delia in a funny way because of the songs
+-   "I love you both": odd choice of words on Delia's part
+
+
+### Ocular Proof {#ocular-proof}
+
+-   Cigarette case + and
+-   The tapes were rolling
+
+
+### Backroom conversation and recording {#backroom-conversation-and-recording}
+
+-   Camera angle between Othello and Desdemona
+-   Othello view from the top looking down, Desdemona/Rodrigo view from the bottom looking up
+-   Iago holding door for Othello, submissiveness
+
+
+### strangling and throwing out {#strangling-and-throwing-out}
+
+-   Desdemona is alive?
+-   Iago is not attacked and Othello didn't kill himself?
+-   Confused about the ending
+-   **another drum solo**: I don't even love Jonny, Iago
+-   Repeated shot between the two people
+-   Imaginary band playing during Iago's solo
 
 
 ## Geoffrey Sax's Othello {#geoffrey-sax-s-othello}
