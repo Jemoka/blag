@@ -47,3 +47,15 @@ draft = false
     -   Motivated somewhat by Lou, the financier
     -   The rising of stairs up and down the main factory as well as to a side building
     -   Weed.
+-   Close reading Iago's first drum solo <https://www.youtube.com/watch?v=fA-vKHOVDCw>
+    -   Iago: looks to the side, then at the camera directly
+    -   Othello: looks generally at the direction of the camera, but as camera pans in closes his eyes and look down and away
+    -   Desdemona: looks entirely to the side, uncaring
+    -   Iago: looks down (like Othello's ending shot), then looks up and to the side, cutting to...
+    -   Othello: looking at the opposite side, seemingly "towards" Iago, then looks down
+    -   Iago: as drum solo becomes more frenzied, (mildly extreme) close up staring dead into the camera
+    -   _frienzied drum soloing_
+    -   Iago: looks down, and then to the side, seemingly contemplating
+    -   Desdemona: stares dead ahead
+    -   Othello: looks to the side and down, hand holding head
+    -   Iago: eyes pans across audience
