@@ -36,7 +36,7 @@ draft = false
     -   &lt;&gt; Shakesphere "ocular proof": cigarette case; also insinuating that Cassio's weed came from Desdemona
     -   Doctoring the tape to highlight Cassio's supposed infidelity
 -   Distinctions
-    -   In love with Desdemona and had separate business motivations
+    -   In love with Desdemona and had separate business motivations distinct from taking Othello/Cassio's
     -   Didn't seem particularly racist, was previously friends with Othello?
     -   Is more explicitly lying by doctoring tape, but words closer to Shakesphere's Iago
     -   Didn't succeed
