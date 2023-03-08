@@ -201,7 +201,7 @@ With remember
 
 ### Interview {#interview}
 
--   "They love each other" Extreme closeup of John and Ben
+-   "They love each other" Extreme closeup of Othello and Iago
 -   Cassio's character is very indirect: uncomportable angles
 
 
