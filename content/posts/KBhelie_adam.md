@@ -23,3 +23,11 @@ Derivatives are essentially a high pass filter
 -   calcium channel florescence
 -   Electrode measurements
 -   [Optogenetics]({{< relref "KBhoptogenetics.md" >}})
+
+
+## primary methods {#primary-methods}
+
+-   analyzing monke with neuro-imaging methods above
+-   creating _in silico_ models based on those responses, in a large systems of differential equations
+-   play with those equations to figure possible novel responses
+-   try them on monke
