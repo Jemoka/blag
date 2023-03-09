@@ -4,9 +4,26 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Per Turn {#per-turn}
+
+-   **Turn** level analysis
+-   Rename tier to
+
+
 ## Silence duration? {#silence-duration}
 
 -   does it include inter-utterance pauses?
+-   within-utterance pause
+    -   fluency, mechanistic
+-   between-utterance pause
+    -   pause between utterances
+-   also: between-speaker pause!
+    -   leaves room for the speaker to take the floor
+    -   BETWEEN speaker pauses: "I don't know what you are asking me", etc.: "breakdown!"
+
+-   add features: STOPPA, TRESTLE, Wang
+
+<https://coryshain.github.io/>
 
 
 ## featurize {#featurize}
