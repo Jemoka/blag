@@ -115,3 +115,5 @@ fd.subs(E==46203293995, h==0.0065, p==2597, L==0.11604, s==1.8751040687120917, E
 ```text
 16.6390442077208
 ```
+
+[upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md" >}})
