@@ -9,6 +9,80 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 
 ## Vishal Bhardwaj's Omkara {#vishal-bhardwaj-s-omkara}
 
+-   Games of marbles
+-   Mopeds?
+-   small bounding songs
+-   Differences: Desdemona and Rodrigo were engaged
+-   Emilia is Othello's sister
+
+-   Instances of violence/impending violence underscored by very cheerful music
+
+
+### Introductory scene {#introductory-scene}
+
+-   Intro credits: "lyrics", "music", "dialog" as the three scripting components
+-   call Othello a "half-cast"
+-   "abduting"---actually in love or not
+
+
+### Marbles scene {#marbles-scene}
+
+-   Robantio (Desdomona's dad) goes and tries to find Othello
+-   Ominous music?
+-   **Monster**, **Half-Caste**, etc.
+-   "never trust what your eyes say, your eyes will betray you
+-   Enable
+
+
+### 100 Bet Scene {#100-bet-scene}
+
+-   Robantio sets the seed of jealousy by explicitly calling Desdemona "two-faced"
+-   Laugh and discussions
+-   The music: ****very cheerful during scenes of violence****
+-   Omi was able to kill everyone
+-   Steps over dead body: washes himself with water
+
+
+### Election {#election}
+
+-   So Othello's **boss**
+-   During ceremony, Othello chooses Cassio to be the new general
+-   "How did you get such a light girl in these dark parts"
+-   "dark lord and magic fluit"
+-   Music swells and Rodrigo cries
+
+
+### Rodrigo and Iago {#rodrigo-and-iago}
+
+-   Moving the "I ahet the moor" scene to the middle of the film
+-   Iago fires Rodrigo's jealousies, and then Rodrigo fire's Iagos by engaging
+
+
+### The Son's BD, etc. {#the-son-s-bd-etc-dot}
+
+-   Iago listens and watches
+-   Camera flashes are the only sound that's present
+-   Camera flashing sound is like guns
+-   Iago again talks with Rodrigo about Dolly
+
+
+### Bianca and Cassio {#bianca-and-cassio}
+
+-   Filmed through a bollywood musical number: **very cheerful** despite the omen of bad consiquences
+
+
+### Cassio is Drunk {#cassio-is-drunk}
+
+-   Typically, **HAPPY** precededs violence
+-   Smoking hurt the music, which causes the Cassio/Rodrigo brawl
+
+
+### First Tail Spinning after brawl {#first-tail-spinning-after-brawl}
+
+-   "It was the booze"
+-   Iago used
+-   "Only one voice that could work, Dolly's"
+
 
 ## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
 
@@ -23,7 +97,7 @@ Gift: cigerette case.
 Brazillan pistol drums: mark of
 
 
-### Introductory party scene {#introductory-party-scene}
+### Introductory scene {#introductory-scene}
 
 -   Stairs; what does rising a lot of stairs mean symbolistically?
 -   framing: xylophone; poster; bass --- marrige celebrating poster meaning?
