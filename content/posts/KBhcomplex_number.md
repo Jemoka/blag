@@ -18,7 +18,7 @@ Formally---
 an order pair of two elements \\((a,b)\\) where \\(a,b\in \mathbb{R}\\).
 
 
-## requirements {#requirements}
+## properties of complex arithmetic {#properties-of-complex-arithmetic}
 
 there are 6. For all statements below, we assume \\(\alpha = a+bi\\) and \\(\beta=c+di\\), \\(\lambda = e+fi\\), where \\(a,b,c,d,e,f \in \mathbb{R}\\) and therefore \\(\alpha, \beta,\lambda \in \mathbb{C}\\).
 
@@ -161,7 +161,7 @@ Simple enough, [subtraction and division of complex numbers](#subtraction-and-di
 
 ### [complex number]({{< relref "KBhcomplex_number.md" >}})s form a [field]({{< relref "KBhfield.md" >}}) {#complex-number--kbhcomplex-number-dot-md--s-form-a-field--kbhfield-dot-md}
 
-See [properties of complex arithmetic](#requirements), how we proved that it satisfies a [field]({{< relref "KBhfield.md" >}}).
+See [properties of complex arithmetic](#properties-of-complex-arithmetic), how we proved that it satisfies a [field]({{< relref "KBhfield.md" >}}).
 
 
 ### complex conjugate {#complex-conjugate}

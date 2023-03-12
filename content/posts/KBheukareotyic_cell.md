@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A type of cell.
+A type of [cell]({{< relref "KBhcell.md" >}}).
 
 Sample [eukareotyic cell]({{< relref "KBheukareotyic_cell.md" >}}) gene:
 
