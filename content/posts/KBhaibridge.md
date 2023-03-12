@@ -6,23 +6,31 @@ draft = false
 
 [AIBridge]({{< relref "KBhaibridge.md" >}}) is an introductory AI bootcamp developed and taught by [Prof. Xin Liu]({{< relref "KBhprof_xin_liu.md" >}}), yours truly, and Samuel Ren in collaboration with [AIFS]({{< relref "KBhaifs.md" >}}).
 
-Course website: [AIBridge Course Website]({{< relref "KBhaibridge_course_website.md" >}})
 
+## AIBRidge Notes {#aibridge-notes}
 
-## AIBridge Lecture Codealongs {#aibridge-lecture-codealongs}
+-   Pause [more] to allow some time to see if people follow
+-   did y'all not introduce pandas?
 
--   [AIBridgeLab D1Aft]({{< relref "KBhaibridgelab_d1aft.md" >}})
--   [AIBridgeLab D2Aft]({{< relref "KBhaibridgelab_d2aft.md" >}})
--   [AIBridgeLab D3/D4]({{< relref "KBhaibridgelab_d3_d4.md" >}})
--   [AIBridgeLab D4Aft]({{< relref "KBhaibridgelab_d4aft.md" >}})
+Closest to doing this without try/except:
 
-oeansut\n
-\n
-aosntegu\n
-\n
+{{< figure src="/ox-hugo/2023-03-12_13-21-14_screenshot.png" >}}
 
-
-## Review Stuff {#review-stuff}
-
--   12:30PM-5PM Saratoga Library DST!!
--   "Experience paper?"
+-   slide 49: what is conc?
+-   is this too much recap time? Haven't we been recapping for a long while already?
+-   probably goo to mention what is `/content/iris.data`, also, just opening from `iri.data` should work and will be probably more ergonomic
+-   read function confusion
+    -   .readline() =&gt; str
+    -   .read() =&gt; str
+    -   .readlines() =&gt; [str]
+    -   the pauses feel a tad ackward?
+    -   speak up!
+-   Iris dataaset loading pt2 could go slightly faster
+-   SSE squares and lines need to be darker: increase opacity 39
+-   "very common metric" --- not a metric
+-   motivate confidence value better; the "middle" question makes sense
+-   I think its actually probably good to explain cross-entropy in the future
+    -   (i.e. its not a lot of fancy math + I think it provides a lot of intuition w.r.t. one-hot encoding, probablitiy distributions, etc.)
+-   Problem with how I made the old slides: multi-Class classification (1va, ava, etc.) needs better motivation before, otherwise throwing three classes on the screen is a tad confusing
+-   motivate that the whole `random.seed` business is so that the whole class can compare answers more effectively
+-   `LogReg = LogisticRegression()`, typically, name instance variables as lower snake case; so maybe call it `my_log_reg` or something
