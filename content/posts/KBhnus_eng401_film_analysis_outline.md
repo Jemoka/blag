@@ -4,9 +4,33 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Films complicate Iago by introducing independent axes for love and respect {#films-complicate-iago-by-introducing-independent-axes-for-love-and-respect}
+
+The four texts' Iagos can be treated in the same framework of "love"--hatred, whether racial or otherwise, for Othello---versus "respect"---deference to the authority of Othello.
+
+-   Shakesphere's Othello: No Love, Has Respect
+    -   No Love: Iago pretty much said as much "I hate the Moor"
+    -   Understand the role of power Othello has: "In following him, I follow but myself"; evidently want to be Lieutenant for his power
+-   Sax's Othello: No Love, No Respect
+    -   No Love: overtly racist "You stupid, patronizing ape ... how very quaint, how very d--- sunday school" --- for all the talk about love, it is "If I could find any whose brains were as big as their dicks, I’d be a happy man, eh?" kind of love: oversexualization
+    -   No Respect: he is basically Iago's understudy "how very good for you to acknowledge what you owe to me, you owe me everything, everything!"
+-   Deardon's Othello: Yes Love, No Respect
+    -   Yes Love: the two were ostensibly and naturally friends---during the subtext perhaps more of a reflection for civil rights sentiment (especially via the counter-culture language of Jazz of the time) "apparently natural construct of a racially diverse ... sub-culture: 'the [diverse racial archetypes] intermingle smoothly and fraternisation creates deep emotional pangs, rather than embarrassment'" (Kinematograph Weekly) (Burton and O'Sullivan)
+    -   No Respect: the flip side is that the direct response is to remove Desdemona from Othello
+
+
+## Comparing Iago {#comparing-iago}
+
+-   No Love, No respect | Direct objective: to get Othello's position at **the Met**
+-   Yes Love, No Respect | Direct objective: to remove Desdemona from Othello's control and start a **band**
+-   No Love, Yes Respect | Direct objective: faithful---to get Othello to choose him as the direct regional militia leader &lt;&gt; Shakesphere
+
+Missing: Yes Love, Yes Respect
+
+
 ## Actual Othello {#actual-othello}
 
--   No more of drowning, do you hear? &lt;&gt; Omkara
+-   IAGO: "No more of drowning, do you hear?" &lt;&gt; Omkara
 
 
 ## Bhardwaj's Iago {#bhardwaj-s-iago}
@@ -22,7 +46,7 @@ draft = false
     -   &lt;&gt; Shakesphere Heirloom
 -   Distinctions
     -   Process of manipulation is more toxically masculine instead of weird submissiveness
-    -   "I hate Moor" took place somewhat after being provoked by Rodrigo firing his jealousy
+    -   "I hate Moor" + drowning scene took place somewhat after being provoked by Rodrigo firing his jealousy after Iago fired Rodrigo's jealousy about Desdemona
 -   Unique shots/catchphrases/features
     -   Instances of violence/impending violence underscored by very cheerful music
         -   Cheerful music as Othello beats up everybody in the rival gang
@@ -36,7 +60,8 @@ draft = false
 -   Direct Downfall of Othello: A, B, and C for intimacy test for the **robe**
 -   Main methods
     -   &lt;&gt; Shakesphere conversation to arise suspicion
-    -   Hinted to Cassio that marriage is not genuine
+    -   Hinted to Cassio that marriage is not genuine and provoked him
+    -   Screwed up Othello's investigation of the constable
     -   _Demanded intimacy test and A, B, AND C_
 -   Distinctions
     -   Wants Othello's position, and probably his love
