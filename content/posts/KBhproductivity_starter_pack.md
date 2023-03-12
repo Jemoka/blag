@@ -43,7 +43,7 @@ Wait, you are still here? Well, given that you are sticking around, we might as 
 -   <https://culturedcode.com/things/>
 -   Shameless plug: <https://www.condution.com/>
 -   <https://orgmode.org/manual/Agenda-Views.html>
--   again, Notion. See above.
+    -   again, Notion. See above.
 -   <https://workflowy.com/>
 -   <https://www.rememberthemilk.com/>
 

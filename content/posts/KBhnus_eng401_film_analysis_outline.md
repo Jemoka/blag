@@ -4,6 +4,31 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Actual Othello {#actual-othello}
+
+-   No more of drowning, do you hear? &lt;&gt; Omkara
+
+
+## Bhardwaj's Iago {#bhardwaj-s-iago}
+
+-   Direct objective: faithful---to get Othello to choose him as the direct regional militia leader
+-   Hidden objective: ...??? not sure not well motivated
+-   Direct Downfall of Othello: "ocular proof" of jingly heirloom
+-   Main Methods
+    -   &lt;&gt; Shakesphere beer to Cassio
+    -   &lt;&gt; Shakesphere making Othello overhear conversation with Cassio about Bianca to think its about Desdemona
+    -   &lt;&gt; Shakesphere convinces Desdemona to soothsay for Cassio
+    -   Random bad omen about bird/snake?
+    -   &lt;&gt; Shakesphere Heirloom
+-   Distinctions
+    -   Process of manipulation is more toxically masculine instead of weird submissiveness
+    -   "I hate Moor" took place somewhat after being provoked by Rodrigo firing his jealousy
+-   Unique shots/catchphrases/features
+    -   Instances of violence/impending violence underscored by very cheerful music
+        -   Cheerful music as Othello beats up everybody in the rival gang
+        -   Happy cheerful party music as Cassio becomes drunk and gets demoted
+
+
 ## Sax's Iago {#sax-s-iago}
 
 -   Direct objective: to get Othello's position at **the Met**
@@ -59,3 +84,6 @@ draft = false
     -   Desdemona: stares dead ahead
     -   Othello: looks to the side and down, hand holding head
     -   Iago: eyes pans across audience
+
+
+##  {#d41d8c}
