@@ -20,20 +20,7 @@ The four texts' Iagos can be treated in the same framework of "love"--hatred, wh
 In the work, "Othello" v. "Moor" is effectively two different people "After some time, to abuse Othello's ear ... The Moor is of a free and open nature,". The former, the general, well-respected for his power by Iago, that demoted Cassio; the latter, the outcast _person_ that actually did the betrayal and whom Iago hates.
 
 
-## Bhardwaj's Othello: Rodrigo Convinced Merge between two Othellos, setting forward motion {#bhardwaj-s-othello-rodrigo-convinced-merge-between-two-othellos-setting-forward-motion}
-
-<https://www.youtube.com/watch?v=zzgDHT3inzI>
-
-Iago provoked by Rodrigo jeering him: "no more of drowning, do you hear?" "I could jump into this river" ... "well jump! Don't be a sissy [sic]." Then Rodrigo provoked Iago about how Iago was slighted by Othello; relegating Iago to a role in "Company Garden".
-
-It is at this moment that the music swells, ominous vocal tones that reprises from the beginning titles of the film, of "title faintly visible images of what appear to be ancient scenes of combat."
-
-"Bhardwaj composes all his film scores and writes music and script simultaneously", so the intentionality here is not to be missed. Motivated more by a masculine sense of revenge against **General Othello**, Iago decided to take personal action against the hated **Moor**.
-
-Odd choice, too, to relegate Iago to "company garden." Turns out, Shakesphere defined it for us! "Our bodies are gardens, to the which our wills are gardeners; ... we have reason to cool our ... unbitted lusts; ... I take this, that you call love, to be a sect or scion." Iago claims love is a "cutting" of unbitted lust, which he should cut. Metaphorically cutting Othello's the person's love for desdemona as if he's mechanically cutting away some lust; all to achieve a goal for General Othello.
-
-
-## Sax's Othello: the classic racist Iago {#sax-s-othello-the-classic-racist-iago}
+## Sax's Othello: iago's hatred of othello the person is drien by racism {#sax-s-othello-iago-s-hatred-of-othello-the-person-is-drien-by-racism}
 
 Yes, though this lust for power provoked Iago to mess with Othello the person to get the powers of othello the general, he is definitely overtly racist to othello the person starting from the beginning.
 
@@ -51,6 +38,19 @@ Mirrors racism in Shakesphere: "The Moor ... will as tenderly be led by the nose
 Again, in lust with not with the guy but with his power: "It's a shame really, he's a good man. ... It going to take a bit longer, and its all going to end in broken hearts."
 
 "It's love. Simple as that" (close reading: love, perhaps against Othello, or perhaps his position)
+
+
+## Bhardwaj's Othello: Rodrigo Convinced Merge between two Othellos, setting forward motion {#bhardwaj-s-othello-rodrigo-convinced-merge-between-two-othellos-setting-forward-motion}
+
+<https://www.youtube.com/watch?v=zzgDHT3inzI>
+
+Iago provoked by Rodrigo jeering him: "no more of drowning, do you hear?" "I could jump into this river" ... "well jump! Don't be a sissy [sic]." Then Rodrigo provoked Iago about how Iago was slighted by Othello; relegating Iago to a role in "Company Garden".
+
+It is at this moment that the music swells, ominous vocal tones that reprises from the beginning titles of the film, of "title faintly visible images of what appear to be ancient scenes of combat."
+
+"Bhardwaj composes all his film scores and writes music and script simultaneously", so the intentionality here is not to be missed. Motivated more by a masculine sense of revenge against **General Othello**, Iago decided to take personal action against the hated **Moor**.
+
+Odd choice, too, to relegate Iago to "company garden." Turns out, Shakesphere defined it for us! "Our bodies are gardens, to the which our wills are gardeners; ... we have reason to cool our ... unbitted lusts; ... I take this, that you call love, to be a sect or scion." Iago claims love is a "cutting" of unbitted lust, which he should cut. Metaphorically cutting Othello's the person's love for desdemona as if he's mechanically cutting away some lust; all to achieve a goal for General Othello.
 
 
 ## Deardon's Iago: hatred actually useful----otherwise Iago would not have succeeded {#deardon-s-iago-hatred-actually-useful-otherwise-iago-would-not-have-succeeded}
