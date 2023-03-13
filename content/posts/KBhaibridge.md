@@ -14,18 +14,17 @@ draft = false
 
 Closest to doing this without try/except:
 
-{{< figure src="/ox-hugo/2023-03-12_13-21-14_screenshot.png" >}}
-
 -   slide 49: what is conc?
 -   is this too much recap time? Haven't we been recapping for a long while already?
--   probably goo to mention what is `/content/iris.data`, also, just opening from `iri.data` should work and will be probably more ergonomic
+-   probably good to mention what is `/content/iris.data`, also, just opening from `./iris.data` should work and will be probably more ergonomic
 -   read function confusion
-    -   .readline() =&gt; str
     -   .read() =&gt; str
     -   .readlines() =&gt; [str]
     -   the pauses feel a tad ackward?
     -   speak up!
--   Iris dataaset loading pt2 could go slightly faster
+
+<!--listend-->
+
 -   SSE squares and lines need to be darker: increase opacity 39
 -   "very common metric" --- not a metric
 -   motivate confidence value better; the "middle" question makes sense
