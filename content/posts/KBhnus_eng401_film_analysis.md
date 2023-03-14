@@ -94,6 +94,7 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 -   Long songs to illustrate love:w
 -   Not enough
 -   Blue cololr grading
+-   Desdemona very white because of framing compared to all others
 
 
 ## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
