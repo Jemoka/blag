@@ -97,6 +97,13 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 -   Desdemona very white because of framing compared to all others
 
 
+### Father {#father}
+
+-   So motivation is given
+-   Serious music in the background, replaying the two characters'
+-   Tone of the phone number
+
+
 ## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
 
 Timing: 1962, after the war.
