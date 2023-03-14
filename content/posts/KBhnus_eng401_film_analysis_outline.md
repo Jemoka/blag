@@ -28,16 +28,31 @@ Praises to Andrew Davies, managed to cram in a lot into the I hate the Moor spee
 
 Hates the guy:
 
--   overtly racist "You stupid, patronizing ape ... how very quaint, how very d--- sunday school" --- for all the talk about love, it is "If I could find any whose brains were as big as their dicks, I’d be a happy man, eh?"
+-   overtly racist "You stupid, patronizing ape ... how very quaint, how very d--- sunday school"
     -   "d--- sunday school": white mistrel mocking AA worship =&gt; hand gestures of Iago
     -   N word
 -   he is basically Iago's understudy "how very good for you to acknowledge what you owe to me, you owe me everything, everything!"
+
+    --- for all the talk about love, it is "If I could find any whose brains were as big as their dicks, I’d be a happy man, eh?"
 
 Mirrors racism in Shakesphere: "The Moor ... will as tenderly be led by the nose ... as asses are."
 
 Again, in lust with not with the guy but with his power: "It's a shame really, he's a good man. ... It going to take a bit longer, and its all going to end in broken hearts."
 
 "It's love. Simple as that" (close reading: love, perhaps against Othello, or perhaps his position)
+
+
+## Deardon's Iago: hatred actually useful----otherwise Iago would not have succeeded {#deardon-s-iago-hatred-actually-useful-otherwise-iago-would-not-have-succeeded}
+
+Why is this racism necessary.
+
+Deardon attempts an answer: Perhaps as a product of civil rights, or the jazz counteculture, the race component is functionally erased, and instead Deardon's Iago is lusting over Desdemona. The film is one which Iago and Othello were ostensibly friends---during the subtext perhaps more of a reflection for civil rights sentiment (especially via the counter-culture language of Jazz of the time) "apparently natural construct of a racially diverse ... sub-culture: 'the [diverse racial archetypes] intermingle smoothly and fraternisation creates deep emotional pangs, rather than embarrassment'" (Kinematograph Weekly) (Burton and O'Sullivan)
+
+Critics hated particularly the soft ending: "never for one moment succeeds in achieving anything like the power and persuasion of the original." (Films and Filming) Why is the soft-ending? When Othello almost smoothered Desdemona, three people went and checked immediatley, and there was no Emilia's "The Moor's abused by some most villainous knave, Some base notorious knave". She immediately doubted Iago, confusion was cleared, and all was well.
+
+So though Rodrigo ignited Iago's scheme, racism dragged Iago's scheme long enough for both to be dead.
+
+---
 
 
 ## Bhardwaj's Othello: Rodrigo Convinced Merge between two Othellos, setting forward motion {#bhardwaj-s-othello-rodrigo-convinced-merge-between-two-othellos-setting-forward-motion}
@@ -52,18 +67,7 @@ It is at this moment that the music swells, ominous vocal tones that reprises fr
 
 Odd choice, too, to relegate Iago to "company garden." Turns out, Shakesphere defined it for us! "Our bodies are gardens, to the which our wills are gardeners; ... we have reason to cool our ... unbitted lusts; ... I take this, that you call love, to be a sect or scion." Iago claims love is a "cutting" of unbitted lust, which he should cut. Metaphorically cutting Othello's the person's love for desdemona as if he's mechanically cutting away some lust; all to achieve a goal for General Othello.
 
-
-## Deardon's Iago: hatred actually useful----otherwise Iago would not have succeeded {#deardon-s-iago-hatred-actually-useful-otherwise-iago-would-not-have-succeeded}
-
-Why is this racism necessary.
-
-Deardon attempts an answer: Perhaps as a product of civil rights, or the jazz counteculture, the race component is functionally erased, and instead Deardon's Iago is lusting over Desdemona. The film is one which Iago and Othello were ostensibly friends---during the subtext perhaps more of a reflection for civil rights sentiment (especially via the counter-culture language of Jazz of the time) "apparently natural construct of a racially diverse ... sub-culture: 'the [diverse racial archetypes] intermingle smoothly and fraternisation creates deep emotional pangs, rather than embarrassment'" (Kinematograph Weekly) (Burton and O'Sullivan)
-
-Critics hated particularly the soft ending: "never for one moment succeeds in achieving anything like the power and persuasion of the original." (Films and Filming) Why is the soft-ending? When Othello almost smoothered Desdemona, three people went and checked immediatley, and there was no Emilia's "The Moor's abused by some most villainous knave, Some base notorious knave". She immediately doubted Iago, confusion was cleared, and all was well.
-
-So though Rodrigo ignited Iago's scheme, racism dragged Iago's scheme long enough for both to be dead.
-
----
+"Othello should go mad"
 
 
 ## Comparing Iago {#comparing-iago}
