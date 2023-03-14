@@ -9,6 +9,10 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 
 ## Vishal Bhardwaj's Omkara {#vishal-bhardwaj-s-omkara}
 
+-   Dreary music plays during the misc.
+
+---
+
 -   Games of marbles
 -   Mopeds?
 -   small bounding songs
