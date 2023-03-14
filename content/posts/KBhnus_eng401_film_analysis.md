@@ -84,6 +84,18 @@ Based only on the framing analysis of Sax's Othello, I want to write a piece ana
 -   "Only one voice that could work, Dolly's"
 
 
+### Omi Brother is back {#omi-brother-is-back}
+
+-   Mopeds
+-   Iago begins to spin his tale by avoiding talking about Kesu
+-   Drum samples + acient vocal chops
+-   Symbolism of dissonant music
+-   Othello is not fighting back
+-   Long songs to illustrate love:w
+-   Not enough
+-   Blue cololr grading
+
+
 ## Basil Dearden's All Night Long {#basil-dearden-s-all-night-long}
 
 Timing: 1962, after the war.
