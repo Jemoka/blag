@@ -4,6 +4,16 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## questions? {#questions}
+
+-   ask about inter-turn pauses, where
+    -   INV: something something something &lt;-
+    -   PAR: WWW &lt;-
+    -   INV: somethingsomething else &lt;-
+    -   PAR: words words word
+-   no bullets are given for PAR, so do we skip it? do we count the time for WWW all as an inter-turn pause between INV and PAR? etc.
+
+
 ## Per Turn {#per-turn}
 
 -   **Turn** level analysis
