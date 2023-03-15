@@ -47,9 +47,9 @@ We will use induction.
 
 Inductive hypothesis: given dimension of \\(V\\), \\(T \in \mathcal{L}(V)\\) has an [upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md" >}}) for a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\).
 
-Base case: \\(\dim V=0\\)
+Base case: \\(\dim V=1\\)
 
-If \\(\dim V = 0\\), any matrix of \\(T\\) is technically [upper-triangular]({{< relref "KBhupper_triangular_matrix.md" >}}).
+If \\(\dim V = 1\\), any matrix of \\(T\\) is technically [upper-triangular]({{< relref "KBhupper_triangular_matrix.md" >}}) because its just one number \\(\mqty(a)\\).
 
 Step: \\(\dim V = n\\), and \\(T \in \mathcal{L}(V)\\)
 

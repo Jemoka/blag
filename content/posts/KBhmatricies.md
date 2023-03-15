@@ -122,3 +122,19 @@ See [Gaussian elimination]({{< relref "KBhgaussian_elimination.md" >}})
 ### diagonal {#diagonal}
 
 the [diagonal](#diagonal) of a square matrix consists of entries from the upper-left to the bottom-right
+
+
+### [upper-triangular matricies]({{< relref "KBhupper_triangular_matrix.md" >}}) {#upper-triangular-matricies--kbhupper-triangular-matrix-dot-md}
+
+[upper-triangular matricies]({{< relref "KBhupper_triangular_matrix.md" >}})
+
+
+### change-of-basis {#change-of-basis}
+
+To change the [basis]({{< relref "KBhbasis.md" >}}) of \\(A\\) to w.r.t. \\(B\\),  create a [similar matrix]({{< relref "KBheigenvalue.md#similar-matrices" >}}):
+
+\begin{equation}
+B^{-1} A B = C
+\end{equation}
+
+\\(C\\) is \\(A\\) in terms of \\(B\\).

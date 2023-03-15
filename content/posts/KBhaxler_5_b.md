@@ -38,7 +38,7 @@ draft = false
 
 ## Questions for Jana {#questions-for-jana}
 
--   why define the [matrix]({{< relref "KBhmatricies.md" >}}) of an [operator]({{< relref "KBhoperator.md" >}}) again??
+-   ~~why define the [matrix]({{< relref "KBhmatricies.md" >}}) of an [operator]({{< relref "KBhoperator.md" >}}) again??~~ just to stress that its square
 -   for the second flavor of the proof that [every complex operator has an upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md#every-complex-operator-has-an-id-af53dbd7-0421-4039-a9f9-9080ea6e1c42-upper-triangular-matrix" >}}), why is \\(v\_1 ... v\_{j}\\)  a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\)?
 
 
