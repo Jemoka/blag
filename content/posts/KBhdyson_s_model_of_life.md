@@ -20,9 +20,14 @@ See also: [high chemical activity]({{< relref "KBhhigh_chemical_activity.md" >}}
 -   \\(w\\): percentage of inactive binding sites
 -   \\(z\\): percentage of "[empty binding site]({{< relref "KBhempty_binding_site.md" >}})s"
 -   \\(p(k)\\): probability distribution for a site to be in any given state at time \\(k\\)
+-   \\(\Psi(x)\\): rate of [activation]({{< relref "KBhhigh_chemical_activity.md" >}}) "efficiency in active monomers in acceleration monomer absorption"
 
 
 ## requirements {#requirements}
+
+-   evidently, because percentages: \\(x+w+z = 1\\)
+-   Active monomer absorption: \\(\Psi(x) \cdot p\\)
+-   Inactive monomer absorption: \\(p\\)
 
 
 ## additional information {#additional-information}
