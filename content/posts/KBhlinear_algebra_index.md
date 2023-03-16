@@ -31,6 +31,7 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [binary operation]({{< relref "KBhbinary_operation.md" >}})
 -   [modular arithmetic]({{< relref "KBhmodular_arithmetic.md" >}})
 -   [quotient group]({{< relref "KBhquotient_group.md" >}})
+-   [strong induction]({{< relref "KBhstrong_induction.md" >}})
 
 
 ## Homework {#homework}
