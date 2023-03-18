@@ -96,6 +96,16 @@ Suite of software tools for the automatic transcription, tokenization, alignment
 In Review
 
 
+## Machine Learning {#machine-learning}
+
+
+### Reinitialization on the Go {#reinitialization-on-the-go}
+
+Using singular value decomposition to reinitialize some behavior of weights as a regularization technique. Significant work-in-progress.
+
+****Collaborators****: Bodi - The Nueva School
+
+
 ## Science Education {#science-education}
 
 
