@@ -23,3 +23,6 @@ Yes, [voltage]({{< relref "KBhvoltage.md" >}}) is defined vis a vi [electric pot
 {{< figure src="/ox-hugo/2023-03-05_20-19-25_screenshot.png" >}}
 
 Let \\(A, B, C\\) be positrons, and the lines are the [electric field]({{< relref "KBhelectric_field.md" >}}). Which one has the highest electric potential? \\(A\\), because it has the most distance to travel to until it can get all the way to the right.
+
+
+### connecting [electric potential]({{< relref "KBhelectric_potential_energy.md" >}}) and [electric field]({{< relref "KBhelectric_field.md" >}}) {#connecting-electric-potential--kbhelectric-potential-energy-dot-md--and-electric-field--kbhelectric-field-dot-md}
