@@ -15,7 +15,7 @@ This is a work-in-progress page listing all of my production projects.
 
 ## 20MinuteRants: Blog {#20minuterants-blog}
 
-<https://20mr.substack.com/>
+<https://medium.com/20minuterants>
 
 
 ## Project80: Podcast {#project80-podcast}

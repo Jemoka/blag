@@ -26,3 +26,14 @@ Let \\(A, B, C\\) be positrons, and the lines are the [electric field]({{< relre
 
 
 ### connecting [electric potential]({{< relref "KBhelectric_potential_energy.md" >}}) and [electric field]({{< relref "KBhelectric_field.md" >}}) {#connecting-electric-potential--kbhelectric-potential-energy-dot-md--and-electric-field--kbhelectric-field-dot-md}
+
+
+#### parallel plates {#parallel-plates}
+
+{{< figure src="/ox-hugo/2023-03-18_13-40-07_screenshot.png" >}}
+
+\begin{equation}
+E = \frac{V}{d}
+\end{equation}
+
+where \\(d\\) is the distance between the plates, \\(E\\) the uniform [electric field]({{< relref "KBhelectric_field.md" >}}) between the plates.
