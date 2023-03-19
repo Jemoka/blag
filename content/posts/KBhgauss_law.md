@@ -42,3 +42,10 @@ So, substituting the two in:
 where, \\(\epsilon\_{0}\\) is the [permittivity of free space]({{< relref "KBhpermittivity_of_free_space.md" >}}).
 
 Congrats, we have [Gauss' Law]({{< relref "KBhgauss_law.md" >}}): "the [electric flux]({{< relref "KBhflux.md#electric-flux" >}}) through the surface of an object is the sum of the [charge]({{< relref "KBhcharged.md" >}})s enclosed divided by the [permittivity of free space]({{< relref "KBhpermittivity_of_free_space.md" >}})."
+
+
+## spheres {#spheres}
+
+**electric field inside a closed conductor is zero**
+
+This is a direct result of gauss' law

@@ -37,3 +37,11 @@ E = \frac{V}{d}
 \end{equation}
 
 where \\(d\\) is the distance between the plates, \\(E\\) the uniform [electric field]({{< relref "KBhelectric_field.md" >}}) between the plates.
+
+The amount of [charge]({{< relref "KBhcharged.md" >}}) on each plate is described by:
+
+\begin{equation}
+Q = CV
+\end{equation}
+
+where, \\(C\\) is the [capacitance]({{< relref "KBhcapacitance.md" >}}) of each plate, and \\(V\\) the [voltage]({{< relref "KBhvoltage.md" >}}) across the plates.
