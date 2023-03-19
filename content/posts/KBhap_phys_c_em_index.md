@@ -21,3 +21,5 @@ draft = false
 -   [electric field]({{< relref "KBhelectric_field.md" >}})
 -   [Gauss' Law]({{< relref "KBhgauss_law.md" >}})
 -   [electric potential]({{< relref "KBhelectric_potential_energy.md" >}})
+-   [current]({{< relref "KBhcurrent.md" >}})
+-   [Ohm's Law]({{< relref "KBhohm_s_law.md" >}})
