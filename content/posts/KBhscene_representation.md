@@ -12,3 +12,7 @@ Aim: unsupervised segmentation + representation
 -   train segmentation and representation together
 
 Autoencoding segmentation! Segment =&gt; Represent =&gt; Resegment =&gt; etc.
+
+[Gaussian Mixture Model]({{< relref "KBhgaussian_mixture_model.md" >}})???? over pixels: regularizes by taking [KL Divergence]({{< relref "KBhkl_divergence.md" >}}) between latent and predicted output, to force them to be similar.
+
+**Loss: error in RECONSTRUCTION and KL-Divergence of latent space**

@@ -21,3 +21,6 @@ draft = false
 ## biological learning {#biological-learning}
 
 [biological learning](#biological-learning) is mostly unsupervised, and yte can generalize
+
+
+## visual processing {#visual-processing}
