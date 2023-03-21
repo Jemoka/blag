@@ -119,9 +119,9 @@ See [determinants]({{< relref "KBhdeterminants.md" >}})
 See [Gaussian elimination]({{< relref "KBhgaussian_elimination.md" >}})
 
 
-### diagonal {#diagonal}
+### [diagonal matrix]({{< relref "KBhdiagonal_matrix.md#diagonal-matrix" >}}) {#diagonal-matrix--kbhdiagonal-matrix-dot-md}
 
-the [diagonal](#diagonal) of a square matrix consists of entries from the upper-left to the bottom-right
+see [diagonal matrix]({{< relref "KBhdiagonal_matrix.md#diagonal-matrix" >}})
 
 
 ### [upper-triangular matricies]({{< relref "KBhupper_triangular_matrix.md" >}}) {#upper-triangular-matricies--kbhupper-triangular-matrix-dot-md}
