@@ -4,6 +4,24 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## runhouse meeting {#runhouse-meeting}
+
+-   &lt;&gt;Donny Greenberg: ADNE, nurses' health
+-   implementation at Google: grantees of canniniminty
+
+
+### Remaining questions {#remaining-questions}
+
+-   but **we can't provide SSH**
+-   function.save()
+-   remote
+    -   running through hashicorp vault?
+    -   serializing ssh key remote?
+    -   RUNHOUSE call into remote!
+    -   _headscale_
+-   take wave2vec and hubert and GSLM
+
+
 ## questions? {#questions}
 
 -   ask about inter-turn pauses, where
