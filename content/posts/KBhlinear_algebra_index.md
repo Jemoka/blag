@@ -32,6 +32,8 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [modular arithmetic]({{< relref "KBhmodular_arithmetic.md" >}})
 -   [quotient group]({{< relref "KBhquotient_group.md" >}})
 -   [strong induction]({{< relref "KBhstrong_induction.md" >}})
+-   [algebreic multiplicity]({{< relref "KBhalgebreic_multiplicity.md" >}})
+-   [geometric multplicity]({{< relref "KBhgeometric_multplicity.md" >}})
 
 
 ## Homework {#homework}
