@@ -23,3 +23,5 @@ draft = false
 -   [electric potential]({{< relref "KBhelectric_potential_energy.md" >}})
 -   [current]({{< relref "KBhcurrent.md" >}})
 -   [Ohm's Law]({{< relref "KBhohm_s_law.md" >}})
+-   [resistor]({{< relref "KBhresistors.md" >}})
+-   [kirchoff's laws]({{< relref "KBhkirchoff_s_laws.md" >}})

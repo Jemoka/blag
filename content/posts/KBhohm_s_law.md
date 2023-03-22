@@ -8,12 +8,12 @@ draft = false
 V = IR
 \end{equation}
 
-where, \\(V\\) is the voltage across the resister, \\(I\\) the [current]({{< relref "KBhcurrent.md" >}}), and \\(R\\) the resistance.
+where, \\(V\\) is the voltage across the resister, \\(I\\) the [current]({{< relref "KBhcurrent.md" >}}), and \\(R\\) the [resistance]({{< relref "KBhcurrent.md#resistance-of-a-wire" >}}).
 
 
 ## power (physics) {#power--physics}
 
-the speed at which electrical energy dissipates into heat is called [power](#power--physics):
+the rate at which electrical energy dissipates into heat is called [power](#power--physics):
 
 \begin{equation}
 P = IV

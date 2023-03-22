@@ -4,6 +4,13 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## humans at the end {#humans-at-the-end}
+
+-   do speaker ID in the end
+-   DO TO BATCHALIGN
+-   allow people to reject files
+
+
 ## runhouse meeting {#runhouse-meeting}
 
 -   &lt;&gt;Donny Greenberg: ADNE, nurses' health

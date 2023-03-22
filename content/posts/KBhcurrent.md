@@ -20,3 +20,5 @@ R = \rho \frac{L}{A}
 \end{equation}
 
 where, \\(\rho\\) is the material resistivity, \\(L\\) the length, and \\(A\\) the cross-sectional area.
+
+you rarely need to do this!
