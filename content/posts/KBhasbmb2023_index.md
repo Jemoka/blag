@@ -18,11 +18,16 @@ draft = false
 
 **Structure Determination and Machine Learning**
 
-| ? | [cyro-EM]({{< relref "KBhcyro_em.md#manifold-embedding" >}}) + [ensemble reweighting]({{< relref "KBhcyro_em.md#ensemble-reweighting" >}}) | 10.1073/pnas.1419276111 |
-|---|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-|   |                                                                                                                                            |                         |
+| Sonya Hanson, Flatiron         | [cyro-EM]({{< relref "KBhcyro_em.md#manifold-embedding" >}}) + [ensemble reweighting]({{< relref "KBhcyro_em.md#ensemble-reweighting" >}}) | 10.1073/pnas.1419276111                          |
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| Celia Schiffer, UMass Med      | [Drug Resistance Analysis]({{< relref "KBhmolecular_drug_resistance.md" >}})                                                               | 10.7554/eLife.77433                              |
+| Arvind Ramanathan, Argonne Lab | [Models of Interaction Analysis]({{< relref "KBhfundational_models_of_interaction_analysis.md" >}})                                        | ?, see [GenSLMs]({{< relref "KBhgenslms.md" >}}) |
+| Jason K Perry, Gilead          | [Structure of COVID Replication]({{< relref "KBhstructure_of_covid_replication.md" >}})                                                    |                                                  |
 
 
 ## Things to Google {#things-to-google}
 
 -   [diffusion map]({{< relref "KBhdiffusion_map.md" >}})s and
+-   <https://www.charmm-gui.org/>
+-   [GenSLMs]({{< relref "KBhgenslms.md" >}}): LLMs, but genome sequence
+-   [representation learning]({{< relref "KBhrepresentation_learning.md" >}})

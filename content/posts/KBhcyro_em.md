@@ -28,3 +28,5 @@ draft = false
 -   take MD =&gt; create "fake" [cyro-EM](#manifold-embedding) images
 -   [something happens I didn't catch for cyro-em]
 -   then, project back to MD. misfolded elements would then be removed
+
+CHARMM-GUI
