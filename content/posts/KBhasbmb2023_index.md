@@ -24,6 +24,13 @@ draft = false
 | Arvind Ramanathan, Argonne Lab | [Models of Interaction Analysis]({{< relref "KBhfundational_models_of_interaction_analysis.md" >}})                                        | ?, see [GenSLMs]({{< relref "KBhgenslms.md" >}}) |
 | Jason K Perry, Gilead          | [Structure of COVID Replication]({{< relref "KBhstructure_of_covid_replication.md" >}})                                                    |                                                  |
 
+**Protein Structure and Biophysics**
+
+| Erik Yukl       | [Zinc ABC Transporters]({{< relref "KBhzinc_abc_transporters.md" >}}) | ? |
+|-----------------|-----------------------------------------------------------------------|---|
+| Wentao Li       | [Calpains ... AFIB]({{< relref "KBhcalpains_afib.md" >}})             |   |
+| Sara J. Codding | ok no.                                                                |   |
+
 
 ## Things to Google {#things-to-google}
 
