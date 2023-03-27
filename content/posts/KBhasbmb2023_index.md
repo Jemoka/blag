@@ -26,10 +26,16 @@ draft = false
 
 **Protein Structure and Biophysics**
 
-| Erik Yukl       | [Zinc ABC Transporters]({{< relref "KBhzinc_abc_transporters.md" >}}) | ? |
-|-----------------|-----------------------------------------------------------------------|---|
-| Wentao Li       | [Calpains ... AFIB]({{< relref "KBhcalpains_afib.md" >}})             |   |
-| Sara J. Codding | ok no.                                                                |   |
+| Erik Yukl | [Zinc ABC Transporters]({{< relref "KBhzinc_abc_transporters.md" >}}) | ? |
+|-----------|-----------------------------------------------------------------------|---|
+| Wentao Li | [Calpains ... AFIB]({{< relref "KBhcalpains_afib.md" >}})             |   |
+
+**Drug Design w/ AI**
+
+| Alpha Lee, PostEra | [ML COVID Drug Discovery]({{< relref "KBhml_drug_discovery.md" >}})     | 10.1101/2020.10.29.339317                                                                              |
+|--------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| David Baker, UW    | [De Novo Protein Design]({{< relref "KBhde_novo_protein_design.md" >}}) | [RFDiffusion]({{< relref "KBhrfdiffusion.md" >}}), [RoseTTAFold2]({{< relref "KBhrosettafold2.md" >}}) |
+| Relay Therapeutics |                                                                         |                                                                                                        |
 
 
 ## Things to Google {#things-to-google}
@@ -38,3 +44,5 @@ draft = false
 -   <https://www.charmm-gui.org/>
 -   [GenSLMs]({{< relref "KBhgenslms.md" >}}): LLMs, but genome sequence
 -   [representation learning]({{< relref "KBhrepresentation_learning.md" >}})
+-   [RFDiffusion]({{< relref "KBhrfdiffusion.md" >}})
+-   "quantum chemistry"
