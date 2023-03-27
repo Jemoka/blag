@@ -32,10 +32,11 @@ draft = false
 
 **Drug Design w/ AI**
 
-| Alpha Lee, PostEra | [ML COVID Drug Discovery]({{< relref "KBhml_drug_discovery.md" >}})                             | 10.1101/2020.10.29.339317                                                                              |
-|--------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| David Baker, UW    | [De Novo Protein Design]({{< relref "KBhde_novo_protein_design.md" >}})                         | [RFDiffusion]({{< relref "KBhrfdiffusion.md" >}}), [RoseTTAFold2]({{< relref "KBhrosettafold2.md" >}}) |
-| Relay Therapeutics | [Active Learning Molecule Iteration]({{< relref "KBhactive_learning_molecule_iteration.md" >}}) |                                                                                                        |
+| Alpha Lee, PostEra   | [ML COVID Drug Discovery]({{< relref "KBhml_drug_discovery.md" >}})                             | 10.1101/2020.10.29.339317                                                                              |
+|----------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| David Baker, UW      | [De Novo Protein Design]({{< relref "KBhde_novo_protein_design.md" >}})                         | [RFDiffusion]({{< relref "KBhrfdiffusion.md" >}}), [RoseTTAFold2]({{< relref "KBhrosettafold2.md" >}}) |
+| Relay Therapeutics   | [Active Learning Molecule Iteration]({{< relref "KBhactive_learning_molecule_iteration.md" >}}) |                                                                                                        |
+| Rommie E Amary, UCSD | [Immunogen Design]({{< relref "KBhimmunogen_design.md" >}})                                     |                                                                                                        |
 
 
 ## Things to Google {#things-to-google}
@@ -47,3 +48,4 @@ draft = false
 -   [RFDiffusion]({{< relref "KBhrfdiffusion.md" >}})
 -   "quantum chemistry"
 -   <https://www.biosolveit.de/infiniSee>
+-   what tool do these people use to make these?
