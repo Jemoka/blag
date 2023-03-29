@@ -17,3 +17,4 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-14 Tue&gt;</span></span> | [NUS-MATH530 5.A and Discussion]({{< relref "KBhnus_math530_5_a_and_discussion.md" >}})             |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-02-20 Mon&gt;</span></span> | [NUS-MATH530 5.A Problem 14]({{< relref "KBhnus_math530_5_a_problem_14.md" >}})                     |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-16 Thu&gt;</span></span> | [NUS-MATH530 Changing Bases]({{< relref "KBhnus_math530_changing_bases.md" >}})                     |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-03-28 Tue&gt;</span></span> | [NUS-MATH530 5.C Problem 7]({{< relref "KBhnus_math530_5_c_problem_7.md" >}})                       |
