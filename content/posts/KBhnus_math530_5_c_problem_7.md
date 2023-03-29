@@ -29,9 +29,7 @@ To complete the proof, we now perform casework.
 
 ### \\(\lambda\\) appears \\(0\\) times {#lambda-appears-0-times}
 
-Per our discussion above, this implies that there are \\(0\\) (trivially linearly independent) eigenvectors for which \\(\lambda\\) serves as its eigenvalue. Namely, that means \\(\lambda\\) is not an eigenvalue of \\(A\\).
-
-And therefore, we have that \\(T - \lambda I\\) is injective, and hence \\(null (T - \lambda I) = {0}\\). Recall that \\(E(\lambda, T) = null(T-\lambda I)\\). We now have \\(\dim\ E(\lambda, T) = 0\\), as desired.
+Per our discussion above, this implies that there are \\(0\\) (trivially linearly independent) eigenvectors for which \\(\lambda\\) serves as its eigenvalue. Namely, that means \\(\lambda\\) is not an eigenvalue of \\(A\\). And therefore, we have that \\(T - \lambda I\\) is injective, and hence \\(null (T - \lambda I) = {0}\\). Recall that \\(E(\lambda, T) = null(T-\lambda I)\\). We now have \\(\dim\ E(\lambda, T) = 0\\), as desired.
 
 
 ### \\(\lambda\\) appears \\(n\\) times {#lambda-appears-n-times}
