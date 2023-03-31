@@ -107,9 +107,32 @@ Woof. This is quite a scary loss function; let's break it up into pieces.
 L\_{g}(\bold{z}\_{i}) = -\log (D(G(\bold{z}\_{i})))
 \end{equation}
 
-The sharp-eyed among you may realize that this is just the right term from the above expression without the \\(1-\\) negation. Indeed, the training target for the "generator" is very simple: "did I fool the descriminator"?
+The sharp-eyed among you may realize that this is just the right term from the above expression without the \\(1-\\) negation. Indeed, the training target for the **generator** is very simple: "did I fool the descriminator": if \\(D\\) produces a large (close to \\(1\\)) output on the generated result---indicating that it is indeed "fooled"---our \\(log\\) will approach \\(0\\); whereas, if \\(D\\) produces a small (close to \\(0\\)) output on the generated result---indicating that it correctly spotted the fake---our \\(log\\) will produce a very negative value which creates high loss.
 
 
-## The Training Loop {#the-training-loop}
+## The GAN Training Loop {#the-gan-training-loop}
 
-Loss functions in place, we are almost ready to make the model.
+Loss functions in place, we are almost ready to make the model. The thing that's tricky about training a GAN is that we have to ensure that _both_ the **descriminator** and **generator** are converging at the same exact time: ensuring that neither Capone nor Ness has _dramatically_ better technology than the other. This requires a little bit of finesse on your part in terms of the training loop. Plus, our loss functions here are quite special, so their definitions will also need a little wrangling.
+
+At this point, though, I hope we are all pretty confident in how to structure the basics of a ML model. Instead of going over that again, let's go over some of the differences in Python pseudo-code (code that doesn't run, but to illustrate how you would write it)---specially in three focus areas.
+
+
+### Dataprep {#dataprep}
+
+Just a short note here on GAN data prep. What's the special thing about GANs? They are **self-supervised**---meaning they make their own labels. Instead, all you need to provide is plenty of examples of the thing you want your model to generate.
+
+As such, your batch wouldn't contain `x_data`, `y_data`, etc. Instead, your dataset code should look something of the flavor:
+
+```python
+image_grid = example_data_for_the_gan_numpy()
+
+dataset = TensorDataset(torch.tensor(image_grid).float()) # only one argument!
+dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
+```
+
+You will notice that the `TensorDataset` here took only _one_ argument as input, as opposed to the usual 2: this is, as we discussed before, as product of the fact that our GAN only needs examples of the thing you want it to generate---no labels needed (or possible!)
+
+
+### Initialization {#initialization}
+
+Of course, we need to build two different
