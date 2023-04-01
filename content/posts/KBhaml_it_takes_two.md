@@ -230,7 +230,7 @@ and hence:
 generator_loss = (-torch.log(disc_score))
 ```
 
-<span class="underline">Thinking break!</span>: why is the code the same thing as the math? Pause and discuss.
+<span class="underline">Thinking break!</span>: why does implementing `(-torch.log(disc_score))` accomplish the same thing as taking \\(-\log (D(G(\bold{z}\_{i})))\\)? Specifically, how is `disc_score` calculated in our example?
 
 
 #### The generator backprop step {#the-generator-backprop-step}
@@ -299,7 +299,7 @@ Tada! That's it; the GAN training loop.
 
 Sorry for the very theoretically dense unit; please don't hesitate to flag us down if any questions take place. To leave you, here are a few final tips and tricks for making GANs.
 
-1.  If your model doesn't work, try **pretraining** the **discriminator**: letting Eliot Ness get a bit of a head start by training the discriminator to recognize noise from real images; to do this, just don't the code that updates the generator weights.
+1.  If your model doesn't work, try **pretraining** the **discriminator**: letting Eliot Ness get a bit of a head start by training the discriminator to recognize noise from real images; to do this, just don't run the code that updates the generator weights.
 2.  GANs are known to perform something called **mode collapse**: whereby, instead of reaching **Nash equilibrium**, one of the two networks crash while the other one completely converges. One attempt to solve this is something called **Wassterstein Loss**, which is [discussed here](https://developers.google.com/machine-learning/gan/loss#wasserstein-loss) (<https://developers.google.com/machine-learning/gan/loss#wasserstein-loss>). One important note, however, is that using this loss function makes your network _technically_ not a GAN anymore (as the **discriminator** will not be actually usefully discriminating, instead acting as a "**critic**" for the generator only producing non-interpretable scores), but it has shown improved performance for the **generator** only.
 3.  GANs are notoriously hard to make work. [See this whole page from Google](https://developers.google.com/machine-learning/gan/problems) (<https://developers.google.com/machine-learning/gan/loss>) about the various ways GANs can fail and possible strategies to remedy them. **Do not** be scared if your model doesn't work immediately or even after copious tuning.
 
