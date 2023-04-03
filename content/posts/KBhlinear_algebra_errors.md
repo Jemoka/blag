@@ -59,3 +59,8 @@ draft = false
 ## Polynomials Quiz {#polynomials-quiz}
 
 -   state the fundamental theorem of algebra; error: \\(\mathcal{P}\_{m}(\mathbb{F})\\) is a [vector space]({{< relref "KBhvector_space.md" >}}) of [polynomial]({{< relref "KBhpolynomial.md" >}})s with degree _at most \\(m\\)_, and yet the FtOA requires _exactly \\(m\\)_
+
+
+## Upper Triangular Quiz {#upper-triangular-quiz}
+
+-   upper-triangular representation is findable when the space is 1) under complexes and 2) for finite-dimensional vector spaces; need BOTH conditions
