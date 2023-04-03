@@ -5,4 +5,4 @@ sitemap:
 layout: "search"
 ---
 
-This file exists solely to respond to /search URL with the related `search` layout template.
+Search the knowledgbase.

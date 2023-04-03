@@ -5,4 +5,4 @@ sitemap:
 layout: "blagger"
 ---
 
-This file exists solely to respond to /search URL with the related `search` layout template.
+Ask and ye shall receive: blagger is a suite of tools based on BM25 bag-of-words search and a RoBERTa model fine-tuned on SQuAD to answer questions regarding the content in the knowledgebase.
