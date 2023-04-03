@@ -60,7 +60,7 @@ function query() {
                                         score:res.extractive_score.toFixed(3),
                                         link:res.permalink,
                                         before:res.extractive_padding[0],
-                                        after:res.extractive_padding[1],
+                                        after:" "+res.extractive_padding[1],
                                         answer:res.extractive_answer,
                                     });
                 $('#search-results').html(output);
