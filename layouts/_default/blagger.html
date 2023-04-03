@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ partial "header" . }}
+
+<div id="searchutil" >
+    <div id="searchboxcontain">
+    <input id="search-query" name="s" autocomplete="off" placeholder="Ask me a question!" enterkeyhint="search"/>
+    <button id="search-button" title="Query the model!"><i class="fas fa-paper-plane"></i></button>
+    </div>
+    <div id="postulating">
+        <div class="lds-facebook"><div></div><div></div><div></div></div>
+        <span>Postulating...</span>
+    </div>
+
+<div id="search-results">
+    <div id="qa-warning">
+        Hello! This is <span style="font-weight: 500">blagger</span>, a suite of tools based on <code>BM25</code> bag-of-words search and a <code>RoBERTa</code> model fine-tuned on <code>SQuAD</code> to answer questions regarding the content in the knowledgebase. <br /> <br />
+         Type a question above, and we will do our best to try to answer it using only the text found in this knowledgebase. Please note that, because the results here are given by a large language-model, they may not represent anything to do with the question you asked. <br /><br />
+        Obviously, this is experimental software.
+
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.0/fuse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js"></script>
+<script src="{{ "js/blagger.js" | relURL }}"></script>
+<!-- this template is sucked in by search.js and appended to the search-results div above. So editing here will adjust style -->
+<script id="search-result-template" type="text/x-js-template">
+    <div id="qa-summary">
+    <h4 id="qa-title"><a href="${link}">${title}</a></h4> <span id="qa-scorebox">Confidence: <span id="qa-score">${score}</span></span>
+    <div id="qa-response">
+    <span class="qa-padding">${before}</span><span class="qa-answer">${answer}</span><span class="qa-padding">${after}</span>
+    </div>
+    </div>
+</script>
+
+<script id="search-error-template" type="text/x-js-template">
+    <div id="qa-error"><p style="font-weight: 500">Apologies, but it doesn't seem like I have good answer for your question.</p> <p>This could mean that we are very unsure about a possible answer, or that no article on this matter is found in the knowledgebase. Please check back later for both more content and an improved algorithm! </p><p>In the meantime, why don't you try <a target="_blank" rel="noopener noreferrer" href="/search">traditional search</a>?</p></div>
+</script>
+
+{{ partial "footer" . }}
+{{ end }}
