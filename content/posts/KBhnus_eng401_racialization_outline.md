@@ -10,7 +10,9 @@ draft = false
 
 Sharpe Wake; Sears Duet
 
-"The creation of the frequently arbitrary racial of 'Black' for people of African descent allows the arbitrary persecution due to the label's unclear boundaries; furthermore, this persecution continues to modern day: 'holding' a person into seemingly self-inflicted cycles of abuse where the only true way out is to embrace and assimilate into white society."
+**DEFINE wake-work**
+
+"The creation of the arbitrarily racial of 'Black' for people of African descent allows the arbitrary persecution due to the label's unclear boundaries; furthermore, this persecution continues to modern day: 'holding' a person into seemingly self-inflicted cycles of abuse where the only true way out is to embrace and assimilate into white society."
 
 
 ## Duet, p 56: Black is a term with power to racialist: it has clear influence and no clear category {#duet-p-56-black-is-a-term-with-power-to-racialist-it-has-clear-influence-and-no-clear-category}
