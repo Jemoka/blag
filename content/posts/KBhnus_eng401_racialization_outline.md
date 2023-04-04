@@ -14,6 +14,22 @@ Sharpe Wake; Sears Duet
 
 "The creation of the arbitrarily racial of 'Black' for people of African descent allows the arbitrary persecution due to the label's unclear boundaries; furthermore, this persecution continues to modern day: 'holding' a person into seemingly self-inflicted cycles of abuse where the only true way out is to embrace and assimilate into white society."
 
+-   othello and mona are going through only one trauma each
+-   billy is going through two
+
+Duet: musical composition for two performers with equal importance to the piece.
+
+-   Billy as mother (incestruous) of Othello
+    -   Pieta: motherly holding Jesus (p91)
+    -   Egytion to my mother give (p93);
+    -   Billy doing the murdering (p100)
+
+Vogel =&gt; Desdemona dies; in this one Billy kills instead of dies
+
+CANADA: figure of a black man not leaving her. Lovers not together, paternal love highlighted.
+
+"Wake: unless you deal become awake of the oprressions agaisnt you and relying on each other, you will fall into the white-centric society and join the oppressiors as the only way to get out of the self-sustaining cycle holding you down."
+
 
 ## Duet, p 56: Black is a term with power to racialist: it has clear influence and no clear category {#duet-p-56-black-is-a-term-with-power-to-racialist-it-has-clear-influence-and-no-clear-category}
 
