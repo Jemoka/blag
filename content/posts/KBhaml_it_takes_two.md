@@ -195,7 +195,7 @@ for _ in range(EPOCHS):
         disc_score_false = disc(gen(torch.rand(BATCH_SIZE,YOUR,INPUT,SHAPE,HERE)).detach())
         disc_score_true = disc(batch)
         # compute + backprop discriminator loss
-        discriminator_loss = (-torch.log(disc_score_true)-torch.log(-torch.log(1-disc_score_false)))
+        discriminator_loss = (-torch.log(disc_score_true)-torch.log(1-disc_score_false))
         discriminator_loss.backward()
         # step and clear
         disc_optim.step()
@@ -278,7 +278,7 @@ L\_{d} (\bold{x}\_{i}, \bold{z}\_{i}) = -\log D(\bold{x}\_{i}) - \log  (1- D(G(\
 in code.
 
 ```python
-discriminator_loss = (-torch.log(disc_score_true)-torch.log(-torch.log(1-disc_score_false)))
+discriminator_loss = (-torch.log(disc_score_true)-torch.log(1-disc_score_false))
 ```
 
 
