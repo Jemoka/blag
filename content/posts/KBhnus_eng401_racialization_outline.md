@@ -10,9 +10,9 @@ draft = false
 
 Sharpe Wake; Sears Duet
 
-**DEFINE wake-work**
+**"The creation of the arbitrarily racial of 'Black' for people of African descent allows the arbitrary persecution due to the label's unclear boundaries; furthermore, this persecution continues to modern day: 'holding' a person into seemingly self-inflicted cycles of abuse where the only true way out is to embrace and assimilate into white society."**
 
-"The creation of the arbitrarily racial of 'Black' for people of African descent allows the arbitrary persecution due to the label's unclear boundaries; furthermore, this persecution continues to modern day: 'holding' a person into seemingly self-inflicted cycles of abuse where the only true way out is to embrace and assimilate into white society."
+[define wake in the end]: to be awake is to be aware of this cycle, and be
 
 -   othello and mona are going through only one trauma each
 -   billy is going through two

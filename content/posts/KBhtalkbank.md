@@ -4,6 +4,11 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Dierization {#dierization}
+
+-   Dierization as a Bi-product of ASR
+
+
 ## humans at the end {#humans-at-the-end}
 
 -   do speaker ID in the end
