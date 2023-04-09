@@ -57,6 +57,8 @@ CANADA: figure of a black man not leaving her. Lovers not together, paternal lov
 
 slave trade engine: dragging forward ship
 
+**RECLAIMING**
+
 
 ## Duet, p 56: Black is a term with power to racialist: it has clear influence and no clear category {#duet-p-56-black-is-a-term-with-power-to-racialist-it-has-clear-influence-and-no-clear-category}
 

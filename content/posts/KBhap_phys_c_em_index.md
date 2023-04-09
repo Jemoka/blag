@@ -25,3 +25,4 @@ draft = false
 -   [Ohm's Law]({{< relref "KBhohm_s_law.md" >}})
 -   [resistor]({{< relref "KBhresistors.md" >}})
 -   [kirchoff's laws]({{< relref "KBhkirchoff_s_laws.md" >}})
+-   [Capacitor]({{< relref "KBhcapacitor.md" >}})

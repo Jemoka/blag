@@ -81,6 +81,11 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [Axler 5.C]({{< relref "KBhaxler_5_c.md" >}})
 
 
+## 6 {#6}
+
+-   [Axler 6.A]({{< relref "KBhaxler_6_a.md" >}})
+
+
 ## Misc Knowledge {#misc-knowledge}
 
 -   [algebra]({{< relref "KBhalgebra.md" >}})
@@ -89,8 +94,6 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [additive identity]({{< relref "KBhadditive_identity.md" >}})
 
 
-
-## References
 
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Axler, Sheldon. 1997. <i>Linear Algebra Done Right</i>. Undergraduate Texts in Mathematics. Springer New York. doi:<a href="https://doi.org/10.1007/b97662">10.1007/b97662</a>.</div>
