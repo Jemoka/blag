@@ -69,10 +69,10 @@ So we are not going to go through everything very very carefully. Instead, I'm j
 -   \\(| \text{\\{Re,Im\\}}\ z| \leq |z|\\) both real and imaginary components are smaller than the actual absolute value
 -   \\(|\bar{z}| = |z|\\)
 -   \\(|wz| = |w| |z|\\)
--   \\(|w+z| \leq |w| + |z|\\), the [triangle inequality](#triangle-inequality)
+-   \\(|w+z| \leq |w| + |z|\\), the [triangle inequality](#triangle-inequality--complexes)
 
 
-## triangle inequality {#triangle-inequality}
+## triangle inequality (complexes) {#triangle-inequality--complexes}
 
 For \\(w, z \in \mathbb{C}\\), we do route algebra:
 
