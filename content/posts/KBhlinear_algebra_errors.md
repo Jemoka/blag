@@ -66,6 +66,6 @@ draft = false
 -   upper-triangular representation is findable when the space is 1) under complexes and 2) for finite-dimensional vector spaces; need BOTH conditions
 
 
-## Diagonal quiz?? {#diagonal-quiz}
+## Upper Triangular Quiz {#upper-triangular-quiz}
 
--   Algebraic multiplicity ("real estate" taken on the upper-triangular diagonal) v. geometric multiplicity (amount of linearly independent eigenvectors included with that eigenvalue); so if geometric multiplicity &lt; algebraic multiplicity, the map is not diagonalizable because its not bringing enough linearly independent eigenvectors
+-   UNCLEAR: Geometric Multipliicty is bounded by Algebric Multiplicity; Algebraic multiplicity ("real estate" taken on the upper-triangular diagonal) v. geometric multiplicity (amount of linearly independent eigenvectors included with that eigenvalue); so if geometric multiplicity &lt; algebraic multiplicity, the map is not diagonalizable because its not bringing enough linearly independent eigenvectors
