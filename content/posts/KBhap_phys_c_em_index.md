@@ -26,3 +26,4 @@ draft = false
 -   [resistor]({{< relref "KBhresistors.md" >}})
 -   [kirchoff's laws]({{< relref "KBhkirchoff_s_laws.md" >}})
 -   [Capacitor]({{< relref "KBhcapacitor.md" >}})
+-   [Dynamic RC Circuits]({{< relref "KBhdynamic_rc_circuts.md" >}})

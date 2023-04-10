@@ -32,7 +32,7 @@ E = \frac{1}{2} CV^{2}
 where, \\(E\\) is the energy stored, \\(C\\) the capacitance, and \\(V\\) the [voltage]({{< relref "KBhvoltage.md" >}}) across the capacitor.
 
 
-## voltage across and charge stored on a capacitor {#voltage-across-and-charge-stored-on-a-capacitor}
+## voltage across and max charge stored on a capacitor {#voltage-across-and-max-charge-stored-on-a-capacitor}
 
 \begin{equation}
 Q = CV
