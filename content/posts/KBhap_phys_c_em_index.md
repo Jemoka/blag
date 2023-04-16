@@ -5,16 +5,13 @@ tags = ["index"]
 draft = false
 +++
 
-## Electrostatics {#electrostatics}
-
-
-### Other Factoids {#other-factoids}
+## Other Factoids {#other-factoids}
 
 -   [charged]({{< relref "KBhcharged.md" >}})
 -   [flux]({{< relref "KBhflux.md" >}})
 
 
-### Chapters {#chapters}
+## Chapters {#chapters}
 
 -   [coulomb's law]({{< relref "KBhcoulomb_s_law.md" >}})
 -   [superposition]({{< relref "KBhcoulomb_s_law.md#superposition" >}})

@@ -31,11 +31,23 @@ E = \frac{1}{2} CV^{2}
 
 where, \\(E\\) is the energy stored, \\(C\\) the capacitance, and \\(V\\) the [voltage]({{< relref "KBhvoltage.md" >}}) across the capacitor.
 
+Which, subbing the formula below:
+
+\begin{equation}
+U = \frac{1}{2} \frac{Q^{2}}{C}
+\end{equation}
+
 
 ## voltage across and max charge stored on a capacitor {#voltage-across-and-max-charge-stored-on-a-capacitor}
 
 \begin{equation}
-Q = CV
+C = \frac{Q}{V}
 \end{equation}
 
 where, \\(Q\\) is the change and \\(V\\) the voltage
+
+"the more change the capacitor can store given a voltage, the higher the capacitance."
+
+\begin{equation}
+Q = CV
+\end{equation}
