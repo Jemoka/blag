@@ -24,3 +24,5 @@ draft = false
 -   [kirchoff's laws]({{< relref "KBhkirchoff_s_laws.md" >}})
 -   [Capacitor]({{< relref "KBhcapacitor.md" >}})
 -   [Dynamic RC Circuits]({{< relref "KBhdynamic_rc_circuts.md" >}})
+-   [magnetism]({{< relref "KBhmagnetism.md" >}})
+-   [faraday's law]({{< relref "KBhfaraday_s_law.md" >}})
