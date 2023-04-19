@@ -637,7 +637,15 @@ We go explore, shining lights moving stars
 Finding no target, we cannot expect to see
 How can we explore if we can&amp;rsquo;t even feed? Ourselves? Our families? Our digitaries?</description></item><item><title>Lyu 2018</title><link>https://www.jemoka.com/posts/kbhlyu_2018/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhlyu_2018/</guid><description>DOI: 10.1109/CISP-BMEI.2018.8633126
 A dataset paper with which auditory info about people talking is collected.
-Here are the state-of-the-art as of Laguarta 2021 on the dataset proposed.</description></item><item><title>Mahajan 2021</title><link>https://www.jemoka.com/posts/kbhmahajan_2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhmahajan_2021/</guid><description>DOI: 10.3389/fnagi.2021.623607
+Here are the state-of-the-art as of Laguarta 2021 on the dataset proposed.</description></item><item><title>magnetism</title><link>https://www.jemoka.com/posts/kbhmagnetism/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhmagnetism/</guid><description>For a charge to do something in a magnetic field, it has to have velocity; nothing happens without movement.
+So:
+\begin{equation} \vec{F}_{M} = q \vec{v} \times \vec{B} \end{equation}
+To calculate: magnitude: \(qvB \sin \theta\) + right hand rule.
+Radius You maybe asked to find the radius of the path the particle takes, so:
+\begin{equation} \frac{v^{2}}{r} = a \end{equation}
+So, the net force here is:
+\begin{equation} qvB = Ma \end{equation}
+So plug in and solve</description></item><item><title>Mahajan 2021</title><link>https://www.jemoka.com/posts/kbhmahajan_2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhmahajan_2021/</guid><description>DOI: 10.3389/fnagi.2021.623607
 One-Liner Trained a bimodal model on speech/text with GRU on speech and CNN-LSTM on text.
 Novelty A post-2019 NLP paper that doesn&amp;rsquo;t use transformers! (so faster (they used CNN-LSTM) lighter easier) &amp;ldquo;Our work sheds light on why the accuracy of these models drops to 72.92% on the ADReSS dataset, whereas, they gave state of the art results on the DementiaBank dataset.&amp;rdquo; Notable Methods Bi-Modal audio and transcript processing vis a vi Shah 2021, but with a CNN-LSTM and GRU on the other side.</description></item><item><title>Mahatma Ghandi</title><link>https://www.jemoka.com/posts/kbhmahatma_ghandi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhmahatma_ghandi/</guid><description/></item><item><title>map restriction operator</title><link>https://www.jemoka.com/posts/kbhmap_restriction_operator/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhmap_restriction_operator/</guid><description>Suppose \(T \in \mathcal{L}(V)\), and \(U \subset V\), an invariant subspace under \(T\). Then:
 \begin{equation} T|_{U}(u) = Tu,\ \forall u \in U \end{equation}
