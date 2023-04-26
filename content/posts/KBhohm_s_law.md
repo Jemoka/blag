@@ -20,3 +20,9 @@ P = IV
 \end{equation}
 
 where, \\(P\\) is power, and \\(I\\) the [current]({{< relref "KBhcurrent.md" >}}), and \\(V\\) the [voltage]({{< relref "KBhvoltage.md" >}}).
+
+Alternate formulation of power:
+
+\begin{equation}
+P = I V = \frac{V^{2}}{R} = I^{2} R = \dv{E}{t}
+\end{equation}

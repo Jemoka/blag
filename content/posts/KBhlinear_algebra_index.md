@@ -84,6 +84,7 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 ## 6 {#6}
 
 -   [Axler 6.A]({{< relref "KBhaxler_6_a.md" >}})
+-   [Axler 6.B]({{< relref "KBhaxler_6_b.md" >}})
 
 
 ## Misc Knowledge {#misc-knowledge}
@@ -92,6 +93,7 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [vector]({{< relref "KBhvector.md" >}})
 -   [integer]({{< relref "KBhinteger.md" >}})
 -   [additive identity]({{< relref "KBhadditive_identity.md" >}})
+-   [taxicab norm]({{< relref "KBhtaxicab_norm.md" >}})
 
 
 

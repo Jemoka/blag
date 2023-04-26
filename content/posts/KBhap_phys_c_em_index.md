@@ -26,3 +26,8 @@ draft = false
 -   [Dynamic RC Circuits]({{< relref "KBhdynamic_rc_circuts.md" >}})
 -   [magnetism]({{< relref "KBhmagnetism.md" >}})
 -   [faraday's law]({{< relref "KBhfaraday_s_law.md" >}})
+
+
+## Things to do {#things-to-do}
+
+[AP Phys C EM Things to Do]({{< relref "KBhap_phys_c_em_things_to_do.md" >}})
