@@ -43,7 +43,7 @@ And so, the [orthogonal]({{< relref "KBhorthogonal.md" >}}) condition guarantees
 And so we can just chonk out each of the vectors, apply Pythagoras to the ending bunch and the one removed.
 
 
-#### An orthonormal list is linearly independent {#an-orthonormal-list-is-linearly-independent}
+#### orthonormal list is linearly independent {#orthonormal-list-is-linearly-independent}
 
 Its a corollary of the above is that [orthonormal]({{< relref "KBhorthonormal.md" >}}) lists are [linearly independent]({{< relref "KBhlinear_independence.md" >}}).
 

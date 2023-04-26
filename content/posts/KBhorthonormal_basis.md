@@ -10,7 +10,7 @@ An [Orthonormal basis]({{< relref "KBhorthonormal_basis.md" >}}) is defined as a
 ## Additional Information {#additional-information}
 
 
-### An orthonormal list of the right length is a basis {#an-orthonormal-list-of-the-right-length-is-a-basis}
+### orthonormal list of the right length is a basis {#orthonormal-list-of-the-right-length-is-a-basis}
 
 [An orthonormal list is linearly independent]({{< relref "KBhorthonormal.md#an-orthonormal-list-is-linearly-independent" >}}), and [linearly independent list of length dim V are a basis of V]({{< relref "KBhdimension.md#linearly-independent-list-of-length-dim-v-are-a-basis-of-v" >}}). \\(\blacksquare\\)
 

@@ -71,5 +71,38 @@ on top, which conveniently equals \\(0\\). Meaning \\(\langle e\_{j}, e\_{k} \ra
 By definition of \\(e\_{j}\\) above, \\(v\_{j}\\) can be written as a linear combination of \\(e\_{1}, ... e\_{j-1}\\) as well as a bare \\(e\_{j}\\). Therefore:
 
 \begin{equation}
-span(v\_1, \dots, v\_{j}) \in span (e\_1, \dots e\_{j})
+span(v\_1, \dots, v\_{j}) \subset  span (e\_1, \dots e\_{j})
 \end{equation}
+
+Of course, both subspaces are the same dimension and so extending the basis to \\(v\_{1} ... v\_{j}\\) to \\(e\_{1}, ... e\_{j}\\) would be trivial. So they are equal. Phew. \\(\blacksquare\\)
+
+
+## Corollary Results {#corollary-results}
+
+
+### Every [Inner Product Space]({{< relref "KBhinner_product.md#inner-product-space" >}}) has an [orthonormal basis]({{< relref "KBhorthonormal_basis.md" >}}) {#every-inner-product-space--kbhinner-product-dot-md--has-an-orthonormal-basis--kbhorthonormal-basis-dot-md}
+
+Take any [basis]({{< relref "KBhbasis.md" >}}), [Gram-Schmidt it]({{< relref "KBhgram_schmidt.md" >}}), [orthonormal list of the right length is a basis]({{< relref "KBhorthonormal_basis.md#orthonormal-list-of-the-right-length-is-a-basis" >}}). \\(\blacksquare\\)
+
+
+### Orthonormal list extended to [orthonormal basis]({{< relref "KBhorthonormal_basis.md" >}}) {#orthonormal-list-extended-to-orthonormal-basis--kbhorthonormal-basis-dot-md}
+
+Based on the procedure above, [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}}) does nothing to already orthonormal vectors: the inner products between any yet-to-be-reghramschmidt'd already orthonormal vector will be \\(0\\), so nothing will be subtracted.
+
+So, suppose you have an [orthonormal]({{< relref "KBhorthonormal.md" >}}) list \\(e\_1, ..., e\_{m}\\) in \\(V\\), which because [orthonormal list is linearly independent]({{< relref "KBhorthonormal.md#orthonormal-list-is-linearly-independent" >}}), can be [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})'d to the same thing.
+
+As [a linearly independent list expends to a basis]({{< relref "KBhbasis.md#a-id-45384b28-f1e3-4fb1-aeb2-21c875834744-linearly-independent-list-expends-to-a-id-f88170b1-08b5-48a7-a7b5-1ace768e7b28-basis" >}}), go do that. Now [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting this new thing won't change \\(e\_1, ... e\_{m}\\) at all, but will give you extra [orthonormal]({{< relref "KBhorthonormal.md" >}}) vectors to them which all form the basis as its the right length.
+
+
+### Orthonormal upper-triangular matrix basis exists if normal upper-triangular exists {#orthonormal-upper-triangular-matrix-basis-exists-if-normal-upper-triangular-exists}
+
+Note that [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting doesn't actually change the span; meaning, if you have an [upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md" >}}), you must have each \\(span(v\_1, ...v\_{j})\\) be invariant under \\(T\\).
+
+Now, recall that [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting doesn't actually change span; therefore, if each \\(span (v\_1, ... v\_{j})\\) is invariant under \\(T\\), then each \\(span(e\_1, ... e\_{j}) = span(v\_1, ... v\_{j})\\)  after [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting is _still_ [invariant]({{< relref "KBhinvariant_subspace.md" >}}) under \\(T\\). So we can actually build an [upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md" >}}) out of the [orthonormal]({{< relref "KBhorthonormal.md" >}})ized matrix as well.
+
+
+### Schur's Theorem {#schur-s-theorem}
+
+Support \\(V\\) is a finite-dimensional complex vector space, then \\(T\\) has an [upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md" >}}) w.r.t. an [orthonormal basis]({{< relref "KBhorthonormal_basis.md" >}}) of \\(V\\).
+
+[every complex operator has an upper-triangular matrix]({{< relref "KBhupper_triangular_matrix.md#every-complex-operator-has-an-id-af53dbd7-0421-4039-a9f9-9080ea6e1c42-upper-triangular-matrix" >}}); and [orthonormal upper-triangular matrix basis exists if normal upper-triangular exists](#orthonormal-upper-triangular-matrix-basis-exists-if-normal-upper-triangular-exists).
