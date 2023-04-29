@@ -4,9 +4,19 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Dierization {#dierization}
+## combining {#combining}
 
--   Dierization as a Bi-product of ASR
+-   bash script to run batchalign multiple times throughout the directories
+
+
+## Removing {#removing}
+
+-   removing non-auditory SBCA corpus area
+
+
+## Diarization {#diarization}
+
+-   Diarization as a Bi-product of ASR
 
 
 ## humans at the end {#humans-at-the-end}
