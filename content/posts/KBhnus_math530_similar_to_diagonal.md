@@ -6,6 +6,8 @@ draft = false
 
 Prove but \\(T\\) is [diagonalizable]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}) if and only if the matrix of \\(T\\) is similar to a diagonal matrix.
 
+"yaaas cwen
+
 ---
 
 Given similarity.
