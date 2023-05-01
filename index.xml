@@ -841,12 +841,13 @@ Let&amp;rsquo;s take two vectors \(\vec{u} \in V\) and \(\vec{v} \in V\). The or
 \begin{equation} \vec{u}\times \vec{v} \end{equation}
 by the definition of the cross product.
 The points on the plane, therefore, have to be orthogonal themselves to this normal vector. This means that the dot product of the candidate vector against these vectors should be \(0\):</description></item><item><title>NUS-MATH530 Similar to Diagonal</title><link>https://www.jemoka.com/posts/kbhnus_math530_similar_to_diagonal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_similar_to_diagonal/</guid><description>Prove but \(T\) is diagonalizable if and only if the matrix of \(T\) is similar to a diagonal matrix.
-&amp;ldquo;yaaas cwen
-Given similarity.
-Here&amp;rsquo;s a brief review of similarity:
-A matrix \(T\) is similar to another matrix \(B\) if an only if there exists another invertible matrix \(A\) such that:
-\begin{equation} B = A^{-1} T A \end{equation}
-Now, we are given \(B\) is a diagonal matrix. Let \(\lambda\) be an eigenvalue of \(B\):</description></item><item><title>NUS-MATH530 Solving Systems</title><link>https://www.jemoka.com/posts/kbhnus_math530_solving_systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_solving_systems/</guid><description>Two Variables Let&amp;rsquo;s begin with the equations:
+Try 2.
+Given similarity:
+So we have that:
+\begin{equation} D = S^{-1} A S \end{equation}
+where, \(D\) is diagonal. We apply \(S\) to both sides to yield:
+\begin{equation} SD = AS \end{equation}
+Now, note that \(S\) is invertible. This means that its columns are linearly independent (as it is an operator, which means it is injective, and hence has a zero null space; that indicates that the dimension of its range is that of the whole space: indicating its columns vectors are spanning; there is \(dim\ V\) such columns, so it is a basis and hence linearly independent).</description></item><item><title>NUS-MATH530 Solving Systems</title><link>https://www.jemoka.com/posts/kbhnus_math530_solving_systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jemoka.com/posts/kbhnus_math530_solving_systems/</guid><description>Two Variables Let&amp;rsquo;s begin with the equations:
 \begin{equation} \begin{cases} 2x+y = 3 \\ x - y = 0 \end{cases} \end{equation}
 We will first change this into a matrix equation:
 \begin{equation} \begin{pmatrix} 2 &amp;amp; 1 \\ 1 &amp;amp; -1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 3 \\ 0 \end{pmatrix} \end{equation}
