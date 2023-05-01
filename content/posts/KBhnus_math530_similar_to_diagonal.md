@@ -6,60 +6,36 @@ draft = false
 
 Prove but \\(T\\) is [diagonalizable]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}) if and only if the matrix of \\(T\\) is similar to a diagonal matrix.
 
-"yaaas cwen
+Try 2.
 
 ---
 
-Given similarity.
+Given similarity:
 
-Here's a brief review of similarity:
-
-A matrix \\(T\\) is _similar_ to another matrix \\(B\\) if an only if there exists another invertible matrix \\(A\\) such that:
+So we have that:
 
 \begin{equation}
-B = A^{-1} T A
+D = S^{-1} A S
 \end{equation}
 
-Now, we are given \\(B\\) is a diagonal matrix. Let \\(\lambda\\) be an eigenvalue of \\(B\\):
+where, \\(D\\) is diagonal. We apply \\(S\\) to both sides to yield:
 
 \begin{equation}
-B v =  \lambda v
+SD = AS
 \end{equation}
 
-for some \\(v \in V\\) and \\(\lambda \in \mathbb{F}\\).
+Now, note that \\(S\\) is invertible. This means that its columns are linearly independent (as it is an operator, which means it is injective, and hence has a zero null space; that indicates that the dimension of its range is that of the whole space: indicating its columns vectors are spanning; there is \\(dim\ V\\) such columns, so it is a basis and hence linearly independent).
 
-Substituting the above definition in:
+Let \\(S = [v\_1 | \dots | v\_{n}]\\); now, \\(SD = [\lambda\_{1} v\_1 | \dots | \lambda\_{n} v\_{n}]\\).
 
-\begin{equation}
-A^{-1} T A v= \lambda v
-\end{equation}
+By that same definition above course, \\(A[v\_1 | \dots | v\_{n}] = [\lambda\_{1} v\_1 | \dots | \lambda\_{n} v\_{n}]\\).
 
-Applying \\(A\\) to both sides:
-
-\begin{equation}
-A A^{-1} T A v = \lambda Av
-\end{equation}
-
-Recall that \\(A A^{-1} = I\\), so:
-
-\begin{equation}
-TAv = \lambda Av
-\end{equation}
-
-Now, this renders \\(Av\\) as eigenvector of \\(T\\), and \\(\lambda\\) still an eigenvalue.
-
-In a similar fashion, we can show the other direction. Hence, WLOG, \\(T\\) and \\(B\\) has the same eigenvalues.
-
-Given \\(T\\) and \\(B\\) belong to the same space, and \\(B\\) is diagonalizable (it has enough eigenvalues as dimensions), \\(T\\) is diagonalizable.
+Finally, then, by definition, \\(v\_1 \dots v\_{n}\\) are eigenvectors of \\(A\\). Note again that, per the above, this is \\(n\\) linearly independent eigenvectors in a space of \\(\dim n\\) --- this makes them a basis of \\(V\\). Having made a basis of eigenvectors of \\(A\\), it is diagonalizable.
 
 ---
 
-Given diagonalizable.
+Given diagonalizability:
 
-Therefore, there is a basis of eigenvectors of \\(T\\) which form \\(V\\). Construct a matrix \\(A\\) where the eigenvectors are arranged in its columns. As the list is a basis, the column space of \\(A\\) spans all of \\(V\\); this makes \\(A\\) subjective and also invertible.
+Construct \\(S= [v\_1 | \dots | v\_{n}]\\), a basis of eigenvectors of \\(A\\) which is diagonalizable. Now, \\(AS\\) would send each of the vectors to their corresponding scales, meaning: \\(AS = [\lambda\_{1} v\_{1} | \dots | \lambda\_{n} v\_{n}]\\).
 
-Now, construct \\(B\\) with diagonals where each slot contains the eigenvalue where each eigenvector is mapped to by \\(T\\). By construction, therefore, \\(A^{-1}BA\\) behaves in the same way as \\(T\\).
-
-Having shown by construction \\(T = A^{-1}BA\\), \\(B\\) a diagonal matrix is similar to \\(T\\).
-
-Having shown both directions, \\(\blacksquare\\)
+Lastly, applying \\(S^{-1}\\) again would send each vector to each of the standard basis encoded in the original space given homogeneity of the \\(\lambda\\); leaving the vector of \\(\lambda\_{j}\\) scaled by the identity: creating a diagonal \\(D\\) matrix. \\(\blacksquare\\)
