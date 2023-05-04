@@ -69,3 +69,9 @@ draft = false
 ## Upper Triangular Quiz {#upper-triangular-quiz}
 
 -   UNCLEAR: Geometric Multipliicty is bounded by Algebric Multiplicity; Algebraic multiplicity ("real estate" taken on the upper-triangular diagonal) v. geometric multiplicity (amount of linearly independent eigenvectors included with that eigenvalue); so if geometric multiplicity &lt; algebraic multiplicity, the map is not diagonalizable because its not bringing enough linearly independent eigenvectors
+
+
+## Diagonalization Quiz {#diagonalization-quiz}
+
+-   enough eigenvalues go in only one direction: it existing means its diagonalizable, but the opposite isn't true
+-   the proof for \\(T\\) is diagonalizable IFF the matrix \\(T\\) is similar to a diagonal matrix: [NUS-MATH530 Similar to Diagonal]({{< relref "KBhnus_math530_similar_to_diagonal.md" >}})

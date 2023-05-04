@@ -34,6 +34,7 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [strong induction]({{< relref "KBhstrong_induction.md" >}})
 -   [algebreic multiplicity]({{< relref "KBhalgebreic_multiplicity.md" >}})
 -   [geometric multplicity]({{< relref "KBhgeometric_multplicity.md" >}})
+-   [matrix adjectives]({{< relref "KBhmatrix_adjectives.md" >}})
 
 
 ## Homework {#homework}
@@ -96,6 +97,8 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [taxicab norm]({{< relref "KBhtaxicab_norm.md" >}})
 
 
+
+## References
 
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Axler, Sheldon. 1997. <i>Linear Algebra Done Right</i>. Undergraduate Texts in Mathematics. Springer New York. doi:<a href="https://doi.org/10.1007/b97662">10.1007/b97662</a>.</div>

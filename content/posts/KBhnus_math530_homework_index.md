@@ -21,3 +21,4 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-04-07 Fri&gt;</span></span> | [NUS-MATH530 Geometric Multiplicity]({{< relref "KBhnus_math530_geometric_multiplicity.md" >}})     |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-04-12 Wed&gt;</span></span> | [NUS-MATH530 Some 6.A Problems]({{< relref "KBhnus_math530_some_6_a_problems.md" >}})               |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-04-14 Fri&gt;</span></span> | [NUS-MATH530 Similar to Diagonal]({{< relref "KBhnus_math530_similar_to_diagonal.md" >}})           |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-05-04 Thu&gt;</span></span> | [NUS-MATH530 Matrix Adjectives]({{< relref "KBhnus_math530_matrix_adjectives.md" >}})               |

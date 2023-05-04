@@ -4,6 +4,13 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## little things {#little-things}
+
+-   apostrophies for quotes
+-   the word separation error
+    -   put tilde BETWEEN specific symbols with connection symbols
+
+
 ## combining {#combining}
 
 -   bash script to run batchalign multiple times throughout the directories
