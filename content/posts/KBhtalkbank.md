@@ -4,11 +4,18 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## little things {#little-things}
+-   ASR model + WER
+-   tildes and noprompt swapped
 
+
+## things {#things}
+
+-   swap noprompt backwards
 -   apostrophies for quotes
 -   the word separation error
     -   put tilde BETWEEN specific symbols with connection symbols
+-   jemoka becomes batchalign 2
+-   Extended UD?
 
 
 ## combining {#combining}

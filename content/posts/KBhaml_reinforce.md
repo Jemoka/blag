@@ -55,13 +55,14 @@ Ok, this is where the math will begin. I encourage you to take a piece of paper 
 If you want to learn this more, the conceptual basis we are working with is called **policy gradient**, specifically the **REINFORCE** algorithm. This is _not even close_ to being the only way to approach the Reinforcement Learning task; but its one fairly interesting and successful approach.
 
 
-### The Environment: State, Action, and Policy {#the-environment-state-action-and-policy}
+### The Environment: Agent, State, Action, and Policy {#the-environment-agent-state-action-and-policy}
 
 Three variables underlie the basics of **Reinforcement Learning**:
 
 -   **state** \\(s\_{t}\\): the "situation" of the **environment**, what can be "observed"; for our example above, this looks like the forces on each limb of our humanoid.
--   **action** \\(a\\): a certain perturbation one can do to the **environment**; for our example, this looks like moving ("translating"/"applying force on") one or many limbs.
+-   **action** \\(a\\): a certain perturbation one can do to the agent which will influence its **state**; for our example, this looks like moving ("translating"/"applying force on") one or many limbs.
 -   **policy** \\(\pi\\): the **policy** is a function which takes the **state** as input, and produces a probability distribution (think "softmax") over all the **actions** one could choose. We will talk extensively about this shortly.
+-   **agent**: a general term describing the actual thing being controlled; for instance, our humanoid.
 
 ---
 
@@ -82,10 +83,18 @@ Instead of calculating the difference between the desired and actual output of t
 
 Unlike what we are used to with the loss, this **reward** value is _not_ differentiable w.r.t. the parameters of the network! The action is a _sample_ from the distribution; so this score can be generated however you'd like. Furthermore, unlike what we are used to with **loss**, a **higher** **reward** value means a better action.
 
-For our example, for instance, this could mean if we raised the agent's head higher at that step.
-
 
 ### Cumulative Discounted Reward {#cumulative-discounted-reward}
+
+Note again the expression for that reward statement:
+
+\begin{equation}
+r\_{t}(s\_{t}, a\_{t})
+\end{equation}
+
+each of these variables are parameterized by this subscript $t$---meaning reward is calculated _per time!_ This actually presents us a problem to describe the overall behavior of our agent.
+
+For instance, the act of "standing up" often require
 
 
 ### Policy Gradient Theorem {#policy-gradient-theorem}

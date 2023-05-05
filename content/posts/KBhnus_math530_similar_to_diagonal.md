@@ -24,7 +24,7 @@ where, \\(D\\) is diagonal. We apply \\(S\\) to both sides to yield:
 SD = AS
 \end{equation}
 
-Now, note that \\(S\\) is invertible. This means that its columns are linearly independent (as it is an operator, which means it is injective, and hence has a zero null space; that indicates that the dimension of its range is that of the whole space: indicating its columns vectors are spanning; there is \\(dim\ V\\) such columns, so it is a basis and hence linearly independent).
+Now, note that \\(S\\) is invertible. This means that its column s are linearly independent (as it is an operator, which means it is injective, and hence has a zero null space; that indicates that the dimension of its range is that of the whole space: indicating its columns vectors are spanning; there is \\(dim\ V\\) such columns, so it is a basis and hence linearly independent).
 
 Let \\(S = [v\_1 | \dots | v\_{n}]\\); now, \\(SD = [\lambda\_{1} v\_1 | \dots | \lambda\_{n} v\_{n}]\\).
 
