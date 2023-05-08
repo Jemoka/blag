@@ -4,6 +4,12 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Factoids: {#factoids}
+
+-   \\((AB)^{\*} = B^{\*} A^{\*}\\), \\((A+B)^{\*} = A^{\*} + B^{\*}\\)
+-
+
+
 ## Result 1: an unitary operator is invertible, and the inverse of its matrix representation is its transpose {#result-1-an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose}
 
 Take \\(M\\) an unitary square matrix, with orthonormal columns. Note that this matrix, by construction, sends each basis \\(v\_{j}\\) to $e<sub>j</sub>$---a set of \\(dim\ V\\) (as there are \\(dim\ V\\) columns to \\(M\\)) linearly independent (as \\(e\_{j}\\), through orthonormality, are linearly independent) vectors. As we have \\(dim\ V\\) linearly independent vectors, the \\(e\_{j}\\) form a basis. As each \\(v\_{j}\\) is sent to $e<sub>j</sub>$---both a basis of $V$---we note that the finite-dimensional operator corresponding to \\(M\\) is subjective and hence invertible.
@@ -67,14 +73,12 @@ Evidently, this matrix is no longer symmetric (i.e. not self adjoint).
 
 ### Unitary {#unitary}
 
-Not closed under multiplication:
-
-\begin{equation}
-\mqty( \frac{2}{\sqrt{5}} & 0 & 1 \\\ 0 & 1 & 0 \\\ \frac{1}{\sqrt{5}} & 0 & -\frac{2}{\sqrt{5}}) \mqty(0 & \frac{1}{\sqrt{2}} & \frac{4}{\sqrt{32}} \\\ 0 & \frac{1}{\sqrt{2}} & -\frac{4}{\sqrt{32}} \\\ 1 & 0 & 0)
-\end{equation}
+Do form a group!
 
 
 ### Normal {#normal}
+
+There's no inverse for \\(0\\).
 
 Is this proof taking too much of a shortcut? / Wishywashy.
 
@@ -85,3 +89,36 @@ By calculation, diagonal matricies' multiplication is closed.
 We now inherit the identity and associativity from general matricies.
 
 So invertible normal matricies form a group.
+
+
+## "Matrix Adjoint" {#matrix-adjoint}
+
+\\(A^{\*}\\) is the **adjoint** of the matrix.
+
+That:
+
+\begin{equation}
+\langle Tv,w \rangle = \langle v, T^{\*}w \rangle
+\end{equation}
+
+{{< figure src="/ox-hugo/2023-05-08_09-42-00_screenshot.png" >}}
+
+---
+
+1.  \\(A = A^{\*} \implies \lambda\_{i} \in \mathbb{R}\\)
+2.  \\(A^{\*} A = A A^{\*} \implies\\) diagonalizable based on an orthonormal basis of eigenvectors
+3.  \\(A\\) is orthogonal/unitary \\(\implies\\) \\(A^{\*} = A^{-1}\\)
+
+---
+
+**7.13**: E.v. of self-adjoint operators are real.
+
+7.14: Over \\(\mathbb{C}\\), \\(Tv\\) is orthogonal to all \\(v\\) IFF \\(T\\) is the zero matrix
+
+7.16: Over \\(\mathbb{R}\\), \\(Tv\\) is orthogonal to all \\(v\\) and \\(T\\) is self-adjoint, then \\(T\\) is the zero matrix
+
+**7.22**: eigenvectors of \\(T\\) corresponding to distinct eigenvalues are orthogonal if \\(T \in \mathbb{L}(V)\\) is normal.
+
+Also **7.24**: the spectral theorem---that if \\(T\\) is normal, then \\(V\\) has an orthonormal basis of eigenvectors of \\(T\\) and so \\(T\\) is diagonalizable with respect to an orthonormal basis
+
+Recall "normal": \\(A A^{\*} = A^{\*} A\\)
