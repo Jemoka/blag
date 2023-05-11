@@ -29,7 +29,7 @@ V^{*} M^{*}M V = D
 \end{equation}</p><p>The non-diagonals are zero by definition, the lower-right quadrant is \(0\) because the sub-part of \(V_2\) are eigenvectors corresponding to the zero eigenvalue.</p><p>Now, recall how matricies multiply:</p><p>\begin{align}
 &\mqty(V_1^{*} \\ V_2^{*}) M^{*} M \mqty(V_1\ V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)\\
 \Rightarrow\ &\mqty(V_1^{*} \\ V_2^{*}) \mqty(M^{*} M V_1\ M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0) \\
-\Rightarrow\ &\mqty(V_1^{*} M^{*} M V_1 & V_1^{*} M^{*} M V_2 \\ V_2^{*}M^{*} M V_1 & V_2^{*} M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)
+\Rightarrow\ & \mqty(V_1^{*} M^{*} M V_1 & V_1^{*} M^{*} M V_2 \\ V_2^{*}M^{*} M V_1 & V_2^{*} M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)
 \end{align}</p><hr><p>Tangent part 2&mdash;-</p><p>Ok:</p><p>\begin{equation}
 V_1^{*} V_1 = I
 \end{equation}</p><p>recall, because the rows/columns for \(V_1^{*}\) and \(V_1\) respectively are orthonormal.</p><p>In a similar vein:</p><p>\begin{equation}
@@ -40,12 +40,14 @@ V_1 V_1^{*}
 V V^{*} = I, \mqty(V_1 & V_2) = V
 \end{equation}</p><p>And so:</p><p>\begin{equation}
 \mqty(V_1 & V_2) \mqty(V_1^{*} \\ V_2^{*}) = V V^{*} + I
-\end{equation}</p><p>Finally:</p><p>\begin{equation}
-V_1V_1^{*} + V_2V_2^{*} = \mqty((V_1 & 0) + (0 & V_2)) + \mqty(\mqty(V_1^{*} \\ 0) + \mqty(0 \\ V_2^{*})) = \mqty(V_1 & V_2) \mqty(V_1^{*} \\ V_2^{*}) = V V^{*} + I
-\end{equation}</p><p>Weirdly, we add two non-full rank matricies and end up to be the identity. So, again:</p><p>\begin{equation}
+\end{equation}</p><p>Finally:</p><p>\begin{align}
+V_1V_1^{*} + V_2V_2^{*} &= \qty(\mqty(V_1 & 0) + \mqty(0 & V_2)) + \qty(\mqty(V_1^{*} \\ 0) + \mqty(0 \\ V_2^{*})) \\
+&= \mqty(V_1 & V_2) \mqty(V_1^{*} \\ V_2^{*})\\
+&= V V^{*} + I
+\end{align}</p><p>Weirdly, we add two non-full rank matricies and end up to be the identity. So, again:</p><p>\begin{equation}
 V_1 V_1^{*} + V_2V_2^{*} = I
 \end{equation}</p><hr><p>FINALLY:</p><p><strong>DEFINE</strong> singular values: square roots of <a href=/posts/kbheigenvalue/>eigenvalue</a>s of \(M^{*} M\) are the <strong>singular values</strong> of \(M\).</p><p>Notice! Every <a href=/posts/kbheigenvalue/>eigenvalue</a> of \(M\) is a <strong>singular value</strong> of \(M\); but there maybe more singular values</p><p>Let \(U_1 = M V_1 D^{-\frac{1}{2}}\). (Where the square root of the matrix is the matrix \(D = D^{\frac{1}{2}} D^{\frac{1}{2}}\). Now, \(D^{-\frac{1}{2}} = (D^{\frac{1}{2}})^{-1}\). For diagonal matricies, this is particularly easy: the matrix \(D^{\frac{1}{2}}\) would just be the square roots of the diagonal.)</p><p>Recall that \(V_1 V_1^{*} + V_2V_2^{*} = I\), and that . Consider,</p><p>\begin{equation}
 U_1 D^{\frac{1}{2}} V_1^{*} = (M V_1 D^{-\frac{1}{2}}) (D^{\frac{1}{2}} V_1^{*}) = M V_1 I V_1^{*} = M (I - V_2 V_2^{*}) = M - M V_2 V_2^{*} = M - 0 V_2^{*} = M
 \end{equation}</p><p>You are now good at math.</p><p>So, we now know that:</p><p>\begin{equation}
 M = U_1 D^{\frac{1}{2}} V_1^{*}
-\end{equation}</p><p>\(U_1\) has shape \((m, m-p)\), \(D^{\frac{1}{2}}\) has shape \((m-p, m-p)\), and \(V_1^{*}\) has shape \((m-p,n)\). You can expand \(U_1\)&rsquo;s missing \(p\) column vectors into a basis of \(V\) to make thing things squared; and for the second part, you can add \(V_2\) back. Those get sent to \(0\) so it wouldn&rsquo;t matter. This makes \(D\) <a href=/posts/kbhdiagonal_matrix/#properties-of-diagonal-matrices>diagonalish</a>.</p><p>Will come and clean this up later today.</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>\(U_1\) has shape \((m, m-p)\), \(D^{\frac{1}{2}}\) has shape \((m-p, m-p)\), and \(V_1^{*}\) has shape \((m-p,n)\). You can expand \(U_1\)&rsquo;s missing \(p\) column vectors into a basis of \(V\) to make thing things squared; and for the second part, you can add \(V_2\) back. Those get sent to \(0\) so it wouldn&rsquo;t matter. This makes \(D\) <a href=/posts/kbhdiagonal_matrix/#properties-of-diagonal-matrices>diagonalish</a>.</p><p>Will come and clean this up later today because uht no.</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
