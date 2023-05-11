@@ -128,6 +128,34 @@ Finally:
 V\_1V\_1^{\*} + V\_2V\_2^{\*} = \mqty((V\_1 & 0) + (0 & V\_2)) + \mqty(\mqty(V\_1^{\*} \\\ 0) + \mqty(0 \\\ V\_2^{\*})) = \mqty(V\_1 & V\_2) \mqty(V\_1^{\*} \\\ V\_2^{\*}) = V V^{\*} + I
 \end{equation}
 
-Weirdly, we add two non-full rank matricies and end up to be the identity.
+Weirdly, we add two non-full rank matricies and end up to be the identity. So, again:
+
+\begin{equation}
+V\_1 V\_1^{\*} + V\_2V\_2^{\*} = I
+\end{equation}
 
 ---
+
+FINALLY:
+
+**DEFINE** singular values: square roots of [eigenvalue]({{< relref "KBheigenvalue.md" >}})s of \\(M^{\*} M\\) are the **singular values** of \\(M\\).
+
+Notice! Every [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(M\\) is a **singular value** of \\(M\\); but there maybe more singular values
+
+Let \\(U\_1 = M V\_1 D^{-\frac{1}{2}}\\). (Where the square root of the matrix is the matrix \\(D = D^{\frac{1}{2}} D^{\frac{1}{2}}\\). Now, \\(D^{-\frac{1}{2}} = (D^{\frac{1}{2}})^{-1}\\). For diagonal matricies, this is particularly easy: the matrix \\(D^{\frac{1}{2}}\\) would just be the square roots of the diagonal.)
+
+Recall that \\(V\_1 V\_1^{\*} + V\_2V\_2^{\*} = I\\), and that . Consider,
+
+\begin{equation}
+U\_1 D^{\frac{1}{2}} V\_1^{\*} = (M V\_1 D^{-\frac{1}{2}}) (D^{\frac{1}{2}} V\_1^{\*}) = M V\_1 I V\_1^{\*} = M (I - V\_2 V\_2^{\*}) = M - M V\_2 V\_2^{\*} = M - 0 V\_2^{\*} = M
+\end{equation}
+
+You are now good at math.
+
+So, we now know that:
+
+\begin{equation}
+M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
+\end{equation}
+
+\\(U\_1\\) has shape \\((m, m-p)\\), \\(D^{\frac{1}{2}}\\) has shape \\((m-p, m-p)\\), and \\(V\_1^{\*}\\) has shape \\((m-p,n)\\). You can expand \\(U\_1\\)'s missing \\(p\\) column vectors into a basis of \\(V\\) to make thing things squared; and for the second part, you can add \\(V\_2\\) back. Those get sent to \\(0\\) so it wouldn't matter. This makes \\(D\\) [diagonalish]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}).
