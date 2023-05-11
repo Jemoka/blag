@@ -159,3 +159,5 @@ M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
 \end{equation}
 
 \\(U\_1\\) has shape \\((m, m-p)\\), \\(D^{\frac{1}{2}}\\) has shape \\((m-p, m-p)\\), and \\(V\_1^{\*}\\) has shape \\((m-p,n)\\). You can expand \\(U\_1\\)'s missing \\(p\\) column vectors into a basis of \\(V\\) to make thing things squared; and for the second part, you can add \\(V\_2\\) back. Those get sent to \\(0\\) so it wouldn't matter. This makes \\(D\\) [diagonalish]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}).
+
+Will come and clean this up later today.
