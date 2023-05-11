@@ -7,10 +7,9 @@ draft = false
 ## Factoids: {#factoids}
 
 -   \\((AB)^{\*} = B^{\*} A^{\*}\\), \\((A+B)^{\*} = A^{\*} + B^{\*}\\)
--
 
 
-## Result 1: an unitary operator is invertible, and the inverse of its matrix representation is its transpose {#result-1-an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose}
+## An unitary operator is invertible, and the inverse of its matrix representation is its transpose {#an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose}
 
 Take \\(M\\) an unitary square matrix, with orthonormal columns. Note that this matrix, by construction, sends each basis \\(v\_{j}\\) to $e<sub>j</sub>$---a set of \\(dim\ V\\) (as there are \\(dim\ V\\) columns to \\(M\\)) linearly independent (as \\(e\_{j}\\), through orthonormality, are linearly independent) vectors. As we have \\(dim\ V\\) linearly independent vectors, the \\(e\_{j}\\) form a basis. As each \\(v\_{j}\\) is sent to $e<sub>j</sub>$---both a basis of $V$---we note that the finite-dimensional operator corresponding to \\(M\\) is subjective and hence invertible.
 
@@ -117,7 +116,7 @@ That:
 
 7.16: Over \\(\mathbb{R}\\), \\(Tv\\) is orthogonal to all \\(v\\) and \\(T\\) is self-adjoint, then \\(T\\) is the zero matrix
 
-**7.22**: eigenvectors of \\(T\\) corresponding to distinct eigenvalues are orthogonal if \\(T \in \mathbb{L}(V)\\) is normal.
+**7.22**: eigenvectors of \\(T\\) corresponding to distinct eigenvalues are orthogonal if \\(T \in \mathcal{L}(V)\\) is normal.
 
 Also **7.24**: the spectral theorem---that if \\(T\\) is normal, then \\(V\\) has an orthonormal basis of eigenvectors of \\(T\\) and so \\(T\\) is diagonalizable with respect to an orthonormal basis
 
