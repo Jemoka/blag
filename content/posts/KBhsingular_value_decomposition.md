@@ -46,7 +46,7 @@ And so we make a \\(V\\):
 V = (v\_1 \dots v\_{m-p} | v\_{m-p+1} \dots v\_{m})
 \end{equation}
 
-So we have two sub-matricies: an matrix \\(V\_1\\) of shape \\((n, m-p)\\) which is filled by [eigenvector]({{< relref "KBheigenvalue.md" >}})s corresponding to [eigenvalue]({{< relref "KBheigenvalue.md" >}})s not \\(=0\\), and the other matrix \\(V\_2\\) of shape \\((m,p)\\) which is made of [eigenvector]({{< relref "KBheigenvalue.md" >}})s corresponding to zero [eigenvalue]({{< relref "KBheigenvalue.md" >}})s.
+So we have two sub-matricies: an matrix \\(V\_1\\) of shape \\((m, m-p)\\) which is filled by [eigenvector]({{< relref "KBheigenvalue.md" >}})s corresponding to [eigenvalue]({{< relref "KBheigenvalue.md" >}})s not \\(=0\\), and the other matrix \\(V\_2\\) of shape \\((m,p)\\) which is made of [eigenvector]({{< relref "KBheigenvalue.md" >}})s corresponding to zero [eigenvalue]({{< relref "KBheigenvalue.md" >}})s.
 
 ---
 
@@ -83,3 +83,51 @@ Now, recall how matricies multiply:
 \Rightarrow\ &\mqty(V\_1^{\*} \\\ V\_2^{\*}) \mqty(M^{\*} M V\_1\ M^{\*} M V\_2) = \mqty(D' & 0 \\\ 0 & 0) \\\\
 \Rightarrow\ & \mqty(V\_1^{\*} M^{\*} M V\_1 & V\_1^{\*} M^{\*} M V\_2 \\\ V\_2^{\*}M^{\*} M V\_1 & V\_2^{\*} M^{\*} M V\_2)  = \mqty(D' & 0 \\\ 0 & 0)
 \end{align}
+
+---
+
+Tangent part 2----
+
+Ok:
+
+\begin{equation}
+V\_1^{\*} V\_1 = I
+\end{equation}
+
+recall, because the rows/columns for \\(V\_1^{\*}\\) and \\(V\_1\\) respectively are orthonormal.
+
+In a similar vein:
+
+\begin{equation}
+V\_2^{\*} V\_2 = I
+\end{equation}
+
+And now, consider:
+
+\begin{equation}
+V\_1 V\_1^{\*}
+\end{equation}
+
+This is "definitely singular" **why**, consider? IDK.
+
+Recall that:
+
+\begin{equation}
+V V^{\*} = I, \mqty(V\_1 & V\_2) = V
+\end{equation}
+
+And so:
+
+\begin{equation}
+\mqty(V\_1 & V\_2) \mqty(V\_1^{\*} \\\ V\_2^{\*}) = V V^{\*} + I
+\end{equation}
+
+Finally:
+
+\begin{equation}
+V\_1V\_1^{\*} + V\_2V\_2^{\*} = \mqty((V\_1 & 0) + (0 & V\_2)) + \mqty(\mqty(V\_1^{\*} \\\ 0) + \mqty(0 \\\ V\_2^{\*})) = \mqty(V\_1 & V\_2) \mqty(V\_1^{\*} \\\ V\_2^{\*}) = V V^{\*} + I
+\end{equation}
+
+Weirdly, we add two non-full rank matricies and end up to be the identity.
+
+---
