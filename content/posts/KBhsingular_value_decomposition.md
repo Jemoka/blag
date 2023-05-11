@@ -81,7 +81,7 @@ Now, recall how matricies multiply:
 \begin{align}
 &\mqty(V\_1^{\*} \\\ V\_2^{\*}) M^{\*} M \mqty(V\_1\ V\_2) = \mqty(D' & 0 \\\ 0 & 0)\\\\
 \Rightarrow\ &\mqty(V\_1^{\*} \\\ V\_2^{\*}) \mqty(M^{\*} M V\_1\ M^{\*} M V\_2) = \mqty(D' & 0 \\\ 0 & 0) \\\\
-\Rightarrow\ &\mqty(V\_1^{\*} M^{\*} M V\_1 & V\_1^{\*} M^{\*} M V\_2 \\\ V\_2^{\*}M^{\*} M V\_1 & V\_2^{\*} M^{\*} M V\_2)  = \mqty(D' & 0 \\\ 0 & 0)
+\Rightarrow\ & \mqty(V\_1^{\*} M^{\*} M V\_1 & V\_1^{\*} M^{\*} M V\_2 \\\ V\_2^{\*}M^{\*} M V\_1 & V\_2^{\*} M^{\*} M V\_2)  = \mqty(D' & 0 \\\ 0 & 0)
 \end{align}
 
 ---
@@ -124,9 +124,11 @@ And so:
 
 Finally:
 
-\begin{equation}
-V\_1V\_1^{\*} + V\_2V\_2^{\*} = \mqty((V\_1 & 0) + (0 & V\_2)) + \mqty(\mqty(V\_1^{\*} \\\ 0) + \mqty(0 \\\ V\_2^{\*})) = \mqty(V\_1 & V\_2) \mqty(V\_1^{\*} \\\ V\_2^{\*}) = V V^{\*} + I
-\end{equation}
+\begin{align}
+V\_1V\_1^{\*} + V\_2V\_2^{\*} &= \qty(\mqty(V\_1 & 0) + \mqty(0 & V\_2)) + \qty(\mqty(V\_1^{\*} \\\ 0) + \mqty(0 \\\ V\_2^{\*})) \\\\
+&= \mqty(V\_1 & V\_2) \mqty(V\_1^{\*} \\\ V\_2^{\*})\\\\
+&= V V^{\*} + I
+\end{align}
 
 Weirdly, we add two non-full rank matricies and end up to be the identity. So, again:
 
@@ -160,4 +162,4 @@ M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
 
 \\(U\_1\\) has shape \\((m, m-p)\\), \\(D^{\frac{1}{2}}\\) has shape \\((m-p, m-p)\\), and \\(V\_1^{\*}\\) has shape \\((m-p,n)\\). You can expand \\(U\_1\\)'s missing \\(p\\) column vectors into a basis of \\(V\\) to make thing things squared; and for the second part, you can add \\(V\_2\\) back. Those get sent to \\(0\\) so it wouldn't matter. This makes \\(D\\) [diagonalish]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}).
 
-Will come and clean this up later today.
+Will come and clean this up later today because uht no.
