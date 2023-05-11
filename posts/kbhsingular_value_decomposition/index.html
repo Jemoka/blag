@@ -18,7 +18,7 @@ M^{*}M = V D V^{-1}
 M^{*} M = V D V^{-1} = V D V^{*}
 \end{equation}</p><hr><p>Tangent&mdash;</p><p>To make this better, we can order \(v_1, \dots v_{n}\) such that eigenvectors vectors corresponding to \(\lambda = 0\) comes last.</p><p>And so we make a \(V\):</p><p>\begin{equation}
 V = (v_1 \dots v_{m-p} | v_{m-p+1} \dots v_{m})
-\end{equation}</p><p>So we have two sub-matricies: an matrix \(V_1\) of shape \((n, m-p)\) which is filled by <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to <a href=/posts/kbheigenvalue/>eigenvalue</a>s not \(=0\), and the other matrix \(V_2\) of shape \((m,p)\) which is made of <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to zero <a href=/posts/kbheigenvalue/>eigenvalue</a>s.</p><hr><p>Ok, recall:</p><p>\begin{equation}
+\end{equation}</p><p>So we have two sub-matricies: an matrix \(V_1\) of shape \((m, m-p)\) which is filled by <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to <a href=/posts/kbheigenvalue/>eigenvalue</a>s not \(=0\), and the other matrix \(V_2\) of shape \((m,p)\) which is made of <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to zero <a href=/posts/kbheigenvalue/>eigenvalue</a>s.</p><hr><p>Ok, recall:</p><p>\begin{equation}
 M^{*} M = V D V^{-1} = V D V^{*}
 \end{equation}</p><p>Equivalently (by applying \(V\) and \(V^{*}\)) to both sides, we have:</p><p>\begin{equation}
 V^{*} M^{*}M V = D
@@ -30,4 +30,16 @@ V^{*} M^{*}M V = D
 &\mqty(V_1^{*} \\ V_2^{*}) M^{*} M \mqty(V_1\ V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)\\
 \Rightarrow\ &\mqty(V_1^{*} \\ V_2^{*}) \mqty(M^{*} M V_1\ M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0) \\
 \Rightarrow\ & \mqty(V_1^{*} M^{*} M V_1 & V_1^{*} M^{*} M V_2 \\ V_2^{*}M^{*} M V_1 & V_2^{*} M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)
-\end{align}</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{align}</p><hr><p>Tangent part 2&mdash;-</p><p>Ok:</p><p>\begin{equation}
+V_1^{*} V_1 = I
+\end{equation}</p><p>recall, because the rows/columns for \(V_1^{*}\) and \(V_1\) respectively are orthonormal.</p><p>In a similar vein:</p><p>\begin{equation}
+V_2^{*} V_2 = I
+\end{equation}</p><p>And now, consider:</p><p>\begin{equation}
+V_1 V_1^{*}
+\end{equation}</p><p>This is &ldquo;definitely singular&rdquo; <strong>why</strong>, consider? IDK.</p><p>Recall that:</p><p>\begin{equation}
+V V^{*} = I, \mqty(V_1 & V_2) = V
+\end{equation}</p><p>And so:</p><p>\begin{equation}
+\mqty(V_1 & V_2) \mqty(V_1^{*} \\ V_2^{*}) = V V^{*} + I
+\end{equation}</p><p>Finally:</p><p>\begin{equation}
+V_1V_1^{*} + V_2V_2^{*} = \mqty((V_1 & 0) + (0 & V_2)) + \mqty(\mqty(V_1^{*} \\ 0) + \mqty(0 \\ V_2^{*})) = \mqty(V_1 & V_2) \mqty(V_1^{*} \\ V_2^{*}) = V V^{*} + I
+\end{equation}</p><p>Weirdly, we add two non-full rank matricies and end up to be the identity.</p><hr></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
