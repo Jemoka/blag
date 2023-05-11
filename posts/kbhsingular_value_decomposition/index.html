@@ -1,0 +1,33 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+<script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>singular value decomposition</title><meta name=description content="We have a matrix \(M\), it may suck: it may not be normal, it may not even be an operator.
+So consider now:
+\begin{equation} M^{*} M \end{equation}
+you will note that this is now an operator! Not only that, \(M^{*}M\) is self-adjoint (\((M^{*}M)^{*} = M^{*}(M^{*})^{*} = M^{*}M\)). Of course self-adjoint matricies are normal, which is nice, so spectral theorem applies here (even the real version because self-adjoint!)
+So, there are a basis of orthonormal eigenvectors \(v_1, \dots v_{n}\) of \(M^{*}M\) such that:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://twitter.com/jemokajack class=header-social id=header-twitter><i class="ic fa-brands fa-twitter"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>singular value decomposition</h1><span class=tagbox></span></div><main><article><div><p>We have a matrix \(M\), it may suck: it may not be <a href=/posts/kbhaxler_7_a/#normal>normal</a>, it may not even be an <a href=/posts/kbhoperator/>operator</a>.</p><p>So consider now:</p><p>\begin{equation}
+M^{*} M
+\end{equation}</p><p>you will note that this is now an <em>operator!</em> Not only that, \(M^{*}M\) is <a href=/posts/kbhaxler_7_a/#self-adjoint>self-adjoint</a> (\((M^{*}M)^{*} = M^{*}(M^{*})^{*} = M^{*}M\)). Of course <a href=/posts/kbhaxler_7_a/#self-adjoint>self-adjoint</a> matricies are <a href=/posts/kbhaxler_7_a/#normal>normal</a>, which is nice, so <a href=/posts/kbhaxler_7_a/#complex-spectral-theorem>spectral theorem</a> applies here (even the real version because <a href=/posts/kbhaxler_7_a/#self-adjoint>self-adjoint</a>!)</p><p>So, there are a basis of orthonormal <a href=/posts/kbheigenvalue/>eigenvector</a>s \(v_1, \dots v_{n}\) of \(M^{*}M\) such that:</p><p>Given:</p><p>\begin{equation}
+V = (v_1 \dots v_{m})
+\end{equation}</p><p>\begin{equation}
+M^{*}M = V D V^{-1}
+\end{equation}</p><p>(recall that <a href=/posts/kbhnus_math530_similar_to_diagonal/>T is diagonalizable IFF the matrix of T is similar to a diagonal matrix</a>). Recall, that, \(v_1, \dots v_{n}\) are <strong>orthonormal</strong>, so \(V\)&rsquo;s columns are <a href=/posts/kbhorthonormal/>orthonormal</a>. By definition, then, \(V\) is <a href=/posts/kbhaxler_7_a/#unitary>unitary</a>. This makes \(V^{-1} = V^{*}\) is <a href=/posts/kbhaxler_7_a/#unitary>unitary</a>. This makes \(V^{-1} = V^{*}\).</p><p>And therefore:</p><p>\begin{equation}
+M^{*} M = V D V^{-1} = V D V^{*}
+\end{equation}</p><hr><p>Tangent&mdash;</p><p>To make this better, we can order \(v_1, \dots v_{n}\) such that eigenvectors vectors corresponding to \(\lambda = 0\) comes last.</p><p>And so we make a \(V\):</p><p>\begin{equation}
+V = (v_1 \dots v_{m-p} | v_{m-p+1} \dots v_{m})
+\end{equation}</p><p>So we have two sub-matricies: an matrix \(V_1\) of shape \((n, m-p)\) which is filled by <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to <a href=/posts/kbheigenvalue/>eigenvalue</a>s not \(=0\), and the other matrix \(V_2\) of shape \((m,p)\) which is made of <a href=/posts/kbheigenvalue/>eigenvector</a>s corresponding to zero <a href=/posts/kbheigenvalue/>eigenvalue</a>s.</p><hr><p>Ok, recall:</p><p>\begin{equation}
+M^{*} M = V D V^{-1} = V D V^{*}
+\end{equation}</p><p>Equivalently (by applying \(V\) and \(V^{*}\)) to both sides, we have:</p><p>\begin{equation}
+V^{*} M^{*}M V = D
+\end{equation}</p><p>Applying the breakup of \(V = (V_1\ V_2)\) above:</p><p>\begin{equation}
+\mqty(V_1^{*} \\ V_2^{*}) M^{*} M \mqty(V_1\ V_2) = D
+\end{equation}</p><p>The diagonal matrix, given that the columns in \(V_2\) correspond to zero <a href=/posts/kbheigenvalue/>eigenvalue</a>s, will look like these four <strong>not-necessarily same size</strong> quadrants:</p><p>\begin{equation}
+\mqty(V_1^{*} \\ V_2^{*}) M^{*} M \mqty(V_1\ V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)
+\end{equation}</p><p>The non-diagonals are zero by definition, the lower-right quadrant is \(0\) because the sub-part of \(V_2\) are eigenvectors corresponding to the zero eigenvalue.</p><p>Now, recall how matricies multiply:</p><p>\begin{align}
+&\mqty(V_1^{*} \\ V_2^{*}) M^{*} M \mqty(V_1\ V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)\\
+\Rightarrow\ &\mqty(V_1^{*} \\ V_2^{*}) \mqty(M^{*} M V_1\ M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0) \\
+\Rightarrow\ & \mqty(V_1^{*} M^{*} M V_1 & V_1^{*} M^{*} M V_2 \\ V_2^{*}M^{*} M V_1 & V_2^{*} M^{*} M V_2) = \mqty(D&rsquo; & 0 \\ 0 & 0)
+\end{align}</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
