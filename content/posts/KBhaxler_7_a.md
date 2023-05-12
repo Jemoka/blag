@@ -11,9 +11,9 @@ Note that all of the "proofy things" in this section are poofy because problems 
 Here's an outline:
 
 -   We defined the [adjoint](#adjoint)
-    -   We learned some [properties of the adjoint](#properties-of-the-adjoint); importantly, that \\((A+B)^{\*} = A^{\*} + B^{\*}\\), \\((AB)^{\*} = B^{\*} A^{\*}\\), \\((\lambda T)^{\*} = \bar{\lambda}T^{\*}\\)
+    -   We learned some [properties of the adjoint](#properties-of-the-adjoint); importantly, that \\((A+B)^{\*} = A^{\*} + B^{\*}\\), \\((AB)^{\*} = B^{\*} A^{\*}\\), \\((\lambda T)^{\*} = \bar{\lambda}T^{\*}\\); a correlary is that \\(M^{\*}M\\) is [self-adjoint](#self-adjoint)
 -   We defined [normal, self-adjoint, and unitary](#buncha-matrix-adjectives)
--   With those definitions, we showed that [eigenvalues of self-adjoint matricies are real](#eigenvalues-of-self-adjoint--orgb7d3a75--matricies-are-real)
+-   With those definitions, we showed that [eigenvalues of self-adjoint matricies are real](#eigenvalues-of-self-adjoint--org71f113d--matricies-are-real)
 -   Then, we created two mildly interesting intermediate results
     -   Over \\(\mathbb{C}\\), \\(Tv\\) is orthogonal to all \\(v\\) IFF \\(T\\) is the zero matrix
     -   Over \\(\mathbb{R}\\), \\(Tv\\) is orthogonal to all \\(v\\) **and \\(T\\) is self-adjoint**, then \\(T\\) is the zero matrix
@@ -114,7 +114,7 @@ A^{\*} = A^{-1}
 or, that \\(A\\) has orthonormal columns: [an unitary operator is invertible, and the inverse of its matrix representation is its transpose]({{< relref "KBhnus_math530_matrix_adjectives.md#an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose" >}})
 
 
-## Eigenvalues of [self-adjoint](#self-adjoint) matricies are real {#eigenvalues-of-self-adjoint--orgb7d3a75--matricies-are-real}
+## Eigenvalues of [self-adjoint](#self-adjoint) matricies are real {#eigenvalues-of-self-adjoint--org71f113d--matricies-are-real}
 
 So, if we have:
 
@@ -161,6 +161,8 @@ On \\(\mathbb{C}\\), and with \\(T \in \mathcal{L}(V)\\), the following statemen
 3.  and so \\(T\\) is diagonalizable w.r.t. that orthonormal **basis of eigenvectors**
 
 This proof depends on [Schur's Theorem]({{< relref "KBhgram_schmidt.md#schur-s-theorem" >}}).
+
+The real number version requires that \\(T\\) is [self-adjoint](#self-adjoint).
 
 
 ## Things to ask jana {#things-to-ask-jana}

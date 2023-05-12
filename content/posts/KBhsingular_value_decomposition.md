@@ -4,6 +4,71 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+[Singular value decomposition]({{< relref "KBhsingular_value_decomposition.md" >}}) is a factorization of a [matrix]({{< relref "KBhmatricies.md" >}}), which is a generalization of the [eigendecomposition]({{< relref "KBhnus_math530_similar_to_diagonal.md" >}}) of [normal]({{< relref "KBhaxler_7_a.md#normal" >}}) [matricies]({{< relref "KBhmatricies.md" >}}) (i.e. where \\(A = V^{-1} D V\\) when \\(A\\) is [diagonalizable]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}), i.e. by the [spectral theorem]({{< relref "KBhaxler_7_a.md#complex-spectral-theorem" >}}) possible when matricies are [normal]({{< relref "KBhaxler_7_a.md#normal" >}})).
+
+
+## Definitions {#definitions}
+
+**Singular value decomposition** Every \\(m \times n\\) matrix has a factorization of the form:
+
+\begin{equation}
+M = U D^{\frac{1}{2}} V^{\*}
+\end{equation}
+
+where, \\(U\\) is an [unitary]({{< relref "KBhaxler_7_a.md#unitary" >}}) matrix, \\(D^{\frac{1}{2}}\\) a [diagonal]({{< relref "KBhdiagonal_matrix.md" >}})ish (i.e. rectangular diagonal) matrix with non-negative numbers on its diagonal called **singular values**, which are the positive square roots of eigenvalues of \\(M^{\* }M\\) --- meaning the diagonal of \\(D^{\frac{1}{2}}\\) is non-negative (\\(\geq 0\\)). Finally, \\(V\\) is formed columns of orthonormal bases of eigenvectors of \\(M^{\*}M\\).
+
+[SVD]({{< relref "KBhsingular_value_decomposition.md" >}}) is not technically unique, but we like to force a specific (convenient, see proof for why) ordering: where \\(D^{\frac{1}{2}}\\) (and the corresponding values in \\(V^{\*}\\)) is sorted: such that the values.
+
+
+## Doing It {#doing-it}
+
+Doing SVD is not actually super duper hard, but it takes some thinking on why it works, which we shall do below.
+
+Recall that \\(V^{\* }\\) is the conjugate transpose of the orthonormal eigenvectors of \\(M^{\*} M\\). Then, we construct the square roots of the corresponding eigenvalues and arrange them into \\(D^{\frac{1}{2}}\\).
+
+---
+
+**Tangent**:
+
+Why is it we can take square roots of these values (i.e. the eigenvalues are guaranteed positive or zero?) Recall the definition of adjoint:
+
+\begin{equation}
+\langle Tv, w \rangle = \langle v, T^{\*}w \rangle
+\end{equation}
+
+Applying it here, we have
+
+\begin{equation}
+\langle M^{\*}M v, v \rangle = \langle M v, M v \rangle
+\end{equation}
+
+And recall that, by definition of inner product, \\(\langle Mv, Mv \rangle \geq 0\\), and so \\(\\|Mv\\|^{2} \geq 0\\) and so \\(\\|Mv\\| \geq 0\\) so \\(\\| \lambda v \\| \geq 0\\).
+
+---
+
+And so you can take the square roots of those singular values (i.e. square roots of eigenvalues of \\(M^{\*}M\\)).
+
+How do we get \\(U\\)? Well recall:
+
+\begin{equation}
+M = U D^{\frac{1}{2}} V^{\*}
+\end{equation}
+
+And \\(V\\) is an operator lined with orthornomal eigenbases so it is unitary and so \\(V = (V^{\*})^{-1}\\).
+
+And therefore, we apply \\(V\\) on both sides:
+
+\begin{equation}
+MV = UD^{\frac{1}{2}}
+\end{equation}
+
+As \\(D\\) is diagonal, and we know the left side, we can then easily recover \\(U\\) by staring at it (and norming the vectors).
+
+
+## Motivation and Proof {#motivation-and-proof}
+
+---
+
 We have a matrix \\(M\\), it may suck: it may not be [normal]({{< relref "KBhaxler_7_a.md#normal" >}}), it may not even be an [operator]({{< relref "KBhoperator.md" >}}).
 
 So consider now:
@@ -163,3 +228,35 @@ M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
 \\(U\_1\\) has shape \\((m, m-p)\\), \\(D^{\frac{1}{2}}\\) has shape \\((m-p, m-p)\\), and \\(V\_1^{\*}\\) has shape \\((m-p,n)\\). You can expand \\(U\_1\\)'s missing \\(p\\) column vectors into a basis of \\(V\\) to make thing things squared; and for the second part, you can add \\(V\_2\\) back. Those get sent to \\(0\\) so it wouldn't matter. This makes \\(D\\) [diagonalish]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}).
 
 Will come and clean this up later today because uht no.
+
+
+## Useful corollaries {#useful-corollaries}
+
+
+### If \\(\lambda\\) is an en eigenvalue of \\(M\\), then \\(\lambda\\) is a singular value of \\(M\\) {#if-lambda-is-an-en-eigenvalue-of-m-then-lambda-is-a-singular-value-of-m}
+
+So we have:
+
+\begin{equation}
+Mv = \lambda v
+\end{equation}
+
+We desire that \\(\lambda^{2}\\) is an eigenvalue of \\(M^{\*}M\\).
+
+Recall the definition of an adjoint:
+
+\begin{equation}
+\langle Mv, v \rangle = \langle v, M^{\*}v \rangle
+\end{equation}
+
+And, given \\(\lambda\\) is an eigenvalue of \\(M\\):
+
+\begin{equation}
+\langle Mv,v \rangle = \lambda \langle v,v \rangle
+\end{equation}
+
+Consider, now:
+
+\begin{equation}
+M^{\*}M v = \lambda v
+\end{equation}
