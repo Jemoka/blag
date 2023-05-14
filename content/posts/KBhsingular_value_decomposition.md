@@ -466,10 +466,15 @@ where, \\(U\\) is an \\(m \times m\\) [unitary]({{< relref "KBhaxler_7_a.md#unit
 ## Useful corollaries {#useful-corollaries}
 
 
-### If \\(\lambda\\) is an en eigenvalue of \\(M\\), then \\(\lambda\\) is a singular value of \\(M\\) {#if-lambda-is-an-en-eigenvalue-of-m-then-lambda-is-a-singular-value-of-m}
+### If \\(\lambda\\) is an non-negative real eigenvalue of \\(M\\), then \\(\lambda\\) is sometimes a singular value of \\(M\\) {#if-lambda-is-an-non-negative-real-eigenvalue-of-m-then-lambda-is-sometimes-a-singular-value-of-m}
 
-So we have:
+Consider the matrix:
 
 \begin{equation}
-Mv = U D^{\frac{1}{2}} V^{\*} v
+\mqty(1 & 1 \\\0 & 0)
 \end{equation}
+
+-   [singular value]({{< relref "KBhsingular_value_decomposition.md" >}})s: \\(\sqrt{2},0\\)
+-   [eigenvalue]({{< relref "KBheigenvalue.md" >}})s: \\(1,0\\)
+
+However, the statement is the case if \\(M\\) is already [diagonalizable]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}), then in which case you can imagine constructing \\(M^{\* }M\\) to be vis a vi the eigenbasis of \\(M\\), which means that the resulting diagonal representation of \\(M^{\*}M\\) would just be the eigenvalues of \\(M\\) squared as you are multiplying a diagonal matrix by itself.
