@@ -338,7 +338,7 @@ We now have:
 M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
 \end{equation}
 
-Were \\(U\_1\\) is a matrix of shape \\((m \times n)(n \times  n-p)(n-p \times  n-p) = (m \times  n-p)\\), \\(D^{\frac{1}{2}}\\) is a [diagonal]({{< relref "KBhdiagonal_matrix.md" >}}) matrix of shape \\((n-p \times  n-p)\\) with [singular values]({{< relref "KBhsingular_value_decomposition.md" >}}) on the diagonal, and \\(V\_1^{\*}\\) is a matrix with orthonormal rows of shape \\((n-p \times  n)\\).
+Were \\(U\_1\\) is a matrix of shape \\((m \times n)(n \times  n-p)(n-p \times  n-p) = m \times  n-p\\), \\(D^{\frac{1}{2}}\\) is a [diagonal]({{< relref "KBhdiagonal_matrix.md" >}}) matrix of shape \\(n-p \times  n-p\\) with [singular values]({{< relref "KBhsingular_value_decomposition.md" >}}) on the diagonal, and \\(V\_1^{\*}\\) is a matrix with orthonormal rows of shape \\(n-p \times  n\\).
 
 This is a **compact svd**. We are sandwitching a [diagonal]({{< relref "KBhdiagonal_matrix.md" >}}) matrix of [singular values]({{< relref "KBhsingular_value_decomposition.md" >}}) between two rectangular matricies to recover \\(M\\). Ideally, we want the left and right matricies too to have nice properties (like, say, be an [operator]({{< relref "KBhoperator.md" >}}) or have [unitarity]({{< relref "KBhaxler_7_a.md#unitary" >}})). So we work harder.
 
@@ -411,11 +411,24 @@ U\_1 = M V\_1 D^{-\frac{1}{2}}
 
 So far, \\(U\_1\\) and \\(V\_1^{\*}\\) are both disappointingly not [operator]({{< relref "KBhoperator.md" >}})s. However, we know that \\(U\_1\\) and \\(V\_1\\) are both orthonormal (the former per aside #4 above, the latter by the [spectral theorem]({{< relref "KBhaxler_7_a.md#complex-spectral-theorem" >}}) and  [construction above](#aside-1-zero-eigenvalue-eigenvector-ordering)). So wouldn't it be doubleplusgood for both of them to be [unitary]({{< relref "KBhaxler_7_a.md#unitary" >}}) [operator]({{< relref "KBhoperator.md" >}})s?
 
-To make this happen, we need to first pad out \\(D^{\frac{1}{2}}\\). If we want \\(U\\) and \\(V^{\* }\\) to both be [operator]({{< relref "KBhoperator.md" >}})s, and yet have \\(U D^{\frac{1}{2}} V^{\*} = M\\), we note that we have to make \\(D^{\frac{1}{2}}\\) not square.
+To make this happen, we need to change the shapes of things a little without changing how the matricies behave. That is: we want \\(U\\) and \\(V^{\* }\\) to both be [operator]({{< relref "KBhoperator.md" >}})s, and yet still have \\(U D^{\frac{1}{2}} V^{\*} = M\\).
 
-Recall that \\(M\\) has dimensions \\(m \times n\\). Therefore, for everything to have the right shape, \\(U\\) has to be \\(m \times m\\), \\(D^{\frac{1}{2}}\\) have \\(m \times n\\), and \\(V^{\*}\\) to be \\(n \times n\\).
 
-There are immediate and direct ways of padding out \\(D^{\frac{1}{2}}\\) and \\(V\_{1}^{\*}\\): let us replace \\(V\_1 \implies V\\), and just shove enough zeros into \\(D\\) such that the dimensions work out. To show that those two steps doesn't affect anything, recall that:
+#### Padding out \\(D\\) and \\(V\\) {#padding-out-d-and-v}
+
+There are immediate and direct ways of padding out \\(D^{\frac{1}{2}}\\) and \\(V\_{1}^{\*}\\): let us replace \\(V\_1 \implies V\\), and just shove enough zeros into \\(D\\) such that the dimensions work out (changing it from shape \\(n-p \times n-p\\) to \\(m \times n\\), but do this by just adding enough zeros on the edges until it works).
+
+So first, \\(D^{\frac{1}{2}}\\) becomes:
+
+\begin{equation}
+D^{\frac{1}{2}}\_{new} = \mqty(D^{\frac{1}{2}}\_{orig} & 0 &\dots  \\\ 0 & 0 &\dots   \\\ 0&0&\dots)
+\end{equation}
+
+(the number of zeros on the edge vary based on the proportions of \\(n, p, m\\)).
+
+Why would this always be padding? i.e. why is \\(n-p \leq m\\)? Here's a hand-wavy proof that the reader can choose to fill in the gaps of: consider the fact that \\(M\\)'s shape is \\(m \times n\\). Specifically, this means that \\(M: V \to W\\) where \\(\dim V = n\\) and \\(\dim W = m\\). Say for the sake of argument \\(n> m\\) (otherwise naturally \\(n-p \leq m\\) because \\(n\leq m\\)). Consider \\(null\ M\\); given it is a map from a larger space to a smaller space, [there's going to be a non-trivial null space]({{< relref "KBhlinear_map.md#map-to-smaller-space-is-not-id-e3ff3c90-e719-4c5b-afc4-efcec3169fb2-injective" >}}). This non-trivial null space is going to be as large or larger than \\(m-n\\); and the null space of \\(M^{\*}M\\) will be at least as large as \\(m-n\\) as well because everything is sent through \\(M\\) first. And then applying rank nullity can show that \\(m \geq \dim\ range\ M^{ \*}M\\). Therefore, the number of non-zero eigenvalues of \\(M^{ \*}M\\), which also corresponds to the number of non-zero columns of \\(D\\), which also is \\(n-p\\), must be smaller than or equal to \\(m\\) because otherwise the diagonal representation would have too many linearly independent columns (i.e. more lin. indp. columns that the rank which is impossible).
+
+Now, we have
 
 \begin{equation}
 V = \mqty(V\_1 & V\_2)
@@ -423,33 +436,31 @@ V = \mqty(V\_1 & V\_2)
 
 where \\(V\_1\\) is a matrix whose columns are the non-zero [eigenvalue]({{< relref "KBheigenvalue.md" >}}) correlated [eigenvector]({{< relref "KBheigenvalue.md" >}})s, and the columns of \\(V\_1\\) the zero-eigenvalue related ones.
 
-Therefore, as long as we pad out \\(D^{\frac{1}{2}}\\)'s "extra" dimensions with \\(0\\), replacing \\(V\_1^{\* }\\) with \\(V^{\*}\\)
+Note, now that:
 
----
+\\(D^{\frac{1}{2}}\_{new} V^{\* }\\) is an \\(m \times n\\) matrix that behaves almost exactly like \\(D^{\frac{1}{2}}\_{orig} V\_1^{\*}\\), a \\(n-p \times n\\) matrix. The last \\(m-(n-p)\\) (as we established before, \\(m \geq n-p\\)) dimensions of the new, padded matrix's output will simply be \\(0\\): because recall that \\(DT\\) for some diagonal matrix \\(D\\) scales the _rows_ of \\(T\\): and the first \\(n-p\\) rows (corresponding to the columns of \\(V\_1\\), because recall we are applying \\(V\\) not \\(V^{ \*}\\) to \\(D\\)) will be scaled normally, and the last \\(m-(n-p)\\) rows will be scaled by \\(0\\) as they are a part of the padded zero-diagonal.
 
-FINALLY:
 
-**DEFINE** singular values: square roots of [eigenvalue]({{< relref "KBheigenvalue.md" >}})s of \\(M^{\*} M\\) are the **singular values** of \\(M\\).
+#### Padding out \\(U\\) {#padding-out-u}
 
-Notice! Every [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(M\\) is a **singular value** of \\(M\\); but there maybe more singular values
+With \\(D\\) and \\(V\\) padded, its time to deal with \\(U\\). Fortunately, recall that the last bit of the output of \\(DV\\) will just be \\(0\\): so whatever we stick in terms of columns of \\(V\\) for those slots will never actually be added to the final output. In a sense, they don't really matter.
 
-Let \\(U\_1 = M V\_1 D^{-\frac{1}{2}}\\). (Where the square root of the matrix is the matrix \\(D = D^{\frac{1}{2}} D^{\frac{1}{2}}\\). Now, \\(D^{-\frac{1}{2}} = (D^{\frac{1}{2}})^{-1}\\). For diagonal matricies, this is particularly easy: the matrix \\(D^{\frac{1}{2}}\\) would just be the square roots of the diagonal.)
+The first \\(n-p\\) of \\(U\\) (i.e. \\(U\_{1}\\)) we already have a well-defined answer: recall from before \\(U\_1 = M D^{-\frac{1}{2}} V\_{1}^{\*}\\). So the last bit we can just stick on literally whatever to make it work.
 
-Recall that \\(V\_1 V\_1^{\*} + V\_2V\_2^{\*} = I\\), and that . Consider,
+And by "making it work", we literally just mean extending the columns of \\(U\_1\\) until you have \\(m\\) linearly-independent of them, then [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting to make it all orthonormal. The first \\(n-p\\) columns will not be affected by [Gram-Schmidt]({{< relref "KBhgram_schmidt.md" >}})ting, as we have established before [\\(U\_1\\) is orthonormal](#aside-4-u-1-is-orthonormal).
 
-\begin{equation}
-U\_1 D^{\frac{1}{2}} V\_1^{\*} = (M V\_1 D^{-\frac{1}{2}}) (D^{\frac{1}{2}} V\_1^{\*}) = M V\_1 I V\_1^{\*} = M (I - V\_2 V\_2^{\*}) = M - M V\_2 V\_2^{\*} = M - 0 V\_2^{\*} = M
-\end{equation}
+Again, these are basically arbitrary: no one cares because these columns will always be scaled by \\(0\\) as they are part of the "padding columns" from padding \\(D^{\frac{1}{2}}\\) out.
 
-You are now good at math.
 
-So, we now know that:
+#### and so, finally {#and-so-finally}
+
+Finally, we now have:
 
 \begin{equation}
-M = U\_1 D^{\frac{1}{2}} V\_1^{\*}
+M = U D^{\frac{1}{2}} V^{\*}
 \end{equation}
 
-\\(U\_1\\) has shape \\((m \times n-p)\\), \\(D^{\frac{1}{2}}\\) has shape \\((n-p \times n-p)\\), and \\(V\_1^{\*}\\) has shape \\((n-p \times  n)\\). You can expand \\(U\_1\\)'s missing \\(p\\) column vectors into a basis of \\(V\\) to make thing things squared; and for the second part, you can add \\(V\_2\\) back. Those get sent to \\(0\\) so it wouldn't matter. This makes \\(D\\) [diagonalish]({{< relref "KBhdiagonal_matrix.md#properties-of-diagonal-matrices" >}}).
+where, \\(U\\) is an \\(m \times m\\) [unitary]({{< relref "KBhaxler_7_a.md#unitary" >}}) [operator]({{< relref "KBhoperator.md" >}}), \\(D^{\frac{1}{2}}\\) is an \\(m \times n\\) semidiagonal matrix (diagonal \\(n-p \times n-p\\) part, then \\(0\\) padding all around) filled with [singular value]({{< relref "KBhsingular_value_decomposition.md" >}})s of \\(M\\) on the diagonal, and \\(V^{\*}\\) is an \\(n \times n\\) [unitary]({{< relref "KBhaxler_7_a.md#unitary" >}}) [operator]({{< relref "KBhoperator.md" >}}) filled with orthonormal rows of right singular-vectors (i.e. [eigenvector]({{< relref "KBheigenvalue.md" >}})s of \\(M^{ \*}M\\)).
 
 
 ## Useful corollaries {#useful-corollaries}
