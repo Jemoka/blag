@@ -17,7 +17,7 @@ M = U D^{\frac{1}{2}} V^{\*}
 
 where, \\(U\\) is an [unitary]({{< relref "KBhaxler_7_a.md#unitary" >}}) matrix, \\(D^{\frac{1}{2}}\\) a [diagonal]({{< relref "KBhdiagonal_matrix.md" >}})ish (i.e. rectangular diagonal) matrix with non-negative numbers on its diagonal called **singular values**, which are the positive square roots of eigenvalues of \\(M^{\* }M\\) --- meaning the diagonal of \\(D^{\frac{1}{2}}\\) is non-negative (\\(\geq 0\\)). Finally, \\(V\\) is formed columns of orthonormal bases of eigenvectors of \\(M^{\*}M\\).
 
-[SVD]({{< relref "KBhsingular_value_decomposition.md" >}}) is not technically unique, but we like to force a specific (convenient, see proof for why) ordering: where \\(D^{\frac{1}{2}}\\) (and the corresponding values in \\(V^{\*}\\)) is sorted such that the non-zero values are to the right.
+[SVD]({{< relref "KBhsingular_value_decomposition.md" >}}) is not technically unique, but we like to force a specific (convenient, see proof for why) ordering: where \\(D^{\frac{1}{2}}\\) (and the corresponding values in \\(V^{\*}\\)) is sorted such that the zero values are to the right.
 
 
 ## Doing It {#doing-it}
