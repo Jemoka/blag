@@ -364,7 +364,7 @@ We have by substitution of \\(U\_1 = M V\_1 D^{-\frac{1}{2}}\\):
 Given the property that \\((AB)^{\*} = B^{\*}A^{\*}\\), we have that:
 
 \begin{equation}
-(M V\_1 D^{-\frac{1}{2}})^{\*}(M V\_1 D^{-\frac{1}{2}}) = D^{-\frac{1}{2}}^{\*} V\_1^{\*} M^{\*}M V\_1 D^{-\frac{1}{2}}
+(M V\_1 D^{-\frac{1}{2}})^{\*}(M V\_1 D^{-\frac{1}{2}}) = {D^{-\frac{1}{2}}}^{\*} V\_1^{\*} M^{\*}M V\_1 D^{-\frac{1}{2}}
 \end{equation}
 
 Recall now that, from way before, we have:
