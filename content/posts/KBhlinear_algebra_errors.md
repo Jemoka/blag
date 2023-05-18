@@ -75,3 +75,15 @@ draft = false
 
 -   enough eigenvalues go in only one direction: it existing means its diagonalizable, but the opposite isn't true
 -   the proof for \\(T\\) is diagonalizable IFF the matrix \\(T\\) is similar to a diagonal matrix: [NUS-MATH530 Similar to Diagonal]({{< relref "KBhnus_math530_similar_to_diagonal.md" >}})
+
+
+## Final, part 1 {#final-part-1}
+
+-   State the complex spectral theorem (error: the condition of normality is a PARALLEL result)
+
+
+## Final, Part 2 {#final-part-2}
+
+-   didn't show that if \\(\dim null\ T \bigoplus \dim range\ T = V\\), \\(T\\) is diagonalizable
+-   Said this was true, but its false \\(T^{2}= 0\\) IFF \\(null\ T = range\ T\\)
+    suppose \\(T=0\\), \\(T^{2} = 0\\). \\(null\ T = V\\), \\(range\ T = 0\\).
