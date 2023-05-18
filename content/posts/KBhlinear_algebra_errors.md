@@ -84,6 +84,8 @@ draft = false
 
 ## Final, Part 2 {#final-part-2}
 
--   didn't show that if \\(\dim null\ T \bigoplus \dim range\ T = V\\), \\(T\\) is diagonalizable
+-   Said this was true, but its not; \\(null\ T \bigoplus range\ T = V\\), \\(T\\) is diagonalizable;
 -   Said this was true, but its false \\(T^{2}= 0\\) IFF \\(null\ T = range\ T\\)
     suppose \\(T=0\\), \\(T^{2} = 0\\). \\(null\ T = V\\), \\(range\ T = 0\\).
+-   Spectral theorem doesn't define diagonalizability, it defines diagonalibility for ORTHONORMAL
+-   missing derivation of the pseudoinverse
