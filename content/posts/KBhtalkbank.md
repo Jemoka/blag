@@ -4,8 +4,27 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+-   phonbank: poor articulation
+-   disfluent kids
+-   late talkers
+
+-   Write a review about ASR benchmark methods
+    -   REV would be our benchmark
+        -   What corpora we use?
+        -   Has anyone used **disordered speech**?
+        -   Or really seriously accented speech vis a vi CORALL (how was CORALL sampled?)
+    -   What samples? How do we sample? What are the benchmarks?
+
+---
+
+{{< figure src="/ox-hugo/2023-06-01_16-32-05_screenshot.png" >}}
+
 -   ASR model + WER
 -   tildes and noprompt swapped
+
+-   WER
+-   missing words
+-   correct alignment
 
 
 ## things {#things}
