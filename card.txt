@@ -1,7 +1,7 @@
 Houjun Liu
 jemoka.com
 
-T: (650) 282-0675
+T: +1 (650) 282-0675
 E: houjun@jemoka.com
 E: houjun@stanford.edu
 K: gpg --locate-keys houjun@jemoka.com
