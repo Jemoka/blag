@@ -38,16 +38,6 @@ Things we explicitly are told to know, but is not immediately in Axler. You bet 
 -   [singular value decomposition]({{< relref "KBhsingular_value_decomposition.md" >}})
 
 
-## Homework {#homework}
-
-See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >}})
-
-
-## Quiz Errors {#quiz-errors}
-
-[Linear Algebra Errors]({{< relref "KBhlinear_algebra_errors.md" >}})
-
-
 ## 1 {#1}
 
 -   [Axler 1.A]({{< relref "KBhaxler_a.md" >}})
@@ -69,6 +59,7 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [Axler 3.C]({{< relref "KBhaxler_3_c.md" >}})
 -   [Axler 3.D]({{< relref "KBhaxler_3_d.md" >}})
 -   [Axler 3.E]({{< relref "KBhaxler_3_e.md" >}})
+-   [Axler 3.F]({{< relref "KBhaxler_3_f.md" >}})
 
 
 ## 4 {#4}
@@ -103,8 +94,6 @@ See [NUS-MATH530 Homework Index]({{< relref "KBhnus_math530_homework_index.md" >
 -   [taxicab norm]({{< relref "KBhtaxicab_norm.md" >}})
 
 
-
-## References
 
 <style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
   <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Axler, Sheldon. 1997. <i>Linear Algebra Done Right</i>. Undergraduate Texts in Mathematics. Springer New York. doi:<a href="https://doi.org/10.1007/b97662">10.1007/b97662</a>.</div>
