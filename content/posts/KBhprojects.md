@@ -70,6 +70,16 @@ A bootcamp for non-CS students in data science. [Website]({{< relref "KBhaibridg
 ## Full-Stack Projects {#full-stack-projects}
 
 
+### Simon {#simon}
+
+Augmenting the functionality of large-language-models with Elastic. [Repository](https://github.com/shabang-systems/simon).
+
+****Motivation****: LLMs have become more and more prominent, and frameworks like ReAct is finally mature enough to produce coherent, well reasoned responses.
+
+-   ****Role****: Author
+-   ****Technologies****: Huggingface, GPT-3.5, ElasticSearch
+
+
 ### tractotato {#tractotato}
 
 CommonLisp macroset for time tracking. [Repo](https://github.com/Jemoka/tractotato).
