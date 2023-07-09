@@ -105,3 +105,33 @@ often, writing test exposes gaps in your specs
 -   Ideally, run tests every time code is committed
 -   Ideally---run tests that address the function
 -   Schedule long tests
+
+
+## _What_ to test for {#what-to-test-for}
+
+[see also here](https://softwareengineering.stackexchange.com/questions/750/what-should-you-test-with-unit-tests)
+
+
+### equivalence partitioning {#equivalence-partitioning}
+
+Come up with one test case per equivalence class. For instance, for a function that uppercases letters, analyze the following:
+
+1.  Lowercase letters
+2.  Uppercase letters
+3.  Non-alpha letters
+4.  Non-printable letters
+5.  Combinations
+
+Each group will therefore have nicely the requirements covered
+
+
+### boundary value analysis {#boundary-value-analysis}
+
+In addition to just testing 1 element per class in [equivalence partitioning](#equivalence-partitioning), try to test boundary values (off-by-one, etc.) cases for each equivalence class if you can come up with them.
+
+
+### Arrange, Act, Assert {#arrange-act-assert}
+
+1.  **arrange** for setup by setting up variables, etc., and **define the expected result** (yes we do it before to be more readable)
+2.  **act** do the thing
+3.  **assert** correctness by checking the expected result

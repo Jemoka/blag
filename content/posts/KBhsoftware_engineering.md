@@ -1,18 +1,33 @@
 +++
-title = "Software Engineering"
+title = "Software Engineering Index"
 author = ["Houjun Liu"]
+tags = ["index"]
 draft = false
 +++
 
 ## process of Engineering: chronological order {#process-of-engineering-chronological-order}
 
--   User interviews/stories
--   Documentation/Specification
--   Task estimation
--   Design &amp; architecture
--   Testing
--   Project Management
--   Build and Release engineering
+-   [User Interviews]({{< relref "KBhuser_interviews.md" >}}) + [User Stories]({{< relref "KBhuser_interviews.md#user-story" >}})
+-   [Requirements Analysis]({{< relref "KBhrequirements_analysis.md" >}})
+-   [Documentation and Specification]({{< relref "KBhdocumentation_and_specification.md" >}})
+-   Build the damned thing
+    -   [Project Management and Development Methodology (SDLC)]({{< relref "KBhsoftware_development_methodologies.md" >}})
+    -   [Task Estimation]({{< relref "KBhtask_estimation.md" >}})
+    -   [Software Design and Architecture Patterns]({{< relref "KBhsoftware_design_and_architecture_patterns.md" >}})
+    -   [Testing]({{< relref "KBhtesting.md" >}})
+-   Build and Release engineering (TODO)
+
+
+## Other topics {#other-topics}
+
+-   Query optimization (TODO)
+
+
+## Fucking acronyms to know {#fucking-acronyms-to-know}
+
+-   [AAA Method]({{< relref "KBhtesting.md#arrange-act-assert" >}})
+-   [SOLID principles]({{< relref "KBhsoftware_design_and_architecture_patterns.md#solid-principles" >}})
+-   STAR method: state behaviorals in Situation, Task, Action, Results
 
 
 ## fundamental trade-off of [Software Engineering]({{< relref "KBhsoftware_engineering.md" >}}) {#fundamental-trade-off-of-software-engineering--kbhsoftware-engineering-dot-md}
