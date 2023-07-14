@@ -6,14 +6,14 @@ draft = false
 
 Welcome to the personal site of ****Houjun "Jack" Liu****.
 
-I'm on the blaggosphere as [@jemokajack](https://twitter.com/jemokajack) and, far more frequently, [u/jemoka](https://www.reddit.com/user/Jemoka/) and [@jemoka](https://github.com/Jemoka/).
+I'm on the blaggosphere as [u/jemoka](https://www.reddit.com/user/Jemoka/) and [@jemoka](https://github.com/Jemoka/).
 
 ---
 
 
 ## Who's this guy? {#who-s-this-guy}
 
-I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) interested in [linguistic analysis](https://arxiv.org/abs/2104.10661), [L2 learning](https://en.wikipedia.org/wiki/Second-language_acquisition), and [user interfaces](https://www.shabang.cf/). [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Condution](https://www.condution.com/), [Shabang](https://www.shabang.cf/), and [MODAP](https://www.modap.io), do [research in NLP and education pedagogy](https://orcid.org/0000-0002-2156-5903), direct Science Friday [streams](https://www.youtube.com/playlist?list=PLB5KLodjBbZ40P-1R3LjMSxRbhwpS7tWu), captain an [entrepreneurship studio](https://youtu.be/CIjqZno8Noc), and am working for [TalkBank](https://www.talkbank.org/) on projects in linguistics. Oh, right, I also go to school at [Nueva](https://www.nuevaschool.org/), a small high school in San Mateo. Apparently I'm being sent away to a [farm](https://www.stanford.edu/) next year.
+I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) interested in [linguistic analysis](https://arxiv.org/abs/2104.10661), [L2 learning](https://en.wikipedia.org/wiki/Second-language_acquisition), and [user interfaces](https://www.shabang.cf/). [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Condution](https://www.condution.com/), [Shabang](https://www.shabang.cf/), and [MODAP](https://www.modap.io), do [research in NLP and education pedagogy](https://orcid.org/0000-0002-2156-5903), direct Science Friday [streams](https://www.youtube.com/playlist?list=PLB5KLodjBbZ40P-1R3LjMSxRbhwpS7tWu), captain an [entrepreneurship studio](https://youtu.be/CIjqZno8Noc), and am working for [TalkBank](https://www.talkbank.org/) on projects in linguistics. I used to go to a school called [Nueva](https://www.nuevaschool.org/), a small high school in San Mateo. I now do some work on a beautiful Californian [farm](https://www.stanford.edu/) named Stanford University.
 
 Need to catch me? Email me at `houjun@jemoka.com`. Please do email me, I actually check.
 
