@@ -3,13 +3,22 @@
         <title>Scheduling</title>
     </head>
 
+    <!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://app.cal.com"});
+
+Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+<!-- Cal element-click embed code ends -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <body style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center">
 <pre style="display:inline-block"><b>Let's find time together!</b> 
 What would you like to do?
 
-<b>Zoom call</b>: <a href="https://cal.com/houjun">online scheduling</a>.
+<b>Zoom call</b>: <a style="cursor:pointer" data-cal-link="houjun" data-cal-config='{"layout":"month_view"}'>online scheduling</a>.
 <b>In Person</b> (Stanford, CA): <a href="./card.html">reach out</a>.
 
 If I sent you this link with something like
@@ -29,6 +38,9 @@ a:not(.header-social):not(#TableOfContents *):not(.noannot):not(.page-link):hove
     border-bottom: solid 4px #dade8a !important;
 }
 
+.my-backdrop {
+    background-color: transparent !important;
+}
 
     </style>
 
