@@ -6,6 +6,10 @@ draft = false
 
 [MapReduce]({{< relref "KBhmapreduce.md" >}}) is an [distributed algorithm]({{< relref "KBhdistributed_algorithum.md" >}}).
 
+{{< figure src="/ox-hugo/2023-07-31_11-58-49_screenshot.png" >}}
+
+<https://www.psc.edu/wp-content/uploads/2023/07/A-Brief-History-of-Big-Data.pdf>
+
 -   Map: \\((in\\\_key, in\\\_value) \Rightarrow list(out\\\_key, intermediate\\\_value)\\).
 -   Reduce:
     -   Group map outputs by \\(out\\\_key\\)
