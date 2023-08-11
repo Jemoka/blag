@@ -119,12 +119,12 @@ h1,h2,h3,h4,h5 {
 }
 
 #header-twitter {
-    color: #1a7ca3;
+    color: rgb(87,45,215);
     transition: color 0.5s;
 }
 
 #header-twitter:hover {
-    color: #106b8f;
+    color: #3a199c;
 }
 
 #header-reddit {
