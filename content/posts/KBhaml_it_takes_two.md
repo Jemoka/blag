@@ -1,6 +1,7 @@
 +++
 title = "AML: It Takes Two"
 author = ["Houjun Liu"]
+tags = ["writing", "aml"]
 draft = false
 +++
 

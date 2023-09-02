@@ -1,6 +1,7 @@
 +++
 title = "AML: Dipping into PyTorch"
 author = ["Houjun Liu"]
+tags = ["writing", "aml"]
 draft = false
 layout = "nobrand"
 +++
