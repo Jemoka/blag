@@ -19,3 +19,7 @@ crybaby cry.
 \end{equation}
 
 We are going to show that, for fin. dim. \\(V\\), any map \\(T \in \mathcal{L}(V, W)\\) for some \\(W\\) as fin. dim. range, and further more that:
+
+\begin{equation}
+\text{null}\ T + \text{range}\ T + \dim T
+\end{equation}
