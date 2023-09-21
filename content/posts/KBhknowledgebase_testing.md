@@ -13,6 +13,18 @@ crybaby cry.
 \end{equation}
 
 \begin{equation}
+\frac{1}{2} \cdot x^{2} y\_0
+\end{equation}
+
+\begin{equation}
+\mqty(0 & 1 & 2 \\\ 0&1 &2)
+\end{equation}
+
+\begin{equation}
+\int\_{-2}^{2} x^{2}dx
+\end{equation}
+
+\begin{equation}
 \begin{cases}
 \frac{1}{2} + \sum\_{i=0}^{x^{2}+12}
 \end{cases}
@@ -23,3 +35,15 @@ We are going to show that, for fin. dim. \\(V\\), any map \\(T \in \mathcal{L}(V
 \begin{equation}
 \text{null}\ T + \text{range}\ T + \dim T
 \end{equation}
+
+\begin{equation}
+\frac{1}{2} \sum\_{i=0}^{N} i
+\end{equation}
+
+[eigenvalue]({{< relref "KBheigenvalue.md" >}}) oe
+
+[Test-Driven Development]({{< relref "KBhtesting.md#test-driven-development" >}}) ethetuhn uoen uth [John Corso]({{< relref "KBhjohn_corso.md" >}})
+
+**htest**
+
+_teest_
