@@ -15,8 +15,3 @@ a = bq + r
 Now, \\(d|a,b \Leftrightarrow d|b,r\\) (because \\(d|b,r\\) implies there's some \\(x, x'\\) such that \\(a = (dx)q+dx'\\), and so \\(a = d(xq + x')\\) and so \\(d|a\\); the logic goes the other way too).
 
 This finally implies that \\(\gcd (a,b)= \gcd (b,r)\\) because any divisor that works for one works for both.
-
-
-## Some Euclid Lemma {#some-euclid-lemma}
-
-If \\(p\\) is a prime, and \\(p|ab\\), then \\(p|a\\) or \\(p|b\\)

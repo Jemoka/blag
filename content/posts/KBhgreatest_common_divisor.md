@@ -4,32 +4,88 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-For two non-zero integers, [greatest common divisor]({{< relref "KBhgreatest_common_divisor.md" >}}) denoted \\(\gcd (a,b)\\) is the largest \\(d\\) such that \\(d|a\\) and \\(d|b\\)
+Let \\(a,b \in \mathbb{Z}\\), not both zero. \\(\gcd (a,b)\\) is the greatest value \\(d\\) such that \\(d|a\\), \\(d|b\\).
 
 
-## additional information {#additional-information}
+## greatest common divisor is a linear combination {#greatest-common-divisor-is-a-linear-combination}
 
+We can write \\(\gcd (a,b)  = as+bt\\) for some \\(s,t \in \mathbb{Z}\\).
 
-### \\(1\\) and \\(0\\) {#1-and-0}
-
-\begin{equation}
-a | 0, \forall a \in \mathbb{Z}
-\end{equation}
-
-and
+Let us define:
 
 \begin{equation}
-1 | a, \forall a \in \mathbb{Z}
+S = \\{am + bn: m,n \in \mathbb{Z}, am+bn > 0\\}
 \end{equation}
 
+We will first check that \\(S\\) is non-empty. To do so, let \\(a\\) be negative and \\(b\\) be positive. Then, set \\(m = -1\\), \\(n = 1\\). We can see that \\(am + bn > 0\\), satisfying the conditions of the set. In a similar manner, we can demonstrate that regardless of the choice of \\(a, b\\), \\(S\\) is non-empty.
 
-### properties of the [gcd]({{< relref "KBhgreatest_common_divisor.md" >}}) {#properties-of-the-gcd--kbhgreatest-common-divisor-dot-md}
+Furthermore, integral linear combinations are integers, so \\(S\\) is a non-empty subset of \\(\mathbb{Z}\\).
 
-For two [integer]({{< relref "KBhinteger.md" >}})s not both \\(0\\) named \\(a,b\\). \\(\gcd (a,b) = as+bt\\) for some \\(s\\) and \\(t\\). In fact, the [gcd]({{< relref "KBhgreatest_common_divisor.md" >}}) is the smallest [integer]({{< relref "KBhinteger.md" >}}) ("integral") [linear combination]({{< relref "KBhlinear_combination.md" >}}) of \\(a\\) and \\(b\\).
+We can now invoke [WOP]({{< relref "KBhprinciple_of_induction.md#well-ordering-principle" >}}). There is some smallest \\(d \in S\\). Let's call \\(d = as +dt\\). We desire that \\(d\\) is actually \\(\gcd (a,b)\\).
 
 
-### coprime {#coprime}
+### \\(d\\) is a common divisor of \\(a,b\\) {#d-is-a-common-divisor-of-a-b}
 
-When \\(\gcd (a,b)=1\\), they are called [coprime]({{< relref "KBhprime.md#coprime" >}}).
+WLOG write some:
 
-And therefore, because of the [properties of the gcd](#properties-of-the-gcd--kbhgreatest-common-divisor-dot-md), when \\(a\\) and \\(b\\) are [coprime]({{< relref "KBhprime.md#coprime" >}}), there is some \\(s,t\\) such that \\(as+bt = 1\\).
+\begin{equation}
+a = dq + r
+\end{equation}
+
+using [division algorithm]({{< relref "KBhdivide.md#division-algorithm" >}}). Because \\(d \in S\\), we can write now:
+
+\begin{equation}
+a = (as+bt) q + r
+\end{equation}
+
+We desire that now \\(r = 0\\) so that we can write \\(d|a\\). We can write:
+
+\begin{equation}
+r = a-dq
+\end{equation}
+
+(notice! \\(a\\) is a linear combination of \\(a,b\\), and \\(d\\) is given to be such)
+
+\begin{equation}
+r = a-dq = (1a + 0b) - (as+bt)q  = a(1-qs) + b(-tq)
+\end{equation}
+
+Recall that \\(r < d\\) because \\(r\\) is a remainder. And of course \\(r\\) is defined to be positive or \\(0\\) by the [division algorithm]({{< relref "KBhdivide.md#division-algorithm" >}}).
+
+So:
+
+\begin{equation}
+0 \leq a(1-qs) + b(-tq) <d
+\end{equation}
+
+Now, you will note this middle thing, which is equal to \\(r\\), is itself a positive [linear combination]({{< relref "KBhlinear_combination.md" >}}) of \\(a,b\\). Furthermore, it is smaller than \\(d\\). We already have that \\(d\\) is the smallest element of \\(S\\), which means the only other value \\(r\\) can take on is \\(0\\).
+
+This leads to conclude:
+
+\begin{equation}
+a = dq + 0
+\end{equation}
+
+so \\(d|a\\), WLOG \\(d|b\\).
+
+
+### \\(d\\) is the greatest common divisor {#d-is-the-greatest-common-divisor}
+
+Proof:
+
+Let \\(d'\\) be a common divisor of \\(a,b\\). This means there are some \\(m', n'\\) such that:
+
+\begin{align}
+a &= d' m' \\\\
+b &= d' n'
+\end{align}
+
+Recall that \\(d = as + bt\\). This means:
+
+\begin{equation}
+d = as + bt = (d' m')s + (d' n')t =  d' (m' s + n' t)
+\end{equation}
+
+This means that \\(d' | d\\). Now, \\(d \in  S\\), and everything in \\(S\\) is positive. Therefore, \\(d\\) must be the [greatest common divisor]({{< relref "KBhgreatest_common_divisor.md" >}}) because it is divisible (and therefore bigger in magnitude than) any \\(d'\\).
+
+Which means that \\(d\\) must be the [greatest common divisor]({{< relref "KBhgreatest_common_divisor.md" >}})

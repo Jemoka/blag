@@ -24,7 +24,6 @@ draft = false
     -   [division algorithm]({{< relref "KBhdivide.md#division-algorithm" >}})
     -   [properties of the gcd]({{< relref "KBhgreatest_common_divisor.md#properties-of-the-id-0ccf3a9f-e788-4485-b49a-b54906e52fe4-gcd" >}})
 -   [Euclidean Algorithm]({{< relref "KBheuclidean_algorithm.md" >}}) and some euclid lemma linked below in [fundamental theorem of arithmetic]({{< relref "KBhfundamental_theorem_of_arithmetic.md" >}})
--   [fundamental theorem of arithmetic]({{< relref "KBhfundamental_theorem_of_arithmetic.md" >}})
 
 
 ## Questions for Jana {#questions-for-jana}

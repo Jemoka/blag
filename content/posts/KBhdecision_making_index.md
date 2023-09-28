@@ -135,6 +135,7 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 ## Lectures {#lectures}
 
 -   [SU-CS238 SEP262023]({{< relref "KBhsu_cs238_sep262023.md" >}})
+-   [SU-CS238 SEP272023]({{< relref "KBhsu_cs238_sep272023.md" >}})
 
 
 ## Worksheets {#worksheets}

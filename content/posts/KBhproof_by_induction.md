@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+A [proof]({{< relref "KBhproof.md" >}}) structure that uses [induction]({{< relref "KBhprinciple_of_induction.md" >}}).
+
+
 ## base case {#base-case}
 
 Prove some base case \\(n\_0\\)
