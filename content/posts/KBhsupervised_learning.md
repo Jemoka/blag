@@ -10,3 +10,10 @@ Supervised learning (also known as [behavioral cloning]({{< relref "KBhsupervise
 2.  use an automated learning algorithm to generalize from the example
 
 This is good for typically representative situations, but if you are throwing an [agent]({{< relref "KBhagent.md" >}}) into a completely unfamiliar situation, supervised learning cannot perform better.
+
+
+## Disadvantages {#disadvantages}
+
+-   the labeled data is finite
+-   limited by the quality of performance in the training data
+-   interpolation between states are finite

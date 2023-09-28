@@ -11,7 +11,55 @@ draft = false
 syntax: \\(X \sim D\\).
 
 
+## modeling a distribution {#modeling-a-distribution}
+
+Each distribution has three properties:
+
+-   variables (what is being modeled)
+-   values (what values can they take on)
+-   parameters (how many degrees of freedom do we have)
+
+So, for instance, for a binary distribution with \\(n\\) variables which we know nothing about, we have:
+
+\begin{equation}
+2^{n} - 1
+\end{equation}
+
+parameters (\\(2^{n}\\) different possibilities of combinations, and \\(1\\) non-free variables to ensure that the distribution add up)
+
+
+### compression distribution {#compression-distribution}
+
+
+#### assuming independence {#assuming-independence}
+
+HOWEVER, if the variables were [independent]({{< relref "KBhprobability.md#independence" >}}), this becomes much easier. Because the variables are independent, we can claim that:
+
+\begin{equation}
+p(x\_{1\dots n}) =  \prod\_{i}^{} p(x\_{i)}
+\end{equation}
+
+
+#### pruning a decision tree {#pruning-a-decision-tree}
+
+For instance, you can have a decision tree which you selectively ignore some combinations.
+
+{{< figure src="/ox-hugo/2023-09-28_10-13-07_screenshot.png" >}}
+
+In this case, we ignored \\(z\\) if both \\(x\\) and \\(y\\) are \\(0\\).
+
+
+#### bay {#bay}
+
+
 ## types of distributions {#types-of-distributions}
+
+
+### discrete distribution {#discrete-distribution}
+
+A discrete set of chances: die, coin flip, etc.
+
+We use [probability mass function](#probability-mass-function) to
 
 
 ### Gaussian distribution {#gaussian-distribution}
@@ -20,17 +68,20 @@ syntax: \\(X \sim D\\).
 X \sim N(\mu, \sigma^{2})
 \end{equation}
 
-Its [PDF](#probability-distributions) is:
+Its [PDF](#probability-density-functions) is:
 
 \begin{equation}
 f\_{x}(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{\frac{-(x-\mu)^{2}}{2 \sigma ^{2}}}
 \end{equation}
 
-And its exepctations:
+And its expectations:
 
 \\(E(X) = \mu\\)
 
-\\(Var(X) = \sigma^{2}\\) (TODO check this)
+\\(Var(X) = \sigma^{2}\\)
+
+
+### joint distribution {#joint-distribution}
 
 
 ### uniform distribution {#uniform-distribution}
@@ -64,9 +115,9 @@ Var(X) = \frac{1}{12}(\beta -\alpha )^{2}
 \\(P(event) = value\\)
 
 
-### probability distributions {#probability-distributions}
+### probability density functions {#probability-density-functions}
 
-[PDF](#probability-distributions)s is a function that maps continuous random variables to the corresponding probability.
+[PDF](#probability-density-functions)s is a function that maps continuous random variables to the corresponding probability.
 
 and \\(\int P\ dE = 1\\) because of [axiom of probability]({{< relref "KBhprobability.md#axiom-of-probability" >}})
 

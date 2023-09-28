@@ -15,7 +15,7 @@ Basically; regardless if Cary took the envelope \\(x\\) or \\(y\\), the _other_ 
 
 ## Key Sequence {#key-sequence}
 
--   we introduced [Decision Making]({{< relref "KBhdecision_making.md" >}}), [models of decision making]({{< relref "KBhdecision_making.md#decision-making--kbhdecision-making-dot-md--method" >}}) and gave some examples
+-   we introduced [Decision Making]({{< relref "KBhdecision_making.md" >}}), [models of decision making]({{< relref "KBhdecision_making.md#id-9075c44f-4b26-4f5a-9236-bc7a5c10f4ee-decision-making-method" >}}) and gave some examples
 -   we introduced different [types of uncertainty]({{< relref "KBhuncertainty.md" >}})
 -   in the reading, we introduced the [Course Outline]({{< relref "KBhdecision_making_index.md#course-outline" >}})
 
@@ -23,6 +23,7 @@ Basically; regardless if Cary took the envelope \\(x\\) or \\(y\\), the _other_ 
 ## New Definitions {#new-definitions}
 
 -   [Decision Making]({{< relref "KBhdecision_making.md" >}})
+-   [uncertainty]({{< relref "KBhuncertainty.md" >}})
 
 
 ## Questions for Jana {#questions-for-jana}

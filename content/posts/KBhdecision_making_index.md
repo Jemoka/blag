@@ -93,7 +93,7 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 
 -   models of distributions over many variables
 -   using distributions to make inferences
--   [utility theory]({{< relref "KBhutility_theory.md" >}}) + [decision networks]({{< relref "KBhdecision_networks.md" >}})
+-   [utility theory]({{< relref "KBhutility_theory.md" >}})
 
 
 ### n-shot: Sequential Problems {#n-shot-sequential-problems}

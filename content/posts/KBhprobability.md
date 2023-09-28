@@ -22,14 +22,29 @@ This results in three correlaries:
 -   if \\(E \subset F\\), \\(P(E) \leq  P(F)\\)
 
 
-## marginal distribution {#marginal-distribution}
+## conditional probability {#conditional-probability}
+
+\begin{equation}
+P (X, Y ) = P(X\mid Y) \cdot P(Y)
+\end{equation}
+
+In this case, we call \\(Y\\) the "evidence". this allows us to find "what is the chance of \\(x\\) given \\(y\\)".
+
+\begin{equation}
+\sum\_{x}^{} p(x \mid y) = 1
+\end{equation}
+
+because this is **still** a probability over \\(x\\).
+
+
+## law of total probability {#law-of-total-probability}
 
 say you have two variables \\(x, y\\).
 
 "what's the probablity of \\(x\\)"
 
 \begin{equation}
-p(x) = \int\_{y} f(X=x, y=y)
+P(x) = \sum\_{Y} P(x,y)
 \end{equation}
 
 a.k.a.:
@@ -38,27 +53,14 @@ a.k.a.:
 p(x) = p(x|y\_1)p(y\_1) + \dots + p(x|y\_{n})y\_{n}
 \end{equation}
 
-
-## conditional probability {#conditional-probability}
-
-\begin{equation}
-P (E\ and\ F ) = P(E|F) \cdot P(F)
-\end{equation}
+by applying [conditional probability](#conditional-probability) formula upon each term
 
 
-## Bayes Theorem {#bayes-theorem}
+## Bayes rule {#bayes-rule}
 
-\begin{align}
-P(E|F) &= \frac{P(E,F)}{P(F)}  \\\\
-&= \frac{P(F|E) \cdot P(E)}{P(F)} \\\\
-&= \frac{P(F|E) \cdot P(E)}{P(F|E)P(E) + P(F|E^{C})P(E^{C})}
-\end{align}
+See: [Bayes Theorem]({{< relref "KBhbayes_theorem.md#bayes-theorem" >}})
 
-(note: that \\(E\\) in this case only has two condition, if you have multiple conditions)
 
-condition on
+## independence {#independence}
 
-\begin{align}
-p(x|y) &= \frac{p(y|x) \cdot  p(x)}{p(y)}  \\\\
-&= \frac{p(y|x) \cdot p(x)}{\sum\_{x} p(y)}
-\end{align}
+If \\(X\\) and \\(Y\\) are independent (written as \\(X \perp Y\\)), we know that \\(P(x,y) = P(x)P(y)\\) for all \\(x, y\\).
