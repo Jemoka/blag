@@ -1,15 +1,10 @@
 +++
-title = "probability theory"
+title = "degrees of belief"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-[probability theory]({{< relref "KBhprobability_theory.md" >}}) is the theory of [probability]({{< relref "KBhprobability.md" >}}).
-
-
-## Motivation {#motivation}
-
-We need to compare some theory against some observation.
+[degrees of belief]({{< relref "KBhprobability_theory.md" >}}) help us quantify how much we believe some event \\(A\\) is more/less plausible than some event \\(B\\).
 
 Let us take two statements:
 
@@ -23,10 +18,10 @@ A \succ B
 \end{equation}
 
 
-### axioms of [probability theory]({{< relref "KBhprobability_theory.md" >}}) {#axioms-of-probability-theory--kbhprobability-theory-dot-md}
+## axioms of [degrees of belief]({{< relref "KBhprobability_theory.md" >}}) {#axioms-of-degrees-of-belief--kbhprobability-theory-dot-md}
 
 
-#### universal comparability {#universal-comparability}
+### universal comparability {#universal-comparability}
 
 for two statements \\(A, B\\), only three states can exist:
 
@@ -35,12 +30,14 @@ for two statements \\(A, B\\), only three states can exist:
 -   \\(A \sim B\\) (equally likely)
 
 
-#### transitivity {#transitivity}
+### transitivity {#transitivity}
 
 if \\(A \succeq B\\) and \\(B \succeq C\\), then \\(A \succeq C\\)
 
 
-### [probability]({{< relref "KBhprobability.md" >}}) and [probability theory]({{< relref "KBhprobability_theory.md" >}}) maps together {#probability--kbhprobability-dot-md--and-probability-theory--kbhprobability-theory-dot-md--maps-together}
+### language of probability {#language-of-probability}
+
+using this framework, we can then describe the events in terms of [probability]({{< relref "KBhprobability.md" >}})
 
 -   \\(P(A) > P(B) \Leftrightarrow A \succ B\\)
 -   \\(P(A) = P(B) \Leftrightarrow A \sim B\\)

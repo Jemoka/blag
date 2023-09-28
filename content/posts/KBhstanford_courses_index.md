@@ -23,6 +23,7 @@ Here are a list of random indicies which may end up being helpful!
 
 ## Stanford UG Talks {#stanford-ug-talks}
 
-| Date                                                                                         | Topic               | Presenter    | Link                                                                                |
-|----------------------------------------------------------------------------------------------|---------------------|--------------|-------------------------------------------------------------------------------------|
-| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-20 Wed&gt;</span></span> | UG Research Program | Brian Thomas | [Stanford UG Research Program]({{< relref "KBhstanford_ug_research_program.md" >}}) |
+| Date                                                                                         | Topic                          | Presenter    | Link                                                                                |
+|----------------------------------------------------------------------------------------------|--------------------------------|--------------|-------------------------------------------------------------------------------------|
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-20 Wed&gt;</span></span> | UG Research Program            | Brian Thomas | [Stanford UG Research Program]({{< relref "KBhstanford_ug_research_program.md" >}}) |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-09-28 Thu&gt;</span></span> | Bld an Ecosystem, Not Monolith | Colin Raffel | [Build a System]({{< relref "KBhbuild_a_system_not_a_monolyth.md" >}})              |

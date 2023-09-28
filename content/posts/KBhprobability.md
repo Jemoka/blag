@@ -25,10 +25,20 @@ This results in three correlaries:
 ## conditional probability {#conditional-probability}
 
 \begin{equation}
-P (X, Y ) = P(X\mid Y) \cdot P(Y)
+P (X, Y) = P(X\mid Y) \cdot P(Y)
 \end{equation}
 
 In this case, we call \\(Y\\) the "evidence". this allows us to find "what is the chance of \\(x\\) given \\(y\\)".
+
+We can continue this to develop the [probability chain rule](#conditional-probability):
+
+\begin{equation}
+P(A\_1, A\_2 \dots, A\_{n}) = P(A\_{n} \mid A\_1, A\_2 \dots A\_{n-1})P(A\_1, A\_2 \dots A\_{n-1})
+\end{equation}
+
+and so on.
+
+Now:
 
 \begin{equation}
 \sum\_{x}^{} p(x \mid y) = 1
@@ -58,7 +68,7 @@ by applying [conditional probability](#conditional-probability) formula upon eac
 
 ## Bayes rule {#bayes-rule}
 
-See: [Bayes Theorem]({{< relref "KBhbayes_theorem.md#bayes-theorem" >}})
+See: [Bayes Theorem]({{< relref "KBhbayes_theorem.md" >}})
 
 
 ## independence {#independence}
