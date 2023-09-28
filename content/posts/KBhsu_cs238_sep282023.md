@@ -10,19 +10,23 @@ draft = false
 ## New Concepts {#new-concepts}
 
 -   [probability theory]({{< relref "KBhprobability_theory.md" >}})
-    -   belief axioms:
-        -   [universal comparability]({{< relref "KBhprobability_theory.md#universal-comparability" >}})
-        -   [transitivity]({{< relref "KBhprobability_theory.md#transitivity" >}})
-    -   probability axioms:
-        -   [axiom of probability]({{< relref "KBhprobability.md#axiom-of-probability" >}})
 -   relevant [probability distributions]({{< relref "KBhprobability_distributions.md" >}})
     -   [discrete distribution]({{< relref "KBhprobability_distributions.md#discrete-distribution" >}})
     -   [Gaussian distribution]({{< relref "KBhprobability_distributions.md#gaussian-distribution" >}})
+-   [conditional probability]({{< relref "KBhprobability.md#conditional-probability" >}})
+-   [Baysian Network]({{< relref "KBhbaysian_network.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
 
 -   [history and impact of decision making]({{< relref "KBhdecision_making_history.md" >}})
+-   [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}})
+-   fun axioms
+    -   belief axioms:
+        -   [universal comparability]({{< relref "KBhprobability_theory.md#universal-comparability" >}})
+        -   [transitivity]({{< relref "KBhprobability_theory.md#transitivity" >}})
+    -   probability axioms:
+        -   [axiom of probability]({{< relref "KBhprobability.md#axiom-of-probability" >}})
 
 
 ## Questions {#questions}
