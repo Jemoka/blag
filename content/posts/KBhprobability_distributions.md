@@ -55,6 +55,7 @@ see [Baysian Network]({{< relref "KBhbaysian_network.md" >}})
 
 -   [discrete distribution]({{< relref "KBhdiscrete_distribution.md" >}})
 -   [continuous distribution]({{< relref "KBhcontinuous_distribution.md" >}})
+-   [joint probability distribution]({{< relref "KBhjoint_probability_distribution.md" >}})
 
 
 ## distribution of note {#distribution-of-note}
