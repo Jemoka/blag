@@ -1,5 +1,5 @@
 +++
-title = "sum and or rules of counting"
+title = "inclusion exclusion counting"
 author = ["Houjun Liu"]
 draft = false
 +++

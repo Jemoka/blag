@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[counting]({{< relref "KBhcounting.md" >}}) asks: "how many possible outcomes satisfy an event?"
+[counting]({{< relref "KBhcounting.md" >}}) asks: "how many possible outcomes satisfy an event?" You create a "generative story" to think about how you can count for the total choices.
 
 (like, 3 times will we roll even in a regular fair dice)
 
