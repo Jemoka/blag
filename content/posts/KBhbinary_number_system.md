@@ -20,7 +20,7 @@ Accumulation of \\(8\\) [bit](#bit)s
 Computer memory is a large array of [byte](#byte)s. It is only **BYTE ADDRESSABLE**: you can't address a bit in isolation.
 
 
-## numerical representations {#numerical-representations}
+## bases {#bases}
 
 Generate, each base uses digits \\(0\\) to \\(base-1\\).
 
@@ -76,3 +76,48 @@ We can use [base 16](#base-16) essentially to divide [base 2](#base-2) numbers i
 {{< figure src="/ox-hugo/2023-10-02_10-54-50_screenshot.png" >}}
 
 Each quartet of bits can be converted separately
+
+
+### "Which bit is missing" {#which-bit-is-missing}
+
+The way you can do conversion in your head more simply is to stare at a binary number in groups of \\(4\\), and see which missing bytes are there and subtract that much.
+
+
+## numerical representations {#numerical-representations}
+
+
+### unsigned integers {#unsigned-integers}
+
+Positive numbers and 0. A number is either \\(0\\) or some positive integer.
+
+The range of is \\(2^{w}-1\\) where \\(w\\) is the number of bits, because we are cramming the entire number from \\(0\\) to \\(2^{w}-1\\).
+
+
+### signed integers {#signed-integers}
+
+Negative, positive, and \\(0\\).
+
+
+#### a bad system {#a-bad-system}
+
+{{< figure src="/ox-hugo/2023-10-02_11-13-22_screenshot.png" >}}
+
+The fact that \\(0\\) is signed is quite bad. And like adding negative numbers to positive number is very hard because you need another processor to figure out what the sign is.
+
+
+#### two's complement {#two-s-complement}
+
+See [two's complement.]({{< relref "KBhtwo_s_complement.md" >}})
+
+
+### sizes of stuff {#sizes-of-stuff}
+
+([byte](#byte)s)
+
+-   int: 4
+-   float: 4
+-   double: 8
+-   char: 1
+-   pointer: 8 (for 64 bit systems)
+-   short: 2
+-   long: 8
