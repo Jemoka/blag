@@ -11,6 +11,4 @@ draft = false
 
 ## step rule of counting {#step-rule-of-counting}
 
-If an outcome can be from \\(A\\) **or** \\(B\\), where \\(A \cap B = \emptyset\\), then, the total number of outcomes are \\(|A| + |B| = m+n\\)
-
-See [independence]({{< relref "KBhprobability.md#independence" >}})
+{{< figure src="/ox-hugo/2023-10-02_16-28-05_screenshot.png" >}}
