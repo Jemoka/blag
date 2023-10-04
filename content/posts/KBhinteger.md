@@ -12,3 +12,5 @@ an [integer]({{< relref "KBhinteger.md" >}}) (\\(\mathbb{Z}\\)) is the [natural 
 -   what are the limitations of computational arithmetic
 -   how to perform efficient arithmetic
 -   how to encode data more compactly and efficiently
+
+See also [computer number system]({{< relref "KBhbinary_number_system.md" >}})

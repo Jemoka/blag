@@ -12,7 +12,9 @@ P(X|Y)
 
 where \\(Y\\) is observed, and we want to know how likely \\(X\\) would therefore be.
 
-[Bayes rule]({{< relref "KBhbayes_theorem.md" >}}) allows us to perform inference if needed.
+We call the set \\(X\\) the "query variables", \\(Y\\) as "evidence varibales", and anything that we didn't use which connects the two variables as "hidden variables".
+
+If things are not in the right order of \\(X\\) and \\(Y\\), consider the [Bayes rule]({{< relref "KBhbayes_theorem.md" >}}).
 
 
 ## Example {#example}
@@ -25,9 +27,21 @@ Suppose we'd like to know \\(P(b^{1} | d^{1}, c^{1})\\), where \\(b^{1}\\) is co
 p(b^{1} | d^{1}, c^{1}) = \frac{p(b^{1}, d^{1}, c^{1})}{p(d^{1}, c^{1})}
 \end{equation}
 
-to compute \\(p(b^{1}, d^{1}, c^{1})\\), we would have to sum over \\(e,s\\) which are not involved upon \\(p(b ... c)\\).
+To compute \\(p(b^{1}d^{1}c^{1})\\), we first compute:
 
-{{< figure src="/ox-hugo/2023-10-03_09-59-24_screenshot.png" >}}
+\begin{equation}
+p(b^{1}, d^{1}, c^{1}, E, S)
+\end{equation}
+
+and then, use the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) to get:
+
+\begin{equation}
+p(b^{1}, d^{1}, c^{1}) = \sum\_{e=E} \sum\_{s=S} p(b^{1}, d^{1}, c^{1}, E, S)
+\end{equation}
+
+you will note this is very expensive computationally O(es) --- and if you have like a 1000 hidden variables you will die.
+
+We therefore introduce [sum-product elimination](#sum-product-elimination).
 
 
 ## sum-product elimination {#sum-product-elimination}
@@ -49,13 +63,21 @@ Write down all [factor]({{< relref "KBhfactor.md" >}})s associated with this com
 \phi\_{1}(B), \phi\_{2}(S), \phi\_{3}(E,B,S), \phi\_{4}(D,E), \phi\_{5}(C,E)
 \end{equation}
 
-we have evidence at two variables: \\(D, C\\). Therefore, \\(\phi\_{4}\\) and \\(\phi\_{5}\\) can be replaced by the [factor conditioning]({{< relref "KBhfactor.md#factor-conditioning" >}}) as we observed \\(d, c\\), so we no longer need \\(d, c\\) as input because we know them:
+we have evidence at two variables: \\(D, C\\).
+
+
+### Step 2: performing [factor conditioning]({{< relref "KBhfactor.md#factor-conditioning" >}}) for all evidence variables {#step-2-performing-factor-conditioning--kbhfactor-dot-md--for-all-evidence-variables}
+
+Therefore, \\(\phi\_{4}\\) and \\(\phi\_{5}\\) can be replaced by the [factor conditioning]({{< relref "KBhfactor.md#factor-conditioning" >}}) as we observed \\(d, c\\), so we no longer need \\(d, c\\) as input because we know them:
 
 now we have, to replace \\(\phi\_{4}, \phi\_{5}\\):
 
 \begin{equation}
 \phi\_{6}(E), \phi\_{7}(E)
 \end{equation}
+
+
+### Step 3: using the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) and [factor product]({{< relref "KBhfactor.md#factor-product" >}}), get rid of hidden variables {#step-3-using-the-law-of-total-probability--kbhprobability-dot-md--and-factor-product--kbhfactor-dot-md--get-rid-of-hidden-variables}
 
 We then choose an ordering of the [hidden variables]({{< relref "KBhinference.md" >}}) and apply a [factor product]({{< relref "KBhfactor.md#factor-product" >}}) using the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) to get rid of them:
 

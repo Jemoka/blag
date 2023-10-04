@@ -121,3 +121,8 @@ See [two's complement.]({{< relref "KBhtwo_s_complement.md" >}})
 -   pointer: 8 (for 64 bit systems)
 -   short: 2
 -   long: 8
+
+
+## overflow {#overflow}
+
+If you exceed the maximum value of bit representation, it rolls over to becoming negative. If you subtract one, you have to borrow from an imaginary

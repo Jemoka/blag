@@ -38,9 +38,9 @@ Keep following the highest probability token by multpliying probabiltiies togeth
 ...but the model would just. like end the sentence. So longer the string the lower the chance is. Because all the other possibility is lower.
 
 
-### Direct Sampling {#direct-sampling}
+### Challenges of Direct Sampling {#challenges-of-direct-sampling}
 
-Its sucks. It sucks. Just sampling from the distribution sucks. This has to do with the fact that assigning slightly lower scores "being less confident" is exponentially worse.
+[Direct Sampling]({{< relref "KBhdirect_sampling.md" >}}) sucks. Its sucks. It sucks. Just sampling from the distribution sucks. This has to do with the fact that assigning slightly lower scores "being less confident" is exponentially worse.
 
 The model has to therefore be VERY conservative about giving low confidences; so, it is over confident about worst tokens.
 

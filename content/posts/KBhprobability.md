@@ -4,13 +4,33 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[probability]({{< relref "KBhprobability.md" >}}) of an event is the proportion of times the event occurs in many repeated trials.
+[probability]({{< relref "KBhprobability.md" >}}) of an event is the proportion of times the event occurs in many repeated trials. It is  "our belief that an event \\(E\\) occurs".
+
+
+## Frequentist Definition of Probability {#frequentist-definition-of-probability}
+
+That is, it is a number between \\(0-1\\). Whereby:
+
+\begin{equation}
+P(E) = \lim\_{n \to \infty} \frac{n(E)}{n}
+\end{equation}
+
+"frequentist definition of probability"
+
+probability is the ratio between the number of times \\(E\\) occurring \\(n(E)\\) divided by the number of times you did the thing \\(n\\). This system converge because of the [law of large numbers]({{< relref "KBhlaw_of_large_numbers.md" >}}).
+
+
+## [uncertainty]({{< relref "KBhuncertainty.md" >}}) and [probability]({{< relref "KBhprobability.md" >}}) {#uncertainty--kbhuncertainty-dot-md--and-probability--kbhprobability-dot-md}
+
+Say you are training some kind of model. When it says \\(0.8\\) for motorcycle, its not that there are \\(80\\%\\) chance that there's a motorcycle there. Its that the model is \\(80\\%\\) confident that there's a motorcycle.
+
+****Probability can not only represent the world, but our understanding of the world****
 
 
 ## axiom of probability {#axiom-of-probability}
 
 -   \\(0 \leq P(E) \leq 1\\)
--   \\(P(S) = 1\\), where \\(S\\) is the sample space
+-   \\(P(S) = 1\\), where \\(S\\) is the [sample space]({{< relref "KBhsample_space.md" >}})
 -   if \\(E\\) and \\(F\\) are mutually exclusive, \\(P(E) + P(F) = P(E \cup F)\\)
 
 ---
