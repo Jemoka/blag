@@ -24,7 +24,7 @@ unsigned int uv = -12345U;
 ```
 
 
-## automatic signed promotion {#automatic-signed-promotion}
+## sign promotion {#sign-promotion}
 
 If you have the nerve of putting a comparing things of different types (don't), then, the **signed quantities gets promoted to be unsigned**.
 
@@ -35,10 +35,23 @@ That is, we get that:
 -
 
 
-## automated type size promotion {#automated-type-size-promotion}
+## type size promotion {#type-size-promotion}
 
 If you have the nerve of putting a comparing things of different types (don't), then, the **smaller types get promoted to being a bigger types**.
 
 -   casting from small unsigned value to larger unsigned value just requires us prepending a buncha zeros as needed
 -   casting from a small signed value to larger signed value requires us repeating the left most value to fill out the rest of the variable (-1 = 11111, so bigger -1 = 11111 (repeated) 111)
 -   lasting from a large value to a smaller value will cause **truncation**
+
+
+## type size truncation {#type-size-truncation}
+
+Take, for instance:
+
+```c
+int x = 53191;
+short sx = x;
+int y = sx;
+```
+
+The short is 2 [byte]({{< relref "KBhbinary_number_system.md#byte" >}}), which means that 2 of the left [byte]({{< relref "KBhbinary_number_system.md#byte" >}})s of the int got dropped.

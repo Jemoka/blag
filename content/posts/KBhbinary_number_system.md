@@ -114,6 +114,8 @@ See [two's complement.]({{< relref "KBhtwo_s_complement.md" >}})
 
 ([byte](#byte)s)
 
+{{< figure src="/ox-hugo/2023-10-03_16-49-34_screenshot.png" >}}
+
 -   int: 4
 -   float: 4
 -   double: 8

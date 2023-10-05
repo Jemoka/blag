@@ -49,3 +49,20 @@ P(c|o\_{1:n}) \propto P(c, o\_{1:n})
 \end{equation}
 
 "the probability of a class occurring given the inputs is proportional to the probability of that class occurring along with the inputs"
+
+
+## Motivation: [Bayes rule]({{< relref "KBhbayes_theorem.md" >}}) {#motivation-bayes-rule--kbhbayes-theorem-dot-md}
+
+{{< figure src="/ox-hugo/2023-10-05_09-14-17_screenshot.png" >}}
+
+This will give us:
+
+{{< figure src="/ox-hugo/2023-10-05_09-14-32_screenshot.png" >}}
+
+However, what if we don't want to use the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) to add up \\(P(FB')\\)?
+
+We can actually write a relation that essentially reminds us that the fact that \\(P(FB')\\) as not dependent on \\(TSF\\), so we can write:
+
+\begin{equation}
+P(TSF^{1}|FB^{1}) \porpto P(TSF^{1})P(FB^{1} | TSF^{1})
+\end{equation}

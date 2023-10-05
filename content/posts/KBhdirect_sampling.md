@@ -28,6 +28,10 @@ We can then obtain a [Direct Sampling]({{< relref "KBhdirect_sampling.md" >}}) v
 
 [Likelihood Weighted Sampling](#likelihood-weighted-sampling) is a change to the [Direct Sampling]({{< relref "KBhdirect_sampling.md" >}}) approach which deals with the fact that [Direct Sampling]({{< relref "KBhdirect_sampling.md" >}}) may oversample [conditional probabilities]({{< relref "KBhprobability.md#conditional-probability" >}}) as it is sampling sub-nodes an equal amount.
 
+It is particularly useful when our priors are unlikely.
+
 To do this, we first perform [Direct Sampling]({{< relref "KBhdirect_sampling.md" >}}) as how you would normally. Now, say we get \\(D=1\\), \\(C=1\\), \\(E=1\\) for the [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) presented below, the actual value we return would be whatever \\(P(D|E) P(C|E)\\).
 
 {{< figure src="/ox-hugo/2023-09-28_10-20-23_screenshot.png" >}}
+
+See [an example here]({{< relref "KBhapproximate_inference.md#example" >}}).

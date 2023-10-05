@@ -33,16 +33,36 @@ Say you are training some kind of model. When it says \\(0.8\\) for motorcycle, 
 -   \\(P(S) = 1\\), where \\(S\\) is the [sample space]({{< relref "KBhsample_space.md" >}})
 -   if \\(E\\) and \\(F\\) are mutually exclusive, \\(P(E) + P(F) = P(E \cup F)\\)
 
+This last axiom can be chained
+
 ---
 
 This results in three correlaries:
 
 -   \\(P(E^{C}) = 1- P(E)\\)
+
+Proof:
+We know that \\(E^{C}, E\\) are mutually exclusive.
+
+\begin{equation}
+P(E^{C} \cup E) = P(E) + P(E^{C})
+\end{equation}
+
+Now, recall the fact that something happening OR not happening is \\(1\\).
+
+So we have:
+
 -   \\(P(E \cup F) = P(E) + P(F) - P(E \cap F)\\)
 -   if \\(E \subset F\\), \\(P(E) \leq  P(F)\\)
 
 
 ## conditional probability {#conditional-probability}
+
+"What is the new belief that something \\(E\\) happened, conditioned upon the fact that we know that \\(F\\) already happened."
+
+Written as: \\(P(E|F)\\).
+
+Furthermore, we have:
 
 \begin{equation}
 P (X, Y) = P(X\mid Y) \cdot P(Y)
@@ -54,6 +74,12 @@ We can continue this to develop the [probability chain rule](#conditional-probab
 
 \begin{equation}
 P(A\_1, A\_2 \dots, A\_{n}) = P(A\_{n} \mid A\_1, A\_2 \dots A\_{n-1})P(A\_1, A\_2 \dots A\_{n-1})
+\end{equation}
+
+and so:
+
+\begin{equation}
+P(E\_1) \cdot P(E\_2 | E\_1) \cdot E(E\_3 | E\_1E\_2) \cdot P(E\_4 | E\_1E\_2E\_3) \cdot \dots \cdot
 \end{equation}
 
 and so on.
@@ -84,6 +110,13 @@ p(x) = p(x|y\_1)p(y\_1) + \dots + p(x|y\_{n})y\_{n}
 \end{equation}
 
 by applying [conditional probability](#conditional-probability) formula upon each term
+
+This is because:
+
+\begin{align}
+p(x) &= p(x|y\_1)p(y\_1) + \dots + p(x|y\_{n})y\_{n}  \\\\
+&= p(x, y\_1) + \dots  + p(x, y\_{n})
+\end{align}
 
 
 ## Bayes rule {#bayes-rule}

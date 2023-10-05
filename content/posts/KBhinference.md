@@ -94,3 +94,13 @@ We now only have two [factor]({{< relref "KBhfactor.md" >}})s left: \\(\phi\_{1}
 \begin{equation}
 \phi\_{10} (B) = \phi\_{9}(B) \cdot \phi\_{1}(B)
 \end{equation}
+
+
+## Approximate Inference {#approximate-inference}
+
+See [Approximate Inference]({{< relref "KBhapproximate_inference.md" >}})
+
+
+## Gaussian Inference {#gaussian-inference}
+
+See [Inference for Gaussian Models]({{< relref "KBhinference_for_gaussian_models.md" >}})
