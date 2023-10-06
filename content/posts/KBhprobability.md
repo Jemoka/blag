@@ -84,6 +84,18 @@ P(E\_1) \cdot P(E\_2 | E\_1) \cdot E(E\_3 | E\_1E\_2) \cdot P(E\_4 | E\_1E\_2E\_
 
 and so on.
 
+If you are performing the chain rule on something that's already conditioned:
+
+\begin{equation}
+P(X,Y|A)
+\end{equation}
+
+you can break it up just remembering that \\(A\\) needs to be preserved as a condition, so:
+
+\begin{equation}
+P(X,Y|A) = P(X|Y,A) P(Y|A)
+\end{equation}
+
 Now:
 
 \begin{equation}
@@ -118,6 +130,12 @@ p(x) &= p(x|y\_1)p(y\_1) + \dots + p(x|y\_{n})y\_{n}  \\\\
 &= p(x, y\_1) + \dots  + p(x, y\_{n})
 \end{align}
 
+If its not conditional, it holds too:
+
+\begin{equation}
+p(AB^{C}) + p(AB)
+\end{equation}
+
 
 ## Bayes rule {#bayes-rule}
 
@@ -127,3 +145,21 @@ See: [Bayes Theorem]({{< relref "KBhbayes_theorem.md" >}})
 ## independence {#independence}
 
 If \\(X\\) and \\(Y\\) are independent (written as \\(X \perp Y\\)), we know that \\(P(x,y) = P(x)P(y)\\) for all \\(x, y\\).
+
+Formally:
+
+\begin{equation}
+P(A) = P(A|B)
+\end{equation}
+
+if \\(A\\) and \\(B\\) is [independent](#independence). That is, \\(P(AB) = P(A) \cdot P(B)\\). You can check either of these statements (the latter is usually easier).
+
+[Independence](#independence) is bidirectional. If \\(A\\) is independent of \\(B\\), then \\(B\\) is independent of \\(A\\). To show this, invoke the [Bayes Theorem]({{< relref "KBhbayes_theorem.md" >}}).
+
+This is generalized:
+
+\begin{equation}
+P(x\_1, \dots, x\_n) = P(x\_1) \dots p(x\_{n})
+\end{equation}
+
+and this tells us that subset of \\(x\_{j}\\) is independent against each other.

@@ -31,10 +31,10 @@ Unary XOR
 
 Shift the number to the left. Fill unused slots with 0.
 
--   for **signed** values, we perform a arithmetic right shift: fill the unused slots with the most significant bit from before ("fill with 1s")
--   for **unsigned** values, we perform an local right shift;
-
 
 ## &gt;&gt; {#22a1da}
 
 Shift the number to the right
+
+-   for **signed** values, we perform an [arithmetic right shift](#22a1da): fill the unused slots with the most significant bit from before ("fill with 1s")
+-   for **unsigned** values, we perform a [local right shift](#22a1da)
