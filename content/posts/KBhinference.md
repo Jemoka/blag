@@ -81,6 +81,9 @@ now we have, to replace \\(\phi\_{4}, \phi\_{5}\\):
 
 We then choose an ordering of the [hidden variables]({{< relref "KBhinference.md" >}}) and apply a [factor product]({{< relref "KBhfactor.md#factor-product" >}}) using the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) to get rid of them:
 
+-   First get rid of any hidden variables
+-   Then use [factor product]({{< relref "KBhfactor.md#factor-product" >}}) to combine results
+
 \begin{equation}
 \phi\_{8}(B,S) = \sum\_{E=e} \phi\_{3}(E,B,S) \phi\_{6}(e) \phi\_{7}(e)
 \end{equation}

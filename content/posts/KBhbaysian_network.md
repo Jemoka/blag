@@ -6,40 +6,79 @@ draft = false
 
 A [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) is composed of:
 
-1.  a set of variables to model
-2.  a directed, acyclic graph
-3.  a set of [conditional probabilities]({{< relref "KBhprobability.md#conditional-probability" >}}) acting as [factor]({{< relref "KBhfactor.md" >}})s.
+1.  a directed, acyclic graph
+2.  a set of [conditional probabilities]({{< relref "KBhprobability.md#conditional-probability" >}}) acting as [factor]({{< relref "KBhfactor.md" >}})s.
+
+You generally want arrows to go in the direction of causality.
 
 {{< figure src="/ox-hugo/2023-09-28_10-20-23_screenshot.png" >}}
 
-And we can model conditional probabilities based on each value happening.
+Via the chain rule of Bayes nets, we can write this equivalently as:
+
+\begin{equation}
+(P(B) \cdot P(S)) \cdot P(E \mid B,S) \cdot P(D \mid E) \cdot P(C \mid E)
+\end{equation}
+
+generally, for \\(n\\) different variables,
+
+\begin{equation}
+\prod\_{i=1}^{n} p(X\_{i} \mid pa(x\_{i}))
+\end{equation}
+
+where, \\(pa(x\_{i})\\) are the parent values of \\(x\_{i}\\).
 
 
 ## conditional independence {#conditional-independence}
 
+\\(X\\) and \\(Y\\) are [conditionally independent](#conditional-independence) given \\(Z\\) IFF:
+
+\begin{equation}
+P(X, Y|Z) = P(X|Z) \cdot P(Y|Z)
+\end{equation}
+
+("two variables are [conditionally independent](#conditional-independence) if they exhibit [independence]({{< relref "KBhprobability.md#independence" >}}) conditioned on \\(Z\\)")
+
+this is equivalent to saying:
+
+\begin{equation}
+P(X|Z) = P(X|Y,Z)
+\end{equation}
+
+("two variables are [conditionally independent](#conditional-independence) if the inclusion of the evidence of another set into the condition doesn't influence the outcome if they are both conditioned on \\(Z\\)")
+
+We write:
+
+\begin{equation}
+X \perp Y \mid Z
+\end{equation}
+
 The network above has an important property: conditions \\(B\\) and \\(S\\) are independent; and conditions \\(D\\) and \\(C\\) are independent. Though they all depended on \\(E\\), each pair is [conditionally independent](#conditional-independence).
-
-For instance, \\(D,C\\) is [independent]({{< relref "KBhprobability.md#independence" >}}) given \\(E\\), so we write:
-
-\begin{equation}
-P(D \perp C \mid E)
-\end{equation}
-
-You can show this by showing:
-
-\begin{equation}
-P(D \mid E) = P(D \mid C, E)
-\end{equation}
-
-and so forth.
 
 
 ### checking for conditional independence {#checking-for-conditional-independence}
 
-Suppose we desire to know if \\((A \perp B \mid C)\\). We have to check all undirected paths from \\(A\\) to \\(B\\) exhibits [d seperation](#checking-for-conditional-independence), whose conditions are below:
+\\((A \perp B \mid C)\\) IFF ALL undirected paths from \\(A\\) to \\(B\\) on a [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) exhibits [d seperation](#checking-for-conditional-independence), whose conditions are below:
 
-A path is d-seperated if ANY of the following:
+A path is d-seperated by \\(C\\), the set of evidence if ANY of the following:
 
-1.  the path contains a chain of nodes: \\(X \to C \to Z\\)
-2.  the path contains a fork: \\(X \leftarrow C \to Z\\)
-3.  the path contains a [inverted fork](#checking-for-conditional-independence): \\(X \to Y \leftarrow Z\\), where \\(Y\\) is **not** \\(C\\) and no descendent of \\(Y\\) is in \\(C\\).
+1.  the path contains a chain of nodes: \\(X \to Y \to Z\\) where \\(Y \in C\\)
+2.  the path contains a fork: \\(X \leftarrow C \to Z\\), where \\(Y \in C\\)
+3.  the path contains a [inverted fork](#checking-for-conditional-independence): \\(X \to Y \leftarrow Z\\), where \\(Y\\) is **not** in \\(C\\) and no descendent of \\(Y\\) is in \\(C\\).
+
+Note that \\(C\\) can be empty. This is why, \\(B,S\\) is [conditionally independent](#conditional-independence) on **nothing** on that graph above, so they are just actually independent.
+
+If the structure does not imply [conditional independence](#conditional-independence), it does **NOT** mean that the structure is conditionally dependent. It could still be [conditionally independent](#conditional-independence).
+end{equation}
+
+
+#### markov blanket {#markov-blanket}
+
+the [markov blanket](#markov-blanket) of node \\(X\\) is the minimal set of nodes on a [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) which renders \\(X\\) [conditionally independent](#conditional-independence) from all other nodes not in the blanket.
+
+It includes, at most:
+
+-   node's parenst
+-   node's chlidren
+-   other parents of node's children
+
+Check that you need all of these values: frequently, you don't---simply selecting a subset of this often d-seperates the node from everyone else.

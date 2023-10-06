@@ -75,3 +75,10 @@ Overall, its kind of unsurprising from the [Frequentist Definition of Probabilit
 \end{equation}
 
 for some observations \\(n\_{1:k}\\).
+
+
+## Problems with [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) {#problems-with-maximum-likelihood-parameter-learning--kbhmaximum-likelihood-parameter-learning-dot-md}
+
+This requires a lot of data to make work: for instance---if we don't have any plane crashes observed in \\(n\\) files, this scheme would say there's no chance of plane crashes. This is not explicitly true.
+
+Therefore, we use [Baysian Parameter Learning]({{< relref "KBhbaysian_parameter_learning.md" >}}).
