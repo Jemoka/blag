@@ -77,3 +77,31 @@ int main() {
 Copying strings, dangerously, because buffer [overflow]({{< relref "KBhbinary_number_system.md#overflow" >}})s are fun.
 
 {{< figure src="/ox-hugo/2023-10-06_11-22-58_screenshot.png" >}}
+
+This function does NOT care about buffer overflows, and **WILL** put in a null terminator.
+
+
+### strncopy {#strncopy}
+
+This function optimize **against** buffer overflow, but it may not write a null terminator.
+
+{{< figure src="/ox-hugo/2023-10-09_10-42-25_screenshot.png" >}}
+
+
+### strcat {#strcat}
+
+{{< figure src="/ox-hugo/2023-10-09_10-45-17_screenshot.png" >}}
+
+strncat always puts in a null terminator.
+
+
+### pointer arithmetic with strings {#pointer-arithmetic-with-strings}
+
+Fortunatly, each [char]({{< relref "KBhchar.md" >}}) is
+
+
+### strspn {#strspn}
+
+{{< figure src="/ox-hugo/2023-10-09_11-16-40_screenshot.png" >}}
+
+Count the number of characters that are "cool": contained within the end

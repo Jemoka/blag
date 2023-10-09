@@ -33,7 +33,7 @@ parameters (\\(2^{n}\\) different possibilities of combinations, and \\(1\\) non
 HOWEVER, if the variables were [independent]({{< relref "KBhprobability.md#independence" >}}), this becomes much easier. Because the variables are independent, we can claim that:
 
 \begin{equation}
-p(x\_{1\dots n}) =  \prod\_{i}^{} p(x\_{i)}
+p(x\_{1\dots n}) =  \prod\_{i}^{} p(x\_{i))
 \end{equation}
 
 
@@ -158,13 +158,6 @@ whereby,
 
 
 ## three ways of analysis {#three-ways-of-analysis}
-
-
-### probability mass function {#probability-mass-function}
-
-[PMF](#probability-mass-function) is a function that maps possible outcomes of a discrete random variables to the corresponding probability.
-
-\\(P(event) = value\\)
 
 
 ### probability density functions {#probability-density-functions}

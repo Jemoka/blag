@@ -29,3 +29,5 @@ draft = false
 
 
 ## Interesting Factoids {#interesting-factoids}
+
+[eigenvalue]({{< relref "KBheigenvalue.md" >}})

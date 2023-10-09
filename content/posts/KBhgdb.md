@@ -25,5 +25,6 @@ printf("%d\n",lsb);
 ```
 
 ```C
+int test;
 
 ```

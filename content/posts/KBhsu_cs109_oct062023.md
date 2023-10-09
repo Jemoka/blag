@@ -28,3 +28,7 @@ draft = false
 
 
 ## Interesting Factoids {#interesting-factoids}
+
+[eigenvalue]({{< relref "KBheigenvalue.md" >}})
+
+[Quality Investing]({{< relref "KBhfundimental_investing.md#quality-investing" >}})
