@@ -112,4 +112,43 @@ instead, if we observed that \\(o\_{i} = 0\\), then:
 ### Choosing a prior {#choosing-a-prior}
 
 -   do it with only the problem and no knowledge of the data
--   uniform typically works well, but if you have any reason why it won't be uniform (say coin flip), you should count accordingly such as making the distribution more normal with \\(Beta(1,1)\\).
+-   uniform typically works well, but if you have any reason why it won't be uniform (say coin flip), you should count accordingly such as making the distribution more normal with \\(Beta(1,1)\\)
+
+
+## Dirichlet Distribution {#dirichlet-distribution}
+
+We can generalize the [Bayesian Parameter Learning on Binary Distributions](#bayesian-parameter-learning-on-binary-distributions) with the [Dirichlet Distribution](#dirichlet-distribution).
+
+For \\(n\\) parameters \\(\theta\_{1:n}\\), where \\(\theta\_{j}\\) is the probability that the \\(j\\) th case of the categorical distribution happening.
+
+Now:
+
+\begin{equation}
+Dir(\theta\_{1:n} | \alpha) = \frac{\Gamma(\alpha\_{0})}{\prod\_{i=1}^{n} \gamma(\alpha\_{i})} \prod\_{i=1}^{n} \theta\_{i}^{\alpha\_{i}-1}
+\end{equation}
+
+whereby:
+
+\begin{equation}
+\alpha\_{j} = prior + count
+\end{equation}
+
+for \\(j \geq 1\\), and
+
+\begin{equation}
+\alpha\_{0} = prior + total\_{}count
+\end{equation}
+
+whereby prior is your initial distribution. If its uniform, then all prior equals one.
+
+The [expectation]({{< relref "KBhexpectation.md" >}}) for each \\(\theta\_{j}\\) happening is:
+
+\begin{equation}
+\mathbb{E}[\theta\_{j}] = \frac{a\_{i}}{\sum\_{j=1}^{n} \alpha\_{j}}
+\end{equation}
+
+and, with \\(a\_{i} > 1\\), the $i$th mode is:
+
+\begin{equation}
+\frac{a\_{i}-1 }{\sum\_{j=1}^{n} a\_{j}-n}
+\end{equation}

@@ -20,6 +20,7 @@ draft = false
 -   [parameter learning]({{< relref "KBhparameter_learning.md" >}})
     -   [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}})
     -   [Baysian Parameter Learning]({{< relref "KBhbaysian_parameter_learning.md" >}})
+        -   [Dirichlet Distribution]({{< relref "KBhbaysian_parameter_learning.md#dirichlet-distribution" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
