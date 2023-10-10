@@ -82,3 +82,37 @@ It includes, at most:
 -   other parents of node's children
 
 Check that you need all of these values: frequently, you don't---simply selecting a subset of this often d-seperates the node from everyone else.
+
+
+## [parameter learning]({{< relref "KBhparameter_learning.md" >}}) in [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) {#parameter-learning--kbhparameter-learning-dot-md--in-baysian-network--kbhbaysian-network-dot-md}
+
+Let:
+
+-   \\(x\_{1:n}\\) be variables
+-   \\(o\_1, ..., o\_{m}\\) be the \\(m\\) observations we took
+-   \\(G\\) is the graph
+-   \\(r\_{i}\\) is the number of instantiations in \\(X\_{i}\\) (for boolean variables, this would be \\(2\\))
+-   \\(q\_{i}\\) is the number of parental instantiations of \\(X\_{i}\\) (if parent 1 can take on 10 values, parent 2 can take 3 values, then child's \\(q\_{i}=10\cdot 3=30\\)) --- if a node has no parents it has a \\(q\_{i}\\) is \\(1\\)
+-   \\(\pi\_{i,j}\\) is \\(j\\) instantiation of parents of \\(x\_{i}\\) (the \\(j\\) th combinator)
+
+What we want to learn from the graph, is:
+
+\begin{equation}
+P(x\_{i}=k | \pi\_{i,j}) = \theta\_{i,j,k}
+\end{equation}
+
+"what's the probability that \\(x\_{i}\\) takes on value \\(k\\), given the state of \\(x\_{i}\\)'s parents are \\(\pi\_{i,j}\\) right now?"
+
+---
+
+Let us first make some observations. We use \\(m\_{i,j,k}\\) to denote the COUNT of the number of times \\(x\_{i}\\) took a value \\(k\\) when \\(x\_{i}\\) parents took instantiation \\(j\\). This is usually represented programmatically as a set of matrices:
+
+{{< figure src="/ox-hugo/2023-10-10_09-47-04_screenshot.png" >}}
+
+To learn the parameter as desired, we use:
+
+\begin{equation}
+MLE\ \hat{\theta}\_{i,j,k} = \frac{m\_{i,j,k}}{\sum\_{k'} m\_{i,j,k'}}
+\end{equation}
+
+In that: we want to sum up all possible value \\(x\_{i}\\) takes on, and check how many times it takes on a certain value, given the conditions are the same.

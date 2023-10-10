@@ -67,28 +67,16 @@ p(\theta | o\_{1:m}) &\propto p(\theta, o\_{1:m})  \\\\
 
 where \\(m\\) is the sample size and \\(n\\) is the number of events in the sample space.
 
-Beta is a special distribution which takes parameters \\(\alpha, \beta\\),and has mean:
 
-\begin{equation}
-\frac{\alpha}{\alpha + \beta}
-\end{equation}
+### Beta Distribution {#beta-distribution}
 
-and has mode:
+Suppose you had a non-uniform prior:
 
-\begin{equation}
-\frac{\alpha -1 }{\alpha + \beta -2}
-\end{equation}
+-   Prior: \\(Beta(\alpha, \beta)\\)
+-   Observe: \\(m\_1\\) positive outcomes, \\(m\_2\\) negative outcomes
+-   Posterior: \\(Beta(\alpha+m\_1, \beta+m\_2)\\)
 
-when \\(\alpha > 1\\) and \\(\beta > 1\\).
-
-This means that, at \\(beta(1,1)\\), we have a inform distribution
-
-{{< figure src="/ox-hugo/2023-10-05_21-32-18_screenshot.png" >}}
-
-
-### Beta Distribution Shifting {#beta-distribution-shifting}
-
-For binary outcomes, the beta distribution can be updated without doing any math.
+That is: for binary outcomes, the beta distribution can be updated without doing any math.
 
 For instance, say we had:
 
@@ -108,6 +96,55 @@ instead, if we observed that \\(o\_{i} = 0\\), then:
 \theta\_{t+1} = Beta(\alpha, \beta+1)
 \end{equation}
 
+Essentially: MAGNITUDE of beta distribution governs how small the spread is (higher magnitude smaller spread), and the balance between the two values represents how much skew there is.
+
+Beta is a special distribution which takes parameters \\(\alpha, \beta\\),and has mean:
+
+\begin{equation}
+\frac{\alpha}{\alpha + \beta}
+\end{equation}
+
+and has mode:
+
+\begin{equation}
+\frac{\alpha -1 }{\alpha + \beta -2}
+\end{equation}
+
+when \\(\alpha > 1\\) and \\(\beta > 1\\).
+
+This means that, at \\(beta(1,1)\\), we have a inform distribution
+
+{{< figure src="/ox-hugo/2023-10-05_21-32-18_screenshot.png" >}}
+
+
+### Total Probability in beta distributions {#total-probability-in-beta-distributions}
+
+Recall, for total probability, beta is a special distribution which takes parameters \\(\alpha, \beta\\),and has [expectation]({{< relref "KBhexpectation.md" >}}):
+
+\begin{equation}
+\frac{\alpha}{\alpha + \beta}
+\end{equation}
+
+and has mode:
+
+\begin{equation}
+\frac{\alpha -1 }{\alpha + \beta -2}
+\end{equation}
+
+So, if you say want to know what the probability of \\(P(thing|D)\\), you can integrate over all \\(P(thing|\theta)\\):
+
+\begin{equation}
+\int^{1}\_{0} P(thing|\theta)P(\theta)d\theta
+\end{equation}
+
+The first thing is just the actual value of \\(\theta\\) (because \\(\theta\\) is literally the [probability]({{< relref "KBhprobability.md" >}}) of \\(thing\\) happening). The second thing is the probability of that \\(\theta\\) actually happening.
+
+This, of course, just add up to the expected value of \\(\theta\\), which is given above:
+
+\begin{equation}
+\frac{\alpha}{\alpha + \beta}
+\end{equation}
+
 
 ### Choosing a prior {#choosing-a-prior}
 
@@ -119,12 +156,12 @@ instead, if we observed that \\(o\_{i} = 0\\), then:
 
 We can generalize the [Bayesian Parameter Learning on Binary Distributions](#bayesian-parameter-learning-on-binary-distributions) with the [Dirichlet Distribution](#dirichlet-distribution).
 
-For \\(n\\) parameters \\(\theta\_{1:n}\\), where \\(\theta\_{j}\\) is the probability that the \\(j\\) th case of the categorical distribution happening.
+For \\(n\\) parameters \\(\theta\_{1:n}\\) (\\(n-1\\) of which independent, because we know that \\(\sum \theta\_{i} = 1\\)), where \\(\theta\_{j}\\) is the probability that the \\(j\\) th case of the categorical distribution happening.
 
 Now:
 
 \begin{equation}
-Dir(\theta\_{1:n} | \alpha) = \frac{\Gamma(\alpha\_{0})}{\prod\_{i=1}^{n} \gamma(\alpha\_{i})} \prod\_{i=1}^{n} \theta\_{i}^{\alpha\_{i}-1}
+Dir(\theta\_{1:n} | \alpha) = \frac{\Gamma(\alpha\_{0})}{\prod\_{i=1}^{n} \Gamma(\alpha\_{i})} \prod\_{i=1}^{n} \theta\_{i}^{\alpha\_{i}-1}
 \end{equation}
 
 whereby:
