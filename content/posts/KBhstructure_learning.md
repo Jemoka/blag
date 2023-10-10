@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-We learn a [Bayes Net]({{< relref "KBhbaysian_network.md" >}}) grphical structure by following [Bayes rule]({{< relref "KBhbayes_theorem.md" >}})1:
+We learn a [Bayes Net]({{< relref "KBhbaysian_network.md" >}}) grphical structure by following [Bayes rule]({{< relref "KBhbayes_theorem.md" >}}):
 
 \begin{align}
 P(G|D) &\propto P(D|G) P(G)   \\\\
@@ -44,12 +44,12 @@ In practice, uniform prior of the graph is mostly used always. Assuming uniform 
 
 We can effectively take a prior structure, and blindly compute the [Baysian Score](#baysian-network-scoring) vis a vi your data, and you will get an answer which whether or not something is the simplest model.
 
-Of course, we can't just try all graphs. Instead, we use some search algorithm:
+Of course, we can't just try all graphs to get a graph structure. Instead, we use some search algorithm:
 
 
 ## K2 Algorithm {#k2-algorithm}
 
-Let us create a network with a sequence of variables with some ordering:
+Runs in polynomial time, but doesn't grantee an optimal structure. Let us create a network with a sequence of variables with some ordering:
 
 \begin{equation}
 x\_1, x\_2, x\_3, x\_4
