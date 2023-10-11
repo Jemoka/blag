@@ -61,7 +61,7 @@ Normalizing the output, we have that:
 
 \begin{align}
 p(\theta | o\_{1:m}) &\propto p(\theta, o\_{1:m})  \\\\
-&= \frac{\Gamma(n+1) \Gamma(m-n+1)}{\Gamma(m+2)} \theta^{n} (1-\theta)^{m-n} \\\\
+&= \frac{\Gamma(m+2)}{\Gamma(n+1) \Gamma(m-n+1)} \theta^{n} (1-\theta)^{m-n} \\\\
 &= Beta(\theta | n+1, m-n +1)
 \end{align}
 
