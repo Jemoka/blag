@@ -82,4 +82,4 @@ To prevent you from being stuck in a local minimum:
 -   perform random restarts
 -   perform [K2 Algorithm](#k2-algorithm), and then try things out
 -   [simulated annealing]({{< relref "KBhsimulated_annealing.md" >}}): take a step that's worse for optimizing [Baysian Score](#baysian-network-scoring)s
--   genetic algorithms
+-   genetic algorithms: random population which reproduces at a rate proportional to their score
