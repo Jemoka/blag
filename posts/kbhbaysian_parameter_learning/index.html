@@ -20,7 +20,7 @@ p(\theta | o_{1:m}) \propto p(\theta, o_{1:m})
 \int_{0}^{1} \theta^{n}(1-\theta)^{m-n}\dd{\theta} = \frac{\Gamma(n+1) \Gamma(m-n+1)}{\Gamma(m+2)}
 \end{equation}</p><p>where, \(\Gamma\) is a real valued factorial generalization.</p><p>Normalizing the output, we have that:</p><p>\begin{align}
 p(\theta | o_{1:m}) &\propto p(\theta, o_{1:m}) \\
-&= \frac{\Gamma(n+1) \Gamma(m-n+1)}{\Gamma(m+2)} \theta^{n} (1-\theta)^{m-n} \\
+&= \frac{\Gamma(m+2)}{\Gamma(n+1) \Gamma(m-n+1)} \theta^{n} (1-\theta)^{m-n} \\
 &= Beta(\theta | n+1, m-n +1)
 \end{align}</p><p>where \(m\) is the sample size and \(n\) is the number of events in the sample space.</p><h3 id=beta-distribution>Beta Distribution</h3><p>Suppose you had a non-uniform prior:</p><ul><li>Prior: \(Beta(\alpha, \beta)\)</li><li>Observe: \(m_1\) positive outcomes, \(m_2\) negative outcomes</li><li>Posterior: \(Beta(\alpha+m_1, \beta+m_2)\)</li></ul><p>That is: for binary outcomes, the beta distribution can be updated without doing any math.</p><p>For instance, say we had:</p><p>\begin{equation}
 \theta_{t} = Beta(\alpha, \beta)
