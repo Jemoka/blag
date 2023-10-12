@@ -69,9 +69,13 @@ After you try out one ordering, you should try out another one. Because you can 
 
 Start with an uncorrected graph. Search on the following actions:
 
+[basic graph operation](#local-search)s:
+
 -   add edge
 -   remove edge
 -   flip edge
+
+A graph's [neighborhood](#local-search) is the graphs for whicthey are one basic graph operation away.
 
 Create a cycle detection scheme.
 
@@ -83,3 +87,14 @@ To prevent you from being stuck in a local minimum:
 -   perform [K2 Algorithm](#k2-algorithm), and then try things out
 -   [simulated annealing]({{< relref "KBhsimulated_annealing.md" >}}): take a step that's worse for optimizing [Baysian Score](#baysian-network-scoring)s
 -   genetic algorithms: random population which reproduces at a rate proportional to their score
+
+
+## Partially Directed Graph Search {#partially-directed-graph-search}
+
+We first formulate a partially-directed graph, which is a graph which has some edges, but some edges left to be decided:
+
+{{< figure src="/ox-hugo/2023-10-12_11-09-18_screenshot.png" >}}
+
+In this case, edges \\(C \to D\\) and \\(D \leftarrow E\\) are both defined. \\(A,B,C\\) are left as undirected nodes available to be searched on.
+
+We now try out all combinations of arrows that may fit between \\(A,B,C\\), with the constraint of all objects you search on being [Markov Equivalent]({{< relref "KBhmarkov_equivalence_classes.md" >}}) (so, you can't remove or introduce new [immoral v-structure]({{< relref "KBhimmoral_v_structure.md" >}})s).

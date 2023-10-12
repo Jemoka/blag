@@ -131,20 +131,6 @@ and has mode:
 \frac{\alpha -1 }{\alpha + \beta -2}
 \end{equation}
 
-So, if you say want to know what the probability of \\(P(thing|D)\\), you can integrate over all \\(P(thing|\theta)\\):
-
-\begin{equation}
-\int^{1}\_{0} P(thing|\theta)P(\theta)d\theta
-\end{equation}
-
-The first thing is just the actual value of \\(\theta\\) (because \\(\theta\\) is literally the [probability]({{< relref "KBhprobability.md" >}}) of \\(thing\\) happening). The second thing is the probability of that \\(\theta\\) actually happening.
-
-This, of course, just add up to the expected value of \\(\theta\\), which is given above:
-
-\begin{equation}
-\frac{\alpha}{\alpha + \beta}
-\end{equation}
-
 
 ### Choosing a prior {#choosing-a-prior}
 
@@ -178,14 +164,38 @@ for \\(j \geq 1\\), and
 
 whereby prior is your initial distribution. If its uniform, then all prior equals one.
 
-The [expectation]({{< relref "KBhexpectation.md" >}}) for each \\(\theta\_{j}\\) happening is:
+The [expectation]({{< relref "KBhexpectation.md" >}}) for each \\(\theta\_{i}\\) happening is:
 
 \begin{equation}
-\mathbb{E}[\theta\_{j}] = \frac{a\_{i}}{\sum\_{j=1}^{n} \alpha\_{j}}
+\mathbb{E}[\theta\_{i}] = \frac{a\_{i}}{\sum\_{j=1}^{n} \alpha\_{j}}
 \end{equation}
 
 and, with \\(a\_{i} > 1\\), the $i$th mode is:
 
 \begin{equation}
 \frac{a\_{i}-1 }{\sum\_{j=1}^{n} a\_{j}-n}
+\end{equation}
+
+
+## maximum a posteriori estimate {#maximum-a-posteriori-estimate}
+
+This value is the most probable value of the a distribution, usually called it "mode".
+
+
+## [expectation]({{< relref "KBhexpectation.md" >}}) of a distribution {#expectation--kbhexpectation-dot-md--of-a-distribution}
+
+For [Beta Distribution](#beta-distribution) and [Dirichlet Distribution](#dirichlet-distribution), the [expectation]({{< relref "KBhexpectation.md" >}}) of their distribution is simply their mean.
+
+if you say want to know what the probability of \\(P(thing|D)\\), you can integrate over all \\(P(thing|\theta)\\):
+
+\begin{equation}
+\int^{1}\_{0} P(thing|\theta)P(\theta)d\theta
+\end{equation}
+
+The first thing is just the actual value of \\(\theta\\) (because \\(\theta\\) is literally the [probability]({{< relref "KBhprobability.md" >}}) of \\(thing\\) happening). The second thing is the probability of that \\(\theta\\) actually happening.
+
+This, of course, just add up to the expected value of \\(\theta\\), which is given above:
+
+\begin{equation}
+\frac{\alpha}{\alpha + \beta}
 \end{equation}

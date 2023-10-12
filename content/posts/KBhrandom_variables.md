@@ -13,3 +13,9 @@ A [random variable]({{< relref "KBhrandom_variables.md" >}}) is a variable that 
 ## [probability mass function]({{< relref "KBhprobability_mass_function.md" >}}) {#probability-mass-function--kbhprobability-mass-function-dot-md}
 
 See [probability mass function]({{< relref "KBhprobability_mass_function.md" >}})
+
+
+## summary statistics {#summary-statistics}
+
+-   [probability mass function]({{< relref "KBhprobability_mass_function.md" >}}) is a description for the random variable: and [random variable]({{< relref "KBhrandom_variables.md" >}})s are usually communicated via [probability mass function]({{< relref "KBhprobability_mass_function.md" >}})s
+-   [expected value]({{< relref "KBhexpectation.md" >}})

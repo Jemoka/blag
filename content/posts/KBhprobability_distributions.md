@@ -106,7 +106,7 @@ This is a function used to model many Gaussian distributions.
 X \sim N(\mu, \sigma^{2})
 \end{equation}
 
-Its [PDF](#probability-density-functions) is:
+Its [PDF](#probability-density-function) is:
 
 \begin{equation}
 \mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma} \phi \qty(\frac{x-\mu}{\sigma})
@@ -129,7 +129,7 @@ Sometimes, we don't want to use a [Gaussian distribution](#gaussian-distribution
 X \sim N(\mu, \sigma^{2}, a, b)
 \end{equation}
 
-bounded within the interval of \\((a,b)\\). The [PDF](#probability-density-functions) of this function is given by:
+bounded within the interval of \\((a,b)\\). The [PDF](#probability-density-function) of this function is given by:
 
 \begin{equation}
 N(\mu, \sigma^{2}, a, b) = \frac{\frac{1}{\sigma} \phi \qty(\frac{x-\mu }{\sigma })}{\Phi \qty(\frac{b-\mu }{\sigma }) - \Phi \qty(\frac{a-\mu}{\sigma})}
@@ -160,9 +160,9 @@ whereby,
 ## three ways of analysis {#three-ways-of-analysis}
 
 
-### probability density functions {#probability-density-functions}
+### probability density function {#probability-density-function}
 
-[PDF](#probability-density-functions)s is a function that maps continuous random variables to the corresponding probability.
+[PDF](#probability-density-function)s is a function that maps continuous random variables to the corresponding probability.
 
 and \\(\int P\ dE = 1\\) because of [axiom of probability]({{< relref "KBhprobability.md#axiom-of-probability" >}})
 

@@ -12,7 +12,7 @@ Here's a very general form of a differential equations. First, here's the:
 ## function behavior tests {#function-behavior-tests}
 
 
-### Continuity {#continuity}
+### continuity {#continuity}
 
 Weakest statement.
 
