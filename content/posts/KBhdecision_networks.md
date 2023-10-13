@@ -4,7 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A [decision network]({{< relref "KBhdecision_networks.md" >}}) is a [Baysian Network]({{< relref "KBhbaysian_network.md" >}}).
+A [decision network]({{< relref "KBhdecision_networks.md" >}}) is a [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) which is used to make decisions based on optimizing [utility]({{< relref "KBhutility_theory.md" >}}).
+
+To solve a problem, we iterate through all possible decision parameters to find the one that maximizes utility.
 
 
 ## Nodes {#nodes}

@@ -9,6 +9,33 @@ In C, [string]({{< relref "KBhstring.md" >}}) is an array of [char]({{< relref "
 There's a built in function `strlen` which checks the length of a string without the null-terminating character. This function is `O(n)`!!!
 
 
+## String Pointer Syntax Sugar Synonyms {#string-pointer-syntax-sugar-synonyms}
+
+```C
+char str[6];
+
+// these are equivalent
+char *ptr = str;
+char *ptr = &str[0];
+char *ptr = &str; // DON'T DO THIS
+
+// these are equivalent
+char thirdLetter = str[3];
+char thirdLetter = *(str + 3);
+```
+
+
+## seven commandments of c [string]({{< relref "KBhstring.md" >}})s {#seven-commandments-of-c-string--kbhstring-dot-md--s}
+
+1.  if we create a string as `char[]`, we can modify its characters because its memory lives in our stack instead of living in a global data segment
+2.  we can't set `char[]` as equaling to something, because its not strictly a pointer and instead it refers to an entire block of memory instead of a pointer to the first element (in a same vein, an array's size is fixed and travels with the variable)
+3.  if we pass `char[]` as a parameter, it is converted to a `char *`
+4.  if we create a string with new string literal as `char *thing = "thing"`, we can't modify it because its on the global data segment
+5.  we can set `char *` equaling to another value because its a pointer
+6.  adding an offset to a c string gives a substring that's places past the first character
+7.  if we change characters in a string parameter, these changes will persist
+
+
 ## passing strings around {#passing-strings-around}
 
 Strings are passed as a pointer to their first character.

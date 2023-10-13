@@ -4,10 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[utility elicitation]({{< relref "KBhutility_elicitation.md" >}}) is the process to go from [Rational Preference]({{< relref "KBhrational_preference.md" >}})s to a [utility]({{< relref "KBhutility_theory.md" >}}) function.
-
-
-## Protocol {#protocol}
+[utility elicitation]({{< relref "KBhutility_elicitation.md" >}}) is the process to go from [Rational Preference]({{< relref "KBhrational_preference.md" >}})s to a [utility]({{< relref "KBhutility_theory.md" >}}) function. **Its a bad idea to use money to do this, because money is not linear.**
 
 Consider the best and worst possible events:
 
@@ -31,3 +28,9 @@ S \sim [\overline{S}:p; \underline{S}:(1-p)]
 \end{equation}
 
 because the desirability of \\(S\\) is between the best and worst possible events, the [continuity]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) [von Neumann and Morgenstern Axiom]({{< relref "KBhrational_preference.md#von-neumann-and-morgenstern-axioms" >}}) states that this \\(p\\) exists.
+
+Once this \\(p\\) has been figured, we then assign:
+
+\begin{equation}
+U(S) = p
+\end{equation}

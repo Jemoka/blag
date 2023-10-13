@@ -20,5 +20,5 @@ For a lottery, the [utility]({{< relref "KBhutility_theory.md" >}}) thereof is t
 that is,
 
 \begin{equation}
-U([S\_1:p\_1, \dots, S\_{n}:p\_{n}]) = \sum\_{i=1}^{N} p\_{i}U(S\_{i)}
+U([S\_1:p\_1, \dots, S\_{n}:p\_{n}]) = \sum\_{i=1}^{N} p\_{i}U(S\_{i})}
 \end{equation}

@@ -39,8 +39,8 @@ P(X=k) = {n \choose k} p^{k}(1-p)^{n-k}
 
 ### properties of [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) {#properties-of-binomial-distribution--kbhbinomial-distribution-dot-md}
 
--   **expected value**: \\(np\\)
--   **standard deviation**: \\(\sqrt{np(1-p)}\\)
+-   **[expected value]({{< relref "KBhexpectation.md" >}})**: \\(np\\)
+-   **[variance]({{< relref "KBhvariance.md" >}})**: \\(np(1-p)\\)
 
 
 ### deriving the [expectation]({{< relref "KBhexpectation.md" >}}) {#deriving-the-expectation--kbhexpectation-dot-md}

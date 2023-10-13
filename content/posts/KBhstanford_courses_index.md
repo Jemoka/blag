@@ -10,6 +10,7 @@ draft = false
 -   [Decision Making Index]({{< relref "KBhdecision_making_index.md" >}})
 -   [Computer Systems Index]({{< relref "KBhcomputer_systems_index.md" >}})
 -   [CS Probability Index]({{< relref "KBhcs_probability_index.md" >}})
+-   [Speech Processing Index]({{< relref "KBhspeech_processing_index.md" >}})
 
 
 ## UG Other Duties {#ug-other-duties}

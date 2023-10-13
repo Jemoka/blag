@@ -25,3 +25,14 @@ U( C) = \frac{c^{1-\gamma}-1}{1-\gamma}
 ## additional information {#additional-information}
 
 As you can see, the higher \\(\gamma\\), the lower utility some consumption brings.
+
+
+### log utility {#log-utility}
+
+[log utility](#log-utility) is a special case of [power utility]({{< relref "KBhpower_utility.md" >}}) whereby:
+
+\begin{equation}
+U(x) = \log x
+\end{equation}
+
+which converges to [power utility]({{< relref "KBhpower_utility.md" >}}) where \\(\lambda \to 1\\).

@@ -32,6 +32,8 @@ EU(a|o) = \sum\_{s'} p(s' | a,o) U(s')
 
 the expected [utility]({{< relref "KBhutility_theory.md" >}}) of taking some action \\(a\\) at an observation \\(o\\) is the [probability]({{< relref "KBhprobability.md" >}}) of any given next state \\(s'\\) happening times the [utility]({{< relref "KBhutility_theory.md" >}}) of being in that state \\(U(s')\\).
 
+See also [expected utility of wealth]({{< relref "KBhexpected_utility_of_wealth.md" >}}).
+
 
 ### maximum expected utility principle {#maximum-expected-utility-principle}
 
@@ -42,3 +44,28 @@ a^{\*} = \arg\max\_{a} EV(a|o)
 \end{equation}
 
 Notably, this is **not always the best action**. This action maximizes [utility]({{< relref "KBhutility_theory.md" >}}) **NOT** outcome.
+
+
+### utility of [Rational Preference]({{< relref "KBhrational_preference.md" >}}) {#utility-of-rational-preference--kbhrational-preference-dot-md}
+
+For rational values, for two situations, \\(A, B\\), we have, with [utility]({{< relref "KBhutility_theory.md" >}}) function \\(U\\):
+
+\begin{equation}
+U(A) > U(B) \iff A \succ B
+\end{equation}
+
+\begin{equation}
+U(A) = U(B) \iff A \sim B
+\end{equation}
+
+and this \\(U\\) is unique up to the same [affine transformation]({{< relref "KBhaffine_transformation.md" >}})
+
+
+### [risk aversion]({{< relref "KBhexpected_utility_of_wealth.md" >}}) {#risk-aversion--kbhexpected-utility-of-wealth-dot-md}
+
+see [risk aversion]({{< relref "KBhexpected_utility_of_wealth.md" >}})
+
+
+### common utility functions {#common-utility-functions}
+
+see [utility function]({{< relref "KBhutility_theory.md" >}})

@@ -18,6 +18,17 @@ printf("%d\n", *xptr); // dereference the pointer
 ```
 
 
+## address operator {#address-operator}
+
+You will note, in the line above:
+
+```C
+int *xptr = &x;
+```
+
+uses an operator `&` to get the address of an object. That's called an [object]({{< relref "KBhobjects.md" >}}) operator.
+
+
 ## [pointer]({{< relref "KBhpointer.md" >}}) memory diagram {#pointer--kbhpointer-dot-md--memory-diagram}
 
 {{< figure src="/ox-hugo/2023-10-11_11-12-28_screenshot.png" >}}

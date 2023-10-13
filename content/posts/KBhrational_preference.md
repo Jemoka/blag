@@ -1,21 +1,8 @@
 +++
-title = "Rational Preference"
+title = "rational preference"
 author = ["Houjun Liu"]
 draft = false
 +++
-
-For rational values, for two situations, \\(A, B\\), we have, with [utility]({{< relref "KBhutility_theory.md" >}}) function \\(U\\):
-
-\begin{equation}
-U(A) > U(B) \iff A \succ B
-\end{equation}
-
-\begin{equation}
-U(A) = U(B) \IFF A \sim B
-\end{equation}
-
-and this \\(U\\) is unique up to the same [affine transformation]({{< relref "KBhaffine_transformation.md" >}})
-
 
 ## Motivation {#motivation}
 
@@ -30,7 +17,7 @@ No right or wrong answers in this statement by itself, but we can check whether 
 
 ## von Neumann and Morgenstern Axioms {#von-neumann-and-morgenstern-axioms}
 
-Axioms for checking if a set of preferences are rational.
+Axioms for checking if a set of preferences are rational. The axioms allow you to check if a set of decisions are [Rational Preference]({{< relref "KBhrational_preference.md" >}})s.
 
 For three conditions \\(A, B, C\\), we have:
 

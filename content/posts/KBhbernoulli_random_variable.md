@@ -31,3 +31,9 @@ p,\ if\ k=1\\\\
 
 
 ## additional information {#additional-information}
+
+
+### properties of [Bernoulli distribution]({{< relref "KBhbernoulli_random_variable.md" >}}) {#properties-of-bernoulli-distribution--kbhbernoulli-random-variable-dot-md}
+
+-   **[expected value]({{< relref "KBhexpectation.md" >}})**: \\(p\\)
+-   **[variance]({{< relref "KBhvariance.md" >}})**: \\(p(1-p)\\)
