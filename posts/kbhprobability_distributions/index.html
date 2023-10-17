@@ -36,9 +36,13 @@ N(\mu, \sigma^{2}, a, b) = \frac{\frac{1}{\sigma} \phi \qty(\frac{x-\mu }{\sigma
 \Phi = \int_{-\infty}^{x} \phi (x&rsquo;) \dd{x&rsquo;}
 \end{equation}</p><p>and where \(\phi\) is the <a href=#standard-normal-density-function>standard normal density function</a>.</p><h4 id=gaussian-mixture-model>Gaussian mixture model</h4><p>Gaussian models are typically <a href=/posts/kbhunimodal/>unimodal</a>, meaning they have one peak (things decrease to the left of that peak, increases to the right of it).</p><p>Therefore, in order to model something more complex with multiple peaks, we just weighted average multiple gaussian models</p><p>\begin{equation}
 p(x | \dots ) = \sum_{i-1}^{n}p_i \mathcal{N}(x | u_{i}, {\sigma_{i}}^{2})
-\end{equation}</p><p>whereby,</p><h2 id=three-ways-of-analysis>three ways of analysis</h2><h3 id=probability-density-function>probability density function</h3><p><a href=#probability-density-function>PDF</a>s is a function that maps continuous random variables to the corresponding probability.</p><p>and \(\int P\ dE = 1\) because of <a href=/posts/kbhprobability/#axiom-of-probability>axiom of probability</a></p><h3 id=cumulative-distribution-function>cumulative distribution function</h3><p>What is the probability that a <a href=/posts/kbhrandom_variables/>random variable</a> takes on value less tha</p><p>\begin{equation}
+\end{equation}</p><p>whereby,</p><h2 id=three-ways-of-analysis>three ways of analysis</h2><h3 id=probability-density-function>probability density function</h3><p><a href=#probability-density-function>PDF</a>s is a function that maps continuous random variables to the corresponding probability.</p><p>\begin{equation}
+P(a &lt; X &lt; b) = \int_{x=a}^{b} f(X=x)\dd{x}
+\end{equation}</p><p>note: \(f\) is no longer in units of <a href=/posts/kbhprobability/>probability</a>!!! it is in units of <a href=/posts/kbhprobability/>probability</a> scaled by units of \(X\). That is, they are DERIVATIVES of probabilities. That is, the units of \(f\) should be \(\frac{prob}{unit\ X}\). So, it can be greater than \(1\).</p><p>We have two important properties:</p><ul><li>if you integrate over any bounds over a <a href=#probability-density-function>probability density function</a>, you get a <a href=/posts/kbhprobability/>probability</a></li><li>if you integrate over infinity, the result should be \(1\)</li></ul><h3 id=cumulative-distribution-function>cumulative distribution function</h3><p>What is the probability that a <a href=/posts/kbhrandom_variables/>random variable</a> takes on value less tha</p><p>\begin{equation}
 cdf_{x}(x) = P(X&lt;x) = \int_{-\infty}^{x} p(x&rsquo;) dx'
-\end{equation}</p><h3 id=quantile-function>quantile function</h3><p>\begin{equation}
+\end{equation}</p><p>sometimes written as:</p><p>\begin{equation}
+F(x) = P(X &lt; x)
+\end{equation}</p><p>Recall that, with</p><h3 id=quantile-function>quantile function</h3><p>\begin{equation}
 \text{quantile}_{X}(\alpha)
 \end{equation}</p><p>is the value \(x\) such that:</p><p>\begin{equation}
 P(X \leq x) = \alpha
