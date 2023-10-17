@@ -26,6 +26,8 @@ I remember seeing an article through HN at one point ([its not this one, it was 
 
 A part of me wishes that this fulfills the "deliverable" in my head of "YOU AREN'T DOING ENOUGH!" whenever I spend time wandering aimlessly to try to learn something. If it has become a [Fireside]({{< relref "KBhfireside.md" >}}), it counts. I guess.
 
+I should also add that [Fireside]({{< relref "KBhfireside.md" >}}) is named [Fireside]({{< relref "KBhfireside.md" >}}) because of FDR's [Fireside Chats]({{< relref "KBhfireside_chats.md" >}}), where he got to directly talk to people unfiltered about his views.
+
 
 ## Parameters {#parameters}
 
