@@ -164,7 +164,16 @@ whereby,
 
 [PDF](#probability-density-function)s is a function that maps continuous random variables to the corresponding probability.
 
-and \\(\int P\ dE = 1\\) because of [axiom of probability]({{< relref "KBhprobability.md#axiom-of-probability" >}})
+\begin{equation}
+P(a < X < b) = \int\_{x=a}^{b} f(X=x)\dd{x}
+\end{equation}
+
+note: \\(f\\) is no longer in units of [probability]({{< relref "KBhprobability.md" >}})!!! it is in units of [probability]({{< relref "KBhprobability.md" >}}) scaled by units of \\(X\\). That is, they are DERIVATIVES of probabilities. That is, the units of \\(f\\) should be \\(\frac{prob}{unit\ X}\\). So, it can be greater than \\(1\\).
+
+We have two important properties:
+
+-   if you integrate over any bounds over a [probability density function](#probability-density-function), you get a [probability]({{< relref "KBhprobability.md" >}})
+-   if you integrate over infinity, the result should be \\(1\\)
 
 
 ### cumulative distribution function {#cumulative-distribution-function}
@@ -174,6 +183,14 @@ What is the probability that a [random variable]({{< relref "KBhrandom_variables
 \begin{equation}
 cdf\_{x}(x) = P(X<x) = \int\_{-\infty}^{x} p(x') dx'
 \end{equation}
+
+sometimes written as:
+
+\begin{equation}
+F(x) = P(X < x)
+\end{equation}
+
+Recall that, with
 
 
 ### quantile function {#quantile-function}
