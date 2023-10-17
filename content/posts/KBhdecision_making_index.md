@@ -134,12 +134,20 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 
 ## Lectures {#lectures}
 
+
+### probabilistic reasoning relating to single decisions {#probabilistic-reasoning-relating-to-single-decisions}
+
 -   [SU-CS238 SEP262023]({{< relref "KBhsu_cs238_sep262023.md" >}})
 -   [SU-CS238 SEP272023]({{< relref "KBhsu_cs238_sep272023.md" >}})
 -   [SU-CS238 OCT032023]({{< relref "KBhsu_cs238_oct032023.md" >}})
 -   [SU-CS238 OCT052023]({{< relref "KBhsu_cs238_oct052023.md" >}})
 -   [SU-CS238 OCT102023]({{< relref "KBhsu_cs238_oct102023.md" >}})
 -   [SU-CS238 OCT122023]({{< relref "KBhsu_cs238_oct122023.md" >}})
+
+
+### a chain of reasoning with feedback {#a-chain-of-reasoning-with-feedback}
+
+-   [SU-CS238 OCT172023]({{< relref "KBhsu_cs238_oct172023.md" >}})
 
 
 ## Worksheets {#worksheets}
