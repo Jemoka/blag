@@ -39,7 +39,7 @@ For [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite
 \pi(s)
 \end{equation}
 
-this can be used in [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite-horizon-models" >}}) against [stationary Markov Decision Process]({{< relref "KBhmarkov_decision_process.md#stationary-markov-decision-process--kbhmarkov-decision-process-dot-md" >}}).
+this can be used in [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite-horizon-models" >}}) against [stationary Markov Decision Process]({{< relref "KBhmarkov_decision_process.md#stationary-id-5bb5350e-04e4-46dc-9ea8-cb7bb09edd42-markov-decision-process" >}}).
 
 
 ### optimal policy {#optimal-policy}
@@ -57,6 +57,10 @@ U^{\*} = U^{\pi^{\*}}
 \end{equation}
 
 
-### policy evaluation {#policy-evaluation}
+### policy utility, and value {#policy-utility-and-value}
+
+-   creating a good [utility function]({{< relref "KBhutility_function.md" >}}): either [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}}) or [value iteration]({{< relref "KBhvalue_iteration.md" >}})
+-   creating a [policy]({{< relref "KBhpolicy.md" >}}) from a [utility function]({{< relref "KBhutility_function.md" >}}): [value-function policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) ("choose the policy that takes the best valued action")
+-   calculating the [utility function]({{< relref "KBhutility_theory.md" >}}) a [policy]({{< relref "KBhpolicy.md" >}}) currently uses: use [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}})
 
 See [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}})
