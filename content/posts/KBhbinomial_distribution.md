@@ -9,7 +9,7 @@ A [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) is a typ
 -   Binary
 -   Independent
 -   Fixed number
--   Same probability
+-   **Same probability**: "That means: WITH REPLACEMENT"
 
 Think: "what's the [probability]({{< relref "KBhprobability.md" >}}) of \\(n\\) coin flips getting \\(k\\) heads given the head's probability is \\(p\\)".
 
@@ -65,3 +65,9 @@ Now, recall that [expected value]({{< relref "KBhexpectation.md" >}}) is linear.
 Therefore, we can write that:
 
 {{< figure src="/ox-hugo/2023-10-11_16-46-39_screenshot.png" >}}
+
+
+### approximating binomial {#approximating-binomial}
+
+-   [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) approximation: \\(n > 20\\), variance large \\((np(1-p)) > 10\\), absolute independence; beware of [continuity correction]({{< relref "KBhcontinuity_correction.md" >}})
+-   [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md" >}}) approximation: \\(n > 20\\), p small \\(p < 0.05\\)

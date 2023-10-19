@@ -17,6 +17,8 @@ Note that, unlike a [POMDP]({{< relref "KBhpartially_observable_markov_decision_
 -   \\(S\\): state space (assuming discrete for now, there are \\(n\\) states)
 -   \\(T(s' | s,a)\\): state-transition model "[probability]({{< relref "KBhprobability.md" >}}) that we end up in \\(s'\\) given \\(s\\) and action \\(a\\)"
 -   \\(R(s,a)\\): expected reward given in an action and a state (real world reward maybe stochastic)
+-   \\(\pi\_{t}(s\_{1:t}, a\_{1:t-1})\\): the [policy]({{< relref "KBhpolicy.md" >}}), returning an action, a system of assigning actions based on states
+    -   however, our past states are [d-seperated]({{< relref "KBhbaysian_network.md#checking-for-conditional-independence" >}}) from our [current]({{< relref "KBhcurrent.md" >}}) action given knowing the state, so really we have \\(\pi\_{t}(s\_{t})\\)
 
 
 ## requirements {#requirements}
@@ -24,10 +26,16 @@ Note that, unlike a [POMDP]({{< relref "KBhpartially_observable_markov_decision_
 
 ## additional information {#additional-information}
 
+We assume [policy]({{< relref "KBhpolicy.md" >}}) to be exact right now.
+
 
 ### stationary [Markov Decision Process]({{< relref "KBhmarkov_decision_process.md" >}}) {#stationary-markov-decision-process--kbhmarkov-decision-process-dot-md}
 
 This is a [stationary Markov Decision Process](#stationary-markov-decision-process--kbhmarkov-decision-process-dot-md) because at each node \\(S\_{n}\\), we have: \\(P(S\_{n+1} | A\_n, S\_n)\\). Time is **not** a variable: as long as you know what state you are in, and what you did, you know the transition [probability]({{< relref "KBhprobability.md" >}}).
+
+{{< figure src="/ox-hugo/2023-10-17_13-07-24_screenshot.png" >}}
+
+(that is, the set of states is not dependent on time)
 
 
 ### calculating rewards {#calculating-rewards}
@@ -54,4 +62,20 @@ If you lived forever, small positive \\(r\_{t}\\) and large \\(r\_{t}\\) makes n
 \sum\_{t=1}^{\infty} \gamma^{t-1} r\_{t}
 \end{equation}
 
+where, \\(\gamma \in (0,1)\\)
+
 we discount the future by some amount---an "interest rate"---reward now is better than reward in the future.
+
+-   \\(\gamma \to 0\\): "myopic" strategies, near-sighted strategies
+-   \\(\gamma \to 1\\): "non-discounting"
+
+
+#### average return models {#average-return-models}
+
+We don't care about this as much:
+
+\begin{equation}
+\lim\_{n \to \infty} \frac{1}{n} \sum\_{t=1}^{n}r\_{t}
+\end{equation}
+
+but its close to [infinite-horizon models](#infinite-horizon-models) with Gama close to \\(1\\)

@@ -62,7 +62,7 @@ see [Baysian Network]({{< relref "KBhbaysian_network.md" >}})
 
 -   [uniform distribution](#uniform-distribution)
 -   gaussian distributions
-    -   [Gaussian distribution](#gaussian-distribution)
+    -   [Gaussian distribution]({{< relref "KBhsu_cs109_oct182023.md#gaussian-distribution" >}})
     -   [Truncated Gaussian distribution](#truncated-gaussian-distribution)
     -   [Gaussian mixture model](#gaussian-mixture-model)
 
@@ -91,39 +91,9 @@ Var(X) = \frac{1}{12}(\beta -\alpha )^{2}
 ### Gaussian Things {#gaussian-things}
 
 
-#### standard normal density function {#standard-normal-density-function}
-
-This is a function used to model many Gaussian distributions.
-
-\begin{equation}
-\phi(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^{2}}{2}}
-\end{equation}
-
-
-#### Gaussian distribution {#gaussian-distribution}
-
-\begin{equation}
-X \sim N(\mu, \sigma^{2})
-\end{equation}
-
-Its [PDF](#probability-density-function) is:
-
-\begin{equation}
-\mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma} \phi \qty(\frac{x-\mu}{\sigma})
-\end{equation}
-
-where, \\(\phi\\) is the [standard normal density function](#standard-normal-density-function)
-
-And its expectations:
-
-\\(E(X) = \mu\\)
-
-\\(Var(X) = \sigma^{2}\\)
-
-
 #### Truncated Gaussian distribution {#truncated-gaussian-distribution}
 
-Sometimes, we don't want to use a [Gaussian distribution](#gaussian-distribution) for values above or below a threshold (say if they are physically impossible). In those cases, we have some:
+Sometimes, we don't want to use a [Gaussian distribution]({{< relref "KBhsu_cs109_oct182023.md#gaussian-distribution" >}}) for values above or below a threshold (say if they are physically impossible). In those cases, we have some:
 
 \begin{equation}
 X \sim N(\mu, \sigma^{2}, a, b)
@@ -141,7 +111,7 @@ where:
 \Phi = \int\_{-\infty}^{x} \phi (x') \dd{x'}
 \end{equation}
 
-and where \\(\phi\\) is the [standard normal density function](#standard-normal-density-function).
+and where \\(\phi\\) is the [standard normal density function]({{< relref "KBhsu_cs109_oct182023.md#standard-normal-density-function" >}}).
 
 
 #### Gaussian mixture model {#gaussian-mixture-model}

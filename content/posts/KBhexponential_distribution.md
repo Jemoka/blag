@@ -11,15 +11,15 @@ Analogous to [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md
 
 ## constituents {#constituents}
 
--   \\(\lambda\\): expected time it takes for one success
+-   \\(\lambda\\): expected successes per unit time
 
 
 ## requirements {#requirements}
 
 \begin{equation}
 f(x) = \begin{cases}
-\lambda e^{-\lambda x} \\\\
-0
+\lambda e^{-\lambda x},  x\geq 0\\\\
+0,   x< 0
 \end{cases}
 \end{equation}
 
@@ -28,3 +28,20 @@ f(x) = \begin{cases}
 
 -   **expectation**: \\(\frac{1}{\lambda}\\)
 -   **variance**: \\(\frac{1}{\lambda^{2}}\\)
+
+
+### [exponential distribution]({{< relref "KBhexponential_distribution.md" >}}) is memoryless {#exponential-distribution--kbhexponential-distribution-dot-md--is-memoryless}
+
+An [exponential distribution]({{< relref "KBhexponential_distribution.md" >}}) doesn't care about what happened before.
+
+"On average, we have a request every 5 minutes. There have been 2 minutes with no requests. What's the probability that the next request is in 10 minutes?"
+
+is the same statement as
+
+"On average, we have a request every 5 minutes. ~~There have been 2 minutes with no requests.~~ What's the probability that the next request is in 10 minutes?"
+
+That is:
+
+\begin{equation}
+P(s+t|s) = P(t)
+\end{equation}
