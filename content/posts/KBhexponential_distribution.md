@@ -11,7 +11,7 @@ Analogous to [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md
 
 ## constituents {#constituents}
 
--   \\(\lambda\\): expected successes per unit time
+-   $&lambda;$---"rate": event rate (mean occurrence per time)
 
 
 ## requirements {#requirements}

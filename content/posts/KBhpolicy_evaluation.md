@@ -36,11 +36,13 @@ This is called the [lookahead equation](#lookahead-equation), which represents h
 
 ### Bellman Expectation Equation {#bellman-expectation-equation}
 
-If we are dealing with [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite-horizon-models" >}}) (at "convergence" of the [lookahead equation](#lookahead-equation)), we just no longer have a time dependency from the [lookahead equation](#lookahead-equation):
+The [Bellman Equation](#bellman-expectation-equation) states that "the expected utility of being in a state is the instantaneous reward of being in that state plus the discounted future utility of all possible future state." It is the fundamental result of RL.
 
 \begin{equation}
-U^{\pi}(s) = R(s, \pi(s)) + \gamma \sum\_{s'} T(s' | s, \pi(s)) U^{\pi} (s')
+U(s) = R(s, \pi(s)) + \gamma \sum\_{s'} T(s' | s, \pi(s)) U (s')
 \end{equation}
+
+If we are dealing with [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite-horizon-models" >}}) (at "convergence" of the [lookahead equation](#lookahead-equation)), we just no longer have a time dependency from the [lookahead equation](#lookahead-equation):
 
 We only care about some Markovian state \\(s\\), and its next possible states \\(s'\\). When these pair happened doesn't matter.
 

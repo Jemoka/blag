@@ -16,7 +16,7 @@ where:
 
 ## constituents {#constituents}
 
--   \\(\lambda\\) events per interval time
+-   $&lambda;$---count of events per time
 -   \\(X \sim Poi(\lambda)\\)
 
 

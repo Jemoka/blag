@@ -13,15 +13,12 @@ Note that, unlike a [POMDP]({{< relref "KBhpartially_observable_markov_decision_
 
 ## constituents {#constituents}
 
--   \\(A\\): action space
--   \\(S\\): state space (assuming discrete for now, there are \\(n\\) states)
--   \\(T(s' | s,a)\\): state-transition model "[probability]({{< relref "KBhprobability.md" >}}) that we end up in \\(s'\\) given \\(s\\) and action \\(a\\)"
--   \\(R(s,a)\\): expected reward given in an action and a state (real world reward maybe stochastic)
+-   \\(S\\): state space (assuming discrete for now, there are \\(n\\) states) --- "minimum set of information that allows you to solve a problem"
+-   \\(A\\): action space --- set of things your agent can do
+-   \\(T(s' | s,a)\\): "dynamics", state-transition model "[probability]({{< relref "KBhprobability.md" >}}) that we end up in \\(s'\\) given \\(s\\) and action \\(a\\)": good idea to make a table of probabilities of source vs. destination variables
+-   \\(R(s,a,s')\\): expected reward given in an action and a state (real world reward maybe stochastic)
 -   \\(\pi\_{t}(s\_{1:t}, a\_{1:t-1})\\): the [policy]({{< relref "KBhpolicy.md" >}}), returning an action, a system of assigning actions based on states
     -   however, our past states are [d-seperated]({{< relref "KBhbaysian_network.md#checking-for-conditional-independence" >}}) from our [current]({{< relref "KBhcurrent.md" >}}) action given knowing the state, so really we have \\(\pi\_{t}(s\_{t})\\)
-
-
-## requirements {#requirements}
 
 
 ## additional information {#additional-information}
@@ -38,7 +35,7 @@ This is a [stationary Markov Decision Process](#stationary-markov-decision-proce
 (that is, the set of states is not dependent on time)
 
 
-### calculating rewards {#calculating-rewards}
+### calculating [utility]({{< relref "KBhutility_theory.md" >}}) with instantaneous rewards {#calculating-utility--kbhutility-theory-dot-md--with-instantaneous-rewards}
 
 Because, typically, in [decision network]({{< relref "KBhdecision_networks.md" >}})s you sum all the [utilities]({{< relref "KBhutility_theory.md" >}}) together, you'd think that we should sum the [utilities]({{< relref "KBhutility_theory.md" >}}) together.
 
@@ -79,3 +76,9 @@ We don't care about this as much:
 \end{equation}
 
 but its close to [infinite-horizon models](#infinite-horizon-models) with Gama close to \\(1\\)
+
+
+### solving for an optimal policy {#solving-for-an-optimal-policy}
+
+-   [policy iteration]({{< relref "KBhpolicy_iteration.md" >}})
+-   [value iteration]({{< relref "KBhvalue_iteration.md" >}})

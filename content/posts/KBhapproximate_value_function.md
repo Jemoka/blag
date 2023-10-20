@@ -31,7 +31,7 @@ where, \\(S\\) is a set of discrete states \\(\\{s\_1, \dots, s\_{m}\\}\\).
 Now, what next?
 
 
-## general solution {#general-solution}
+## generally: {#generally}
 
 Loop until convergence:
 
@@ -40,13 +40,14 @@ Loop until convergence:
 
 BUT: **Convergence is not guaranteed.**
 
-So we'd like a smarter way of choosing \\(\theta\\).
+There are two main specific approaches to achieve this:
 
 
 ## global approximation {#global-approximation}
 
 -   linreg a best-fit line of state value vs. [utility]({{< relref "KBhutility_theory.md" >}}) value
 -   polynomial fit a best-fit line, whereby \\(U\_{\theta}(s) = \theta^{T}\beta(s)\\), where each \\(\beta\_{j}(s)=s^{j-1}\\).
+-   a frigin neural network (train a model with parameters \\(\theta\\) which produces the utility calculations for you \\(M\_{\theta}(s) = U\_{\theta}(s)\\))
 
 
 ## local approximation {#local-approximation}
