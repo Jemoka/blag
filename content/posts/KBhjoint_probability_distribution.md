@@ -9,3 +9,5 @@ for [random variable]({{< relref "KBhrandom_variables.md" >}})s \\(X, Y\\), the 
 \begin{equation}
 p(x,y)
 \end{equation}
+
+The most fundamental solution can be derived with a table where all complete [probabilities]({{< relref "KBhprobability.md" >}}) are listed. They are going to be too large to practically store.
