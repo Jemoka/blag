@@ -17,11 +17,10 @@ draft = false
     -   [malloc]({{< relref "KBhheap.md#malloc" >}}) and [calloc]({{< relref "KBhheap.md#calloc" >}}) and [free]({{< relref "KBhheap.md#free" >}})
     -   [strdup]({{< relref "KBhheap.md#strdup" >}})
     -   [realloc]({{< relref "KBhheap.md#realloc" >}})
+-   [generic]({{< relref "KBhgeneric.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
-
--
 
 
 ## Questions {#questions}

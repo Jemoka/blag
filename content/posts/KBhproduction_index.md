@@ -8,6 +8,11 @@ draft = false
 This is a work-in-progress page listing all of my production projects.
 
 
+## Fireside: Blog {#fireside-blog}
+
+[Fireside Index]({{< relref "KBhfireside.md" >}})
+
+
 ## Yappin: Podcast {#yappin-podcast}
 
 <https://anchor.fm/yappin/>

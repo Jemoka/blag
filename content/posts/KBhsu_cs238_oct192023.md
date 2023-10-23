@@ -26,6 +26,7 @@ draft = false
     -   creating a [policy]({{< relref "KBhpolicy.md" >}}) from a [utility function]({{< relref "KBhutility_function.md" >}}): [value-function policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) ("choose the policy that takes the best valued action")
     -   calculating the [utility function]({{< relref "KBhutility_theory.md" >}}) a [policy]({{< relref "KBhpolicy.md" >}}) currently uses: use [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}})
 -   [kernel smoothing]({{< relref "KBhkernel_smoothing.md" >}})
+-   [value iteration, in practice]({{< relref "KBhvalue_iteration_in_practice.md" >}})
 
 
 ## Questions {#questions}

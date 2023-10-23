@@ -148,6 +148,7 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 ### a chain of reasoning with feedback {#a-chain-of-reasoning-with-feedback}
 
 -   [SU-CS238 OCT172023]({{< relref "KBhsu_cs238_oct172023.md" >}})
+-   [SU-CS238 OCT192023]({{< relref "KBhsu_cs238_oct192023.md" >}})
 
 
 ## Worksheets {#worksheets}
