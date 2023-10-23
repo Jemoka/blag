@@ -33,3 +33,25 @@ Its [memcpy](#memcpy), but it works with overlapping data, and is slower.
 ```C
 void *memove(void *dest, void *src, size_t nbytes)
 ```
+
+
+## [pointer arithmetic]({{< relref "KBharray.md#pointer-arithmetic" >}}) with [generics]({{< relref "KBhgeneric.md" >}}) {#pointer-arithmetic--kbharray-dot-md--with-generics--kbhgeneric-dot-md}
+
+Unfortunately, given that we don't know how big a `void *` pointer is, we can't do [pointer arithmetic]({{< relref "KBharray.md#pointer-arithmetic" >}}) against it because it still doesn't know how big the pointer is. You can't just add/subtract numbers to `char *`.
+
+So, we actually have to do [pointer arithmetic]({{< relref "KBharray.md#pointer-arithmetic" >}}) by [casting]({{< relref "KBhcasting.md" >}}) the pointer to a `char*` which will make pointer arithmetic work at the one-byte level.
+
+```C
+void *return_sixth_elem(void *arr) {
+    return (char *)arr + 5;
+}
+```
+
+
+## higher order functions {#higher-order-functions}
+
+We can pass a function as a parameter.
+
+```C
+bool (*function_name)(int, int)
+```
