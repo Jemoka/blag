@@ -62,7 +62,7 @@ see [Baysian Network]({{< relref "KBhbaysian_network.md" >}})
 
 -   [uniform distribution](#uniform-distribution)
 -   gaussian distributions
-    -   [Gaussian distribution]({{< relref "KBhsu_cs109_oct182023.md#gaussian-distribution" >}})
+    -   [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}})
     -   [Truncated Gaussian distribution](#truncated-gaussian-distribution)
     -   [Gaussian mixture model](#gaussian-mixture-model)
 
@@ -93,7 +93,7 @@ Var(X) = \frac{1}{12}(\beta -\alpha )^{2}
 
 #### Truncated Gaussian distribution {#truncated-gaussian-distribution}
 
-Sometimes, we don't want to use a [Gaussian distribution]({{< relref "KBhsu_cs109_oct182023.md#gaussian-distribution" >}}) for values above or below a threshold (say if they are physically impossible). In those cases, we have some:
+Sometimes, we don't want to use a [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}}) for values above or below a threshold (say if they are physically impossible). In those cases, we have some:
 
 \begin{equation}
 X \sim N(\mu, \sigma^{2}, a, b)
@@ -111,7 +111,7 @@ where:
 \Phi = \int\_{-\infty}^{x} \phi (x') \dd{x'}
 \end{equation}
 
-and where \\(\phi\\) is the [standard normal density function]({{< relref "KBhsu_cs109_oct182023.md#standard-normal-density-function" >}}).
+and where \\(\phi\\) is the [standard normal density function]({{< relref "KBhgaussian_distribution.md#standard-normal-density-function" >}}).
 
 
 #### Gaussian mixture model {#gaussian-mixture-model}
@@ -144,6 +144,36 @@ We have two important properties:
 
 -   if you integrate over any bounds over a [probability density function](#probability-density-function), you get a [probability]({{< relref "KBhprobability.md" >}})
 -   if you integrate over infinity, the result should be \\(1\\)
+
+
+#### getting exact values from [PDF](#probability-density-function) {#getting-exact-values-from-pdf--orge11a5fa}
+
+There is a calculus definition for \\(P(X=x)\\), if absolutely needed:
+
+\begin{equation}
+P(X=x) = \epsilon f(x)
+\end{equation}
+
+<!--list-separator-->
+
+-  mixing discrete and continuous random variables
+
+    Let's say \\(X\\) is continuous, and \\(N\\) is discrete.
+
+    We desire:
+
+    \begin{equation}
+    P(N=n|X=x) = \frac{P(X=x|N=n)P(N=n)}{P(X=x)}
+    \end{equation}
+
+    now, to get a specific value for \\(P(X=x)\\), we can just multiply its [PMF]({{< relref "KBhprobability_mass_function.md" >}}) by a small epsilon:
+
+    \begin{align}
+    P(N=n|X=x) &= \lim\_{\epsilon \to 0} \frac{\epsilon f(X=x|N=n)P(N=n)}{\epsilon f(X=x)}  \\\\
+    &= \frac{f(X=x|N=n)P(N=n)}{f(X=x)}
+    \end{align}
+
+    this same trick works pretty much everywhere---whenever we need to get the probability of a continuous random variable with
 
 
 ### cumulative distribution function {#cumulative-distribution-function}

@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[inference]({{< relref "KBhinference.md" >}}) is the act of determining a distribution of unobserved variables given observed variables:
+[inference]({{< relref "KBhinference.md" >}}) is the act of updating the distribution of a [random variable]({{< relref "KBhrandom_variables.md" >}}) based on distribution of actually observed variables:
 
 \begin{equation}
 P(X|Y)
@@ -15,6 +15,12 @@ where \\(Y\\) is observed, and we want to know how likely \\(X\\) would therefor
 We call the set \\(X\\) the "query variables", \\(Y\\) as "evidence varibales", and anything that we didn't use which connects the two variables as "hidden variables".
 
 If things are not in the right order of \\(X\\) and \\(Y\\), consider the [Bayes rule]({{< relref "KBhbayes_theorem.md" >}}).
+
+
+## Inference is Hard {#inference-is-hard}
+
+-   mix of [continuous]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) and [discrete distribution]({{< relref "KBhdiscrete_distribution.md" >}})
+-   results could be either a [PMF]({{< relref "KBhprobability_mass_function.md" >}}) or a [PDF]({{< relref "KBhprobability_distributions.md#probability-density-function" >}})
 
 
 ## Example {#example}

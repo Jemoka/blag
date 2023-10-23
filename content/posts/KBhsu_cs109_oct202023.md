@@ -23,6 +23,10 @@ draft = false
 
 -   for [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}}) against some [multinomial distribution]({{< relref "KBhprobablistic_model.md#multinomial-distribution" >}}), its often a good time to find the ratios of the results because the combination in the beginning cancels out if you are analyzing the same samples upon different prior probabilities
 
+\begin{equation}
+\frac{P(H|D)}{P(M|D)} = \frac{\prod\_{i} h\_{i}^{c\_{i}}}{\prod\_{i} m\_{i}^{c\_{i}}}
+\end{equation}
+
 
 ## Questions {#questions}
 

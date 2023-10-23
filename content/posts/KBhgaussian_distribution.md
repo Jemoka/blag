@@ -39,7 +39,7 @@ X \sim N(\mu, \sigma^{2})
 Its [PDF]({{< relref "KBhprobability_distributions.md#probability-density-function" >}}) is:
 
 \begin{equation}
-\mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma} \phi \qty(\frac{x-\mu}{\sigma})
+\mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma\sqrt{2\pi}} e^{ \frac{-(x-u)^{2}}{2 \sigma^{2}}}
 \end{equation}
 
 where, \\(\phi\\) is the [standard normal density function](#standard-normal-density-function)
@@ -89,7 +89,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--orga5903db}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org5c75450}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
@@ -115,4 +115,4 @@ no other [random variable]({{< relref "KBhrandom_variables.md" >}}) uses as litt
 
 #### approximation of [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) with [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) {#approximation-of-binomial-distribution--kbhbinomial-distribution-dot-md--with-normal-distribution--kbhnormal-distribution-dot-md}
 
-You can use a [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) to approximate [binomial approximation](#approximation-of-binomial-distribution--kbhbinomial-distribution-dot-md--with-normal-distribution--kbhnormal-distribution-dot-md). However, be aware of a [continuity]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) correction.
+You can use a [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) to approximate [binomial approximation](#approximation-of-binomial-distribution--kbhbinomial-distribution-dot-md--with-normal-distribution--kbhnormal-distribution-dot-md). However, be aware of a [continuity correction]({{< relref "KBhcontinuity_correction.md" >}})

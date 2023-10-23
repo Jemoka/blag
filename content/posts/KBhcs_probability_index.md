@@ -24,11 +24,18 @@ core [probability]({{< relref "KBhprobability.md" >}}), [axiom of probability]({
 
 ## Unit 2 {#unit-2}
 
+[random variables]({{< relref "KBhrandom_variables.md" >}})
+
 -   [SU-CS109 OCT092023]({{< relref "KBhsu_cs109_oct092023.md" >}})
 -   [SU-CS109 OCT132023]({{< relref "KBhsu_109_oct132023.md" >}})
 -   [SU-CS109 OCT162023]({{< relref "KBhsu_cs109_oct162023.md" >}})
 -   [SU-CS109 OCT182023]({{< relref "KBhsu_cs109_oct182023.md" >}})
+
+
+## Unit 3 {#unit-3}
+
 -   [SU-CS109 OCT202023]({{< relref "KBhsu_cs109_oct202023.md" >}})
+-   [SU-CS109 OCT232023]({{< relref "KBhsu_cs109_oct232023.md" >}})
 
 
 ## Result {#result}

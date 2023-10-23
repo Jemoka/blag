@@ -8,6 +8,8 @@ draft = false
 
 A [probability]({{< relref "KBhprobability.md" >}}) distribution to model specific outcomes like a [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) but for multiple variables.
 
+like [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}), we have to assume independence and same probability per trial.
+
 "what's the probability that you get some set of assignments xj=nj":
 
 \begin{equation}
