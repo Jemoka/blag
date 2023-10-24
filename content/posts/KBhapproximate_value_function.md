@@ -35,8 +35,11 @@ Now, what next?
 
 Loop until convergence:
 
+-   Initialize \\(u\_{\theta}\\)
 -   For all \\(s\_{i} \in S\\), let \\(u\_{i} = \max\_{a} R(s,a) + \gamma \sum\_{s'}^{}T(s'|s,a) u\_{\theta}(s')\\), the [utility]({{< relref "KBhutility_theory.md" >}}) at those discrete state samples \\(s\_{i}\\)
 -   Then, fit a \\(\theta\\) so that \\(U\_{\theta}(s\_{i})\\) is close to \\(u\_{i}\\)
+
+**to get \\(T\\)**: get a finite sampling of next states, or fit a function to it.
 
 BUT: **Convergence is not guaranteed.**
 

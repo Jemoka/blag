@@ -38,6 +38,7 @@ core [probability]({{< relref "KBhprobability.md" >}}), [axiom of probability]({
 -   [SU-CS109 OCT232023]({{< relref "KBhsu_cs109_oct232023.md" >}})
 
 
-## Result {#result}
+## Notes {#notes}
 
 -   [SU-CS109 Midterm]({{< relref "KBhsu_cs109_midterm.md" >}})
+-   [SU-CS109 Midterm Sheet]({{< relref "KBhsu_cs109_midterm_sheet.md" >}})

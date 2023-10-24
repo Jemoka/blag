@@ -18,7 +18,7 @@ where, \\(T\\) is the transition probability from \\(s\\) to \\(s'\\) given acti
 Therefore, the [utility]({{< relref "KBhutility_theory.md" >}}) of being in a state (called the [value function]({{< relref "KBhaction_value_function.md" >}})) is:
 
 \begin{equation}
-U(s) = \max  Q(s,a)
+U(s) = \max\_{a}  Q(s,a)
 \end{equation}
 
 "the [utility]({{< relref "KBhutility_theory.md" >}}) that gains the best [action-value]({{< relref "KBhaction_value_function.md" >}})"

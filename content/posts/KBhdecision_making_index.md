@@ -149,6 +149,7 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 
 -   [SU-CS238 OCT172023]({{< relref "KBhsu_cs238_oct172023.md" >}})
 -   [SU-CS238 OCT192023]({{< relref "KBhsu_cs238_oct192023.md" >}})
+-   [SU-CS238 OCT242023]({{< relref "KBhsu_cs238_oct242023.md" >}})
 
 
 ## Worksheets {#worksheets}
