@@ -4,6 +4,12 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+[sigmoid]({{< relref "KBhsigmoid.md" >}}) function is used to squash your data between \\(0\\) and \\(1\\).
+
+\begin{equation}
+\sigma(z) = \frac{1}{1+ e^{-z}}
+\end{equation}
+
 Say you have one discrete variable \\(X\\), and one continuous variable \\(Y\\), and you desire to express \\(p(x|y)\\).
 
 The simplest way to do this, of course, is to say something like:

@@ -65,17 +65,17 @@ For [K2 Algorithm](#k2-algorithm), we assume a [uniform distribution]({{< relref
 After you try out one ordering, you should try out another one. Because you can only add parents from elements before you in the list, you will never get a cycle.
 
 
-## Local Search {#local-search}
+## Local Graph Search {#local-graph-search}
 
 Start with an uncorrected graph. Search on the following actions:
 
-[basic graph operation](#local-search)s:
+[basic graph operation](#local-graph-search)s:
 
 -   add edge
 -   remove edge
 -   flip edge
 
-A graph's [neighborhood](#local-search) is the graphs for whicthey are one basic graph operation away.
+A graph's [neighborhood](#local-graph-search) is the graphs for whicthey are one basic graph operation away.
 
 Create a cycle detection scheme.
 

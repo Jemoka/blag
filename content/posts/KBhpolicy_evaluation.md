@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+See also [Roll-out utility]({{< relref "KBhpolicy_optimization.md#roll-out-utility" >}}) if you don't want to get a [vector]({{< relref "KBhvector.md" >}}) [utility]({{< relref "KBhutility_theory.md" >}}) over all states.
+
+
 ## solving for the utility of a policy {#solving-for-the-utility-of-a-policy}
 
 We can solve for the [utility]({{< relref "KBhutility_theory.md" >}}) of the [policy]({{< relref "KBhpolicy.md" >}}) given the transitions \\(T\\) and reward \\(R\\) by solving the following equation

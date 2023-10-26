@@ -51,6 +51,15 @@ P(c|o\_{1:n}) \propto P(c, o\_{1:n})
 "the probability of a class occurring given the inputs is proportional to the probability of that class occurring along with the inputs"
 
 
+### Multiple believes {#multiple-believes}
+
+\begin{equation}
+P(A=a | R\_1) \propto P(R\_1 | A=a) \cdot P(A=a)
+\end{equation}
+
+But now
+
+
 ## Motivation: [Bayes rule]({{< relref "KBhbayes_theorem.md" >}}) {#motivation-bayes-rule--kbhbayes-theorem-dot-md}
 
 {{< figure src="/ox-hugo/2023-10-05_09-14-17_screenshot.png" >}}
