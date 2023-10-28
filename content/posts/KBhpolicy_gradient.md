@@ -4,19 +4,16 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-We have our [policy]({{< relref "KBhpolicy.md" >}}):
+Two steps:
 
-\begin{equation}
-\pi\_{\theta}
-\end{equation}
-
-whereby the [policy]({{< relref "KBhpolicy.md" >}}) is parameterized by \\(\theta\\)
+1.  obtaining a function for the gradient of policy against some parameters \\(\theta\\)
+2.  making them more based than they are right now by optimization
 
 
 ## Obtaining a policy gradient {#obtaining-a-policy-gradient}
 
 
-### Finite-Different Gradient Estimation {#finite-different-gradient-estimation}
+### Finite-Difference Gradient Estimation {#finite-difference-gradient-estimation}
 
 We want some expression for:
 
@@ -49,7 +46,7 @@ We can now write out the \\(\Delta U\\) with:
 \Delta U = \qty[U(\theta+ \Delta \theta^{1}) - U(\theta), \dots, U(\theta+ \Delta \theta^{m}) - U(\theta)]
 \end{equation}
 
-We have to compute a [Roll-out utility]({{< relref "KBhpolicy_optimization.md#roll-out-utility" >}}) for each \\(U(\theta + ...)\\).
+We have to compute a [Roll-out utility]({{< relref "KBhpolicy_evaluation.md#roll-out-utility" >}}) for each \\(U(\theta + ...)\\).
 
 We now want to fit a function between \\(\Delta \theta\\) to \\(\Delta U\\), because from the definition of the gradient we have:
 
@@ -70,7 +67,9 @@ where \\(\Delta \theta^{\dagger}\\) is the [pseudoinverse]({{< relref "KBhpseudo
 To end up at a gradient estimate.
 
 
-### Analytical Policy Gradient Solution {#analytical-policy-gradient-solution}
+### Likelyhood Ratio [Gradient]({{< relref "KBhpolicy_gradient.md" >}}) {#likelyhood-ratio-gradient--kbhpolicy-gradient-dot-md}
+
+this is what people usually refers to as "[Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}})".
 
 Recall:
 
@@ -106,16 +105,16 @@ Rearranging that, we have:
 
 ---
 
-Substituting that in, we have:
+Substituting that in, one of our \\(p\_{\pi}(\tau)\\) cancels out, and, we have:
 
 \begin{equation}
 \int\_{\tau} p\_{\pi}(\tau) \nabla\_{\theta} \log p\_{\pi}(\tau) R(\tau) \dd{\tau}
 \end{equation}
 
-Which is an expectation:
+You will note that this is the definition of the [expectation]({{< relref "KBhexpectation.md" >}}) of the right half (everything to the right of \\(\nabla\_{\theta}\\)) vis a vi all \\(\tau\\) (multiplying it by \\(p(\tau)\\)). Therefore:
 
 \begin{equation}
-\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} [\nabla\_{\tau} \log p\_{\pi}(\tau) R(\tau)]
+\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} [\nabla\_{\theta} \log p\_{\pi}(\tau) R(\tau)]
 \end{equation}
 
 ---
@@ -127,24 +126,40 @@ Recall that \\(\tau\\) a trajectory is a pair of \\(s\_1, a\_1, ..., s\_{n}, a\_
 We want to come up with some \\(p\_{\pi}(\tau)\\), "what's the probability of a trajectory happening given a policy".
 
 \begin{equation}
-p\_{\theta}(\tau) = p(s^{1}) \prod\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) \pi\_{\theta} (a^{k}|s^{k})
+p\_{\pi}(\tau) = p(s^{1}) \prod\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) \pi\_{\theta} (a^{k}|s^{k})
 \end{equation}
+
+("probably of being at a state, times probability of the transition happening, times the probability of the action happening, so on, so on")
 
 Now, taking the log of it causes the product to become a summation:
 
 \begin{equation}
-\log p\_{\theta}(\tau) = p(s^{1}) + \sum\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) + \pi\_{\theta} (a^{k}|s^{k})
+\log p\_{\pi}(\tau) = p(s^{1}) + \sum\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) + \pi\_{\theta} (a^{k}|s^{k})
 \end{equation}
 
 ---
 
-[plugging it in. you will not that the gradient is zero for things that don't depend on \\(\theta\\)]
+Plugging this into our expectation equation:
+
+\begin{equation}
+\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} \qty[\nabla\_{\theta} \qty(p(s^{1}) + \sum\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) + \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
+\end{equation}
+
+This is an important result. You will note that \\(p(s^{1})\\) and \\(p(s^{k+1}|s^{k},a^{k})\\) **doesn't have a \\(\theta\\) term in them!!!!**. Therefore, taking term in them!!!!\*. Therefore, taking the \\(\nabla\_{\theta}\\) of them becomes... ZERO!!! Therefore:
+
+\begin{equation}
+\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} \qty[\qty(0 + \sum\_{k=1}^{d} 0 + \nabla\_{\theta} \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
+\end{equation}
+
+So based. We now have:
 
 \begin{equation}
 \nabla\_{\theta} U(\theta) = \mathbb{E}\_{\tau} \qty[\sum\_{k=1}^{d} \nabla\_{\theta} \log \pi\_{\theta}(a^{k}|s^{k}) R(\tau)]
 \end{equation}
 
 "this is very nice" because we do not need to know anything regarding the transition model. This means we don't actually need to know what \\(p(s^{k+1}|s^{k}a^{k})\\) because that term just dropped out of the gradient.
+
+We can simulate a few trajectories; calculate the gradient, and average them to end up with our overall gradient.
 
 
 ### Reward-to-Go {#reward-to-go}

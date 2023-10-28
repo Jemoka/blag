@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-See also [Roll-out utility]({{< relref "KBhpolicy_optimization.md#roll-out-utility" >}}) if you don't want to get a [vector]({{< relref "KBhvector.md" >}}) [utility]({{< relref "KBhutility_theory.md" >}}) over all states.
+See also [Roll-out utility](#roll-out-utility) if you don't want to get a [vector]({{< relref "KBhvector.md" >}}) [utility]({{< relref "KBhutility_theory.md" >}}) over all states.
 
 
 ## solving for the utility of a policy {#solving-for-the-utility-of-a-policy}
@@ -70,3 +70,54 @@ We can now solve for the [utility]({{< relref "KBhutility_theory.md" >}}) of the
 \end{equation}
 
 we know that \\(T\\) is [invertable]({{< relref "KBhinvertability.md" >}}) because its a transition matrix. And that, folks, is the [utility]({{< relref "KBhutility_theory.md" >}}) of a [policy]({{< relref "KBhpolicy.md" >}}).
+
+
+## Approximate Policy Evaluation {#approximate-policy-evaluation}
+
+Instead of having a [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}}) based on a vector out of the fitness of this [policy]({{< relref "KBhpolicy.md" >}}) at all possible states, which really works if our state space is small, what if we made a [policy]({{< relref "KBhpolicy.md" >}}) evaluation scheme which estimates the expectation of the [utility]({{< relref "KBhutility_theory.md" >}}) of our policy based on the possibility of us landing in particular states?
+
+
+### Background {#background}
+
+The [utility]({{< relref "KBhutility_theory.md" >}}) from following a [policy]({{< relref "KBhpolicy.md" >}}) AT A STATE is given by:
+
+\begin{equation}
+U^{\pi}(s) = R(s, \pi(s)) + \gamma \sum\_{s'} T(s' | s, \pi(s)) U^{\pi} (s')
+\end{equation}
+
+The [utility]({{< relref "KBhutility_theory.md" >}}) of a policy, in general, can be represented by:
+
+\begin{equation}
+U(\pi) = \sum\_{s}^{} b(s) U^{\pi}(s)
+\end{equation}
+
+where, \\(b(s)\\) is the "initial state distribution" of being in a particular state.
+
+Our state space may not be discrete or otherwise small enough to be added up for every case. We therefore can a sampling of [Rollout]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}) [trajectory]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}) to perform [Approximate Policy Evaluation](#approximate-policy-evaluation)
+
+
+### Roll-out utility {#roll-out-utility}
+
+Collecting a utility for all \\(s\\) is real hard. Therefore, instead, we perform a bunch of [Rollout]({{< relref "KBhrollout_with_lookahead.md#rollout" >}})s and then calculate, for each trajectory \\(\tau\\) you ended up with:
+
+\begin{align}
+U(\pi\_{\theta}) &= \mathbb{E}[R(\tau)]  \\\\
+&= \int\_{\tau} p\_{\tau} (\tau) R(\tau) d\tau
+\end{align}
+
+where, \\(p(\tau)\\) is the probability of that trajectory happening, and \\(R(\tau)\\) is the discounted future reward of that trajectory. That is:
+
+\begin{equation}
+R(\tau) = \sum\_{k=1}^{d} r\_{k}\ \gamma^{k-1}
+\end{equation}
+
+
+#### monte-carlo policy evaluation {#monte-carlo-policy-evaluation}
+
+Sometimes, we can't even get all trajectories to add them up, so we simply perform an average of \\(m\\) sample trajectories:
+
+\begin{equation}
+U(\pi\_{\theta}) = \frac{1}{m}\sum\_{i=1}^{m} R(\tau^{i})
+\end{equation}
+
+We start each trajectory using a probability-weighted sample of initial states. This is the [Roll-out utility](#roll-out-utility)

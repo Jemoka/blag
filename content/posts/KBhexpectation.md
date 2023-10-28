@@ -31,7 +31,7 @@ The [expectation]({{< relref "KBhexpectation.md" >}}) is the average of the coun
 ### Closure under expectation {#closure-under-expectation}
 
 \begin{equation}
-E[X+Y] = E[X]+E[Y}
+E[X+Y] = E[X]+E[Y]
 \end{equation}
 
 

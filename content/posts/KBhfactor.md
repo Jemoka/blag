@@ -8,6 +8,8 @@ in [probability]({{< relref "KBhprobability.md" >}}), a [factor]({{< relref "KBh
 
 If you don't have discrete variables, [factor]({{< relref "KBhfactor.md" >}})s allow you to state \\(p(x|y)\\) in terms of a function \\(\phi(x,y)\\).
 
+See also [Rejection Sampling]({{< relref "KBhrejection_sampling.md" >}})
+
 
 ## factor operations {#factor-operations}
 
@@ -18,7 +20,8 @@ If you don't have discrete variables, [factor]({{< relref "KBhfactor.md" >}})s a
 \phi\_{3} (x,y,z) = \phi\_{1} (x,y) \cdot \phi\_{2}(y,z)
 \end{equation}
 
-**ud.** factor marginalization
+
+### factor marginalization {#factor-marginalization}
 
 \begin{equation}
 \phi(x) = \sum\_{y=Y} \phi(x,y)

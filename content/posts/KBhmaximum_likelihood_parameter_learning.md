@@ -76,6 +76,12 @@ Overall, its kind of unsurprising from the [Frequentist Definition of Probabilit
 
 for some observations \\(n\_{1:k}\\).
 
+and:
+
+\begin{equation}
+\sigma^{2} = \frac{\sum\_{}^{} (o\_{i} - \hat{u})^{2}}{m}
+\end{equation}
+
 
 ## Problems with [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) {#problems-with-maximum-likelihood-parameter-learning--kbhmaximum-likelihood-parameter-learning-dot-md}
 
