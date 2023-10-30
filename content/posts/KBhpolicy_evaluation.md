@@ -15,6 +15,8 @@ We can solve for the [utility]({{< relref "KBhutility_theory.md" >}}) of the [po
 \bold{U}^{\pi} = (I - \gamma T^{\pi})^{-1} \bold{R}^{\pi}
 \end{equation}
 
+where \\(T\\) is an \\(|S| \times |S|\\) square matrix where each horizontal row is supposed to add up to \\(1\\) which encodes the probability of transitioning from each horizontal row to the column next rows.
+
 
 ### lookahead equation {#lookahead-equation}
 

@@ -18,7 +18,13 @@ The [value of information]({{< relref "KBhvalue_of_information.md" >}}) a measur
 ## requirements {#requirements}
 
 \begin{equation}
-VOI(O'|o) = (\sum\_{o'} P(o'|o) EU(o, o')) - EU(o)
+VOI(O'|o) = (\sum\_{o'} P(o'|o) EU^{\*}(o, o')) - EU^{\*}(o)
+\end{equation}
+
+where, \\(EU^{\*}(o\_{1} \dots o\_{n})\\) is the [maximum expected utility]({{< relref "KBhutility_theory.md#maximum-expected-utility-principle" >}}) given observations \\(o\_1, ..., o\_{n}\\), that is:
+
+\begin{equation}
+EU^{\*}(o\_1, \dots, o\_{n}) = \max\_{a} EU(o\_1, \dots, o\_{n})
 \end{equation}
 
 "the value of an observation is the sum of the [MEU]({{< relref "KBhutility_theory.md#maximum-expected-utility-principle" >}}) of each possible outcome from that new observation, time their probability of occurance, subtracted by the [MEU]({{< relref "KBhutility_theory.md#maximum-expected-utility-principle" >}}) of the current observation"

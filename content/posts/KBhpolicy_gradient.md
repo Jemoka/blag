@@ -69,6 +69,11 @@ To end up at a gradient estimate.
 
 ### Likelyhood Ratio [Gradient]({{< relref "KBhpolicy_gradient.md" >}}) {#likelyhood-ratio-gradient--kbhpolicy-gradient-dot-md}
 
+This is likely good, but requires a few things:
+
+1.  an explicit transition model that you can compute over
+2.  you being able to take the gradient of the policy
+
 this is what people usually refers to as "[Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}})".
 
 Recall:
@@ -238,17 +243,21 @@ where \\(\alpha\\) is learning rate/step factor.
 
 ### Restricted Gradient {#restricted-gradient}
 
-We want to maximize \\(U(\theta)\\)
+[Policy Gradient Ascent](#policy-gradient-ascent) can take very large steps if the gradient is too large.
 
-\begin{equation}
-U(\theta') \approx U(\theta) + \nabla U(\theta)^{T} (\theta' - \theta)
-\end{equation}
-
-We will apply some restriction of :
+One by which we can optimize the gradient, ensuring that we don't take steps larger than:
 
 \begin{equation}
 \frac{1}{2}(\theta' - \theta)^{T} I(\theta' - \theta) \leq \epsilon
 \end{equation}
+
+is through [Restricted Gradient](#restricted-gradient):
+
+\begin{equation}
+\theta \leftarrow \theta + \sqrt{2 \epsilon} \frac{\nabla U(\theta)}{|| \nabla U(\theta)||}
+\end{equation}
+
+Occasionally, if a step-size is directly given to you in terms of euclidean distance, then you would replace the entirety of \\(\sqrt{2 \epsilon}\\) with your provided step size.
 
 
 ### Natural Gradient {#natural-gradient}

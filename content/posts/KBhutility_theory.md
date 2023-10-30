@@ -26,6 +26,8 @@ see [utility elicitation]({{< relref "KBhutility_elicitation.md" >}})
 
 ### expected utility {#expected-utility}
 
+[expected utility](#expected-utility) is the utility we expect from taking an action \\(a\\) at a state \\(o\\). To compute it based on transition probabilities:
+
 \begin{equation}
 EU(a|o) = \sum\_{s'} p(s' | a,o) U(s')
 \end{equation}
@@ -40,7 +42,7 @@ See also [expected utility of wealth]({{< relref "KBhexpected_utility_of_wealth.
 [MEU](#maximum-expected-utility-principle) states that a rational agent should choose an action which maximizes [expected utility](#expected-utility). That is,
 
 \begin{equation}
-a^{\*} = \arg\max\_{a} EV(a|o)
+a^{\*} = \arg\max\_{a} EU(a|o)
 \end{equation}
 
 Notably, this is **not always the best action**. This action maximizes [utility]({{< relref "KBhutility_theory.md" >}}) **NOT** outcome.

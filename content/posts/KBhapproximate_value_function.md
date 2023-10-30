@@ -57,7 +57,7 @@ There are two main specific approaches to achieve this:
 
 -   make a sampling in your [continuous]({{< relref "KBhuniqueness_and_existance.md#continuity" >}}) state space to discretized it
 -   do any [utility function]({{< relref "KBhutility_function.md" >}}) thing you'd like ([policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}}) or [value iteration]({{< relref "KBhvalue_iteration.md" >}})) to get some set of \\(\theta\_{i}\\), which is the utility for being in each sampled discrete state \\(s\_{i}\\)
--   whenever you need to calculate the [utility]({{< relref "KBhutility_theory.md" >}}) of a particular state...
+-   whenever you need to calculate \\(U(s)\\) of a particular state...
     -   linearly interpolate
     -   k nearest neighbor
     -   [kernel smoothing]({{< relref "KBhkernel_smoothing.md" >}})
