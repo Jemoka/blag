@@ -20,7 +20,7 @@ we can estimate that with the finite-difference &ldquo;epsilon trick&rdquo;:
 \Delta U = \nabla_{\theta} U(\theta)\ \Delta \theta
 \end{equation}</p><p>(that is \(y = mx\))</p><p>Rearranging the expression above</p><p>\begin{equation}
 \nabla_{\theta} U(\theta) \approx \Delta \theta^{\dagger} \Delta U
-\end{equation}</p><p>where \(\Delta \theta^{\dagger}\) is the <a href>pseudoinverse</a> of \(\Delta \theta\) matrix.</p><p>To end up at a gradient estimate.</p><h3 id=likelyhood-ratio-gradient--kbhpolicy-gradient-dot-md>Likelyhood Ratio <a href=/posts/kbhpolicy_gradient/>Gradient</a></h3><p>this is what people usually refers to as &ldquo;<a href=/posts/kbhpolicy_gradient/>Policy Gradient</a>&rdquo;.</p><p>Recall:</p><p>\begin{align}
+\end{equation}</p><p>where \(\Delta \theta^{\dagger}\) is the <a href>pseudoinverse</a> of \(\Delta \theta\) matrix.</p><p>To end up at a gradient estimate.</p><h3 id=likelyhood-ratio-gradient--kbhpolicy-gradient-dot-md>Likelyhood Ratio <a href=/posts/kbhpolicy_gradient/>Gradient</a></h3><p>This is likely good, but requires a few things:</p><ol><li>an explicit transition model that you can compute over</li><li>you being able to take the gradient of the policy</li></ol><p>this is what people usually refers to as &ldquo;<a href=/posts/kbhpolicy_gradient/>Policy Gradient</a>&rdquo;.</p><p>Recall:</p><p>\begin{align}
 U(\pi_{\theta}) &= \mathbb{E}[R(\tau)] \\
 &= \int_{\tau} p_{\tau} (\tau) R(\tau) d\tau
 \end{align}</p><p>Now consider:</p><p>\begin{align}
@@ -62,8 +62,8 @@ r_{togo}(k) = \sum_{l=k}^{d} r_{l}\ \gamma^{l-k}
 \nabla_{\theta} U(\theta) = \mathbb{E}_{\tau} \qty[\sum_{k=1}^{d} \nabla_{\theta} \log \pi_{\theta}(a^{k}|s^{k}) \qty(\gamma^{k-1} (r_{togo}(k) - r_{baseline}(k)))]
 \end{equation}</p><p>For instance, if you have a system where each action all gave \(+1000\) reward, taking any particular action isn&rsquo;t actually very good. Hence:</p><h2 id=optimizing-the-policy-gradient--kbhpolicy-gradient-dot-md>Optimizing the <a href=/posts/kbhpolicy_gradient/>Policy Gradient</a></h2><p>We want to make \(U(\theta)\) real big. We have two knobs: what is our objective function, and what is your restriction?</p><h3 id=policy-gradient-ascent>Policy Gradient Ascent</h3><p>good &lsquo;ol fashioned</p><p>\begin{equation}
 \theta \leftarrow \theta + \alpha \nabla U(\theta)
-\end{equation}</p><p>where \(\alpha\) is learning rate/step factor.</p><h3 id=restricted-gradient>Restricted Gradient</h3><p>We want to maximize \(U(\theta)\)</p><p>\begin{equation}
-U(\theta&rsquo;) \approx U(\theta) + \nabla U(\theta)^{T} (\theta&rsquo; - \theta)
-\end{equation}</p><p>We will apply some restriction of :</p><p>\begin{equation}
+\end{equation}</p><p>where \(\alpha\) is learning rate/step factor.</p><h3 id=restricted-gradient>Restricted Gradient</h3><p><a href=#policy-gradient-ascent>Policy Gradient Ascent</a> can take very large steps if the gradient is too large.</p><p>One by which we can optimize the gradient, ensuring that we don&rsquo;t take steps larger than:</p><p>\begin{equation}
 \frac{1}{2}(\theta&rsquo; - \theta)^{T} I(\theta&rsquo; - \theta) \leq \epsilon
-\end{equation}</p><h3 id=natural-gradient>Natural Gradient</h3><h3 id=trust-region-policy-optimization>Trust Region Policy Optimization</h3><h3 id=proximal-policy-optimization>Proximal Policy Optimization</h3></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>is through <a href=#restricted-gradient>Restricted Gradient</a>:</p><p>\begin{equation}
+\theta \leftarrow \theta + \sqrt{2 \epsilon} \frac{\nabla U(\theta)}{|| \nabla U(\theta)||}
+\end{equation}</p><p>Occasionally, if a step-size is directly given to you in terms of euclidean distance, then you would replace the entirety of \(\sqrt{2 \epsilon}\) with your provided step size.</p><h3 id=natural-gradient>Natural Gradient</h3><h3 id=trust-region-policy-optimization>Trust Region Policy Optimization</h3><h3 id=proximal-policy-optimization>Proximal Policy Optimization</h3></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
