@@ -7,6 +7,9 @@ paginate = 5
 
 [outputs]
 home = [ "html", "json" ]
+section = [ "html" ]
+taxonomy = [ "html" ]
+term = [ "html" ]
 
 [markup.highlight]
 codeFences = true
