@@ -128,7 +128,7 @@ This expression for \\(R\_{t}(\tau)\\) is called the **cumulative discounted rew
 
 ## Policy Gradient Theorem {#policy-gradient-theorem}
 
-The policy gradient theorem is unfortunately not going to be very well motivated in the time that we have together. If you are curious, the proof, and some more discussion, can be found [here](https://lilianweng.github.io/posts/2018-04-08-policy-gradient/#proof-of-policy-gradient-theorem): <https://lilianweng.github.io/posts/2018-04-08-policy-gradient/#proof-of-policy-gradient-theorem>.
+The policy gradient theorem is unfortunately not going to be very well motivated in the time that we have together. If you are curious, the proof, and some more discussion, can be found [here](https://lilianweng.github.io/posts/2018-04-08-policy-gradient/#proof-of-policy-gradient-theorem) or in my notes [here]({{< relref "KBhpolicy_gradient.md" >}}).
 
 For now, let's just skip to the result... The loss function objective \\(J\\) with which we can use to optimize a neural network, given a set of _non-connected_ **reward** signals and a policy to optimize \\(\pi\\), is:
 

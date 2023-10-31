@@ -10,7 +10,7 @@ Ingredients:
 -   \\(\pi\\) a [Rollout Policy](#rollout-policy)
 -   \\(d\\) depth (how many next states to look into)---more is more accurate but slower
 
-Find the single-step [greedy policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) at that step using the [Rollout](#rollout) as your [utility]({{< relref "KBhutility_theory.md" >}}) function.
+Use the [greedy policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) at each state by using the [Rollout](#rollout) procedure to estimate your [value function]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}) at any given state.
 
 
 ## Rollout {#rollout}
