@@ -260,10 +260,11 @@ is through [Restricted Gradient](#restricted-gradient):
 Occasionally, if a step-size is directly given to you in terms of euclidean distance, then you would replace the entirety of \\(\sqrt{2 \epsilon}\\) with your provided step size.
 
 
-### Natural Gradient {#natural-gradient}
-
-
 ### Trust Region Policy Optimization {#trust-region-policy-optimization}
+
+Using a different way of restricting the update.
 
 
 ### Proximal Policy Optimization {#proximal-policy-optimization}
+
+Clipping the gradients.

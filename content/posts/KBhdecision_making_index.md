@@ -8,54 +8,6 @@ draft = false
 Lecture notes taking during CS238, decision making. Stanford Intelligence Systems Laboratory (SISL: planning and validation of intelligent systems).
 
 
-## Staff {#staff}
-
-People's office hours: <https://aa228.stanford.edu/officehours/>
-
-Wednesdays, 5:30, Roble Field: ultimate Frisbee
-
-
-### Harrison {#harrison}
-
-Wed 1PM. AI Safety.
-
-
-### Arec {#arec}
-
-Automotive driving, etc.
-
-
-### Elysia {#elysia}
-
-CS Coderm
-
-
-## Course Logistics {#course-logistics}
-
-"We will be working Taylor swift lyrics into every lecture"
-
-
-### Probability {#probability}
-
-Will be reviewed in problem session on Wednesday.
-
-
-### High Level Programming {#high-level-programming}
-
-You need to be able to code. 2 major programming assignments. We care most about the **algorithms** about programming.
-
-
-### Read the book {#read-the-book}
-
-Read the book!
-
-
-### Assignments {#assignments}
-
--   Due 5PM on Fridays
--   0% penalty for 72 hours --- ****this does not apply for quizzes****
-
-
 ## Big Ideas {#big-ideas}
 
 
@@ -137,6 +89,8 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 
 ### probabilistic reasoning relating to single decisions {#probabilistic-reasoning-relating-to-single-decisions}
 
+[Baysian Network]({{< relref "KBhbaysian_network.md" >}})s, and how to deal with them.
+
 -   [SU-CS238 SEP262023]({{< relref "KBhsu_cs238_sep262023.md" >}})
 -   [SU-CS238 SEP272023]({{< relref "KBhsu_cs238_sep272023.md" >}})
 -   [SU-CS238 OCT032023]({{< relref "KBhsu_cs238_oct032023.md" >}})
@@ -147,9 +101,17 @@ These algorithms drive **high quality** decisions on a **tight timeline**. You c
 
 ### a chain of reasoning with feedback {#a-chain-of-reasoning-with-feedback}
 
+[Markov Decision Process]({{< relref "KBhmarkov_decision_process.md" >}}) uses [policies]({{< relref "KBhpolicy.md" >}}) that are evaluated with [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}}) via [utility]({{< relref "KBhutility_theory.md" >}}), [Bellman Equation]({{< relref "KBhpolicy_evaluation.md#bellman-expectation-equation" >}}), [value function]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}), etc.
+
+If we know the state space fully, we can use [policy iteration]({{< relref "KBhpolicy_iteration.md" >}}) and [value iteration]({{< relref "KBhvalue_iteration.md" >}}) to determine an objectively [optimal policy]({{< relref "KBhpolicy.md#optimal-policy" >}}). If we don't (or if the state space is too large), we can try to discretize our state space and appropriate through [Approximate Value Function]({{< relref "KBhapproximate_value_function.md" >}})s, or use [online planning]({{< relref "KBhonline_planning.md" >}}) approaches to compute good policy as we go.
+
+If none of those things are feasible (i.e. your state space is too big or complex to be discretized (i.e. sampling will cause you to loose the structure of the problem)), you can do some lovely [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) which will keep you in continuous space. Some nerds lmao like [Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}}) methods, such as [Proximal Policy Optimization]({{< relref "KBhpolicy_gradient.md#proximal-policy-optimization" >}}) which apparently does stuff for some word things that some millions of people like to use sometimes.
+
 -   [SU-CS238 OCT172023]({{< relref "KBhsu_cs238_oct172023.md" >}})
 -   [SU-CS238 OCT192023]({{< relref "KBhsu_cs238_oct192023.md" >}})
 -   [SU-CS238 OCT242023]({{< relref "KBhsu_cs238_oct242023.md" >}})
+-   [SU-CS238 OCT262023]({{< relref "KBhsu_cs238_oct262023.md" >}})
+-   [SU-CS238 OCT312023]({{< relref "KBhsu_cs238_oct212023.md" >}})
 
 
 ## Worksheets {#worksheets}
