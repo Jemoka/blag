@@ -11,4 +11,8 @@ draft = false
 3.  create a new policy \\(\pi'\\) by creating a [value-function policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) on \\(U^{\pi}\\)
 4.  repeat 2-3
 
-Since there are a finite policies, this will eventually contGierge.
+Since there are a finite policies, this will eventually converge.
+
+At each point, the utility of the policy increases.
+
+At each step, the utility of the resulting policy will necessarily be larger or equal to than the previous one as we are greedily choosing "better" (or equivalent) actions as measured by the utility of the previous policy.

@@ -55,7 +55,7 @@ Now, we would like to normalize this function for \\(\theta \in [0,1]\\), so, we
 \int\_{0}^{1} \theta^{n}(1-\theta)^{m-n}\dd{\theta} = \frac{\Gamma(n+1) \Gamma(m-n+1)}{\Gamma(m+2)}
 \end{equation}
 
-where, \\(\Gamma\\) is a real valued factorial generalization.
+where, \\(\Gamma\\) is a real valued factorial generalization, and this entire integral is often called the "[Beta Function]({{< relref "KBhbaysian_parameter_learning.md" >}})"
 
 Normalizing the output, we have that:
 
@@ -104,6 +104,12 @@ Beta is a special distribution which takes parameters \\(\alpha, \beta\\),and ha
 \frac{\alpha}{\alpha + \beta}
 \end{equation}
 
+and variance:
+
+\begin{equation}
+\frac{ab}{(a+b)^{2}(a+b+1)}
+\end{equation}
+
 and has mode:
 
 \begin{equation}
@@ -115,6 +121,17 @@ when \\(\alpha > 1\\) and \\(\beta > 1\\).
 This means that, at \\(beta(1,1)\\), we have a inform distribution
 
 {{< figure src="/ox-hugo/2023-10-05_21-32-18_screenshot.png" >}}
+
+
+#### Laplace Smoothing {#laplace-smoothing}
+
+[Laplace Smoothing](#laplace-smoothing) is a prior where:
+
+\begin{equation}
+prior\ X \sim Beta(2,2)
+\end{equation}
+
+so you just add \\(2\\) to each of our output pseudo counts.
 
 
 ### Total Probability in beta distributions {#total-probability-in-beta-distributions}

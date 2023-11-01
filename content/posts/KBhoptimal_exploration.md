@@ -29,7 +29,7 @@ U^{\*}([w\_1, l\_{1}, \dots, w\_{n},  l\_{n}]) = \arg\max\_{a} Q^{\*}([w\_1, l\_
 Now, how do we go about calculating the [action-value]({{< relref "KBhaction_value_function.md" >}}):
 
 \begin{align}
-Q ([w\_1, l\_{1}, \dots, w\_{n}, l\_{n}], a) =\ & \frac{w\_{a}+1}{w\_{a}+l\_{a}+2} (1 + U^{\*}(\dots, w\_{a}+1, l\_{a}, \dots)) \\\&+ \qty(1-\frac{w\_{a}+1}{w\_{a}+l\_{a}+2})(1 + U^{\*}(\dots, w\_{a}, l\_{a}+1, \dots))
+Q ([w\_1, l\_{1}, \dots, w\_{n}, l\_{n}], a) =\ & \frac{w\_{a}+1}{w\_{a}+l\_{a}+2} (R(w) + U^{\*}(\dots, w\_{a}+1, l\_{a}, \dots)) \\\&+ \qty(1-\frac{w\_{a}+1}{w\_{a}+l\_{a}+2})(R(l) + U^{\*}(\dots, w\_{a}, l\_{a}+1, \dots))
 \end{align}
 
 "the probability of you win" (expectation of [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}})), times the instantaneous reward you win + the utility you gain in terms of information of you doing that.
