@@ -9,6 +9,8 @@ Two steps:
 1.  obtaining a function for the gradient of policy against some parameters \\(\theta\\)
 2.  making them more based than they are right now by optimization
 
+Thoughout all of this, \\(U(\theta)\\) is \\(U(\pi\_{\theta})\\).
+
 
 ## Obtaining a policy gradient {#obtaining-a-policy-gradient}
 
@@ -80,7 +82,7 @@ Recall:
 
 \begin{align}
 U(\pi\_{\theta}) &= \mathbb{E}[R(\tau)]  \\\\
-&= \int\_{\tau} p\_{\tau} (\tau) R(\tau) d\tau
+&= \int\_{\tau} p\_{\pi} (\tau) R(\tau) d\tau
 \end{align}
 
 Now consider:
@@ -119,7 +121,7 @@ Substituting that in, one of our \\(p\_{\pi}(\tau)\\) cancels out, and, we have:
 You will note that this is the definition of the [expectation]({{< relref "KBhexpectation.md" >}}) of the right half (everything to the right of \\(\nabla\_{\theta}\\)) vis a vi all \\(\tau\\) (multiplying it by \\(p(\tau)\\)). Therefore:
 
 \begin{equation}
-\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} [\nabla\_{\theta} \log p\_{\pi}(\tau) R(\tau)]
+\nabla\_{\theta} U(\theta) =  \mathbb{E}\_{\tau} [\nabla\_{\theta} \log p\_{\pi}(\tau) R(\tau)]
 \end{equation}
 
 ---
@@ -147,13 +149,13 @@ Now, taking the log of it causes the product to become a summation:
 Plugging this into our expectation equation:
 
 \begin{equation}
-\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} \qty[\nabla\_{\theta} \qty(p(s^{1}) + \sum\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) + \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
+\nabla\_{\theta} U(\theta) =  \mathbb{E}\_{\tau} \qty[\nabla\_{\theta} \qty(p(s^{1}) + \sum\_{k=1}^{d} p(s^{k+1} | s^{k}, a^{k}) + \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
 \end{equation}
 
 This is an important result. You will note that \\(p(s^{1})\\) and \\(p(s^{k+1}|s^{k},a^{k})\\) **doesn't have a \\(\theta\\) term in them!!!!**. Therefore, taking term in them!!!!\*. Therefore, taking the \\(\nabla\_{\theta}\\) of them becomes... ZERO!!! Therefore:
 
 \begin{equation}
-\nabla\_{\theta} U(\theta) &=  \mathbb{E}\_{\tau} \qty[\qty(0 + \sum\_{k=1}^{d} 0 + \nabla\_{\theta} \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
+\nabla\_{\theta} U(\theta) =  \mathbb{E}\_{\tau} \qty[\qty(0 + \sum\_{k=1}^{d} 0 + \nabla\_{\theta} \pi\_{\theta} (a^{k}|s^{k})) R(\tau)]
 \end{equation}
 
 So based. We now have:

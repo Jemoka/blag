@@ -6,14 +6,14 @@ draft = false
 
 ## Softmax Method {#softmax-method}
 
-Pull arm \\(a\\) with probability \\(\propto \exp (\lambda \rho\_{a})\\), where \\(\lambda \geq 0\\) is the "decision parameter".
+Pull arm \\(a\\) with probability \\(\propto \exp (\lambda \rho\_{a})\\), where \\(\lambda \geq 0\\) is the "precision parameter".
 
-When \\(\lambda \to 0\\), this system uses the same rate for each of the probabilities,
+When \\(\lambda \to 0\\), this system uses the same rate for each of the actions, so you are essentially randomly sampling; when \\(\lambda \to \infty\\), the system will use only the [greedy action]({{< relref "KBhexploration_and_exploitation.md#bayesian-model-estimation" >}}) because only the element with the biggest \\(\rho\_{a}\\) gets selected.
 
 
 ## Quantile Exploration {#quantile-exploration}
 
-Choose the arm with the largest \\(\theta\\) at the highest $&alpha;$-th percentile, pull that arm
+Choose the arm with the largest \\(\theta\\) at the highest \\(\alpha\\) percentile of its beta distribution, pull that arm, update priors
 
 "choose the arm with the highest \\(\theta\\) for the \\(90\\%\\) percentile, then update the distribution"
 

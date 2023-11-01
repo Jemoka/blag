@@ -107,6 +107,8 @@ If we know the state space fully, we can use [policy iteration]({{< relref "KBhp
 
 If none of those things are feasible (i.e. your state space is too big or complex to be discretized (i.e. sampling will cause you to loose the structure of the problem)), you can do some lovely [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) which will keep you in continuous space while iterating on the policy directly. Some nerds lmao like [Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}}) methods if your policy is differentiable.
 
+Now, [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods all require sampling a certain set of [trajectories]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}) and optimizing over them in order to work. How do we know how much sampling to do before we start optimizing? That's an [Exploration and Exploitation]({{< relref "KBhexploration_and_exploitation.md" >}}) question. We can try really hard to collect [trajectories]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}), but then we'd loose out on collecting intermediate reward.
+
 -   [SU-CS238 OCT172023]({{< relref "KBhsu_cs238_oct172023.md" >}})
 -   [SU-CS238 OCT192023]({{< relref "KBhsu_cs238_oct192023.md" >}})
 -   [SU-CS238 OCT242023]({{< relref "KBhsu_cs238_oct242023.md" >}})
