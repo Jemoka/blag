@@ -51,6 +51,12 @@ If we are dealing with [infinite-horizon models]({{< relref "KBhmarkov_decision_
 
 We only care about some Markovian state \\(s\\), and its next possible states \\(s'\\). When these pair happened doesn't matter.
 
+For a stochastic policy, we have:
+
+\begin{equation}
+U(S) = \sum\_{a}^{} \pi(a|s) \qty[R(s,a) + \gamma \sum\_{s'}^{} T(s'|s,a) U(s')]
+\end{equation}
+
 ---
 
 We now can go about solving for what \\(U^{\pi}\\) is:
