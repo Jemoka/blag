@@ -31,7 +31,7 @@ Take the [L-\\(\infty\\)]({{< relref "KBhl_infty.md" >}}) norm of \\(U^{k+1}-U^{
 
 So as long as the [Bellman Residual](#bellman-residual) between your two updates \\(\leq \delta\\), you know that you are at most \\(\epsilon\\) away from the [optimal utility]({{< relref "KBhpolicy.md#optimal-policy" >}}).
 
-You will note that as future discount \\(\gamma \to 1\\), this error bound becomes much larger. Therefore, you have to iterate more to get to the same \\(\epsilon\\).
+**You will note that as future discount \\(\gamma \to 1\\), this error bound becomes much larger. Therefore, you have to iterate more to get to the same \\(\epsilon\\).** You need more iterations when \\(\gamma \to 1\\).
 
 Notably, the loss of some arbitrary [utility]({{< relref "KBhutility_theory.md" >}}) derived from [policy evaluation]({{< relref "KBhpolicy_evaluation.md" >}}) is:
 

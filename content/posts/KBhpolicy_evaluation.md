@@ -44,7 +44,7 @@ This is called the [lookahead equation](#lookahead-equation), which represents h
 The [Bellman Equation](#bellman-expectation-equation) states that "the expected utility of being in a state is the instantaneous reward of being in that state plus the discounted future utility of all possible future state." It is the fundamental result of RL.
 
 \begin{equation}
-U(s) = R(s, \pi(s)) + \gamma \sum\_{s'} T(s' | s, \pi(s)) U (s')
+U(s) = \arg\max\_{a} R(s, a) + \gamma \sum\_{s'} T(s' | s, a) U (s')
 \end{equation}
 
 If we are dealing with [infinite-horizon models]({{< relref "KBhmarkov_decision_process.md#infinite-horizon-models" >}}) (at "convergence" of the [lookahead equation](#lookahead-equation)), we just no longer have a time dependency from the [lookahead equation](#lookahead-equation):
