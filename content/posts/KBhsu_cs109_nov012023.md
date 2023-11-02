@@ -15,5 +15,5 @@ See [Multi-Arm Bandit]({{< relref "KBhexploration_and_exploitation.md" >}})
 
 Strategies:
 
--   [upper confidence bound]({{< relref "KBhdirected_exploration.md#quantile-exploration" >}}): take the action with theh highest confidence bound
+-   [upper confidence bound]({{< relref "KBhdirected_exploration.md#quantile-exploration" >}}): take the action with theh highest n-th confidence bound
 -   [Posterior Sampling]({{< relref "KBhdirected_exploration.md#posterior-sampling" >}}): take a sample from each [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}})s distribution; take the action that has a higher probability of success based on their r
