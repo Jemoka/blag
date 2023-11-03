@@ -19,3 +19,5 @@ We have that:
 That, as long as you normalize a random variable and have enough of it, you get the normal distribution.
 
 Notably, for the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) to hold, the variance has to be finite (that the results vary in a certain finite value \\(\sigma\\). With that \\(\sigma\\) value, we can see above that the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) will eventually converge to the normal. THis is useful for the [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}).
+
+********REMEMBER THAT IF YOU ARE APPROXIMATIGN DISCRETE THINGS YOU NEED [continuity correction]({{< relref "KBhcontinuity_correction.md" >}})!!!********
