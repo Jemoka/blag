@@ -10,7 +10,7 @@ where, \(k\) is the kernel function, a function inversely proportional to how cl
 U_{\theta}(s) = \theta^{T} \beta(s)
 \end{equation}</p><p>We multiply a vector \(\theta_{j}\), the <a href=/posts/kbhutility_theory/>utility</a> of being in each state \(s_{j}\) a basis function, which smears, generated for each \(i\) of known discrete state we have:</p><p>\begin{equation}
 \beta_{i}(s) = \frac{k(s, s_{i})}{\sum_{j}^{} k(s, s_{j})}
-\end{equation}</p><p>where, \(k\) is the <a href=/posts/kbhkernel_smoothing/>kernel function</a>, a function inversely proportional to how close the two states are:</p><p>\begin{equation}
+\end{equation}</p><p>where, \(k\) is the <a href=/posts/kbhkernel_smoothing/>kernel function</a>, a function inversely proportional to how close the two states are:</p><p><strong><strong>k(s,sj)</strong></strong> is a normalization factor and doesn&rsquo;t need to be computed at every call.</p><p>\begin{equation}
 k(s, s&rsquo;) = \max \qty(d(s,s&rsquo;), \epsilon)^{-1}
 \end{equation}</p><p>where \(d\) is a measure of distance. We clip this function at \(\epsilon\) to prevent inverting \(0\).</p><h2 id=gaussian--kbhgaussian-distribution-dot-md--kernel><a href=/posts/kbhgaussian_distribution/>gaussian</a> kernel</h2><p>There is an alternate state smoothing function which is called <a href=#gaussian--kbhgaussian-distribution-dot-md--kernel>gaussian kernel</a>, which allows you to control the degree of smoothing between two states through a parameter \(\sigma\):</p><p>\begin{equation}
 k(s,s&rsquo;) = \exp \qty( - \frac{d(s,s&rsquo;)^{2}}{2 \sigma^{2}})
