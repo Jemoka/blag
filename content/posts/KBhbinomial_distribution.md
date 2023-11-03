@@ -71,3 +71,18 @@ Therefore, we can write that:
 
 -   [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) approximation: \\(n > 20\\), variance large \\((np(1-p)) > 10\\), absolute independence; beware of [continuity correction]({{< relref "KBhcontinuity_correction.md" >}})
 -   [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md" >}}) approximation: \\(n > 20\\), p small \\(p < 0.05\\)
+
+
+### adding [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) {#adding-binomial-distribution--kbhbinomial-distribution-dot-md}
+
+For \\(X\\) and \\(Y\\) independent [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}})s, with **equivalent** probability:
+
+\begin{equation}
+X \sim Bin(a, p), Y \sim Bin(b, p)
+\end{equation}
+
+Then:
+
+\begin{equation}
+X+Y \sim Bin(a+b, p)
+\end{equation}

@@ -53,3 +53,12 @@ and then do algebra.
 {{< figure src="/ox-hugo/2023-10-13_16-17-13_screenshot.png" >}}
 
 And because of this, when you have a large \\(n\\) for your [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}), you can just use a [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md" >}}), where \\(\lambda = np\\).
+
+
+### adding [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md" >}}) {#adding-poisson-distribution--kbhprobability-of-k-in-x-time-dot-md}
+
+For [independent]({{< relref "KBhprobability.md#independence" >}}) \\(A, B\\)
+
+\begin{equation}
+A+B \sim Poi(\lambda\_{A}+ \lambda\_{B})
+\end{equation}

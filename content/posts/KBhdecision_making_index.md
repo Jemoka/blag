@@ -114,6 +114,7 @@ Now, [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods a
 -   [SU-CS238 OCT242023]({{< relref "KBhsu_cs238_oct242023.md" >}})
 -   [SU-CS238 OCT262023]({{< relref "KBhsu_cs238_oct262023.md" >}})
 -   [SU-CS238 OCT312023]({{< relref "KBhsu_cs238_oct212023.md" >}})
+-   [SU-CS238 NOV022023]({{< relref "KBhsu_cs238_nov022023.md" >}})
 
 
 ## Worksheets {#worksheets}

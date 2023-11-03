@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-See also [Roll-out utility](#roll-out-utility) if you don't want to get a [vector]({{< relref "KBhvector.md" >}}) [utility]({{< relref "KBhutility_theory.md" >}}) over all states.
+See also [Roll-out utility](#rollout-utility) if you don't want to get a [vector]({{< relref "KBhvector.md" >}}) [utility]({{< relref "KBhutility_theory.md" >}}) over all states.
 
 
 ## solving for the utility of a policy {#solving-for-the-utility-of-a-policy}
@@ -111,7 +111,7 @@ where, \\(b(s)\\) is the "initial state distribution" of being in a particular s
 Our state space may not be discrete or otherwise small enough to be added up for every case. We therefore can a sampling of [Rollout]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}) [trajectory]({{< relref "KBhrollout_with_lookahead.md#rollout" >}}) to perform [Approximate Policy Evaluation](#approximate-policy-evaluation)
 
 
-### Roll-out utility {#roll-out-utility}
+### Rollout utility {#rollout-utility}
 
 Collecting a utility for all \\(s\\) is real hard. Therefore, instead, we perform a bunch of [Rollout]({{< relref "KBhrollout_with_lookahead.md#rollout" >}})s and then calculate, for each trajectory \\(\tau\\) you ended up with:
 
@@ -135,4 +135,4 @@ Sometimes, we can't even get all trajectories to add them up, so we simply perfo
 U(\pi\_{\theta}) = \frac{1}{m}\sum\_{i=1}^{m} R(\tau^{i})
 \end{equation}
 
-We start each trajectory using a probability-weighted sample of initial states. This is the [Roll-out utility](#roll-out-utility)
+We start each trajectory using a probability-weighted sample of initial states. This is the [Roll-out utility](#rollout-utility)

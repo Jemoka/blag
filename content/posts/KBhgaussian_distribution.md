@@ -89,7 +89,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org5c75450}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org14b038b}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
@@ -116,3 +116,12 @@ no other [random variable]({{< relref "KBhrandom_variables.md" >}}) uses as litt
 #### approximation of [binomial distribution]({{< relref "KBhbinomial_distribution.md" >}}) with [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) {#approximation-of-binomial-distribution--kbhbinomial-distribution-dot-md--with-normal-distribution--kbhnormal-distribution-dot-md}
 
 You can use a [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) to approximate [binomial approximation](#approximation-of-binomial-distribution--kbhbinomial-distribution-dot-md--with-normal-distribution--kbhnormal-distribution-dot-md). However, be aware of a [continuity correction]({{< relref "KBhcontinuity_correction.md" >}})
+
+
+#### adding [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}})s {#adding-gaussian-distribution--kbhgaussian-distribution-dot-md--s}
+
+for [independent]({{< relref "KBhprobability.md#independence" >}}):
+
+\begin{equation}
+X+Y \sim \mathcal{N}(\mu\_{1}+\mu\_{2}, \sigma\_{1}^{2}+\sigma\_{2}^{2})
+\end{equation}
