@@ -18,6 +18,8 @@ We multiply a vector \\(\theta\_{j}\\), the [utility]({{< relref "KBhutility_the
 
 where, \\(k\\) is the [kernel function]({{< relref "KBhkernel_smoothing.md" >}}), a function inversely proportional to how close the two states are:
 
+****k(s,sj)**** is a normalization factor and doesn't need to be computed at every call.
+
 \begin{equation}
 k(s, s') = \max \qty(d(s,s'), \epsilon)^{-1}
 \end{equation}
