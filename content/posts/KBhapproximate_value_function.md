@@ -49,7 +49,7 @@ There are two main specific approaches to achieve this:
 ## global approximation {#global-approximation}
 
 -   linreg a best-fit line of state value vs. [utility]({{< relref "KBhutility_theory.md" >}}) value
--   polynomial fit a best-fit line, whereby \\(U\_{\theta}(s) = \theta^{T}\beta(s)\\), where each \\(\beta\_{j}(s)=s^{j-1}\\).
+    -   polynomial fit a best-fit line, whereby \\(U\_{\theta}(s) = \theta^{T}\beta(s)\\), where each \\(\beta\_{j}(s)=s^{j-1}\\).
 -   a frigin neural network (train a model with parameters \\(\theta\\) which produces the utility calculations for you \\(M\_{\theta}(s) = U\_{\theta}(s)\\))
 
 

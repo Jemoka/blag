@@ -48,7 +48,7 @@ We can now write out the \\(\Delta U\\) with:
 \Delta U = \qty[U(\theta+ \Delta \theta^{1}) - U(\theta), \dots, U(\theta+ \Delta \theta^{m}) - U(\theta)]
 \end{equation}
 
-We have to compute a [Roll-out utility]({{< relref "KBhpolicy_evaluation.md#roll-out-utility" >}}) for each \\(U(\theta + ...)\\).
+We have to compute [Roll-out utility]({{< relref "KBhpolicy_evaluation.md#roll-out-utility" >}}) for each \\(U(\theta + ...)\\)
 
 We now want to fit a function between \\(\Delta \theta\\) to \\(\Delta U\\), because from the definition of the gradient we have:
 
@@ -164,6 +164,12 @@ So based. We now have:
 \nabla\_{\theta} U(\theta) = \mathbb{E}\_{\tau} \qty[\sum\_{k=1}^{d} \nabla\_{\theta} \log \pi\_{\theta}(a^{k}|s^{k}) R(\tau)]
 \end{equation}
 
+where,
+
+\begin{equation}
+R(\tau) = \sum\_{k=1}^{d} r\_{k}\ \gamma^{k-1}
+\end{equation}
+
 "this is very nice" because we do not need to know anything regarding the transition model. This means we don't actually need to know what \\(p(s^{k+1}|s^{k}a^{k})\\) because that term just dropped out of the gradient.
 
 We can simulate a few trajectories; calculate the gradient, and average them to end up with our overall gradient.
@@ -240,12 +246,14 @@ good 'ol fashioned
 \theta \leftarrow \theta + \alpha \nabla U(\theta)
 \end{equation}
 
-where \\(\alpha\\) is learning rate/step factor.
+where \\(\alpha\\) is learning rate/step **factor**. This is not your STEP SIZE. If you want to specify a step size, see [Restricted Step Method](#restricted-step-method).
 
 
-### Restricted Gradient {#restricted-gradient}
+### Restricted Step Method {#restricted-step-method}
 
 [Policy Gradient Ascent](#policy-gradient-ascent) can take very large steps if the gradient is too large.
+
+{{< figure src="/ox-hugo/2023-11-02_16-23-21_screenshot.png" >}}
 
 One by which we can optimize the gradient, ensuring that we don't take steps larger than:
 
@@ -253,7 +261,7 @@ One by which we can optimize the gradient, ensuring that we don't take steps lar
 \frac{1}{2}(\theta' - \theta)^{T} I(\theta' - \theta) \leq \epsilon
 \end{equation}
 
-is through [Restricted Gradient](#restricted-gradient):
+is through [Restricted Gradient](#restricted-step-method):
 
 \begin{equation}
 \theta \leftarrow \theta + \sqrt{2 \epsilon} \frac{\nabla U(\theta)}{|| \nabla U(\theta)||}

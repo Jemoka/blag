@@ -78,7 +78,53 @@ We don't care about this as much:
 but its close to [infinite-horizon models](#infinite-horizon-models) with Gama close to \\(1\\)
 
 
-### solving for an optimal policy {#solving-for-an-optimal-policy}
+### Solving an [MDP]({{< relref "KBhmarkov_decision_process.md" >}}) {#solving-an-mdp--kbhmarkov-decision-process-dot-md}
 
--   [policy iteration]({{< relref "KBhpolicy_iteration.md" >}})
--   [value iteration]({{< relref "KBhvalue_iteration.md" >}})
+
+#### You are handed or can predict \\(R(s,a)\\), and know all transitions {#you-are-handed-or-can-predict-r--s-a--and-know-all-transitions}
+
+<!--list-separator-->
+
+-  Small, Discrete State Space
+
+    Get an exact solution for \\(U^{\*}(s)\\) (and hence \\(\pi^{ \*}(a, s)\\)) for the problem via...
+
+    -   [policy iteration]({{< relref "KBhpolicy_iteration.md" >}})
+    -   [value iteration]({{< relref "KBhvalue_iteration.md" >}})
+
+<!--list-separator-->
+
+-  Large, Continuous State Space
+
+    <!--list-separator-->
+
+    -  Parameterize Policy
+
+        Optimize \\(\pi\_{\theta}\\) to maximize \\(U(\pi\_{\theta})\\) using [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods!
+
+        ****Gradient Free****: lower dimension [policy]({{< relref "KBhpolicy.md" >}}) space
+
+        -   [Local Policy Search]({{< relref "KBhlocal_policy_search.md" >}}) (aka [Hooke-Jeeves Policy Search]({{< relref "KBhlocal_policy_search.md" >}}))
+        -   [Genetic Policy Search]({{< relref "KBhgenetic_policy_search.md" >}})
+        -   [Cross Entropy Method]({{< relref "KBhcross_entropy_method.md" >}})
+
+        ****Gradient Based Method****: higher dimension [policy]({{< relref "KBhpolicy.md" >}}) space
+
+        [Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}})
+
+    <!--list-separator-->
+
+    -  Parameterize Value Function
+
+        Optimize \\(U\_{\theta}(S)\\) via [global approximation]({{< relref "KBhapproximate_value_function.md#global-approximation" >}}) or [local approximation]({{< relref "KBhapproximate_value_function.md#local-approximation" >}}) methods, then use a [greedy policy]({{< relref "KBhaction_value_function.md#value-function-policy" >}}) on that nice and optimized [value function]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}).
+
+
+#### You can only reason about your immediate surroundings/local reachable states {#you-can-only-reason-about-your-immediate-surroundings-local-reachable-states}
+
+[online planning]({{< relref "KBhonline_planning.md" >}})
+
+or... "you don't know the model whatsoever"
+
+[reinforcement learning]({{< relref "KBhreinforcement_learning.md" >}})
+
+during these cases, you never argmax over all actions; hence, its important to remember the methods to preserve [Exploration and Exploitation]({{< relref "KBhexploration_and_exploitation.md" >}}).

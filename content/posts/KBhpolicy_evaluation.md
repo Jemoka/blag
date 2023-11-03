@@ -39,6 +39,13 @@ we don't know what the next state will be; so for each possible next state, we m
 This is called the [lookahead equation](#lookahead-equation), which represents how much [utility]({{< relref "KBhutility_theory.md" >}}) any future state can be be if we took action at point \\(k\\).
 
 
+#### lookahead with sampling {#lookahead-with-sampling}
+
+what if we only want to get \\(m\\) of the next states, instead of all next states?
+
+{{< figure src="/ox-hugo/2023-11-02_16-45-23_screenshot.png" >}}
+
+
 ### Bellman Expectation Equation {#bellman-expectation-equation}
 
 The [Bellman Equation](#bellman-expectation-equation) states that "the expected utility of being in a state is the instantaneous reward of being in that state plus the discounted future utility of all possible future state." It is the fundamental result of RL.
