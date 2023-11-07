@@ -13,10 +13,10 @@ Let there be \\(n\\) [random variable]({{< relref "KBhrandom_variables.md" >}})s
 We have that:
 
 \begin{equation}
-    \lim\_{N\to \infty} \sum\_{i=1}^{N} X\_{n} \sim N(n\mu, n \sigma^{2})
+    \sum\_{i=1}^{N} X\_{n} \sim N(n\mu, n \sigma^{2}), \text{as}\ n \to \infty
 \end{equation}
 
-That, as long as you normalize a random variable and have enough of it, you get the normal distribution.
+That, as long as you normalize a random variable and have enough of it, you get closer and closer to the normal distribution.
 
 Notably, for the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) to hold, the variance has to be finite (that the results vary in a certain finite value \\(\sigma\\). With that \\(\sigma\\) value, we can see above that the [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}) will eventually converge to the normal. THis is useful for the [Random Walk Hypothesis]({{< relref "KBhrandom_walk.md" >}}).
 

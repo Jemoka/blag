@@ -62,7 +62,7 @@ And its expectations:
 ### additional information {#additional-information}
 
 
-#### linear transformers on Gaussian is a Gaussian {#linear-transformers-on-gaussian-is-a-gaussian}
+#### linear transformers on Gaussian {#linear-transformers-on-gaussian}
 
 For some:
 
@@ -89,7 +89,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org14b038b}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org32a5400}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
