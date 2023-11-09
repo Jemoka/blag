@@ -1,0 +1,47 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>belief</title>
+<meta name=description content="belief is a probability distribution over your states.
+\begin{equation} b \leftarrow update(b,a,o) \end{equation}
+we want to create a Baysian Network to represent our situation. For instance, say for a speech recognition task:
+if we have state certainty, the states &ldquo;lonely, Starbucks, lovers&rdquo; converges to:
+This is a HMM! The only difference between something like this and a normal Markov Decision Process is that each state hangs an observation:
+which for us is the sound waves."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>belief</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#observation-model>observation model</a><ul><li><a href=#error-model>error model</a></li></ul></li><li><a href=#discrete-state-filter>discrete state filter</a></li><li><a href=#kalman-filter>Kalman Filter</a><ul><li><a href=#predict>predict</a></li><li><a href=#update>update</a></li></ul></li></ul></nav></aside><main><article><div><p><a href=/posts/kbhbelief/>belief</a> is a <a href=/posts/kbhprobability_distributions/>probability distribution</a> over your states.</p><p>\begin{equation}
+b \leftarrow update(b,a,o)
+\end{equation}</p><p>we want to create a <a href=/posts/kbhbaysian_network/>Baysian Network</a> to represent our situation. For instance, say for a speech recognition task:</p><p>if we have state certainty, the states &ldquo;lonely, Starbucks, lovers&rdquo; converges to:</p><figure><img src=/ox-hugo/2023-11-09_09-50-38_screenshot.png></figure><p>This is a <a href=/posts/kbhhidden_markov_model/>HMM</a>! The only difference between something like this and a normal <a href=/posts/kbhmarkov_decision_process/>Markov Decision Process</a> is that each state hangs an observation:</p><figure><img src=/ox-hugo/2023-11-09_09-52-58_screenshot.png></figure><p>which for us is the sound waves. This means that we describe a <a href=/posts/kbhpartially_observable_markov_decision_process/>POMDP</a> with three expressions:</p><ul><li>\(T(s&rsquo;|s,a)\)</li><li>\(R(s,a)\)</li></ul><p>this is just one more expression than an <a href=/posts/kbhmarkov_decision_process/>MDP</a>; we take need the third expression because we may not know \(s\) directly, because we only get to observe \(O\) and not \(s\).</p><h2 id=observation-model>observation model</h2><p>\(O(o|a,s&rsquo;)\) is a model for what observations we may get if we are in a particular state/action.</p><h3 id=error-model>error model</h3><p>there is some model which is a probability distribution over the state given observation:</p><figure><img src=/ox-hugo/2023-11-09_10-01-10_screenshot.png></figure><p>let orange \(d\) be state, the green would be the <a href=#error-model>error model</a></p><h2 id=discrete-state-filter>discrete state filter</h2><p>\begin{equation}
+b&rsquo;(s&rsquo;) = P(s&rsquo;|b,a,o)
+\end{equation}</p><p>\(b&rsquo;\) is what state we think we are in next, and its a probability distribution over all states, calculated given from \(b,a,o\) our current belief about our state, our action, and our observation.</p><p>We can perform this belief update by performing <a href=/posts/kbhbayes_theorem/>Bayes Theorem</a> over \(o\):</p><p>\begin{align}
+b&rsquo;(s&rsquo;) &= P(s&rsquo;|b,a,o) \\
+&\propto P(o|b,a,s&rsquo;) P(s&rsquo; | b,a)
+\end{align}</p><p>Now, consider</p><figure><img src=/ox-hugo/2023-11-09_09-52-58_screenshot.png></figure><p>\(b\) is a representation of \(s\) (&ldquo;belief is a representation of what previous state you are in.&rdquo;) However, you will note that \(s\) is <a href=/posts/kbhbaysian_network/#conditional-independence>conditionally independent</a> to \(o\) through <a href=/posts/kbhbaysian_network/#checking-for-conditional-independence>d-seperation</a> as there is a chain \(s \to s&rsquo; \to o\). So:</p><p>\begin{align}
+b&rsquo;(s&rsquo;) &\propto P(o|b,a,s&rsquo;) P(s&rsquo; | b,a) \\
+&= P(o|a,s&rsquo;) P(s&rsquo; | b,a)
+\end{align}</p><p>This first term is by definition the <a href=#observation-model>observation model</a>, so we have:</p><p>\begin{align}
+b&rsquo;(s&rsquo;) &= P(o|a,s&rsquo;) P(s&rsquo; | b,a) \\
+&= O(o|a,s&rsquo;)P(s&rsquo; | b,a)
+\end{align}</p><p>We now invoke the <a href=/posts/kbhprobability/#law-of-total-probability>law of total probability</a> over the second term, over all states:</p><p>\begin{align}
+b&rsquo;(s&rsquo;) &= O(o|a,s&rsquo;)P(s&rsquo; | b,a) \\
+&= O(o|a,s&rsquo;) \sum_{s}^{} P(s&rsquo;|b,a,s)P(s|b,a)
+\end{align}</p><p>If we know \(s\) and \(a\) in the \(P(s&rsquo;|b,a,s)\) terms, we can drop \(b\) because if we already know \(a,s\) knowing what probability we are in \(s\) (i.e. \(b(s)\)) is lame. Furthermore, \(P(s|b,a)=b(s)\) because the action we take is irrelavent to what CURRENT state we are in, if we already are given a distribution about what state we are in through \(b\).</p><p>\begin{align}
+b&rsquo;(s&rsquo;) &= O(o|a,s&rsquo;) \sum_{s}^{} P(s&rsquo;|b,a,s)P(s|b,a) \\
+&= O(o|a,s&rsquo;) \sum_{s}^{} T(s&rsquo;|s,a)b(s)
+\end{align}</p><h2 id=kalman-filter>Kalman Filter</h2><p><a href=#kalman-filter>Kalman Filter</a> is <a href=#discrete-state-filter>discrete state filter</a> but continuous</p><p>\begin{equation}
+b&rsquo;(s) \propto O(o|a,s&rsquo;) \int_{s} T(s&rsquo;|s,a) b(s) ds
+\end{equation}</p><p>where we model our transition probabilties, observations, and initial belief with a <a href=/posts/kbhgaussian_distribution/>gaussian</a>:</p><p>\begin{equation}
+T(s&rsquo;|s,a) = \mathcal{N}(s&rsquo;|T_{s} s + T_{a} a, \Sigma_{s})
+\end{equation}</p><p>\begin{equation}
+O(o|s&rsquo;) = \mathcal{N}(o|O_{s}s&rsquo;, \sigma_{o})
+\end{equation}</p><p>\begin{equation}
+b(s) = \mathcal{N}(s | \mu_{b}, \sigma_{b})
+\end{equation}</p><p>Two main steps:</p><h3 id=predict>predict</h3><p>\begin{equation}
+\mu_{b} \leftarrow T_{s} \mu_{b} + T_{a}a
+\end{equation}</p><p>\begin{equation}
+\Sigma_{b} \leftarrow T_{s} \Sigma_{b} T_{s}^{T} + \Sigma_{s}
+\end{equation}</p><p>&ldquo;given our current <a href=/posts/kbhbelief/>belief</a>, we will propagate our uncertainty into the next step&rdquo;</p><h3 id=update>update</h3><p>\begin{equation}
+\mu_{b} \leftarrow \mu_{p}+K(o-O_{s}\mu_{p})
+\end{equation}</p><p>\begin{equation}
+\Sigma_{b} \leftarrow (I-KO_{s})\Sigma_{p}
+\end{equation}</p><p>where \(K\) is <a href=#kalmain-gain>Kalmain gain</a></p><h4 id=kalmain-gain>Kalmain gain</h4><p>\begin{equation}
+K \leftarrow \Sigma_{p} O_{s}^{T} (O_{s}\Sigma_{p}O_{s}^{T}+\Sigma_{O})^{-1}}
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
