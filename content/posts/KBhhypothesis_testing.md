@@ -39,6 +39,8 @@ To figure out the above probability, you could either simulate the occurrence an
 
 To use [p-value](#p-value) as a [hypothesis test]({{< relref "KBhhypothesis_testing.md" >}}), the sample has to meet the [conditions for inference]({{< relref "KBhz_test.md#conditions-for-inference--z-test" >}}).
 
+See also [p-value from bootstrap]({{< relref "KBhboostrap.md#p-value-from-bootstrap" >}})
+
 
 ## Type I Error {#type-i-error}
 

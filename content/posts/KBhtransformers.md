@@ -36,7 +36,6 @@ no. decoding in parallel sucks apparently.
 
 1.  the ordering is hard: we don't know how the outputs should be ordered; generating all at once assumes the output are conditionally independent
 2.  each ordering selection narrows the posterior space and it makes generation easier
-3.
 
 But we can still read in parallel unlike LSTMs which is BASED.
 

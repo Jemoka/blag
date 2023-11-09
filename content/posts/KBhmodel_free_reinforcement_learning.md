@@ -80,3 +80,26 @@ this works in theory because over time, good [Exploration and Exploitation]({{< 
 \begin{equation}
 a' \rightarrow \arg\max\_{a'} Q(s',a')
 \end{equation}
+
+
+## Eligibility Traces {#eligibility-traces}
+
+[Eligibility Traces](#eligibility-traces) is a change to [SARSA](#sarsa) which uses the number of visits as an additional constraint that allows updates to propagate each reward backwards given the list of states which caused that reward to be distributed.
+
+Meaning, let \\(\lambda\\) be some decay parameter, we have:
+
+\begin{equation}
+\delta = r + \gamma Q(s',a') - Q(s,a)
+\end{equation}
+
+and, we can write:
+
+\begin{equation}
+Q(s,a) \leftarrow Q(s,a) + \lambda \delta N(s,a)
+\end{equation}
+
+where by the visit counts are discounted such that:
+
+\begin{equation}
+N(s,a) \leftarrow \gamma \lambda N(s,a)
+\end{equation}
