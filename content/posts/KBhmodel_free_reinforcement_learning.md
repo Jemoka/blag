@@ -103,3 +103,71 @@ where by the visit counts are discounted such that:
 \begin{equation}
 N(s,a) \leftarrow \gamma \lambda N(s,a)
 \end{equation}
+
+
+## Generalized [Q-Learning](#q-learning) with Gradient [action-value]({{< relref "KBhaction_value_function.md" >}}) {#generalized-q-learning--orgf8282d1--with-gradient-action-value--kbhaction-value-function-dot-md}
+
+Consider [Value Function Approximation]({{< relref "KBhapproximate_value_function.md" >}}). We were trying to fit a set of \\(\theta\\) at that time to find \\(U\_{\theta}\\) that matches \\(U^{\*}\\).
+
+We now want to compute some \\(Q\_{\theta}\\) in the same flavour:
+
+\begin{equation}
+Q\_{\theta}(s,a) \sim Q^{\*}(s,a)
+\end{equation}
+
+We can measure the difference between these two values like so:
+
+\begin{equation}
+\ell(\theta) = \frac{1}{2}\mathbb{E}\_{(s,a)\sim \pi^{\*}}\qty[(Q^{\*}(s,a) - Q\_{\theta}(s,a))^{2}]
+\end{equation}
+
+We want to write this expected value distributed over \\(s,a\\) of the **optimal** policy because we want to calculate more samples over those states that the optimal policy ends up at most.
+
+To optimize \\(Q\_{\theta}\\), then, you betcha know what's happenin:
+
+\begin{align}
+\nabla \ell &= \frac{1}{2} \nabla \mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a))^{2}]  \\\\
+&= \mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) (-1)\nabla Q\_{\theta}(s,a)]   \\\\
+&= -\mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) \nabla Q\_{\theta}(s,a)]
+\end{align}
+
+by a healthy dose of the chain rule.
+
+Now, to minimize this loss, we go in the direction opposite the gradient. The negatives then cancel out to give us:
+
+\begin{equation}
+\theta \leftarrow \theta + \alpha \qty[\mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) \nabla Q\_{\theta}(s,a)] ]
+\end{equation}
+
+where \\(\alpha \in (0,1)\\).
+
+Similar to the [SARSA](#sarsa) assumption, good [Exploration and Exploitation]({{< relref "KBhexploration_and_exploitation.md" >}}) assumes that:
+
+\begin{equation}
+Q \to Q^{\*}
+\end{equation}
+
+so we can drop our expectation with:
+
+\begin{equation}
+\theta \leftarrow \theta + \alpha \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) \nabla Q\_{\theta}(s,a)]
+\end{equation}
+
+Now, we can make one more assumption, the assumption from [Q-Learning](#q-learning):
+
+\begin{equation}
+Q^{\*}(s,a) \approx r\_{s} + \gamma \max\_{a'} Q\_{\theta}(s',a')
+\end{equation}
+
+that taking the best actions with the \\(Q\\) you have will slowly approximate optimal \\(Q\\).
+
+\begin{equation}
+\theta \leftarrow \theta + \alpha \qty[\qty((r\_{s} + \gamma \max\_{a'} Q\_{\theta}(s',a'))-Q\_{\theta}(s,a)) \nabla Q\_{\theta}(s,a)]
+\end{equation}
+
+you will note! this is actually just [Q-Learning](#q-learning) multiplying with a gradient.
+
+
+## [Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}}) {#policy-gradient--kbhpolicy-gradient-dot-md}
+
+see also [Policy Gradient]({{< relref "KBhpolicy_gradient.md" >}})

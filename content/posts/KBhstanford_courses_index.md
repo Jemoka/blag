@@ -32,6 +32,7 @@ Here are a list of random indicies which may end up being helpful!
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-10-26 Thu&gt;</span></span> | AI Intepretability for Bio     | Gasper Begus  | [AI Intepretability]({{< relref "KBhai_intepretability.md" >}})                       |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-02 Thu&gt;</span></span> | PT Transformers on Long Seqs   | Mike Lewis    | [Pretraining Long Transformers]({{< relref "KBhpretraining_long_transformers.md" >}}) |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-07 Tue&gt;</span></span> | Transformers!                  | A. Vaswani    | [Transformers]({{< relref "KBhtransformers.md" >}})                                   |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-09 Thu&gt;</span></span> | Towards Interactive Agents     | Jessy Lin     | [Interactive Agent]({{< relref "KBhinteractive_agent.md" >}})                         |
 
 
 ## Contacts {#contacts}

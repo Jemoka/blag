@@ -117,6 +117,9 @@ Now, [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods a
 -   [SU-CS238 NOV022023]({{< relref "KBhsu_cs238_nov022023.md" >}})
 
 
+### [POMDP]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}) bomp bomp bomp {#pomdp--kbhpartially-observable-markov-decision-process-dot-md--bomp-bomp-bomp}
+
+
 ## Worksheets {#worksheets}
 
 -   [SU-CS238 Q0Q3]({{< relref "KBhsu_cs238_q0q3.md" >}})
