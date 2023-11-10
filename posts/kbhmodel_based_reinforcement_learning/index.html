@@ -31,10 +31,10 @@ R(s,a) = \begin{cases}
 r_{\max}, if N(s,a) &lt; m,\\
 \rho\frac{s,a}{N(s,a)}, otherwise
 \end{cases}
-\end{equation}</p><p>you get a large reward \(r_{\max }\) if you haven&rsquo;t been to \((s,a)\).</p><p>\begin{equation}
+\end{equation}</p><p>you get a large reward \(r_{\max }\) if you haven&rsquo;t been to \((s,a)\), otherwise the reward you get gets discounted by the number of times you visited.</p><p>\begin{equation}
 T(s&rsquo;|s,a) = \begin{cases}
-1, if N(s,a) &lt; m and s&rsquo; = s \\
-0, if N(s,a) &lt; m and s&rsquo; \neq s \\
+1, if N(s,a) &lt; m\ and\ s&rsquo; = s \\
+0, if N(s,a) &lt; m\ and\ s&rsquo; \neq s \\
 \frac{N(s,a,s&rsquo;)}{N(s,a)}, otherwise
 \end{cases}
 \end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
