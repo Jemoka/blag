@@ -15,6 +15,7 @@ draft = false
 -   [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}})
 -   [Zero-Sum Game]({{< relref "KBhzero_sum_game.md" >}})
 -   [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}})
+-   [bootstrap]({{< relref "KBhboostrap.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

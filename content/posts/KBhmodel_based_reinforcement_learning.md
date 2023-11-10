@@ -113,12 +113,12 @@ r\_{\max}, if N(s,a) < m,\\\\
 \end{cases}
 \end{equation}
 
-you get a large reward \\(r\_{\max }\\) if you haven't been to \\((s,a)\\).
+you get a large reward \\(r\_{\max }\\) if you haven't been to \\((s,a)\\), otherwise the reward you get gets discounted by the number of times you visited.
 
 \begin{equation}
 T(s'|s,a) = \begin{cases}
-1, if N(s,a) < m and s' = s \\\\
-0, if N(s,a) < m and s' \neq s \\\\
+1, if N(s,a) < m\ and\ s' = s \\\\
+0, if N(s,a) < m\ and\ s' \neq s \\\\
 \frac{N(s,a,s')}{N(s,a)}, otherwise
 \end{cases}
 \end{equation}

@@ -4,8 +4,10 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+base [epsilon-greedy]({{< relref "KBhundirected_exploration.md" >}}):
+
 1.  choose a random action with probability \\(\epsilon\\)
-2.  otherwise, we choose the action with the best expectation \\(\arg\max\_{j} p\_{j}\\)
+2.  otherwise, we choose the action with the best expectation \\(\arg\max\_{a} Q(s,a)\\)
 
 
 ## epsilon-greedy exploration with decay {#epsilon-greedy-exploration-with-decay}
