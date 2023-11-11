@@ -71,45 +71,44 @@ b'(s') &\propto P(o|b,a,s') P(s' | b,a)  \\\\
 This first term is by definition the [observation model](#observation-model), so we have:
 
 \begin{align}
-b'(s') &= P(o|a,s') P(s' | b,a)   \\\\
+b'(s') &\propto P(o|a,s') P(s' | b,a)   \\\\
 &= O(o|a,s')P(s' | b,a)
 \end{align}
 
 We now invoke the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) over the second term, over all states:
 
 \begin{align}
-b'(s') &= O(o|a,s')P(s' | b,a)  \\\\
+b'(s') &\propto O(o|a,s')P(s' | b,a)  \\\\
 &= O(o|a,s') \sum\_{s}^{} P(s'|b,a,s)P(s|b,a)
 \end{align}
 
 If we know \\(s\\) and \\(a\\) in the \\(P(s'|b,a,s)\\) terms, we can drop \\(b\\) because if we already know \\(a,s\\) knowing what probability we are in \\(s\\) (i.e. \\(b(s)\\)) is lame. Furthermore, \\(P(s|b,a)=b(s)\\) because the action we take is irrelavent to what CURRENT state we are in, if we already are given a distribution about what state we are in through \\(b\\).
 
 \begin{align}
-b'(s') &= O(o|a,s') \sum\_{s}^{} P(s'|b,a,s)P(s|b,a)  \\\\
-&= O(o|a,s') \sum\_{s}^{} T(s'|s,a)b(s)
+b'(s') &\propto O(o|a,s') \sum\_{s}^{} T(s'|s,a)b(s)
 \end{align}
 
 
 ## Kalman Filter {#kalman-filter}
 
-[Kalman Filter](#kalman-filter) is [discrete state filter](#discrete-state-filter) but continuous
+[Kalman Filter](#kalman-filter) is [discrete state filter](#discrete-state-filter) but continuous. Consider the final, belief-updating result of the [discrete state filter](#discrete-state-filter) above, and port it to be continous:
 
 \begin{equation}
-b'(s) \propto O(o|a,s') \int\_{s} T(s'|s,a) b(s) ds
+b'(s') \propto O(o|a,s') \int\_{s} T(s'|s,a) b(s) ds
 \end{equation}
 
-where we model our transition probabilties, observations, and initial belief with a [gaussian]({{< relref "KBhgaussian_distribution.md" >}}):
+if we modeled our transition probabilties, observations, and initial belief with a [gaussian]({{< relref "KBhgaussian_distribution.md" >}}) whereby each parameter is a [gaussian model]({{< relref "KBhgaussian_distribution.md" >}}) parameterized upon a few matricies.
 
 \begin{equation}
 T(s'|s,a) = \mathcal{N}(s'|T\_{s} s + T\_{a} a, \Sigma\_{s})
 \end{equation}
 
 \begin{equation}
-O(o|s') = \mathcal{N}(o|O\_{s}s', \sigma\_{o})
+O(o|s') = \mathcal{N}(o|O\_{s}s', \Sigma\_{o})
 \end{equation}
 
 \begin{equation}
-b(s) = \mathcal{N}(s | \mu\_{b}, \sigma\_{b})
+b(s) = \mathcal{N}(s | \mu\_{b}, \Sigma\_{b})
 \end{equation}
 
 Two main steps:
@@ -118,14 +117,14 @@ Two main steps:
 ### predict {#predict}
 
 \begin{equation}
-\mu\_{b} \leftarrow T\_{s} \mu\_{b} + T\_{a}a
+\mu\_{p} \leftarrow T\_{s} \mu\_{b} + T\_{a}a
 \end{equation}
 
 \begin{equation}
-\Sigma\_{b} \leftarrow T\_{s} \Sigma\_{b} T\_{s}^{T} + \Sigma\_{s}
+\Sigma\_{p} \leftarrow T\_{s} \Sigma\_{b} T\_{s}^{T} + \Sigma\_{s}
 \end{equation}
 
-"given our current [belief]({{< relref "KBhbelief.md" >}}), we will propagate our uncertainty into the next step"
+given our current belief \\(b\\) and its parameters, and our current situation \\(s,a\\), we want to make a prediction about where we **should** be next. We should be somewhere on: \\(b'\_{p} = \mathcal{N}(\mu\_{p}, \Sigma\_{p})\\).
 
 
 ### update {#update}
@@ -139,6 +138,8 @@ Two main steps:
 \end{equation}
 
 where \\(K\\) is [Kalmain gain](#kalmain-gain)
+
+We are now going to take an observation \\(o\\), and update our belief about where we should be now given our new observation.
 
 
 #### Kalmain gain {#kalmain-gain}

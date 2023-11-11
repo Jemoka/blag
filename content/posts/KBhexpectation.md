@@ -18,6 +18,8 @@ The [expectation]({{< relref "KBhexpectation.md" >}}) is the average of the coun
 
 ## properties of [expectation]({{< relref "KBhexpectation.md" >}}) {#properties-of-expectation--kbhexpectation-dot-md}
 
+these holds **REGARDLESS** of whether or not the variables you are doing is [independent]({{< relref "KBhprobability.md#independence" >}}), [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}}), etc.
+
 
 ### Linearity in the first slot {#linearity-in-the-first-slot}
 
@@ -42,3 +44,21 @@ E[X+Y] = E[X]+E[Y]
 \end{equation}
 
 whereby, if \\(g\\) is a normal function, you can just add up all the possible output. This property can be used to show the firts results.
+
+
+## conditional expectation {#conditional-expectation}
+
+We can perform [expectation]({{< relref "KBhexpectation.md" >}}) via [conditional probability]({{< relref "KBhprobability.md#conditional-probability" >}}).
+
+\begin{equation}
+E[X|Y=y] = \sum\_{x}^{} x \cdot p(X=x|Y=y)
+\end{equation}
+
+
+## law of total expectation {#law-of-total-expectation}
+
+\begin{equation}
+\mathbb{E}[X] = \sum\_{y}^{}\mathbb{E}[X|Y=y] P(Y=y)
+\end{equation}
+
+what is the "background variable"? the \\(y\\) value above.

@@ -34,13 +34,21 @@ core [probability]({{< relref "KBhprobability.md" >}}), [axiom of probability]({
 
 ## Unit 3 {#unit-3}
 
-[inference]({{< relref "KBhinference.md" >}}), [General Inference]({{< relref "KBhgeneral_inference.md" >}}), [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}})
+[inference]({{< relref "KBhinference.md" >}}), [General Inference]({{< relref "KBhgeneral_inference.md" >}})
 
 -   [SU-CS109 OCT202023]({{< relref "KBhsu_cs109_oct202023.md" >}})
 -   [SU-CS109 OCT232023]({{< relref "KBhsu_cs109_oct232023.md" >}})
 -   [SU-CS109 OCT252023]({{< relref "KBhsu_cs109_oct252023.md" >}})
 -   [SU-CS109 OCT272023]({{< relref "KBhsu_cs109_oct272023.md" >}})
+
+
+## Unit 4 {#unit-4}
+
+[Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}}), [central limit theorem]({{< relref "KBhcentral_limit_theorem.md" >}}), [bootstrap]({{< relref "KBhboostrap.md" >}})ping
+
 -   [SU-CS109 NOV012023]({{< relref "KBhsu_cs109_nov012023.md" >}})
+-   [SU-CS109 NOV032023]({{< relref "KBhsu_cs109_nov032023.md" >}})
+-   [SU-CS109 NOV102023]({{< relref "KBhsu_cs109_nov102023.md" >}})
 
 
 ## Notes {#notes}

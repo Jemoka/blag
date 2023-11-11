@@ -37,3 +37,8 @@ p,\ if\ k=1\\\\
 
 -   **[expected value]({{< relref "KBhexpectation.md" >}})**: \\(p\\)
 -   **[variance]({{< relref "KBhvariance.md" >}})**: \\(p(1-p)\\)
+
+
+### [Bernoulli]({{< relref "KBhbernoulli_random_variable.md" >}}) as indicator {#bernoulli--kbhbernoulli-random-variable-dot-md--as-indicator}
+
+If there's a series of event whose probability you are given, you can use a [Bernoulli]({{< relref "KBhbernoulli_random_variable.md" >}}) to model each one and add/subtract

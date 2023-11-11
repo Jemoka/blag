@@ -105,7 +105,7 @@ N(s,a) \leftarrow \gamma \lambda N(s,a)
 \end{equation}
 
 
-## Generalized [Q-Learning](#q-learning) with Gradient [action-value]({{< relref "KBhaction_value_function.md" >}}) {#generalized-q-learning--orgf8282d1--with-gradient-action-value--kbhaction-value-function-dot-md}
+## Generalized [Q-Learning](#q-learning) with Gradient [action-value]({{< relref "KBhaction_value_function.md" >}}) {#generalized-q-learning--org776f6c0--with-gradient-action-value--kbhaction-value-function-dot-md}
 
 Consider [Value Function Approximation]({{< relref "KBhapproximate_value_function.md" >}}). We were trying to fit a set of \\(\theta\\) at that time to find \\(U\_{\theta}\\) that matches \\(U^{\*}\\).
 
@@ -126,7 +126,7 @@ We want to write this expected value distributed over \\(s,a\\) of the **optimal
 To optimize \\(Q\_{\theta}\\), then, you betcha know what's happenin:
 
 \begin{align}
-\nabla \ell &= \frac{1}{2} \nabla \mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a))^{2}]  \\\\
+\nabla \ell &= \nabla \frac{1}{2} \nabla \mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a))^{2}]  \\\\
 &= \mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) (-1)\nabla Q\_{\theta}(s,a)]   \\\\
 &= -\mathbb{E}\_{(s,a) \sim \pi^{\*}} \qty[(Q^{\*}(s,a)-Q\_{\theta}(s,a)) \nabla Q\_{\theta}(s,a)]
 \end{align}
