@@ -24,6 +24,8 @@ draft = false
 
 ## Important Results / Claims {#important-results-claims}
 
+-   [conditional plan evaluation]({{< relref "KBhconditional_plan.md#conditional-plan--kbhconditional-plan-dot-md--evaluation" >}})
+
 
 ## Questions {#questions}
 
