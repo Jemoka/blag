@@ -20,3 +20,28 @@ draft = false
 -   [privacy]({{< relref "KBhprivacy.md" >}}) as a display of trust: privacy enables trusting relationships
     -   "fiduciary": proxy between you and a company
     -   "should anyone who has access to personal info have a fiduciary responsibility?"
+
+---
+
+
+## loss of privacy {#loss-of-privacy}
+
+
+### aggregation {#aggregation}
+
+Through the loss of privacy, information can be piecemeal built up to understand somebody's profile.
+
+
+### exclusion {#exclusion}
+
+Not knowing or understanding or control how our information being used.
+
+
+### secondary use {#secondary-use}
+
+Using information for purposes not intended without permission.
+
+
+## trust {#trust}
+
+[trust](#trust) exposes people to the risk of being betrayed/let down. Differential privacy is used to anonomyze information.

@@ -6,27 +6,58 @@ draft = false
 
 "We find the [parameter]({{< relref "KBhparameter.md" >}}) that maximizes the likelihood."
 
+1.  for each \\(X\_{j}\\), sum
+    1.  what's the [log-likelihood](#log-likelihood) of one \\(X\_{i}\\)
+2.  take derivative w.r.t. \\(\theta\\) and set to \\(0\\)
+3.  solve for \\(\theta\\)
+
+(this maximizes the [log-likelihood](#log-likelihood)!)
+
+If your \\(\theta\\) is a vector of more than \\(1\\) thing, take the gradient (i.e. partial derivative against each of your variables) of the thing and solve the place where the gradient is identically \\(0\\) (each slot is \\(0\\)). That is, we want:
+
+\begin{equation}
+\mqty[\pdv{LL(\theta)}{\theta\_{1}} \\\ \pdv{LL(\theta)}{\theta\_{2}}  \\\ \pdv{LL(\theta)}{\theta\_{3}} \\\ \dots] = \mqty[0 \\\ 0 \\\0]
+\end{equation}
+
+-
+
+---
+
 We desire \\(\theta\\) parameter from some data \\(D\\). To do this, we simply optimize:
 
 \begin{equation}
 \hat{\theta} = \arg\max\_{\theta}P(D|\theta)
 \end{equation}
 
-that is, we desire some \\(\theta\\) that maximize the [probability]({{< relref "KBhprobability.md" >}}) of what's observed. Where:
+, where:
 
 \begin{equation}
 P(D|\theta) = \prod\_{i} P(o\_{i}| \theta)
 \end{equation}
 
-for each \\(o\_{i} \in D\\). This only works, of course, if each \\(o\_{i} \in D\\) is [independent]({{< relref "KBhprobability.md#independence" >}}) from each other, which we often assume so by calling the samples [independently and identically distributed]({{< relref "KBhindependently_and_identically_distributed.md" >}}).
+for each \\(o\_{i} \in D\\).  and \\(P\\) is [PMF]({{< relref "KBhprobability_mass_function.md" >}}) or [PDF]({{< relref "KBhprobability_distributions.md#probability-density-function" >}}) given what you are working with.
 
-The summation is a little unwieldy, so we take the logs and apply log laws to turn the multiplication into a summation:
+That is, we want the parameter \\(\theta\\) which maximizes the likelyhood of the data. This only works, of course, if each \\(o\_{i} \in D\\) is [independent]({{< relref "KBhprobability.md#independence" >}}) from each other, which we can assume so by calling the samples from data [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}}) (because they are independent draws from the underlying distribution.)
+
+
+## log-likelihood {#log-likelihood}
+
+The summation above is a little unwieldy, so we take the logs and apply log laws to turn the multiplication into a summation:
 
 \begin{equation}
 \hat{\theta} = \arg\max\_{\theta} \sum\_{i} \log P(o\_{i}|\theta)
 \end{equation}
 
 "add the log probabilities of each of the outcomes you observed happening according to your unoptimized theta, and maximize it"
+
+
+### argmax of log {#argmax-of-log}
+
+This holds because [log]({{< relref "KBhlog_laws.md" >}}) is monotonic ("any larger input to a log will lead to a larger value"):
+
+\begin{equation}
+\arg\max\_{x} f(x) = \arg\max\_{x} \log f(x)
+\end{equation}
 
 
 ## Example {#example}

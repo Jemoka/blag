@@ -29,6 +29,16 @@ p,\ if\ k=1\\\\
 \end{cases}
 \end{equation}
 
+This is sadly not [Differentiable]({{< relref "KBhuniqueness_and_existance.md#differentiable" >}}), which is sad for [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}). Therefore, we write:
+
+\begin{equation}
+P(X=k) = p^{k} (1-p)^{1-k}
+\end{equation}
+
+Which emulates the behavior of your function at \\(0\\) and \\(1\\) and we kinda don't care any other place.
+
+We can use it
+
 
 ## additional information {#additional-information}
 
@@ -42,3 +52,6 @@ p,\ if\ k=1\\\\
 ### [Bernoulli]({{< relref "KBhbernoulli_random_variable.md" >}}) as indicator {#bernoulli--kbhbernoulli-random-variable-dot-md--as-indicator}
 
 If there's a series of event whose probability you are given, you can use a [Bernoulli]({{< relref "KBhbernoulli_random_variable.md" >}}) to model each one and add/subtract
+
+
+### MLE for Bernouli {#mle-for-bernouli}

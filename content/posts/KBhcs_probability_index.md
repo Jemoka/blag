@@ -51,6 +51,13 @@ core [probability]({{< relref "KBhprobability.md" >}}), [axiom of probability]({
 -   [SU-CS109 NOV102023]({{< relref "KBhsu_cs109_nov102023.md" >}})
 
 
+## Unit 5 {#unit-5}
+
+Apredezahe de machinas
+
+-   [SU-CS109 NOV132023]({{< relref "KBhsu_cs109_nov132023.md" >}})
+
+
 ## Notes {#notes}
 
 -   [SU-CS109 Midterm]({{< relref "KBhsu_cs109_midterm.md" >}})

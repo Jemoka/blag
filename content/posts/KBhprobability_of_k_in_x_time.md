@@ -62,3 +62,12 @@ For [independent]({{< relref "KBhprobability.md#independence" >}}) \\(A, B\\)
 \begin{equation}
 A+B \sim Poi(\lambda\_{A}+ \lambda\_{B})
 \end{equation}
+
+
+### MLE for [poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md" >}}) {#mle-for-poisson-distribution--kbhprobability-of-k-in-x-time-dot-md}
+
+\begin{equation}
+\lambda = \frac{1}{n} \sum\_{i=1}^{n} x\_{i}
+\end{equation}
+
+yes, that's just the [sample mean]({{< relref "KBhrandom_variables.md#sample-mean" >}})
