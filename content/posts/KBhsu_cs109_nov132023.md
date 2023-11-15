@@ -12,6 +12,11 @@ draft = false
 
 ## New Concepts {#new-concepts}
 
+-   [modeling]({{< relref "KBhmodeling.md" >}})
+-   [parameter]({{< relref "KBhparameter.md" >}})
+    -   [parameter learning]({{< relref "KBhparameter_learning.md" >}})
+    -   [argmax]({{< relref "KBhargmax.md" >}})
+
 
 ## Important Results / Claims {#important-results-claims}
 

@@ -13,6 +13,7 @@ draft = false
 ## New Concepts {#new-concepts}
 
 -   [privacy]({{< relref "KBhprivacy.md" >}})
+-   [memory allocation]({{< relref "KBhmemory_allocation.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

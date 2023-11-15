@@ -55,3 +55,9 @@ If there's a series of event whose probability you are given, you can use a [Ber
 
 
 ### MLE for Bernouli {#mle-for-bernouli}
+
+\begin{equation}
+p\_{MLE} = \frac{m}{n}
+\end{equation}
+
+\\(m\\) is the number of events
