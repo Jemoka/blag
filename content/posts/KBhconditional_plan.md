@@ -59,3 +59,5 @@ U^{\*}(b) = \max\_{\pi} U^{\pi}(b)
 Of course, trying to actually do this is impossible because you have to iterate over all possible policies and then calculate every utility from them.
 
 This is practically untenable, because the space of \\(\pi\\) is wayyy too big. Hence, we turn to [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
+
+See also [optimal value function for POMDP with alpha vector]({{< relref "KBhalpha_vector.md#optimal-value-function-for-pomdp--org8a609fc--with-alpha-vector--kbhalpha-vector-dot-md" >}})

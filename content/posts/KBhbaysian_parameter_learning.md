@@ -194,11 +194,6 @@ and, with \\(a\_{i} > 1\\), the $i$th mode is:
 \end{equation}
 
 
-## maximum a posteriori estimate {#maximum-a-posteriori-estimate}
-
-This value is the most probable value of the a distribution, usually called it "mode".
-
-
 ## [expectation]({{< relref "KBhexpectation.md" >}}) of a distribution {#expectation--kbhexpectation-dot-md--of-a-distribution}
 
 For [Beta Distribution](#beta-distribution) and [Dirichlet Distribution](#dirichlet-distribution), the [expectation]({{< relref "KBhexpectation.md" >}}) of their distribution is simply their mean.
