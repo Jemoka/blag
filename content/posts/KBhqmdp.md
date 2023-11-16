@@ -11,3 +11,5 @@ One [alpha vector]({{< relref "KBhalpha_vector.md" >}}) per action:
 \end{equation}
 
 This is going to give you a set of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s, one corresponding to each action.
+
+time complexity: \\(O(|S|^{2}|A|^{2})\\)
