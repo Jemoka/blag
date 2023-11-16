@@ -119,12 +119,12 @@ K \leftarrow \Sigma\_{p} O\_{s}^{T} (O\_{s}\Sigma\_{p}O\_{s}^{T}+\Sigma\_{O})^{-
 ### Additional Information {#additional-information}
 
 
-#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--org669cd69}
+#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--orgc52f45b}
 
 [Kalman Filter](#kalman-filter), but no linearity through the jacobian
 
 
-#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--org669cd69}
+#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--orgc52f45b}
 
 ?
 

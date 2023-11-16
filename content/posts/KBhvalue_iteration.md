@@ -69,6 +69,6 @@ where \\(S\\) is the number of states and \\(A\\) the number of actions.
 ## [POMDP]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}) value-iteration {#pomdp--kbhpartially-observable-markov-decision-process-dot-md--value-iteration}
 
 1.  compute [alpha vector]({{< relref "KBhalpha_vector.md" >}})s for all one-step plans (i.e. [conditional plan]({{< relref "KBhconditional_plan.md" >}})s that does just one action and gives up)
-2.  [alpha vector pruning]({{< relref "KBhalpha_vector.md#alpha-vector--kbhalpha-vector-dot-md--pruning" >}}) on any plans that are dominated
+2.  [alpha vector pruning]({{< relref "KBhalpha_vector.md#id-a11af4cf-7e36-4b3f-876f-e6a26cf6817e-alpha-vector-pruning" >}}) on any plans that are dominated
 3.  generate all possible two-step [conditional plan]({{< relref "KBhconditional_plan.md" >}})s over all actions using combinations of non-pruned one-step plans above as ****SUBPLANS**** (yes, you can use a one-step plan twice)
 4.  repeat steps 2-3

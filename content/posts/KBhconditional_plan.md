@@ -60,4 +60,4 @@ Of course, trying to actually do this is impossible because you have to iterate 
 
 This is practically untenable, because the space of \\(\pi\\) is wayyy too big. Hence, we turn to [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
 
-See also [optimal value function for POMDP with alpha vector]({{< relref "KBhalpha_vector.md#optimal-value-function-for-pomdp--org8a609fc--with-alpha-vector--kbhalpha-vector-dot-md" >}})
+See also [optimal value function for POMDP with alpha vector]({{< relref "KBhalpha_vector.md#id-a2dee193-65b1-47ed-8dbc-aa362b28b451-optimal-value-function-for-pomdp-with-id-a11af4cf-7e36-4b3f-876f-e6a26cf6817e-alpha-vector" >}})

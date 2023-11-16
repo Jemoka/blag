@@ -42,6 +42,6 @@ there is some model which is a probability distribution over the state given obs
 let orange \\(d\\) be state, the green would be the [error model](#error-model)
 
 
-### [filters]({{< relref "KBhfilters.md#filter" >}}) {#filters--kbhfilters-dot-md}
+### [filters]({{< relref "KBhfilters.md" >}}) {#filters--kbhfilters-dot-md}
 
-[filters]({{< relref "KBhfilters.md#filter" >}}) are how [belief]({{< relref "KBhbelief.md" >}})s are updated from observation. "we want to perform localization"
+[filters]({{< relref "KBhfilters.md" >}}) are how [belief]({{< relref "KBhbelief.md" >}})s are updated from observation. "we want to perform localization"
