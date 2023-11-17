@@ -6,6 +6,14 @@ draft = false
 
 [Partially Observable Markov Decision Process]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}) is a [Markov Decision Process]({{< relref "KBhmarkov_decision_process.md" >}}) with [State Uncertainty]({{< relref "KBhstate_uncertainty.md" >}}).
 
+As always we desire to find a [policy]({{< relref "KBhpolicy.md" >}}) \\(\pi\\) such that we can:
+
+\begin{equation}
+\underset{\pi \in \Pi}{\text{maximize}}\ \mathbb{E} \qty[ \sum\_{t=0}^{\infty} \gamma^{t} R(b\_{t}, \pi(b\_{t}))]
+\end{equation}
+
+whereby our [policy]({{< relref "KBhpolicy.md" >}}) \\(\pi\\) instead of taking in a state for input takes in a [belief]({{< relref "KBhbelief.md" >}}) ([probability distribution]({{< relref "KBhprobability_distributions.md" >}}) over possible states) as input.
+
 
 ## observation and states {#observation-and-states}
 
@@ -25,7 +33,7 @@ draft = false
 
 ## policy evaluations {#policy-evaluations}
 
-[conditional plan evaluation]({{< relref "KBhconditional_plan.md#conditional-plan--kbhconditional-plan-dot-md--evaluation" >}})
+[conditional plan evaluation]({{< relref "KBhconditional_plan.md#id-6f19368f-74b5-4606-a882-ec9bc5619873-conditional-plan-evaluation" >}})
 
 
 ## policy solutions {#policy-solutions}

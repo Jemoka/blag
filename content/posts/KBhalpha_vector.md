@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Recall, from [conditional plan evaluation]({{< relref "KBhconditional_plan.md#conditional-plan--kbhconditional-plan-dot-md--evaluation" >}}), we had that:
+Recall, from [conditional plan evaluation]({{< relref "KBhconditional_plan.md#id-6f19368f-74b5-4606-a882-ec9bc5619873-conditional-plan-evaluation" >}}), we had that:
 
 \begin{equation}
 U^{\pi}(b) = \sum\_{s}^{} b(s) U^{\pi}(s)
@@ -16,7 +16,7 @@ let's write it as:
 U^{\pi}(b) = \sum\_{s}^{} b(s) U^{\pi}(s) = {\alpha\_{\pi}}^{\top} b
 \end{equation}
 
-where \\(\U\_{\pi}(s)\\) is the [conditional plan evaluation]({{< relref "KBhconditional_plan.md#conditional-plan--kbhconditional-plan-dot-md--evaluation" >}}) starting at each of the initial states.
+where \\(\U\_{\pi}(s)\\) is the [conditional plan evaluation]({{< relref "KBhconditional_plan.md#id-6f19368f-74b5-4606-a882-ec9bc5619873-conditional-plan-evaluation" >}}) starting at each of the initial states.
 
 \begin{equation}
 \alpha\_{\pi} = \qty[ U^{\pi}(s\_1), U^{\pi}(s\_2) ]
@@ -49,6 +49,14 @@ NOTE! This function (look at the chart above from \\(b\\) to \\(u\\)) is:
 
 1.  piecewise linear
 2.  convex (because the "best" (highest) line) is always curving up
+
+and so, for a policy instantiated by a bunch of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s \\(\Gamma\\), we have:
+
+\begin{equation}
+U^{\Gamma}(b) = \max\_{\alpha \in \Gamma} \alpha^{\top}  b
+\end{equation}
+
+To actually extract a [policy]({{< relref "KBhpolicy.md" >}}) out of this set of vectors \\(\Gamma\\), we turn to [one-step lookahead in POMDP](#one-step-lookahead-in-pomdp)
 
 
 ### one-step lookahead in POMDP {#one-step-lookahead-in-pomdp}
