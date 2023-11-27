@@ -10,22 +10,26 @@ draft = false
 b \leftarrow update(b,a,o)
 \end{equation}
 
-we want to create a [Baysian Network]({{< relref "KBhbaysian_network.md" >}}) to represent our situation. For instance, say for a speech recognition task:
+There are two main flavours of how to represent beliefs
 
-if we have state certainty, the states "lonely, Starbucks, lovers" converges to:
+-   **parametric**: belief distribution is fully represented over all states by a set of parameters (categorical, [gaussian]({{< relref "KBhgaussian_distribution.md" >}}), etc.)
+-   **non-parametric**: belief is represented by a non-weighted list of possible locations of where you are; such as a [Particle Filter]({{< relref "KBhfilters.md#particle-filter" >}})
 
-{{< figure src="/ox-hugo/2023-11-09_09-50-38_screenshot.png" >}}
+---
 
-This is a [HMM]({{< relref "KBhhidden_markov_model.md" >}})! The only difference between something like this and a normal [Markov Decision Process]({{< relref "KBhmarkov_decision_process.md" >}}) is that each state hangs an observation:
+To update **parametric** beliefs, we can use a [discrete state filter]({{< relref "KBhfilters.md#discrete-state-filter" >}}) (for categorical belief distributions) or a [Kalman Filter]({{< relref "KBhfilters.md#kalman-filter" >}}) (for linear Gaussian). To update **non-parametric** beliefs, we can use a [Particle Filter]({{< relref "KBhfilters.md#particle-filter" >}}).
 
-{{< figure src="/ox-hugo/2023-11-09_09-52-58_screenshot.png" >}}
+If we have an **parametric** belief that's not categorical nor linear Gaussian, we can use [Extended Kalman Filter]({{< relref "KBhfilters.md#extended-kalman-filter--kbhfilters-dot-md" >}}) or [Unscented Kalman Filter]({{< relref "KBhfilters.md#unscented-kalman-filter--kbhfilters-dot-md" >}}) to approximate a belief update.
 
-which for us is the sound waves. This means that we describe a [POMDP]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}) with three expressions:
+---
 
--   \\(T(s'|s,a)\\)
--   \\(R(s,a)\\)
 
-this is just one more expression than an [MDP]({{< relref "KBhmarkov_decision_process.md" >}}); we take need the third expression because we may not know \\(s\\) directly, because we only get to observe \\(O\\) and not \\(s\\).
+## belief update {#belief-update}
+
+-   To [update belief](#belief-update), we need to initialize it somehow.
+    -   If you have no knowledge of the situation, you want to **diffuse** your initial distributions because you don't want to be overconfident
+    -   For non-parametric situations, this may cause logistical problems; so, you may need to make many observations before you can be confident enough to seed a belief
+-
 
 
 ## observation model {#observation-model}

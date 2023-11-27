@@ -119,28 +119,51 @@ K \leftarrow \Sigma\_{p} O\_{s}^{T} (O\_{s}\Sigma\_{p}O\_{s}^{T}+\Sigma\_{O})^{-
 ### Additional Information {#additional-information}
 
 
-#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--orgc52f45b}
+#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--orga82e9a2}
 
-[Kalman Filter](#kalman-filter), but no linearity through the jacobian
+[Kalman Filter](#kalman-filter), but no linearity required by forcing linearity by a point-jacobian estimate.
 
 
-#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--orgc52f45b}
+#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--orga82e9a2}
 
-?
+its [Extended Kalman Filter](#extended-kalman-filter--orga82e9a2) but derivative free, which means its clean and hence its unscented.
+
+Its achieved through using "sigma point samples": just taking some representative points (mean + 2 points in each direction), and draw a line.
+
+{{< figure src="/ox-hugo/2023-11-16_18-27-09_screenshot.png" >}}
 
 
 ## Particle Filter {#particle-filter}
 
 Its a filter with [Likelihood Weighted Sampling]({{< relref "KBhdirect_sampling.md#likelihood-weighted-sampling" >}}).
 
-Say we are flying a plane; we want to use our height measures to infer our horizontal location. Let us take an observation model: \\(O(o|s) = \mathcal{N}(o|h(s), \sigma)\\) ("the probability of getting an observation given we are in the state")
+Say we are flying a plane; we want to use our height measures to infer our horizontal location. Let us take an observation model: \\(O(o|s,a) = \mathcal{N}(o|h(s), \sigma)\\) ("the probability of getting an observation given we are in the state")
 
 1.  start off with a prior distribution over the states you have: a distribution over the possible states
-2.  make \\(N\\) monte-calro samples from our prior
-3.  calculate \\(O(o|s)\\) for each of your samples ("how likely is our observed altitude given each of our sampled states?")
-4.  normalise the resulting probabilities into a single distribution
-5.  re-sample \\(N\\) samples that from the resulting distribution
-6.  use the transition model to propagate the \\(N\\) samples forward to get \\(N\\) new next-state samples
+2.  make \\(N\\) monte-calro samples from our prior. These are our particles.
+3.  use the transition model to propagate the \\(N\\) samples forward to get \\(N\\) new next-state samples
+4.  take action \\(a\\); calculate \\(O(o|s,a)\\) for each of your proper gated samples \\(s\\) ("how likely is our observed altitude given each of our sampled states?")
+5.  normalise the resulting probabilities into a single distribution
+6.  re-sample \\(N\\) samples that from the resulting distribution. these are our updated belief.
 7.  repeat from step 3
 
 ****main pitfalls****: if we don't have enough sampled particles, you may get condensations that doesn't make sense
+
+
+### particle filter with rejection {#particle-filter-with-rejection}
+
+This is used almost never but if you really want to you can. You'd get a bunch of particles and take an action. You propagate the particles forward.
+
+For each propergated state \\(s\\), if what you observed \\(o\\) is equal to (or close to, for continuous cases) \\(sample(o|s,a)\\), you keep it around. Otherwise, you discard it.
+
+You keep doing this until you have kept enough states to do this again, and repeat.
+
+
+### Injection particle filter {#injection-particle-filter}
+
+Add a random new particle every so often to prevent particle deprivation.
+
+
+### Adaptive injection particle filter {#adaptive-injection-particle-filter}
+
+We perform injection based on the ratio of two moving averages of particle weights---if all weights are too low, we chuck in some to perturb it

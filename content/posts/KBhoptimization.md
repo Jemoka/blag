@@ -16,3 +16,77 @@ Importantly: model is not used to guide the search, it is only used to run simul
 ## Disadvantage (or advantage) {#disadvantage--or-advantage}
 
 -   does **not** take a advantage of the structure of the problem
+
+
+## Optimization Steps {#optimization-steps}
+
+1.  if you are doing something infrequently, make sure the simplest code
+2.  If you are doing something very often, and/or on big inputs, make the primary algorithm big-o cost reasonable
+3.  Make GCC Work!
+4.  Optimize explicitly as last resort.
+
+
+## Main Optimization Techniques {#main-optimization-techniques}
+
+-   constant folding
+-   sub-expression elimination
+-   dead code elimination
+-   "strength reduction"
+-   code motion
+-   tail recursion
+-   loop unrolling
+
+
+### constant folding {#constant-folding}
+
+There are many constants which happens during code writing. Therefore, for functions that operate on constant values, they will be folded in and the math done ahead-of-time during compilation.
+
+
+### common sub-instruction elimination {#common-sub-instruction-elimination}
+
+If you have the same sub-expression over and over again, we compute it ahead of time and use that result in multiple places.
+
+
+### dead code elimination {#dead-code-elimination}
+
+Code which doesn't do anything of interest. This maybe subtle:
+
+```C
+if (param == 0) {
+    return 0;
+} else {
+    return param;
+}
+```
+
+this is (mostly) dead code. It all return `0`.
+
+
+### strength reduction {#strength-reduction}
+
+Multiply can be rounded to a bit shift, and mod can be changed to an AND operation.
+
+```C
+7 * a == 8*a - a
+```
+
+So you can left shift and then subtract, which is dramatically easier.
+
+We can even do this with:
+
+```C
+b / 3
+```
+
+which can be converted to
+
+```C
+(b*3) / 10
+```
+
+which is much easier because its a multiplication
+
+
+### code motion {#code-motion}
+
+if there is a common sub-exppression

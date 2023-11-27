@@ -133,6 +133,8 @@ prior\ X \sim Beta(2,2)
 
 so you just add \\(2\\) to each of our output pseudo counts.
 
+see also [Laplace prior]({{< relref "KBhmaximum_a_posteriori_estimate.md#map-for-bernoulli-and-binomial-p" >}}), where you use [Laplace Smoothing](#laplace-smoothing) for your prior
+
 
 ### Total Probability in beta distributions {#total-probability-in-beta-distributions}
 

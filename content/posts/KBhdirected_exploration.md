@@ -36,6 +36,8 @@ take action \\(a\\) such that
 
 where, \\(c\\) is the exploration factor, \\(N\\) is the total number of trials, \\(N(a)\\) is the number of trials for \\(a\\) we have done.
 
+This value is considered the "upper confidence bound"; hence "UCB"
+
 
 ## Posterior Sampling {#posterior-sampling}
 

@@ -9,7 +9,7 @@ draft = false
 Calculating a [MAP]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}}) posterior, in general:
 
 \begin{equation}
-\theta\_{MAP} = \arg\max\_{\theta} \frac{f(x\_1, \dots, x\_{n} | \theta) g(\theta)}{h(x\_1, \dots, x\_{n})}
+\theta\_{MAP} = \arg\max\_{\theta} P(\theta|x\_1, \dots, x\_{n}) = \arg\max\_{\theta} \frac{f(x\_1, \dots, x\_{n} | \theta) g(\theta)}{h(x\_1, \dots, x\_{n})}
 \end{equation}
 
 We assume that the data points are [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}}), and the fact that the bottom of this is constant, we have:
@@ -24,7 +24,7 @@ Usually, we'd like to argmax the log:
 \theta\_{MAP} = \arg\max\_{\theta} \qty(\log (g(\theta)) + \sum\_{i=1}^{n} \log(f(x\_{i}|\theta))  )
 \end{equation}
 
-where, \\(g\\) is the probability density of \\(\theta\\) happening given the prior belief, and \\(f\\) is the [likelyhood]({{< relref "KBhlikelyhood.md" >}}) of \\(x\_{i}\\) given parameter \\(\theta\\).
+where, \\(g\\) is the probability density of \\(\theta\\) happening given the ****prior**** belief, and \\(f\\) is the [likelyhood]({{< relref "KBhlikelyhood.md" >}}) of \\(x\_{i}\\) given parameter \\(\theta\\).
 
 You will note this is just [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) function, plus the log-probability of the parameter prior.
 

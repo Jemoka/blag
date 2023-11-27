@@ -18,6 +18,70 @@ We consider, **naively**, \\(o\_{1:n}\\) are all [conditionally independent]({{<
 P(c, o\_{1:n}) = P( c) \prod\_{i=1}^{n} P(o\_{i} | c)
 \end{equation}
 
+so, to actually claiffy:
+
+\begin{equation}
+\hat{y} = \arg\max\_{y} \log \hat{P}(y) + \sum\_{i=1}^{m} \log \hat{P}(x|y)
+\end{equation}
+
+
+## brute-force Bayes classifier {#brute-force-bayes-classifier}
+
+\begin{equation}
+\arg\max\_{y} P(y|x) = \arg\max\_{y} \frac{P(x|y)P(y)}{P(x)}
+\end{equation}
+
+but because we are taking argmax, we can not normalize:
+
+\begin{equation}
+\arg\max\_{y} P(y|x) = \arg\max\_{y} P(x|y)P(y)
+\end{equation}
+
+this only works if \\(x\\) is a single **value** (i.e. you have a one-feature classifier
+
+This system has 6 parameters; they can be [MLE for Bernouli]({{< relref "KBhbernoulli_random_variable.md#mle-for-bernouli" >}}) from data, but you can also use [Baysian Parameter Learning Method]({{< relref "KBhmodel_based_reinforcement_learning.md#method" >}})
+
+|        | y = 0  | y = 1  |
+|--------|--------|--------|
+| x1 = 0 | theta0 | theta2 |
+| x1 = 1 | theta1 | theta3 |
+
+|       | y = 0              |
+|-------|--------------------|
+| y = 0 | theta4             |
+| y = 1 | theta5 (=1-theta4) |
+
+to perform estiimation with MAP
+
+\begin{equation}
+p(X=1| Y=0) = \frac{\text{examples where X=1, Y=0}}{\text{examples where Y=0}}
+\end{equation}
+
+whith MLE with a [Laplace prior]({{< relref "KBhmaximum_a_posteriori_estimate.md#map-for-bernoulli-and-binomial-p" >}}):
+
+\begin{equation}
+p(X=1| Y=0) = \frac{\text{(examples where X=1, Y=0)}+1}{\text{(examples where Y=0)}+\text{(nclass = 2)}}
+\end{equation}
+
+We can keep going; for instance, if you wave \\(x\_1, x\_2\\) two diffferent features:
+
+\begin{equation}
+\arg\max\_{y} P(y|x) = \arg\max\_{y} P(x\_1, x\_2|y)P(y)
+\end{equation}
+
+but this requires us to have \\(2^{2}\\) and ultimately \\(2^{n}\\) parameters, which is exponential blowup. Hence, we need to treat the variables as---naivly---independent so we can multiply them. Hence:
+
+
+## [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}}) assumption {#naive-bayes--kbhnaive-bayes-dot-md--assumption}
+
+we assume [independence]({{< relref "KBhprobability.md#independence" >}}) between the input features. That is, we assume:
+
+\begin{equation}
+P(x\_1, \dots, x\_{n}|y) = \prod\_{i=1}^{n} P(X\_{i}|y)
+\end{equation}
+
+{{< figure src="/ox-hugo/2023-11-17_16-35-58_screenshot.png" >}}
+
 
 ## [inference]({{< relref "KBhinference.md" >}}) with [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}}) {#inference--kbhinference-dot-md--with-naive-bayes--kbhnaive-bayes-dot-md}
 
