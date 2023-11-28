@@ -1,0 +1,36 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>logistic regression</title>
+<meta name=description content="Naive Bayes acts to compute \(P(Y|X)\) via the Bayes rule and using the Naive Bayes assumption. What if we can model the value of \(P(Y|X)\) directly?
+With \(\sigma\) as the sigmoid function:
+\begin{equation} P(Y=1|X=x) = \sigma (\theta^{\top}x) \end{equation}
+and we tune the parameters of \(\theta\) until this looks correct.
+We always want to introduce a BIAS parameter, which acts as an offset; meaning the first \(x\) should always be \(1\), which makes the first value in \(\theta\) as a &ldquo;bias&rdquo;."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>logistic regression</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#logistic-regression-assumption>logistic regression assumption</a></li><li><a href=#log-likelihood-of-logistic-regression>Log Likelihood of Logistic Regression</a></li></ul></nav></aside><main><article><div><p><a href=/posts/kbhnaive_bayes/>Naive Bayes</a> acts to compute \(P(Y|X)\) via the <a href=/posts/kbhbayes_theorem/>Bayes rule</a> and using the <a href=/posts/kbhnaive_bayes/#id-6cdf74a2-2451-47d1-8a62-62aa6dff62c6-naive-bayes-assumption>Naive Bayes assumption</a>. What if we can model the value of \(P(Y|X)\) directly?</p><p>With \(\sigma\) as the <a href=/posts/kbhsigmoid/>sigmoid</a> function:</p><p>\begin{equation}
+P(Y=1|X=x) = \sigma (\theta^{\top}x)
+\end{equation}</p><p>and we tune the parameters of \(\theta\) until this looks correct.</p><p>We always want to introduce a BIAS parameter, which acts as an offset; meaning the first \(x\) should always be \(1\), which makes the first value in \(\theta\) as a &ldquo;bias&rdquo;.</p><p>For optimizing this function, we have:</p><p>\begin{equation}
+LL(\theta) = y \log \sigma(\theta^{\top} x) + (1-y) \log (1- \theta^{\top} x)
+\end{equation}</p><p>and if we took the derivative w.r.t. a particular parameter slot \(\theta_{j}\):</p><p>\begin{equation}
+\pdv{LL(\theta)}{\theta_{j}} = \sum_{i=1}^{n} \qty[y^{(i)} - \sigma(\theta^{\top}x^{(i)})] x_{j}^{(i)}
+\end{equation}</p><h2 id=logistic-regression-assumption>logistic regression assumption</h2><p>We assume that there exists that there are some \(\theta\) which, when multiplied to the input and squashed by th <a href=/posts/kbhsigmoid/>sigmoid</a> function, can model our underlying <a href=/posts/kbhprobability/>probability</a> distribution:</p><p>\begin{equation}
+\begin{cases}
+P(Y=1|X=x) = \sigma (\theta^{\top}x) \\
+P(Y=0|X=x) = 1- \sigma (\theta^{\top}x) \\
+\end{cases}
+\end{equation}</p><p>We then attempt to compute a set of \(\theta\) which:</p><p>\begin{equation}
+\theta_{MLE} = \arg\max_{\theta} P(y^{(1)}, \dots, y^{(n)} | \theta, x_1 \dots x_{n})
+\end{equation}</p><h2 id=log-likelihood-of-logistic-regression>Log Likelihood of Logistic Regression</h2><p>To actually perform <a href=/posts/kbhmaximum_likelihood_parameter_learning/>MLE</a> for the $θ$s, we need to do <a href=/posts/kbhparameter_learning/>parameter learning</a>. Now, recall that we defined, though the <a href=#logistic-regression-assumption>logistic regression assumption</a>:</p><p>\begin{equation}
+P(Y=1|X=x) = \sigma (\theta^{\top}x)
+\end{equation}</p><p>essentially, this is a Bernouli:</p><p>\begin{equation}
+(Y|X=x) \sim Bern(p=\sigma(\theta^{\top}x))
+\end{equation}</p><p>We desire to maximize:</p><p>\begin{equation}
+P(Y=y | \theta, X=x)
+\end{equation}</p><p>Now, recall the continous <a href=/posts/kbhprobability_distributions/#probability-density-function>PDF</a> of Bernouli:</p><p>\begin{equation}
+P(Y=y) = p^{y} (1-p)^{1-y}
+\end{equation}</p><p>we now plug in our expression for \(p\):</p><p>\begin{equation}
+P(Y=y|X=x) = \sigma(\theta^{\top}x)^{y} (1-\sigma(\theta^{\top}x))^{1-y}
+\end{equation}</p><p>for all \(x,y\).</p><hr><p>Detour. To maximize this, we need to eventually take a derivative of:</p><p>\begin{equation}
+\sigma(\theta^{\top} x)
+\end{equation}</p><p>with respect to each \(\theta_{j}\), to do this, recall chain rule:</p><p>\begin{equation}
+\pdv{\sigma(\theta^{\top}x)}{\theta_{j}} =
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2023 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
