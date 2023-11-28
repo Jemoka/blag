@@ -18,7 +18,7 @@ We consider, **naively**, \\(o\_{1:n}\\) are all [conditionally independent]({{<
 P(c, o\_{1:n}) = P( c) \prod\_{i=1}^{n} P(o\_{i} | c)
 \end{equation}
 
-so, to actually claiffy:
+so, to actually compute this, we don't want to bother going over all the multiplications because of underflow, we write:
 
 \begin{equation}
 \hat{y} = \arg\max\_{y} \log \hat{P}(y) + \sum\_{i=1}^{m} \log \hat{P}(x|y)
