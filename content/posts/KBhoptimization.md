@@ -89,4 +89,41 @@ which is much easier because its a multiplication
 
 ### code motion {#code-motion}
 
-if there is a common sub-exppression
+if there is a common sub-exppression, it can be pull out of loops
+
+```C
+for (size_t i = 0; i < strlen(s); i++) {
+    arr[i] = s[i];
+}
+```
+
+the `strlen` call can be and will be pulled out.
+
+
+### tail recursion {#tail-recursion}
+
+turn a recursive call into a while loop to save stack frame management time
+
+
+### loop unrolling {#loop-unrolling}
+
+A loop can be "factored out":
+
+```C
+for (int i=0; i<=n; i++) {
+    sum += arr[i];
+}
+```
+
+can turn into
+
+```C
+for (int i=0; i<=n-4; i+=4) {
+    sum += arr[i];
+    sum += arr[i+1];
+    sum += arr[i+2];
+    sum += arr[i+3];
+} // handle ending cases
+```
+
+Why don't we unroll all the way? We don't know what \\(n\\) is.

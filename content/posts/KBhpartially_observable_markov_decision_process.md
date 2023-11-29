@@ -43,12 +43,16 @@ whereby our [policy]({{< relref "KBhpolicy.md" >}}) \\(\pi\\) instead of taking 
 
 ### exact solutions {#exact-solutions}
 
--   [optimal value function for POMDP]({{< relref "KBhconditional_plan.md#for-pomdp--kbhpartially-observable-markov-decision-process-dot-md" >}})
+-   [optimal value function for POMDP]({{< relref "KBhconditional_plan.md#id-9ccda204-0967-44c8-a801-c92d0df154b5-optimal-value-function-for-id-130d5294-0274-422b-b395-7d6f7f75be7d-pomdp" >}})
 -   [POMDP value-iteration]({{< relref "KBhvalue_iteration.md#pomdp--kbhpartially-observable-markov-decision-process-dot-md--value-iteration" >}})
 
 
 ### approximate solutions {#approximate-solutions}
 
 -   estimate an [alpha vector]({{< relref "KBhalpha_vector.md" >}}), and then use a policy representation:
-    -   [QMDP]({{< relref "KBhqmdp.md" >}})
-    -   [FIB]({{< relref "KBhfast_informed_bound.md" >}})
+    -   upper-bounds for [alpha vector]({{< relref "KBhalpha_vector.md" >}})s
+        -   [QMDP]({{< relref "KBhqmdp.md" >}})
+        -   [FIB]({{< relref "KBhfast_informed_bound.md" >}})
+    -   lower-bounds for [alpha vector]({{< relref "KBhalpha_vector.md" >}})s
+        -   [BAWS]({{< relref "KBhworst_possible_state.md" >}})
+        -   [blind lower bound]({{< relref "KBhblind_lower_bound.md" >}})

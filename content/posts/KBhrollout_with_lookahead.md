@@ -15,7 +15,7 @@ Use the [greedy policy]({{< relref "KBhaction_value_function.md#value-function-p
 
 ## Rollout {#rollout}
 
-[Rollout](#rollout) works by hallucinating a trajectory and calculating the reward. Basis of what some nerds call "experience replay".
+[Rollout](#rollout) works by hallucinating a trajectory and calculating the reward.
 
 For some state, [Rollout Policy](#rollout-policy), and depth...
 

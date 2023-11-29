@@ -37,7 +37,7 @@ At every belief \\(b\\), there is a policy which has the highest \\(U(b)\\) at t
 you can just represent a [policy]({{< relref "KBhpolicy.md" >}}) out of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s by taking the top (root) action of the [conditional plan]({{< relref "KBhconditional_plan.md" >}}) with the [alpha vector]({{< relref "KBhalpha_vector.md" >}}) on top.
 
 
-### [optimal value function for POMDP]({{< relref "KBhconditional_plan.md#for" >}}) with [alpha vector]({{< relref "KBhalpha_vector.md" >}}) {#optimal-value-function-for-pomdp--kbhconditional-plan-dot-md--with-alpha-vector--kbhalpha-vector-dot-md}
+### [optimal value function for POMDP]({{< relref "KBhconditional_plan.md#id-9ccda204-0967-44c8-a801-c92d0df154b5-optimal-value-function-for-id-130d5294-0274-422b-b395-7d6f7f75be7d-pomdp" >}}) with [alpha vector]({{< relref "KBhalpha_vector.md" >}}) {#optimal-value-function-for-pomdp--kbhconditional-plan-dot-md--with-alpha-vector--kbhalpha-vector-dot-md}
 
 Recall:
 
@@ -79,6 +79,12 @@ R(b,a) = \sum\_{s}^{} R(s,a)b(s)
 P(o|b,a) &= \sum\_{s}^{} p(o|s,a) b(s)  \\\\
 &= \sum\_{s}^{} \sum\_{s'}^{} T(s'|s,a) O(o|s',a) b(s)
 \end{align}
+
+and
+
+\begin{equation}
+U^{\Gamma}(b) = \max\_{\alpha \in \Gamma} \alpha^{\top}  b
+\end{equation}
 
 
 ### [alpha vector]({{< relref "KBhalpha_vector.md" >}}) pruning {#alpha-vector--kbhalpha-vector-dot-md--pruning}
