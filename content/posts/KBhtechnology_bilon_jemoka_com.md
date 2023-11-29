@@ -7,9 +7,11 @@ layout = "blank"
 
 Hostname: **bilon.jemoka.com**
 
-Technology: Marin Bicycle
+Technology: Trek Fx1
 
-Description: Blue-Black Bicycle
+Description: Black Bicycle with front and rear Deralieurs
+
+Serial: WTU 270 XC1581 S
 
 
 ## Lost {#lost}
