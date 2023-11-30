@@ -43,6 +43,8 @@ This value is considered the "upper confidence bound"; hence "UCB"
 
 Same one point from each [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}}) for each of your slot machines; then you pick the result that is the highest.
 
+Does not require any parameter.
+
 This is proven to do some over-exploration. But that's (mostly) just fine.
 
 

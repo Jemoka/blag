@@ -31,8 +31,12 @@ and where, if needed (i.e. most algorithms estimate this):
 U^{\Gamma}(b) = \max\_{\alpha \in \Gamma} \alpha^{\top}  b
 \end{equation}
 
--   [Rollout with Lookahead]({{< relref "KBhrollout_with_lookahead.md" >}})
--   [Forward Search]({{< relref "KBhforward_search.md" >}})
--   [Branch and Bound]({{< relref "KBhbranch_and_bound.md" >}}), but you use the [POMDP Approximation]({{< relref "KBhpomdp_approximation.md" >}}) methods to estimate the upper and lower bounds of your utility
--   [Sparse Sampling]({{< relref "KBhsparse_sampling.md" >}})
--   [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >}}), but instead our counts are stored not in terms of states (which we don't know), but sequences of action observations: \\(h = a\_1o\_2a\_2o\_1a\_2o\_1\\) etc. Then, the counter takes \\(N(h,a)\\) as input
+we also revise our [generative model]({{< relref "KBhonline_planning.md#generative-model" >}}):
+
+each step requires belief and action, and we sample from our belief a next state, propegate [belief]({{< relref "KBhbelief.md" >}}) forward, and use a traditional [generative model]({{< relref "KBhonline_planning.md#generative-model" >}}) to get the rewards and next states (which we don't use).
+
+-   [Rollout with Lookahead]({{< relref "KBhrollout_with_lookahead.md" >}}): simple to implement, no grantees of optimality or even boundedness
+-   [Forward Search]({{< relref "KBhforward_search.md" >}}): quite expensive---exponential given the size of horizon
+-   [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >}}), but instead our counts are stored not in terms of states (which we don't know), but sequences of action observations: \\(h = a\_1o\_2a\_2o\_1a\_2o\_1\\) etc. Then, the counter takes \\(N(h,a)\\) as input: will head towards optimality and it requires a [generative model]({{< relref "KBhonline_planning.md#generative-model" >}}) to sample tracks
+-   [Branch and Bound]({{< relref "KBhbranch_and_bound.md" >}}), but you use the [POMDP Approximation]({{< relref "KBhpomdp_approximation.md" >}}) methods to estimate the upper and lower bounds of your utility: its [Forward Search]({{< relref "KBhforward_search.md" >}}) with pruning
+-   [Sparse Sampling]({{< relref "KBhsparse_sampling.md" >}}): its [Forward Search]({{< relref "KBhforward_search.md" >}}), but the next [action-value]({{< relref "KBhaction_value_function.md" >}}) is determined by a finite sampling of next observations and rewards and you average their future utility. that is, the action-value before depth \\(d\\) is obtained by: \\(Q(b,a) = \frac{1}{m} \sum\_{i=1}^{m} \qty(r\_{a}^{(i)}+\gammaU\_{d-1}(Update(b,a,o\_{a}^{(i)})))\\)

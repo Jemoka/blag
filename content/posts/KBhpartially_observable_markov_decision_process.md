@@ -56,3 +56,8 @@ whereby our [policy]({{< relref "KBhpolicy.md" >}}) \\(\pi\\) instead of taking 
     -   lower-bounds for [alpha vector]({{< relref "KBhalpha_vector.md" >}})s
         -   [BAWS]({{< relref "KBhworst_possible_state.md" >}})
         -   [blind lower bound]({{< relref "KBhblind_lower_bound.md" >}})
+
+
+### online solutions {#online-solutions}
+
+[Online POMDP Methods]({{< relref "KBhonline_pomdp_methods.md" >}})
