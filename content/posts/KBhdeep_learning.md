@@ -77,4 +77,10 @@ furthermore, for any summation,
 \dv x \sum\_{i=0}^{} x = \sum\_{i=0}^{}\dv x x
 \end{equation}
 
-So we can consider our derivatives with respect to each data point.
+So we can consider our derivatives with respect to each data point. When going about the second part, recall an important trick:
+
+\begin{equation}
+\pdv{h\_{i}} \qty[\sum\_{i}^{} h\_{i}\theta\_{i}^{(y)}]
+\end{equation}
+
+you will note that, for the inside derivative, much the summation expands

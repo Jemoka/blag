@@ -53,9 +53,11 @@ core [probability]({{< relref "KBhprobability.md" >}}), [axiom of probability]({
 
 ## Unit 5 {#unit-5}
 
-Apredezahe de machinas
+Apredezahe de machinas: [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}}), [logistic regression]({{< relref "KBhlogistic_regression.md" >}}), [deep learning]({{< relref "KBhdeep_learning.md" >}})
 
 -   [SU-CS109 NOV132023]({{< relref "KBhsu_cs109_nov132023.md" >}})
+-   [SU-CS109 NOV292023]({{< relref "KBhsu_cs109_nov292023.md" >}})
+-   [SU-CS109 DEC012023]({{< relref "KBhsu_cs109_dec012023.md" >}})
 
 
 ## Notes {#notes}

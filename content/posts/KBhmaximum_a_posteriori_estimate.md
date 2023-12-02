@@ -33,7 +33,7 @@ You will note this is just [Maximum Likelihood Parameter Learning]({{< relref "K
 
 To estimate \\(p\\), we use the [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}}):
 
-The MODE of the beta:
+The MODE of the beta, which is the [MAP]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}}) of such a result:
 
 \begin{equation}
 \frac{\alpha -1 }{\alpha + \beta -2}

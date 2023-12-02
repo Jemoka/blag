@@ -26,6 +26,7 @@ Notes on CS 107, C, MIPS, and computational systems.
 -   [SU-CS107 OCT272023]({{< relref "KBhsu_cs107_oct272023.md" >}})
 -   [SU-CS107 NOV102023]({{< relref "KBhsu_cs107_nov102023.md" >}})
 -   [SU-CS107 NOV132023]({{< relref "KBhsu_cs107_nov132023.md" >}})
+-   [SU-CS107 DEC012023]({{< relref "KBhsu_cs107_dec012023.md" >}})
 
 
 ## Worksheets {#worksheets}

@@ -1,5 +1,5 @@
 +++
-title = "SU-CS107 NOV132023"
+title = "SU-CS107 DEC012023"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -11,11 +11,6 @@ draft = false
 
 
 ## New Concepts {#new-concepts}
-
--   [privacy]({{< relref "KBhprivacy.md" >}})
--   [memory allocation]({{< relref "KBhmemory_allocation.md" >}})
--   [optimization]({{< relref "KBhoptimization.md" >}})
--   [caching]({{< relref "KBhcaching.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

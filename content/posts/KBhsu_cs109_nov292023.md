@@ -13,6 +13,7 @@ draft = false
 ## New Concepts {#new-concepts}
 
 -   [logistic regression]({{< relref "KBhlogistic_regression.md" >}})
+    -   [deep learning]({{< relref "KBhdeep_learning.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
