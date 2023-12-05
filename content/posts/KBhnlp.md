@@ -30,10 +30,12 @@ Its expensive!
 2.  Expand \\(k\\) expansions for each of the \\(k\\) candidates
 3.  Choose the highest probability \\(k\\) candidates
 
+\\(k\\) should be small: trying to maximizing
 
-### [Branch and Bound]({{< relref "KBhbranch_and_bound.md#branch-and-bound" >}}) {#branch-and-bound--kbhbranch-and-bound-dot-md}
 
-See [Branch and Bound]({{< relref "KBhbranch_and_bound.md#branch-and-bound" >}})
+### [Branch and Bound]({{< relref "KBhbranch_and_bound.md" >}}) {#branch-and-bound--kbhbranch-and-bound-dot-md}
+
+See [Branch and Bound]({{< relref "KBhbranch_and_bound.md" >}})
 
 
 ### Challenges of Direct Sampling {#challenges-of-direct-sampling}
