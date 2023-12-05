@@ -136,6 +136,17 @@ Now, [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods a
 -   Don't deploy the system
 
 
+### Words of Wisdom from Mykel {#words-of-wisdom-from-mykel}
+
+"The belief update is central to learning. The point of education is to change your beliefs; look for opportunities to change your belief."
+
+"What's in the action space, how do we maximize it?"
+
+From MDPs, "we can learn from the past, but the past doesn't influence you."
+
+"Optimism under uncertainty": [Exploration and Exploitation]({{< relref "KBhexploration_and_exploitation.md" >}}) "you should try things"
+
+
 ## Worksheets {#worksheets}
 
 -   [SU-CS238 Q0Q3]({{< relref "KBhsu_cs238_q0q3.md" >}})
