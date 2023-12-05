@@ -126,6 +126,16 @@ Now, [Policy Optimization]({{< relref "KBhpolicy_optimization.md" >}}) methods a
 -   [SU-CS238 NOV302023]({{< relref "KBhsu_cs238_nov302023.md" >}})
 
 
+### Failures? {#failures}
+
+-   Change the action space
+-   Change the reward function
+-   Change the transition function
+-   Improve the solver
+-   Don't worry about it
+-   Don't deploy the system
+
+
 ## Worksheets {#worksheets}
 
 -   [SU-CS238 Q0Q3]({{< relref "KBhsu_cs238_q0q3.md" >}})

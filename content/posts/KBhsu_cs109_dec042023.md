@@ -23,7 +23,7 @@ One way we can model our objective is as a [MLE]({{< relref "KBhmaximum_likeliho
 y \sim \mathcal{N}(\mu = \hat{y}(\theta), \sigma^{2}=k)
 \end{equation}
 
-[finish this jack its so cool]
+If you compute MLE over the choice of \\(\hat{y}(\theta)\\), you get the squared error.
 
 
 ### ELBO {#elbo}
@@ -39,3 +39,11 @@ Big text generation flaw with LSTMs: the latent state vector has to contain info
 ### Cross Entropy {#cross-entropy}
 
 its MLE over a multinomials; the counts of everything that's not the one-hot thing just so happens to be 0.
+
+We are essentially computing the derivative of:
+
+\begin{equation}
+\arg\max\_{p\_{correct}} p\_{correct}
+\end{equation}
+
+which is trying to maximize the categorical of only the correct element.
