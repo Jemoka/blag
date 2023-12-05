@@ -19,11 +19,11 @@ X \sim N(\mu, \sigma^{2})
 \mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma\sqrt{2\pi}} e^{ \frac{-(x-u)^{2}}{2 \sigma^{2}}}
 \end{equation}</p><p>where, \(\phi\) is the <a href=#standard-normal-density-function>standard normal density function</a></p><p>Its <a href=/posts/kbhprobability_distributions/#cumulative-distribution-function>CDF</a>:</p><p>\begin{equation}
 F(x) = \Phi \qty( \frac{x-\mu}{\sigma})
-\end{equation}</p><p>We can&rsquo;t integrate \(\Phi\) further. So we leave it as a special function.</p><p>And its expectations:</p><p>\(E(X) = \mu\)</p><p>\(Var(X) = \sigma^{2}\)</p><h3 id=additional-information>additional information</h3><h4 id=linear-transformers-on-gaussian>linear transformers on Gaussian</h4><p>For some:</p><p>\begin{equation}
+\end{equation}</p><p>We can&rsquo;t integrate \(\Phi\) further. So we leave it as a special function.</p><p>And its expectations:</p><p>\(E(X) = \mu\)</p><p>\(Var(X) = \sigma^{2}\)</p><h3 id=additional-information>additional information</h3><h4 id=linear-transformations-on-gaussian>linear transformations on Gaussian</h4><p>For some:</p><p>\begin{equation}
 Y = aX + b
 \end{equation}</p><p>where \(X \sim \mathcal{N}\)</p><p>We will end up with another normal \(Y \sim \mathcal{N}\) such that:</p><ul><li>mean: \(au + b\)</li><li>variance: \(a^{2}\sigma^{2}\)</li></ul><h4 id=standard-normal>standard normal</h4><p>The standard normal is:</p><p>\begin{equation}
 Z=\mathcal{N}(0,1)
-\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--org32a5400>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
+\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--org9c72c02>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
 \end{equation}</p><p>and, we can shift it into a standard normal with:</p><p>\begin{equation}
 Z = \frac{X-\mu}{\sigma}
