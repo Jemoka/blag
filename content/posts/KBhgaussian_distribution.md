@@ -89,7 +89,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org9c72c02}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--orgb5839a8}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})

@@ -9,8 +9,6 @@ draft = false
 1.  [independent]({{< relref "KBhprobability.md#independence" >}})
 2.  identically distributed (see below)
 
-mmmmm
-
 ---
 
 

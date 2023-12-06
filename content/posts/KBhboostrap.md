@@ -17,7 +17,7 @@ so, to calculate the distribution of any given [statistic]({{< relref "KBhstasti
 1.  estimate the [PMF]({{< relref "KBhprobability_mass_function.md" >}}) using sample
 2.  `my_statistic_dist` = [] (like [sample mean]({{< relref "KBhrandom_variables.md#sample-mean" >}}), [sample variance]({{< relref "KBhrandom_variables.md#sample-variance" >}}), etc.)
 3.  for i in (N &gt;&gt; 10000)
-    1.  take a `subsample` of len(sample) samples from [PMF]({{< relref "KBhprobability_mass_function.md" >}})
+    1.  take a `subsample` of len(sample) samples from [PMF]({{< relref "KBhprobability_mass_function.md" >}})u
     2.  `my_statistic_dist`.append(`my_statistic=(=subsample`)) (recall it has to be a [sampling statistic]({{< relref "KBhrandom_variables.md#sampling-statistics" >}}) (like N-1 for [sample variance]({{< relref "KBhrandom_variables.md#sample-variance" >}}))
 4.  how you have a distribution of `my_statistic`
 

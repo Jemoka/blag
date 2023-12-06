@@ -58,6 +58,7 @@ Apredezahe de machinas: [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}}), [logi
 -   [SU-CS109 NOV132023]({{< relref "KBhsu_cs109_nov132023.md" >}})
 -   [SU-CS109 NOV292023]({{< relref "KBhsu_cs109_nov292023.md" >}})
 -   [SU-CS109 DEC012023]({{< relref "KBhsu_cs109_dec012023.md" >}})
+-   [SU-CS109 DEC042023]({{< relref "KBhsu_cs109_dec042023.md" >}})
 
 
 ## Notes {#notes}
