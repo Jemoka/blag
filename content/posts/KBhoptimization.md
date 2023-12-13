@@ -15,7 +15,7 @@ Importantly: model is not used to guide the search, it is only used to run simul
 
 ## Disadvantage (or advantage) {#disadvantage--or-advantage}
 
--   does **not** take a advantage of the structure of the problem
+does **not** take a advantage of the structure of the problem
 
 
 ## Optimization Steps {#optimization-steps}
@@ -70,6 +70,7 @@ Multiply can be rounded to a bit shift, and mod can be changed to an AND operati
 7 * a == 8*a - a
 ```
 
+ vs
 So you can left shift and then subtract, which is dramatically easier.
 
 We can even do this with:

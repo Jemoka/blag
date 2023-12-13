@@ -30,7 +30,7 @@ P(G=1|D=0) = P(G=1|D=1)
 \end{equation}
 
 
-### fairness through parity {#fairness-through-parity}
+### fairness through calibration {#fairness-through-calibration}
 
 We want the CORRECTNESS of the algorithm to be similar between [protected group]({{< relref "KBhprotected_group.md" >}})s.
 
