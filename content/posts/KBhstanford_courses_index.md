@@ -9,11 +9,15 @@ draft = false
 
 -
 -
--
+-   [CS Probability Index]({{< relref "KBhcs_probability_index.md" >}})
 -
 
 
 ## Stanford UG Y1, Win {#stanford-ug-y1-win}
+
+-   [ODEs Index]({{< relref "KBhodes_index.md" >}})
+-   [OS Index]({{< relref "KBhos_index.md" >}})
+-   [POMDPs Index]({{< relref "KBhpomdps_index.md" >}})
 
 
 ## UG Other Duties {#ug-other-duties}

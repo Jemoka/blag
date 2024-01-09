@@ -22,6 +22,9 @@ draft = false
 
 ## Important Results / Claims {#important-results-claims}
 
+-   [superposition principle]({{< relref "KBhordinary_differential_equations.md#superposition-principle" >}})
+-   [Fundamental Theorem of Calculus]({{< relref "KBhfundamental_theorem_of_calculus.md" >}})
+
 
 ## Questions {#questions}
 

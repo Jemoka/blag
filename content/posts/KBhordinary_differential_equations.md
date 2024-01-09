@@ -15,9 +15,24 @@ draft = false
 the [order](#order-of-equations) of an equation is the highest derivative of an equation
 
 
-### linear vs. non-linear equations {#linear-vs-dot-non-linear-equations}
+### linear vs. non-linear differential equations {#linear-vs-dot-non-linear-differential-equations}
 
-a solution of a differential equation is **linear** when solutions are under linear operations
+A solution of a differential equation is **linear** when solutions are under linear operations.
+
+We can spot an ODE by seeing that each of its derivatives are seperated or in separable terms, and only to the first power---because that ends up being a linear equation (i.e. any two solutions satisfying the equation can add and scale to another solution).
+
+The RHS doesn't matter. For instance:
+
+\begin{equation}
+xy'' + e^{x}y' + (x^{2}-3)y = x^{2}-x
+\end{equation}
+
+is linear.
+
+
+#### superposition principle {#superposition-principle}
+
+any linear combination of a _homogeneous linear_ ODE is also a solution to the ODE.
 
 
 ### homogeneous vs. inhomogeneous equations {#homogeneous-vs-dot-inhomogeneous-equations}

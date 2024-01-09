@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[First Order ODEs]({{< relref "KBhfirst_order_odes.md" >}}) are [Differential Equations]({{< relref "KBhdiffeq_intro.md" >}}) that only takes .
+[First Order ODEs]({{< relref "KBhfirst_order_odes.md" >}}) are [Differential Equations]({{< relref "KBhdiffeq_intro.md" >}}) that only takes one derivative.
 
 \begin{equation}
 y' = 3x
