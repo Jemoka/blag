@@ -22,9 +22,16 @@ POMDP formulation
 -   Reward: trapped, free, and exited Co2
 -   Action: injector placement
 -   Observation: CO2 saturation
--   Belief: "3D porospoty?"
+-   Belief: the permeability of the rock
+
+POMDP Solution: particle filter tree.
 
 Experimental design validated by simulations of CO2 sperad through injectors
+
+
+### Fourier Network Simulation {#fourier-network-simulation}
+
+The actual fluid dynamics is really really hard to solve. As such, we do the evaluation over a lot of scenarios and then train a neural network to act as surrogate.
 
 
 ## Key Figs {#key-figs}

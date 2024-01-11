@@ -1,7 +1,5 @@
 +++
-title = "SU-CS239 JAN092023"
+title = "PSet 1"
 author = ["Houjun Liu"]
 draft = false
 +++
-
-## Tips {#tips}

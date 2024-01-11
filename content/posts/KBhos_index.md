@@ -38,3 +38,14 @@ CS111 leverages CS107 experience to show operating systems and how they function
 -   Threads
 -   Virtual Memory + Paging + limits
 -   Modern Technologies/Niceties
+
+
+## Content {#content}
+
+
+### [filesystem]({{< relref "KBhfilesystem.md" >}}) {#filesystem--kbhfilesystem-dot-md}
+
+How can we design file systems to manage files on disk, and what are the tradeoffs inherent in designing them. How can we interact with the filesystem?
+
+-   [filesystem]({{< relref "KBhfilesystem.md" >}})
+-   [disk]({{< relref "KBhfilesystem.md#disk" >}})

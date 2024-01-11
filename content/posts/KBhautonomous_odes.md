@@ -12,50 +12,21 @@ y' = f(y)
 
 for some \\(f\\) of one variables. Meaning, it only depends on the independent variable \\(t\\) through the use of \\(y(t)\\) in context.
 
+This is a special class of [seperable diffequ]({{< relref "KBhseperable_diffequ.md" >}}).
 
-## division method {#division-method}
 
-the [division method](#division-method) involves solving [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) by dividing and treating it normally:
+## shifting {#shifting}
 
-\begin{equation}
-y' = f(y)
-\end{equation}
+Consider:
 
 \begin{equation}
-\frac{1}{f(y)} \dd{y} = \dd{x}
+y\_1'(t) = f(t,y\_1 (t))
 \end{equation}
 
-integrate both sides.
-
-
-## general solution to y'(t) = ry(t) {#general-solution-to-y--t--ry--t}
-
-generally, for \\(r \in \mathbb{R}\\), the solution to \\(y'(t) = ry(t)\\) is at \\(y(t)=y\_0e^{rt}\\), where \\(y\_0 = y(0)\\).
-
----
-
-for [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) for which \\(ry(t) = f(y)\\), we have that:
+say we had a shifted version of this function:
 
 \begin{equation}
-\dv{y}{x} = ry(x)
+y\_2 (t) = y\_1(t+1)
 \end{equation}
 
-which means:
-
-\begin{equation}
-\frac{1}{y(x)} \dd{y} = r\dd{x}
-\end{equation}
-
-and so:
-
-\begin{equation}
-\ln \qty| y(x) | = rx +C
-\end{equation}
-
-and hence:
-
-\begin{equation}
-y(x) = K e^{rx}
-\end{equation}
-
-plugging in \\(x=0\\), yields \\(y(0) = Ke^{0} = K\\).
+by the chain rule, we can observe that \\(y\_2\\) also satisfy the statement above.

@@ -39,6 +39,12 @@ What we want to understand:
 ### Linear ODEs {#linear-odes}
 
 -   [SU-MATH53 JAN082023]({{< relref "KBhsu_math53_jan082023.md" >}})
+-   [SU-MATH53 JAN102023]({{< relref "KBhsu_math53_jan102023.md" >}})
+
+
+## Midterm Sheet {#midterm-sheet}
+
+-   [SU-MATH53 Midterm Sheet]({{< relref "KBhsu_math53_midterm_sheet.md" >}})
 
 
 ## Other Stuff {#other-stuff}

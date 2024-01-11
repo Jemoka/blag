@@ -18,6 +18,7 @@ draft = false
 -   [ODEs Index]({{< relref "KBhodes_index.md" >}})
 -   [OS Index]({{< relref "KBhos_index.md" >}})
 -   [POMDPs Index]({{< relref "KBhpomdps_index.md" >}})
+-   [Language Information Index]({{< relref "KBhlanguage_information_index.md" >}})
 
 
 ## UG Other Duties {#ug-other-duties}

@@ -46,4 +46,4 @@ Wait wait wait but why is this possible? Why is it that we can separate a \\(\fr
 
 no where is the differentials seperatable! Apparently Ted's undergrads didn't know this either. [So here's a reading on it](https://drive.google.com/file/d/1GWSagIMjXI0Awwy6wlQqsBm6c8tnCqcg/view?pli=1).
 
-What if its non-seperable? See [Linear Non-Seperable Equation]({{< relref "../../Dropbox/knowledgebase/KBhlinear_non_seperable_equation.md" >}})
+What if its non-seperable? See [Linear Non-Seperable Equation]({{< relref "KBhlinear_non_seperable_equation.md" >}})

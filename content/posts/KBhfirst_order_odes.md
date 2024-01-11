@@ -6,13 +6,13 @@ draft = false
 
 [First Order ODEs]({{< relref "KBhfirst_order_odes.md" >}}) are [Differential Equations]({{< relref "KBhdiffeq_intro.md" >}}) that only takes one derivative.
 
+Typically, by the nature of how they are modeled, we usually state it in a equation between three things:
+
 \begin{equation}
-y' = 3x
+t, y(t), y'(t)
 \end{equation}
 
-you've done this before. The solution is any possible function which has derivative \\(3x\\), we have the form \\(y = \frac{3}{2}x^{2}+C\\). Given a single initial condition, say \\(y(1)+5\\), we can solve for a certain \\(C\\).
-
----
+as in---we only take one derivative.
 
 Sometimes the solution may not be analytic, but is well-defined:
 
@@ -27,3 +27,19 @@ y(x) = \int\_{0}^{x} e^{-s{2}} \dd{s}
 \end{equation}
 
 Indeed this function doesn't have an elementary integral, but still has a well defined result. Almost always differential equations doesn't have elementary solutions.
+
+
+## Separated Equations {#separated-equations}
+
+There is a very nice class of this type of first-order equations:
+
+\begin{equation}
+y' = f(t,y)
+\end{equation}
+
+Mentally, we think of this structure on a \\(t,y\\) plane, where at each point \\((t,y)\\) the slope of the graph matches the slope given by \\(f(t,y)\\). To solve for the rest of the evolution, we consider an initial state of this system, say \\(y(1) = 3\\).
+
+
+### [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) {#autonomous-odes--kbhautonomous-odes-dot-md}
+
+This is a special case of these types of equations, called [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}})
