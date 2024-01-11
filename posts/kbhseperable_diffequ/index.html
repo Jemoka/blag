@@ -1,0 +1,38 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>seperable diffequ</title>
+<meta name=description content="\begin{equation} \dv{y}{t} = a(t)f(y) \end{equation}
+are a class of functions are called seperable. We can solve them using the division method
+division method the division method involves solving autonomous ODEs by dividing and treating it normally:
+\begin{equation} y&rsquo; = 8y \end{equation}
+\begin{equation} \frac{y&rsquo;}{8} = y \end{equation}
+we now write something fishy:
+\begin{equation} \frac{\dd{y}}{y} = 8 \dd{t} \end{equation}
+we now take the antiderivative of this:
+\begin{equation} \int \frac{1}{y} \dd{y} = \int 8 \dd{t} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>seperable diffequ</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#division-method>division method</a><ul><li><a href=#places-where-this-breaks-down>places where this breaks down</a></li><li><a href=#general-solution-to-y--t--ry--t>general solution to y&rsquo;(t) = ry(t)</a></li></ul></li></ul></nav></aside><main><article><div><p>\begin{equation}
+\dv{y}{t} = a(t)f(y)
+\end{equation}</p><p>are a class of functions are called <a href=/posts/kbhseperable_diffequ/>seperable</a>. We can solve them using the <a href=#division-method>division method</a></p><h2 id=division-method>division method</h2><p>the <a href=#division-method>division method</a> involves solving <a href=/posts/kbhautonomous_odes/>autonomous ODEs</a> by dividing and treating it normally:</p><p>\begin{equation}
+y&rsquo; = 8y
+\end{equation}</p><p>\begin{equation}
+\frac{y&rsquo;}{8} = y
+\end{equation}</p><p>we now write something fishy:</p><p>\begin{equation}
+\frac{\dd{y}}{y} = 8 \dd{t}
+\end{equation}</p><p>we now take the antiderivative of this:</p><p>\begin{equation}
+\int \frac{1}{y} \dd{y} = \int 8 \dd{t}
+\end{equation}</p><p>We will get that:</p><p>\begin{equation}
+\ln |y| = 8t + C
+\end{equation}</p><p>we finally get:</p><p>\begin{equation}
+|y| = e^{C} e^{8t}
+\end{equation}</p><p>getting rid of that absolute value:</p><p>\begin{align}
+y &= \pm e^{C} e^{8t} \\
+&= K e^{8t}
+\end{align}</p><h3 id=places-where-this-breaks-down>places where this breaks down</h3><ul><li>sometimes, \(\frac{1}{f(y)}\) may not have a nice antiderivative</li><li>sometimes, \(G(y)\), the antidepressant, may not be nicely invertible</li></ul><h3 id=general-solution-to-y--t--ry--t>general solution to y&rsquo;(t) = ry(t)</h3><p>generally, for \(r \in \mathbb{R}\), the solution to \(y&rsquo;(t) = ry(t)\) is at \(y(t)=y_0e^{rt}\), where \(y_0 = y(0)\).</p><hr><p>for <a href=/posts/kbhautonomous_odes/>autonomous ODEs</a> for which \(ry(t) = f(y)\), we have that:</p><p>\begin{equation}
+\dv{y}{x} = ry(x)
+\end{equation}</p><p>which means:</p><p>\begin{equation}
+\frac{1}{y(x)} \dd{y} = r\dd{x}
+\end{equation}</p><p>and so:</p><p>\begin{equation}
+\ln \qty| y(x) | = rx +C
+\end{equation}</p><p>and hence:</p><p>\begin{equation}
+y(x) = K e^{rx}
+\end{equation}</p><p>plugging in \(x=0\), yields \(y(0) = Ke^{0} = K\).</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>

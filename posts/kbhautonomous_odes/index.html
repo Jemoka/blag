@@ -2,25 +2,18 @@
 <meta name=description content="an First Order ODE is &ldquo;autonomous&rdquo; when:
 \begin{equation} y&rsquo; = f(y) \end{equation}
 for some \(f\) of one variables. Meaning, it only depends on the independent variable \(t\) through the use of \(y(t)\) in context.
-division method the division method involves solving autonomous ODEs by dividing and treating it normally:
-\begin{equation} y&rsquo; = f(y) \end{equation}
-\begin{equation} \frac{1}{f(y)} \dd{y} = \dd{x} \end{equation}
-integrate both sides.
-general solution to y&rsquo;(t) = ry(t) generally, for \(r \in \mathbb{R}\), the solution to \(y&rsquo;(t) = ry(t)\) is at \(y(t)=y_0e^{rt}\), where \(y_0 = y(0)\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+This is a special class of seperable diffequ.
+shifting Consider:
+\begin{equation} y_1&rsquo;(t) = f(t,y_1 (t)) \end{equation}
+say we had a shifted version of this function:
+\begin{equation} y_2 (t) = y_1(t+1) \end{equation}
+by the chain rule, we can observe that \(y_2\) also satisfy the statement above."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>autonomous ODEs</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#division-method>division method</a></li><li><a href=#general-solution-to-y--t--ry--t>general solution to y&rsquo;(t) = ry(t)</a></li></ul></nav></aside><main><article><div><p>an <a href=/posts/kbhfirst_order_odes/>First Order ODE</a> is &ldquo;autonomous&rdquo; when:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>autonomous ODEs</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#shifting>shifting</a></li></ul></nav></aside><main><article><div><p>an <a href=/posts/kbhfirst_order_odes/>First Order ODE</a> is &ldquo;autonomous&rdquo; when:</p><p>\begin{equation}
 y&rsquo; = f(y)
-\end{equation}</p><p>for some \(f\) of one variables. Meaning, it only depends on the independent variable \(t\) through the use of \(y(t)\) in context.</p><h2 id=division-method>division method</h2><p>the <a href=#division-method>division method</a> involves solving <a href=/posts/kbhautonomous_odes/>autonomous ODEs</a> by dividing and treating it normally:</p><p>\begin{equation}
-y&rsquo; = f(y)
-\end{equation}</p><p>\begin{equation}
-\frac{1}{f(y)} \dd{y} = \dd{x}
-\end{equation}</p><p>integrate both sides.</p><h2 id=general-solution-to-y--t--ry--t>general solution to y&rsquo;(t) = ry(t)</h2><p>generally, for \(r \in \mathbb{R}\), the solution to \(y&rsquo;(t) = ry(t)\) is at \(y(t)=y_0e^{rt}\), where \(y_0 = y(0)\).</p><hr><p>for <a href=/posts/kbhautonomous_odes/>autonomous ODEs</a> for which \(ry(t) = f(y)\), we have that:</p><p>\begin{equation}
-\dv{y}{x} = ry(x)
-\end{equation}</p><p>which means:</p><p>\begin{equation}
-\frac{1}{y(x)} \dd{y} = r\dd{x}
-\end{equation}</p><p>and so:</p><p>\begin{equation}
-\ln \qty| y(x) | = rx +C
-\end{equation}</p><p>and hence:</p><p>\begin{equation}
-y(x) = K e^{rx}
-\end{equation}</p><p>plugging in \(x=0\), yields \(y(0) = Ke^{0} = K\).</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>for some \(f\) of one variables. Meaning, it only depends on the independent variable \(t\) through the use of \(y(t)\) in context.</p><p>This is a special class of <a href=/posts/kbhseperable_diffequ/>seperable diffequ</a>.</p><h2 id=shifting>shifting</h2><p>Consider:</p><p>\begin{equation}
+y_1&rsquo;(t) = f(t,y_1 (t))
+\end{equation}</p><p>say we had a shifted version of this function:</p><p>\begin{equation}
+y_2 (t) = y_1(t+1)
+\end{equation}</p><p>by the chain rule, we can observe that \(y_2\) also satisfy the statement above.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
