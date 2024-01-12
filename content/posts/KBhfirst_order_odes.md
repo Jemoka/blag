@@ -37,9 +37,24 @@ There is a very nice class of this type of first-order equations:
 y' = f(t,y)
 \end{equation}
 
+A general function here are not these cases.
+
 Mentally, we think of this structure on a \\(t,y\\) plane, where at each point \\((t,y)\\) the slope of the graph matches the slope given by \\(f(t,y)\\). To solve for the rest of the evolution, we consider an initial state of this system, say \\(y(1) = 3\\).
 
 
 ### [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) {#autonomous-odes--kbhautonomous-odes-dot-md}
 
 This is a special case of these types of equations, called [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}})
+
+\begin{equation}
+y' = f(y)
+\end{equation}
+
+
+### [seperable]({{< relref "KBhseperable_diffequ.md" >}}) {#seperable--kbhseperable-diffequ-dot-md}
+
+\begin{equation}
+y' = f(y)g(t)
+\end{equation}
+
+generally, this can be solved with .

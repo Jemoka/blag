@@ -95,6 +95,14 @@ Formulation of agent decisions as POMDP in order to fully benchmark Markovian de
 Agents development has no core framework
 
 
+#### production systems {#production-systems}
+
+-   set of rules specificying a precondition + action
+-   when preconditinons are met, perform an action
+
+Big kitchen sink proposal: <https://arxiv.org/abs/2309.02427>
+
+
 ### Trust and safety {#trust-and-safety}
 
 Agents are much more powerful and dynamic

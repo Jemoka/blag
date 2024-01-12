@@ -15,18 +15,12 @@ for some \\(f\\) of one variables. Meaning, it only depends on the independent v
 This is a special class of [seperable diffequ]({{< relref "KBhseperable_diffequ.md" >}}).
 
 
-## shifting {#shifting}
+## time-invariant expressions {#time-invariant-expressions}
 
-Consider:
-
-\begin{equation}
-y\_1'(t) = f(t,y\_1 (t))
-\end{equation}
-
-say we had a shifted version of this function:
+For forms by which:
 
 \begin{equation}
-y\_2 (t) = y\_1(t+1)
+y' = f(y)
 \end{equation}
 
-by the chain rule, we can observe that \\(y\_2\\) also satisfy the statement above.
+as in, the expression is **time invariant**.

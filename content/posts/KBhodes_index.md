@@ -40,6 +40,7 @@ What we want to understand:
 
 -   [SU-MATH53 JAN082023]({{< relref "KBhsu_math53_jan082023.md" >}})
 -   [SU-MATH53 JAN102023]({{< relref "KBhsu_math53_jan102023.md" >}})
+-   [SU-MATH53 JAN122023]({{< relref "KBhsu_math53_jan122023.md" >}})
 
 
 ## Midterm Sheet {#midterm-sheet}
