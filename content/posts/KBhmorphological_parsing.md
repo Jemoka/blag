@@ -8,10 +8,13 @@ recall [morpheme]({{< relref "KBhmorpheme.md" >}})s are the smallest meaningful 
 
 [morphological parsing]({{< relref "KBhmorphological_parsing.md" >}}) is the act of getting morphemes: `cats` =&gt; =cat s=o
 
+1.  stem +
+2.  affix
+
 
 ## stemming {#stemming}
 
-stemming just chops off the morpheme endings blinding. "heights" =&gt; "heigh". without lemmatization.
+stemming just chops off the morpheme affixes; leaving the stems. "heights" =&gt; "heigh". without lemmatization.
 
 This increases recall (more stuff is caught we want to catch) at he cost of precision (what we catch is probably lots of false positives).
 

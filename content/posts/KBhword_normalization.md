@@ -8,4 +8,5 @@ Pay attention to:
 
 1.  cases (all letters to lower case?)
 2.  [lemma]({{< relref "KBhtokenization.md" >}})tization
-3.
+
+This is often done with [morphological parsing]({{< relref "KBhmorphological_parsing.md" >}}), for instance, you can try [stemming]({{< relref "KBhmorphological_parsing.md#stemming" >}}).

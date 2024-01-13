@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-a [controller]({{< relref "KBhcontroller.md" >}}) is a [policy]({{< relref "KBhpolicy.md" >}}) that maintains its own state.
+a [controller]({{< relref "KBhcontroller.md" >}}) is a that maintains its own state.
 
 
 ## constituents {#constituents}
@@ -15,6 +15,11 @@ a [controller]({{< relref "KBhcontroller.md" >}}) is a [policy]({{< relref "KBhp
 
 
 ## requirements {#requirements}
+
+Controllers are nice because we:
+
+1.  don't have to maintain a belief over time: we need an initial belief, and then we can create beliefs as we'd like without much worry
+2.  controllers can be made shorter than [conditional plan]({{< relref "KBhconditional_plan.md" >}})s
 
 
 ## additional information {#additional-information}
@@ -68,4 +73,4 @@ X^{\*} = \arg\max\_{x} U(x,b)
 
 1.  [policy iteration]({{< relref "KBhpolicy_iteration.md" >}}): incrementally add nodes and evaluate it
 2.  nonlinear programming: this can be a nonlinear optimization problem
-3.  [gradient ascent]({{< relref "KBhargmax.md#gradient-ascent" >}})
+3.  [controller gradient ascent]({{< relref "KBhcontroller_gradient_ascent.md" >}})

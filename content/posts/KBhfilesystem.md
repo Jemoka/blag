@@ -41,6 +41,19 @@ Because disks are mostly moving, reading and writing requires [seeking](#seeking
 a [block](#block) is a group of one or more [sector](#disk)s, which issued to abstract away chunks of sectors.
 
 
+## fragmentation {#fragmentation}
+
+
+### internal fragmentation {#internal-fragmentation}
+
+A file can be no less than a single [block](#block) of text. As in, the files ha
+
+
+### external fragmentation {#external-fragmentation}
+
+"no space is available even if the space in aggregate"
+
+
 ## models of storage {#models-of-storage}
 
 We typically put two things into the block:

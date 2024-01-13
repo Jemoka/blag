@@ -6,12 +6,67 @@ draft = false
 
 its a [File Payload Data]({{< relref "KBhfile_payload_data.md" >}}) with smartness.
 
+| Sector Size | Block Size | Inode Size | Inodes Per Block | Address Type   |
+|-------------|------------|------------|------------------|----------------|
+| 512         | 512        | 32         | 16               | Short, 2 bytes |
+
+Notably, the entire file system only supports \\(2^{16} = 32MB\\) worth of space due to short address types.
+
 For each file on the disk, we store payload data in a bunch of places scattered across the disk, and a **single** [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) which stores the location of each block for the file in an array.
 
 -   [inode]({{< relref "KBhunix_v6_filesystem.md" >}})s contain an **ordered** list of block numbers, file size, permissions.
 -   all [inode]({{< relref "KBhunix_v6_filesystem.md" >}})s are stored together in an [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) table, which starts at **block 2**. Blocks 0 and 1 are disk metadata.
 -   [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) can be read into memory individally to cache
--   [inode]({{< relref "KBhunix_v6_filesystem.md" >}})s are usualy 32 bytes big, and 1 block = 1 sector = 512 blocks. usually this packs 16 inodes per block
 -   10% of harddrive is used to [inode]({{< relref "KBhunix_v6_filesystem.md" >}})
 
-[Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}}) limits the maximum file size in order to keep the [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) a finite size. It has space for \\(8\\) block numbers: which is enough to store large files... apparently.
+[Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}}) limits the maximum file size in order to keep the [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) a finite size.
+
+The [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) table for each file only contains space to point to \\(8\\) block. 1 block = 1 sector on Unix v6. [inode]({{< relref "KBhunix_v6_filesystem.md" >}})s are usualy 32 bytes big, and 1 block = 1 sector = 512 bytes. usually this packs 16 inodes per block
+
+****[inode]({{< relref "KBhunix_v6_filesystem.md" >}})s are 1 indexed**** in order to make.
+
+
+## inode {#inode}
+
+```C
+struct inode {
+    uint16_t i_addr[8];
+    uint16_t i_mode[8];
+    uint16_t file_size;
+}
+```
+
+Each inode contains 8 addresses in shorts in **file order**.
+
+
+### reading inode tables from disk {#reading-inode-tables-from-disk}
+
+We read the raw 16-block inode data from the right sector, type coerce it into the inode type, and then read from it.
+
+```C
+const size_t INODE_PER_BLOCK = SECTOR_SIZE / sizeof(struct inode);
+struct inode inodes[INODE_PER_BLOCK];
+
+char buf[SECTOR_SIZE];
+readsector(2, &inodes); // recall this is the first 16 inodes: sec0 is fs info, sec1 is supernode
+
+printf("addr: %d\n", inodes[0].i_add);
+```
+
+
+### inode modes {#inode-modes}
+
+[inode]({{< relref "KBhunix_v6_filesystem.md" >}})s have two modes
+
+```C
+if ((inode.i_mode & ILARG) != 0) == // node is in "large mode"
+```
+
+-   in **small mode**, the [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) stores in `i_addr` the block numbers to the data
+-   in **large mode**, the [inode]({{< relref "KBhunix_v6_filesystem.md" >}}) stores in the **first seven** numbers in `i_addr` block numbers to _blocks that contain block numbers_ (512/2 = 256 block numbers, which are chars); the **eighth number** points to **doubly indirect** _blocks that contain block numbers that point to other blocks_
+
+this is called [indirect addressing](#inode-modes)
+
+[indirect addressing](#inode-modes) uses more steps to get to the data, and requires more blocks to get to the block numbers.
+
+in **large mode**, this system can store \\((7+256) \cdot (256 \cdot 512) = 34MB\\), which is as large as the file system itself, which is fine now.

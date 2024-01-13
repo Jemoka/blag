@@ -10,7 +10,7 @@ Every NLP task involve some kind of text normalization.
 2.  normalizing word formats (lemmatize?)
 3.  sentence and paragraph segmentation
 
-For Latin, Arabic, Cyrillic, Greek systems, spaces can usually be used for tokenization. Other writing systems can't do this. See [morpheme]({{< relref "KBhmorpheme.md#morpheme" >}})
+For Latin, Arabic, Cyrillic, Greek systems, spaces can usually be used for tokenization. Other writing systems can't do this. See [morpheme]({{< relref "KBhmorpheme.md" >}})
 
 
 ## Subword Tokenization {#subword-tokenization}

@@ -48,4 +48,5 @@ CS111 leverages CS107 experience to show operating systems and how they function
 How can we design file systems to manage files on disk, and what are the tradeoffs inherent in designing them. How can we interact with the filesystem?
 
 -   [filesystem]({{< relref "KBhfilesystem.md" >}})
+    -   [Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}})
 -   [disk]({{< relref "KBhfilesystem.md#disk" >}})
