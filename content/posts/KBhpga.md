@@ -86,11 +86,11 @@ Finally, this allows us to formulate the problem as a nonlinear optimization pro
 \max\_{\theta}\ &f(\theta) \\\\
 \text{such that}\ &J\theta = 1 \\\\
 & \theta \geq 0 \\\\
-& h\_{i}(\theta) < \epsilon\_{i},\ \forall i
+& h\_{i}(\theta) \leq  \epsilon\_{i},\ \forall i
 \end{align}
 
 
-## Exact Gradient Ascent {#exact-gradient-ascent}
+## Gradient Ascent Procedure {#gradient-ascent-procedure}
 
 Note that the initial state information \\(\beta\\) is constant. Therefore, the gradient of the top expression against each field in \\(\theta\\) becomes, via an rearrangement of the chain rule:
 
@@ -160,7 +160,76 @@ def optimize!(CPOMDP, phi=golden_ratio,
 ```
 
 
-## Approximate Solution {#approximate-solution}
+### Naive Projection {#naive-projection}
+
+Once we obtain a new set of parameters \\(\xi\\) from [Golden Section Line Search](#golden-section-line-search), we can't actually directly punch it into \\(\theta\\). This is because it is likely not going to satisfy the constraints that are given.
+
+We can fix this naively with a non-linear programming formulation; that is, we desire to find the closest \\(\theta\\) to the computed value \\(\xi\\); we do this by minimizing a L2 norm (sum of squared errors):
+
+\begin{align}
+\min\_{\theta}\ & \frac{1}{2} \\| \xi - \theta \\|^{2}\_{2} \\\\
+\text{such that}\ &J\theta = 1 \\\\
+& \theta \geq 0 \\\\
+& h\_{i}(\theta) \leq  \epsilon\_{i},\ \forall i
+\end{align}
+
+This, for the most part, is computationally intractable and needs to be computed through each iteration. This is especially bad for the \\(h\_{i}\\) for all \\(i\\) part. And so, instead of doing this, we formulate instead an approximate proxy objective.
 
 
-##  {#d41d8c}
+### Approximate Projection {#approximate-projection}
+
+The thing that makes the objective above hard is that \\(h\_{i}\\) doesn't have nice convex properties. To fix this, we perform a local linearizion of \\(h\_{i}\\).
+
+Specifically, let's replace \\(h\_{i}\\) with its local Taylor expansion.
+
+For some step where we started at \\(\theta\_{k}\\), if you wanted to evaluate some next step \\(\theta\_{k+1}\\) from that step, we can write:
+
+\begin{equation}
+h\_{i}(\theta\_{k+1}) \approx h\_{i}(\theta\_{k}) + (\nabla\_{\theta}(\theta\_{0}))(\theta\_{k+1}-\theta\_{k})
+\end{equation}
+
+Using this linear decomposition of three parts (i.e. parameter difference from original, the gradient of \\(h\\) against the parameter, and the original value of \\(h\\)), we can now split the \\(h\_{i}(\theta)\\) constraint of the non-linear program into a linear decomposition.
+
+Let's define:
+
+\begin{equation}
+\nabla\_{\theta} \bold{h}(\theta) = \mqty[ (\nabla\_{\theta} h\_{1}(\theta))^{\top} \\\ \dots \\\ (\nabla\_{\theta} h\_{m}(\theta))^{\top}]
+\end{equation}
+
+From which we write block matriix
+
+\begin{equation}
+\bold{A} = \mqty[-\bold{I}\_{n} \\\ \nabla\_{\theta}\bold{h}(\theta\_{k})]
+\end{equation}
+
+where \\(\bold{I}\_{n} \in \mathbb{R}^{(|A| + |X|) \times  (|A| + |X|)}\\), and vector:
+
+\begin{equation}
+\bold{b} = \mqty[\bold{0}\_{n} \\\ \epsilon - \bold{h}(\theta\_{k}) + \nabla\bold{h}(\theta\_{k})\theta\_{k}]
+\end{equation}
+
+These definitions allow us to rewrite two of our objectives:
+
+\begin{equation}
+\begin{cases}
+\theta \geq 0 \\\\
+h\_{i}(\theta) \leq  \epsilon\_{i},\ \forall i
+\end{cases}
+\end{equation}
+
+turning them instead into simply \\(\bold{A}\theta \leq \bold{b}\\). The top half of \\(\bold{A}\\), \\(\bold{B}\\) is responsible for making sure that all elements of \\(\theta\\) is positive (specifically, to ensure the negative of the values is smaller than 0); the bottom half ensures that all of them satisfy the cost.
+
+These definitions result in a linear formulation of two objectives of our original non-linear program:
+
+\begin{align}
+\min\_{\theta}\ & \frac{1}{2} \\| \xi - \theta \\|^{2}\_{2} \\\\
+\text{such that}\ &J\theta = 1 \\\\
+& \bold{A}\theta \leq \bold{B}
+\end{align}
+
+and we are done.
+
+
+### Quick Tip {#quick-tip}
+
+Recall that we have to calculate the inverse of \\(\bold{Z}\\) quite a lot throughout the computation of \\(h\\) and \\(f\\). For each policy parameter \\(\theta\\), you can cache the value of \\(\bold{Z}\\), L-U (/lower-triangular factored) and recombine them/invert them as needed to speed up computation. This ensures that you only calculate \\(\bold{Z}\\) once per step.
