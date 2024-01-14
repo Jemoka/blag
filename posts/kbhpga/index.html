@@ -12,17 +12,17 @@ subject to:
 T_{\theta}((x,s), (x&rsquo;,s&rsquo;)) = \sum_{a} \Psi(a | x) T(s&rsquo;|s,a) \sum_{o} O (o|a,s&rsquo;) \eta (x&rsquo;|x,a,o)
 \end{equation}</p><p>and</p><p>\begin{equation}
 R_{\theta}((x, s)) = \sum_{a} \Psi(a|x) R(s,a)
-\end{equation}</p><p>in which</p><ul><li>\(X\): a set of nodes (hidden, internal states)</li><li>\(\Psi(a|x)\): probability of taking an action</li><li>\(\eta(x&rsquo;|x,a,o)\) : transition probability between hidden states</li></ul><h2 id=optimization-formulation>Optimization Formulation</h2><p>For ease of notation in constructing this result, we declare:</p><p>\begin{equation}
-f(\theta) = \beta^{\top} (\bold{I} - \gamma \bold{T}_{\theta})^{-1} \bold{r}_{\theta}
-\end{equation}</p><p>and</p><p>\begin{equation}
-h_{i}(\theta) = \beta^{\top} (\bold{I} - \gamma \bold{T}_{\theta})^{-1} C_{i}
-\end{equation}</p><p>we formulate policy parameters \(\theta\) as a large stacked vector of the shape:</p><p>\begin{equation}
+\end{equation}</p><p>in which</p><ul><li>\(X\): a set of nodes (hidden, internal states)</li><li>\(\Psi(a|x)\): probability of taking an action</li><li>\(\eta(x&rsquo;|x,a,o)\) : transition probability between hidden states</li></ul><h2 id=optimization-formulation>Optimization Formulation</h2><p>we formulate policy parameters \(\theta\) as a large stacked vector of the shape:</p><p>\begin{equation}
 \theta = \mqty(\Psi(a_0 | x_0) \\ \Psi(a_1 | x_0) \\ \dots \\ \Psi(a_n | x_N) \\ \eta(x_0 | x_0, a_0, o_0) \\ \eta(x_1 | x_0, a_0, o_0) \\ \dots \\ \eta(x_N | x_N, a_n, o_f))
 \end{equation}</p><p>Let us define block diagonal matricies \(J_{\Psi}\) and \(J_{\eta}\), whereby:</p><p>\begin{equation}
 J_{\Psi} = \mqty(\bold{1}_{\Psi}^{\top} & \dots & \bold{0} \\ & \dots & \\ \bold{0} & \dots &\bold{1}_{\Psi}^{\top} )
 \end{equation}</p><p>where \(J_{\Psi} \in \mathbb{R}^{|X| \times (|A| \times |X|)}\) and each block part \(\bold{1}_{\Psi} \in \mathbb{R}^{|A|}\) represents a one-vector of length of the action space. You can see how multiplying a vector \(\qty[\Psi(a_0|x_0) \\ \dots \\ \Psi(a_n|x_N)]\) against this matrix should yield a \(1\) vector if each \(\Psi(\cdot | x_{i})\) is a probability distribution.</p><p>Similar, we define, \(J_{\eta}\) in a similar fashion to add the distributions over each \(\eta(\cdot | x, a, o)\).</p><p>This yields another block-block matrix</p><p>\begin{equation}
 J = \mqty(J_{\Psi} & 0 \\ 0 & J_{\eta})
-\end{equation}</p><p>for which we desire \(J\theta = 1\) in order to verify that the probability distributions are valid.</p><p>Lastly, let us define \(\bold{Z} = (\bold{I} - \gamma \bold{T}_{\theta})\)</p><p>Finally, this allows us to formulate the problem as a nonlinear optimization problem:</p><p>\begin{align}
+\end{equation}</p><p>for which we desire \(J\theta = 1\) in order to verify that the probability distributions are valid.</p><p>Lastly, let us define \(\bold{Z} = (\bold{I} - \gamma \bold{T}_{\theta})\). For ease of notation in constructing this result, we declare:</p><p>\begin{equation}
+f(\theta) = \beta^{\top} \bold{Z}^{-1} \bold{r}_{\theta}
+\end{equation}</p><p>and</p><p>\begin{equation}
+h_{i}(\theta) = \beta^{\top} \bold{Z}^{-1} C_{i}
+\end{equation}</p><p>Finally, this allows us to formulate the problem as a nonlinear optimization problem:</p><p>\begin{align}
 \max_{\theta}\ &amp;f(\theta) \\
 \text{such that}\ &amp;J\theta = 1 \\
 & \theta \geq 0 \\
