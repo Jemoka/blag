@@ -42,18 +42,6 @@ in which
 
 ## Optimization Formulation {#optimization-formulation}
 
-For ease of notation in constructing this result, we declare:
-
-\begin{equation}
-f(\theta) = \beta^{\top} (\bold{I} - \gamma \bold{T}\_{\theta})^{-1} \bold{r}\_{\theta}
-\end{equation}
-
-and
-
-\begin{equation}
-h\_{i}(\theta) = \beta^{\top} (\bold{I} - \gamma \bold{T}\_{\theta})^{-1} C\_{i}
-\end{equation}
-
 we formulate policy parameters \\(\theta\\) as a large stacked vector of the shape:
 
 \begin{equation}
@@ -78,7 +66,17 @@ J = \mqty(J\_{\Psi} & 0 \\\ 0 & J\_{\eta})
 
 for which we desire \\(J\theta = 1\\) in order to verify that the probability distributions are valid.
 
-Lastly, let us define \\(\bold{Z} = (\bold{I} - \gamma \bold{T}\_{\theta})\\)
+Lastly, let us define \\(\bold{Z} = (\bold{I} - \gamma \bold{T}\_{\theta})\\). For ease of notation in constructing this result, we declare:
+
+\begin{equation}
+f(\theta) = \beta^{\top} \bold{Z}^{-1} \bold{r}\_{\theta}
+\end{equation}
+
+and
+
+\begin{equation}
+h\_{i}(\theta) = \beta^{\top} \bold{Z}^{-1} C\_{i}
+\end{equation}
 
 Finally, this allows us to formulate the problem as a nonlinear optimization problem:
 
