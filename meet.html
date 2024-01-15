@@ -9,7 +9,14 @@
 Cal("init", {origin:"https://app.cal.com"});
 
 Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
-</script>
+  
+  // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+  // `data-cal-link="houjun/dinner"`
+  // data-cal-namespace="dinner"
+  // `data-cal-config='{"layout":"month_view"}'`
+  
+  Cal.ns.dinner("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
 <!-- Cal element-click embed code ends -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
