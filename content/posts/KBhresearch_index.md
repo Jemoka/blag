@@ -10,7 +10,7 @@ layout = "blank"
 
 I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). I'm interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****, specifically, in making large models solve cool problems through better algorithmic approaches, and exploring their applications.
 
-Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
+Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. Check out ****[my projects](#projects)**** below. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
 <div style="background-color: #f0f0f0; padding: 1px 10px; border-radius: 5px; margin-top: 20px">
 <div style="margin: 10px 0">
@@ -24,7 +24,7 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 </div>
 </div>
 
-Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [grab dinner with me](https://cal.com/houjun/dinner)!
+Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [grab dinner with me](https://cal.com/houjun/dinner) :)
 
 
 ## About {#about}
