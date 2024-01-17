@@ -14,3 +14,6 @@ draft = false
 6.  publication (editor and publisher should be named), is there a special interest group?
 7.  author's training and publicatino record
 8.  quality of argument (reasoning + evidence, quality of works cited)
+9.  can you find some of the info else where  in reputable sources?
+
+cite one additional source
