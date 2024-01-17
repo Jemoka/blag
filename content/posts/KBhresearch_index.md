@@ -6,7 +6,7 @@ draft = false
 layout = "blank"
 +++
 
-<h1 style="display:inline-block"> 👋 Heya, I'm Houjun Liu! </h1>
+<h1 style="display:inline-block"> 👋 Howdy, I'm Houjun Liu! </h1>
 
 I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Dr. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
