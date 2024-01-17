@@ -17,3 +17,5 @@ draft = false
 9.  can you find some of the info else where  in reputable sources?
 
 cite one additional source
+
+For instance, talk about Karios specifically
