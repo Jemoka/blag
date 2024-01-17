@@ -62,7 +62,7 @@ I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">Nueva (2022)</div>
 <div style="font-weight: 500">ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias</div>
 <div><u>Liu, H.</u>, Sayyah, Z.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag">Talk@SAI</span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag"><a  target="_top" href="https://github.com/jklsnt/dictembed">Code@GitHub</a></span><span class="tag">Talk@SAI</span></div>
 </div>
 
 <div style="padding: 15px 0">
