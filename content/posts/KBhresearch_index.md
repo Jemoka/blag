@@ -84,7 +84,7 @@ In industry, I lead the development of [Condution](https://www.condution.com/), 
 
 ## Course Notes {#course-notes}
 
-Some folks have mentioned that my course notes through classes at Stanford and before have been helpful. Feel free to browse my [Stanford UG Courses Index]({{< relref "KBhstanford_courses_index.md" >}}) if you want to check it out!
+Some folks have mentioned that my course notes through classes at Stanford and before have been helpful. Feel free to browse my [Stanford UG Courses Index](https://www.jemoka.com/posts/kbhstanford_courses_index/) if you want to check it out!
 
 <style>
 .tag {
