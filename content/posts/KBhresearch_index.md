@@ -16,8 +16,8 @@ I'm a first-year undergraduate student in the Computer Science Department at [St
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
 <span style="font-weight: 500">Feb. 26-27, 24'</span> <span>AAAI 2024! See y'all in Vancouver!</span>
 <span style="font-weight: 500">Dec. 15, 23'</span> <span>Paper (NACC) Accepted by W3PHAI-24</span>
-<span style="font-weight: 500">Dec. 3, 23'</span> <span>Released <a href="https://huggingface.co/talkbank/CHATUtterance-en">TalkBank Utterance Model</a></span>
-<span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/">Published</a> by JSLHR</span>
+<span style="font-weight: 500">Dec. 3, 23'</span> <span>Released <a  target="_top"  target="_top" href="https://huggingface.co/talkbank/CHATUtterance-en">TalkBank Utterance Model</a></span>
+<span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a  target="_top" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/"  target="_top">Published</a> by JSLHR</span>
 </div>
 </div>
 </div>
@@ -45,28 +45,28 @@ I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2023)</div>
 <div style="font-weight: 500">Automation of Language Sample Analysis</div>
 <div><u>Liu, H.</u>, MacWhinney, B., Fromm, D., Lanzi, A.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642">Journal Article@JSLHR</a></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642">Journal Article@JSLHR</a></span></div>
 </div>
 
 <div style="padding: 15px 0">
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2023)</div>
 <div style="font-weight: 500">DementiaBank: Theoretical Rationale, Protocol, and Illustrative Analyses</div>
 <div>Lanzi, A., Saylor, A.K., Fromm, D., <u>Liu, H.</u>, MacWhinney, B., Cohen, M.L. </div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://doi.org/10.1044/2022_AJSLP-22-00281">Journal Article@AJSLP</a></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1044/2022_AJSLP-22-00281">Journal Article@AJSLP</a></span></div>
 </div>
 
 <div style="padding: 15px 0">
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">Nueva (2022)</div>
 <div style="font-weight: 500">ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias</div>
 <div><u>Liu, H.</u>, Sayyah, Z.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag">Talk@SAI</span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag">Talk@SAI</span></div>
 </div>
 
 <div style="padding: 15px 0">
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">Preprint (2021)</div>
 <div style="font-weight: 500">Towards Automated Psychotherapy via Language Modeling</div>
 <div><u>Liu, H.</u></div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://arxiv.org/abs/2104.10661">arXiv</a></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://arxiv.org/abs/2104.10661">arXiv</a></span></div>
 </div>
 
 
@@ -95,4 +95,4 @@ border-bottom: 0 !important;
 }
 </style>
 
-<span style="font-size: 10px">© 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0. This website layout is inspired by the lovely homepage of <a href="https://kareldo.github.io/research">Karel D'Oosterlick</a>.</span>
+<span style="font-size: 10px">© 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0. This website layout is inspired by the lovely homepage of <a  target="_top" href="https://kareldo.github.io/research">Karel D'Oosterlick</a>.</span>
