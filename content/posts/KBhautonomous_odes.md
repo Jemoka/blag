@@ -15,6 +15,13 @@ for some \\(f\\) of one variables. Meaning, it only depends on the independent v
 This is a special class of [seperable diffequ]({{< relref "KBhseperable_diffequ.md" >}}).
 
 
+## autonomous ODEs level off at stationary curves {#autonomous-odes-level-off-at-stationary-curves}
+
+for autonomous ODEs can never level off at non-stationary points. Otherwise, that would be a stationary point.
+
+See [stability (ODEs)]({{< relref "KBhstability.md" >}})
+
+
 ## time-invariant expressions {#time-invariant-expressions}
 
 For forms by which:

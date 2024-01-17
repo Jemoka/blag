@@ -6,7 +6,7 @@ draft = false
 
 A stationary point of an [ODE]({{< relref "KBhordinary_differential_equations.md" >}}) is considered "stable" if, at the stationary point \\(y=c\\), the function with initial condition.
 
-For an autonomous ode \\(y'(t) = f(y(t))\\), suppose \\(y(t) = c\\) is a stationary solutiona:
+For an [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) \\(y'(t) = f(y(t))\\), suppose \\(y(t) = c\\) is a stationary solutiona:
 
 -   \\(c\\) is stable (i.e. \\(t\to \infty, y \to c\\) for \\(y\_0 \approx c\\)) if the graph of \\(f\\) near \\(c\\) crosses from positive to negative; that is, when \\(f'( c) < 0\\)
 -   \\(c\\) is unstable (i.e. \\(t\to -\infty, y \to c\\) for \\(y\_0 \approx c\\)) if the graph of \\(f\\) near \\(c\\) crosses from negative to positive; that is, when \\(f'(t) > 0\\)

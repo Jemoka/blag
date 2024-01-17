@@ -41,6 +41,9 @@ A general function here are not these cases.
 
 Mentally, we think of this structure on a \\(t,y\\) plane, where at each point \\((t,y)\\) the slope of the graph matches the slope given by \\(f(t,y)\\). To solve for the rest of the evolution, we consider an initial state of this system, say \\(y(1) = 3\\).
 
+-   **symbolic methods**: generally, you are the happiest when you find specific formulas for \\(y(t)\\).
+-   **qualitative methods**: for instance, slope fields
+
 
 ### [autonomous ODEs]({{< relref "KBhautonomous_odes.md" >}}) {#autonomous-odes--kbhautonomous-odes-dot-md}
 
@@ -50,6 +53,8 @@ This is a special case of these types of equations, called [autonomous ODEs]({{<
 y' = f(y)
 \end{equation}
 
+In most cases, this resolves into some \\(y(t) = T\_0+Ce^{-ht}\\).
+
 
 ### [seperable]({{< relref "KBhseperable_diffequ.md" >}}) {#seperable--kbhseperable-diffequ-dot-md}
 
@@ -57,4 +62,4 @@ y' = f(y)
 y' = f(y)g(t)
 \end{equation}
 
-generally, this can be solved with .
+generally, this can be solved with [division algorithm]({{< relref "KBhdivide.md#division-algorithm" >}}).
