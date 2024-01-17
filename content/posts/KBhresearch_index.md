@@ -45,7 +45,10 @@ I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2023)</div>
 <div style="font-weight: 500">Automation of Language Sample Analysis</div>
 <div><u>Liu, H.</u>, MacWhinney, B., Fromm, D., Lanzi, A.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642">Journal Article@JSLHR</a></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)">
+<span class="tag"><a  target="_top" href="https://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642">Journal Article@JSLHR</a></span>
+<span class="tag"><a  target="_top" href="https://github.com/talkbank/batchalign2">Code@GitHub</a></span>
+</div>
 </div>
 
 <div style="padding: 15px 0">
