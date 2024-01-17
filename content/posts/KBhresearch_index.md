@@ -1,165 +1,98 @@
 +++
-title = "Research Index"
+title = "Houjun's Academic Home Page"
 author = ["Houjun Liu"]
 tags = ["index"]
 draft = false
+layout = "blank"
 +++
 
-I have done various published academic research projects in the fields of natural language processing and science education. Specifically, I have an interest in textual data mining, semantic analysis, L2 acquisition, and flipped/alternative learning.
-
-
-## Computational Linguistics {#computational-linguistics}
-
-
-### ConDef/Dictembed {#condef-dictembed}
-
-Wikipedia is a surprisingly good dictionary, and so we can mine it for building context-aware dictionary. [Repository](https://github.com/jklsnt/dictembed), [Paper](https://link.springer.com/chapter/10.1007/978-3-031-10464-0_41).
-
-****Title****: ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias
-
-****Collaborators****: Zachary Sayyah - Nueva School
-
-****Status****: Accepted for Oral Presentation and Publication
-
-****Venue****: SAI 2022 Computing Conference
-
-****Abstract****: [ConDef Abstract]({{< relref "KBhcondef_abstract.md" >}})
-
-
-### Replier {#replier}
-
-Using a logistic-increase mechanism to slowly blend data to fine-tune a transformer for psychotherapy. [Repo](https://github.com/jemoka/replier), [Link](https://arxiv.org/abs/2104.10661).
-
-****Title****: Towards Automated Psychotherapy via Language ModelingTowards Automated Psychotherapy via Language Modeling
-
-****Collaborators****: solo project
-
-****Status****: Pre-Print
-
-****Venue****: Cornell ArXiV
-
-****Abstract****: [Replier Abstract]({{< relref "KBhreplier_abstract.md" >}})
-
-
-### Gregarious {#gregarious}
-
-Using BPE over a huge convolutional neural network with skip connections for highly-accurate identification of chat-bots on the internet. [Repo](https://github.com/jemoka/gregarious), [Link](https://www.preprints.org/manuscript/202004.0214/v1).
-
-****Title****: Byte-Pair and N-Gram Convolutional Methods of Analysing Automatically Disseminated Content on Social Platforms
-
-****Collaborators****: solo project
-
-****Status****: Pre-Print
-
-****Venue****: Open Science Foundation Preprints
-
-****Abstract****: [Gregarious Abstract]({{< relref "KBhgregarious_abstract.md" >}})
-
-
-### BRANDON/nsm {#brandon-nsm}
-
-Investigating into the [Natural Semantic Metalanguage]({{< relref "KBhnatural_semantic_metalanguage.md" >}}) theory, and how we can use deep-learning methods to deal with prooving/disprooving the [Lexicalist Hypothesis]({{< relref "KBhlexicalization_hypothesis.md" >}}). [Repo](https://github.com/Jemoka/BRANDON).
-
-****Collaborators****: Brandon Cho - Nueva School/Princeton
-
-Work-in-progress.
-
-
-### politisort {#politisort}
-
-Sorting and generating politically-motivated utterances. [Repo](https://github.com/PolitiSort/PolitiSort).
-
-****Collaborators****: Zachary Sayyah - Nueva School
-
-Work-in-progress.
-
-
-### dementia {#dementia}
-
-A task similar to [ADReSS Challenge]({{< relref "KBhadress_challenge.md" >}}), training on acoustic and possibly linguistic features. [internal link]({{< relref "KBhdementiabank_acoustics_project.md" >}})
-
-****Lab****: PsychLing - CMU Dietrich
-
-****PI****: Prof. [Brian MacWhinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
-
-Work-in-progress.
-
-
-### batchalign {#batchalign}
-
-Suite of software tools for the automatic transcription, tokenization, alignment, and morphosyntactical analysis of raw audio files. Main goal is to make the process of CHAT transcription entirely automated. [Repo](https://github.com/TalkBank/batchalign), [internal Link]({{< relref "KBhbatchalign.md" >}}).
-
-****Lab****: PsychLing - CMU Dietrich
-
-****PI****: Prof. [Brian MacWhinney]({{< relref "KBhbrian_macwinney.md" >}}) - CMU
-
-In Review
-
-
-## Machine Learning {#machine-learning}
-
-
-### Reinitialization on the Go {#reinitialization-on-the-go}
-
-Using singular value decomposition to reinitialize some behavior of weights as a regularization technique. Significant work-in-progress.
-
-****Collaborators****: Bodi - The Nueva School
-
-
-## Science Education {#science-education}
-
-
-### Project80 {#project80}
-
-A student-driven podcast protocol which trains students to digest scientific research. [Link](https://faseb.onlinelibrary.wiley.com/doi/10.1096/fasebj.2022.36.S1.L8013), [Internal Link]({{< relref "KBhproject80_abstract.md" >}}).
-
-****Title****: Project 80: a reproducible, student-driven framework for creating multimedia educational resources from primary literature
-
-****Collaborators****: Anoushka Krishnan, Micah Brown - Nueva School
-
-****Lab****: XRT - Nueva School
-
-****PI****: Paul Hauser, Luke De - Nueva School
-
-****Status****: Published
-
-****Venue****: EB2022/FASEB Journal
-
-****Abstract****: [Project80 Abstract]({{< relref "KBhproject80_abstract.md" >}})
-
-
-### Research@Nueva {#research-nueva}
-
-A student-lead, student-taught independent program that trains high-school students as researchers and facilitates publish-quality student research.
-
-****Title****: R@N: an Asynchronous, Student-Led Program to Train Students to Conduct Independent Research
-
-****Collaborators****: Michael, Flint, Kian, Vinca, Oliver, Zach, Albert - Nueva School
-
-****Lab****: XRT - Nueva School
-
-****PI****: Paul Hauser - Nueva School
-
-****Status****: Accepted
-
-****Venue****: DiscoverBMB2023/Journal of Biological Chemistry
-
-****Abstract****: [R@N Abstract]({{< relref "KBhr_n_abstract.md" >}})
-
-
-## Parallel Computing/Blockchain {#parallel-computing-blockchain}
-
-
-### Coveather {#coveather}
-
-See also [coveather]({{< relref "KBhprojects.md#coveather" >}}). [Link](https://arxiv.org/abs/2205.02753).
-
-****Title****: Encrypted, Anonymized System for Protected Health Information Verification Built via Proof of Stake
-
-****Collaborators****: solo project
-
-****Status****: Pre-Print and Oral Presentation at the California STEM Fair
-
-****Venue****: Cornell ArXiV
-
-****Abstract****: [Coveather Abstract]({{< relref "KBhcoveather_abstract.md" >}})
+<h1 style="display:inline-block"> 👋 Heya, I'm Houjun "Jack" Liu! </h1>
+
+I'm an undergrad student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Dr. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
+
+<div style="background-color: #f0f0f0; padding: 1px 10px; border-radius: 5px; margin-top: 20px">
+<div style="margin: 10px 0">
+<span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
+<div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
+<span style="font-weight: 500">Feb. 26-27, 24'</span> <span>AAAI 2024! See y'all in Vancouver!</span>
+<span style="font-weight: 500">Dec. 15, 23'</span> <span>Paper (NACC) Accepted by W3PHAI-24</span>
+<span style="font-weight: 500">Dec. 3, 23'</span> <span>Released <a href="https://huggingface.co/talkbank/CHATUtterance-en">TalkBank Utterance Model</a></span>
+<span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/">Published</a> by JSLHR</span>
+</div>
+</div>
+</div>
+
+Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [grab dinner with me](https://cal.com/houjun/dinner)!
+
+
+## Overview {#overview}
+
+I'm interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****, specifically, in making large models solve cool problems through better algorithmic approaches, and exploring their applications.
+
+I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU under the supervision of Prof. Brian MacWhinney, where I develop better [models](https://huggingface.co/talkbank/) and [tools](https://github.com/talkbank/batchalign2) for clinical language sample analysis. I also work with the Stanford NLP Group, under direction of Prof. Chris Manning, on using neural models to solve semantic and syntax tagging tasks efficiently with [Stanza](https://github.com/stanfordnlp/stanza). Finally, I am a research assistant with Prof. [Xin Liu](https://xinliu.engineering.ucdavis.edu/) at UC Davis and at [UC Davis Health](https://health.ucdavis.edu/alzheimers/), where I use transformer models to push our understanding of dementia. Previously, I worked as a consulting ML engineer at [Dragonfruit AI](https://www.dragonfruit.ai/) under the AI Operations team.
+
+
+## Projects {#projects}
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">UC Davis Health (2023)</div>
+<div style="font-weight: 500">A Transformer Approach to Congnitive Impairment Classification and Prediction</div>
+<div><u>Liu, H.</u>, Weakley, A.M., Zhang, J., Liu, X.</div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Talk@NACC</span><span class="tag">Short Paper@W3PHAI-24</span></div>
+</div>
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2023)</div>
+<div style="font-weight: 500">Automation of Language Sample Analysis</div>
+<div><u>Liu, H.</u>, MacWhinney, B., Fromm, D., Lanzi, A.</div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642">Journal Article@JSLHR</a></span></div>
+</div>
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2023)</div>
+<div style="font-weight: 500">DementiaBank: Theoretical Rationale, Protocol, and Illustrative Analyses</div>
+<div>Lanzi, A., Saylor, A.K., Fromm, D., <u>Liu, H.</u>, MacWhinney, B., Cohen, M.L. </div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://doi.org/10.1044/2022_AJSLP-22-00281">Journal Article@AJSLP</a></span></div>
+</div>
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Nueva (2022)</div>
+<div style="font-weight: 500">ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias</div>
+<div><u>Liu, H.</u>, Sayyah, Z.</div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag">Talk@SAI</span></div>
+</div>
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Preprint (2021)</div>
+<div style="font-weight: 500">Towards Automated Psychotherapy via Language Modeling</div>
+<div><u>Liu, H.</u></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a href="https://arxiv.org/abs/2104.10661">arXiv</a></span></div>
+</div>
+
+
+## Teaching {#teaching}
+
+-   2023- Teaching Assistant, Stanford Association for Computing Machinery (ACM) Chapter
+-   2022-2023 Head TA (co-instructor and summer lecturer) at [AIFS AIBridge](https://www.jemoka.com/posts/kbhaibridge_course_website/), a program funded by UC Davis Food Science
+
+
+## Course Notes {#course-notes}
+
+Some folks have mentioned that my course notes through classes at Stanford and before have been helpful. Feel free to browse my [Stanford UG Courses Index]({{< relref "KBhstanford_courses_index.md" >}}) if you want to check it out!
+
+<style>
+.tag {
+font-size: 13px;
+margin: 0 10px;
+margin-left: 0;
+cursor: default;
+}
+.tag > a {
+border: 0 !important;
+}
+.tag > a:hover {
+border-bottom: 0 !important;
+}
+</style>
+
+<span style="font-size: 10px">© 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0. This website layout is inspired by the lovely homepage of <a href="https://kareldo.github.io/research">Karel D'Oosterlick</a>.</span>

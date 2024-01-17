@@ -62,3 +62,10 @@ which we compute over all actions and observations \\(a,o\\) given our \\(\Gamma
 ## Randomized [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}) {#randomized-pbvi--kbhpoint-based-value-iteration-dot-md}
 
 At every point, we drop the contents of the set \\(B\\) which had an improvement and come up with a piecewise series of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s which had an improvement over each \\(b\\).
+
+
+### Perseus backup {#perseus-backup}
+
+sample a belief point \\(b\\) uniformly at random, and compute \\(\alpha' = backup(b)\\). Once you do, check the value given to each of the beliefs; if it has improved, we don't need to run backup for that belief anymore. If there are no improvement, don't add \\(\alpha\\) into the action set.
+
+{{< figure src="/ox-hugo/2024-01-16_10-00-40_screenshot.png" >}}
