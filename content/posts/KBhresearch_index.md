@@ -77,6 +77,7 @@ I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU
 
 -   2023- Teaching Assistant, Stanford Association for Computing Machinery (ACM) Chapter
 -   2022-2023 Head TA (co-instructor and summer lecturer) at [AIFS AIBridge](https://www.jemoka.com/posts/kbhaibridge_course_website/), a program funded by UC Davis Food Science
+-   2021-2023 Co-Developer, Research@Nueva, a high-school science education program
 
 
 ## Course Notes {#course-notes}
