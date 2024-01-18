@@ -70,3 +70,62 @@ this is called [indirect addressing](#inode-modes)
 [indirect addressing](#inode-modes) uses more steps to get to the data, and requires more blocks to get to the block numbers.
 
 in **large mode**, this system can store \\((7+256) \cdot (256 \cdot 512) = 34MB\\), which is as large as the file system itself, which is fine now.
+
+
+## Directory {#directory}
+
+Folders! Directory is a container that contains files, folders, directories, etc.! Its a **file container**.
+
+-   All files ultimately live within root directory `/`.
+-   Absolute paths start with root directory, and gets you to the file.
+-   Relative paths start at the current folder, and gets you to the file
+
+File names are **NOT** stored within the inode. They are stored in directories.
+
+Unix stores 16 byte unsorted "directory entires" to represent directories:
+
+
+### Directory Entries {#directory-entries}
+
+```C
+struct dirent {
+    uint16_t d_inumber; // inode number of this file
+    char d_name[14]; // the name; *NOT NECESSARILY NULL TERMINATED*
+}
+```
+
+**THE NAME MAY NOT BE NULL TERMINATED** to cram max things. You have to use **strncmp** because it may not be terminated.
+
+
+### Lookup {#lookup}
+
+Start at the root directory, `/`. We want to go to the root directory, and find the entry named `/classes/`, and then, in that directory, find the file. etc. Traverse recursively. Directory could have metadata.
+
+A directory is basically just a **file whose payload is a list of `dirent`**.
+
+The inode tells you whether something is a file or a directory. They can be small or large, as usual. Root directory always have inode number `1`; `0` is reserved to NULL.
+
+Because the directory entries are not sorted, in each direcotry the find is a linear search.
+
+
+## Key Points {#key-points}
+
+-   **modularity**: subdivision of a system into a collection of smaller systems
+-   **layers**: layer several modules over each other
+-   **name resolution**: system resolves human friendly name to machine friendly names
+-   **visualization**: making one thing look like another
+
+Overall theme: _multi-level index_
+
+
+### Advantages {#advantages}
+
+-   can access all block numbers for a file
+-   still supports easy sequential access
+-   easy to grow files
+
+
+### Disadvantages {#disadvantages}
+
+-   lots of linear directory search
+-

@@ -26,3 +26,5 @@ Set of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s: [best-action worst-
 -   select an action \\(a^{\*}\\) and observation \\(o^{\*}\\) to further our search
 -   selects the child not which has the most uncertainty to root node \\(b\\)
 -   if your belief has a zero value, don't calculate alpha vector
+
+{{< figure src="/ox-hugo/2024-01-18_09-21-19_screenshot.png" >}}

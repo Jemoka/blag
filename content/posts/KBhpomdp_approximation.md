@@ -26,7 +26,9 @@ Faster:
 Slower:
 
 -   [Point-Based Value Iteration]({{< relref "KBhpoint_based_value_iteration.md" >}})
--   [Randomized PBVI]({{< relref "KBhpoint_based_value_iteration.md#randomized-pbvi--kbhpoint-based-value-iteration-dot-md" >}})
+    -   "Perseus": [Randomized PBVI]({{< relref "KBhpoint_based_value_iteration.md#randomized-pbvi--kbhpoint-based-value-iteration-dot-md" >}})
+-   [HSVI]({{< relref "KBhhsvi.md" >}})
+-   [SARSOP]({{< relref "KBhsarsop.md" >}})
 
 
 ## point selection {#point-selection}
