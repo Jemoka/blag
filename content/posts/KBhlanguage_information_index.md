@@ -25,6 +25,7 @@ What makes language modeling hard: **resolving ambiguity is hard**.
         -   [lemmatization]({{< relref "KBhlemmatization.md" >}}) through [morphological parsing]({{< relref "KBhmorphological_parsing.md" >}})
         -   only take stems from morphemes: [porter stemmer]({{< relref "KBhmorphological_parsing.md#porter-stemmer" >}})
     -   [sentence segmentation]({{< relref "KBhsentence_segmentation.md" >}})
+-   [N-Grams]({{< relref "KBhn_grams.md" >}})
 
 
 ### Edit Distance {#edit-distance}
@@ -34,3 +35,16 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 -   [minimum edit distance]({{< relref "KBhminimum_edit_distance.md" >}})
     -   [weighted edit distance]({{< relref "KBhweighted_edit_distance.md" >}})
 -   [backtracing]({{< relref "KBhbacktracing.md" >}})
+
+
+### Ngrams {#ngrams}
+
+-   [N-Grams]({{< relref "KBhn_grams.md" >}})
+-   [Markov Assumption]({{< relref "KBhn_grams.md#markov-assumption" >}})
+    -   [Unigrams]({{< relref "KBhn_grams.md#unigrams" >}})
+    -   [Backoff]({{< relref "KBhn_grams.md#backoff" >}}) and [Stupid Backoff]({{< relref "KBhn_grams.md#stupid-backoff" >}})
+    -   [Interpolation]({{< relref "KBhn_grams.md#interpolation" >}})
+    -   [OOV Words]({{< relref "KBhn_grams.md#oov-words" >}})
+-   [Model Evaluation]({{< relref "KBhmodel_evaluation.md" >}})
+    -   [perplexity]({{< relref "KBhperplexity.md" >}})
+    -   [open vocabulary]({{< relref "KBhn_grams.md#oov-words" >}})

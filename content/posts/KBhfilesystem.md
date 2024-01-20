@@ -67,4 +67,4 @@ there is a few ways to do this:
 -   [linked files]({{< relref "KBhlinked_files.md" >}})
 -   [Windows FAT]({{< relref "KBhwindows_fat.md" >}})
 -   [File Payload Data]({{< relref "KBhfile_payload_data.md" >}})
--   [Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}}): [inode]({{< relref "KBhunix_v6_filesystem.md" >}})
+-   [Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}}): [inode]({{< relref "KBhunix_v6_filesystem.md" >}}), [block](#block), [Block Cache]({{< relref "KBhunix_v6_filesystem.md#block-cache" >}})

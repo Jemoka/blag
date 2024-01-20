@@ -49,4 +49,8 @@ How can we design file systems to manage files on disk, and what are the tradeof
 
 -   [filesystem]({{< relref "KBhfilesystem.md" >}})
     -   [Unix V6 Filesystem]({{< relref "KBhunix_v6_filesystem.md" >}})
+        -   [Freelist]({{< relref "KBhunix_v6_filesystem.md#freelist" >}}) and [Block Cache]({{< relref "KBhunix_v6_filesystem.md#block-cache" >}})
 -   [disk]({{< relref "KBhfilesystem.md#disk" >}})
+-   [crash recovery]({{< relref "KBhcrash_recovery.md" >}})
+    -   [fsck]({{< relref "KBhcrash_recovery.md#fsck" >}})
+    -   [ordered writes]({{< relref "KBhcrash_recovery.md#ordered-writes" >}})

@@ -128,4 +128,54 @@ Overall theme: _multi-level index_
 ### Disadvantages {#disadvantages}
 
 -   lots of linear directory search
--
+
+
+## Caching {#caching}
+
+
+### Freelist {#freelist}
+
+
+#### Linked List {#linked-list}
+
+Linked list of free-blocks
+
+
+#### Bitmap {#bitmap}
+
+Take a bit for every block in the disk, if its 1, its free. If 0, its not free. This allows _locality_: data likely used next is closed by, we can search local, continuous spaces.
+
+**problem**: as the disk becomes full, we have to search basically \\(O(n)\\) for each bit until we find the free block---as the disk fills up, it becomes harder to find free space.
+
+**solution**: lie to the user. don't let the disk used up. grantee that there are some free space at all times. we typically reserve \\(10\\%\\).
+
+
+### Block Cache {#block-cache}
+
+Getting blocks is very expensive. We can keep blocks around in memory because we may need to use them in the near future.
+
+We will use part of the main memory to retain recently-accessed disk blocks. This is **NOT** at the granularity of individual files.
+
+
+#### LRU {#lru}
+
+When you insert a new element into the cache, kick out the element on the cache that hasn't been touched in the longest time.
+
+
+#### Block Cache Modification {#block-cache-modification}
+
+we can either **write asap**, or **delay**.
+
+<!--list-separator-->
+
+-  write asap
+
+    -   **safer**: less risk of data loss, written as soon as possible
+    -   **slow**: program must wait to proceed until disk I/O completes
+
+<!--list-separator-->
+
+-  write delay
+
+    -   **dangerous**: may loose data after crash
+    -   **efficient**: memory writes is faster

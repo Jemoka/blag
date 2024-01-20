@@ -12,6 +12,8 @@ Formally---
     \mathbb{C} = \left\\{a+bi\ \middle |\ a,b \in \mathbb{R} \right\\}
 \end{equation}
 
+This set generates solutions to every single polynomial with unique solutions. Its plane looks like \\(\mathbb{R}^{2}\\).
+
 
 ## constituents {#constituents}
 
