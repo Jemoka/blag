@@ -17,7 +17,7 @@ the [order](#order-of-equations) of an equation is the highest derivative of an 
 
 ### linear vs. non-linear differential equations {#linear-vs-dot-non-linear-differential-equations}
 
-A solution of a differential equation is **linear** when solutions are under linear operations.
+A solution of a differential equation is **linear** when solutions are [closed]({{< relref "KBhclosed.md" >}}) under linear operations.
 
 We can spot an ODE by seeing that each of its derivatives are seperated or in separable terms, and only to the first power---because that ends up being a linear equation (i.e. any two solutions satisfying the equation can add and scale to another solution).
 
@@ -33,6 +33,18 @@ is linear.
 #### superposition principle {#superposition-principle}
 
 any linear combination of a _homogeneous linear_ ODE is also a solution to the ODE.
+
+<!--list-separator-->
+
+-  functional linear independence
+
+    Recall linear independence. If we have two solutions \\(y\_1\\), \\(y\_2\\), are [linearly independent]({{< relref "KBhlinear_independence.md" >}}) or "[independent]({{< relref "KBhprobability.md#independence" >}})", if
+
+    \begin{equation}
+    c\_1 y\_1(t) + c\_2y\_2(t) = 0
+    \end{equation}
+
+    implies \\(c\_1 = c\_2 = 0\\).
 
 
 ### homogeneous vs. inhomogeneous equations {#homogeneous-vs-dot-inhomogeneous-equations}

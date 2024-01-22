@@ -54,3 +54,6 @@ How can we design file systems to manage files on disk, and what are the tradeof
 -   [crash recovery]({{< relref "KBhcrash_recovery.md" >}})
     -   [fsck]({{< relref "KBhcrash_recovery.md#fsck" >}})
     -   [ordered writes]({{< relref "KBhcrash_recovery.md#ordered-writes" >}})
+    -   [journaling]({{< relref "KBhcrash_recovery.md#journaling" >}}): [write-ahead logging]({{< relref "KBhcrash_recovery.md#journaling" >}})
+-   [syscalls]({{< relref "KBhsyscalls.md" >}})
+    -   [kernel mode]({{< relref "KBhsyscalls.md#kernel-mode" >}})

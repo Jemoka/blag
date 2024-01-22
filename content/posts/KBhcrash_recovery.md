@@ -16,6 +16,17 @@ Ideally, filesystem operations should be **atomic**. Every operation should happ
 Case study: [Block Cache Modification]({{< relref "KBhunix_v6_filesystem.md#block-cache-modification" >}})
 
 
+## Tradeoffs {#tradeoffs}
+
+The overall design tradeoffs between this:
+
+-   durability - the data needs to be safe (which is slow, and may require manual crash recovery (sans cache, etc.))
+-   performance - it needs to be fast (which may mean less error checking)
+-   consistency - the filesystem needs to be uniform (which means that we need to be slower and we may drop data in favor of previous checkpoints that worked)
+
+Also the disks themselves can still fail.
+
+
 ## fsck {#fsck}
 
 Don't make any changes to filesystem at all. At the system boot time, check filesystem for consistency.
@@ -64,17 +75,83 @@ We can use a certain **order** of operations to prevent these types of errors fr
 
 1.  Always initialize the **TARGET** before initializing the **REFERENCE**
     -   Initialize inode before initalize directory entry to it
-2.  Never reuse a resource before nullifying all existing references
-    -   Remove the inode reference before putting a block on the fre list
-3.  Never clear the last reference to a live resource before setting a new reference ("its better to have 2 copies instead of none")
+2.  Never reuse a resource before **NULLIFYING** all existing ****REFERENCES****
+    -   Remove the inode reference before putting a block on the free list
+3.  Never clear the ****LAST REFERENCE**** to a live resource before setting a ****NEW REFERENCE**** ("its better to have 2 copies instead of none")
     -   Make the new directory entry before get rid of the old one
 
 ---
 
 Limitations:
 
--   By default it obviates the block cache because it forces an order, and the block cache is in any order
-    -   Solution: make the block cache store the operations' order, so during commits it will do them eventually
-    -   Because this forces some synchronous writes---keeping track of dependencies in the block to rememberer what order we do them.
--   It could leak resources
+-   **performance**: we need to do operations synchronously
+    -   if we really want to do caching async, we can track dependencies
+    -   circular dependencies are possible
+-   ****leak****: it could leak resources (reference nullification happens but resource not added)
     -   We can run fsck in the background
+
+
+## journaling {#journaling}
+
+[journaling](#journaling) keeps a paper trail of disk appertains in the event of a crash. We have an append-only log on disk that stores disk operations.
+
+-   before performing an operation, record its info in the log
+-   and write that to disk
+
+The log will always record what's happening ahead. The actual block updates can eventually be carried out in any order.
+
+
+### what do we log? {#what-do-we-log}
+
+-   we only log **metadata** changes (inodes, moving stuff around, etc.)
+-   payload operations are not saved
+
+
+### structure {#structure}
+
+We typically have a LSN: log serial number, operations, and metadata.
+
+\#+begin_src toml
+[offset 335050]
+LSN 18384030
+operation = "LogBlockAlloc"
+blockno = 1027
+zero_on_replay = 0
+
+[offset 23232]
+LSN N
+operation = "LogPatch"
+blockno = 8
+offset = 137
+bytes = 0.04
+inode = 52
+\#+end_arc
+
+
+### limitations {#limitations}
+
+
+#### checkpoints {#checkpoints}
+
+Its an add-only paper trial. We can truncate the log occasionally at a "checkpoint", and truncate the log which is no longer needed.
+
+
+#### multiple log entries {#multiple-log-entries}
+
+An atomic operations may have multiple log entries corresponding to it (because they have many steps). We need to make sure that the entire operation is replayed or none at all.
+
+So, we introduce **transactions**: each atomic operation will be wrapped into a unit transaction.
+
+
+#### where do we start replaying {#where-do-we-start-replaying}
+
+You don't know where **exactly** you crashed.
+
+So, log entries should be **idempotent**: doing something multiple times should have the same effect of doing them once. To make this happen, we need to cache all the data that's needed to write to the log in the log itself. It cannot have external dependencies.
+
+
+#### log entries may take time {#log-entries-may-take-time}
+
+We can also make log entry writes in the block cache too. This doesn't matter too much: if both the log and the actual data is wiped from the cache, the filesystem is **still consistent** (we just lost data).
+
+When finally we write stuff to disk, we write the logs first. So no problems there.

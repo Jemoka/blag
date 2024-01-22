@@ -38,6 +38,20 @@ The [ODE]({{< relref "KBhordinary_differential_equations.md" >}}) \\(y' = f(t,y)
 
 That is: for every single point on a solution space of an [IVP]({{< relref "KBhinitial_value_problems.md" >}}), each point is covered one solution and only one solution. Its possible for that function to diverge beyond that point.
 
+---
+
+This is also true for second order differential equations (its written as linear homogenous constant coeffiicient; but its true generally for 2nd order IVPs):
+
+\begin{equation}
+\begin{cases}
+y'' + ay' +by = 0 \\\\
+y(t\_0) = y\_0 \\\\
+y'(t\_0) = y'\_{0}
+\end{cases}
+\end{equation}
+
+will have one and only one solution per \\(y\_0\\), \\(y\_0'\\).
+
 
 ## auxiliary constants {#auxiliary-constants}
 
