@@ -98,4 +98,4 @@ This two-sided dynamic comes to a head with the [language of war](#framing-ai-sa
 
 ### The Claim {#the-claim}
 
-Choi uses the language of antagonism to victimize AI language models and, by proxy, the audience wanting the help the victimized AI---placing both groups at a "war" of disenfranchisement against big-tech model developers. This dynamic allowing Choi to justify her research as the intellectual savior which empowers the fight of humanity in this "war" she constructs.
+Choi uses the language of antagonism to victimize AI language models and, by proxy, the audience wanting the help the victimized AI---placing both groups at a "war" of disenfranchisement against big-tech model developers. This dynamic allowing Choi to justify her research as the intellectual savior which empowers the fight of humanity in this "war".

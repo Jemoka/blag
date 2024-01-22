@@ -11,6 +11,27 @@ a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}
 
 
+## homogeneous constant-coefficient second order linear ODE {#homogeneous-constant-coefficient-second-order-linear-ode}
+
+in the homogeneous case, we have some:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+and it arises that there's a pair of solutions \\(y\_1(t)\\) and \\(y\_2(t)\\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \\(\lambda^{2} + a\lambda + b = 0\\).
+
+The specific coefficients \\(c\_1\\) and \\(c\_2\\) of the linear combination arises out of the initial conditons, which is the same measurement given at the initial time and its derivative: \\(y(t\_0)\\) and \\(y'(t\_0)\\).
+
+Specifically, it arises out of solutions of the shape:
+
+\begin{equation}
+y(t) = c\_1 e^{\lambda\_{1}t} + c\_2e^{\lambda\_{2}t}
+\end{equation}
+
+where \\(\lambda\_{1}\\) and \\(\lambda\_{2}\\) are solutions to the characteristic polynomial above. For why exactly this is, see [method of undetermined coefficients](#method-of-undetermined-coefficients).
+
+
 ## solving homogeneous higher-order differential equations {#solving-homogeneous-higher-order-differential-equations}
 
 This problem because easier if the right side is \\(0\\).

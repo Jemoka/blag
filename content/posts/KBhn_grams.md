@@ -54,6 +54,19 @@ P(w\_1, \dots, w\_{n}) \approx \prod\_{i}P(w\_{i} | w\_{i-k} \dots w\_{i-1})
 The simplest [Markov Assumption](#markov-assumption) is unigrams, which will be word salad generation because it has no understanding of language structure.
 
 
+### Naive Bays Language Modeling {#naive-bays-language-modeling}
+
+You can consider each class in Naive Bayes \\(P(word | c)\\) as a language model.
+
+So:
+
+\begin{equation}
+P(sentence|c) = \prox\_{i}P(word\_{i}|c)
+\end{equation}
+
+Each class is a separate class-conditioned language model. So, we just want to compute the probability of each sentence, and classify the sentence based on the higher probability result.
+
+
 ## Limitations {#limitations}
 
 In general, n gram models are limited because they don't consider long distance dependencies which are present in English.

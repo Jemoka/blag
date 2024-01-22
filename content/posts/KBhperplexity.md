@@ -27,7 +27,7 @@ PP (W) = P(w\_1 w\_2 \dots w\_{n})^{-\frac{1}{N}}
 Specifically,
 
 \begin{equation}
-PP (W) = N \sqrt{\frac{1}{P(w\_1, \dots w\_{n}})}
+PP (W) = N \sqrt{\frac{1}{P(w\_1, \dots w\_{n)}}}
 \end{equation}
 
 Notably, perplexity is inverse of probability. We want the lowest entropy possible, i.e. the highest likelihood possible. Therefore, the range of perplexity is \\([1, \infty]\\). We therefore want to **minimize perplexity**.

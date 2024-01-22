@@ -48,3 +48,16 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 -   [Model Evaluation]({{< relref "KBhmodel_evaluation.md" >}})
     -   [perplexity]({{< relref "KBhperplexity.md" >}})
     -   [open vocabulary]({{< relref "KBhn_grams.md#oov-words" >}})
+
+
+### Text Classification {#text-classification}
+
+-   [Text Classification]({{< relref "KBhtext_classification.md" >}})
+    -   [Bag of Words]({{< relref "KBhbag_of_words.md" >}})
+    -   [Naive Bayes]({{< relref "KBhnaive_bayes.md" >}})
+    -   [Naive Bayes for Text Classification]({{< relref "KBhbag_of_words.md#naive-bayes-for-text-classification" >}})
+        -   [Binary Naive Bayes]({{< relref "KBhbag_of_words.md#binary-naive-bayes" >}})
+    -   [Lexicon]({{< relref "KBhlexicon.md" >}})
+-   [Naive Bays Language Modeling]({{< relref "KBhn_grams.md#naive-bays-language-modeling" >}})
+-   [Harmonic Mean]({{< relref "KBhharmonic_mean.md" >}})
+    -   [Macroaverage]({{< relref "KBhmacroaverage.md" >}}) and [Microaverage]({{< relref "KBhmacroaverage.md" >}})
