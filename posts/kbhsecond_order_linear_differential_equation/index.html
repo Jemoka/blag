@@ -6,13 +6,44 @@ homogeneous constant-coefficient second order linear ODE in the homogeneous case
 and it arises that there&rsquo;s a pair of solutions \(y_1(t)\) and \(y_2(t)\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \(\lambda^{2} + a\lambda + b = 0\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#homogeneous-constant-coefficient-second-order-linear-ode>homogeneous constant-coefficient second order linear ODE</a></li><li><a href=#solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Second-Order Linear Differential Equations</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#homogeneous-constant-coefficient-second-order-linear-ode>homogeneous constant-coefficient second order linear ODE</a><ul><li><a href=#finding-independent--kbhprobability-dot-md--solutions-of-second-order-constant-coefficient-linear-odes>finding <a href=HAHAHUGOSHORTCODE949s1HBHB>independent</a> solutions of second-order constant-coefficient linear ODEs</a></li><li><a href=#linear-shifts>Linear Shifts</a></li><li><a href=#more-generally>More Generally</a></li></ul></li><li><a href=#solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</a></li><li><a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a></li></ul></nav></aside><main><article><div><p>Here&rsquo;s a general form:</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}</p><h2 id=homogeneous-constant-coefficient-second-order-linear-ode>homogeneous constant-coefficient second order linear ODE</h2><p>in the homogeneous case, we have some:</p><p>\begin{equation}
 y&rsquo;&rsquo; + ay&rsquo; + by = 0
-\end{equation}</p><p>and it arises that there&rsquo;s a pair of solutions \(y_1(t)\) and \(y_2(t)\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \(\lambda^{2} + a\lambda + b = 0\).</p><p>The specific coefficients \(c_1\) and \(c_2\) of the linear combination arises out of the initial conditons, which is the same measurement given at the initial time and its derivative: \(y(t_0)\) and \(y&rsquo;(t_0)\).</p><p>Specifically, it arises out of solutions of the shape:</p><p>\begin{equation}
+\end{equation}</p><p>and it arises that there&rsquo;s a pair of solutions \(y_1(t)\) and \(y_2(t)\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \(\lambda^{2} + a\lambda + b = 0\).</p><p>The specific coefficients \(c_1\) and \(c_2\) of the linear combination arises out of the initial conditons, which is the same measurement given at the initial time and its derivative: \(y(t_0)\) and \(y&rsquo;(t_0)\). It comes out of <a href=/posts/kbhlinear_algebra_errors/>Linear Algebra</a> why there is exactly two initial values.</p><p>Specifically, it arises out of solutions of the shape:</p><p>\begin{equation}
 y(t) = c_1 e^{\lambda_{1}t} + c_2e^{\lambda_{2}t}
-\end{equation}</p><p>where \(\lambda_{1}\) and \(\lambda_{2}\) are solutions to the characteristic polynomial above. For why exactly this is, see <a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a>.</p><h2 id=solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
+\end{equation}</p><p>where \(\lambda_{1}\) and \(\lambda_{2}\) are solutions to the characteristic polynomial above. For why exactly this is, see <a href=#method-of-undetermined-coefficients>method of undetermined coefficients</a>.</p><h3 id=finding-independent--kbhprobability-dot-md--solutions-of-second-order-constant-coefficient-linear-odes>finding <a href=/posts/kbhprobability/#independence>independent</a> solutions of second-order constant-coefficient linear ODEs</h3><p>Given some:</p><p>\begin{equation}
+y&rsquo;&rsquo; + ay&rsquo; + by = 0
+\end{equation}</p><p>we desire to find two <a href=/posts/kbhprobability/#independence>independent</a> solutions. After which, by <a href=/posts/kbhordinary_differential_equations/#superposition-principle>superposition principle</a>, we know that any <a href=/posts/kbhlinear_combination/>linear combination</a>s will yield a solution.</p><hr><p>Aside, consider:</p><p>\begin{equation}
+y&rsquo;&rsquo; = y
+\end{equation}</p><p>we see that both \(y=e^{t}\) and \(y=e^{-t}\) are solutions. We can see that this is independent by setting up:</p><p>\begin{equation}
+c_1 e^{t} + c_2 e^{-t} = 0
+\end{equation}</p><p>which, multiplying through by \(e^{t}\) and dividing, we obtain:</p><p>\begin{equation}
+e^{2t} = -\frac{c_2}{c_1}
+\end{equation}</p><p>Now, the right side is constant, and the left is not. So the only way this can be true is if the right side is identically zero.</p><h3 id=linear-shifts>Linear Shifts</h3><p>Consider the case where you are given initial conditions:</p><p>\begin{equation}
+\begin{cases}
+y&rsquo;&rsquo; - y = 0 \\
+y(5) = -2 \\
+y&rsquo;(5) = 5
+\end{cases}
+\end{equation}</p><p>instead of bothering to solve this, we define:</p><p>\begin{equation}
+Y(t) = y(t+5)
+\end{equation}</p><p>and it still hold that:</p><p>\begin{equation}
+Y&rsquo;&rsquo; - Y = 0
+\end{equation}</p><p>because the derivatives don&rsquo;t actually change.</p><p>Then, after solving, we can just translate it back:</p><p>\begin{equation}
+y(t) = Y(t-5)
+\end{equation}</p><h3 id=more-generally>More Generally</h3><p>Consider:</p><p>\begin{equation}
+y&rsquo;&rsquo; + ay&rsquo; + by = 0
+\end{equation}</p><p>let us guess that \(y = e^{\lambda t}\)</p><p>recall that, in that case:</p><p>\begin{equation}
+\begin{cases}
+y&rsquo; = \lambda e^{\lambda t} \\
+y&rsquo;&rsquo; = \lambda^{2} e^{\lambda t}
+\end{cases}
+\end{equation}</p><p>plugging this back in:</p><p>\begin{equation}
+\lambda^{2} e^{\lambda t} + a \lambda e^{\lambda t} + b e^{\lambda t} = 0
+\end{equation}</p><p>which is:</p><p>\begin{equation}
+(\lambda^{2} + a\lambda +b ) e^{\lambda t} = 0
+\end{equation}</p><p>because the right side is never zero, we need the left side \((\lambda^{2} + a\lambda +b )\) is zero.</p><p>Note that there exists three seperate cases:</p><ul><li>\(a^{2}-4b > 0\), two exact solutions: \(e^{\lambda_{1}t}\) and \(e^{\lambda_{2} t}\), these two are independent functions as long as \(\lambda_{1} \neq \lambda_{2}\)</li><li>\(a^{2}-4b &lt; 0\), which will yield imaginary solutions, recall <a href=/posts/kbheuler_s_equation/>Euler&rsquo;s Equation</a>, you can split \(e^{ikx}\) into a superposition of \(\cos (x) + i\sin (x)\), each of which individually is a solution</li></ul><h2 id=solving-homogeneous-higher-order-differential-equations>solving homogeneous higher-order differential equations</h2><p>This problem because easier if the right side is \(0\).</p><p>\begin{equation}
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = 0
 \end{equation}</p><p>The general goal to solve in this case is to make this a system of <a href=/posts/kbhlinear_non_seperable_equation/#solving-differential-equations>First-Order Differential Equations</a>.</p><p>To do this, we begin by making:</p><p>\begin{equation}
 y = \dv{x}{t}
