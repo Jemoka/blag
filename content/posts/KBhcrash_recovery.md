@@ -149,6 +149,8 @@ You don't know where **exactly** you crashed.
 
 So, log entries should be **idempotent**: doing something multiple times should have the same effect of doing them once. To make this happen, we need to cache all the data that's needed to write to the log in the log itself. It cannot have external dependencies.
 
+So we just replay the entire log. To save time every so often you trim the logs via [checkpoints](#checkpoints)
+
 
 #### log entries may take time {#log-entries-may-take-time}
 
