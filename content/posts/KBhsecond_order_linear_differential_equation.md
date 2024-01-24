@@ -65,7 +65,7 @@ e^{2t} = -\frac{c\_2}{c\_1}
 Now, the right side is constant, and the left is not. So the only way this can be true is if the right side is identically zero.
 
 
-### Linear Shifts {#linear-shifts}
+#### Linear Shifts {#linear-shifts}
 
 Consider the case where you are given initial conditions:
 
@@ -98,7 +98,7 @@ y(t) = Y(t-5)
 \end{equation}
 
 
-### More Generally {#more-generally}
+#### Solution, more generally {#solution-more-generally}
 
 Consider:
 
@@ -131,10 +131,45 @@ which is:
 
 because the right side is never zero, we need the left side \\((\lambda^{2} + a\lambda +b )\\) is zero.
 
-Note that there exists three seperate cases:
+Note that there exists three separate cases:
 
 -   \\(a^{2}-4b > 0\\), two exact solutions: \\(e^{\lambda\_{1}t}\\) and \\(e^{\lambda\_{2} t}\\), these two are independent functions as long as \\(\lambda\_{1} \neq \lambda\_{2}\\)
--   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution
+-   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution. You can break this up into the case of some real \\(e^{-at}\\) multiplied by sinusoldial functions.
+-   for \\(a^{2}-4b = 0\\), we yield some solution \\(e^{-\frac{a}{2} t}\\), and the solution is \\(t e^{-\frac{a}{2}t}\\). because this is the limit of the first solution \\(\lim\_{\lambda\_{2} \to \lambda\_{1}}\frac{e^{\lambda\_{2}t} - e^{\lambda\_{1}t}}{\lambda\_{2} - \lambda\_{2}}\\)
+
+<!--list-separator-->
+
+-  All 2nd order solution is a linear combination
+
+    In fact, all solutions carry the form of the two solutions:
+
+    \begin{equation}
+    c\_1 y\_1(t) + c\_2 y\_2(t) = y(t)
+    \end{equation}
+
+    This is because, consider the initial form \\(y\_1(t\_0)\\), and \\(y\_2(t\_0)\\):
+
+    \begin{equation}
+    \begin{cases}
+    y\_1(t\_0) c\_1 + y\_2(t\_0) c\_2 = y(t\_0) \\\\
+    y\_1'(t\_0) c\_1 + y\_2'(t\_0) c\_2 = y'(t\_0) \\\\
+    \end{cases}
+    \end{equation}
+
+    This is the same as the matrix equation:
+
+    \begin{equation}
+    \mqty(y\_1(t\_0) & y\_2(t\_0) \\\ y\_1'(t\_0) & y\_2'(t\_0)) \mqty(c\_1 \\\ c\_2) = \mqty(y(t\_0) \\\ y'(t\_0))
+    \end{equation}
+
+    So, this map is surjective.
+
+
+#### [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}}) of second order {#uniqueness-and-existance--kbhuniqueness-and-existance-dot-md--of-second-order}
+
+The uniqueness is also guaranteed with [one and exactly one solution exist for every initial condition of an IVP]({{< relref "KBhinitial_value_problems.md#one-and-exactly-one-solution-exist-for-every-initial-condition-of-an-ivp" >}}). Unlike first order ODE, solutions can cross: because the uniq and exi. is only guaranteed for the same **point** AND **slope** (i.e. the initial condition).
+
+So solutions can cross, they just can't be tangent.
 
 
 ## solving homogeneous higher-order differential equations {#solving-homogeneous-higher-order-differential-equations}

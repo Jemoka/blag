@@ -21,7 +21,8 @@ draft = false
 
 -   [finding independent solutions of second-order constant-coefficient linear ODEs]({{< relref "KBhsecond_order_linear_differential_equation.md#finding-independent--kbhprobability-dot-md--solutions-of-second-order-constant-coefficient-linear-odes" >}})
 -   [homogeneous constant-coefficient second order linear ODE]({{< relref "KBhsecond_order_linear_differential_equation.md#homogeneous-constant-coefficient-second-order-linear-ode" >}})
--   for second order, this is also true: [one and exactly one solution exist for every point of an IVP]({{< relref "KBhinitial_value_problems.md#one-and-exactly-one-solution-exist-for-every-point-of-an-ivp" >}})
+-   ****[Uniqueness and Existance of second order]({{< relref "KBhsecond_order_linear_differential_equation.md#id-24ec5541-9b12-4521-b698-014711a2c762-uniqueness-and-existance-of-second-order" >}})****
+-   [superposition principle]({{< relref "KBhordinary_differential_equations.md#superposition-principle" >}})
 
 
 ## Questions {#questions}

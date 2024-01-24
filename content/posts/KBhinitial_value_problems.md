@@ -32,7 +32,7 @@ To do this, we simply have to plug in the initial value and solve for our consta
 this requires two initial conditions to fully specify (because two variables becomes constant and goes away).
 
 
-## one and exactly one solution exist for every point of an IVP {#one-and-exactly-one-solution-exist-for-every-point-of-an-ivp}
+## one and exactly one solution exist for every initial condition of an IVP {#one-and-exactly-one-solution-exist-for-every-initial-condition-of-an-ivp}
 
 The [ODE]({{< relref "KBhordinary_differential_equations.md" >}}) \\(y' = f(t,y)\\) with initial condition \\(y(t\_0) = y\_0\\), where, \\(f\\) has to be continuous in some maximal interval \\(t,y\\), and differentiable in \\(y\\), has a unique solution on some [maximal interval]({{< relref "KBhmaximal_interval.md" >}}) of \\(t\\).
 

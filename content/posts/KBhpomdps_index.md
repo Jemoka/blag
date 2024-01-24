@@ -12,6 +12,7 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | Applications    | [POMDSoar]({{< relref "KBhkolobov_2018.md#pomdsoar" >}}),                                                                                                                                                                     | [Guilliard 2018]({{< relref "KBhkolobov_2018.md" >}}), [Wang 2023]({{< relref "KBhwang_2023.md" >}}), [Bouton 2018]({{< relref "KBhbouton_2018.md" >}}) |
 | Offline Solvers | [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}), [HSVI]({{< relref "KBhhsvi.md" >}}), [Randomized PBVI]({{< relref "KBhpoint_based_value_iteration.md#randomized-pbvi--kbhpoint-based-value-iteration-dot-md" >}}) | [Pineau 2006]({{< relref "KBhpineau_2006.md" >}}), [Spaan 2005]({{< relref "KBhspaan_2005.md" >}}), [Smith]({{< relref "KBhsmith.md" >}})               |
 | Offline Solvers | [SARSOP]({{< relref "KBhsarsop.md" >}}), [E-PCA]({{< relref "KBhe_pca.md" >}}), [CALP]({{< relref "KBhcalp.md" >}})                                                                                                           |                                                                                                                                                         |
+| Policy Graphs   | [Hansen]({{< relref "KBhhansen.md" >}}), [MCVI]({{< relref "KBhmcvi.md" >}}), [PGA]({{< relref "KBhpga.md" >}})                                                                                                               |                                                                                                                                                         |
 
 
 ## Other Content {#other-content}
@@ -49,3 +50,26 @@ SEPARATE: email, to-do list, calendar
 ### Writing a Paper {#writing-a-paper}
 
 Jennifer Widom: how to write a paper
+
+
+### Packages to Use {#packages-to-use}
+
+
+#### Plots {#plots}
+
+"using matlab to screenshot a plot is... an automatic F. If you want to have A quality work, you can use pgfplot. Or you can use a pgfplots backend."
+
+```python
+import tikzplotlib
+```
+
+
+#### Tables {#tables}
+
+No vertical linens
+
+<http://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf>
+
+\toprule
+
+Possibly: PGFPlotsTable.
