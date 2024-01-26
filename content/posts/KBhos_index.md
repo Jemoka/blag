@@ -58,5 +58,14 @@ How can we design file systems to manage files on disk, and what are the tradeof
 -   [syscalls]({{< relref "KBhsyscalls.md" >}})
     -   [kernel mode]({{< relref "KBhsyscalls.md#kernel-mode" >}})
     -   files handling
-        -   [file]({{< relref "KBhsyscalls.md#file" >}})
+        -   [file]({{< relref "KBhsyscalls.md#open" >}})
         -   [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}})
+
+
+### multiprocessing {#multiprocessing}
+
+How are programs run, how to spawn subprograms, and how they work in general?
+
+-   [multiprocessing]({{< relref "KBhmultiprocessing.md" >}})
+-   [fork]({{< relref "KBhfork.md" >}})
+-   [shell]({{< relref "KBhfork.md#shell" >}})

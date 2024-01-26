@@ -6,12 +6,8 @@ draft = false
 
 ## Underdetermined ODEs {#underdetermined-odes}
 
-[Underdetermined ODE System]({{< relref "KBhunderdetermined_ode_system.md" >}})
-
-Review:
-
-
-## The Following Tasks are In Sequence {#the-following-tasks-are-in-sequence}
+-   [Complex ODE System]({{< relref "KBhunderdetermined_ode_system.md" >}})
+-   [Matrix Exponentiation]({{< relref "KBhmatrix_exponentiation.md" >}})
 
 
 ### Finding [eigenvector]({{< relref "KBheigenvalue.md" >}})s {#finding-eigenvector--kbheigenvalue-dot-md--s}
