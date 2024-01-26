@@ -1,0 +1,48 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Complex ODE System</title>
+<meta name=description content="\begin{equation} \begin{cases} x_1&rsquo; = 5x_1 - 5x_2 \\ x_2&rsquo; = 2x_1 -x_2 \end{cases} \end{equation}
+This gives rise to:
+\begin{equation} A = \mqty(5 & -5 \\ 2 &-1) \end{equation}
+Solving the characteristic polynomial gives:
+\begin{equation} (5-\lambda)(-1-\lambda) + 10 = \lambda^{2} - 4\lambda +5 \end{equation}
+Therefore, our solutions are imaginary!
+\begin{equation} \lambda_{1}, \lambda_{2} = 2 \pm i \end{equation}
+Aside: we only need to deal with one
+Notably, anything that satisfies the original polynomial, its conjugates also satisfies:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Complex ODE System</h1><span class=tagbox></span></div><main><article><div><p>\begin{equation}
+\begin{cases}
+x_1&rsquo; = 5x_1 - 5x_2 \\
+x_2&rsquo; = 2x_1 -x_2
+\end{cases}
+\end{equation}</p><p>This gives rise to:</p><p>\begin{equation}
+A = \mqty(5 & -5 \\ 2 &-1)
+\end{equation}</p><p>Solving the <a href=/posts/kbhcharacteristic_polynomial/>characteristic polynomial</a> gives:</p><p>\begin{equation}
+(5-\lambda)(-1-\lambda) + 10 = \lambda^{2} - 4\lambda +5
+\end{equation}</p><p>Therefore, our solutions are <strong>imaginary!</strong></p><p>\begin{equation}
+\lambda_{1}, \lambda_{2} = 2 \pm i
+\end{equation}</p><hr><p>Aside: we only need to deal with one</p><p>Notably, anything that satisfies the original polynomial, its conjugates also satisfies:</p><p>\begin{equation}
+\bar{\lambda^{2}-4\lambda +5} = 0= {\bar{\lambda}}^{2} - 4\bar{\lambda} + 5
+\end{equation}</p><p>Further, for some:</p><p>\begin{equation}
+Av = \lambda v
+\end{equation}</p><p>we have:</p><p>\begin{equation}
+A \bar{v} = \lambda \bar{v}
+\end{equation}</p><p>meaning if we just figured the eigenvector of one of the lambdas we are good</p><hr><p>Now, let us consider the case before with \(\lambda = 2 +i\). We therefore have:</p><p>\begin{equation}
+\mqty(3-i & -5 \\ 2 & -3-i) \mqty(a \\ b) = \mqty(0 \\ 0)
+\end{equation}</p><p>This gives one particular null space, such as:</p><p>\begin{equation}
+v = \mqty(5 \\ 3-i)
+\end{equation}</p><p>This gives rise to:</p><p>\begin{equation}
+u&rsquo; = (2+i)u
+\end{equation}</p><p>which means:</p><p>\begin{equation}
+u(t) = ce^{(2+i)t}
+\end{equation}</p><p>finally, resulting in:</p><p>\begin{equation}
+x(t) = ce^{(2+i)t} \mqty(5 \\ 3-i)
+\end{equation}</p><p>which is a particular solution. Now, the general solution would tack on a complex conjugate, which doesn&rsquo;t actually add any new information.</p><p>Instead, we can actually use Euler to break this into two, independent, and equally valid solutions:</p><p>\begin{equation}
+x(t) = e^{2t} \qty(\cos t + i \sin t) \qty( \mqty(5 \\3) - i \mqty(0 \\ 1))
+\end{equation}</p><p>finally, we obtain:</p><p>\begin{equation}
+x(t) = e^{2t} \qty( \cos t \mqty(5 \\ 1) + \sin t \mqty(0 \\1)) + i e^{2t} \qty( \sin t \mqty(5 \\ 1) - \cos t \mqty(0 \\1))
+\end{equation}</p><p>each of which individual is a solution:</p><p>\begin{equation}
+x_1(t) =e^{2t} \qty( \cos t \mqty(5 \\ 1) + \sin t \mqty(0 \\1))
+\end{equation}</p><p>and:</p><p>\begin{equation}
+x_2(t) = e^{2t} \qty( \sin t \mqty(5 \\ 1) - \cos t \mqty(0 \\1))
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>

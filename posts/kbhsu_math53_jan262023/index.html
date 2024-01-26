@@ -1,0 +1,39 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATh53 JAN262023</title>
+<meta name=description content="Underdetermined ODEs Underdetermined ODE System
+Review:
+The Following Tasks are In Sequence Finding eigenvectors \(A = n \times n\) matrix, the task of finding eigenvalues and eigenvectors is a linear algebra problem:
+\begin{equation} A v = \lambda v \end{equation}
+Finding specific solutions to IVPs with special substitution For some:
+\begin{equation} \begin{cases} x&rsquo; = Ax \\ x(t_0) = x_0 \end{cases} \end{equation}
+we can leverage the first task:
+find \(v\), \(\lambda\) for \(A\) guess \(x = u(t)v\), this is &ldquo;magical substitution&rdquo; and now, we can see that \(x&rsquo; = u&rsquo;v = A(uv) = \lambda u v\) meaning \(u&rsquo; = \lambda u\) finaly, \(u(t) = ce^{\lambda} t\) Eigenbasis case Suppose \(A\) has a basis of eigenvectors, and real eigenvalues."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATh53 JAN262023</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#underdetermined-odes>Underdetermined ODEs</a></li><li><a href=#the-following-tasks-are-in-sequence>The Following Tasks are In Sequence</a><ul><li><a href=#finding-eigenvector--kbheigenvalue-dot-md--s>Finding <a href=HAHAHUGOSHORTCODE1105s1HBHB>eigenvector</a>s</a></li><li><a href=#finding-specific-solutions-to-ivp--kbhinitial-value-problems-dot-md--s-with-special-substitution>Finding specific solutions to <a href=HAHAHUGOSHORTCODE1105s2HBHB>IVP</a>s with special substitution</a></li><li><a href=#eigenbasis-case>Eigenbasis case</a></li></ul></li><li><a href=#practice-solving>Practice Solving</a></li></ul></nav></aside><main><article><div><h2 id=underdetermined-odes>Underdetermined ODEs</h2><p><a href=/posts/kbhunderdetermined_ode_system/>Underdetermined ODE System</a></p><p>Review:</p><h2 id=the-following-tasks-are-in-sequence>The Following Tasks are In Sequence</h2><h3 id=finding-eigenvector--kbheigenvalue-dot-md--s>Finding <a href=/posts/kbheigenvalue/>eigenvector</a>s</h3><p>\(A = n \times n\) matrix, the task of finding eigenvalues and eigenvectors is a linear algebra problem:</p><p>\begin{equation}
+A v = \lambda v
+\end{equation}</p><h3 id=finding-specific-solutions-to-ivp--kbhinitial-value-problems-dot-md--s-with-special-substitution>Finding specific solutions to <a href=/posts/kbhinitial_value_problems/>IVP</a>s with special substitution</h3><p>For some:</p><p>\begin{equation}
+\begin{cases}
+x&rsquo; = Ax \\
+x(t_0) = x_0
+\end{cases}
+\end{equation}</p><p>we can leverage the first task:</p><ol><li>find \(v\), \(\lambda\) for \(A\)</li><li>guess \(x = u(t)v\), this is &ldquo;magical substitution&rdquo;</li><li>and now, we can see that \(x&rsquo; = u&rsquo;v = A(uv) = \lambda u v\)</li><li>meaning \(u&rsquo; = \lambda u\)</li><li>finaly, \(u(t) = ce^{\lambda} t\)</li></ol><h3 id=eigenbasis-case>Eigenbasis case</h3><p>Suppose \(A\) has a basis of <a href=/posts/kbheigenvalue/>eigenvector</a>s, and <strong>real</strong> eigenvalues. We can write its entire solution set in terms of these basis eigenvectors:</p><p>\begin{equation}
+x(t) = u_1(t) v_1 + \dots + u_{n}(t) v_{n}
+\end{equation}</p><p>this means:</p><p>\begin{equation}
+x&rsquo;(t) = Ax = u_1&rsquo; v_1 + \dots +u_{n} &rsquo; v_{n} = \lambda_{1} u_{1} v_1 + \dots + \lambda_{n} u_{n} v_{n}
+\end{equation}</p><p>Because \(v\) forms a basis, each \(u_j&rsquo; = \lambda_{j} u_{j}\).</p><p>We thereby decomposed our entangled expression seperably by changing into eigenbasis.</p><p>After solving each \(u\), we obtain:</p><p>\begin{equation}
+x(t) = c_1 e^{\lambda_{1}} v_1 + \dots + c_{n} e^{\lambda_{n}} v_{n}
+\end{equation}</p><p>We can identify \(c_{j}\) by noting, that \(x(0)\) resolves to:</p><p>\begin{equation}
+x(0) = c_1v_1 + \dots + c_{n}v_{n}
+\end{equation}</p><p>Finally, we can write this as:</p><p>\begin{equation}
+x(0) = x_0 = \mqty[v_1 & \dots & v_{n}] c
+\end{equation}</p><p>Meaning, we can solve for initial conditions as:</p><p>\begin{equation}
+\mqty[v_1 & \dots & v_{n}]^{-1} x_0 = c
+\end{equation}</p><h2 id=practice-solving>Practice Solving</h2><p>Let:</p><p>\begin{equation}
+A = \mqty(0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0)
+\end{equation}</p><p>We have two eigenspaces:</p><p>\begin{equation}
+\lambda = -1, v = \left\{\mqty(-1 \\ 1 \\ 0), \mqty(0 \\ 1 \\ -1)\right\}
+\end{equation}</p><p>and</p><p>\begin{equation}
+\lambda = 2, v = \left\{\mqty(1 \\ 1 \\ 1)\right\}
+\end{equation}</p><p>This gives rise to a basis of eigenvectors with all three vectors. We obtain:</p><p>\begin{equation}
+x(t) = c_1 e^{-t} \mqty(-1 \\ 1\\0) + c_2 \mqty(0 \\ 1 \\ -1) e^{-t} + c_3 \mqty(1 \\ 1 \\ 1) e^{2t}
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
