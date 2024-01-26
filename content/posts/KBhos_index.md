@@ -57,3 +57,6 @@ How can we design file systems to manage files on disk, and what are the tradeof
     -   [journaling]({{< relref "KBhcrash_recovery.md#journaling" >}}): [write-ahead logging]({{< relref "KBhcrash_recovery.md#journaling" >}})
 -   [syscalls]({{< relref "KBhsyscalls.md" >}})
     -   [kernel mode]({{< relref "KBhsyscalls.md#kernel-mode" >}})
+    -   files handling
+        -   [file]({{< relref "KBhsyscalls.md#file" >}})
+        -   [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}})

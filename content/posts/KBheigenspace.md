@@ -16,7 +16,7 @@ The [eigenspace]({{< relref "KBheigenspace.md" >}}) of \\(T, \lambda\\) is the s
 ## requirements {#requirements}
 
 \begin{equation}
-E(\lambda, T) = \null (T - \lambda I)
+E(\lambda, T) = \text{null}\ (T - \lambda I)
 \end{equation}
 
 i.e. all vectors such that \\((T- \lambda I) v = 0\\).

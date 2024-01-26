@@ -134,7 +134,7 @@ because the right side is never zero, we need the left side \\((\lambda^{2} + a\
 Note that there exists three separate cases:
 
 -   \\(a^{2}-4b > 0\\), two exact solutions: \\(e^{\lambda\_{1}t}\\) and \\(e^{\lambda\_{2} t}\\), these two are independent functions as long as \\(\lambda\_{1} \neq \lambda\_{2}\\)
--   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution. You can break this up into the case of some real \\(e^{-at}\\) multiplied by sinusoldial functions.
+-   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution. You can break this up into the case of some real \\(e^{-at}\\) multiplied by sinusoldial functions.--- whereby \\(e^{at} (\cos(bt) \pm i\sin(bt))\\), we can break into two functions \\(y\_1 = e^{at}\cos (bt), y\_2= e^{at}i \sin (bt)\\).
 -   for \\(a^{2}-4b = 0\\), we yield some solution \\(e^{-\frac{a}{2} t}\\), and the solution is \\(t e^{-\frac{a}{2}t}\\). because this is the limit of the first solution \\(\lim\_{\lambda\_{2} \to \lambda\_{1}}\frac{e^{\lambda\_{2}t} - e^{\lambda\_{1}t}}{\lambda\_{2} - \lambda\_{2}}\\)
 
 <!--list-separator-->

@@ -14,7 +14,7 @@ Successor function is **deterministic**.
 Use FST as policy representation:
 
 1.  [finite state controller evaluation]({{< relref "KBhcontroller.md#finite-state-controller-evaluation" >}})
-2.  for all (a,o,x), add a now node x' and evaluate them to see if its needed
+2.  for all \\((a,o,x)\\), add a now node x' and evaluate them to see if its needed
 3.  then, we perform pruning
     -   everything that's dominated (i.e. \\(U(x,s) < U(x', s) \forall s\\). i.e. we want to prune everything for which the expected utility of being in node \\(x'\\) dominates the expected utility of \\(x\\) for all \\(x\\).
     -   prune new nodes that are duplicates in terms of action and transitions

@@ -13,6 +13,7 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | Offline Solvers | [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}), [HSVI]({{< relref "KBhhsvi.md" >}}), [Randomized PBVI]({{< relref "KBhpoint_based_value_iteration.md#randomized-pbvi--kbhpoint-based-value-iteration-dot-md" >}}) | [Pineau 2006]({{< relref "KBhpineau_2006.md" >}}), [Spaan 2005]({{< relref "KBhspaan_2005.md" >}}), [Smith]({{< relref "KBhsmith.md" >}})               |
 | Offline Solvers | [SARSOP]({{< relref "KBhsarsop.md" >}}), [E-PCA]({{< relref "KBhe_pca.md" >}}), [CALP]({{< relref "KBhcalp.md" >}})                                                                                                           |                                                                                                                                                         |
 | Policy Graphs   | [Hansen]({{< relref "KBhhansen.md" >}}), [MCVI]({{< relref "KBhmcvi.md" >}}), [PGA]({{< relref "KBhpga.md" >}})                                                                                                               |                                                                                                                                                         |
+| Online Solvers  | [AEMS]({{< relref "KBhaems.md" >}}), [POMCP]({{< relref "KBhpomcp.md" >}}), [DESPOT]({{< relref "KBhdespot.md" >}})                                                                                                           |                                                                                                                                                         |
 
 
 ## Other Content {#other-content}
@@ -72,4 +73,29 @@ No vertical linens
 
 \toprule
 
-Possibly: PGFPlotsTable.
+Possibly: PGFPlotsTable. TikZ.
+
+
+#### Algos {#algos}
+
+algorithmicx
+
+
+#### Captions {#captions}
+
+subcaptions
+
+
+#### Units {#units}
+
+siunitx
+
+
+#### Code {#code}
+
+minted, or---code executation---pythontex
+
+
+#### References {#references}
+
+"cleveref": tell you what it is, and give you back with the "Fig. #N" informatino.

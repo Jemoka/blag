@@ -208,3 +208,8 @@ where, \\(A,B,C \in \mathcal{L}(V)\\)
 ### invertable matricies {#invertable-matricies}
 
 Let \\(T \in \mathcal{L}(V)\\) be [invertable]({{< relref "KBhinvertability.md" >}}). If \\(\lambda\\) is an [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(T\\), then \\(\frac{1}{\lambda}\\) is an [eigenvalue]({{< relref "KBheigenvalue.md" >}}) of \\(T\\). Furthermore, \\(T\\) and \\(T^{-1}\\) share [eigenvector]({{< relref "KBheigenvalue.md" >}})s with eigenvalues \\(\lambda\\) and \\(\frac{1}{\lambda}\\)
+
+
+### symmetric matricies have a real basis of eigenvalues {#symmetric-matricies-have-a-real-basis-of-eigenvalues}
+
+this falls out of the real [spectral theorem]({{< relref "KBhaxler_7_a.md#complex-spectral-theorem" >}}).
