@@ -127,6 +127,10 @@ bytes = 0.04
 inode = 52
 \#+end_arc
 
+"zero-on-replay":
+
+> Specifies that block number blockno, which was previously free, should now be marked as allocated (0 or false in the freemap). If zero_on_replay is non-zero, it means that the block is being used for metadata---i.e., as an indirect (or double-indirect) block, or for a directory.
+
 
 ### limitations {#limitations}
 

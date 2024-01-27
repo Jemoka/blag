@@ -81,16 +81,81 @@ P(Y=y|X=x) = \sigma(\theta^{\top}x)^{y} (1-\sigma(\theta^{\top}x))^{1-y}
 
 for all \\(x,y\\).
 
----
 
-Detour. To maximize this, we need to eventually take a derivative of:
+## Logistic Regression, in general {#logistic-regression-in-general}
+
+For some input, output pair, \\((x,y)\\), we map each input \\(x^{(i)}\\)  into a vector of length \\(n\\) where \\(x^{(i)}\_{1} ...  x^{(i)}\_{n}\\).
+
+
+### Training {#training}
+
+We are going to learn weights \\(w\\) and \\(b\\) using stochastic gradient descent; and measure our performance using cross-entropy loss
+
+
+### Test {#test}
+
+Given a test example \\(x\\), we compute \\(p(y|x)\\) for each \\(y\\), returning the label with the highest probability.
+
+
+## Logistic Regression Text Classification {#logistic-regression-text-classification}
+
+Given a series of input/output pairs of text to labels, we want to assign a predicted class to a new input fair.
+
+We represent each text in terms of features. Each feature \\(x\_{i}\\) comes with some weight \\(w\_{i}\\), informing us of the importance of feature \\(x\_{i}\\).
+
+So: input is a vector \\(x\_1 ... x\_{n}\\), and some weights \\(w\_1 ... w\_{n}\\), which will eventually gives us an output.
+
+There is usually also a bias term \\(b\\). Eventually, classification gives:
 
 \begin{equation}
-\sigma(\theta^{\top} x)
+z = w \cdot x + b
 \end{equation}
 
-with respect to each \\(\theta\_{j}\\), to do this, recall chain rule:
+However, this does **not** give a probability, which by default this does not. To fix this, we apply a squishing function \\(\sigma\\), which gives
 
 \begin{equation}
-\pdv{\sigma(\theta^{\top}x)}{\theta\_{j}} =
+\sigma(z) = \frac{1}{1+\exp(-z)}
 \end{equation}
+
+which ultimately yields:
+
+\begin{equation}
+z = \sigma(w \cdot x+ b)
+\end{equation}
+
+with the [sigmoid]({{< relref "KBhsigmoid.md" >}}) function.
+
+To make this sum to \\(1\\), we write:
+
+\begin{equation}
+p(y=1) = \sigma(w \cdot x + b)
+\end{equation}
+
+and
+
+\begin{equation}
+p(y=0) = 1- p(y=1)
+\end{equation}
+
+Also, recall that \\(\sigma(-x) = 1- \sigma(x)\\), this gives:
+
+\begin{equation}
+p(y=0) = \sigma(-w\cdot x-b)
+\end{equation}
+
+the probability at which point we make a decision is called a [decision boundary](#logistic-regression-text-classification). Typically this is 0.5.
+
+We can featurize by counts from a lexicon, by word counts, etc.
+
+For instance:
+
+{{< figure src="/ox-hugo/2024-01-26_19-26-16_screenshot.png" >}}
+
+
+### Weight gradient for logistic regresison {#weight-gradient-for-logistic-regresison}
+
+\begin{equation}
+\pdv{L\_{CE}(\hat(y), y)}{w\_{j}} = \qty[\sigma\qty(w \cdot x + b) -y] x\_{j}
+\end{equation}
+
+where \\(x\_{j}\\) is feature \\(j\\).

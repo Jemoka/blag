@@ -10,166 +10,10 @@ Here's a general form:
 a\dv[2]{x}{t} + b \dv{x}{t} + cx = f(t)
 \end{equation}
 
+see:
 
-## homogeneous constant-coefficient second order linear ODE {#homogeneous-constant-coefficient-second-order-linear-ode}
-
-in the homogeneous case, we have some:
-
-\begin{equation}
-y'' + ay' + by = 0
-\end{equation}
-
-and it arises that there's a pair of solutions \\(y\_1(t)\\) and \\(y\_2(t)\\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \\(\lambda^{2} + a\lambda + b = 0\\).
-
-The specific coefficients \\(c\_1\\) and \\(c\_2\\) of the linear combination arises out of the initial conditons, which is the same measurement given at the initial time and its derivative: \\(y(t\_0)\\) and \\(y'(t\_0)\\). It comes out of [Linear Algebra]({{< relref "KBhlinear_algebra_errors.md" >}}) why there is exactly two initial values.
-
-Specifically, it arises out of solutions of the shape:
-
-\begin{equation}
-y(t) = c\_1 e^{\lambda\_{1}t} + c\_2e^{\lambda\_{2}t}
-\end{equation}
-
-where \\(\lambda\_{1}\\) and \\(\lambda\_{2}\\) are solutions to the characteristic polynomial above. For why exactly this is, see [method of undetermined coefficients](#method-of-undetermined-coefficients).
-
-
-### finding [independent]({{< relref "KBhprobability.md#independence" >}}) solutions of second-order constant-coefficient linear ODEs {#finding-independent--kbhprobability-dot-md--solutions-of-second-order-constant-coefficient-linear-odes}
-
-Given some:
-
-\begin{equation}
-y'' + ay' + by = 0
-\end{equation}
-
-we desire to find two [independent]({{< relref "KBhprobability.md#independence" >}}) solutions. After which, by [superposition principle]({{< relref "KBhordinary_differential_equations.md#superposition-principle" >}}), we know that any [linear combination]({{< relref "KBhlinear_combination.md" >}})s will yield a solution.
-
----
-
-Aside, consider:
-
-\begin{equation}
-y'' = y
-\end{equation}
-
-we see that both \\(y=e^{t}\\) and \\(y=e^{-t}\\) are solutions. We can see that this is independent by setting up:
-
-\begin{equation}
-c\_1 e^{t} + c\_2 e^{-t} = 0
-\end{equation}
-
-which, multiplying through by \\(e^{t}\\) and dividing, we obtain:
-
-\begin{equation}
-e^{2t} = -\frac{c\_2}{c\_1}
-\end{equation}
-
-Now, the right side is constant, and the left is not. So the only way this can be true is if the right side is identically zero.
-
-
-#### Linear Shifts {#linear-shifts}
-
-Consider the case where you are given initial conditions:
-
-\begin{equation}
-\begin{cases}
-y'' - y = 0 \\\\
-y(5) = -2 \\\\
-y'(5) = 5
-\end{cases}
-\end{equation}
-
-instead of bothering to solve this, we define:
-
-\begin{equation}
-Y(t) = y(t+5)
-\end{equation}
-
-and it still hold that:
-
-\begin{equation}
-Y'' - Y = 0
-\end{equation}
-
-because the derivatives don't actually change.
-
-Then, after solving, we can just translate it back:
-
-\begin{equation}
-y(t) = Y(t-5)
-\end{equation}
-
-
-#### Solution, more generally {#solution-more-generally}
-
-Consider:
-
-\begin{equation}
-y'' + ay' + by = 0
-\end{equation}
-
-let us guess that \\(y = e^{\lambda t}\\)
-
-recall that, in that case:
-
-\begin{equation}
-\begin{cases}
-y' = \lambda e^{\lambda t} \\\\
-y'' = \lambda^{2} e^{\lambda t}
-\end{cases}
-\end{equation}
-
-plugging this back in:
-
-\begin{equation}
-\lambda^{2} e^{\lambda t} + a \lambda e^{\lambda t} + b e^{\lambda t} = 0
-\end{equation}
-
-which is:
-
-\begin{equation}
-(\lambda^{2} + a\lambda +b ) e^{\lambda t} = 0
-\end{equation}
-
-because the right side is never zero, we need the left side \\((\lambda^{2} + a\lambda +b )\\) is zero.
-
-Note that there exists three separate cases:
-
--   \\(a^{2}-4b > 0\\), two exact solutions: \\(e^{\lambda\_{1}t}\\) and \\(e^{\lambda\_{2} t}\\), these two are independent functions as long as \\(\lambda\_{1} \neq \lambda\_{2}\\)
--   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution. You can break this up into the case of some real \\(e^{-at}\\) multiplied by sinusoldial functions.--- whereby \\(e^{at} (\cos(bt) \pm i\sin(bt))\\), we can break into two functions \\(y\_1 = e^{at}\cos (bt), y\_2= e^{at}i \sin (bt)\\).
--   for \\(a^{2}-4b = 0\\), we yield some solution \\(e^{-\frac{a}{2} t}\\), and the solution is \\(t e^{-\frac{a}{2}t}\\). because this is the limit of the first solution \\(\lim\_{\lambda\_{2} \to \lambda\_{1}}\frac{e^{\lambda\_{2}t} - e^{\lambda\_{1}t}}{\lambda\_{2} - \lambda\_{2}}\\)
-
-<!--list-separator-->
-
--  All 2nd order solution is a linear combination
-
-    In fact, all solutions carry the form of the two solutions:
-
-    \begin{equation}
-    c\_1 y\_1(t) + c\_2 y\_2(t) = y(t)
-    \end{equation}
-
-    This is because, consider the initial form \\(y\_1(t\_0)\\), and \\(y\_2(t\_0)\\):
-
-    \begin{equation}
-    \begin{cases}
-    y\_1(t\_0) c\_1 + y\_2(t\_0) c\_2 = y(t\_0) \\\\
-    y\_1'(t\_0) c\_1 + y\_2'(t\_0) c\_2 = y'(t\_0) \\\\
-    \end{cases}
-    \end{equation}
-
-    This is the same as the matrix equation:
-
-    \begin{equation}
-    \mqty(y\_1(t\_0) & y\_2(t\_0) \\\ y\_1'(t\_0) & y\_2'(t\_0)) \mqty(c\_1 \\\ c\_2) = \mqty(y(t\_0) \\\ y'(t\_0))
-    \end{equation}
-
-    So, this map is surjective.
-
-
-#### [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}}) of second order {#uniqueness-and-existance--kbhuniqueness-and-existance-dot-md--of-second-order}
-
-The uniqueness is also guaranteed with [one and exactly one solution exist for every initial condition of an IVP]({{< relref "KBhinitial_value_problems.md#one-and-exactly-one-solution-exist-for-every-initial-condition-of-an-ivp" >}}). Unlike first order ODE, solutions can cross: because the uniq and exi. is only guaranteed for the same **point** AND **slope** (i.e. the initial condition).
-
-So solutions can cross, they just can't be tangent.
+-   [solving homogeneous constant coefficient higher-order differential equations](#solving-homogeneous-constant-coefficient-higher-order-differential-equations)
+-   and more generally, using [matrix exponentiation]({{< relref "KBhmatrix_exponentiation.md" >}}), [solving homogeneous higher-order differential equations](#solving-homogeneous-higher-order-differential-equations)
 
 
 ## solving homogeneous higher-order differential equations {#solving-homogeneous-higher-order-differential-equations}
@@ -353,6 +197,167 @@ y = C\_{1\_{y}} e^{t\lambda\_{1}} + C\_{2\_{y}} e^{t\lambda\_{2}}\\\\
 \end{equation}
 
 constructing the characteristic equation, as desired.
+
+
+## solving homogeneous constant coefficient higher-order differential equations {#solving-homogeneous-constant-coefficient-higher-order-differential-equations}
+
+in the homogeneous case, we have some:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+and it arises that there's a pair of solutions \\(y\_1(t)\\) and \\(y\_2(t)\\) whose linear combinations span the entire space of solutions. in fact, it arises as a solution to some functional quadratic equation \\(\lambda^{2} + a\lambda + b = 0\\).
+
+The specific coefficients \\(c\_1\\) and \\(c\_2\\) of the linear combination arises out of the initial conditons, which is the same measurement given at the initial time and its derivative: \\(y(t\_0)\\) and \\(y'(t\_0)\\). It comes out of [Linear Algebra]({{< relref "KBhlinear_algebra_errors.md" >}}) why there is exactly two initial values.
+
+Specifically, it arises out of solutions of the shape:
+
+\begin{equation}
+y(t) = c\_1 e^{\lambda\_{1}t} + c\_2e^{\lambda\_{2}t}
+\end{equation}
+
+where \\(\lambda\_{1}\\) and \\(\lambda\_{2}\\) are solutions to the characteristic polynomial above. For why exactly this is, see [method of undetermined coefficients](#method-of-undetermined-coefficients).
+
+
+### finding [independent]({{< relref "KBhprobability.md#independence" >}}) solutions of second-order constant-coefficient linear ODEs {#finding-independent--kbhprobability-dot-md--solutions-of-second-order-constant-coefficient-linear-odes}
+
+Given some:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+we desire to find two [independent]({{< relref "KBhprobability.md#independence" >}}) solutions. After which, by [superposition principle]({{< relref "KBhordinary_differential_equations.md#superposition-principle" >}}), we know that any [linear combination]({{< relref "KBhlinear_combination.md" >}})s will yield a solution.
+
+---
+
+Aside, consider:
+
+\begin{equation}
+y'' = y
+\end{equation}
+
+we see that both \\(y=e^{t}\\) and \\(y=e^{-t}\\) are solutions. We can see that this is independent by setting up:
+
+\begin{equation}
+c\_1 e^{t} + c\_2 e^{-t} = 0
+\end{equation}
+
+which, multiplying through by \\(e^{t}\\) and dividing, we obtain:
+
+\begin{equation}
+e^{2t} = -\frac{c\_2}{c\_1}
+\end{equation}
+
+Now, the right side is constant, and the left is not. So the only way this can be true is if the right side is identically zero.
+
+
+#### Linear Shifts {#linear-shifts}
+
+Consider the case where you are given initial conditions:
+
+\begin{equation}
+\begin{cases}
+y'' - y = 0 \\\\
+y(5) = -2 \\\\
+y'(5) = 5
+\end{cases}
+\end{equation}
+
+instead of bothering to solve this, we define:
+
+\begin{equation}
+Y(t) = y(t+5)
+\end{equation}
+
+and it still hold that:
+
+\begin{equation}
+Y'' - Y = 0
+\end{equation}
+
+because the derivatives don't actually change.
+
+Then, after solving, we can just translate it back:
+
+\begin{equation}
+y(t) = Y(t-5)
+\end{equation}
+
+
+#### Solution, more generally {#solution-more-generally}
+
+Consider:
+
+\begin{equation}
+y'' + ay' + by = 0
+\end{equation}
+
+let us guess that \\(y = e^{\lambda t}\\)
+
+recall that, in that case:
+
+\begin{equation}
+\begin{cases}
+y' = \lambda e^{\lambda t} \\\\
+y'' = \lambda^{2} e^{\lambda t}
+\end{cases}
+\end{equation}
+
+plugging this back in:
+
+\begin{equation}
+\lambda^{2} e^{\lambda t} + a \lambda e^{\lambda t} + b e^{\lambda t} = 0
+\end{equation}
+
+which is:
+
+\begin{equation}
+(\lambda^{2} + a\lambda +b ) e^{\lambda t} = 0
+\end{equation}
+
+because the right side is never zero, we need the left side \\((\lambda^{2} + a\lambda +b )\\) is zero.
+
+Note that there exists three separate cases:
+
+-   \\(a^{2}-4b > 0\\), two exact solutions: \\(e^{\lambda\_{1}t}\\) and \\(e^{\lambda\_{2} t}\\), these two are independent functions as long as \\(\lambda\_{1} \neq \lambda\_{2}\\)
+-   \\(a^{2}-4b < 0\\), which will yield imaginary solutions, recall [Euler's Equation]({{< relref "KBheuler_s_equation.md" >}}), you can split \\(e^{ikx}\\) into a superposition of \\(\cos (x) + i\sin (x)\\), each of which individually is a solution. You can break this up into the case of some real \\(e^{-at}\\) multiplied by sinusoldial functions.--- whereby \\(e^{at} (\cos(bt) \pm i\sin(bt))\\), we can break into two functions \\(y\_1 = e^{at}\cos (bt), y\_2= e^{at}i \sin (bt)\\).
+-   for \\(a^{2}-4b = 0\\), we yield some solution \\(e^{-\frac{a}{2} t}\\), and the solution is \\(t e^{-\frac{a}{2}t}\\). because this is the limit of the first solution \\(\lim\_{\lambda\_{2} \to \lambda\_{1}}\frac{e^{\lambda\_{2}t} - e^{\lambda\_{1}t}}{\lambda\_{2} - \lambda\_{2}}\\)
+
+<!--list-separator-->
+
+-  All 2nd order solution is a linear combination
+
+    In fact, all solutions carry the form of the two solutions:
+
+    \begin{equation}
+    c\_1 y\_1(t) + c\_2 y\_2(t) = y(t)
+    \end{equation}
+
+    This is because, consider the initial form \\(y\_1(t\_0)\\), and \\(y\_2(t\_0)\\):
+
+    \begin{equation}
+    \begin{cases}
+    y\_1(t\_0) c\_1 + y\_2(t\_0) c\_2 = y(t\_0) \\\\
+    y\_1'(t\_0) c\_1 + y\_2'(t\_0) c\_2 = y'(t\_0) \\\\
+    \end{cases}
+    \end{equation}
+
+    This is the same as the matrix equation:
+
+    \begin{equation}
+    \mqty(y\_1(t\_0) & y\_2(t\_0) \\\ y\_1'(t\_0) & y\_2'(t\_0)) \mqty(c\_1 \\\ c\_2) = \mqty(y(t\_0) \\\ y'(t\_0))
+    \end{equation}
+
+    So, this map is surjective.
+
+
+#### [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}}) of second order {#uniqueness-and-existance--kbhuniqueness-and-existance-dot-md--of-second-order}
+
+The uniqueness is also guaranteed with [one and exactly one solution exist for every initial condition of an IVP]({{< relref "KBhinitial_value_problems.md#one-and-exactly-one-solution-exist-for-every-initial-condition-of-an-ivp" >}}). Unlike first order ODE, solutions can cross: because the uniq and exi. is only guaranteed for the same **point** AND **slope** (i.e. the initial condition).
+
+So solutions can cross, they just can't be tangent.
 
 
 ## method of undetermined coefficients {#method-of-undetermined-coefficients}

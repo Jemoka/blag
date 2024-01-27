@@ -29,36 +29,4 @@ This intuition makes sense for all matrices \\(A\\). Meaning the general solutio
 x = e^{At} x\_0
 \end{equation}
 
----
-
-Example:
-
-\begin{equation}
-A = \mqty( 2 & 0 \\\ 0 & 3)
-\end{equation}
-
-Given its a diagonal matrix, \\(A^{n}\\) is the diagonal to the \\(n\\), plugging it into the power series, and eventually:
-
-\begin{equation}
-e^{At} = \mqty( e^{2t} & 0 \\\ 0 & e^{3t})
-\end{equation}
-
----
-
-Example, but not diagonal now:
-
-\begin{equation}
-A = \mqty(1 & 1 \\\ 0 & 1)
-\end{equation}
-
-this matrix has the property that:
-
-\begin{equation}
-A^{k} = \mqty(1 & k \\\ 0 & 1)
-\end{equation}
-
-This means that:
-
-\begin{equation}
-e^{A} = \mqty(e^{t} & te^{t} \\\ 0 & e^{t})
-\end{equation}
+See also [raising e to a matrix]({{< relref "KBhraising_e_to_a_matrix.md" >}})

@@ -61,3 +61,12 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 -   [Naive Bays Language Modeling]({{< relref "KBhn_grams.md#naive-bays-language-modeling" >}})
 -   [Harmonic Mean]({{< relref "KBhharmonic_mean.md" >}})
     -   [Macroaverage]({{< relref "KBhmacroaverage.md" >}}) and [Microaverage]({{< relref "KBhmacroaverage.md" >}})
+
+
+### Logistic Regression {#logistic-regression}
+
+-   [Generative Classifier]({{< relref "KBhgenerative_vs_discriminitive_classifier.md#generative-classifier" >}}) vs [Discriminate Classifier]({{< relref "KBhgenerative_vs_discriminitive_classifier.md#discriminative-classifier" >}})
+-   [Logistic Regression Text Classification]({{< relref "KBhlogistic_regression.md#logistic-regression-text-classification" >}})
+    -   [decision boundary]({{< relref "KBhlogistic_regression.md#logistic-regression-text-classification" >}})
+-   [cross entropy loss]({{< relref "KBhcross_entropy_loss.md" >}})
+-   [stochastic gradient descent]({{< relref "KBhstochastic_gradient_descent.md" >}})
