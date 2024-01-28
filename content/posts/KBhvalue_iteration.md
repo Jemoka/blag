@@ -74,3 +74,31 @@ where \\(S\\) is the number of states and \\(A\\) the number of actions.
 4.  repeat steps 2-3
 
 see also performing value-iteration naively with [one-step lookahead in POMDP]({{< relref "KBhalpha_vector.md#one-step-lookahead-in-pomdp" >}}).
+
+
+## POMDP Bellman Update {#pomdp-bellman-update}
+
+Say you want to extract a [policy]({{< relref "KBhpolicy.md" >}}) out of a bunch of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
+
+Let \\(\alpha \in \Gamma\\), a set of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s; we obtain a new [alpha vector]({{< relref "KBhalpha_vector.md" >}}) \\(U'(b) = [U(s\_0) \dots U(s\_{n})]\\) by:
+
+\begin{equation}
+U'(b) = \max\_{a}\qty[R(b,a)+\gamma \qty(\sum\_{o}^{}P(o|b,a) U(b))]
+\end{equation}
+
+where:
+
+\begin{equation}
+R(b,a) = \sum\_{s}^{} R(s,a)b(s)
+\end{equation}
+
+\begin{align}
+P(o|b,a) &= \sum\_{s}^{} p(o|s,a) b(s)  \\\\
+&= \sum\_{s}^{} \sum\_{s'}^{} T(s'|s,a) O(o|s',a) b(s)
+\end{align}
+
+and
+
+\begin{equation}
+U^{\Gamma}(b) = \max\_{\alpha \in \Gamma} \alpha^{\top}  b
+\end{equation}
