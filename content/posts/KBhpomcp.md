@@ -6,7 +6,7 @@ draft = false
 
 Previous [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >}}) methods which are not competitive to [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}), [SARSOP]({{< relref "KBhsarsop.md" >}}), etc., but those are affected by close-up history.
 
-**key point**: monte-cargo roll outs best-first tree search + unweighted particle filter
+**key point**: monte-cargo roll outs best-first tree search + unweighted particle filter (instead of categorical beliefs)
 
 
 ## Background {#background}
@@ -19,12 +19,12 @@ Previous [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >}
 ## [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >}}) {#monte-carlo-tree-search--kbhmonte-carlo-tree-search-dot-md}
 
 1.  loop:
-    1.  sample \\(s\\) from the belief distribution \\(B(h)\\) for each node
+    1.  sample \\(s\\) from the belief distribution \\(B(h)\\) for each node and call that the node state
     2.  loop until we reach a leaf:
         1.  sample exploratino using [UCB 1]({{< relref "KBhdirected_exploration.md#ucb-1" >}}) via the belief
         2.  get observation, reward, next state
     3.  add leaf node, add node for each available action
-    4.  rollout the actions
-    5.  backpropegate the obtained value with discounts backwards
+    4.  [Rollout]({{< relref "KBhrollout_with_lookahead.md#rollout" >}})
+    5.  backpropegate the obtained value with discounts backwards via [POMDP Bellman Backup]({{< relref "KBhvalue_iteration.md#pomdp-bellman-update" >}})
 
 During runtime, we choose the action with the best action, prune the tree given what you observed, and do this again in a different.

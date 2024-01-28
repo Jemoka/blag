@@ -94,6 +94,3 @@ where,
 P(o|b,a) &= \sum\_{s}^{} p(o|s,a) b(s)  \\\\
 &= \sum\_{s}^{} \sum\_{s'}^{} T(s'|s,a) O(o|s',a) b(s)
 \end{align}
-
-
-## Sidenote {#sidenote}

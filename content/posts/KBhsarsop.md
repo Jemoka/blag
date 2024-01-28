@@ -21,20 +21,30 @@ Recall [one-step lookahead in POMDP]({{< relref "KBhalpha_vector.md#one-step-loo
 -   prune
 
 
+### Initialization {#initialization}
+
+choose an initial belief, action, and observation using "suitable heuristics". Initialize a set of [alpha vector]({{< relref "KBhalpha_vector.md" >}})s corresponding to this belief.
+
+
 ### Sampling {#sampling}
 
--   choose an initial belief, action, and observation
 -   compute \\(b' = update(b,a,o)\\)
 -   add node \\(b'\\) to the tree
 
-So far, this is just [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}), [HSVI]({{< relref "KBhhsvi.md" >}}). We now take the new \\(b'\\), we give an upper bound via [FIB]({{< relref "KBhfast_informed_bound.md" >}}), and a lower bound with [blind lower bound]({{< relref "KBhblind_lower_bound.md" >}}) over the alpha vectors you already got.
+So far, this is just [PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}), [HSVI]({{< relref "KBhhsvi.md" >}}). The point is that we only want to update the reachable set.
 
-We terminate when the gap between upper and bound
+To do this, we now take the new \\(b'\\), we give an upper bound via [FIB]({{< relref "KBhfast_informed_bound.md" >}}), and a lower bound with [blind lower bound]({{< relref "KBhblind_lower_bound.md" >}}) over the alpha vectors you already got.
+
+Now:
+
+{{< figure src="/ox-hugo/2024-01-27_22-11-41_screenshot.png" >}}
+
+where \\(\mathcal{R}^{\*}\\) is a reachable space tree set from \\(b\_0\\).
 
 
 ### Backup {#backup}
 
-[PBVI]({{< relref "KBhpoint_based_value_iteration.md" >}}) backup on the beliefs you sampled to update your [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
+[PBVI Backup]({{< relref "KBhpoint_based_value_iteration.md#pbvi-backup" >}}) on the beliefs you sampled to update your [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
 
 
 ### Pruning {#pruning}
