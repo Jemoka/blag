@@ -6,6 +6,12 @@ draft = false
 
 [ODE]({{< relref "KBhordinary_differential_equations.md" >}})s are [Differential Equations]({{< relref "KBhdiffeq_intro.md" >}}) in one independent variable: \\(y(x)\\).
 
+Main Content:
+
+-   [First-Order Differential Equations]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}})
+-   [Second-Order Linear Differential Equations]({{< relref "KBhsecond_order_linear_differential_equation.md" >}})
+-   [Uniqueness and Existance]({{< relref "KBhuniqueness_and_existance.md" >}})
+
 
 ## Overarching Categories {#overarching-categories}
 

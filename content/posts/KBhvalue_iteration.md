@@ -72,3 +72,5 @@ where \\(S\\) is the number of states and \\(A\\) the number of actions.
 2.  [alpha vector pruning]({{< relref "KBhalpha_vector.md#id-a11af4cf-7e36-4b3f-876f-e6a26cf6817e-alpha-vector-pruning" >}}) on any plans that are dominated
 3.  generate all possible two-step [conditional plan]({{< relref "KBhconditional_plan.md" >}})s over all actions using combinations of non-pruned one-step plans above as ****SUBPLANS**** (yes, you can use a one-step plan twice)
 4.  repeat steps 2-3
+
+see also performing value-iteration naively with [one-step lookahead in POMDP]({{< relref "KBhalpha_vector.md#one-step-lookahead-in-pomdp" >}}).
