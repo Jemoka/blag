@@ -20,13 +20,17 @@ Instead of Euclidean distance, we use
 L(U,V) = \mid X-UV\mid^{2}
 \end{equation}
 
+as a metric, where:
+
+\\(U\\) the feature
+
 specifically:
 
 \begin{equation}
 F(z) - yz + F^{\*}(y)
 \end{equation}
 
-where \\(F\\) is any convex objective that is problem specific.
+where \\(F\\) is any convex objective that is problem specific that you choose,
 
 **Bregman Divergence** forces the underlying matricies' bases to be non-negative
 
