@@ -10,8 +10,6 @@ layout = "blank"
 
 I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). I'm interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****, specifically, in making large models solve important problems through 1) building better tools for language and speech processing to democratize state-of-the-art research 2) applying classical algorithmic approaches to language model training + decoding to improve performance and 3) exploring their applications.
 
-exploring their applications.
-
 Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. Check out ****[my projects](#projects)**** below. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
 <div style="background-color: #f0f0f0; padding: 1px 10px; border-radius: 5px; margin-top: 20px">
