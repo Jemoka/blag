@@ -8,15 +8,15 @@ draft = false
 -   \\(N\\) visit counts
 -   \\(Q\\) a q-table: [action-value]({{< relref "KBhaction_value_function.md" >}}) estimates
 -   \\(d\\) depth (how many next states to look into)---more is more accurate but slower
--   \\(U\\) [value function estimate]({{< relref "KBhaction_value_function.md#value-function--kbhaction-value-function-dot-md" >}}); usually a [Rollout Policy]({{< relref "KBhrollout_with_lookahead.md#rollout-policy" >}}), estimate at some depth \\(d\\)
+-   \\(U\\) [value function estimate]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}); usually a [Rollout Policy]({{< relref "KBhrollout_with_lookahead.md#rollout-policy" >}}), estimate at some depth \\(d\\)
 -   \\(c\\) exploration constant
 
 After \\(n\\) simulation s from the starting state; we find the best action for our current state from our q-table.
 
 Subroutine: `simulate(state, depth_remaining)`
 
--   If `depth_remaining=0`, simply return the [utility]({{< relref "KBhutility_theory.md" >}}) from the [value function]({{< relref "KBhaction_value_function.md#value-function--kbhaction-value-function-dot-md" >}}) estimate
--   For some `s, Actions` that we just got, if we haven't seen it, we just return the [value function]({{< relref "KBhaction_value_function.md#value-function--kbhaction-value-function-dot-md" >}}) estimate + initialize the N and Q tables
+-   If `depth_remaining=0`, simply return the [utility]({{< relref "KBhutility_theory.md" >}}) from the [value function]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}) estimate
+-   For some `s, Actions` that we just got, if we haven't seen it, we just return the [value function]({{< relref "KBhaction_value_function.md#id-0b1509e0-4d88-44d1-b6fa-fe8e86d200bb-value-function" >}}) estimate + initialize the N and Q tables
 -   select an action via the [monte-carlo exploration](#monte-carlo-exploration) formula
 -   sample a next state and current reward based on the action you gotten via a [generative model]({{< relref "KBhonline_planning.md#generative-model" >}})
 -   `value = reward + discount*simulate(next_state, depth_remaining-1)`

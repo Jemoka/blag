@@ -6,6 +6,8 @@ draft = false
 
 Mykel's Research Tips!
 
+"we are not trying to sell our ideas, we are trying to sell understanding"
+
 
 ## Levels of Critique {#levels-of-critique}
 
@@ -87,3 +89,21 @@ minted, or---code executation---pythontex
 ### References {#references}
 
 "cleveref": tell you what it is, and give you back with the "Fig. #N" informatino.
+
+
+### Good Presentation {#good-presentation}
+
+-   powerpoint tedx talk
+-   give strong technical presentations by Markus Puschel
+
+
+### General Tips {#general-tips}
+
+-   separate the problem from the solution before presenting the solution
+-   number slides! also include total number of slides
+-   one slide per minute
+-   one liners are best, two liners are ok, three + are bad
+
+Transitions are hard: don't tap on a slide and go "woah"; pre-cache first sentence of each slide.
+
+Overview **AFTER** the motivation.

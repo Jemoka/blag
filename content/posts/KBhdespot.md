@@ -90,3 +90,8 @@ where \\(a^{\*}\\) and \\(o^{\*}\\) are determined by...
 -   \\(o^{\*}\\): [weighted excess uncertainty]({{< relref "KBhhsvi.md#weighted-excess-uncertainty" >}})
 
 **If the [weighted excess uncertainty]({{< relref "KBhhsvi.md#weighted-excess-uncertainty" >}}) we got is non-zero, we repeat this tightening bounds process until it is zero.**
+
+
+## DESPOT Theoretic Guarantees {#despot-theoretic-guarantees}
+
+It is near-optimal as a policy.
