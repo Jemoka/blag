@@ -68,4 +68,6 @@ How are programs run, how to spawn subprograms, and how they work in general?
 
 -   [multiprocessing]({{< relref "KBhmultiprocessing.md" >}})
 -   [fork]({{< relref "KBhfork.md" >}})
+    -   [execvp]({{< relref "KBhfork.md#execvp" >}})
+    -   [waitpid]({{< relref "KBhfork.md#waitpid" >}})
 -   [shell]({{< relref "KBhfork.md#shell" >}})
