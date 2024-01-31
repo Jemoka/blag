@@ -10,7 +10,7 @@ draft = false
 
 ## Research Projects {#research-projects}
 
-I have spent the last 6 years or so working as an actively-publishing data science researcher; my research interests are mainly in textual data mining, semantic analysis, L2 learning, and science education.
+I end up doing a lot of research these days, and so have isolated that to a different, academic homepage.
 
 For a list of my recent research, please head to the [Research Index]({{< relref "KBhresearch_index.md" >}}).
 
