@@ -126,6 +126,20 @@ where \\(A \in \mathcal{L}(m,n)\\), where \\(m < n\\). To solve for \\(x\\), we 
 
 ### [method of undetermined coefficients]({{< relref "KBhsecond_order_linear_differential_equation.md#method-of-undetermined-coefficients" >}}) {#method-of-undetermined-coefficients--kbhsecond-order-linear-differential-equation-dot-md}
 
+Good guesses for the structure of:
+
+\begin{equation}
+y' + ay = f(t)
+\end{equation}
+
+-   for \\(f(t) = C\\) , guess \\(y = C'\\)
+-   for \\(f(t) = x^{n}\\), guess \\(y = x^{n}\\)
+-   for \\(f(t) = \sin (t)\\) or \\(f(t)=\cos (t)\\), guess \\(y=A \sin (t) + B \cos (t)\\)
+-   for \\(f(t) = e^{\lambda t}\\), guess \\(y = Ce^{\lambda t}\\)
+
+
+#### example {#example}
+
 say:
 
 \begin{equation}

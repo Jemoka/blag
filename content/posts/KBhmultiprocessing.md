@@ -26,4 +26,17 @@ syscall `get_pid` will give you back the PID.
 
 ### process control block {#process-control-block}
 
-each [process](#process) is controlled by a struct which contain information about the process
+Each [process](#process) is controlled by a struct which contain information about the process.
+
+Within each process, we have a [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) table (and the ints we get are indicies into this table), for which each entry stores points to the [open file table](#open-file-table).
+
+When a process forks, the child doesn't get more open file entries, instead, we simply clone the [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) table (i.e. parent and child will share the same underlying [open file table](#open-file-table) entries); this is how we can share pipes.
+
+
+### open file table {#open-file-table}
+
+[open file table](#open-file-table) is a system wide for each file opening session, mentioning what the mode and cursor of the file is open, and the number of [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) tables pointing to it with a `refcount`.
+
+When we call close, the `refcount` decrements. When `refcount=0`, the file is deleted. This means, if you share a [pipe]({{< relref "KBhpipe.md" >}}), both parent and child has to close the [pipe]({{< relref "KBhpipe.md" >}}).
+
+read blocks until at least 1 byte is available, or until all write ends are closed.

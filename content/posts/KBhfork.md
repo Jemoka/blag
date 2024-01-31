@@ -25,20 +25,22 @@ Fork's **return value** is different between parent and child:
 
 a [shell](#shell) forks off a child to run the command.
 
-```C
+```C++
 while (true) {
-    char *command = "ls";
+    char *command = { "ls", "things" };
 
     pid_t child_pid = fork();
     if (!child_pid) {
-        // this is the child
-        execvp(command);
-        exit(0);
+        // this is the child; execvp will check PATH for you
+        execvp(command.argv[0], command.argv);
+        // if we got here, the PID didn't do well
+        throw STSHException(string(command.argv[0])+": not found or didn't succeed to fork.");
     }
 
     waitpid(child_pid);
 
     // do cleanup
+}
 ```
 
 This is because the act of running a subprogram from a program requires **taking over the current PID with a different program**. If we don't fork, once the takeover happens, we don't have a shell anymore.
