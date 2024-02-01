@@ -70,3 +70,26 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
     -   [decision boundary]({{< relref "KBhlogistic_regression.md#logistic-regression-text-classification" >}})
 -   [cross entropy loss]({{< relref "KBhcross_entropy_loss.md" >}})
 -   [stochastic gradient descent]({{< relref "KBhstochastic_gradient_descent.md" >}})
+
+
+### Information Retrial {#information-retrial}
+
+-   [Information Retrival]({{< relref "KBhinformation_retrival.md" >}})
+    -   [Term-Document Matrix]({{< relref "KBhterm_document_matrix.md" >}})
+    -   [Inverted Index]({{< relref "KBhinverted_index.md" >}}) + [postings list]({{< relref "KBhinverted_index.md#postings-list" >}})
+        -   [Boolean Retrieval]({{< relref "KBhinverted_index.md#boolean-retrieval" >}})
+        -   [positional index]({{< relref "KBhinverted_index.md#positional-index" >}})
+
+
+### Ranked Information Retrial {#ranked-information-retrial}
+
+-   [Ranked Information Retrieval]({{< relref "KBhranked_information_retrieval.md" >}})
+    -   [feast or famine problem]({{< relref "KBhranked_information_retrieval.md#feast-or-famine-problem" >}})
+    -   [free text query]({{< relref "KBhranked_information_retrieval.md#free-text-query" >}})
+-   [score]({{< relref "KBhranked_information_retrieval.md#score" >}})
+    -   [Jaccard Coefficient]({{< relref "KBhranked_information_retrieval.md#jaccard-coefficient" >}})
+    -   [log-frequency weighting]({{< relref "KBhranked_information_retrieval.md#log-frequency-weighting" >}})
+    -   [document frequency]({{< relref "KBhranked_information_retrieval.md#document-frequency" >}}) ("[idf weight]({{< relref "KBhranked_information_retrieval.md#document-frequency" >}})")
+    -   [TF-IDF]({{< relref "KBhranked_information_retrieval.md#tf-idf" >}})
+        -   [SMART notation]({{< relref "KBhranked_information_retrieval.md#smart-notation" >}})
+-   [vector-space model]({{< relref "KBhranked_information_retrieval.md#vector-space-model" >}})
