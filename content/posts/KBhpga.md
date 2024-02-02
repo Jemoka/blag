@@ -230,4 +230,4 @@ and we are done.
 
 ### Quick Tip {#quick-tip}
 
-Recall that we have to calculate the inverse of \\(\bold{Z}\\) quite a lot throughout the computation of \\(h\\) and \\(f\\). For each policy parameter \\(\theta\\), you can cache the value of \\(\bold{Z}\\), L-U (/lower-triangular factored) and recombine them/invert them as needed to speed up computation. This ensures that you only calculate \\(\bold{Z}\\) once per step.
+Recall that we have to calculate the inverse of \\(\bold{Z}\\) quite a lot throughout the computation of \\(h\\) and \\(f\\). For each policy parameter \\(\theta\\), you can cache the value of \\(\bold{Z}\\), L-U ([upper-triangular]({{< relref "KBhupper_triangular_matrix.md" >}})/lower-triangular factored) and recombine them/invert them as needed to speed up computation. This ensures that you only calculate \\(\bold{Z}\\) once per step.
