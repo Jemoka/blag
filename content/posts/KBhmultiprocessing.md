@@ -32,6 +32,8 @@ Within each process, we have a [file descriptor]({{< relref "KBhsyscalls.md#file
 
 When a process forks, the child doesn't get more open file entries, instead, we simply clone the [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) table (i.e. parent and child will share the same underlying [open file table](#open-file-table) entries); this is how we can share pipes.
 
+This is why you need to **CLOSE** all open file descriptors once every **PROCESS**, including forked child.
+
 
 ### open file table {#open-file-table}
 
@@ -39,4 +41,4 @@ When a process forks, the child doesn't get more open file entries, instead, we 
 
 When we call close, the `refcount` decrements. When `refcount=0`, the file is deleted. This means, if you share a [pipe]({{< relref "KBhpipe.md" >}}), both parent and child has to close the [pipe]({{< relref "KBhpipe.md" >}}).
 
-read blocks until at least 1 byte is available, or until all write ends are closed.
+**read blocks** until at least 1 byte is available, or until all write ends are closed.

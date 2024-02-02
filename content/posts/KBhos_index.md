@@ -71,3 +71,31 @@ How are programs run, how to spawn subprograms, and how they work in general?
     -   [execvp]({{< relref "KBhfork.md#execvp" >}})
     -   [waitpid]({{< relref "KBhfork.md#waitpid" >}})
 -   [shell]({{< relref "KBhfork.md#shell" >}})
+-   [pipe]({{< relref "KBhpipe.md" >}}) and ipc
+
+---
+
+An example of a good time:
+
+```C
+void main() {
+    // make pipe
+    int fds[2];
+    pipe(fds);
+
+    pid_t pidp = fork();
+
+    if (pidp == 0) {
+        close(pidp[1]);
+        dup2(pidp[0], STDIN_FILENO);
+        close(pidp[0]);
+        execvp("", ...);
+        // throw-a-tantrum
+        exit(1);
+    }
+
+    close(pidp[0]);
+
+    return pidp[1];
+}
+```

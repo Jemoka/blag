@@ -65,6 +65,8 @@ execvp(args[0], args);
 
 This is how we run other programs. After this happens, recall that the process is the **SAME PROCESS**, so we can still wait on this process.
 
+**execvp LEAVES THE FILE DESCRIPTOR TABLE**.
+
 
 ## waitpid {#waitpid}
 
@@ -126,6 +128,8 @@ The act of copying stack and heap sounds really really expensive. So.... Whapppe
 Each program thinks its is given all memory addresses to use; the OS maps the "virtual addresses" to the main address. So, when the fork happens, the virtual address space stays the same. The child will map the parent's memory addresses to **different** physical addresses than for the parent.
 
 The copies are **LAZY**---if the child writes to an area in memory, its virtual address are mapped to different addresses. If no writes by the child happen, the virtual address are mapped to the same address.
+
+during file reading, the file descriptors gets cloned, the underlying [open file table]({{< relref "KBhmultiprocessing.md#open-file-table" >}}) doesn't close.
 
 
 ## typical mp pattern {#typical-mp-pattern}
