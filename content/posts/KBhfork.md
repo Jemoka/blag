@@ -77,7 +77,7 @@ pid_t waitpid(pid_t pid, int *status, int options);
 ```
 
 -   pid
--   status: information about the child
+-   status: pointer to store return about the child
 -   options (0 for now)
 
 if the PID has died, this returns immediately. Otherwise, this blocks.
