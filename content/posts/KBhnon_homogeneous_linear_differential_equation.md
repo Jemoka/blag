@@ -84,10 +84,16 @@ This actually doesn't matter what \\(a\\) is. In a sense, if we swap \\(a\\) for
 y' + a(t)y = f(t)
 \end{equation}
 
-yields
+yields (CHECK THIS FACT&lt; IT MAY BE WRONG)
 
 \begin{equation}
-y(t) = e^{-\qty(\int a(s) \dd{s})t} \int\_{0}^{t}e^{\qty(\int a(s) \dd{s})x} f(x) \dd{x} + Ce^{-at}
+y(t) = e^{-\qty(\int a(t) \dd{t})} \int\_{0}^{t}e^{\qty(\int a(x) \dd{x})} f(x) \dd{x} + Ce^{-\qty(\int a(t) \dd{t})}
+\end{equation}
+
+for constant solutions, we get:
+
+\begin{equation}
+y(t) = C e^{-a(t-t\_0)} + e^{-at} \int\_{t\_0}^{t} e^{as} f(s) \dd{s}
 \end{equation}
 
 

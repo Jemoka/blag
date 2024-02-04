@@ -116,3 +116,11 @@ because the dot product becomes just the angle between the two vectors after you
 typically, you may want to normalize the length of the vectors in advance.
 
 cosine is a little flatten ontop
+
+
+### ltc.lnn weighting {#ltc-dot-lnn-weighting}
+
+document: logarithm + idf + normed
+query: logarithm + 1 + 1
+
+meaning, we don't weight or normalize query vectors

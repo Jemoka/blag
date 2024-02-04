@@ -22,7 +22,7 @@ These functions are called completely isolated to another function: 1) private s
 ### open {#open}
 
 ```C
-int open(const char *pathname, int flags);
+int open(const char *pathname, int flags, mode_t mode);
 ```
 
 Flags are a bitwise OR operations: you have to open with `O_RDONLY` (read only), `O_WRONLY` (write only), or `O_RDWR` (both read and write). This returns \\(-1\\) if the reading fails.
