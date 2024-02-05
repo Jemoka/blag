@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bontehu
+Disallow: /bontehu.html
+
+Sitemap: https://www.jemoka.com/sitemap.xml
