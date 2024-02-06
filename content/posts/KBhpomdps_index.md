@@ -15,6 +15,7 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | Policy Graphs       | [Hansen]({{< relref "KBhhansen.md" >}}), [MCVI]({{< relref "KBhmcvi.md" >}}), [PGA]({{< relref "KBhpga.md" >}})                            |
 | Online Solvers      | [AEMS]({{< relref "KBhaems.md" >}}), [POMCP]({{< relref "KBhpomcp.md" >}}), [DESPOT]({{< relref "KBhdespot.md" >}})                        |
 | Moar Online Methods | [IS-DESPOT]({{< relref "KBhis_despot.md" >}}), [POMCPOW]({{< relref "KBhpomcpow.md" >}}), [AdaOPS]({{< relref "KBhadaops.md" >}})          |
+| POMDPish            | [MOMDP]({{< relref "KBhmomdp.md" >}}), [POMDP-lite]({{< relref "KBhpomdp_lite.md" >}}), [rho-POMDPs]({{< relref "KBhrho_pomdps.md" >}})    |
 
 
 ## Other Content {#other-content}

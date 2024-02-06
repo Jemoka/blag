@@ -51,7 +51,7 @@ thread(myfunc, ref(myint));
 Remember: ref will ****SHARE MEMORY****, and you have no control over when the thread runs. So once a pointer is passed all bets are off in terms of what values things take on.
 
 
-## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--orgdebbf3a--s}
+## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org78221a2--s}
 
 | Processes                                          | Threads                                     |
 |----------------------------------------------------|---------------------------------------------|
@@ -74,3 +74,5 @@ undesirable behavior caused by arbitrary execution order.
 we want [atomicity]({{< relref "KBhdistributed_algorithum.md#atomicity" >}}) in the code: we want entire data viewing + modification operations to not be interrupted---otherwise, you will generate race conditions.
 
 Recall: ****C++ statements themselves are not INHERENTLY autonomic****.
+
+we want to outline a "critical section" and ensure it doesn't get ran more than once.

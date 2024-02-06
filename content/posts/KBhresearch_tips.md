@@ -107,3 +107,10 @@ minted, or---code executation---pythontex
 Transitions are hard: don't tap on a slide and go "woah"; pre-cache first sentence of each slide.
 
 Overview **AFTER** the motivation.
+
+
+## Reference Handling {#reference-handling}
+
+-   biblatex: bibtex with postprocessing the .tex
+-   sislstrings.bib: mykel's conference list for .bib
+-   JabRef
