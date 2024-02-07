@@ -96,6 +96,12 @@ for constant solutions, we get:
 y(t) = C e^{-a(t-t\_0)} + e^{-at} \int\_{t\_0}^{t} e^{as} f(s) \dd{s}
 \end{equation}
 
+for
+
+\begin{equation}
+y' + ay = f(t)
+\end{equation}
+
 
 ## [method of undetermined coefficients]({{< relref "KBhsecond_order_linear_differential_equation.md#method-of-undetermined-coefficients" >}}) {#method-of-undetermined-coefficients--kbhsecond-order-linear-differential-equation-dot-md}
 
