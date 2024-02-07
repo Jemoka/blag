@@ -1,0 +1,62 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 FEB072024</title>
+<meta name=description content="Suppose we analyze first order non-linear system:
+\begin{equation} x&rsquo; = F(t,x) \end{equation}
+We can actually turn this into an autonomous system:
+\begin{equation} x_0&rsquo; = 1 \end{equation}
+meaning suddenly we have an autonomous system:
+\begin{equation} \begin{cases} x_0&rsquo; = 1 \\ x_1&rsquo; = F(x_0, x_1) \end{cases} \end{equation}
+Three Examples that are Hopeless to Solve Lotha-Volterra Prey-Predictor Equation \begin{equation} \begin{cases} x_1&rsquo; = 2x_1-x_1x_2 \\ x_2&rsquo; = x_1x_2 - 3x_2 \end{cases} \end{equation}
+By default, if either \(x_1\) or \(x_2\) goes down, the system dies quickly."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 FEB072024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#three-examples-that-are-hopeless-to-solve>Three Examples that are Hopeless to Solve</a><ul><li><a href=#lotha-volterra-prey-predictor-equation>Lotha-Volterra Prey-Predictor Equation</a></li><li><a href=#example>Example</a></li><li><a href=#example>Example</a></li></ul></li><li><a href=#strategy-to-analyze-when-its-hopeless>Strategy to Analyze when its Hopeless</a></li><li><a href=#linearilzation>linearilzation</a><ul><li><a href=#three-phase-portrait--org3d17202--connection-cases>Three <a href=#phase-portrait>Phase Portrait</a> connection cases</a></li><li><a href=#worked-example>Worked Example</a></li></ul></li><li><a href=#phase-portrait>Phase Portrait</a></li></ul></nav></aside><main><article><div><p>Suppose we analyze first order non-linear system:</p><p>\begin{equation}
+x&rsquo; = F(t,x)
+\end{equation}</p><p>We can actually turn this into an autonomous system:</p><p>\begin{equation}
+x_0&rsquo; = 1
+\end{equation}</p><p>meaning suddenly we have an autonomous system:</p><p>\begin{equation}
+\begin{cases}
+x_0&rsquo; = 1 \\
+x_1&rsquo; = F(x_0, x_1)
+\end{cases}
+\end{equation}</p><h2 id=three-examples-that-are-hopeless-to-solve>Three Examples that are Hopeless to Solve</h2><h3 id=lotha-volterra-prey-predictor-equation>Lotha-Volterra Prey-Predictor Equation</h3><p>\begin{equation}
+\begin{cases}
+x_1&rsquo; = 2x_1-x_1x_2 \\
+x_2&rsquo; = x_1x_2 - 3x_2
+\end{cases}
+\end{equation}</p><p>By default, if either \(x_1\) or \(x_2\) goes down, the system dies quickly.
+oooooooo</p><h3 id=example>Example</h3><p>\begin{equation}
+\begin{cases}
+x_1&rsquo; = r_1x_1 \qty(1- \frac{x_1 + h_{12} x_2}{k_1})\\
+x_2&rsquo; = r_2x_2 \qty(1- \frac{x_2 + h_{21} x_1}{k_2})
+\end{cases}
+\end{equation}</p><h3 id=example>Example</h3><p>\begin{equation}
+\begin{cases}
+x_1&rsquo; = x_2 \\
+x_2&rsquo; = -\sin x_1 - \gamma x_2
+\end{cases}
+\end{equation}</p><h2 id=strategy-to-analyze-when-its-hopeless>Strategy to Analyze when its Hopeless</h2><ol><li>find a stationary solutions: \(x(t) = a\): where \(x&rsquo; = F(a) = 0\) and draw them as points on the \(x_1\) and \(x_2\) plane</li><li>near each equilibrium point, approximate through <a href=#linearilzation>Linearilzation</a></li><li>study the <a href=/posts/kbhmesoscopic_region/>mesoscopic region</a></li></ol><h2 id=linearilzation>linearilzation</h2><p>For some non-linear function, we can use its first Jacobian to create a linear system. Then, we can use that system to write the first order Taylor:</p><p>\begin{equation}
+y&rsquo; = \nabla F(crit)y
+\end{equation}</p><p>where \(crit\) are critical points.</p><h3 id=three-phase-portrait--org3d17202--connection-cases>Three <a href=#phase-portrait>Phase Portrait</a> connection cases</h3><ul><li>spiraling away from equilibrium</li><li>spiraling towards the equilibrium</li><li>concentric circles</li></ul><h3 id=worked-example>Worked Example</h3><p>Let&rsquo;s <a href=#lotha-volterra-prey-predictor-equation>Lotha-Volterra Prey-Predictor Equation</a> again as an example</p><p>\begin{equation}
+\begin{cases}
+x_1&rsquo; = 2x_1-x_1x_2 \\
+x_2&rsquo; = x_1x_2 - 3x_2
+\end{cases}
+\end{equation}</p><p>we can stare at this (and factor \(x\) out) to understand that there are only two stationary points:</p><p>\begin{equation}
+(x_1,x_2) = (0,0), (3,2)
+\end{equation}</p><p>Let&rsquo;s analyze this function for <a href=#linearilzation>linearilzation</a>.</p><p>Let&rsquo;s write this expression in terms of the linear and non linear parts</p><p>\begin{equation}
+\begin{cases}
+x&rsquo; = \mqty(2 & 0 \\ 0 & -3) \mqty(x_1 \\ x_2) + \mqty(-x_1x_2 \\ x_1 x_2)
+\end{cases}
+\end{equation}</p><h4 id=near--0-0>Near \((0,0)\)</h4><p>You will note that the right non-linear parts becomes very small near \((0,0)\), meaning we can analyze this in terms of a normal phase portrait.</p><h4 id=near--3-2>Near \((3,2)\)</h4><p>We can translate this down:</p><p>Let:</p><p>\begin{equation}
+y = x - \mqty(3 \\2)
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+y&rsquo; = x&rsquo; = F\qty(y+\mqty(3 \\ 2))
+\end{equation}</p><p>we can use a Taylor expansion to get:</p><p>\begin{equation}
+y&rsquo; = x&rsquo; = F\qty(y + \mqty(3\\2)) + \qty(\nabla F)y + \dots
+\end{equation}</p><p>Recall that \(F\) is given as:</p><p>\begin{equation}
+\mqty(2x_1 - x_1x_2 \\ x_1x_2-3x_2)
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+\nabla \mqty(2x_1 - x_1x_2 \\ x_1x_2-3x_2) = \mqty(2-x_2 & -x_1 \\ x_2 & x_1-3)
+\end{equation}</p><p>plugging in \((3, 2)\) obtains:</p><p>\begin{equation}
+y&rsquo; = \mqty(0 & -3 \\ 2 & 0) y
+\end{equation}</p><p>which we can analyze in the usual manners.</p><h2 id=phase-portrait>Phase Portrait</h2><p><a href=#phase-portrait>Phase Portrait</a> is a figure in the \(x_1, x_2\) plane where each solution exists as a curve on the figure.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
