@@ -104,8 +104,10 @@ where by the visit counts are discounted such that:
 N(s,a) \leftarrow \gamma \lambda N(s,a)
 \end{equation}
 
+See also [Sarsa (Lambda)]({{< relref "KBhsarsa_lambda.md" >}}).
 
-## Generalized [Q-Learning](#q-learning) with Gradient [action-value]({{< relref "KBhaction_value_function.md" >}}) {#generalized-q-learning--org776f6c0--with-gradient-action-value--kbhaction-value-function-dot-md}
+
+## Generalized [Q-Learning](#q-learning) with Gradient [action-value]({{< relref "KBhaction_value_function.md" >}}) {#generalized-q-learning--orgfb02fd1--with-gradient-action-value--kbhaction-value-function-dot-md}
 
 Consider [Value Function Approximation]({{< relref "KBhapproximate_value_function.md" >}}). We were trying to fit a set of \\(\theta\\) at that time to find \\(U\_{\theta}\\) that matches \\(U^{\*}\\).
 
