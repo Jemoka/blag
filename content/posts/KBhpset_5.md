@@ -533,3 +533,69 @@ a(1-y)x - a(1-y) + a((x-1)y-(x-1)) = 0
 \end{equation}
 
 as desired.
+
+
+### Problem 14.6 {#problem-14-dot-6}
+
+
+#### Part a {#part-a}
+
+We have:
+
+\begin{equation}
+s = 1-i
+\end{equation}
+
+and that:
+
+\begin{equation}
+i'(t) = \tau s(t) i(t) - \gamma i(t)
+\end{equation}
+
+Substituting the former into the latter:
+
+\begin{equation}
+i'(t) = \tau (1-i(t))i(t) - \gamma i(t)
+\end{equation}
+
+which means, combining the two:
+
+\begin{equation}
+i'(t) = \tau i(t) -\tau  i^{2}(t) - \gamma i(t)
+\end{equation}
+
+which finally means th
+
+at:
+
+\begin{equation}
+i'(t) = (\tau -\gamma )i(t) - \tau i^{2}(t)
+\end{equation}
+
+Now, factoring \\(i(t)\\) out, we obtain:
+
+\begin{equation}
+i'(t) = i(t) ((\tau-\gamma) - \tau i(t))
+\end{equation}
+
+which yields two solutions, either \\(i(t) = 0\\), or \\((\tau - \gamma ) - \tau  (i(t)) = 0\\) meaning, \\(i(t) = 1- \frac{\gamma}{\tau}\\)
+
+
+#### Part b {#part-b}
+
+If \\(R\_0 = \frac{\tau}{\gamma} < 1\\), then we have that \\(\tau < \gamma\\).
+
+Meaning, \\(\frac{\gamma}{\tau} > 1\\), which gives that \\(1 - \frac{\gamma}{\tau} < 0\\). Meaning there is no positive stationary value.
+
+As for \\(i(t) = 0\\), taking one derivative of the expression above yields that \\(i''(t) = (\tau -\gamma) - 2\tau i(t)\\). The latter is \\(0\\) when \\(i(t) = 0\\), and the former would be negative. Meaning, the stationary point \\(i(t) = 0\\) is stable.
+
+
+#### Part c {#part-c}
+
+A similar argument goes as part \\(b\\), but in opposite direction.
+
+If \\(R\_0 = \frac{\tau}{\gamma} > 1\\), then we have that \\(\tau > \gamma\\).
+
+For \\(i(t) = 0\\), taking one derivative of the expression above yields that \\(i''(t) = (\tau -\gamma) - 2\tau i(t)\\). At \\(i(t) = 1- \frac{\gamma}{\tau}\\), this simplifies to $(&tau; -&gamma; ) - 2 &tau; + 2&gamma; $, which gives \\(\gamma - \tau < 0\\), which is stable
+
+As for \\(i(t) = 0\\), the latter term in the derivative is still \\(0\\) when \\(i(t) = 0\\), and the former would be positive. Meaning, the stationary point \\(i(t) = 0\\) is unstable.

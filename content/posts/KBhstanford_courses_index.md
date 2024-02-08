@@ -44,6 +44,7 @@ Here are a list of random indicies which may end up being helpful!
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-16 Thu&gt;</span></span> | Dissociating Language and Thought | Anna Ivanova       | [Dissociating Language and Thought]({{< relref "KBhdissociating_language_and_thought.md" >}}) |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-01-11 Thu&gt;</span></span> | Language Agents                   | Karthik Narasimhan | [Language Agents with Karthik]({{< relref "KBhlanguage_agents.md" >}})                        |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-02-01 Thu&gt;</span></span> |                                   |                    | [Pretraining Data]({{< relref "KBhpretraining_data.md" >}})                                   |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-02-08 Thu&gt;</span></span> | value alignment                   | Been Kim           | [LM Alignment]({{< relref "KBhlm_alignment.md" >}})                                           |
 
 
 ## Contacts {#contacts}
