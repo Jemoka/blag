@@ -1,0 +1,171 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>PSet 5</title>
+<meta name=description content="Chapter 12 Problem 12.2 We have:
+\begin{equation} \begin{cases} y&rsquo;&rsquo; + 5y&rsquo; - 14y = 0 \\ y(0) = 0 \\ y&rsquo;(0) = 9 \end{cases} \end{equation}
+We have, for the characteristic equation:
+\begin{equation} \lambda^{2} + 5\lambda - 14 = 0 \end{equation}
+meaning:
+\begin{equation} (\lambda - 2) (\lambda +7) = 0 \end{equation}
+meaning, we have:
+\begin{equation} y = C_1 e^{2t} + C_2e^{-7t} \end{equation}
+Taking one derivative, we obtain:
+\begin{equation} y&rsquo; = 2C_1e^{2t} - 7C_2e^{-7t} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>PSet 5</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#chapter-12>Chapter 12</a><ul><li><a href=#problem-12-dot-2>Problem 12.2</a></li><li><a href=#problem-12-dot-6>Problem 12.6</a></li><li><a href=#problem-12-dot-10>Problem 12.10</a></li></ul></li><li><a href=#chapter-13>Chapter 13</a><ul><li><a href=#problem-13-dot-1>Problem 13.1</a></li><li><a href=#problem-13-dot-3>Problem 13.3</a></li><li><a href=#problem-13-dot-9>Problem 13.9</a></li></ul></li><li><a href=#chapter-14>Chapter 14</a><ul><li><a href=#problem-14-dot-1>Problem 14.1</a></li><li><a href=#problem-14-dot-3>Problem 14.3</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=chapter-12>Chapter 12</h2><h3 id=problem-12-dot-2>Problem 12.2</h3><p>We have:</p><p>\begin{equation}
+\begin{cases}
+y&rsquo;&rsquo; + 5y&rsquo; - 14y = 0 \\
+y(0) = 0 \\
+y&rsquo;(0) = 9
+\end{cases}
+\end{equation}</p><p>We have, for the characteristic equation:</p><p>\begin{equation}
+\lambda^{2} + 5\lambda - 14 = 0
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+(\lambda - 2) (\lambda +7) = 0
+\end{equation}</p><p>meaning, we have:</p><p>\begin{equation}
+y = C_1 e^{2t} + C_2e^{-7t}
+\end{equation}</p><p>Taking one derivative, we obtain:</p><p>\begin{equation}
+y&rsquo; = 2C_1e^{2t} - 7C_2e^{-7t}
+\end{equation}</p><p>Plugging in \(y(0)\) and \(y&rsquo;(0)\), we get that:</p><p>\begin{equation}
+y_0 = C_1 + C_2 = 0
+\end{equation}</p><p>and that:</p><p>\begin{equation}
+y_0&rsquo; = 2C_1 - 7C_2 = k
+\end{equation}</p><p>Plugging the first expression into the second one, we obtain:</p><p>\begin{equation}
+9C_1 = k
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+\begin{cases}
+C_1 = \frac{k}{9} \\
+C_2 = -\frac{k}{9}
+\end{cases}
+\end{equation}</p><p>We are asked to take:</p><p>\begin{equation}
+|\tilde{y}(t) - y(t)| \leq 0.1
+\end{equation}</p><p>Plugging in the values we obtained above, we obtain:</p><p>\begin{equation}
+\left| \frac{k-9}{9} \qty(e^{2t}-e^{-7t}) \right| \leq 0.1
+\end{equation}</p><p>Now, we are given that \(|e^{2t}-e^{-7t}| \leq 55\), meaning:</p><p>\begin{equation}
+\left| \frac{55(k-9)}{9} \right| \leq 0.1
+\end{equation}</p><p>multiplying the fraction to both sides gives:</p><p>\begin{equation}
+\left| k-9 \right| \leq \frac{9}{550} \approx 0.0164
+\end{equation}</p><p>Finally, this gives:</p><p>\begin{equation}
+\begin{cases}
+k-9 \leq 0.0164 \\
+k-9 \geq -0.0164
+\end{cases}
+\end{equation}</p><p>Finally, this gives:</p><p>\begin{equation}
+8.9836 \leq k \leq 9.0164
+\end{equation}</p><p>Therefore, \(a \approx 8.98\), and \(b \approx 9.02\)</p><h3 id=problem-12-dot-6>Problem 12.6</h3><p>We have:</p><p>\begin{equation}
+y&rsquo;(t) = ry \qty(1- \frac{y}{K}) -h
+\end{equation}</p><p>Now, we would like to figure critical points for this system, and use that to determine an upper bound for \(h\).</p><p>We have that:</p><p>\begin{equation}
+ry \qty(1- \frac{y}{K}) -h = 0
+\end{equation}</p><p>which has roots:</p><p>\begin{equation}
+\frac{k}{2} \pm \sqrt{\qty(\frac{k}{2})^{2} - \frac{hk}{r}}
+\end{equation}</p><p>Notably, this gives a parabola that opens down. Meaning, the &ldquo;lower&rdquo; root would be an unstable point, and the &ldquo;upper&rdquo; root would be a stable point.</p><p>In any initial points higher than the &ldquo;lower&rdquo; bound, our function will not experience extinction. For our specific case, this means we desire:</p><p>\begin{equation}
+\frac{k}{2} - \sqrt{\qty(\frac{k}{2})^{2} - \frac{hk}{r}} &lt; y_0
+\end{equation}</p><p>Solving now for \(h\), we obtain that:</p><p>\begin{equation}
+\frac{r}{k} \qty( \qty(\frac{k}{2})^{2} - \qty(\frac{k}{2}-y_0)^{2}) > h
+\end{equation}</p><p>For our specific initial conditions, we have that:</p><p>\begin{equation}
+\begin{cases}
+r = 2 \\
+k = 100 \\
+y_0 = 30
+\end{cases}
+\end{equation}</p><p>which gives:</p><p>\begin{equation}
+0.02 \qty(2500-400) > h
+\end{equation}</p><p>Meaning at most, \(h &lt; 42\).</p><h3 id=problem-12-dot-10>Problem 12.10</h3><h4 id=part-a>Part a</h4><p>We have:</p><p>\begin{equation}
+\begin{cases}
+x&rsquo; = a(y-x) \\
+y&rsquo; = (b-z)x-y \\
+z&rsquo; = xy - cz
+\end{cases}
+\end{equation}</p><p>At a critical point, the first expression would give: \(y=x\).</p><p>Plugging that into the second expression gives:</p><p>\begin{equation}
+(b-1)x-zx= 0
+\end{equation}</p><p>The third expression provides a substitution: \(\frac{x^{2}}{c}\).</p><p>Plugging that in gives:</p><p>\begin{equation}
+(b-1)x-\frac{x^{3}}{c} = 0
+\end{equation}</p><p>which yields:</p><p>\begin{equation}
+x\qty(b-1-\frac{x^{2}}{c}) = 0
+\end{equation}</p><p>The left yields \(x=0\), and further \(y=z=x=0\). The right side gives:</p><p>\begin{equation}
+c(b-1) = x^{2}
+\end{equation}</p><p>yet, as \(c>0\), \(b&lt; 1\) requires \(x\) be imaginary. Hence, the only real solution when \(b\leq 1\) is the origin.</p><h4 id=part-b>Part b</h4><p>We can show this by the chain rule:</p><p>\begin{equation}
+V&rsquo;(x,y,z) = \frac{2x}{a} \dv{x}{t} + 2y \dv{y}{t} + 2z \dv{z}{t}
+\end{equation}</p><p>Plugging in our original expressions:</p><p>\begin{equation}
+V&rsquo;(x,y,z) = \frac{2x}{a} \qty(a(y-x)) + 2y \qty((b-z)x-y) + 2z \qty(xy-cz)
+\end{equation}</p><p>Simplifying, we note that the terms \(-2xyz\) and \(2zxy\) cancels out, leaving us with after factoring out a \(-2\):</p><p>\begin{equation}
+-2(x^{2}-(b+1)xy+y^{2})-2cz^{2})
+\end{equation}</p><h4 id=part-c>Part c</h4><p>We have:</p><p>\begin{equation}
+\dv{V}{t} = -2 \qty(x- \qty(\frac{b+1}{2}y))^{2} - 2\qty(1-\qty(\frac{b+1}{2})^{2})y^{2} - 2cz^{2}
+\end{equation}</p><p>Now, notably, we have three terms of \(-2\) being multiplied. In the first and last terms, it is being multiplied to something that&rsquo;s positive (as \(a,b,c>0\), and \(\alpha^{2} \geq 0, \forall \alpha\)).</p><p>We desire that \(\dv{V}{t}\) is negative, which therefore leaves us the middle term:</p><p>\begin{equation}
+1-\qty(\frac{b+1}{2})^{2}
+\end{equation}</p><p>during \(b&lt;1\), we have that \(\qty(\frac{b+1}{2})^{2} &lt; 1\), meaning this entire term is positive. This results in the middle term scaled by \(-2\) being negative, making htis whole expression negative.</p><h2 id=chapter-13>Chapter 13</h2><h3 id=problem-13-dot-1>Problem 13.1</h3><p>We have:</p><p>\begin{equation}
+f(x_1, x_2) = \mqty(3x_1-{x_1}^{2}-x_1x_2 \\ -2x_2+x_1x_2)
+\end{equation}</p><p>solving for stationary points (where the above vector is \(0\), we obtain the trivial solution \((0,0)\) as well as:</p><p>with the second expression, we obtain \(x_1x_2 = 2x_2\), meaning \(x_1=2\). From there, we can plug that into the first expression to obtain \(x_2=1\).</p><p>This gives us two stationary points: \((0,0), (2,1)\).</p><p>Computing the derivative matrix of the function above, we obtain:</p><p>\begin{equation}
+Df(x_1,x_2) = \mqty(3-2x_1 - x_2 & -x_1 \\ x_2 & -2+x_1)
+\end{equation}</p><p>At \((0,0)\), we obtain the matrix:</p><p>\begin{equation}
+\mqty(3 & 0 \\ 0 & -2)
+\end{equation}</p><p>which has characteristic polynomial \((3-\lambda)(-2-\lambda)\), which yields \(\lambda = -2, 3\), which means we have an saddle point which are unstable half-parabolas outwards.</p><p>At \((2,1)\), we obtain the matrix:</p><p>\begin{equation}
+\mqty(-2 & -2 \\ 1 & 0)
+\end{equation}</p><p>which gives us the characteristic polynomial \((-2-\lambda)(\lambda)+2\), which yields that \(\lambda = -1 \pm i\).</p><p>This means that at this stationary point, we have an inward spiral.</p><h3 id=problem-13-dot-3>Problem 13.3</h3><h4 id=part-a>Part a</h4><p>\begin{equation}
+\begin{cases}
+x&rsquo; = y+x^{2}y + y^{3} \\
+y&rsquo; = x+x^{3}+xy^{2}
+\end{cases}
+\end{equation}</p><p>which gives the derivative matrix:</p><p>\begin{equation}
+\mqty(2xy & 1+x^{2}+3y^{2} \\ 1+3x^{2}+y^{2} & 2xy)
+\end{equation}</p><p>Now, at \((0,0)\), this gives:</p><p>\begin{equation}
+\mqty(0 & 1 \\ 1 & 0)
+\end{equation}</p><p>This yields a characteristic polynomial of:</p><p>\begin{equation}
+(-\lambda)^{2} -1 = 0
+\end{equation}</p><p>meaning: \(\lambda = -1, 1\).</p><p>This yields two eigenvectors:</p><p>\begin{equation}
+\begin{cases}
+\lambda = -1, v =\mqty(1 \\ -1) \\
+\lambda =1, v= \mqty(1 \\ 1)
+\end{cases}
+\end{equation}</p><p>Which creates this figure:</p><figure><img src=/ox-hugo/2024-02-07_22-37-18_screenshot.png></figure><h4 id=part-b>Part b</h4><p>We have:</p><p>\begin{equation}
+\begin{cases}
+x&rsquo; = y+x-xy \\
+y&rsquo; = 4y +xy
+\end{cases}
+\end{equation}</p><p>meaning, we have the derivative matrix:</p><p>\begin{equation}
+\mqty(1-y & 1-x \\ y & 4+x)
+\end{equation}</p><p>at \((0,0)\), this gives:</p><p>\begin{equation}
+\mqty(1 & 1 \\ 0 & 4)
+\end{equation}</p><p>which yields the characteristic polynomial of \((1-\lambda)(4-\lambda)\), meaning we have \(\lambda=1,4\). This gives two eigenvectors:</p><p>\begin{equation}
+\begin{cases}
+\lambda =1, v = \mqty(1 \\ 0) \\
+\lambda =4, v = \mqty(3 \\1)
+\end{cases}
+\end{equation}</p><p>Finally, this yields the figure:</p><figure><img src=/ox-hugo/2024-02-07_22-40-52_screenshot.png></figure><h3 id=problem-13-dot-9>Problem 13.9</h3><p>We have:</p><p>\begin{equation}
+\begin{cases}
+\dv{x}{t} = y \\
+\dv{y}{t} = -2x^{3}+2x-\gamma y
+\end{cases}
+\end{equation}</p><p>The first expression gives \(y=0\) in a stationary point; plugging that into the latter yields \(-2x(x^{2}-1)\). This gives that \(x=0,1,-1\). Meaning, we have stationary points:</p><p>\begin{equation}
+(0,0), (1,0), (-1,0)
+\end{equation}</p><p>Now, the derivative matrix of this system gives:</p><p>\begin{equation}
+\mqty(0 & 1 \\ -6x^{2}+2 & -\gamma)
+\end{equation}</p><p>Which gives the characteristic polynomial: \(\lambda^{2}+\gamma \lambda -6x^{2}-2=0\).</p><p>At \(x=0\), this gives \(\lambda^{2}+\gamma \lambda -2 = 0\), meaning it gives:</p><p>\begin{equation}
+\lambda = \frac{-\gamma \pm \sqrt{\gamma^{2}+8}}{2}
+\end{equation}</p><p>Now, \(-\lambda - \sqrt{\dots}\) is negative. Yet, \(0=-\lambda+\sqrt{\lambda^{2}} &lt; -\lambda+\sqrt{\lambda^{2}+8}\), so, the other case is positive.</p><p>The real component of the eigenvalues having opposite signs, this system is unstable.</p><p>Consider \(x=-1\) and \(x=1\), we have: \(\lambda^{2}+\gamma \lambda -8=0\). This is a very similar case as the above, which gives:</p><p>\begin{equation}
+\lambda = \frac{\lambda \pm \sqrt{\lambda^{2} +32}}{2}
+\end{equation}</p><p>By a similar logic, this is also unstable.</p><h2 id=chapter-14>Chapter 14</h2><h3 id=problem-14-dot-1>Problem 14.1</h3><h4 id=part-a>Part a</h4><p>We have:</p><p>\begin{equation}
+c(t) = x(t)^{2}-e^{y(t)}
+\end{equation}</p><p>meaning, we have:</p><p>\begin{equation}
+c&rsquo;(t) = 2x x&rsquo; - e^{y} y&rsquo; = 2x(-x-e^{y}) - e^{y} (-2x) = -2x^{2}
+\end{equation}</p><p>This is strictly decreasing because \(x^{2}\) is always positive when \(x \neq 0\), and therefore \(c&rsquo;(t)\) is always negative, so the function is monotonically decreasing.</p><h4 id=part-b>Part b</h4><p>Orange. To make \(c(t)\) monotonically decreasing, either \(x(t)\) needs to decrease with time or \(y(t)\) needs to increase with time. Both of which will yield us a lower \(c(t)\) value than that of the black curve, which is the orange curve.</p><h4 id=part-c>Part c</h4><p>At \((0, y_0)\), the original derivatives gives us the velocity vector:</p><p>\begin{equation}
+\mqty(-e^{y_0} \\ 0)
+\end{equation}</p><p>Recall that \(e^{y_0}>0\) for all finite \(y_0\). This makes this vector point to the left horizontally; as the vector gives no \(y\) component, and its \(x\) component is \(0\), our solution curve would cross the \(y\) axis by moving towards the left horizontally.</p><h3 id=problem-14-dot-3>Problem 14.3</h3><h4 id=part-a>Part a</h4><p>We note that holding either \(X\) or \(Y\) as \(0\) will result in the derivative of the variable in question to be \(0\). Therefore, the axes for the non-negative are solutions which&mdash;given this is a first order system&mdash;does not cross other solutions.</p><p>This means that solutions that start at the positive region will remain in the positive region.</p><h4 id=part-b>Part b</h4><p>We can check this by plugging our expressions in via the chain rule:</p><p>\begin{equation}
+x = \qty(\frac{D}{C}) X
+\end{equation}</p><p>and \(t = CT\), so:</p><p>\begin{equation}
+\dv{x}{t} = \dv{x}{T}\dv{T}{t} = \frac{1}{C} \qty(\frac{D}{C} (A-BY)X) = \frac{1}{C} \qty(A-BY)x = a(1-y)x
+\end{equation}</p><p>Similarly, with:</p><p>\begin{equation}
+y = \qty(\frac{B}{A})Y
+\end{equation}</p><p>we can write:</p><p>\begin{equation}
+\dv{y}{t} = \dv{y}{T} \dv{T}{t} = \frac{1}{C}\qty( \frac{B}{A} \qty(-C+DX)Y ) = (x-1)y
+\end{equation}</p><p>Now, this system linearizes to:</p><p>\begin{equation}
+\mqty(a-ay & -ax \\ y & x-1)
+\end{equation}</p><p>Which, at \((1, 1)\), gives:</p><p>\begin{equation}
+\mqty(0 & -a \\ 1 & 0)
+\end{equation}</p><p>Now, this yields the characteristic polynomial \((-\lambda)^{2}+a = 0\), which provides purely imaginary eigenvalues, as desired.</p><h4 id=part-c>Part c</h4><p>We have:</p><p>\begin{equation}
+(x - \ln x) + a(y- \ln y)
+\end{equation}</p><p>Whose derivatives by \(t\) gives:</p><p>\begin{equation}
+\dv{x}{t} - \frac{1}{x} \dv{x}{t} + a\qty(\dv{y}{t} - \frac{1}{y} \dv{y}{t})
+\end{equation}</p><p>which, after plugging in the values given, gives:</p><p>\begin{equation}
+a(1-y)x - a(1-y) + a((x-1)y-(x-1)) = 0
+\end{equation}</p><p>as desired.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
