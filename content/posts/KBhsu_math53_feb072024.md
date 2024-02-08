@@ -65,102 +65,10 @@ x\_2' = -\sin x\_1 - \gamma x\_2
 ## Strategy to Analyze when its Hopeless {#strategy-to-analyze-when-its-hopeless}
 
 1.  find a stationary solutions: \\(x(t) = a\\): where \\(x' = F(a) = 0\\) and draw them as points on the \\(x\_1\\) and \\(x\_2\\) plane
-2.  near each equilibrium point, approximate through [Linearilzation](#linearilzation)
+2.  near each equilibrium point, approximate through [Linearilzation]({{< relref "KBhode_linearilzation.md" >}})
 3.  study the [mesoscopic region]({{< relref "KBhmesoscopic_region.md" >}})
 
-
-## linearilzation {#linearilzation}
-
-For some non-linear function, we can use its first Jacobian to create a linear system. Then, we can use that system to write the first order Taylor:
-
-\begin{equation}
-y' = \nabla F(crit)y
-\end{equation}
-
-where \\(crit\\) are critical points.
-
-
-### Three [Phase Portrait](#phase-portrait) connection cases {#three-phase-portrait--org3d17202--connection-cases}
-
--   spiraling away from equilibrium
--   spiraling towards the equilibrium
--   concentric circles
-
-
-### Worked Example {#worked-example}
-
-Let's [Lotha-Volterra Prey-Predictor Equation](#lotha-volterra-prey-predictor-equation) again as an example
-
-\begin{equation}
-\begin{cases}
-x\_1' = 2x\_1-x\_1x\_2 \\\\
-x\_2' = x\_1x\_2 - 3x\_2
-\end{cases}
-\end{equation}
-
-we can stare at this (and factor \\(x\\) out) to understand that there are only two stationary points:
-
-\begin{equation}
-(x\_1,x\_2) = (0,0), (3,2)
-\end{equation}
-
-Let's analyze this function for [linearilzation](#linearilzation).
-
-Let's write this expression in terms of the linear and non linear parts
-
-\begin{equation}
-\begin{cases}
-x' = \mqty(2 & 0 \\\ 0 & -3) \mqty(x\_1 \\\ x\_2) + \mqty(-x\_1x\_2 \\\ x\_1 x\_2)
-\end{cases}
-\end{equation}
-
-
-#### Near \\((0,0)\\) {#near--0-0}
-
-You will note that the right non-linear parts becomes very small near \\((0,0)\\), meaning we can analyze this in terms of a normal phase portrait.
-
-
-#### Near \\((3,2)\\) {#near--3-2}
-
-We can translate this down:
-
-Let:
-
-\begin{equation}
-y = x - \mqty(3 \\\2)
-\end{equation}
-
-meaning:
-
-\begin{equation}
-y' = x' = F\qty(y+\mqty(3 \\\ 2))
-\end{equation}
-
-we can use a Taylor expansion to get:
-
-\begin{equation}
-y' = x' = F\qty(y + \mqty(3\\\2)) + \qty(\nabla F)y + \dots
-\end{equation}
-
-Recall that \\(F\\) is given as:
-
-\begin{equation}
-\mqty(2x\_1 - x\_1x\_2 \\\ x\_1x\_2-3x\_2)
-\end{equation}
-
-meaning:
-
-\begin{equation}
-\nabla \mqty(2x\_1 - x\_1x\_2 \\\ x\_1x\_2-3x\_2) = \mqty(2-x\_2 & -x\_1 \\\ x\_2 & x\_1-3)
-\end{equation}
-
-plugging in \\((3, 2)\\) obtains:
-
-\begin{equation}
-y' = \mqty(0 & -3 \\\ 2 & 0) y
-\end{equation}
-
-which we can analyze in the usual manners.
+So, see [ODE linearilzation]({{< relref "KBhode_linearilzation.md" >}}).
 
 
 ## Phase Portrait {#phase-portrait}
