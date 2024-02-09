@@ -58,7 +58,7 @@ thread(myfunc, ref(myint));
 Remember: ref will ****SHARE MEMORY****, and you have no control over when the thread runs. So once a pointer is passed all bets are off in terms of what values things take on.
 
 
-## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org778fc72--s}
+## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org322b3f2--s}
 
 | Processes                                          | Threads                                     |
 |----------------------------------------------------|---------------------------------------------|
@@ -115,3 +115,5 @@ importantly, if multiple [thread](#thread)s are waiting on a mutex, the next thr
 -   if you are no writes, you don't need a mutex
 
 when dealing with [mutex](#mutex), beware of [deadlock]({{< relref "KBhdeadlock.md" >}})
+
+Sleep call can happen by putting a sleep call in certain places.

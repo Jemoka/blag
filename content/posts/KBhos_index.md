@@ -82,6 +82,9 @@ How do we implement a single program within a single program, and how do we not 
     -   [processes vs threads]({{< relref "KBhmultithreading.md#id-cc41feaf-ce09-48ec-84d7-8f98d9ca20ba-process-es-vs-id-b4b86ccc-70f3-4d30-b437-2f5fff63b0e6-thread-s" >}})
     -   [race condition]({{< relref "KBhmultithreading.md#race-condition" >}}) and [mutex]({{< relref "KBhmultithreading.md#mutex" >}})
     -   [passing by reference]({{< relref "KBhmultithreading.md#passing-by-reference" >}})
+-   [permits model]({{< relref "KBhpermits_model.md" >}})
+    -   [busy waiting]({{< relref "KBhpermits_model.md" >}})
+    -   [condition variable]({{< relref "KBhpermits_model.md#condition-variable" >}})
 
 ---
 
