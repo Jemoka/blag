@@ -136,7 +136,11 @@ which has roots:
 
 Notably, this gives a parabola that opens down. Meaning, the "lower" root would be an unstable point, and the "upper" root would be a stable point.
 
-In any initial points higher than the "lower" bound, our function will not experience extinction. For our specific case, this means we desire:
+In any initial points higher than the "lower" bound, our function will not experience extinction.
+
+There are now two cases. Suppose \\(y\_0 < \frac{k}{2}\\), we have:
+
+For our specific case, this means we desire:
 
 \begin{equation}
 \frac{k}{2} - \sqrt{\qty(\frac{k}{2})^{2} - \frac{hk}{r}} < y\_0
@@ -146,6 +150,24 @@ Solving now for \\(h\\), we obtain that:
 
 \begin{equation}
 \frac{r}{k} \qty( \qty(\frac{k}{2})^{2} - \qty(\frac{k}{2}-y\_0)^{2}) > h
+\end{equation}
+
+For the case where \\(y\_0 > \frac{k}{2}\\), the statement above is always true until:
+
+\begin{equation}
+\mqty(\frac{k}{2})^{2} - \frac{hk}{r} < 0
+\end{equation}
+
+as the answer will become imaginary; as such, this requires that:
+
+\begin{equation}
+\mqty(\frac{k}{2})^{2} > \frac{hk}{r}
+\end{equation}
+
+meaning we would simply desire:
+
+\begin{equation}
+\frac{r}{k} \mqty(\frac{k}{2})^{2} > h
 \end{equation}
 
 For our specific initial conditions, we have that:
@@ -599,3 +621,73 @@ If \\(R\_0 = \frac{\tau}{\gamma} > 1\\), then we have that \\(\tau > \gamma\\).
 For \\(i(t) = 0\\), taking one derivative of the expression above yields that \\(i''(t) = (\tau -\gamma) - 2\tau i(t)\\). At \\(i(t) = 1- \frac{\gamma}{\tau}\\), this simplifies to $(&tau; -&gamma; ) - 2 &tau; + 2&gamma; $, which gives \\(\gamma - \tau < 0\\), which is stable
 
 As for \\(i(t) = 0\\), the latter term in the derivative is still \\(0\\) when \\(i(t) = 0\\), and the former would be positive. Meaning, the stationary point \\(i(t) = 0\\) is unstable.
+
+
+### Problem 14.8 {#problem-14-dot-8}
+
+
+#### Part a {#part-a}
+
+We have that:
+
+\begin{equation}
+E(x,y) = \frac{y^{2}}{2} + (x^{4} - 2x^{2})
+\end{equation}
+
+taking a derivative:
+
+\begin{equation}
+E'(x,y) = y \dv{y}{t} + (4x^{3} \dv{x}{t}-4x \dv{x}{t})
+\end{equation}
+
+Recall that:
+
+\begin{equation}
+\begin{cases}
+x' = y \\\\
+y' = 4x-4x^{3}
+\end{cases}
+\end{equation}
+
+therefore, plugging in the values we have yields:
+
+\begin{equation}
+E'(x,y) = 4(4x-4x^{3})+ 4x^{3}y - 4xy = 0
+\end{equation}
+
+Verifying that this is a conserved qualtity.
+
+
+#### Part b {#part-b}
+
+We have that:
+
+\begin{equation}
+E(-1, v\_0) = \frac{{v\_0}^{2}}{2} + \qty(1-2) = \frac{{v\_0}^{2}}{2} -1
+\end{equation}
+
+Contrasted with some point that would be at the origin, which gives:
+
+\begin{equation}
+E(0, y) = \frac{y^{2}}{2}
+\end{equation}
+
+Now, suppose these are actually the same level set, meaning:
+
+\begin{equation}
+\frac{{v\_0}^{2}}{2} -1 = \frac{y^{2}}{2}
+\end{equation}
+
+which gives that:
+
+\begin{equation}
+{v\_0}^{2} = y^{2} +2
+\end{equation}
+
+Finally, this indicates to us that:
+
+\begin{equation}
+{v\_0} = \sqrt{y^{2}+2} \geq \sqrt{2}
+\end{equation}
+
+So for any value of \\(y\\) on the \\(x\\) origin, we need a \\(v\_0\\) of at least \\(\sqrt{2}\\). Meaning, for \\(v\_0\\) close to \\(0\\) at the beginning, the system will never reach the \\(x\\) origin.
