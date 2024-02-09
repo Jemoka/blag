@@ -11,7 +11,7 @@ Taking one derivative, we obtain:
 \begin{equation} y&rsquo; = 2C_1e^{2t} - 7C_2e^{-7t} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>PSet 5</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#chapter-12>Chapter 12</a><ul><li><a href=#problem-12-dot-2>Problem 12.2</a></li><li><a href=#problem-12-dot-6>Problem 12.6</a></li><li><a href=#problem-12-dot-10>Problem 12.10</a></li></ul></li><li><a href=#chapter-13>Chapter 13</a><ul><li><a href=#problem-13-dot-1>Problem 13.1</a></li><li><a href=#problem-13-dot-3>Problem 13.3</a></li><li><a href=#problem-13-dot-9>Problem 13.9</a></li></ul></li><li><a href=#chapter-14>Chapter 14</a><ul><li><a href=#problem-14-dot-1>Problem 14.1</a></li><li><a href=#problem-14-dot-3>Problem 14.3</a></li><li><a href=#problem-14-dot-6>Problem 14.6</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=chapter-12>Chapter 12</h2><h3 id=problem-12-dot-2>Problem 12.2</h3><p>We have:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>PSet 5</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#chapter-12>Chapter 12</a><ul><li><a href=#problem-12-dot-2>Problem 12.2</a></li><li><a href=#problem-12-dot-6>Problem 12.6</a></li><li><a href=#problem-12-dot-10>Problem 12.10</a></li></ul></li><li><a href=#chapter-13>Chapter 13</a><ul><li><a href=#problem-13-dot-1>Problem 13.1</a></li><li><a href=#problem-13-dot-3>Problem 13.3</a></li><li><a href=#problem-13-dot-9>Problem 13.9</a></li></ul></li><li><a href=#chapter-14>Chapter 14</a><ul><li><a href=#problem-14-dot-1>Problem 14.1</a></li><li><a href=#problem-14-dot-3>Problem 14.3</a></li><li><a href=#problem-14-dot-6>Problem 14.6</a></li><li><a href=#problem-14-dot-8>Problem 14.8</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=chapter-12>Chapter 12</h2><h3 id=problem-12-dot-2>Problem 12.2</h3><p>We have:</p><p>\begin{equation}
 \begin{cases}
 y&rsquo;&rsquo; + 5y&rsquo; - 14y = 0 \\
 y(0) = 0 \\
@@ -57,10 +57,16 @@ y&rsquo;(t) = ry \qty(1- \frac{y}{K}) -h
 ry \qty(1- \frac{y}{K}) -h = 0
 \end{equation}</p><p>which has roots:</p><p>\begin{equation}
 \frac{k}{2} \pm \sqrt{\qty(\frac{k}{2})^{2} - \frac{hk}{r}}
-\end{equation}</p><p>Notably, this gives a parabola that opens down. Meaning, the &ldquo;lower&rdquo; root would be an unstable point, and the &ldquo;upper&rdquo; root would be a stable point.</p><p>In any initial points higher than the &ldquo;lower&rdquo; bound, our function will not experience extinction. For our specific case, this means we desire:</p><p>\begin{equation}
+\end{equation}</p><p>Notably, this gives a parabola that opens down. Meaning, the &ldquo;lower&rdquo; root would be an unstable point, and the &ldquo;upper&rdquo; root would be a stable point.</p><p>In any initial points higher than the &ldquo;lower&rdquo; bound, our function will not experience extinction.</p><p>There are now two cases. Suppose \(y_0 &lt; \frac{k}{2}\), we have:</p><p>For our specific case, this means we desire:</p><p>\begin{equation}
 \frac{k}{2} - \sqrt{\qty(\frac{k}{2})^{2} - \frac{hk}{r}} &lt; y_0
 \end{equation}</p><p>Solving now for \(h\), we obtain that:</p><p>\begin{equation}
 \frac{r}{k} \qty( \qty(\frac{k}{2})^{2} - \qty(\frac{k}{2}-y_0)^{2}) > h
+\end{equation}</p><p>For the case where \(y_0 > \frac{k}{2}\), the statement above is always true until:</p><p>\begin{equation}
+\mqty(\frac{k}{2})^{2} - \frac{hk}{r} &lt; 0
+\end{equation}</p><p>as the answer will become imaginary; as such, this requires that:</p><p>\begin{equation}
+\mqty(\frac{k}{2})^{2} > \frac{hk}{r}
+\end{equation}</p><p>meaning we would simply desire:</p><p>\begin{equation}
+\frac{r}{k} \mqty(\frac{k}{2})^{2} > h
 \end{equation}</p><p>For our specific initial conditions, we have that:</p><p>\begin{equation}
 \begin{cases}
 r = 2 \\
@@ -180,4 +186,25 @@ i&rsquo;(t) = \tau i(t) -\tau i^{2}(t) - \gamma i(t)
 i&rsquo;(t) = (\tau -\gamma )i(t) - \tau i^{2}(t)
 \end{equation}</p><p>Now, factoring \(i(t)\) out, we obtain:</p><p>\begin{equation}
 i&rsquo;(t) = i(t) ((\tau-\gamma) - \tau i(t))
-\end{equation}</p><p>which yields two solutions, either \(i(t) = 0\), or \((\tau - \gamma ) - \tau (i(t)) = 0\) meaning, \(i(t) = 1- \frac{\gamma}{\tau}\)</p><h4 id=part-b>Part b</h4><p>If \(R_0 = \frac{\tau}{\gamma} &lt; 1\), then we have that \(\tau &lt; \gamma\).</p><p>Meaning, \(\frac{\gamma}{\tau} > 1\), which gives that \(1 - \frac{\gamma}{\tau} &lt; 0\). Meaning there is no positive stationary value.</p><p>As for \(i(t) = 0\), taking one derivative of the expression above yields that \(i&rsquo;&rsquo;(t) = (\tau -\gamma) - 2\tau i(t)\). The latter is \(0\) when \(i(t) = 0\), and the former would be negative. Meaning, the stationary point \(i(t) = 0\) is stable.</p><h4 id=part-c>Part c</h4><p>A similar argument goes as part \(b\), but in opposite direction.</p><p>If \(R_0 = \frac{\tau}{\gamma} > 1\), then we have that \(\tau > \gamma\).</p><p>For \(i(t) = 0\), taking one derivative of the expression above yields that \(i&rsquo;&rsquo;(t) = (\tau -\gamma) - 2\tau i(t)\). At \(i(t) = 1- \frac{\gamma}{\tau}\), this simplifies to $(τ -γ ) - 2 τ + 2γ $, which gives \(\gamma - \tau &lt; 0\), which is stable</p><p>As for \(i(t) = 0\), the latter term in the derivative is still \(0\) when \(i(t) = 0\), and the former would be positive. Meaning, the stationary point \(i(t) = 0\) is unstable.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>which yields two solutions, either \(i(t) = 0\), or \((\tau - \gamma ) - \tau (i(t)) = 0\) meaning, \(i(t) = 1- \frac{\gamma}{\tau}\)</p><h4 id=part-b>Part b</h4><p>If \(R_0 = \frac{\tau}{\gamma} &lt; 1\), then we have that \(\tau &lt; \gamma\).</p><p>Meaning, \(\frac{\gamma}{\tau} > 1\), which gives that \(1 - \frac{\gamma}{\tau} &lt; 0\). Meaning there is no positive stationary value.</p><p>As for \(i(t) = 0\), taking one derivative of the expression above yields that \(i&rsquo;&rsquo;(t) = (\tau -\gamma) - 2\tau i(t)\). The latter is \(0\) when \(i(t) = 0\), and the former would be negative. Meaning, the stationary point \(i(t) = 0\) is stable.</p><h4 id=part-c>Part c</h4><p>A similar argument goes as part \(b\), but in opposite direction.</p><p>If \(R_0 = \frac{\tau}{\gamma} > 1\), then we have that \(\tau > \gamma\).</p><p>For \(i(t) = 0\), taking one derivative of the expression above yields that \(i&rsquo;&rsquo;(t) = (\tau -\gamma) - 2\tau i(t)\). At \(i(t) = 1- \frac{\gamma}{\tau}\), this simplifies to $(τ -γ ) - 2 τ + 2γ $, which gives \(\gamma - \tau &lt; 0\), which is stable</p><p>As for \(i(t) = 0\), the latter term in the derivative is still \(0\) when \(i(t) = 0\), and the former would be positive. Meaning, the stationary point \(i(t) = 0\) is unstable.</p><h3 id=problem-14-dot-8>Problem 14.8</h3><h4 id=part-a>Part a</h4><p>We have that:</p><p>\begin{equation}
+E(x,y) = \frac{y^{2}}{2} + (x^{4} - 2x^{2})
+\end{equation}</p><p>taking a derivative:</p><p>\begin{equation}
+E&rsquo;(x,y) = y \dv{y}{t} + (4x^{3} \dv{x}{t}-4x \dv{x}{t})
+\end{equation}</p><p>Recall that:</p><p>\begin{equation}
+\begin{cases}
+x&rsquo; = y \\
+y&rsquo; = 4x-4x^{3}
+\end{cases}
+\end{equation}</p><p>therefore, plugging in the values we have yields:</p><p>\begin{equation}
+E&rsquo;(x,y) = 4(4x-4x^{3})+ 4x^{3}y - 4xy = 0
+\end{equation}</p><p>Verifying that this is a conserved qualtity.</p><h4 id=part-b>Part b</h4><p>We have that:</p><p>\begin{equation}
+E(-1, v_0) = \frac{{v_0}^{2}}{2} + \qty(1-2) = \frac{{v_0}^{2}}{2} -1
+\end{equation}</p><p>Contrasted with some point that would be at the origin, which gives:</p><p>\begin{equation}
+E(0, y) = \frac{y^{2}}{2}
+\end{equation}</p><p>Now, suppose these are actually the same level set, meaning:</p><p>\begin{equation}
+\frac{{v_0}^{2}}{2} -1 = \frac{y^{2}}{2}
+\end{equation}</p><p>which gives that:</p><p>\begin{equation}
+{v_0}^{2} = y^{2} +2
+\end{equation}</p><p>Finally, this indicates to us that:</p><p>\begin{equation}
+{v_0} = \sqrt{y^{2}+2} \geq \sqrt{2}
+\end{equation}</p><p>So for any value of \(y\) on the \(x\) origin, we need a \(v_0\) of at least \(\sqrt{2}\). Meaning, for \(v_0\) close to \(0\) at the beginning, the system will never reach the \(x\) origin.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
