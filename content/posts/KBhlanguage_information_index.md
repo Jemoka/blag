@@ -93,3 +93,24 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
     -   [TF-IDF]({{< relref "KBhranked_information_retrieval.md#tf-idf" >}})
         -   [SMART notation]({{< relref "KBhranked_information_retrieval.md#smart-notation" >}})
 -   [vector-space model]({{< relref "KBhranked_information_retrieval.md#vector-space-model" >}})
+
+
+### Vector Semantics {#vector-semantics}
+
+-   [sense]({{< relref "KBhsense.md" >}})
+    -   [principle of contrast]({{< relref "KBhsense.md#principle-of-contrast" >}})
+    -   [word relatedness]({{< relref "KBhsense.md#word-relatedness" >}})
+        -   [semantic field]({{< relref "KBhsense.md#semantic-field" >}})
+    -   [synonymy]({{< relref "KBhsense.md#synonymy" >}}) and [antonyms]({{< relref "KBhsense.md#antonyms" >}})
+    -   [affective meaning]({{< relref "KBhsense.md#affective-meaning" >}})
+-   [vector semantics]({{< relref "KBhvector_semantics.md" >}})
+    -   [transposing a Term-Document Matrix]({{< relref "KBhvector_semantics.md#transposing-a-id-b5d7f908-0351-436d-9784-180ab5aa0562-term-document-matrix" >}})
+    -   [term-term matrix]({{< relref "KBhvector_semantics.md#term-term-matrix" >}})
+    -   [word2vec]({{< relref "KBhword2vec.md" >}})
+        -   [skip-gram with negative sampling]({{< relref "KBhword2vec.md#skip-gram-with-negative-sampling" >}})
+
+
+### POS and NER {#pos-and-ner}
+
+-   [POS Tagging]({{< relref "KBhpos_tagging.md" >}})
+-   [NER Tagging]({{< relref "KBhner_tagging.md" >}})

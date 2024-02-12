@@ -1,5 +1,5 @@
 +++
-title = "power series"
+title = "power series to solve differential equations"
 author = ["Houjun Liu"]
 draft = false
 +++
