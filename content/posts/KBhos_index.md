@@ -86,6 +86,23 @@ How do we implement a single program within a single program, and how do we not 
     -   [busy waiting]({{< relref "KBhpermits_model.md" >}})
     -   [condition variable]({{< relref "KBhpermits_model.md#condition-variable" >}})
 
+
+#### trust {#trust}
+
+how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
+
+-   [trust by assumption]({{< relref "KBhprivacy.md#trust-by-assumption" >}})
+-   [trust by inference]({{< relref "KBhprivacy.md#trust-by-inference" >}})
+-   [trust by substitution]({{< relref "KBhprivacy.md#trust-by-substitution" >}})
+
+
+#### patterns {#patterns}
+
+-   [monitor pattern]({{< relref "KBhmonitor_pattern.md" >}})
+
+
+###  {#d41d8c}
+
 ---
 
 An example of a good time:
