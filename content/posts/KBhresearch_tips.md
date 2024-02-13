@@ -114,3 +114,35 @@ Overview **AFTER** the motivation.
 -   biblatex: bibtex with postprocessing the .tex
 -   sislstrings.bib: mykel's conference list for .bib
 -   JabRef
+
+
+## PhD Thesis {#phd-thesis}
+
+<http://www.feron.org/Eric/PhD_characterization_2.htm>
+
+-   "Cool Theorems and New Methods"
+-   "Cool Methods and Predictions"
+-   "Beautiful Demonstrations"
+-   "Cool engineering ideas"
+
+
+## "How to Write a Paper" {#how-to-write-a-paper}
+
+<https://cs.stanford.edu/people/widom/paper-writing.html>
+
+1.  what's the problem
+2.  why is it interesting and important?
+3.  why is it hard?
+4.  why hasn't been solved before/what's wrong with previous solutions?
+5.  what are the key components of my approach and results?
+
+You want the intro to end near the end of the first page or near the end of the second page. **Always lead with the problem.**
+
+
+## Mathematical Writing {#mathematical-writing}
+
+"CS209 mathematical writing"
+
+Don't start a sentence with a symbol.
+
+Don't use "utilize".

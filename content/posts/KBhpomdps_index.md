@@ -17,8 +17,12 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | Moar Online Methods        | [IS-DESPOT]({{< relref "KBhis_despot.md" >}}), [POMCPOW]({{< relref "KBhpomcpow.md" >}}), [AdaOPS]({{< relref "KBhadaops.md" >}})          |
 | POMDPish                   | [MOMDP]({{< relref "KBhmomdp.md" >}}), [POMDP-lite]({{< relref "KBhpomdp_lite.md" >}}), [rho-POMDPs]({{< relref "KBhrho_pomdps.md" >}})    |
 | Memoryless + Policy Search | [Sarsa (Lambda)]({{< relref "KBhsarsa_lambda.md" >}}), [JSJ]({{< relref "KBhjsj.md" >}}), [Pegasus]({{< relref "KBhpegasus.md" >}})        |
+| Hierarchical Decomposition | [Option]({{< relref "KBhoption.md" >}}), [MaxQ]({{< relref "KBhmaxq.md" >}}), [LTRDP]({{< relref "KBhltrdp.md" >}})                        |
 
 
 ## Other Content {#other-content}
 
 [Research Tips]({{< relref "KBhresearch_tips.md" >}})
+
+-   [STRIPS-style planning]({{< relref "KBhstrips_style_planning.md" >}})
+-   [Temperal Abstraction]({{< relref "KBhtemperal_abstraction.md" >}})
