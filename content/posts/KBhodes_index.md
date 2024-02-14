@@ -71,6 +71,7 @@ What we want to understand:
 ### Linear Non-Constant Coefficient ODEs {#linear-non-constant-coefficient-odes}
 
 -   [SU-MATH53 FEB122024]({{< relref "KBhsu_math53_feb122024.md" >}})
+-   [SU-MATH53 FEB142024]({{< relref "KBhsu_math53_feb142024.md" >}})
 
 
 ## Midterm Sheet {#midterm-sheet}

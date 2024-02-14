@@ -12,3 +12,6 @@ while [POS Tagging]({{< relref "KBhpos_tagging.md" >}}) assigns tags to each wor
 ## BIO Tagging {#bio-tagging}
 
 [BIO Tagging](#bio-tagging) will tag each word: where \\(B\\) begins a span, \\(I\\), is inside a span, and \\(O\\) outside a span. So tags per word still apply, but we can extract span information as well.
+
+(job - gender + gender ) = job
+(captial - country + country) = captial

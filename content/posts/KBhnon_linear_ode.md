@@ -13,6 +13,10 @@ x' = F(t,x)
 We can actually turn this into an autonomous system:
 
 \begin{equation}
+x\_0 = t
+\end{equation}
+
+\begin{equation}
 x\_0' = 1
 \end{equation}
 

@@ -37,7 +37,7 @@ whereby all of your objectives and backup, etc., takes \\(x\\) your observable s
 
 ### Pseudo-Full Observability {#pseudo-full-observability}
 
-Train a fully observable model, and then use [belief]({{< relref "KBhbelief.md" >}})-weighted average during inference. This is where [QMDP]({{< relref "KBhqmdp.md" >}}) came from.
+Train a fully observable model, and then use [belief]({{< relref "KBhbelief.md" >}})-weighted average during inference. This is where [QMDP]({{< relref "KBhqmdp.md" >}}) came from
 
 
 ### Bounded Uncertainty {#bounded-uncertainty}

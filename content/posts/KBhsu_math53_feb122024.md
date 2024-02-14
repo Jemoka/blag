@@ -24,6 +24,10 @@ p\_{n}(x) = \sum\_{i=0}^{n} \frac{f^{(n)}(0) x^{n}}{n!}
 
 [Taylor's Theorem with Remainder](#taylor-series) gives us that, at some \\(n\\), \\(|f(x) - p\_{n}(x)|\\) is bounded.
 
+\begin{equation}
+|x(t+h) - (x(t) + h x'(t))| \leq Ch
+\end{equation}
+
 Two constraints:
 
 1.  need \\(f^{(n)}\\) to exist infinitely
