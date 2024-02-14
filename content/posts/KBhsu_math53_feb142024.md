@@ -81,33 +81,33 @@ We actually didn't do that much error; its is still bounded by:
 
 this is first-order Taylor Approximation **written backwards**
 
-Notably, the top expression also yields:
+This also yields:
 
 \begin{equation}
-\frac{x((t+h)-h) - x(t+h)}{-h} = \frac{x(t+h) - x(t)}{h} \approx x'(t)
+\frac{x((t+h)-h) - x(t+h)}{-h} = \frac{x(t+h)-x((t+h)-h)}{h}
 \end{equation}
 
-meaning, we have:
+Now, let \\(t = t\_0\\), and therefore we have \\(t\_1 = t +h\\), this gives us that:
+
+Now, recall that, because \\(f\\) is the ODE:
 
 \begin{equation}
-x'(t+h) \approx x'(t)
+x'(t\_1) = f(x(t\_1)) = x'(t+h) \approx \frac{x(t\_1) - x(t\_0)}{h}
 \end{equation}
 
-which we know because \\(h\\) is small.
-
-Now, this gives us that:
+Multiplying \\(h\\) to both sides gives:
 
 \begin{equation}
-x'(t\_1) = f(x(t\_1)) = \frac{x(t\_1) - x(t\_0)}{h}
+hf(x(t\_1)) = x(t\_1) - x(t\_0)
 \end{equation}
 
-recall also from before that:
+which gives:
 
 \begin{equation}
-x\_1 \approx x(t\_1) \approx x\_0 + h f(x(t\_1))
+x(t\_0) = x(t\_1) - h f(x(t\_1))
 \end{equation}
 
-we will now attempt to estimate \\(x\_1\\), which will give us:
+we will now attempt to estimate \\(x\_1\\) by declaring \\(x\_1 := x(t\_{1})\\), which will give us:
 
 \begin{equation}
 x\_1 - h f(x\_1) = x\_0
