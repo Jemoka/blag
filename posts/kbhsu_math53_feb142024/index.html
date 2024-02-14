@@ -1,0 +1,41 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 FEB142024</title>
+<meta name=description content="Numerical Approximation Schemes Consider a general non-linear First Order ODEs:
+\begin{equation} x&rsquo; = F(x) \end{equation}
+Suppose we have some time interval, we have some solutions to the expression given. Is it possible for us to, given \(x(t_0) = x_0\), what \(x(t_0+T)\) would be? Can we approximate for explicit numbers?
+The solutions have to exist for all time: blow-up cannot be present during numerical estimations.
+Explicit Euler Method recall that given \(x(t_0) = x_0\), we desire \(x(t_0+T)\)."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 FEB142024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#numerical-approximation-schemes>Numerical Approximation Schemes</a><ul><li><a href=#explicit-euler-method>Explicit Euler Method</a></li><li><a href=#implicit-euler-method>Implicit Euler Method</a></li><li><a href=#trapezoidal-method>Trapezoidal Method</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=numerical-approximation-schemes>Numerical Approximation Schemes</h2><p>Consider a general non-linear <a href=/posts/kbhfirst_order_odes/>First Order ODEs</a>:</p><p>\begin{equation}
+x&rsquo; = F(x)
+\end{equation}</p><p>Suppose we have some time interval, we have some solutions to the expression given. Is it possible for us to, given \(x(t_0) = x_0\), what \(x(t_0+T)\) would be? Can we approximate for explicit numbers?</p><p>The solutions have to exist for all time: blow-up <strong>cannot</strong> be present during numerical estimations.</p><h3 id=explicit-euler-method>Explicit Euler Method</h3><p>recall that given \(x(t_0) = x_0\), we desire \(x(t_0+T)\).</p><ol><li>divide your solution interval into \(N\) small intervals; each interval would have length \(h= \frac{T}{N}\)</li><li>let \(t_{i} = t_0 + i \frac{T}{N}\), where \(t_{N} = t_{0}+T\)</li><li>for each segment \(t_{i}\), we attempt to compute a \(x_{i}\), and we&rsquo;d like to approximate the error between \(x_{i}\) and \(x(t_{i})\).</li></ol><p>In the explicit Euler method, we make piecewise linear approximations. At each \(x_0\), we follow the slope estimated via the <a href=/posts/kbhordinary_differential_equations/>ODE</a> at that point. Specifically:</p><p>\begin{equation}
+x&rsquo;(t) = \lim_{k \to 0} \frac{x(t+k)-x(t)}{k} \approx \frac{x(t+h)-x(t)}{h}
+\end{equation}</p><p>for some small \(h\). Meaning, specifically, \(x(t+h) \approx x(t) + h x&rsquo;(t)\), where \(h\) is the step size we computed before.</p><p>Consider that we had an <a href=/posts/kbhordinary_differential_equations/>ODE</a> that is \(x&rsquo; = F(x)\), whech gives us:</p><p>\begin{equation}
+x_1 = x_{0}+ h f(x_0) \approx x(t_0 + h)
+\end{equation}</p><p>Following this scheme, we can calculate from \(x_0\) all the way stepwise to \(x_{N}\).</p><h4 id=evaluation>evaluation</h4><p>Situation: we have \(X_{N}\), we have \(x(t_{N})\), how close are they? In fact:</p><p>\begin{equation}
+|x_{N} - x(t_{n}) | \leq Ch
+\end{equation}</p><p>We have some constant \(C(x_0, t_0, T, f)\), which we can use to estimate \(C\) the bounds specific to the problem you are solving.</p><h3 id=implicit-euler-method>Implicit Euler Method</h3><p>A small twist on the <a href=#explicit-euler-method>Explicit Euler Method</a>. To be able to use this method, we can formulate this as:</p><p>\begin{equation}
+x_{i+1} - h f(x_{i+1}) = x_i
+\end{equation}</p><p>where we use <a href=/posts/kbhnewton_s_method/>Newton&rsquo;s Method</a> to estimate some input \(i+1\) for which the above statement gets to \(x_{i}\).</p><h4 id=evaluation>evaluation</h4><p>We actually didn&rsquo;t do that much error; its is still bounded by:</p><p>\begin{equation}
+|x_{N} - x(t_{n}) | \leq Ch
+\end{equation}</p><h4 id=derivation>Derivation</h4><p>\begin{equation}
+\frac{x((t+h)-h) - x(t+h)}{-h} \approx x&rsquo;(t+h)
+\end{equation}</p><p>this is first-order Taylor Approximation <strong>written backwards</strong></p><p>Notably, the top expression also yields:</p><p>\begin{equation}
+\frac{x((t+h)-h) - x(t+h)}{-h} = \frac{x(t+h) - x(t)}{h} \approx x&rsquo;(t)
+\end{equation}</p><p>meaning, we have:</p><p>\begin{equation}
+x&rsquo;(t+h) \approx x&rsquo;(t)
+\end{equation}</p><p>which we know because \(h\) is small.</p><p>Now, this gives us that:</p><p>\begin{equation}
+x&rsquo;(t_1) = f(x(t_1)) = \frac{x(t_1) - x(t_0)}{h}
+\end{equation}</p><p>recall also from before that:</p><p>\begin{equation}
+x_1 \approx x(t_1) \approx x_0 + h f(x(t_1))
+\end{equation}</p><p>we will now attempt to estimate \(x_1\), which will give us:</p><p>\begin{equation}
+x_1 - h f(x_1) = x_0
+\end{equation}</p><p>Let us call \(G(x_{1}) = x_1 - h f(x_1) = x_0\).</p><p>Finally, we run <a href=/posts/kbhnewton_s_method/>Newton&rsquo;s Method</a> to solve the \(x_1\) such that we can obtain \(x_0\) by trying to find the zeros of \(G(x_1) - x_0\). Because \(h\) is small, a good initial guess is actually \(G(x_0)\), and then we can optimize.</p><h3 id=trapezoidal-method>Trapezoidal Method</h3><p>&ldquo;averaging smoothed things out&rdquo;:</p><p>\begin{equation}
+\frac{x(t+h) - x(t)}{h} \approx \frac{f(x(t+h)) + f(x(t))}{2}
+\end{equation}</p><p>meaning we have:</p><p>\begin{equation}
+\frac{x_1-x_0}{h} = \frac{f(x_1) + f(x_0)}{2}
+\end{equation}</p><p>which averages our derivatives out.</p><p>Cross-multiplying, this gives:</p><p>\begin{equation}
+x_1 - \frac{1}{2}h f(x_1) = x_0 + \frac{1}{2} h f(x_0)
+\end{equation}</p><h4 id=evaluation>evaluation</h4><p>Importantly, this gives bounds</p><p>\begin{equation}
+|x_{N} - x(t_{n}) | \leq Ch^{2}
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
