@@ -85,6 +85,7 @@ How do we implement a single program within a single program, and how do we not 
 -   [permits model]({{< relref "KBhpermits_model.md" >}})
     -   [busy waiting]({{< relref "KBhpermits_model.md" >}})
     -   [condition variable]({{< relref "KBhpermits_model.md#condition-variable" >}})
+-   [Unique Lock]({{< relref "KBhunique_lock.md" >}})
 
 
 #### trust {#trust}
