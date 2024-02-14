@@ -108,10 +108,19 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
     -   [term-term matrix]({{< relref "KBhvector_semantics.md#term-term-matrix" >}})
     -   [word2vec]({{< relref "KBhword2vec.md" >}})
         -   [skip-gram with negative sampling]({{< relref "KBhword2vec.md#skip-gram-with-negative-sampling" >}})
--   [Dora]({{< relref "KBhdora.md" >}})
 
 
 ### POS and NER {#pos-and-ner}
 
 -   [POS Tagging]({{< relref "KBhpos_tagging.md" >}})
 -   [NER Tagging]({{< relref "KBhner_tagging.md" >}})
+
+
+### Dora {#dora}
+
+-   [Dora]({{< relref "KBhdora.md" >}})
+
+
+### Neural Nets {#neural-nets}
+
+-   [Neural Networks]({{< relref "KBhneural_networks.md" >}})

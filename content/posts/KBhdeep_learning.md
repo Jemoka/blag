@@ -31,11 +31,38 @@ note! we often
 
 ## backpropegation {#backpropegation}
 
-Motivation:
+[backpropegation](#backpropegation) is a special case of "backwards differentiation" to update a computation grap.h
+
+
+### Toy {#toy}
+
+Consider:
+
+\begin{equation}
+L(a,b,c) = c(a+2b)
+\end{equation}
+
+meaning, we obtain a graph that looks like:
+
+{{< figure src="/ox-hugo/2024-02-13_23-46-34_screenshot.png" >}}
+
+in three steps, we have:
+
+-   \\(d = 2b\\)
+-   \\(e = a+d\\)
+-   \\(L = e\cdot e\\)
+
+To perform backpropagation, we compute derivatives from right to left, computing first \\(\pdv{L}{L}= 1\\), then, moving slowly towards the left to obtain \\(\pdv{L}{c} = \pdv{L}{L}\pdv{L}{c}\\), and then \\(\pdv{L}{e} = \pdv{L}{L}\pdv{L}{c}\\) , and then \\(\pdv{L}{d} = \pdv{L}{L}\pdv{L}{e}\pdv{e}{d}\\) and so forth.
+
+
+### Motivation {#motivation}
 
 -   deep learning is useful by having good \\(\theta\\)
 -   we can find useful thetas by [MLE]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}})
 -   we [MLE]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) by doing optimization to maximize the [likelyhood]({{< relref "KBhlikelyhood.md" >}})
+
+
+### Example {#example}
 
 For one data point, let us define our neural network:
 
