@@ -146,3 +146,9 @@ You want the intro to end near the end of the first page or near the end of the 
 Don't start a sentence with a symbol.
 
 Don't use "utilize".
+
+
+## Authorship {#authorship}
+
+-   talk about it early
+-   universities have authorship inclusion deadline

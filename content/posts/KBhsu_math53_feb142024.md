@@ -140,6 +140,12 @@ Cross-multiplying, this gives:
 x\_1 - \frac{1}{2}h f(x\_1) = x\_0 + \frac{1}{2} h f(x\_0)
 \end{equation}
 
+which can also be written as, multiplying by some \\(h\\):
+
+\begin{equation}
+x\_1 = x\_0 + h \frac{f(x\_1)+f(x\_0)}{2}
+\end{equation}
+
 
 #### evaluation {#evaluation}
 
@@ -147,4 +153,56 @@ Importantly, this gives bounds
 
 \begin{equation}
 |x\_{N} - x(t\_{n}) | \leq Ch^{2}
+\end{equation}
+
+
+### Modified Euler Method {#modified-euler-method}
+
+This is also called "[Midpoint Method](#modified-euler-method)".
+
+This is one of thee methods which doesn't break during "stiff" [ODE]({{< relref "KBhordinary_differential_equations.md" >}})s, and converges \\(h^{N}\\) times quickly.
+
+For some:
+
+\begin{equation}
+\dv{x}{t} = f(t,x)
+\end{equation}
+
+\begin{equation}
+x\_{i+1} = x\_{i} + h f\qty(t\_{i} + \frac{1}{2}h, x\_{i} + \frac{1}{2}h f(t\_{i}, x\_{i}))
+\end{equation}
+
+this is motivated by the [Trapezoidal Method](#trapezoidal-method), but
+
+> "A thorough introduction to these methods requires additional background in approximation theory and numerical analysis"
+>
+> -   The Book
+
+
+### Improved Euler Method {#improved-euler-method}
+
+This is also called "[Heun's Method](#improved-euler-method)"
+
+\begin{equation}
+x\_{i+1} = x\_{i} + \frac{1}{2} h(f(t\_{i}, x\_{i}) + f(t\_{i}+h, x\_{i}+hf(t\_{i}, x\_{i})))
+\end{equation}
+
+
+### Runge-Kutta Method {#runge-kutta-method}
+
+a.k.a. instead of contending with the forward, backward, middle slope, or native slope from \\(f\\), we just ball and average all of them:
+
+\begin{equation}
+\begin{cases}
+m\_1 = f(t\_{i}, x\_{i}) \\\\
+m\_2 = f\qty(t\_{i} + \frac{h}{2}, x\_{i}+\frac{h}{2}m\_{1}) \\\\
+m\_3 = f\qty(t\_{i}+\frac{h}{2}, x\_{i}+\frac{h}{2}m\_{2}) \\\\
+m\_4 = f\qty(t\_{i} + h, x\_{i}+hm\_{3})
+\end{cases}
+\end{equation}
+
+and then:
+
+\begin{equation}
+x\_{i+1} = x\_{i} + \frac{1}{6}h m\_{1} + \frac{1}{3} h m\_{2} + \frac{1}{3} h m\_{3} + \frac{1}{6} h m\_{4}
 \end{equation}

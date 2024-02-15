@@ -11,3 +11,4 @@ draft = false
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-01-25 Thu&gt;</span></span> | [PSet 3]({{< relref "KBhpset_3.md" >}})           |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-02-02 Fri&gt;</span></span> | [PSet 4]({{< relref "KBhpset_4.md" >}})           |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-02-07 Wed&gt;</span></span> | [PSet 5]({{< relref "KBhpset_5.md" >}})           |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-02-14 Wed&gt;</span></span> | [PSet 6]({{< relref "KBhpset_6.md" >}})           |

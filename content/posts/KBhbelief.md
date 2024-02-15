@@ -6,6 +6,8 @@ draft = false
 
 [belief]({{< relref "KBhbelief.md" >}}) is a [probability distribution]({{< relref "KBhprobability_distributions.md" >}}) over your states.
 
+"an informational state decoupled from motivational states"
+
 \begin{equation}
 b \leftarrow update(b,a,o)
 \end{equation}
@@ -19,7 +21,7 @@ There are two main flavours of how to represent beliefs
 
 To update **parametric** beliefs, we can use a [discrete state filter]({{< relref "KBhfilters.md#discrete-state-filter" >}}) (for categorical belief distributions) or a [Kalman Filter]({{< relref "KBhfilters.md#kalman-filter" >}}) (for linear Gaussian). To update **non-parametric** beliefs, we can use a [Particle Filter]({{< relref "KBhfilters.md#particle-filter" >}}).
 
-If we have an **parametric** belief that's not categorical nor linear Gaussian, we can use [Extended Kalman Filter]({{< relref "KBhfilters.md#extended-kalman-filter--kbhfilters-dot-md" >}}) or [Unscented Kalman Filter]({{< relref "KBhfilters.md#unscented-kalman-filter--kbhfilters-dot-md" >}}) to approximate a belief update.
+If we have an **parametric** belief that's not categorical nor linear Gaussian, we can use [Extended Kalman Filter]({{< relref "KBhfilters.md#extended-kalman-filter--kbhfilters-dot-md" >}}) or [Unscented Kalman Filter]({{< relref "KBhfilters.md#unscented-id-6800e7a8-729c-4654-adcc-e0f877079b6a-kalman-filter" >}}) to approximate a belief update.
 
 ---
 

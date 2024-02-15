@@ -18,6 +18,7 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | POMDPish                   | [MOMDP]({{< relref "KBhmomdp.md" >}}), [POMDP-lite]({{< relref "KBhpomdp_lite.md" >}}), [rho-POMDPs]({{< relref "KBhrho_pomdps.md" >}})    |
 | Memoryless + Policy Search | [Sarsa (Lambda)]({{< relref "KBhsarsa_lambda.md" >}}), [JSJ]({{< relref "KBhjsj.md" >}}), [Pegasus]({{< relref "KBhpegasus.md" >}})        |
 | Hierarchical Decomposition | [Option]({{< relref "KBhoption.md" >}}), [MaxQ]({{< relref "KBhmaxq.md" >}}), [LTRDP]({{< relref "KBhltrdp.md" >}})                        |
+| Hybrid Planning            | [HybPlan]({{< relref "KBhhybplan.md" >}}), [LetsDrive]({{< relref "KBhletsdrive.md" >}}), [BetaZero]({{< relref "KBhbetazero.md" >}})      |
 
 
 ## Other Content {#other-content}

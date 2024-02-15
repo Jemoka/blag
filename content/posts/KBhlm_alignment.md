@@ -32,7 +32,7 @@ A [concept](#concept) is a unit of knowledge that's **useful for a task**. Two p
 2.  **transferable**: it can be taught atomically
 
 
-#### filtering for good [concept](#concept)s {#filtering-for-good-concept--orgcd99e8f--s}
+#### filtering for good [concept](#concept)s {#filtering-for-good-concept--org4a10397--s}
 
 Representing a concept as a sparse vector as the latent space. We can check if a concept is transferable by teaching a student agent by doing KL divergence.
 
@@ -42,6 +42,6 @@ Representing a concept as a sparse vector as the latent space. We can check if a
 instead of doing demonstration learning on machines, do it on ****HUMANS****. Filter for the [concept](#concept)s that are well operationalized.
 
 
-## alpha-zero {#alpha-zero}
+## AlphaZero {#alphazero}
 
 recap: using a dense network to embed the network, and then [MCTS]({{< relref "KBhmonte_carlo_tree_search.md" >}}).
