@@ -24,17 +24,6 @@ a [process](#process) is an instance of a [program](#program). Every process has
 syscall `get_pid` will give you back the PID.
 
 
-### process control block {#process-control-block}
-
-Each [process](#process) is controlled by a struct which contain information about the process.
-
-Within each process, we have a [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) table (and the ints we get are indicies into this table), for which each entry stores points to the [open file table](#open-file-table).
-
-When a process forks, the child doesn't get more open file entries, instead, we simply clone the [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) table (i.e. parent and child will share the same underlying [open file table](#open-file-table) entries); this is how we can share pipes.
-
-This is why you need to **CLOSE** all open file descriptors once every **PROCESS**, including forked child.
-
-
 ### open file table {#open-file-table}
 
 [open file table](#open-file-table) is a system wide for each file opening session, mentioning what the mode and cursor of the file is open, and the number of [file descriptor]({{< relref "KBhsyscalls.md#file-descriptor" >}}) tables pointing to it with a `refcount`.

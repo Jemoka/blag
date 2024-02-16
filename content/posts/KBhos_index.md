@@ -102,7 +102,14 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 -   [monitor pattern]({{< relref "KBhmonitor_pattern.md" >}})
 
 
-###  {#d41d8c}
+#### dispatches {#dispatches}
+
+-   [assembly]({{< relref "KBhassembly.md" >}}) review
+    -   [process control block]({{< relref "KBhprocess_control_block.md" >}})
+-   [dispatching]({{< relref "KBhdispatching.md" >}})
+    -   [trap]({{< relref "KBhdispatching.md#trap" >}})
+    -   [interrupts]({{< relref "KBhdispatching.md#interrupt" >}})
+    -   [context switch]({{< relref "KBhdispatching.md#context-switch" >}})
 
 ---
 
