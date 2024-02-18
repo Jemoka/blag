@@ -28,9 +28,10 @@ Prof. Rafe Mazzeo
 ## Review {#review}
 
 1.  it suffices to study [First Order ODEs]({{< relref "KBhfirst_order_odes.md" >}}) because we can convert all [higher order functions]({{< relref "KBhgeneric.md#higher-order-functions" >}}) into a [First Order ODEs]({{< relref "KBhfirst_order_odes.md" >}})
-2.  linear systems \\(y'=Ay\\) can be solved using [eigenvalue]({{< relref "KBheigenvalue.md" >}}), [matrix exponentiation]({{< relref "KBhmatrix_exponentiation.md" >}}), etc. (recall that **special cases exists** where repeated eigenvalues, etc.)
+2.  homogeneous linear systems \\(y'=Ay\\) can be solved using [eigenvalue]({{< relref "KBheigenvalue.md" >}}), [matrix exponentiation]({{< relref "KBhmatrix_exponentiation.md" >}}), etc. (recall that **special cases exists** where repeated eigenvalues, etc.)
 3.  inhomogeneous systems \\(y' = Ay +f(t)\\) can be solved using [intergrating factor]({{< relref "KBhlinear_non_seperable_equation.md#solving-differential-equations" >}}) or [variation of parameters method]({{< relref "KBhnon_homogeneous_linear_differential_equation.md#variation-of-parameters-method" >}})
-4.  general analysis of \\(y'=f(y)\\): we can talk about stationary solutions (1. linearize each \\(y\_0\\) stationary solutions to figure local behavior 2. away from stationary solutions, use [Lyapunov Function]({{< relref "KBhnon_linear_ode.md#monotone-function" >}})s to discuss)
+4.  general analysis of non-linear \\(y'=f(y)\\): we can talk about stationary solutions (1. linearize each \\(y\_0\\) stationary solutions to figure local behavior 2. away from stationary solutions, use [Lyapunov Function]({{< relref "KBhnon_linear_ode.md#monotone-function" >}})s to discuss), or liapenov functions
+5.  for variable-coefficient ODEs, we decry sadness and [Solving ODEs via power series]({{< relref "KBhsu_math53_feb122024.md#solving-odes-via" >}})
 
 
 ## Content {#content}
@@ -73,6 +74,11 @@ What we want to understand:
 -   [SU-MATH53 FEB122024]({{< relref "KBhsu_math53_feb122024.md" >}})
 -   [SU-MATH53 FEB142024]({{< relref "KBhsu_math53_feb142024.md" >}})
 -   [SU-MATH53 FEB162024]({{< relref "KBhsu_math53_feb162024.md" >}})
+
+
+### PDEs {#pdes}
+
+-   [SU-MATH53 FEB212024]({{< relref "KBhsu_math53_feb212024.md" >}})
 
 
 ## Midterm Sheet {#midterm-sheet}
