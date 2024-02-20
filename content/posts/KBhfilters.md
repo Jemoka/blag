@@ -15,7 +15,7 @@ b'(s') = P(s'|b,a,o)
 
 \\(b'\\) is what state we think we are in next, and its a probability distribution over all states, calculated given from \\(b,a,o\\) our current belief about our state, our action, and our observation.
 
-We can perform this belief update by performing over \\(o\\):
+We can perform this belief update by performing [Bayes Theorem]({{< relref "KBhbayes_theorem.md" >}}) over \\(o\\):
 
 \begin{align}
 b'(s') &= P(s'|b,a,o)  \\\\
@@ -26,7 +26,7 @@ Now, consider
 
 {{< figure src="/ox-hugo/2023-11-09_09-52-58_screenshot.png" >}}
 
-\\(b\\) is a representation of \\(s\\) ("belief is a representation of what previous state you are in.") However, you will note that \\(s\\) is to \\(o\\) through as there is a chain \\(s \to s' \to o\\). So:
+\\(b\\) is a representation of \\(s\\) ("belief is a representation of what previous state you are in.") However, you will note that \\(s\\) is [conditionally independent]({{< relref "KBhbaysian_network.md#conditional-independence" >}}) to \\(o\\) through [d-seperation]({{< relref "KBhbaysian_network.md#checking-for-conditional-independence" >}}) as there is a chain \\(s \to s' \to o\\). So:
 
 \begin{align}
 b'(s') &\propto P(o|b,a,s') P(s' | b,a)  \\\\
@@ -40,7 +40,7 @@ b'(s') &\propto P(o|a,s') P(s' | b,a)   \\\\
 &= O(o|a,s')P(s' | b,a)
 \end{align}
 
-We now invoke the over the second term, over all states:
+We now invoke the [law of total probability]({{< relref "KBhprobability.md#law-of-total-probability" >}}) over the second term, over all states:
 
 \begin{align}
 b'(s') &\propto O(o|a,s')P(s' | b,a)  \\\\
@@ -56,13 +56,13 @@ b'(s') &\propto O(o|a,s') \sum\_{s}^{} T(s'|s,a)b(s)
 
 ## Kalman Filter {#kalman-filter}
 
-A [Kalman Filter](#kalman-filter) is a continous state-filter where by each of our \\(T, O, b\\) is represented via a . [Kalman Filter](#kalman-filter) is [discrete state filter](#discrete-state-filter) but continuous. Consider the final, belief-updating result of the [discrete state filter](#discrete-state-filter) above, and port it to be continous:
+A [Kalman Filter](#kalman-filter) is a continous state-filter where by each of our \\(T, O, b\\) is represented via a [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}}). [Kalman Filter](#kalman-filter) is [discrete state filter](#discrete-state-filter) but continuous. Consider the final, belief-updating result of the [discrete state filter](#discrete-state-filter) above, and port it to be continous:
 
 \begin{equation}
 b'(s') \propto O(o|a,s') \int\_{s} T(s'|s,a) b(s) ds
 \end{equation}
 
-if we modeled our transition probabilties, observations, and initial belief with a whereby each parameter is a parameterized upon a few matricies.
+if we modeled our transition probabilties, observations, and initial belief with a [gaussian]({{< relref "KBhgaussian_distribution.md" >}}) whereby each parameter is a [gaussian model]({{< relref "KBhgaussian_distribution.md" >}}) parameterized upon a few matricies.
 
 \begin{equation}
 T(s'|s,a) = \mathcal{N}(s'|T\_{s} s + T\_{a} a, \Sigma\_{s})
@@ -119,14 +119,14 @@ K \leftarrow \Sigma\_{p} O\_{s}^{T} (O\_{s}\Sigma\_{p}O\_{s}^{T}+\Sigma\_{O})^{-
 ### Additional Information {#additional-information}
 
 
-#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--org708e76d}
+#### Extended [Kalman Filter](#kalman-filter) {#extended-kalman-filter--org1c38d38}
 
-[Kalman Filter](#kalman-filter), but no linearity required by forcing linearity by a point-jacobian estimate.
+[Kalman Filter](#kalman-filter), but no linearity required by forcing linearity by a point-jacobian estimate about the mean of the belief state.
 
 
-#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--org708e76d}
+#### Unscented [Kalman Filter](#kalman-filter) {#unscented-kalman-filter--org1c38d38}
 
-its [Extended Kalman Filter](#extended-kalman-filter--org708e76d) but derivative free, which means its clean and hence its unscented.
+its [Extended Kalman Filter](#extended-kalman-filter--org1c38d38) but derivative free, which means its clean and hence its unscented.
 
 Its achieved through using "sigma point samples": just taking some representative points (mean + 2 points in each direction), and draw a line.
 
@@ -135,7 +135,7 @@ Its achieved through using "sigma point samples": just taking some representativ
 
 ## Particle Filter {#particle-filter}
 
-Its a filter with .
+Its a filter with [Likelihood Weighted Sampling]({{< relref "KBhdirect_sampling.md#likelihood-weighted-sampling" >}}).
 
 Say we are flying a plane; we want to use our height measures to infer our horizontal location. Let us take an observation model: \\(O(o|s,a) = \mathcal{N}(o|h(s), \sigma)\\) ("the probability of getting an observation given we are in the state")
 
