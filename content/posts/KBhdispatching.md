@@ -46,7 +46,7 @@ a [dispatcher](#dispatcher) performs a [context switch](#context-switch), which
 
 remember to push and pop the [register]({{< relref "KBhassembly.md#register" >}})s in the same order.... otherwise the registers won't be in the right order.
 
-this makes a [context switch](#context-switch) a function that **calls on one thread** and **returns on another thread**.
+this makes a [context switch](#context-switch) a function that **calls on one thread** and **returns on another thread**---"we start executing from one stack, and end executing from another".
 
 Example:
 
@@ -79,4 +79,4 @@ context switch
 
 We can't `ret` to a function that never called `context_switch`, which is the case for **new threads**.
 
-To do this, we create a fake freeze frame on the stack for that new thread, and calls `context_switch` normally.
+To do this, we create a fake freeze frame on the stack for that new thread which looks like you are just about to call the thread function, and calls `context_switch` normally.

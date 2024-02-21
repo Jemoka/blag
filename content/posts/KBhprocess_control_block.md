@@ -24,3 +24,15 @@ This is why you need to **CLOSE** all open file descriptors once every **PROCESS
 ## [thread]({{< relref "KBhmultithreading.md#thread" >}}) state {#thread--kbhmultithreading-dot-md--state}
 
 Recall that [thread]({{< relref "KBhmultithreading.md#thread" >}})s are the **unit of execution**. The [process control block]({{< relref "KBhprocess_control_block.md" >}}) keeps track of the [\*stack pointer]({{< relref "KBhassembly.md#stack-pointer" >}})\* of the thread `%rsp`, which means if a thread is put to sleep the state can be stored somewhere on the stack.
+
+1.  **running**
+2.  **blockde** - waiting for an event like disk, network, etc.
+3.  **ready** - able to run, but not on CPU yet
+
+{{< figure src="/ox-hugo/2024-02-21_13-50-23_screenshot.png" >}}
+
+
+## IO vs. CPU bound {#io-vs-dot-cpu-bound}
+
+-   [I/O Bound Thread](#io-vs-dot-cpu-bound) is a thread that needs to wait for disk events, and don't need CPU that much
+-   [CPU Thread](#io-vs-dot-cpu-bound) is a thread that needs CPU time
