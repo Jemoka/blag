@@ -1,16 +1,57 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 FEB212024</title>
-<meta name=description content="A Partial Differential Equation is a Differential Equation which has more than one independent variable.
+<meta name=description content="A Partial Differential Equation is a Differential Equation which has more than one independent variable: $u(x,y), u(t,x,y), &mldr;$
 For instance:
 \begin{equation} \pdv{U}{t} = \alpha \pdv[2]{U}{x} \end{equation}
-Linear Partial Differential Equation A PDE is a Linear PDE when it takes on the form of:
-\begin{equation} a_{k,j}(t,x) \frac{\dd[k+j]{u}}{\dd[k]{x}\dd[j]{t}} \end{equation}
-meaning, it overall takes on the form of:
-\begin{equation} a_{m,n}(t,x) \frac{\partial^{m+n}{u}}{\partial^{m}{x}\partial^{n}{t}} + \dots + a_{1,0}(t,x) \pdv{u}{x} + a_{0,1}(t,x) \pdv{u}{t} + a_{0,0}(t,x) u = f(t,x) \end{equation}
-superposition principle like homogeneous linear ODEs, homogeneous Linear PDEs also satisfy the superposition principle: any linear combinations of solutions are a solution."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+Key Intuition PDEs may have no solutions (unlike Uniqueness and Existance for ODEs) yet, usually, there are too many solutions&mdash;so&mldr; how do you describe all solutions? usually, there are no explicit formulas Laplacian of \(u(x,y)\) \begin{equation} \pdv[2]{u}{x} + \pdv[2]{u}{y} \end{equation}
+Think about a Gaussian distribution, a bell shape curve."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 FEB212024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#linear-partial-differential-equation>Linear Partial Differential Equation</a><ul><li><a href=#superposition-principle--kbhordinary-differential-equations-dot-md><a href=HAHAHUGOSHORTCODE1166s2HBHB>superposition principle</a></a></li></ul></li><li><a href=#traveling-wave>Traveling Wave</a></li></ul></nav></aside><main><article><div><p>A <a href=/posts/kbhpartial_differential_equations/>Partial Differential Equation</a> is a <a href=/posts/kbhdiffeq_intro/>Differential Equation</a> which has more than one <strong>independent variable</strong>.</p><p>For instance:</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 FEB212024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#key-intuition>Key Intuition</a></li><li><a href=#laplacian-of-u--x-y>Laplacian of \(u(x,y)\)</a></li><li><a href=#examples>Examples</a><ul><li><a href=#heat-equation>Heat Equation</a></li><li><a href=#wave-equation>Wave Equation</a></li><li><a href=#transport-equation>Transport Equation</a></li><li><a href=#schrodinger-equation>Schrodinger Equation</a></li><li><a href=#nonlinear-example>Nonlinear Example</a></li><li><a href=#monge-ampere-equations>Monge-Ampere Equations</a></li></ul></li><li><a href=#linear-partial-differential-equation>Linear Partial Differential Equation</a><ul><li><a href=#superposition-principle--kbhordinary-differential-equations-dot-md><a href=HAHAHUGOSHORTCODE1164s8HBHB>superposition principle</a></a></li></ul></li><li><a href=#traveling-wave>Traveling Wave</a></li></ul></nav></aside><main><article><div><p>A <a href=/posts/kbhpartial_differential_equations/>Partial Differential Equation</a> is a <a href=/posts/kbhdiffeq_intro/>Differential Equation</a> which has more than one <strong>independent variable</strong>: $u(x,y), u(t,x,y), &mldr;$</p><p>For instance:</p><p>\begin{equation}
 \pdv{U}{t} = \alpha \pdv[2]{U}{x}
+\end{equation}</p><h2 id=key-intuition>Key Intuition</h2><ul><li><a href=/posts/kbhpartial_differential_equations/>PDE</a>s may have no solutions (unlike <a href=/posts/kbhuniqueness_and_existance/>Uniqueness and Existance</a> for <a href=/posts/kbhordinary_differential_equations/>ODE</a>s)</li><li>yet, usually, there are too many solutions&mdash;so&mldr; how do you describe all solutions?</li><li>usually, there are no explicit formulas</li></ul><h2 id=laplacian-of-u--x-y>Laplacian of \(u(x,y)\)</h2><p>\begin{equation}
+\pdv[2]{u}{x} + \pdv[2]{u}{y}
+\end{equation}</p><p>Think about a Gaussian distribution, a bell shape curve. One important intuition is that the entire thing is curving down.</p><h2 id=examples>Examples</h2><h3 id=heat-equation>Heat Equation</h3><p>heat distributes by &ldquo;diffusing&rdquo;; this is heat \(u\) diffusing across a plate</p><p>\begin{equation}
+\pdv{u}{t} = \alpha \qty( \pdv[2]{u}{x} + \pdv[2]{u}{y})
+\end{equation}</p><h4 id=removing-a-constant>Removing a constant</h4><p>Consider a function:</p><p>\begin{equation}
+t = c \tau
+\end{equation}</p><p>you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).</p><h4 id=solution>Solution</h4><p>We can get a solution:</p><p>\begin{equation}
+u(t,x) = \frac{1}{\sqrt{t}}e^{-\frac{x^{2}}{4t}}
+\end{equation}</p><p>we can check that it satisfy the equation through route algebra.</p><h4 id=bell-curves>Bell Curves</h4><p>\begin{equation}
+y = a e^{-\frac{x^{2}}{b}}
+\end{equation}</p><p>this function takes maximum at \(a\), centered at \(0\), and as \(b\) increases the bell becomes more</p><ul><li><p>Integrating a Bell Curve</p><p>\begin{equation}
+\int_{-\infty}^{\infty} \frac{1}{\sqrt{t}} e^{-\frac{x^{2}}{4t}} \dd{x}
+\end{equation}</p><p>let us declare: \(u = \frac{x}{2 \sqrt{t}}\)</p><p>meaning:</p><p>\begin{equation}
+2 \int_{-\infty}^{\infty} e^{-u^{2}}\dd{u}
+\end{equation}</p><p>which is a constant. So, no matter the \(t\), we have a constant value of energy.</p></li></ul><h3 id=wave-equation>Wave Equation</h3><p>\begin{equation}
+u(t,x), u(t,x,y)
+\end{equation}</p><p>we describe it:</p><p>\begin{equation}
+\pdv[2]{u}{t} = c^{2} \qty(\pdv[2]{u}{x} + \pdv[2]{u}{y})
+\end{equation}</p><p>If we write it in a single set of variables:</p><p>\begin{equation}
+\pdv[2]{u}{t} = \pdv[2]{u}{x}
+\end{equation}</p><p>One particular solution:</p><p>\begin{equation}
+u(t,x) = \cos t \sin x
+\end{equation}</p><p>If you consider traveling across \(t\), you will note that we begin at \(\cos (1) = 1\), then slowly travel to \(\cos (\frac{\pi}{2}) = 0\), and back and forth.</p><h4 id=general-standing-wave-solution>General Standing Wave Solution</h4><p>Because the <a href=/posts/kbhpartial_differential_equations/>PDE</a> given is linear, solutions compose, and we note that any scale of \(\cos kt \sin kx\) will compose.</p><p>\begin{equation}
+u(t,x) = \sum_{k=0}^{\infty} a_{k} \cos kt \sin kx
+\end{equation}</p><h4 id=fourier-series>Fourier Series</h4><p>\begin{equation}
+u(o,x) \sum_{k} a_{k}\sin kx
+\end{equation}</p><p>BIG <strong>stunning conclusion</strong>: <strong>every single function, including wack ones, can be decomposed</strong> :</p><h4 id=general-traveling-wave-solution>General Traveling Wave Solution</h4><p>\begin{equation}
+u(t,x) = \sin (x-t) w(x-t)
+\end{equation}</p><p>as long as \(w\) is a valid twice-differentiable solution, plugging its derivative in will resolve as well.</p><ul><li><p>Composition</p><p>\begin{equation}
+\sin (x-t) + \sin (x+t) = \sin x \cos t - \cos x \sin t + \sin x \cos t + \cos x \sin t = 2 \sin x \cos t
+\end{equation}</p></li></ul><h3 id=transport-equation>Transport Equation</h3><p>\begin{equation}
+\pdv{u}{t} = \pdv{u}{x}
+\end{equation}</p><p>generally any \(u = w(x+t)\) should solve this</p><h3 id=schrodinger-equation>Schrodinger Equation</h3><p>We have some:</p><p>\begin{equation}
+u(x,t)
+\end{equation}</p><p>and its a complex-valued function:</p><p>\begin{equation}
+i \pdv{u}{t} = \pdv[2]{u}{x}
+\end{equation}</p><p>which results in a superposition in linear equations</p><h3 id=nonlinear-example>Nonlinear Example</h3><p>\begin{equation}
+\pdv{u}{t} = \pdv[2]{u}{x} + u(1-u)
+\end{equation}</p><p>this is a <a href=/posts/kbhpartial_differential_equations/>PDE</a> variant of the <a href=/posts/kbhlogistic_equations/>logistic equation</a>: this is <strong>non-linear</strong></p><h3 id=monge-ampere-equations>Monge-Ampere Equations</h3><p>\begin{equation}
+u(x,y)
+\end{equation}</p><h4 id=hessian>Hessian</h4><p>\begin{equation}
+Hess(u) = \mqty(\pdv[2]{u}{x} & \frac{\partial^{2} u}{\partial x \partial y} \\ \frac{\partial^{2} u}{\partial x \partial y} & \pdv[2]{u}{y})
+\end{equation}</p><p>If we take its determinant, we obtain:</p><p>\begin{equation}
+\pdv[2]{u}{x} \pdv[2]{u}{y} - \qty(\frac{\partial^{2} u}{\partial x \partial y})^{2}
 \end{equation}</p><h2 id=linear-partial-differential-equation>Linear Partial Differential Equation</h2><p>A PDE is a <a href=#linear-partial-differential-equation>Linear PDE</a> when it takes on the form of:</p><p>\begin{equation}
 a_{k,j}(t,x) \frac{\dd[k+j]{u}}{\dd[k]{x}\dd[j]{t}}
 \end{equation}</p><p>meaning, it overall takes on the form of:</p><p>\begin{equation}
