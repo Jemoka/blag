@@ -224,6 +224,10 @@ This allows us to write out:
 
 ### Problem 16.1, part b {#problem-16-dot-1-part-b}
 
+Explicit Euler's method relates to the slope field works by starting at the initial point, and taking the slope at that point, and "tracing" out to a distance of \\(h\\) on that slope + reevaluating.
+
+In essence, explicit Euler traces out piecewise linear segments of the function on the slope field.
+
 In Explicit Euler's method, we leverage the fact that:
 
 \begin{equation}
@@ -232,20 +236,24 @@ x\_{0}+ h f(x\_0) \approx x(t\_0 + h)
 
 to obtain our solution at some point beyond the initial point. A graphical way of doing this would involve drawing piecewise linear line segments which span \\(h\\) in \\(t\\) and has slope \\(f(x\_0)\\), starting at point \\(x\_0\\). In problem \\(b\\), specifically, we have:
 
-{{< figure src="/ox-hugo/2024-02-14_17-33-18_screenshot.png" >}}
+{{< figure src="/ox-hugo/2024-02-20_14-43-08_screenshot.png" >}}
 
 
 ### Problem 16.2, part a {#problem-16-dot-2-part-a}
 
-In Explicit Euler's method, we seek a point such that:
+In Implicit Euler's method, we seek a point such that:
 
 \begin{equation}
 x\_{i+1} - h f(x\_{i+1}) = x\_i
 \end{equation}
 
-to obtain our solution at some point beyond the initial point. Essentially, we go backwards from each \\(x\_{i+1}\\) to "connect" the best line such the slope at that line can reach backwards into hitting our previous point \\(x\_{i}\\). We keep going ahead by steps \\(h\\), and "connecting" backwards to where we last finished computation. For \\(y' = -3y\\), we have:
+to obtain our solution at some point beyond the initial point. Essentially, we go backwards from each \\(x\_{i+1}\\) in distance \\(h\\) from our previous point to "connect" the best line such the slope at that line can reach backwards into hitting our previous point \\(x\_{i}\\). The slopes chosen at each step should be the slope at the destination step, and not the source step.
 
-{{< figure src="/ox-hugo/2024-02-14_17-41-29_screenshot.png" >}}
+We keep going ahead by steps \\(h\\), and "connecting" backwards to where we last finished computation. For \\(y' = -3y\\), we have:
+
+This method may get stuck if, after a time period ahead of your current point \\(f(x\_{t+1})\\) results in a value for which there's no valid solution for \\(x\_{t+1}\\) which is connected to your previous point.
+
+{{< figure src="/ox-hugo/2024-02-20_14-45-48_screenshot.png" >}}
 
 
 ## Chapter 17 {#chapter-17}
