@@ -20,6 +20,7 @@ a class about [POMDP]({{< relref "KBhpartially_observable_markov_decision_proces
 | Hierarchical Decomposition | [Option]({{< relref "KBhoption.md" >}}), [MaxQ]({{< relref "KBhmaxq.md" >}}), [LTRDP]({{< relref "KBhltrdp.md" >}})                              |
 | Hybrid Planning            | [HybPlan]({{< relref "KBhhybplan.md" >}}), [LetsDrive]({{< relref "KBhletsdrive.md" >}}), [BetaZero]({{< relref "KBhbetazero.md" >}})            |
 | LQR + Shared Autonomy      | [iLQR]({{< relref "KBhilqr.md" >}}), [Hindsight]({{< relref "KBhhindsight_optimization.md" >}}), [TrustPOMDP]({{< relref "KBhtrustpomdp.md" >}}) |
+| Multi-Agent                | [Factored MDPs]({{< relref "KBhfactored_mdps.md" >}}), [FV-POMCPs]({{< relref "KBhfv_pomcps.md" >}}), [G-DICE]({{< relref "KBhg_dice.md" >}})    |
 
 
 ## Other Content {#other-content}

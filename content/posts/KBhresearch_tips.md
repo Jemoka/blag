@@ -152,3 +152,9 @@ Don't use "utilize".
 
 -   talk about it early
 -   universities have authorship inclusion deadline
+
+
+## Complexity {#complexity}
+
+-   complexity should be justified (why does simpler method's not work?)
+-
