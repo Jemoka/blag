@@ -1,0 +1,74 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 FEB232024</title>
+<meta name=description content="Consider the one dimensional heat equation:
+\begin{equation} \pdv{u}{t} = \pdv[2]{u}{x} \end{equation}
+&ldquo;well posed-ness&rdquo; of to this problem requires two sets of initial conditions: one &ldquo;boundary condition&rdquo;
+Initial Condition Because the expression is linear by time, we need one initial condition; let&rsquo;s say its some function in \(x\):
+\begin{equation} f_{0}(x) \end{equation}
+Boundary Conditions This equation is second order in terms of space (\(x\)). Consider a finite-length rod of length \(l\); given there are two boundaries, we give two boundary equations."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 FEB232024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#initial-condition>Initial Condition</a></li><li><a href=#boundary-conditions>Boundary Conditions</a><ul><li><a href=#dirichlet-conditions>Dirichlet Conditions</a></li><li><a href=#neumann-conditions>Neumann Conditions</a></li></ul></li><li><a href=#solving>Solving</a><ul><li><a href=#solving-using-dirichlet-conditions--orgfbcd01a>Solving using <a href=#dirichlet-conditions>Dirichlet Conditions</a></a></li><li><a href=#solving-using-neumann-conditions--org8debbac>Solving using <a href=#neumann-conditions>Neumann Conditions</a></a></li></ul></li></ul></nav></aside><main><article><div><p>Consider the one dimensional heat equation:</p><p>\begin{equation}
+\pdv{u}{t} = \pdv[2]{u}{x}
+\end{equation}</p><p>&ldquo;well posed-ness&rdquo; of to this problem requires two sets of initial conditions: one &ldquo;boundary condition&rdquo;</p><h2 id=initial-condition>Initial Condition</h2><p>Because the expression is linear by time, we need one initial condition; let&rsquo;s say its some function in \(x\):</p><p>\begin{equation}
+f_{0}(x)
+\end{equation}</p><h2 id=boundary-conditions>Boundary Conditions</h2><p>This equation is second order in terms of space (\(x\)). Consider a finite-length rod of length \(l\); given there are two boundaries, we give two boundary equations.</p><h3 id=dirichlet-conditions>Dirichlet Conditions</h3><p>Initial conditions:</p><p>\begin{equation}
+\begin{cases}
+u(t,0) = 0 \\
+u(t, l) = 0
+\end{cases}
+\end{equation}</p><p>This tells us that we are holding the ends of the rod at a constant temperature.</p><h3 id=neumann-conditions>Neumann Conditions</h3><p>\begin{equation}
+\begin{cases}
+\pdv{u}{x}(t,0) = 0 \\
+\pdv{u}{x}(t, l) = 0
+\end{cases}
+\end{equation}</p><p>this tells us there is no heat <a href=/posts/kbhflux/>flux</a> across the boundary (i.e. heat doesn&rsquo;t escape).</p><h2 id=solving>Solving</h2><p>Let&rsquo;s make an educated guess:</p><p>\begin{equation}
+u(t,x) = A(t) B(x)
+\end{equation}</p><p>Consider:</p><p>\begin{equation}
+\pdv{u}{t} = A&rsquo;(t)B(x)
+\end{equation}</p><p>\begin{equation}
+\pdv[2]{u}{x} = A(t) B&rsquo;&rsquo;(x)
+\end{equation}</p><p>This results in:</p><p>\begin{equation}
+A&rsquo;(t) B(x) = A(t) B&rsquo;&rsquo;(X)
+\end{equation}</p><p>meaning, we can rearrange and integrate:</p><p>\begin{equation}
+\frac{A&rsquo;(t)}{A(t)} = \frac{B&rsquo;&rsquo;(x)}{B(x)}
+\end{equation}</p><p>You will note that taking a derivative by \(t\) on one side tells us that the right side is \(0\), and taking derivative of \(x\) on the other results in left side is \(0\). This tell us that this function is constant in both \(t\) and \(x\). Meaning:</p><p>\begin{equation}
+\frac{A&rsquo;(t)}{A(t)} = \frac{B&rsquo;&rsquo;(x)}{B(x)} = \lambda
+\end{equation}</p><p>This results in a renewed system:</p><p>\begin{equation}
+\begin{cases}
+A&rsquo;(t) = \lambda A(t) \\
+B&rsquo;&rsquo;(x) = \lambda B(x)
+\end{cases}
+\end{equation}</p><h3 id=solving-using-dirichlet-conditions--orgfbcd01a>Solving using <a href=#dirichlet-conditions>Dirichlet Conditions</a></h3><h4 id=finding-lambda-using-boundary-conditions>Finding \(\lambda\) using Boundary Conditions</h4><p>Now, recall from our system:</p><p>\begin{equation}
+B&rsquo;&rsquo;(x) = \lambda B(x)
+\end{equation}</p><p>Its solutions are</p><p>\begin{equation}
+B(x) = c_1 e^{\sqrt{\lambda}x} + c_2 e^{-\sqrt{\lambda}x}
+\end{equation}</p><p>Recall <a href=#dirichlet-conditions>Dirichlet Conditions</a>:</p><p>\begin{equation}
+u(t,0) = u(t, l)= 0
+\end{equation}</p><p>This tells us that \(B(0) = 0\), \(B(l) = 0\).</p><p>At \(B(0)\), this gives us that \(c_1 + c_2 = 0\), meaning \(c_2 = -c_1\)</p><p>At \(B(l) = 0 = c_1 \qty( e^{\sqrt{\lambda}l} - e^{-\sqrt{\lambda}l})\). Dividing \(c_1\) to both sides, we obtain \(e^{2\sqrt{\lambda} l} = 1\).</p><p>We finally can obtain \(\lambda\). One obvious answer is \(\lambda = 0\). But, there are other fun things we can do:</p><hr><p>Aside:</p><p>Recall, if we desire</p><p>\begin{equation}
+e^{i\theta} = \cos \theta + i \sin \theta = 1
+\end{equation}</p><p>This gives:</p><p>\begin{equation}
+\theta = 2\pi k
+\end{equation}</p><hr><p>Therefore, recall that we obtained \(e^{2\sqrt{\lambda}l}\), we obtained:</p><p>\begin{equation}
+2\sqrt{\lambda}l = 2\pi k i
+\end{equation}</p><p>Solving for \(\lambda\), we finally get solutions:</p><p>\begin{equation}
+\lambda_{k} = \frac{-k^{2}\pi^{2}}{l^{2}}
+\end{equation}</p><p>for \(k = 0, 1, 2, 3\); this condition called &ldquo;quantization&rdquo;</p><h4 id=solving-again>Solving Again</h4><p>Now that we know \(\lambda\), we can say:</p><p>\begin{equation}
+\begin{cases}
+A&rsquo;(t) = \frac{-k^{2}\pi^{2}}{l^{2}} A(t) \\
+B&rsquo;&rsquo;(x) = \frac{-k^{2}\pi^{2}}{l^{2}} B(x)
+\end{cases}
+\end{equation}</p><p>And then we can proceed to solve everything again. [a little lost, but in theory \(\sin(x)\) drops out after solving].</p><p>This Gives us eventually:</p><p>\begin{equation}
+A(t) = e^{-\frac{k^{2}\pi^{2}}{l^{2}} t}
+\end{equation}</p><p>and</p><p>\begin{equation}
+B(x) = \sin \frac{k\pi x}{l}
+\end{equation}</p><p>Recall that \(U = AB\), this means, with all generality:</p><p>\begin{equation}
+u_{k} = e^{-\frac{k^{2}\pi^{2}}{l^{2}} t}\sin \frac{k\pi x}{l}
+\end{equation}</p><h4 id=initial-conditions>Initial Conditions</h4><p>Suppose we have initial condition:</p><p>\begin{equation}
+f_{0}(x) = \sum a_{n} \sin \qty( \frac{k\pi x}{l})
+\end{equation}</p><p>because the PDE is linear, we obtain:</p><p>\begin{equation}
+u_{k}(t,x) = \sum a_{k} e^{-\frac{k^{2}\pi^{2}}{l^{2}}t} \sin \qty( \frac{k \pi x}{l})
+\end{equation}</p><p>again quantized over \(k\).</p><p>This is because each individual terms corresponds to a solution \(a_{n} \sin \qty(\frac{k\pi x}{l})\), and at boundary condition \(f_{0}(x)\), the left term of the general solution drops out, to obtain:</p><p>\begin{equation}
+a_{n}\frac{k \pi x}{l} = f_{0}(x) = u(0, x) = e^{0} \sin \qty(\frac{k \pi x}{l}) = a_{k} \sin \qty(\frac{k \pi x}{l})
+\end{equation}</p><p>so we can just match terms.</p><p>The good news is that, because <a href=/posts/kbhsu_math53_feb212024/#fourier-series>Fourier Series</a> exists, any initial condition that&rsquo;s a well-formed function can be written a sum of sines. This also converges really quickly (because \(e^{-k^{2}}\)). Further, given some \(f_{0}(x)\), we obtain a specific \(k\) and will obtain a specific solution.</p><h3 id=solving-using-neumann-conditions--org8debbac>Solving using <a href=#neumann-conditions>Neumann Conditions</a></h3><p>Go through the derivation, this gives:</p><p>\begin{equation}
+u_{k}(t,x) = \sum b_{k} e^{ - \frac{k^{2} \pi^{2}}{l^{2}} t } \cos \qty( \frac{k \pi x}{l})
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
