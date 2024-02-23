@@ -58,7 +58,7 @@ thread(myfunc, ref(myint));
 Remember: ref will ****SHARE MEMORY****, and you have no control over when the thread runs. So once a pointer is passed all bets are off in terms of what values things take on.
 
 
-## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org322b3f2--s}
+## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org80ba656--s}
 
 | Processes                                          | Threads                                     |
 |----------------------------------------------------|---------------------------------------------|
@@ -117,3 +117,45 @@ importantly, if multiple [thread](#thread)s are waiting on a mutex, the next thr
 when dealing with [mutex](#mutex), beware of [deadlock]({{< relref "KBhdeadlock.md" >}})
 
 Sleep call can happen by putting a sleep call in certain places.
+
+
+### implementation {#implementation}
+
+Things it needs to do:
+
+1.  track whether or not the mutex is locked/unlocked
+2.  track which thread is the owner of the lock
+3.  threads that want to get this lock
+
+<!--listend-->
+
+```c++
+
+//// WARNING: this code has RACE CONDITINOS ////
+
+
+int locked = 0;
+Queue blocked_queue;
+
+void Lock::Lock() {
+    if (!locked) {
+        // if our thread is not locked, just lock it
+        locked = 1;
+    } else {
+        // if our thread is locked, we need to prevent our current
+        // thread from going to the ready queue, and push it to the current thread
+        blocked_queue.push(CURRENT_THREAD);
+        BLOCK_CURRENT_THREAD;
+    }
+}
+
+void Lock::Unlock() {
+    // if our thread is locked and nobody is waiting for it
+    if (q.empty()) {
+        locked = 0;
+    } else {
+        unblock_thread(q.pop());
+        // we do not switch to the unblocked thread, just add it to the ready queue
+    }
+}
+```

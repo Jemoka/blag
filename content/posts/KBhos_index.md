@@ -111,6 +111,7 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
     -   [interrupts]({{< relref "KBhdispatching.md#interrupt" >}})
     -   [context switch]({{< relref "KBhdispatching.md#context-switch" >}})
 -   [scheduling]({{< relref "KBhscheduling.md" >}})
+-   [preemption]({{< relref "KBhpreemption.md" >}})
 
 ---
 

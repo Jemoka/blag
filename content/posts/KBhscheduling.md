@@ -80,8 +80,10 @@ Key idea: **behavior tends to be consistent in a thread**. We build multiple **p
 1.  threads that aren't using much CPU stay in higher priority queue
 2.  threads that are using much CPU gets bumped down to lower priority queues
 
+Similar to [SRPT](#shortest-remaining-processing-time), this also has the good property of **giving preference to those that need it the least**: a good side effect is that it gives preference to [I/O Bound Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}}) first, so we can wait on them during disk operations while [CPU Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}})s run after the [I/O Bound Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}}) has ran.
 
-#### procedure {#procedure}
+
+#### implement based on [time slice](#round-robin) usage {#implement-based-on-time-slice--org8ecc0e5--usage}
 
 a [thread]({{< relref "KBhmultithreading.md#thread" >}}) always enters in the **highest** priority queue
 
@@ -89,6 +91,6 @@ a [thread]({{< relref "KBhmultithreading.md#thread" >}}) always enters in the **
 2.  if a [thread]({{< relref "KBhmultithreading.md#thread" >}}) blocked before it used all of its [time slice](#round-robin), bump them up a priority queue
 
 
-#### fixing neglect {#fixing-neglect}
+#### implement based on aggregate time used: fixing neglect {#implement-based-on-aggregate-time-used-fixing-neglect}
 
-we artificially bump threads up if it hasn't ran for a while. the priorities can be assigned perhaps as "CPU time used in the last n minutes"
+a [thread]({{< relref "KBhmultithreading.md#thread" >}}) has a number for "how much time did you use on the CPU recently"? The priories are sorted by that value, and the smallest time use will be ran.

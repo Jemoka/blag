@@ -31,6 +31,15 @@ a [interrupt](#interrupt) takes place outside the current thread, it forces the 
 2.  completion of a disk operations
 3.  a hardware timer that fires an interrupt
 
+[interrupt](#interrupt)s enable [preemption]({{< relref "KBhpreemption.md" >}}) to happen
+
+
+#### what if a timer goes off during an [interrupt](#interrupt) {#what-if-a-timer-goes-off-during-an-interrupt--org205247a}
+
+**interrupts are disabled during interrupt handling**, otherwise, this causes an infinite loop.
+
+solution: _interrupts are disabled during timer handling_.
+
 
 ## dispatcher {#dispatcher}
 
