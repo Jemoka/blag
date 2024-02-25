@@ -63,7 +63,7 @@ similar to [dot product]({{< relref "KBhdot_product.md" >}}) for the reals. This
 
 ...as both relevant and more general than the [dot product]({{< relref "KBhdot_product.md" >}}), but also different in key areas.
 
-[First, review complex numbers]({{< relref "KBhthoughts_on_axler_4.md#first-review-complex-number--kbhcomplex-number-dot-md--s" >}}) from our discussion in chapter 4. The main problem here is this:
+[First, review complex numbers]({{< relref "KBhthoughts_on_axler_4.md#first-review-id-7c982e7e-b8be-4053-a71e-fc0dba7a5da5-complex-number-s" >}}) from our discussion in chapter 4. The main problem here is this:
 
 for \\(z = (z\_1, \dots, z\_{n}) \in \mathbb{C}^{n}\\), simply squaring each slot to take the [norm]({{< relref "KBhnorm.md" >}}) may cause us to take a square root of a negative number (as each slot would then be \\(a^{2}-b^{2}\\) for a complex number). That's no bueno because we want \\(\\|z\\|\\) to be real and non-negative.
 
@@ -80,3 +80,20 @@ x \cdot y = \bar{{y \cdot x}}
 \end{equation}
 
 derived by following the usual rules of [complex conjugation]({{< relref "KBhcomplex_number.md#complex-conjugate" >}}). Note that none of these elementwisethings (the \\(x\_{n}y\_{n}\\) business) are actually in the definition of the [inner product]({{< relref "KBhinner_product.md" >}}), as it is the rules of an [Euclidean Inner Product](#euclidean-inner-product).
+
+
+### inner product of \\(L\\) periodic functions {#inner-product-of-l-periodic-functions}
+
+For \\(f,g : [0,L] \to \mathbb{R}\\), which are [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}), we define:
+
+\begin{equation}
+\langle f,g \rangle := \frac{1}{L} \int\_{0}^{L} f(x) g(x) \dd{x}
+\end{equation}
+
+Recall that [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}) functions can be shifted without changing periodicity. But if for some reason you want to base it off of any two numbers with distance \\(L\\) in between:
+
+\begin{equation}
+\langle f,g \rangle\_{[a,b]} := \frac{1}{b-a} \int^{b}\_{a} f(x) g(x) \dd{x}
+\end{equation}
+
+The work of checking this is a well-formed [inner product]({{< relref "KBhinner_product.md" >}}) is left to absolutely nobody.
