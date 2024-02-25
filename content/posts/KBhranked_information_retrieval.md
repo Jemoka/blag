@@ -95,6 +95,8 @@ There are a series of approaches that you can use as a possible approach to comp
 
 `ddd.qqq`, where the first three letters represent the document weighting scheme, and the second three letter represents the query weighting scheme.
 
+{{< figure src="/ox-hugo/2024-02-24_21-04-31_screenshot.png" >}}
+
 
 ## vector-space model {#vector-space-model}
 

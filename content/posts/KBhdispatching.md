@@ -34,11 +34,13 @@ a [interrupt](#interrupt) takes place outside the current thread, it forces the 
 [interrupt](#interrupt)s enable [preemption]({{< relref "KBhpreemption.md" >}}) to happen
 
 
-#### what if a timer goes off during an [interrupt](#interrupt) {#what-if-a-timer-goes-off-during-an-interrupt--org205247a}
+#### what if a timer goes off during an [interrupt](#interrupt) {#what-if-a-timer-goes-off-during-an-interrupt--org195ef88}
 
 **interrupts are disabled during interrupt handling**, otherwise, this causes an infinite loop.
 
 solution: _interrupts are disabled during timer handling_.
+
+this causes a problem: if you [preempt into a brand new thread]({{< relref "KBhpreemption.md#preempting-into-a-brand-new-thread" >}})
 
 
 ## dispatcher {#dispatcher}
@@ -61,20 +63,20 @@ Example:
 
 context switch
 
+Notice that we only store **callee saved registers** because its the responsibility of whomever called context switch to save the register of the **caller saved registers**.
+
 ```asm
     pushq %rbp
     pushq %rbx
-    pushq %rip
     pushq %r14
     pushq %r15
-    ;; pushq all of em ...
+    ;; pushq all of em callee saved ...
     movq %rsp, [somewhere in PCB, thread 1]                  ; the process control block
     movq [somewhere else in PCB, thread 2], %rsp             ; the stack is now somewhere else
     ;; now we pop backwards up from the stack
-    ;; popq all of em ...
+    ;; popq all of em calee saved ...
     popq %r15
     popq %r14
-    popq %rip
     popq %rbx
     popq %rbp
     ;; this will RETURN to the last call *or* top of context_switch() of the

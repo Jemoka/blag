@@ -4,27 +4,33 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Consider the one dimensional heat equation:
+## Boundary Value Problem {#boundary-value-problem}
+
+A [BVP](#boundary-value-problem) for an [ODE]({{< relref "KBhordinary_differential_equations.md" >}}) is defined at two different points \\(x\_0\\) and \\(x\_1\\) at two different values of \\(l\\), whereby we are given:
 
 \begin{equation}
-\pdv{u}{t} = \pdv[2]{u}{x}
+X\_0 = a, X(L) = b
 \end{equation}
 
-"well posed-ness" of to this problem requires two sets of initial conditions: one "boundary condition"
+which we use to further specify a [PDE]({{< relref "KBhpartial_differential_equations.md" >}}). [BVP](#boundary-value-problem)s can either have **no** or **lots** of solutions.
 
-
-## Initial Condition {#initial-condition}
-
-Because the expression is linear by time, we need one initial condition; let's say its some function in \\(x\\):
+To aid in the discovery of solutions, for:
 
 \begin{equation}
-f\_{0}(x)
+X'' = \lambda X
 \end{equation}
 
+we have:
 
-## Boundary Conditions {#boundary-conditions}
+\begin{equation}
+X = \begin{cases}
+c\_1 e^{\sqrt{\lambda}x} + c\_2 e^{-\sqrt{\lambda}x}, \lambda > 0 \\\\
+c\_1 x + c\_2, \lambda =0 \\\\
+c\_1 \cos \qty(\sqrt{|\lambda|}x) +c\_2  \sin \qty(\sqrt{|\lambda|}x), \lambda < 0
+\end{cases}
+\end{equation}
 
-This equation is second order in terms of space (\\(x\\)). Consider a finite-length rod of length \\(l\\); given there are two boundaries, we give two boundary equations.
+Which specific solution arises out of which initial condition you use.
 
 
 ### Dirichlet Conditions {#dirichlet-conditions}
@@ -41,6 +47,29 @@ u(t, l) = 0
 This tells us that we are holding the ends of the rod at a constant temperature.
 
 
+#### Solutions {#solutions}
+
+For:
+
+\begin{equation}
+X'' = \lambda X
+\end{equation}
+
+in the vanishing Case (\\(X(0) = 0 = X(L)\\)):
+
+\begin{equation}
+X = c \sin \qty( \frac{k \pi x}{L})
+\end{equation}
+
+where \\(c \neq 0\\), and the solutions quantized \\(k = 1, 2, 3, \ldots\\).
+
+which gives rise to:
+
+\begin{equation}
+\lambda = \frac{-n^{2}\pi^{2}}{L^{2}}
+\end{equation}
+
+
 ### Neumann Conditions {#neumann-conditions}
 
 \begin{equation}
@@ -53,179 +82,29 @@ This tells us that we are holding the ends of the rod at a constant temperature.
 this tells us there is no heat [flux]({{< relref "KBhflux.md" >}}) across the boundary (i.e. heat doesn't escape).
 
 
-## Solving {#solving}
+#### Solutions {#solutions}
 
-Let's make an educated guess:
+For:
 
 \begin{equation}
-u(t,x) = A(t) B(x)
+X'' = \lambda X
 \end{equation}
 
-Consider:
+in the vanishing Case (\\(X'(0) = 0 = X'(L)\\)):
 
 \begin{equation}
-\pdv{u}{t} = A'(t)B(x)
+X = c \cos \qty( \frac{k \pi x}{L})
 \end{equation}
 
-\begin{equation}
-\pdv[2]{u}{x} = A(t) B''(x)
-\end{equation}
+where \\(c \neq 0\\), and the solutions quantized \\(k = 1, 2, 3, \ldots\\).
 
-This results in:
+which gives rise to:
 
 \begin{equation}
-A'(t) B(x) = A(t) B''(X)
-\end{equation}
-
-meaning, we can rearrange and integrate:
-
-\begin{equation}
-\frac{A'(t)}{A(t)} = \frac{B''(x)}{B(x)}
-\end{equation}
-
-You will note that taking a derivative by \\(t\\) on one side tells us that the right side is \\(0\\), and taking derivative of \\(x\\) on the other results in left side is \\(0\\). This tell us that this function is constant in both \\(t\\) and \\(x\\). Meaning:
-
-\begin{equation}
-\frac{A'(t)}{A(t)} = \frac{B''(x)}{B(x)} = \lambda
-\end{equation}
-
-This results in a renewed system:
-
-\begin{equation}
-\begin{cases}
-A'(t) = \lambda A(t) \\\\
-B''(x) = \lambda B(x)
-\end{cases}
+\lambda = \frac{-n^{2}\pi^{2}}{L^{2}}
 \end{equation}
 
 
-### Solving using [Dirichlet Conditions](#dirichlet-conditions) {#solving-using-dirichlet-conditions--orgfbcd01a}
+## Examples {#examples}
 
-
-#### Finding \\(\lambda\\) using Boundary Conditions {#finding-lambda-using-boundary-conditions}
-
-Now, recall from our system:
-
-\begin{equation}
-B''(x) = \lambda B(x)
-\end{equation}
-
-Its solutions are
-
-\begin{equation}
-B(x) = c\_1 e^{\sqrt{\lambda}x} + c\_2 e^{-\sqrt{\lambda}x}
-\end{equation}
-
-Recall [Dirichlet Conditions](#dirichlet-conditions):
-
-\begin{equation}
-u(t,0) = u(t, l)= 0
-\end{equation}
-
-This tells us that \\(B(0) = 0\\), \\(B(l) = 0\\).
-
-At \\(B(0)\\), this gives us that \\(c\_1 + c\_2 = 0\\), meaning \\(c\_2 = -c\_1\\)
-
-At \\(B(l) = 0  = c\_1 \qty( e^{\sqrt{\lambda}l} - e^{-\sqrt{\lambda}l})\\). Dividing \\(c\_1\\) to both sides, we obtain \\(e^{2\sqrt{\lambda} l} = 1\\).
-
-We finally can obtain \\(\lambda\\). One obvious answer is \\(\lambda = 0\\). But, there are other fun things we can do:
-
----
-
-Aside:
-
-Recall, if we desire
-
-\begin{equation}
-e^{i\theta} = \cos \theta + i \sin  \theta  = 1
-\end{equation}
-
-This gives:
-
-\begin{equation}
-\theta = 2\pi k
-\end{equation}
-
----
-
-Therefore, recall that we obtained \\(e^{2\sqrt{\lambda}l}\\), we obtained:
-
-\begin{equation}
-2\sqrt{\lambda}l = 2\pi k i
-\end{equation}
-
-Solving for \\(\lambda\\), we finally get solutions:
-
-\begin{equation}
-\lambda\_{k} = \frac{-k^{2}\pi^{2}}{l^{2}}
-\end{equation}
-
-for \\(k = 0, 1, 2, 3\\); this condition called "quantization"
-
-
-#### Solving Again {#solving-again}
-
-Now that we know \\(\lambda\\), we can say:
-
-\begin{equation}
-\begin{cases}
-A'(t) = \frac{-k^{2}\pi^{2}}{l^{2}} A(t) \\\\
-B''(x) = \frac{-k^{2}\pi^{2}}{l^{2}} B(x)
-\end{cases}
-\end{equation}
-
-And then we can proceed to solve everything again. [a little lost, but in theory \\(\sin(x)\\) drops out after solving].
-
-This Gives us eventually:
-
-\begin{equation}
-A(t) = e^{-\frac{k^{2}\pi^{2}}{l^{2}} t}
-\end{equation}
-
-and
-
-\begin{equation}
-B(x) = \sin \frac{k\pi x}{l}
-\end{equation}
-
-Recall that \\(U = AB\\), this means, with all generality:
-
-\begin{equation}
-u\_{k} = e^{-\frac{k^{2}\pi^{2}}{l^{2}} t}\sin \frac{k\pi x}{l}
-\end{equation}
-
-
-#### Initial Conditions {#initial-conditions}
-
-Suppose we have initial condition:
-
-\begin{equation}
-f\_{0}(x) = \sum a\_{n} \sin  \qty( \frac{k\pi x}{l})
-\end{equation}
-
-because the PDE is linear, we obtain:
-
-\begin{equation}
-u\_{k}(t,x) = \sum a\_{k} e^{-\frac{k^{2}\pi^{2}}{l^{2}}t} \sin \qty( \frac{k \pi x}{l})
-\end{equation}
-
-again quantized over \\(k\\).
-
-This is because each individual terms corresponds to a solution \\(a\_{n} \sin  \qty(\frac{k\pi x}{l})\\), and at boundary condition \\(f\_{0}(x)\\), the left term of the general solution drops out, to obtain:
-
-\begin{equation}
-a\_{n}\frac{k \pi x}{l} = f\_{0}(x) = u(0, x) = e^{0} \sin \qty(\frac{k \pi x}{l})  = a\_{k} \sin \qty(\frac{k \pi x}{l})
-\end{equation}
-
-so we can just match terms.
-
-The good news is that, because [Fourier Series]({{< relref "KBhsu_math53_feb212024.md#fourier-series" >}}) exists, any initial condition that's a well-formed function can be written a sum of sines. This also converges really quickly (because \\(e^{-k^{2}}\\)). Further, given some \\(f\_{0}(x)\\), we obtain a specific \\(k\\) and will obtain a specific solution.
-
-
-### Solving using [Neumann Conditions](#neumann-conditions) {#solving-using-neumann-conditions--org8debbac}
-
-Go through the derivation, this gives:
-
-\begin{equation}
-u\_{k}(t,x) =  \sum b\_{k} e^{ - \frac{k^{2} \pi^{2}}{l^{2}} t } \cos \qty( \frac{k \pi x}{l})
-\end{equation}
+See [Heat Equation]({{< relref "KBhheat_equation.md" >}}), and its [worked solution]({{< relref "KBhheat_equation.md#solution-in-full" >}}).

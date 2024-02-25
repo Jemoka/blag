@@ -32,62 +32,9 @@ Think about a Gaussian distribution, a bell shape curve. One important intuition
 ## Examples {#examples}
 
 
-### Heat Equation {#heat-equation}
+### [Heat Equation]({{< relref "KBhheat_equation.md" >}}) {#heat-equation--kbhheat-equation-dot-md}
 
-heat distributes by "diffusing"; this is heat \\(u\\) diffusing across a plate
-
-\begin{equation}
-\pdv{u}{t} = \alpha \qty( \pdv[2]{u}{x} + \pdv[2]{u}{y})
-\end{equation}
-
-
-#### Removing a constant {#removing-a-constant}
-
-Consider a function:
-
-\begin{equation}
-t = c \tau
-\end{equation}
-
-you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).
-
-
-#### Solution {#solution}
-
-We can get a solution:
-
-\begin{equation}
-u(t,x) = \frac{1}{\sqrt{t}}e^{-\frac{x^{2}}{4t}}
-\end{equation}
-
-we can check that it satisfy the equation through route algebra.
-
-
-#### Bell Curves {#bell-curves}
-
-\begin{equation}
-y = a e^{-\frac{x^{2}}{b}}
-\end{equation}
-
-this function takes maximum at \\(a\\), centered at \\(0\\), and as \\(b\\) increases the bell becomes more
-
-<!--list-separator-->
-
--  Integrating a Bell Curve
-
-    \begin{equation}
-    \int\_{-\infty}^{\infty} \frac{1}{\sqrt{t}} e^{-\frac{x^{2}}{4t}} \dd{x}
-    \end{equation}
-
-    let us declare: \\(u = \frac{x}{2 \sqrt{t}}\\)
-
-    meaning:
-
-    \begin{equation}
-    2 \int\_{-\infty}^{\infty} e^{-u^{2}}\dd{u}
-    \end{equation}
-
-    which is a constant. So, no matter the \\(t\\), we have a constant value of energy.
+See [Heat Equation]({{< relref "KBhheat_equation.md" >}})
 
 
 ### Wave Equation {#wave-equation}
@@ -132,7 +79,7 @@ u(t,x) = \sum\_{k=0}^{\infty} a\_{k} \cos kt \sin kx
 u(o,x) \sum\_{k} a\_{k}\sin kx
 \end{equation}
 
-BIG **stunning conclusion**: **every single function, including wack ones, can be decomposed** :
+BIG **stunning conclusion**: **every single function, including wack ones, can be decomposed**. See [Fourier Series]({{< relref "KBhsu_math53_feb252024.md#fourier-decomposition" >}})
 
 
 #### General Traveling Wave Solution {#general-traveling-wave-solution}
@@ -236,3 +183,8 @@ u(t,x) = w(x-ct)
 \end{equation}
 
 for some constant \\(c\\), and where \\(w(x)\\) is a function which depends on only one of the two variables.
+
+
+## [Bell Curves]({{< relref "KBhbell_curves.md#bell-curves" >}}) {#bell-curves--kbhbell-curves-dot-md}
+
+See also [Bell Curves]({{< relref "KBhbell_curves.md#bell-curves" >}})
