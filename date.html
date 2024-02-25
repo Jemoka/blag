@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html style="overflow:hidden">
+    <head>
+        <title>About</title>
+    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <body style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center">
+        <pre style="display:inline-block">It's currently <b><span id="date"></span></b>
+in Stanford, California. I'm not sure
+about anywhere else.
+
+Thank you for your attention to this
+consequential fact.
+
+<a href="https://stanford.marriagepact.com/">here's a free link</a>.</pre>
+
+
+            <script>
+               var myDate = new Date();
+var pstDate = myDate.toLocaleString("en-US", {
+  timeZone: "America/Los_Angeles"
+});
+document.getElementById("date").innerHTML = pstDate;
+
+var intervalId = window.setInterval(function(){
+               var myDate = new Date();
+var pstDate = myDate.toLocaleString("en-US", {
+  timeZone: "America/Los_Angeles"
+});
+document.getElementById("date").innerHTML = pstDate;
+
+}, 1000);
+
+               </script>
+    <style>
+a:not(.header-social):not(#TableOfContents *):not(.csl-entry:first-child):not(.page-link) {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: solid 1.25px #dade8a;
+    transition: border-width 0.3s;
+}
+
+a:not(.header-social):not(#TableOfContents *):not(.noannot):not(.page-link):hover {
+    border-bottom: solid 4px #dade8a !important;
+}
+
+
+    </style>
+
+</html>
