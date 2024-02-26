@@ -58,4 +58,4 @@ train a diffusion model yay
 ## results {#results}
 
 -   the diffusion model by itself does nothing
--   combined with ControlNet, life is much better
+-   combined with ControlNet, life is much better and achieve higher than SOTA
