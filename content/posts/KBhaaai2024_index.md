@@ -12,6 +12,7 @@ draft = false
 | W3PHI-AI | Simeon Allmendinger | [Diffusion Laproscopic Surgeries]({{< relref "KBhdiffusion_models_for_laproscopic_surgeries.md" >}}) |
 | W3PHI-AI | Andrea Borghesi     | [Clinical Skin Disease Image Generation]({{< relref "KBhclinical_skin_disease_imaging.md" >}})       |
 | W3PHI-AI | Hossein Jafarinia   | [Multiple Instance Learning]({{< relref "KBhmultiple_instance_learning.md" >}})                      |
+| W3PHI-AI | Thomas Kannampallil | [AI Medicine]({{< relref "KBhai_medicine.md" >}})                                                    |
 
 
 ## Talk Contact {#talk-contact}
