@@ -11,6 +11,14 @@ Memoryless policy search through fake determinism.
 
 Primary contribution: transforming **stochastic** [POMDP]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}) to a [deterministic simulative function](#deterministic-simulative-function); foregos [alpha vector]({{< relref "KBhalpha_vector.md" >}})s.
 
+Suppose you have \\(m\\) initial states that you sampled, you can then just try to get the set of acions that maximize:
+
+\begin{equation}
+\arg\max\_{\theta} \tilde{V} = \frac{1}{m} \sum\_{n}^{m} V\_{\theta}(s\_{m})
+\end{equation}
+
+To actually ensure that \\(V\\) has deterministic transitions...
+
 
 ## deterministic simulative function {#deterministic-simulative-function}
 
@@ -36,4 +44,4 @@ at every transition, we eat up one of the random numbers to use, and take an act
 
 ## determinism {#determinism}
 
-Because now next actions are fully deterministic at this point, we can use generic optimization techniques to solve this [POMDP]({{< relref "KBhpartially_observable_markov_decision_process.md" >}}).
+The idea is that if we have sampled enough initial states, the correct action trajectory which maximizes the deterministic \\(\tilde{V}\\) will also maximize that for the real \\(V\\).
