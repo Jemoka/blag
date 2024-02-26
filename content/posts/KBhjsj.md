@@ -18,7 +18,7 @@ Q^{\pi}(o,a) = \mathbb{E}\_{s}[Q^{\pi}(s,a) | M(s) = o]
 where \\(M\\) is a mapping between states and possible observations.
 
 
-## Policy Evaluation/Use {#policy-evaluation-use}
+## Policy Improvement {#policy-improvement}
 
 Now, we want to maximise:
 
@@ -31,7 +31,7 @@ Now, we want to maximise:
 We further normalise this:
 
 \begin{equation}
-\delta\_{o}(a) = \Delta\_{o}(a) - \frac{1}{|A|} \mqty(a' \in A) \Delta\_{o}(a')
+\delta\_{o}(a) = \Delta\_{o}(a) - \frac{1}{|A|} \sum\_{a' \in A} \Delta\_{o}(a')
 \end{equation}
 
 "how does the diff of my action is considering improve over all other actions (i.e. "maybe all actions have similar diffs").
@@ -39,20 +39,26 @@ We further normalise this:
 Now, substitution time:
 
 \begin{equation}
-\delta\_{o}(a) = \qty(Q(o,a) - V(o)) - \frac{1}{|A|} \mqty(a' \in A) Q(o,a') - V(o)
+\delta\_{o}(a) = \qty(Q(o,a) - V(o)) - \frac{1}{|A|} \sum\_{(a' \in A)} Q(o,a') - V(o)
 \end{equation}
 
 Which, after simplification (the two \\(V\\) cancels out), we actually get:
 
 \begin{equation}
-\delta\_{o}(a) = Q(a,o)  - \frac{1}{A} \sum\_{(a \in A)}^{} Q(o,a')
+\delta\_{o}(a) = Q(o,a)  - \frac{1}{|A|} \sum\_{(a' \in A)}^{} Q(o,a')
 \end{equation}
 
-which makes sense; "how does our current action does better than all others".
+which makes sense; "how does our current action does better than all others". To obtain \\(Q(o,a)\\), see the big function above.
+
+Finally, having defined our update step, we can now let the good times roll----gradient ascent! For some action \\(a\\) at observation \\(o\\) and learning rate we update our policy:
+
+\begin{equation}
+Q^{\pi}(a|o) = Q^{\pi}(a|o) + \varepsilon \delta\_{o}(a)
+\end{equation}
+
+We can then use it to take some more actions, compute more deltas, repeat.
 
 
-## Policy Improvement {#policy-improvement}
+## Policy Evaluation {#policy-evaluation}
 
 {{< figure src="/ox-hugo/2024-02-08_09-54-59_screenshot.png" >}}
-
-where \\(m\\) is \\(o\\), the observation
