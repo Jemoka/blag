@@ -58,7 +58,7 @@ thread(myfunc, ref(myint));
 Remember: ref will ****SHARE MEMORY****, and you have no control over when the thread runs. So once a pointer is passed all bets are off in terms of what values things take on.
 
 
-## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--org80ba656--s}
+## [process]({{< relref "KBhmultiprocessing.md#process" >}})es vs [thread](#thread)s {#process--kbhmultiprocessing-dot-md--es-vs-thread--orga50f688--s}
 
 | Processes                                          | Threads                                     |
 |----------------------------------------------------|---------------------------------------------|
@@ -130,14 +130,15 @@ Things it needs to do:
 <!--listend-->
 
 ```c++
-
-//// WARNING: this code has RACE CONDITINOS ////
-
-
 int locked = 0;
 Queue blocked_queue;
 
 void Lock::Lock() {
+    // disable interrupts: otherwise multiple threads
+    // could come and lock the mutex (such as between
+    // the locked check and lock =1
+    IntrGuard grd;
+
     if (!locked) {
         // if our thread is not locked, just lock it
         locked = 1;
@@ -145,17 +146,100 @@ void Lock::Lock() {
         // if our thread is locked, we need to prevent our current
         // thread from going to the ready queue, and push it to the current thread
         blocked_queue.push(CURRENT_THREAD);
-        BLOCK_CURRENT_THREAD;
+
+        // remember this isn't an issue even if IntrGuard
+        // didn't yet go out of scope; because it will either
+        // land on a context_switch which will enable interrupts for you
+        // or land on the beginning of a threadfunc helper, which
+        // is also going to enable interrupts for you
+
+        // nicely, the interrupts are here are *off* as required because switching
+        // to another thread always will result in reenabling (either by new thread,
+        // by timer handler, or by IntrGuard)
+        mark_block_and_call_schedule(CURRENT_THREAD);
     }
 }
 
 void Lock::Unlock() {
+    // disable interrupts: otherwise multiple threads
+    // could come and lock the mutex (such as between
+    // the locked check and lock =1
+    IntrGuard grd;
+
     // if our thread is locked and nobody is waiting for it
     if (q.empty()) {
         locked = 0;
     } else {
         unblock_thread(q.pop());
-        // we do not switch to the unblocked thread, just add it to the ready queue
+        // we do not switch to the unblocked thread, just add it to the
+        // ready queue. we are entrusting the scheduler to start this thread
+        // whenever we feel right
     }
+}
+```
+
+
+## IntrGuard {#intrguard}
+
+[IntrGuard](#intrguard) will turn off interrupts for the duration of its scope; when it goes out of scope, it will **restore the state of the interrupt before** (whether on or off). So, implementing the [mutex](#mutex) code above **without** InterGuard:
+
+```c++
+int locked = 0;
+Queue blocked_queue;
+
+void Lock::Lock() {
+    // disable interrupts: otherwise multiple threads
+    // could come and lock the mutex (such as between
+    // the locked check and lock =1
+    bool interrupsEnabled = intr_enabled();
+
+    // only disable interrupts if they are currently
+    // on
+    if (interrupsEnabled) {
+        intr_enable(false);
+    }
+
+    if (!locked) {
+        // if our thread is not locked, just lock it
+        locked = 1;
+    } else {
+        // if our thread is locked, we need to prevent our current
+        // thread from going to the ready queue, and push it to the current thread
+        blocked_queue.push(CURRENT_THREAD);
+        mark_block_and_call_schedule(CURRENT_THREAD);
+    }
+
+    // if interrupts was on, turn them on again.
+    // otherwise, do nothing
+    if (interrupsEnabled) {
+        intr_enable(true);
+    }
+}
+
+void Lock::Unlock() {
+    // disable interrupts: otherwise multiple threads
+    // could come and lock the mutex (such as between
+    // the locked check and lock =1
+    bool interrupsEnabled = intr_enabled();
+
+    // only disable interrupts if they are currently
+    // on
+    if (interrupsEnabled) {
+        intr_enable(false);
+    }
+
+    // if our thread is locked and nobody is waiting for it
+    if (q.empty()) {
+        locked = 0;
+    } else {
+        unblock_thread(q.pop());
+        // we do not switch to the unblocked thread, just add it to the
+        // ready queue. we are entrusting the scheduler to start this thread
+        // whenever we feel right
+    }
+    if (interrupsEnabled) {
+        intr_enable(true);
+    }
+
 }
 ```

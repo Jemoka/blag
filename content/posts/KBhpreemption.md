@@ -12,34 +12,14 @@ We use [interrupt]({{< relref "KBhdispatching.md#interrupt" >}})s to implement [
 IMPORTANT: because [interrupt]({{< relref "KBhdispatching.md#interrupt" >}})s are disabled at the beginning of the interrupt handler, and re-enabled by the **end**, new threads (which starts not at the interrupt handle) will not re-enable interrupts.
 
 ```C++
+
 void interrupt_handler() {
-    /* disables interupts */
+    /* disables interupts, automatically by timer handler */
 
     // future spawns start here
     context_switch(...);
 
-    /* enables interupts */
-}
-
-void threadfunc() {
-    // initial spawn start here (i.e. previous thread's disabling
-    //                                of interrupts are not reenabled)
-    ...
-}
-```
-
-
-## preemption, in detail {#preemption-in-detail}
-
-```C++
-
-void interrupt_handler() {
-    /* disables interupts */
-
-    // future spawns start here
-    context_switch(...);
-
-    /* enables interupts */
+    /* enables interupts, automatically by timer handler */
 }
 
 void threadfunc_wrapper() {

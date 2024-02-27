@@ -57,3 +57,22 @@ We need a "while" loop here to CHECK whether or not, after sleeping is over, our
 We also need a "while" loop because condition variables will send **false** wakeup signal, so we need to check the condition to be extra sure.
 
 so ****CALL CONDITION VARIABLES IN A WHILE LOOP****.
+
+
+### implementation {#implementation}
+
+similar to [mutex]({{< relref "KBhmultithreading.md#mutex" >}})s
+
+
+#### wait {#wait}
+
+1.  should autonomically put the thread to sleep + unlock the given lock
+2.  when the thread wakes up, it should reacquire the lock + return
+
+
+#### notify one/all {#notify-one-all}
+
+-   notify_one: should wake up + unblock first waiting thread
+-   notify_all: should wake up/unblock all waiting threads
+
+if no one is waiting, do nothing.

@@ -13,6 +13,8 @@ draft = false
 | W3PHI-AI | Andrea Borghesi     | [Clinical Skin Disease Image Generation]({{< relref "KBhclinical_skin_disease_imaging.md" >}})       |
 | W3PHI-AI | Hossein Jafarinia   | [Multiple Instance Learning]({{< relref "KBhmultiple_instance_learning.md" >}})                      |
 | W3PHI-AI | Thomas Kannampallil | [AI Medicine]({{< relref "KBhai_medicine.md" >}})                                                    |
+| W3PHI-AI | Soumadeep Saha      | [DOST]({{< relref "KBhdost.md" >}})                                                                  |
+| W3PHI-AI | Dimitris Spathis    | [Multimodal AI for Real-World Signals]({{< relref "KBhmultimodal_ai_for_real_world_signals.md" >}})  |
 
 
 ## Talk Contact {#talk-contact}

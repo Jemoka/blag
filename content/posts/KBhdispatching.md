@@ -31,16 +31,22 @@ a [interrupt](#interrupt) takes place outside the current thread, it forces the 
 2.  completion of a disk operations
 3.  a hardware timer that fires an interrupt
 
-[interrupt](#interrupt)s enable [preemption]({{< relref "KBhpreemption.md" >}}) to happen
+[interrupt](#interrupt)s enable [preemption]({{< relref "KBhpreemption.md" >}}) to happen, so see also [preemption]({{< relref "KBhpreemption.md" >}}) for interrupt handling pattern.
 
 
-#### what if a timer goes off during an [interrupt](#interrupt) {#what-if-a-timer-goes-off-during-an-interrupt--org195ef88}
+#### what if a timer goes off during an [interrupt](#interrupt) {#what-if-a-timer-goes-off-during-an-interrupt--orge7a39af}
 
 **interrupts are disabled during interrupt handling**, otherwise, this causes an infinite loop.
 
 solution: _interrupts are disabled during timer handling_.
 
 this causes a problem: if you [preempt into a brand new thread]({{< relref "KBhpreemption.md#preempting-into-a-brand-new-thread" >}})
+
+
+#### main idea {#main-idea}
+
+-   there are [race condition]({{< relref "KBhmultithreading.md#race-condition" >}}) we cannot solve with [mutex]({{< relref "KBhmultithreading.md#mutex" >}})es because we are the OS
+-   so, **we** implement mutexes by enabling/disabling [interrupt](#interrupt)s
 
 
 ## dispatcher {#dispatcher}
@@ -91,3 +97,8 @@ Notice that we only store **callee saved registers** because its the responsibil
 We can't `ret` to a function that never called `context_switch`, which is the case for **new threads**.
 
 To do this, we create a fake freeze frame on the stack for that new thread which looks like you are just about to call the thread function, and calls `context_switch` normally.
+
+
+### yield {#yield}
+
+[yield](#yield) is a user function that one could implement, which acts like a blocking action, but instead of doing that we just add ourselves directly to the end of the ready queue again. (i.e. give up CPU voluntarily, but don't block0.
