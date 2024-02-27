@@ -17,6 +17,7 @@ draft = false
 | W3PHI-AI | Dimitris Spathis    | [Multimodal AI for Real-World Signals]({{< relref "KBhmultimodal_ai_for_real_world_signals.md" >}})  |
 | W3PHI-AI | William Bolton      | [Medical Knowledge Extraction]({{< relref "KBhmedical_knowledge_extraction.md" >}})                  |
 | W3PHI-AI | Prajwal Panzade     | [MedBlindTuner]({{< relref "KBhmedblindtuner.md" >}})                                                |
+| W3PHI-AI | Hita Kambhamettu    | [Medical Dialogue Generation]({{< relref "KBhmedical_dialogue_generation.md" >}})                    |
 
 
 ## Talk Contact {#talk-contact}
