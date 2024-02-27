@@ -18,6 +18,8 @@ draft = false
 | W3PHI-AI | William Bolton      | [Medical Knowledge Extraction]({{< relref "KBhmedical_knowledge_extraction.md" >}})                  |
 | W3PHI-AI | Prajwal Panzade     | [MedBlindTuner]({{< relref "KBhmedblindtuner.md" >}})                                                |
 | W3PHI-AI | Hita Kambhamettu    | [Medical Dialogue Generation]({{< relref "KBhmedical_dialogue_generation.md" >}})                    |
+| W3PHI-AI | Amarpal Sahota      | [Parkingson's Classification with EEG]({{< relref "KBhparkingson_s_classification_with_eeg.md" >}})  |
+| W3PHI-AI | Yidou Weng          | [Baysian Networks for Healthcare]({{< relref "KBhbaysian_networks_for_healthcare.md" >}})            |
 
 
 ## Talk Contact {#talk-contact}
