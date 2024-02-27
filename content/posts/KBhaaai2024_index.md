@@ -22,6 +22,7 @@ draft = false
 | W3PHI-AI | Yidou Weng          | [Baysian Networks for Healthcare]({{< relref "KBhbaysian_networks_for_healthcare.md" >}})                      |
 | W3PHI-AI | Cheng Huang         | [Multi-LSTM for Clinical Report Generation]({{< relref "KBhmulti_lstm_for_clinical_report_generation.md" >}})  |
 | W3PHI-AI | Rickard Stureborg   | [Hierarchical Multi-Label Clsf. for Vaccine]({{< relref "KBhhierarchical_multi_label_clsf_for_vaccine.md" >}}) |
+| W3PHI-AI | Mbithe Nzomo        | [Semantic Health Risk Prediction]({{< relref "KBhsemantic_health_risk_prediction.md" >}})                      |
 
 
 ## Talk Contact {#talk-contact}
