@@ -15,6 +15,8 @@ draft = false
 | W3PHI-AI | Thomas Kannampallil | [AI Medicine]({{< relref "KBhai_medicine.md" >}})                                                    |
 | W3PHI-AI | Soumadeep Saha      | [DOST]({{< relref "KBhdost.md" >}})                                                                  |
 | W3PHI-AI | Dimitris Spathis    | [Multimodal AI for Real-World Signals]({{< relref "KBhmultimodal_ai_for_real_world_signals.md" >}})  |
+| W3PHI-AI | William Bolton      | [Medical Knowledge Extraction]({{< relref "KBhmedical_knowledge_extraction.md" >}})                  |
+| W3PHI-AI | Prajwal Panzade     | [MedBlindTuner]({{< relref "KBhmedblindtuner.md" >}})                                                |
 
 
 ## Talk Contact {#talk-contact}
