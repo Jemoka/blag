@@ -52,7 +52,7 @@ t = c \tau
 you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).
 
 
-## Solution, In Full {#solution-in-full}
+## Solving Heat Equation {#solving-heat-equation}
 
 Consider the one dimensional heat equation:
 
@@ -242,7 +242,7 @@ B''(x) = \lambda B(x)
 
     so we can just match terms.
 
-    The good news is that, because [Fourier Series]({{< relref "KBhsu_math53_feb212024.md#fourier-series" >}}) exists, any initial condition that's a well-formed function can be written a sum of sines. This also converges really quickly (because \\(e^{-k^{2}}\\)). Further, given some \\(f\_{0}(x)\\), we obtain a specific \\(k\\) and will obtain a specific solution.
+    The good news is that, because exists, any initial condition that's a well-formed function can be written a sum of sines. This also converges really quickly (because \\(e^{-k^{2}}\\)). Further, given some \\(f\_{0}(x)\\), we obtain a specific \\(k\\) and will obtain a specific solution.
 
 
 #### Solving using [Neumann Conditions]({{< relref "KBhsu_math53_feb232024.md#neumann-conditions" >}}) {#solving-using-neumann-conditions--kbhsu-math53-feb232024-dot-md}
