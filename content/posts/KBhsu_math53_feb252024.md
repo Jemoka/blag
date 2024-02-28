@@ -58,6 +58,8 @@ Suppose we have a function that satisfies:
 f(x) = a\_0 + \sum\_{k=1}^{\infty} \qty( a\_{k} \cos(k \omega x) + b\_{k} \sin(k \omega x))
 \end{equation}
 
+where  \\(\omega = \frac{2\pi}{L}\\).
+
 recall that each \\(\cos(\dots)\\)  and \\(\sin (...)\\) are [orthogonal]({{< relref "KBhorthogonal.md" >}}), we can then use the [Fourier formula]({{< relref "KBhlearn_more.md" >}}) to figure the coefficients \\(a\_{k}\\), \\(b\_{k}\\).
 
 ---
@@ -83,6 +85,19 @@ a\_{k} = \frac{\langle f, \cos (k\omega x) \rangle}{\langle \cos (k\omega x), \c
 \begin{equation}
 b\_{k} = \frac{\langle f, \sin (k\omega x) \rangle}{\langle \sin (k\omega x), \sin (k\omega x) \rangle} = \frac{1}{L / 2} \int\_{0}^{L} f(x) \sin (k\omega x) \dd{x}
 \end{equation}
+
+When computing this, recall that:
+
+\begin{equation}
+\omega = \frac{2\pi}{L}
+\end{equation}
+
+where \\(L\\) the period of your \\(L\\) periodic function.
+
+
+### Fourier Series Converges with \\(L\\) Periodic Function {#fourier-series-converges-with-l-periodic-function}
+
+Suppose \\(f(x)\\) is an \\(L\\) periodic function with at most jump discountinuty, and \\(f'\\) continuous everywhere. Then, the associated [Fourier Series](#fourier-series) converges everywhere and coincides with \\(f\\) except for jump discontinuances, where the values are the average of limits from either side
 
 
 ### Background {#background}

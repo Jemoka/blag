@@ -128,19 +128,19 @@ with the [sigmoid]({{< relref "KBhsigmoid.md" >}}) function.
 To make this sum to \\(1\\), we write:
 
 \begin{equation}
-p(y=1) = \sigma(w \cdot x + b)
+p(y=1|x) = \sigma(w \cdot x + b)
 \end{equation}
 
 and
 
 \begin{equation}
-p(y=0) = 1- p(y=1)
+p(y=0|x) = 1- p(y=1|x)
 \end{equation}
 
 Also, recall that \\(\sigma(-x) = 1- \sigma(x)\\), this gives:
 
 \begin{equation}
-p(y=0) = \sigma(-w\cdot x-b)
+p(y=0|x) = \sigma(-w\cdot x-b)
 \end{equation}
 
 the probability at which point we make a decision is called a [decision boundary](#logistic-regression-text-classification). Typically this is 0.5.
@@ -150,6 +150,37 @@ We can featurize by counts from a lexicon, by word counts, etc.
 For instance:
 
 {{< figure src="/ox-hugo/2024-01-26_19-26-16_screenshot.png" >}}
+
+
+### logistic regression terms {#logistic-regression-terms}
+
+-   **feature representation**: each input \\(x\\) is represented by a vectorized lit of feature
+-   **classification function**: \\(p(y|x)\\), computing \\(y\\) using the estimated class
+-   **objective function**: the loss to minimize (i.e. cross entropy)
+-   **optimizer**: SGD, etc.
+-   **decision boundary**: the threshold at which classification decisions are made, with \\(P(y=1|x) > N\\).
+
+
+### binary cross entropy {#binary-cross-entropy}
+
+\begin{equation}
+\mathcal{L} = - \qty[y \log \sigmoid(w \cdot x + b) + (1-y) \log (1- \sigmoid(w \cdot x + b))]
+\end{equation}
+
+or, for neural networks in general:
+
+\begin{equation}
+\mathcal{L} = - \qty[y \log \hat{y} + (1-y) \log (1- \hat{y})]
+\end{equation}
+
+
+### gradient descent {#gradient-descent}
+
+\begin{equation}
+\theta^{t+1} = \theta^{t} - \eta \nabla\_{\theta} \mathcal{L}
+\end{equation}
+
+"update the weight by taking a step in the opposite direction of the gradient by weight".
 
 
 ### Weight gradient for logistic regresison {#weight-gradient-for-logistic-regresison}

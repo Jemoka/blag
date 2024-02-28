@@ -86,6 +86,8 @@ multiply [log-frequency weighting](#log-frequency-weighting) TIMES [document fre
 score(q,d) = \sum\_{t \in q \cap d} (1+\log\_{10}(tf\_{t,d})) \times \log\_{10}\qty(\frac{N}{df\_{t}})
 \end{equation}
 
+if \\(tf = 0\\), set the entire TF score to \\(0\\) without adding 1.
+
 using this, we can now construct a weight-matrix. Each document is a vector of the TFIDF score for each term against each document.
 
 There are a series of approaches that you can use as a possible approach to compute tfidf: various ways to normalizing, variable document frequency counts (or not use it), etc.

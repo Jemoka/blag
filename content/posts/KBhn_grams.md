@@ -83,19 +83,19 @@ Many counts are results of...
 ### [MLE]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) {#mle--kbhmaximum-likelihood-parameter-learning-dot-md}
 
 \begin{equation}
-P(w\_{i} | w\_{i-1}) = \frac{C(w\_{i-1}, w\_{i})}{c(w\_{i-1})}
+P(w\_{i} | w\_{i-1}) = \frac{C(w\_{i-1}, w\_{i})}{C(w\_{i-1})}
 \end{equation}
 
 
 ### MAP, i.e. [Laplace Smoothing]({{< relref "KBhbaysian_parameter_learning.md#laplace-smoothing" >}}) {#map-i-dot-e-dot-laplace-smoothing--kbhbaysian-parameter-learning-dot-md}
 
 \begin{equation}
-P(w\_{i} | w\_{i-1}) = \frac{C(w\_{i-1}, w\_{i})+1}{c(w\_{i-1})+V}
+P(w\_{i} | w\_{i-1}) = \frac{C(w\_{i-1}, w\_{i})+1}{C(w\_{i-1})+V}
 \end{equation}
 
-we have to add \\(V\\) on the denominator because every word could possibly follow \\(w\_{i-1}\\) .
+we have to add \\(V\\) on the denominator because every word could possibly follow \\(w\_{i-1}\\). Note that as \\(N\\) increases we actually still add \\(V\\) because we are predicting at each time a **single word** (just conditioned on more words), so if we are smoothing output we are only adding \\(V\\) extra counts.
 
-This is typically not used for [N-Grams]({{< relref "KBhn_grams.md" >}}) (because there are simply so many OOS sequences). Instead, its more frequently used in other cases.
+IMPORTANT NOTE THOUGH: this is typically not used for [N-Grams]({{< relref "KBhn_grams.md" >}}) (because there are simply so many OOS sequences). Instead, its more frequently used in other cases such as [Naive Bayes for Text Classification]({{< relref "KBhbag_of_words.md#naive-bayes-for-text-classification" >}}).
 
 
 ### Log Probs {#log-probs}

@@ -21,7 +21,11 @@ Although: we generally want to sort our [postings list](#postings-list) by docum
 1.  sort term vs. docID tuples by term alphabetically
 2.  sort docIDs within each tuple by integer
 3.  merge multiple entries in the single document, keeping track of total frequency
-4.  consolidate information into postings list (`term + document frequency (how many documents does the term show up): [postings, here]`)
+4.  consolidate information into postings list (`term + document frequency (how many documents does the term show up): [postings, here, ...]`)
+
+    for instance
+
+{{< figure src="/ox-hugo/2024-02-28_10-13-30_screenshot.png" >}}
 
 
 ## useful pre-processing {#useful-pre-processing}
@@ -64,3 +68,12 @@ once any list is exhausted, stop.
 And this is why we need the postings sorted.
 
 Typically, when you start, you'd like to start your searches on your smallest postings list.
+
+
+## phrase-query retrieval {#phrase-query-retrieval}
+
+[phrase-query retrieval](#phrase-query-retrieval) is the prcoess to process documents where an exact phrase appears. First index for the postings list of the entire phrase:
+
+then do the [Boolean Retrieval](#boolean-retrieval) iteratively---merge the phrases using AND queries first, then zoom into each document to merge their word positions, offset by one.
+
+{{< figure src="/ox-hugo/2024-02-28_10-19-09_screenshot.png" >}}
