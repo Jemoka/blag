@@ -113,6 +113,13 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 -   [scheduling]({{< relref "KBhscheduling.md" >}})
 -   [preemption]({{< relref "KBhpreemption.md" >}})
 
+
+#### virtual memory {#virtual-memory}
+
+"how can one set of memory be shared across several processes"
+
+-   [virtual memory]({{< relref "KBhvirtual_memory.md" >}})
+
 ---
 
 An example of a good time:
