@@ -92,29 +92,38 @@ Yoink from TIC:
 
 ---
 
-Surprisingly, one salient case of depolarization in recent years is SSM. Debate transition from SSM into other intersectionality / rights. Direct measurements too: gallup: Republican vs. Democracts gap closed on the topic.
+One salient case of depolarization in recent years is SSM. Debate transition from SSM into other intersectionality / rights (CITE). Direct measurements too: gallup---Republican vs. Democracts gap closed on the topic.
 
-SSM, therefore, offers a salient case study of what depolarization can look like. Having gone through the cycle, we are afforded post-hoc analysis of what worked and didn't work.
+SSM offers a salient case study of what depolarization can look like. Having gone through the cycle, we are afforded post-hoc analysis of what worked and didn't work.
 
-We know **what** worked: [ssm debates preceded by 1) higher emotion and 2) few active engagements results in failed legalization](3880B92C-F887-41CD-8281-A5B2C053D773), whereas [sustained interest and overall engagement precede legalization success](#sustained-interest-and-overall-engagement-precede-legalization-success)---tied to the depolarization. But **why**? and specifically, why these things? (maybe gesticulate to the fact that protests are usually not those)
+We know **what** worked: [ssm debates preceded by 1) higher emotion and 2) few active engagements results in failed legalization](3880B92C-F887-41CD-8281-A5B2C053D773), whereas [sustained interest and overall engagement precede legalization success](#sustained-interest-and-overall-engagement-precede-legalization-success)---tied to the depolarization.
 
-A careful study of polarization helps inform why these things worked. We are going to do this from social media because (from the TIC social media is easy).
+But **why**? and specifically, why these things? How can we generalize this?
+
+A careful study of polarization helps inform why these things worked. We are going to do this from social media because (from the TIC social media is easy). The framework will show that [TiC thesis].
+
+After developing such a framework, we will develop this analysis on two cases:
+
+1.  briefly on trolls (this is **polarizing**), and
+2.  SSM (this is **depolarizing**), which, given that's what we're after, we are going to exand and learn from to further investigate the motivating dynamics of the framework in context of SSM.
 
 
 ### &lt;&gt;all of the lit review {#all-of-the-lit-review}
 
-[vocab note: homophilic is not the same thing as MSM. We use it in the network dynamics sense. also not talking about the rest of queer community, which has a much more complex/intersectional set of issues.]
+Begin by developing the framework.
+
+yipeee
 
 
 ### SSM has all the parts that's needed for this to work. {#ssm-has-all-the-parts-that-s-needed-for-this-to-work-dot}
 
-Direct operationalization.
+[vocab note: homophilic is not the same thing as MSM. We use it in the network dynamics sense. also not talking about the rest of queer community, which has a much more complex/intersectional set of issues.]
 
--   previous efforts: 1) high emotion 2) low engagement----highly homophilic interactions
+So while trolls polarize, SSM is an example of successful polarization.
 
-The depolarization of SSM follows an extremely similar pattern to the depolarization framework developed through studying social media in general: post-hoc studies highlights that depolarization of SSM is characterized by both increased exposure to the community on social media as well as increased active political engagement with the community.
+Recall previous efforts: 1) high emotion 2) low engagement----highly homophilic interactions.
 
-A careful study of SSM offers a way to operationalize the abstractions given by the framework, and---through observing how SSM became depolarized---reveals insights into the underlying thrusts of the framework.
+The depolarization of SSM follows an extremely similar pattern to the depolarization framework developed through studying social media in general: post-hoc studies highlights that depolarization of SSM is characterized by both increased exposure to the community on social media as well as increased active political engagement with the community. The close correspondence between SSM and the framework, therefore offers an opportunity to directly use the underlying motivations of SSM legalization as a study of the motivation of the framework in general.
 
 
 ### Media needs to be diverse for SSM because otherwise it creates vicarious communities. {#media-needs-to-be-diverse-for-ssm-because-otherwise-it-creates-vicarious-communities-dot}
