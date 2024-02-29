@@ -45,6 +45,9 @@ a\_0 = a\_0 \cos (0 \omega x) = a\_0 \cdot 1  = a\_0
 
 ---
 
+
+### General Fourier Decomposition {#general-fourier-decomposition}
+
 Therefore, by the [Fourier formula]({{< relref "KBhlearn_more.md" >}}), we expect that:
 
 \begin{equation}
@@ -59,16 +62,6 @@ a\_{k} = \frac{\langle f, \cos (k\omega x) \rangle}{\langle \cos (k\omega x), \c
 b\_{k} = \frac{\langle f, \sin (k\omega x) \rangle}{\langle \sin (k\omega x), \sin (k\omega x) \rangle} = \frac{2}{L} \int\_{0}^{L} f(x) \sin (k\omega x) \dd{x}
 \end{equation}
 
-suppose you are doing it over slightly different bounds where you shift the periodicity down:
-
-\begin{equation}
-a\_{k} = \frac{\langle f, \cos (k\omega x) \rangle}{\langle \cos (k\omega x), \cos (k\omega x) \rangle} = \frac{4}{L} \int\_{- \frac{L}{2}}^{ \frac{L}{2}} f(x) \cos (k\omega x) \dd{x}
-\end{equation}
-
-\begin{equation}
-b\_{k} = \frac{\langle f, \sin (k\omega x) \rangle}{\langle \sin (k\omega x), \sin (k\omega x) \rangle} = \frac{4}{L} \int\_{-\frac{L}{2}}^{\frac{L}{2}} f(x) \sin (k\omega x) \dd{x}
-\end{equation}
-
 When computing this, recall that:
 
 \begin{equation}
@@ -78,48 +71,108 @@ When computing this, recall that:
 where \\(L\\) the period of your \\(L\\) periodic function.
 
 
-## sin and cos are even and odd parts {#sin-and-cos-are-even-and-odd-parts}
+### Odd and Even Break {#odd-and-even-break}
 
+If you have an even or odd \\(f(x)\\), we can refine the series even more into simply a sine or cosine only series.
 
-### odd extensions {#odd-extensions}
-
-Important note: this function seems to vanish at endpoints \\(0\\) and \\(l\\), and not all functions do that.
-
-So, instead, let's consider the odd extension of \\(f\\):
+For even \\(f(x)\\), we can write:
 
 \begin{equation}
-\hat{f}(x) = f(x), x \geq 0
+a\_{0} + \sum\_{k=1}^{\infty} a\_{k} \cos (k\omega x)
 \end{equation}
 
-and
+where:
 
 \begin{equation}
-\hat{f}(x) = -f(-x), x < 0
+a\_0 = \frac{1}{L / 2} \int\_{0}^{\frac{L}{2}} f(x) \dd{x}
 \end{equation}
-
-There will therefore be a discontinuous jump at \\(0\\).
-
-Using the \\(\sin\\) function, which are odd, recall that [Fourier Series Converges with \\(L\\) Periodic Function](#fourier-series-converges-with-l-periodic-function), so at \\(0\\) given [Gibbs Phenomena](#fourier-series-converges-with-l-periodic-function), the jump will average the discontinouity down to \\(0\\) (given our extensions are odd).
-
-
-### even extensions {#even-extensions}
-
-instead, if you want to use \\(\cos\\), you can make an even extension:
 
 \begin{equation}
-\hat{f}(x) = f(x), x \geq 0
+a\_{k} = \frac{2}{L / 2} \int\_{0}^{\frac{L}{2}} f(x) \cos (k \omega x) \dd{x}
 \end{equation}
 
-and
+Whereas for odd \\(f(x)\\), we write:
 
 \begin{equation}
-\hat{f}(x) = f(-x), x < 0
+\sum\_{k=1}^{\infty} b\_{k} \sin (k\omega x)
 \end{equation}
 
-which shouldn't be discontinuous at \\(0\\) at all.
+\begin{equation}
+b\_{k} = \frac{2}{L / 2} \int\_{0}^{L / 2} f(x) \sin (k\omega x) \dd{x}
+\end{equation}
 
 
-### Fourier Series Converges with \\(L\\) Periodic Function {#fourier-series-converges-with-l-periodic-function}
+### over any function {#over-any-function}
+
+Suppose we have a function with two roots:
+
+\begin{equation}
+f(0) = 0 = f(l)
+\end{equation}
+
+then, we can write it in terms of a [Fourier Series]({{< relref "KBhfourier_series.md" >}}) by odd-extending the function to the negative direction (see "odd extensions below").
+
+This makes us be able to write \\(f\\) over \\([0,l]\\) as:
+
+\begin{equation}
+f(x) = \sum\_{n=1}^{\infty} b\_{n} \sin \qty( \frac{n\pi}{l} x)
+\end{equation}
+
+where:
+
+\begin{equation}
+b\_{n} = \frac{2}{l} \int\_{0}^{l} f(x) \sin \qty( \frac{n \pi}{l} x) \dd{x}
+\end{equation}
+
+this is just the \\(l\\) extension function above, but with small \\(l\\) as the function is odd to one side.
+
+Here's the motivation:
+
+
+#### sin and cos are even and odd parts {#sin-and-cos-are-even-and-odd-parts}
+
+<!--list-separator-->
+
+-  odd extensions
+
+    Important note: this function seems to vanish at endpoints \\(0\\) and \\(l\\), and not all functions do that.
+
+    So, instead, let's consider the odd extension of \\(f\\):
+
+    \begin{equation}
+    \hat{f}(x) = f(x), x \geq 0
+    \end{equation}
+
+    and
+
+    \begin{equation}
+    \hat{f}(x) = -f(-x), x < 0
+    \end{equation}
+
+    There will therefore be a discontinuous jump at \\(0\\).
+
+    Using the \\(\sin\\) function, which are odd, recall that [Fourier Series Converges with \\(L\\) Periodic Function](#fourier-series-converges-with-l-periodic-function), so at \\(0\\) given [Gibbs Phenomena](#fourier-series-converges-with-l-periodic-function), the jump will average the discontinouity down to \\(0\\) (given our extensions are odd).
+
+<!--list-separator-->
+
+-  even extensions
+
+    instead, if you want to use \\(\cos\\), you can make an even extension:
+
+    \begin{equation}
+    \hat{f}(x) = f(x), x \geq 0
+    \end{equation}
+
+    and
+
+    \begin{equation}
+    \hat{f}(x) = f(-x), x < 0
+    \end{equation}
+
+    which shouldn't be discontinuous at \\(0\\) at all.
+
+
+## Fourier Series Converges with \\(L\\) Periodic Function {#fourier-series-converges-with-l-periodic-function}
 
 Suppose \\(f(x)\\) is an \\(L\\) periodic function with at most jump discountinuty, and \\(f'\\) continuous everywhere. Then, the associated [Fourier Series]({{< relref "KBhfourier_series.md" >}}) converges everywhere and coincides with \\(f\\) except for jump discontinuances, where the values are the average of limits from either side. This is called the [Gibbs Phenomena](#fourier-series-converges-with-l-periodic-function)
 
