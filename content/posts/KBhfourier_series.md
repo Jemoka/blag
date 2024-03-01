@@ -252,7 +252,7 @@ Further, for the same \\(k\\),
 but also:
 
 \begin{equation}
-2 \int\_{0}^{\frac{L}{2}} \sin (k \omega x) \sin (k \omega x) = \frac{4}{L}
+\int\_{0}^{\frac{L}{2}} \sin (k \omega x) \sin (k \omega x) = \frac{L}{4}
 \end{equation}
 
 if \\(k\\) are equal.

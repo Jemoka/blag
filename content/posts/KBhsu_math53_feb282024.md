@@ -31,7 +31,7 @@ If you then assume periodicity over the interval you care about \\(L\\), suddenl
 At a glance, for [Dirichlet Conditions]({{< relref "KBhsu_math53_feb232024.md#dirichlet-conditions" >}}):
 
 \begin{equation}
-u(t,x) = \sum\_{k}  \qty(c\_1 \sin  \qty(\frac{ck\pi}{l} t) + c\_2 \cos  \qty(\frac{ck\pi}{l} t)) \sin  \qty( \frac{k \pi}{l}x)
+u(t,x) = \sum\_{k}  \qty(a\_{k} \sin  \qty(\frac{ck\pi}{l} t) + b\_{k} \cos  \qty(\frac{ck\pi}{l} t)) \sin  \qty( \frac{k \pi}{l}x)
 \end{equation}
 
 this takes two initial condition:
@@ -42,6 +42,18 @@ u(0,x) = \sum b\_{k} \sin  \qty( \frac{k\pi x}{l}) = f(x)
 
 \begin{equation}
 \pdv{u}{t}(0,x) = \sum a\_{k} \frac{ck \pi}{l} \sin  \qty( \frac{k\pi x}{l}) = g(x)
+\end{equation}
+
+meaning:
+
+\begin{equation}
+a\_{k} = \frac{2}{l} \int\_{0}^{l} f(x) \sin \qty( \frac{n\pi}{l} x) \dd{x}
+\end{equation}
+
+and:
+
+\begin{equation}
+b\_{k} = \frac{2}{n\pi c} \int\_{0}^{l} h(x) \sin \qty( \frac{n\pi}{l} x) \dd{x}
 \end{equation}
 
 which now finishes our initial conditions.

@@ -7,15 +7,6 @@ draft = false
 heat distributes by "diffusing"; this is heat \\(u\\) diffusing across a plate
 
 \begin{equation}
-\pdv{u}{t} = \alpha \qty( \pdv[2]{u}{x} + \pdv[2]{u}{y})
-\end{equation}
-
-
-## At a glance {#at-a-glance}
-
-For
-
-\begin{equation}
 \pdv{u}{t} = \pdv[2]{u}{x}
 \end{equation}
 

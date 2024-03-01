@@ -116,6 +116,16 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 -   [NER Tagging]({{< relref "KBhner_tagging.md" >}})
 
 
+### Dialogue Systems {#dialogue-systems}
+
+-   [Dialogue]({{< relref "KBhdialogue.md" >}})
+-   [Chatbot]({{< relref "KBhchatbot.md" >}})
+    -   [PARRY]({{< relref "KBhparry.md" >}})
+
+
+### Recommender Systems {#recommender-systems}
+
+
 ### Dora {#dora}
 
 -   [Dora]({{< relref "KBhdora.md" >}})
