@@ -12,7 +12,7 @@ draft = false
 
 ## requirements {#requirements}
 
-We define \\(\langle u, v \rangle\\) as the [inner product]({{< relref "KBhinner_product.md" >}}) of \\((u,v)\\) **in that order!**. It carries the following properties:
+We define \\(\langle u, v \rangle \in \mathbb{F}\\) as the [inner product]({{< relref "KBhinner_product.md" >}}) of \\((u,v)\\) **in that order!**. It carries the following properties:
 
 1.  **positivity**: \\(\langle v, v\rangle \geq 0, \forall v \in V\\)
 2.  **definiteness**: \\(\langle v, v\rangle = 0\\) IFF \\(v = 0\\)

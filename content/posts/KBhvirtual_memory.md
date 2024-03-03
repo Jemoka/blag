@@ -43,6 +43,8 @@ This is basically [load-time relocation](#load-time-relocation), but with [virtu
 
 The **bound** is a virtual address (the first invalid address in the virtual world), whereas the **base** is a physical address. This is both stored in the **process control block**.
 
+**last possible address**: is (bound - 1)+base
+
 
 #### translation {#translation}
 
@@ -68,8 +70,103 @@ importantly, we can arbitrary adjust base and bound.
 
     -   **one contiguous region**: need to allocate free spcae
     -   **fragmentation**: because of the above
-    -   **growing can only happens upwards with bounds** (and its kind of useless)---we can't move the stack up in virtual space
-    -   no read only memory (we'll want to limit access to code segment)
+    -   **growing can only happens upwards with bounds** (and its kind of useless)---we can't move the stack up in virtual space, and we can't give more space downwards, because that would cause negative addresses
+    -   **no read only memory** (we'll want to limit access to code segment, for instance)
+
+
+### multiple segments {#multiple-segments}
+
+Let's break up multiple virtual address space into segments, and map each of those segments separately. **EACH SEGMENT** will have its own [base and bound](#base-and-bound). So, you will store each struct in a map: `[segment number: [segment base, segment bound, read only or not]]`.
+
+
+#### translation {#translation}
+
+-   look up what segment a virtual address is in (we can do this by making the top couple bits of the virtual address the segment number, and the next bits as the offset into the segment)
+-   get that segment's info
+-   compare that address' offset to that segment's bound, if its &gt;= limit, [trap]({{< relref "KBhdispatching.md#trap" >}})
+-   otherwise, to go the base of that segment and fetch data
+
+
+#### tradeoff {#tradeoff}
+
+<!--list-separator-->
+
+-  features
+
+    -   **you can recycle segments**: if you have two instances of a program running, we can actually share read-only segments (such as code).
+    -   **you can not map the middle**: because stack and data segments are independent, we can not map the hole in the middle until more data is asked
+    -   **you can grow things**: if you run out of continuous space, you can grow the segment by either just doing it or by moving it and growing it (and indeed we now can move the stack down as the stack is addressed as the highest address)
+
+<!--list-separator-->
+
+-  drawbacks
+
+    -   **growing can only happens upwards with bounds**---now that we can move the heap independently, growing the heap makes sense now; however, growing the STACK **still** is impossible because growing the stack would entail moving the base address in order to go downwards
+    -   **variable length segments**---extrernal fragmentation!
+    -   **small number of segments**---the [segment, offset] deign divides virtual addresses, so you have to decide segment number exogenously
+
+
+### paging {#paging}
+
+So let's instead allocate memory in pages. Instead of variable-length segments that can GROW in [base and bound](#base-and-bound) and [multiple segments](#multiple-segments), let's force a specific size of memory in each chunk.
+
+-   **virtual address**: **virtual page number** + **offset**
+-   **physical address**: **physical page number** + **offset**
+
+we map each page independently, and keep the offset. If a page is unused, internal fragmentation but not too bad. The **stack can now grow downwards**: because if it reaches into lower page numbers we can just map that page somewhere too.
+
+To store page mappings, in a seperate storage location, we store a [page map](#paging)/[page table](#paging): its an array of tuples, where the index is the virtual page number, and each entry has [(physical page, writable)].
+
+Notice that page continuity isn't a problem: the upper digits just count up, and the lower digits tells you offset in that chunk:
+
+```asm
+0x0000 - 0x0fff
+0x1000 - 0x1fff
+0x2000 - 0x2fff
+```
+
+where, the first digit tells you the page number
+
+```asm
+0x0 - 0x0
+0x1 - 0x1
+0x2 - 0x2
+```
+
+and the rest is the offset.
+
+And everything is contiunous, and automatically paged.
+
+For instance, typically page sizes are 4kb
+
+| Page Size         | Offset Number Digits |
+|-------------------|----------------------|
+| 4096 bytes (16^3) | 3                    |
+
+then the rest of the address would just be the page number.
+
+
+#### Intel's implementation {#intel-s-implementation}
+
+**Virtual Addresses**
+
+|                  |                               |                  |
+|------------------|-------------------------------|------------------|
+| Unused (16 bits) | Virtual page number (36 bits) | Offset (12 bits) |
+
+**Physical Addresses**
+
+|                       |                  |
+|-----------------------|------------------|
+| Page number (40 bits) | Offset (12 bits) |
+
+
+#### translation {#translation}
+
+-   chop off page number and offset
+-   translate the page number
+-   concat the two together
+-   **internal fragmentation**
 
 
 ## why not something simpler? {#why-not-something-simpler}
@@ -86,6 +183,7 @@ ASSUME that there is only one process. Stack grows down, data grows up, and code
 
 -   **no isolation**: even in this case, nothing is stopping the program from accessing memory in the OS reserve segment; which is bad.
 -   **no multitasking**: because, well, we have one program
+-   **fragmentation**: little bits of space all over the place
 
 
 ### load-time relocation {#load-time-relocation}

@@ -246,10 +246,10 @@ Meaning, every pair of \\(\langle \\{\sin, \cos\\} (k\_1 \omega x), \\{\sin, \co
 Further, for the same \\(k\\),
 
 \begin{equation}
-\langle \cos (k\omega x), \cos (k \omega x) \rangle = \langle \sin (k\omega x), \sin (k \omega x) \rangle = \frac{1}{2}
+\langle \cos (k\omega x), \cos (k \omega x) \rangle = \langle \sin (k\omega x), \sin (k \omega x) \rangle = \frac{L}{2}
 \end{equation}
 
-but also:
+in partiular:
 
 \begin{equation}
 \int\_{0}^{\frac{L}{2}} \sin (k \omega x) \sin (k \omega x) = \frac{L}{4}

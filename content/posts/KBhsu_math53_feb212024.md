@@ -39,6 +39,8 @@ See [Heat Equation]({{< relref "KBhheat_equation.md" >}})
 
 ### Wave Equation {#wave-equation}
 
+**SEE [solving wave equation]({{< relref "KBhsu_math53_feb282024.md#solving-wave-equation" >}})**
+
 \begin{equation}
 u(t,x), u(t,x,y)
 \end{equation}

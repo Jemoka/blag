@@ -125,6 +125,8 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 
 ### Recommender Systems {#recommender-systems}
 
+-   [Recommender System]({{< relref "KBhrecommender_system.md" >}})
+
 
 ### Dora {#dora}
 

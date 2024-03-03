@@ -119,6 +119,7 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 "how can one set of memory be shared across several processes"
 
 -   [virtual memory]({{< relref "KBhvirtual_memory.md" >}})
+    -   [dynamic address translation]({{< relref "KBhvirtual_memory.md#dynamic-address-translation" >}})
 
 ---
 
