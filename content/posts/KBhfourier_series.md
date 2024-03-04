@@ -43,8 +43,6 @@ Aside: why is \\(a\_0\\) also orthogonal?
 a\_0 = a\_0 \cos (0 \omega x) = a\_0 \cdot 1  = a\_0
 \end{equation}
 
----
-
 
 ### General Fourier Decomposition {#general-fourier-decomposition}
 
@@ -172,7 +170,10 @@ Here's the motivation:
     which shouldn't be discontinuous at \\(0\\) at all.
 
 
-## Fourier Series Converges with \\(L\\) Periodic Function {#fourier-series-converges-with-l-periodic-function}
+## Additional Informatino {#additional-informatino}
+
+
+### Fourier Series Converges with \\(L\\) Periodic Function {#fourier-series-converges-with-l-periodic-function}
 
 Suppose \\(f(x)\\) is an \\(L\\) periodic function with at most jump discountinuty, and \\(f'\\) continuous everywhere. Then, the associated [Fourier Series]({{< relref "KBhfourier_series.md" >}}) converges everywhere and coincides with \\(f\\) except for jump discontinuances, where the values are the average of limits from either side. This is called the [Gibbs Phenomena](#fourier-series-converges-with-l-periodic-function)
 

@@ -97,3 +97,8 @@ Recall that [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}
 \end{equation}
 
 The work of checking this is a well-formed [inner product]({{< relref "KBhinner_product.md" >}}) is left to absolutely nobody.
+
+
+### [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#inner-product--kbhinner-product-dot-md--over-complex-valued-functions" >}}) {#inner-product-over-complex-valued-functions--kbhcomplex-exponential-dot-md}
+
+see [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#inner-product--kbhinner-product-dot-md--over-complex-valued-functions" >}})

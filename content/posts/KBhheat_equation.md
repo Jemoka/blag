@@ -4,6 +4,8 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+**see also [two-dimensional heat equation]({{< relref "KBhtwo_dimensional_heat_equation.md" >}})** the following relates to 1d
+
 heat distributes by "diffusing"; this is heat \\(u\\) diffusing across a plate
 
 \begin{equation}
@@ -41,6 +43,11 @@ t = c \tau
 \end{equation}
 
 you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).
+
+
+## damping {#damping}
+
+[damped heat equation]({{< relref "KBhdamped_heat_equation.md#damped-heat-equation" >}})
 
 
 ## Solving Heat Equation {#solving-heat-equation}

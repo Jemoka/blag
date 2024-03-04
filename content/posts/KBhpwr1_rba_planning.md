@@ -27,7 +27,7 @@ Proposal: based on feedback on TIC-focus on **one case study** and isolate it we
 
 ### Increased exposure on SM results in increased support {#increased-exposure-on-sm-results-in-increased-support}
 
-“relationship between Internet use and levels of support for SSM” [is strong] [⁨Díez⁩ and ⁨Dion⁩, 2022, p. 477)
+“relationship b between Internet use and levels of support for SSM” [is strong] [⁨Díez⁩ and ⁨Dion⁩, 2022, p. 477)
 
 
 ### Economic development is correlated with strong adoption of self expression {#economic-development-is-correlated-with-strong-adoption-of-self-expression}
@@ -78,6 +78,21 @@ Proposal: based on feedback on TIC-focus on **one case study** and isolate it we
 ### expanding generics is a common attack surface in morality arguments {#expanding-generics-is-a-common-attack-surface-in-morality-arguments}
 
 “Experience has shown that it is not possible to debate the recognition of same-sex marriage without opponents making a normative connection between homosexuality and other forms of human relationships such as polygamy.” [Ball, p. 1900]
+
+
+### lack of engegement {#lack-of-engegement}
+
+"the lack of spirited political engagement ... Comparatively little is offered in support of gay and lesbian rights" (95)
+
+
+### tolerance {#tolerance}
+
+tolerance among adults toward homosexuals and toward people of different race, collected from the World Values Survey and European Values Study.31 Both cross-sectional and panel results (available on request) suggest that globalization does not generally affect these tolerance measures.32 In other words, increasing economic, social and political integration does not seem to inﬂuence the contemporary level of tolerance in the adult population,” [⁨Berggren⁩ and ⁨Nilsson⁩, 2015, p. 384]
+
+
+### power {#power}
+
+Thus, participation in itself is an expression of some degree of (enabled) power [Dahlgren, 2016, p. 26]
 
 
 ## Sub-claim Development {#sub-claim-development}
