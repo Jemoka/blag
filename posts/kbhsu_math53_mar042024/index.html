@@ -17,7 +17,7 @@ f(x) = \sum_{-\infty}^{\infty} c_{n} e^{n \omega x i}
 \end{equation}</p><p>You will note that summing \(n \in 0 &mldr; \infty\), plugging it into above, will result in summing from both \(n \in -\infty &mldr; \infty\).</p><hr><h3 id=finding-c-n>Finding \(c_{n}\)</h3><p>Recall that <a href=/posts/kbhcomplex_exponential/#complex-exponentials-are-orthonormal>complex exponentials are orthonormal</a> + <a href=/posts/kbhcomplex_exponential/#over-complex-valued-functions>inner product over complex-valued functions</a></p><p>Because most cancels except one thing, we get:</p><p>\begin{equation}
 \langle f, e^{i\omega n x} \rangle = c_{n} L
 \end{equation}</p><p>meaning:</p><p>\begin{equation}
-c_{n} = \frac{1}{L} \int_{0}^{L} f(x) e^{-i\omega n x} \dd{x}
+c_{n} = \frac{1}{L} \int_{\frac{-L}{2}}^{\frac{L}{2}} f(x) e^{-i\omega n x} \dd{x}
 \end{equation}</p><h3 id=complex-exponentials-with-sawtooth>Complex Exponentials with Sawtooth</h3><p>Consider:</p><p>\begin{equation}
 f(x) = x-n
 \end{equation}</p><p>where this function is periodic over \(n \leq x \leq n+1\), so&mdash;</p><p>\begin{equation}
