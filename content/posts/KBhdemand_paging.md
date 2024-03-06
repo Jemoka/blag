@@ -10,11 +10,6 @@ draft = false
 Every process has its own [page map](#page-map).
 
 
-## demand fetching {#demand-fetching}
-
-most modern OSes start with **no pages loaded**---load pages only when referenced
-
-
 ## demand paging {#demand-paging}
 
 Key idea: physical representation of virtual memory does **not have to be on actual memory**.
@@ -25,7 +20,9 @@ Key idea: physical representation of virtual memory does **not have to be on act
 Keep in memory the information that's being **used**, kick the rest to [swap space]({{< relref "KBhdemand_paging.md" >}})/"[paging file]({{< relref "KBhdemand_paging.md" >}})". Ideally: we have a performance of main memory and capacity of disk.
 
 
-### kind of pages {#kind-of-pages}
+### demand fetching {#demand-fetching}
+
+most modern OSes start with **no pages loaded**---load pages only when referenced; this is tempered by the type of page that's needed:
 
 1.  read only code pages (program code, doesn't change) ---
     -   do **NOT** save to swap; executable will always be there so you can just reload from disk
@@ -37,11 +34,11 @@ Keep in memory the information that's being **used**, kick the rest to [swap spa
     -   save to swap
     -   no initial content
 
-| Page Type  | Load Before Run ("Prefetch?") | Save to Swap ("Swap?") |
-|------------|-------------------------------|------------------------|
-| code       | yes                           | no (read from exe)     |
-| data       | yes                           | yes                    |
-| stack/heap | no                            | yes                    |
+| Page Type  | Need Content on First Load | Save to Swap ("Swap?") |
+|------------|----------------------------|------------------------|
+| code       | yes                        | no (read from exe)     |
+| data       | yes                        | yes                    |
+| stack/heap | no                         | yes                    |
 
 We only write to disk if its **dirty**.
 
@@ -84,10 +81,10 @@ A [page map](#page-map), to keep track of something is valid/invalid, we have to
 
 Each entry in the page:
 
-| Index | Physical Address | Writable | Present/Mapped? |
-|-------|------------------|----------|-----------------|
-| 0     | 0x2023           | 1        | 0               |
-| 1     | 0x0023           | 1        | 1               |
+| Index | Physical Address | Writable | Present/Mapped? | Last Access | Kernel |
+|-------|------------------|----------|-----------------|-------------|--------|
+| 0     | 0x2023           | 1        | 0               | 0           | 0      |
+| 1     | 0x0023           | 1        | 1               | 1           | 0      |
 
 This is, of course, very big if stored densely. Consider 36 bit page numbers, 8 byte entries, it requires \\(2^{36} \cdot  8 = 512GB\\) worth of space per process. This is sad.
 

@@ -25,6 +25,15 @@ The operating system will translate **virtual** addresses (which are 0 based for
 This is an example of [virtualization]({{< relref "KBhvirtual_memory.md" >}}).
 
 
+## OS memory {#os-memory}
+
+Whenever a process makes a **syscall**, OS will be handed virtual memory addresses. How do we resolve it?
+
+Solution: **\*every process reserves some [virtual memory]({{< relref "KBhvirtual_memory.md" >}}) for the OS**---all of these virtual addresses maps to the **SAME PHYSICAL REGION** for the OS.
+
+Then, the [page map]({{< relref "KBhdemand_paging.md#page-map" >}}) will have a **kernel bit** which marks this virtual region no read and no write.
+
+
 ## dynamic address translation {#dynamic-address-translation}
 
 The system will die if we try to do virtual mapping to physical mapping.

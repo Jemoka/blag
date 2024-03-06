@@ -120,7 +120,8 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 
 -   [virtual memory]({{< relref "KBhvirtual_memory.md" >}})
     -   [dynamic address translation]({{< relref "KBhvirtual_memory.md#dynamic-address-translation" >}})
-    -   [demand paging]({{< relref "KBhdemand_paging.md" >}})
+-   [demand paging]({{< relref "KBhdemand_paging.md" >}})
+    -   [clock algorithm]({{< relref "KBhclock_algorthium.md" >}})
 
 ---
 
