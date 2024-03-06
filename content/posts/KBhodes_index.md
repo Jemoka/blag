@@ -76,12 +76,18 @@ What we want to understand:
 -   [SU-MATH53 FEB162024]({{< relref "KBhsu_math53_feb162024.md" >}})
 
 
-### PDEs {#pdes}
+### Fourier Series {#fourier-series}
 
 -   [SU-MATH53 FEB212024]({{< relref "KBhsu_math53_feb212024.md" >}})
 -   [SU-MATH53 FEB232024]({{< relref "KBhsu_math53_feb232024.md" >}})
 -   [SU-MATH53 FEB252024]({{< relref "KBhsu_math53_feb252024.md" >}})
 -   [SU-MATH53 FEB282024]({{< relref "KBhsu_math53_feb282024.md" >}})
+-   [SU-MATH53 MAR042024]({{< relref "KBhsu_math53_mar042024.md" >}})
+
+
+### Fourier Transform {#fourier-transform}
+
+-   [SU-MATH53 MAR062024]({{< relref "KBhsu_math53_mar062024.md" >}})
 
 
 ## Midterm Sheet {#midterm-sheet}
