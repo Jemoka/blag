@@ -81,10 +81,12 @@ A [page map](#page-map), to keep track of something is valid/invalid, we have to
 
 Each entry in the page:
 
-| Index | Physical Address | Writable | Present/Mapped? | Last Access | Kernel |
-|-------|------------------|----------|-----------------|-------------|--------|
-| 0     | 0x2023           | 1        | 0               | 0           | 0      |
-| 1     | 0x0023           | 1        | 1               | 1           | 0      |
+| Index | Physical Address | Writable | Present/Mapped? | Last Access | Kernel | Dirty |
+|-------|------------------|----------|-----------------|-------------|--------|-------|
+| 0     | 0x2023           | 1        | 0               | 0           | 0      | 0     |
+| 1     | 0x0023           | 1        | 1               | 1           | 0      | 0     |
+
+**Dirty**: the content matters and it needs to be written out.
 
 This is, of course, very big if stored densely. Consider 36 bit page numbers, 8 byte entries, it requires \\(2^{36} \cdot  8 = 512GB\\) worth of space per process. This is sad.
 
