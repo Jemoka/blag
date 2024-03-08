@@ -14,6 +14,8 @@ and with Neumann Conditions:
 u_{k}(t,x) = \sum b_{k} e^{ - \frac{k^{2} \pi^{2}}{l^{2}} t } \sin \qty( \frac{k \pi x}{l})
 \end{equation}</p><p>and with <a href=/posts/kbhsu_math53_feb232024/#neumann-conditions>Neumann Conditions</a>:</p><p>\begin{equation}
 u_{k}(t,x) = \sum b_{k} e^{ - \frac{k^{2} \pi^{2}}{l^{2}} t } \cos \qty( \frac{k \pi x}{l})
+\end{equation}</p><p>with infinite boundaries:</p><p>\begin{equation}
+U(t,x) =\frac{1}{\sqrt{4 \pi \alpha t}} \int_{\mathbb{R}} f(y) e^{-\frac{(x-y)^{2}}{4\alpha t}} \dd{y}
 \end{equation}</p><p>general system:</p><p>\begin{equation}
 \begin{cases}
 A&rsquo;(t) = \lambda A(t) \\
@@ -21,7 +23,7 @@ B&rsquo;&rsquo;(x) = \lambda B(x)
 \end{cases}
 \end{equation}</p><h2 id=removing-a-constant>Removing a constant</h2><p>Consider a function:</p><p>\begin{equation}
 t = c \tau
-\end{equation}</p><p>you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).</p><h2 id=damping>damping</h2><p><a href=/posts/kbhdamped_heat_equation/#damped-heat-equation>damped heat equation</a></p><h2 id=solving-heat-equation>Solving Heat Equation</h2><p>Consider the one dimensional heat equation:</p><p>\begin{equation}
+\end{equation}</p><p>you can remove the constant by finanglisng because the constant drops out when scaled (i.e. you can just scale your results back TODO check this).</p><h2 id=damping>damping</h2><p><a href=/posts/kbhdamped_heat_equation/>damped heat equation</a></p><h2 id=solving-heat-equation>Solving Heat Equation</h2><p>Consider the one dimensional heat equation:</p><p>\begin{equation}
 \pdv{u}{t} = \pdv[2]{u}{x}
 \end{equation}</p><p>&ldquo;well posed-ness&rdquo; of to this problem requires two sets of initial conditions: one &ldquo;boundary condition&rdquo;</p><h3 id=initial-condition>Initial Condition</h3><p>Because the expression is linear by time, we need one initial condition; let&rsquo;s say its some function in \(x\):</p><p>\begin{equation}
 f_{0}(x)

@@ -1,0 +1,60 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Gaussian</title>
+<meta name=description content="The Gaussian, in general, gives:
+\begin{equation} e^{-\frac{ax^{2}}{2}} \end{equation}
+which is a Bell-Shaped curve. It&rsquo;s pretty darn important
+Heat Equation and Gaussian \begin{equation} H(t,x) = \frac{1}{\sqrt{2\pi} t}e^{-\frac{x^{2}}{2t}} \end{equation}
+You will note that \(H\) does satisfy the heat equation:
+\begin{equation} \pdv{U}{t} = \pdv[2]{U}{x} \end{equation}
+solving Heat Equation without boundary Consider the partial Fourier Transform on the \(x\) variable of the heat equation.
+\begin{equation} U(t,x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{ix\lambda} \hat{U} \qty(t,\lambda) \dd{\lambda} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Gaussian</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#heat-equation--kbhheat-equation-dot-md--and-gaussian--kbhgaussian-dot-md><a href=HAHAHUGOSHORTCODE463s1HBHB>Heat Equation</a> and <a href=HAHAHUGOSHORTCODE463s2HBHB>Gaussian</a></a><ul><li><a href=#solving-heat-equation--kbhheat-equation-dot-md--without-boundary>solving <a href=HAHAHUGOSHORTCODE463s3HBHB>Heat Equation</a> without boundary</a></li><li><a href=#closed-form-solution>closed form solution</a></li></ul></li><li><a href=#integrating-gaussian-more-generally>Integrating Gaussian, more Generally</a></li><li><a href=#integrating-gaussian>Integrating Gaussian</a></li></ul></nav></aside><main><article><div><p>The <a href=/posts/kbhgaussian/>Gaussian</a>, in general, gives:</p><p>\begin{equation}
+e^{-\frac{ax^{2}}{2}}
+\end{equation}</p><p>which is a Bell-Shaped curve. It&rsquo;s pretty darn important</p><h2 id=heat-equation--kbhheat-equation-dot-md--and-gaussian--kbhgaussian-dot-md><a href=/posts/kbhheat_equation/>Heat Equation</a> and <a href=/posts/kbhgaussian/>Gaussian</a></h2><p>\begin{equation}
+H(t,x) = \frac{1}{\sqrt{2\pi} t}e^{-\frac{x^{2}}{2t}}
+\end{equation}</p><p>You will note that \(H\) <strong>does</strong> satisfy the heat equation:</p><p>\begin{equation}
+\pdv{U}{t} = \pdv[2]{U}{x}
+\end{equation}</p><h3 id=solving-heat-equation--kbhheat-equation-dot-md--without-boundary>solving <a href=/posts/kbhheat_equation/>Heat Equation</a> without boundary</h3><p>Consider the partial <a href=/posts/kbhfourier_transform/>Fourier Transform</a> on the \(x\) variable of the heat equation.</p><p>\begin{equation}
+U(t,x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{ix\lambda} \hat{U} \qty(t,\lambda) \dd{\lambda}
+\end{equation}</p><p>Taking derivatives of this:</p><p>\begin{equation}
+\pdv{U}{t} (t,x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \pdv{\hat{U}}{t} (t,\lambda) \dd{\lambda}
+\end{equation}</p><p>and:</p><p>\begin{equation}
+\pdv[2]{U}{x} = \frac{1}{2\pi} \int_{\mathbb{R}} \qty(-\lambda^{2}) e^{ix \lambda } \hat{U}(t,\lambda) \dd{\lambda}
+\end{equation}</p><p>Because these two are equal, it gives us that:</p><p>\begin{equation}
+\hat{U}(t,\lambda) = -\lambda^{2} \hat{U}(t,\lambda)
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+\hat{U}(t,\lambda) = a(\lambda)e^{-\lambda^{2}(t)}
+\end{equation}</p><p>Finally, at:</p><p>\begin{equation}
+\hat{U}(0,\lambda) = a(\lambda) = \hat{f}(\lambda)
+\end{equation}</p><p>We see that:</p><p>\begin{equation}
+\hat{U}(t,\lambda) = \hat{f}(\lambda)e^{-\lambda^{2}(t)}
+\end{equation}</p><p>To get our original function back, we need to inverse Fourier transform it:</p><p>\begin{equation}
+U(t,x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{ix\lambda - \lambda^{2}t} \hat{f}(\lambda) \dd{\lambda}
+\end{equation}</p><h3 id=closed-form-solution>closed form solution</h3><p>\begin{equation}
+U(t,x) = \frac{1}{\sqrt{2\pi} t} \int_{\mathbb{R}} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
+\end{equation}</p><p>this is exactly:</p><p>\begin{equation}
+\int_{\mathbb{R}}f(y) H(t,(x-y)) \dd{y} = \int_{\mathbb{R}}\frac{1}{\sqrt{2\pi} t}e^{-\frac{(x-y)^{2}}{2t}} f(y) \dd{y}
+\end{equation}</p><p>We can understand this when \(t \to 0\), where there is a single, narrow, area \(1\) band which we sweep across all of \(y\). Because its thin and \(1\), its basically \(f(x)\) at each \(y\).</p><h2 id=integrating-gaussian-more-generally>Integrating Gaussian, more Generally</h2><p>Let&rsquo;s integrate:</p><p>\begin{equation}
+\int_{-\infty}^{\infty} e^{-\frac{{ax}^{2}}{2}} \dd{x}
+\end{equation}</p><p>Let&rsquo;s replace: \(s = \sqrt{a} x\)</p><p>This gives us that (based on <a href=#integrating-gaussian>Integrating Gaussian</a>):</p><p>\begin{equation}
+x = \sqrt{\frac{2\pi}{a}}
+\end{equation}</p><p>If we replace \(a\) by \(\frac{1}{t}\), we obtain:</p><p>\begin{equation}
+\frac{1}{\sqrt{2\pi}t} \int_{-\infty}^{\infty} e^{-\frac{x^{2}}{2t}} \dd{x} = 1
+\end{equation}</p><p>by rescaling \(x(a)\) function above.</p><p>If \(t\) increases, you will see that this function diffuses from a single point at \(0\) and spreading out. Notice, that over the whole real line, no matter what the \(t\) is, you always end up with integral \(1\).</p><h2 id=integrating-gaussian>Integrating Gaussian</h2><p>Let&rsquo;s integrate:</p><p>\begin{equation}
+\int_{-\infty}^{\infty} e^{-\frac{x^{2}}{2}} \dd{x}
+\end{equation}</p><hr><p>computing this is funny:</p><p>\begin{equation}
+A \cdot A = \int_{-\infty}^{\infty} e^{-\frac{x^{2}}{2}} \dd{x} \int_{-\infty}^{\infty} e^{-\frac{y^{2}}{2}} \dd{y}
+\end{equation}</p><p>We can think of this as a double integral:</p><p>\begin{equation}
+A \cdot A = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{x^{2}}{2}} e^{-\frac{y^{2}}{2}} \dd{x} \dd{y}
+\end{equation}</p><p>meaning we get:</p><p>\begin{equation}
+A \cdot A = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\frac{x^{2}+y^{2}}{2}} \dd{x} \dd{y}
+\end{equation}</p><p>Its polar time; recall:</p><p>\begin{equation}
+x^{2} + y^{2} = r^{2}
+\end{equation}</p><p>we can now go over this whole thing by converting into polar (notice the extra factor \(r\)):</p><p>\begin{equation}
+A \cdot A = \int_{0}^{2\pi} \int_{0}^{\infty} e^{-\frac{r^{2}}{2}} r \dd{r} \dd{\theta}
+\end{equation}</p><p>very suddenly we can use u sub on \(r\) to obtain:</p><p>\begin{equation}
+2\pi \int_{0}^{\infty} e^{-u} \dd{u} = 2\pi \cdot 1 = 2\pi
+\end{equation}</p><p>Meaning:</p><p>\begin{equation}
+A = \sqrt{2\pi}
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
