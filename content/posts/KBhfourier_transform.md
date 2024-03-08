@@ -44,7 +44,7 @@ Where,
 \end{equation}
 
 \begin{equation}
-f(x) = \frac{1}{2\pi} \int\_{\infty}^{\infty} e^{ix\lambda} \hat{f}(\lambda) \dd{\lambda}
+f(x) = \frac{1}{2\pi} \int\_{\infty}^{-\infty} e^{ix\lambda} \hat{f}(\lambda) \dd{\lambda}
 \end{equation}
 
 We sometimes write:
@@ -89,6 +89,66 @@ Consider also:
 \end{equation}
 
 you can show this in a similar way, by attempting to distribute a \\(\dv \lambda\\) into the Fourier transform and showing that they are equal.
+
+
+### Fourier Transform of a Gaussian {#fourier-transform-of-a-gaussian}
+
+\begin{equation}
+\mathcal{F}\qty(e^{-\frac{ax^{2}}{2}}) = \sqrt{\frac{2\pi}{a}}e^{-\frac{\lambda^{2}}{2a}}
+\end{equation}
+
+and:
+
+\begin{equation}
+\mathcal{F}^{-1}\qty(e^{-a\frac{\lambda^{2}}{2}}) = \frac{e^{-\frac{x^{2}}{2a}}}{\sqrt{2\pi a}}
+\end{equation}
+
+---
+
+we obtain this:
+
+\begin{equation}
+u = e^{-\frac{x^{2}}{2}}
+\end{equation}
+
+and:
+
+\begin{equation}
+\dv{u}{x} = -xe^{-\frac{x^{2}}{2}} = -xu
+\end{equation}
+
+and if we took a Fourier transform on both sides, we obtain:
+
+\begin{equation}
+\mathcal{F}\qty(\dv{u}{x} + xu) = 0 = i \lambda \hat{u} + i \pdv{\hat{u}} = 0
+\end{equation}
+
+and note that this is the same equation. Meaning:
+
+\begin{equation}
+\mathcal{F}\qty(\dv{u}{x} + xu) = \dv{\lambda}{x} + \lambda u
+\end{equation}
+
+this gives:
+
+\begin{equation}
+\mathcal{F}(u) = Cu
+\end{equation}
+
+which is what we see.
+
+
+### Look! A table {#look-a-table}
+
+{{< figure src="/ox-hugo/2024-03-06_21-36-14_screenshot.png" >}}
+
+where:
+
+\begin{equation}
+\Lambda\_{a}
+\end{equation}
+
+is the triangle between \\([-a, a]\\), that goes up to \\(1\\).
 
 
 ### interpreting \\(\lambda\\) {#interpreting-lambda}

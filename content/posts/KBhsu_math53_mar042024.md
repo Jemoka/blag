@@ -62,8 +62,12 @@ Because most cancels except one thing, we get:
 meaning:
 
 \begin{equation}
-c\_{n} = \frac{1}{L} \int\_{\frac{-L}{2}}^{\frac{L}{2}} f(x) e^{-i\omega n x} \dd{x}
+c\_{n} = \frac{1}{L} \int\_{0}^{L} f(x) e^{-i\omega n x} \dd{x} = \frac{1}{L} \int\_{\frac{-L}{2}}^{\frac{L}{2}} f(x) e^{-i\omega n x} \dd{x}
 \end{equation}
+
+if our function is \\(L\\) periodic.
+
+****NOTE: this integral has a NEGATIVE power vs the series has a POSITIVE power****!!
 
 
 ### Complex Exponentials with Sawtooth {#complex-exponentials-with-sawtooth}

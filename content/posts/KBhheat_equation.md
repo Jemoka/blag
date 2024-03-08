@@ -24,6 +24,12 @@ and with [Neumann Conditions]({{< relref "KBhsu_math53_feb232024.md#neumann-cond
 u\_{k}(t,x) =  \sum b\_{k} e^{ - \frac{k^{2} \pi^{2}}{l^{2}} t } \cos \qty( \frac{k \pi x}{l})
 \end{equation}
 
+with infinite boundaries:
+
+\begin{equation}
+U(t,x) =\frac{1}{\sqrt{4 \pi \alpha t}} \int\_{\mathbb{R}} f(y)  e^{-\frac{(x-y)^{2}}{4\alpha t}} \dd{y}
+\end{equation}
+
 general system:
 
 \begin{equation}
@@ -47,7 +53,7 @@ you can remove the constant by finanglisng because the constant drops out when s
 
 ## damping {#damping}
 
-[damped heat equation]({{< relref "KBhdamped_heat_equation.md#damped-heat-equation" >}})
+[damped heat equation]({{< relref "KBhdamped_heat_equation.md" >}})
 
 
 ## Solving Heat Equation {#solving-heat-equation}

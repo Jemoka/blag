@@ -136,3 +136,9 @@ DP costs \\(O(nm)\\), backtrace costs \\(O(n+m)\\).
 ### Neural Nets {#neural-nets}
 
 -   [Neural Networks]({{< relref "KBhneural_networks.md" >}})
+
+
+### The Web {#the-web}
+
+-   [Web Graph]({{< relref "KBhweb_graph.md" >}})
+-   [Social Network]({{< relref "KBhsocial_network.md" >}})
