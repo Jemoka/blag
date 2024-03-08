@@ -123,6 +123,11 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 -   [demand paging]({{< relref "KBhdemand_paging.md" >}})
     -   [clock algorithm]({{< relref "KBhclock_algorthium.md" >}})
 
+
+#### model technologies {#model-technologies}
+
+-   [modern OS]({{< relref "KBhmodern_os.md" >}})
+
 ---
 
 An example of a good time:
