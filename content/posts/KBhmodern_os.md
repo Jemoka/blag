@@ -133,7 +133,7 @@ You can set **ALL SEGMENT** of an "erase unit" to \\(1\\)
 
 #### write {#write}
 
-You can modify one "page" (which is smaller than a erase unit)
+You can modify one "page" at a time (which is smaller than a erase unit)---but you can ONLY set individual bits in the page into 0 (and not 1, which you have to do by erasing larger erasing chunks).
 
 "page" size is usually 512 bytes or 4k bytes
 
@@ -143,7 +143,7 @@ You can modify one "page" (which is smaller than a erase unit)
 **wear leveling**: make sure that the drive wears out at roughly the same rate as other parts of the drive. Moving commonly written data ("hot" data) around
 
 
-### [FTL](#flash-storage) limitations {#ftl--org459b156--limitations}
+### [FTL](#flash-storage) limitations {#ftl--org19007d5--limitations}
 
 -   no hardware access (can't optimize around flash storage)
 -   sacrifices performances for performance

@@ -43,6 +43,21 @@ which now finishes our initial conditions.
 Importantly, as we have a **SECOND ORDER** expression now, we need **two** initial conditions with initial amplitude and velocity.
 
 
+## [d'alembert]({{< relref "KBhwave_equation.md" >}})'s formula {#d-alembert--kbhwave-equation-dot-md--s-formula}
+
+The general solution to the wave equation, with:
+
+\begin{equation}
+\pdv[2]{U}{t} = c^{2} \pdv[2]{U}{x}
+\end{equation}
+
+with \\(U(0,x) = f\_0(x)\\), and \\(\pdv{U}{t}(0,x) = f\_1(x)\\) is:
+
+\begin{equation}
+U(t,x) = \frac{1}{2} \qty(f\_0 (x+ct) + f\_0 (x-ct)) + \frac{1}{2c} \int\_{x-ct}^{x+ct} f\_1(y) \dd{y}
+\end{equation}
+
+
 ## damping {#damping}
 
 see [damped wave equation]({{< relref "KBhdamped_wave_equation.md#damped-wave-equation" >}})

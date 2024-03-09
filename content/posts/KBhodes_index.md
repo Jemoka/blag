@@ -88,6 +88,8 @@ What we want to understand:
 ### Fourier Transform {#fourier-transform}
 
 -   [SU-MATH53 MAR062024]({{< relref "KBhsu_math53_mar062024.md" >}})
+-   [SU-MATH53 MAR082024]({{< relref "KBhsu_math53_mar082024.md" >}})
+-   [SU-MATH53 MAR112024]({{< relref "KBhsu_math53_mar112024.md" >}})
 
 
 ## Midterm Sheet {#midterm-sheet}

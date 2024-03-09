@@ -13,6 +13,29 @@ e^{-\frac{ax^{2}}{2}}
 which is a Bell-Shaped curve. It's pretty darn important
 
 
+## solving heat equation without boundary {#solving-heat-equation-without-boundary}
+
+for general expression:
+
+\begin{equation}
+\pdv{U}{t} = \alpha \pdv[2]{U}{x}
+\end{equation}
+
+\begin{equation}
+U(t,x) =  \frac{1}{\sqrt{4\pi \alpha t}}\int\_{\mathbb{R}} f(y) e^{-\frac{(x-y)^{2}}{4\alpha t}} \dd{y}
+\end{equation}
+
+where,
+
+\begin{equation}
+\hat{U}(t,\lambda) = \hat{f}(\lambda)e^{-\alpha t \lambda^{2}}
+\end{equation}
+
+\begin{equation}
+\hat{U}(t,\lambda) = \hat{f}(\lambda)e^{-\lambda^{2}(t)}
+\end{equation}
+
+
 ## [Heat Equation]({{< relref "KBhheat_equation.md" >}}) and [Gaussian]({{< relref "KBhgaussian.md" >}}) {#heat-equation--kbhheat-equation-dot-md--and-gaussian--kbhgaussian-dot-md}
 
 \begin{equation}
@@ -24,6 +47,21 @@ You will note that \\(H\\) **does** satisfy the heat equation:
 \begin{equation}
 \pdv{U}{t} = \pdv[2]{U}{x}
 \end{equation}
+
+
+### closed form solution {#closed-form-solution}
+
+\begin{equation}
+U(t,x) = \frac{1}{\sqrt{2\pi} t} \int\_{\mathbb{R}} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
+\end{equation}
+
+this is exactly:
+
+\begin{equation}
+\int\_{\mathbb{R}}f(y) H(t,(x-y)) \dd{y} = \int\_{\mathbb{R}}\frac{1}{\sqrt{2\pi} t}e^{-\frac{(x-y)^{2}}{2t}} f(y) \dd{y}
+\end{equation}
+
+We can understand this when \\(t \to 0\\), where there is a single, narrow, area \\(1\\) band which we sweep across all of \\(y\\). Because its thin and \\(1\\), its basically \\(f(x)\\) at each \\(y\\).
 
 
 ### solving [Heat Equation]({{< relref "KBhheat_equation.md" >}}) without boundary {#solving-heat-equation--kbhheat-equation-dot-md--without-boundary}
@@ -55,7 +93,7 @@ Because these two are equal, it gives us that:
 meaning:
 
 \begin{equation}
-\hat{U}(t,\lambda) = a(\lambda)e^{-\lambda^{2}(t)}
+\hat{U}(t,\lambda) = a(\lambda)e^{-\lambda^{2}t}
 \end{equation}
 
 Finally, at:
@@ -75,21 +113,6 @@ To get our original function back, we need to inverse Fourier transform it:
 \begin{equation}
 U(t,x) = \frac{1}{2\pi} \int\_{\mathbb{R}} e^{ix\lambda - \lambda^{2}t} \hat{f}(\lambda) \dd{\lambda}
 \end{equation}
-
-
-### closed form solution {#closed-form-solution}
-
-\begin{equation}
-U(t,x) = \frac{1}{\sqrt{2\pi} t} \int\_{\mathbb{R}} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
-\end{equation}
-
-this is exactly:
-
-\begin{equation}
-\int\_{\mathbb{R}}f(y) H(t,(x-y)) \dd{y} = \int\_{\mathbb{R}}\frac{1}{\sqrt{2\pi} t}e^{-\frac{(x-y)^{2}}{2t}} f(y) \dd{y}
-\end{equation}
-
-We can understand this when \\(t \to 0\\), where there is a single, narrow, area \\(1\\) band which we sweep across all of \\(y\\). Because its thin and \\(1\\), its basically \\(f(x)\\) at each \\(y\\).
 
 
 ## Integrating Gaussian, more Generally {#integrating-gaussian-more-generally}
