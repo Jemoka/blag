@@ -1,25 +1,56 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 MAR112024</title>
-<meta name=description content="convolution For \(f,g : \mathbb{R} \to \mathbb{C}\), we have:
-\begin{equation} (f * g)(x) = \int_{\mathbb{R}} f(x-y) g(y) \dd{y} \end{equation}
-properties of convolution \((g * f) (x) = (f * g) (x)\) \(\mathcal{F}(f * g) = \mathcal{F}(f)\mathcal{F}(g)\) motivation What if we want the Fourier Transform of \(\hat{f}(\lambda)\hat{g}(\lambda)\) in terms of one expression?
-Consider:
-\begin{equation} \hat{f}(\lambda) \hat{g}(\lambda) = \qty(\int_{\mathbb{R}} f(x) e^{-i\lambda x} \dd{x}) \qty(\int_{\mathbb{R}} g(y) e^{-i\lambda y} \dd{y}) \end{equation}
-Notice that because neither integral have dependence on the other, we can actually:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<meta name=description content="heat equation on the entire line \begin{equation} \pdv{u}{t} = \frac{1}{2} \pdv[2]{u}{x} \end{equation}
+We can try to find a:
+\begin{equation} U(0,x) = f(x) \end{equation}
+if we write:
+\begin{equation} \hat{U}(t,\lambda) = \int e^{-i x \lambda} U(t,x) \dd{x} \end{equation}
+which means we can write, with initial condtions:
+\begin{equation} \hat{U} (t, \lambda) = \hat{f}(\lambda) e^{- t \frac{\lambda^{2}}{2}} \end{equation}
+We want to reach a close form:
+\begin{equation} U (t, x) = \frac{1}{\sqrt{2\pi} t} \int_{-\infty}^{\infty} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 MAR112024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#convolution>convolution</a><ul><li><a href=#properties-of-convolution>properties of convolution</a></li><li><a href=#motivation>motivation</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=convolution>convolution</h2><p>For \(f,g : \mathbb{R} \to \mathbb{C}\), we have:</p><p>\begin{equation}
-(f * g)(x) = \int_{\mathbb{R}} f(x-y) g(y) \dd{y}
-\end{equation}</p><h3 id=properties-of-convolution>properties of convolution</h3><ul><li>\((g * f) (x) = (f * g) (x)\)</li><li>\(\mathcal{F}(f * g) = \mathcal{F}(f)\mathcal{F}(g)\)</li></ul><h3 id=motivation>motivation</h3><p>What if we want the <a href=/posts/kbhfourier_transform/>Fourier Transform</a> of \(\hat{f}(\lambda)\hat{g}(\lambda)\) in terms of one expression?</p><p>Consider:</p><p>\begin{equation}
-\hat{f}(\lambda) \hat{g}(\lambda) = \qty(\int_{\mathbb{R}} f(x) e^{-i\lambda x} \dd{x}) \qty(\int_{\mathbb{R}} g(y) e^{-i\lambda y} \dd{y})
-\end{equation}</p><p>Notice that because neither integral have dependence on the other, we can actually:</p><p>\begin{equation}
-\hat{f}(\lambda) \hat{g}(\lambda) = \int_{\mathbb{R}} \int_{\mathbb{R}} f(x) g(y) e^{-i\lambda (x+y)} \dd{x}\dd{y}
-\end{equation}</p><p>writing this as a change of variable:</p><p>\begin{equation}
-\begin{cases}
-u = x+y \\
-\dd{x} = \dd{u}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 MAR112024</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#heat-equation-on-the-entire-line>heat equation on the entire line</a><ul><li><a href=#why-does-this-make-sense>why does this make sense</a></li><li><a href=#heavyside-function>Heavyside function</a></li></ul></li><li><a href=#erf>erf</a></li><li><a href=#convolution--kbhconvolution-dot-md><a href=HAHAHUGOSHORTCODE1233s1HBHB>convolution</a></a></li></ul></nav></aside><main><article><div><h2 id=heat-equation-on-the-entire-line>heat equation on the entire line</h2><p>\begin{equation}
+\pdv{u}{t} = \frac{1}{2} \pdv[2]{u}{x}
+\end{equation}</p><p>We can try to find a:</p><p>\begin{equation}
+U(0,x) = f(x)
+\end{equation}</p><p>if we write:</p><p>\begin{equation}
+\hat{U}(t,\lambda) = \int e^{-i x \lambda} U(t,x) \dd{x}
+\end{equation}</p><p>which means we can write, with initial condtions:</p><p>\begin{equation}
+\hat{U} (t, \lambda) = \hat{f}(\lambda) e^{- t \frac{\lambda^{2}}{2}}
+\end{equation}</p><p>We want to reach a close form:</p><p>\begin{equation}
+U (t, x) = \frac{1}{\sqrt{2\pi} t} \int_{-\infty}^{\infty} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
+\end{equation}</p><hr><p>Steps: recall we ended up at</p><p>\begin{equation}
+\hat{U} (t, \lambda) = \hat{f}(\lambda) e^{- t \frac{\lambda^{2}}{2}}
+\end{equation}</p><p>Let&rsquo;s call:</p><p>\begin{equation}
+\hat{g}(\lambda) = e^{- t \frac{\lambda^{2}}{2}}
+\end{equation}</p><p>so we have:</p><p>\begin{equation}
+\hat{U} (t, \lambda) = \hat{f}(\lambda) \hat{g}(\lambda)
+\end{equation}</p><p>we can use <a href=/posts/kbhconvolution/#convolution>convolution</a> to figure \(U(t,x)\).</p><p>Recall that the Fourier transform of a Gaussian:</p><p>\begin{equation}
+\mathcal{F}\qty(e^{-\frac{ax^{2}}{2}}) = \sqrt{\frac{2\pi}{a}}e^{-\frac{\lambda^{2}}{2a}}
+\end{equation}</p><p>Let&rsquo;s first set:</p><p>\begin{equation}
+a = \frac{1}{t}
+\end{equation}</p><p>Which will give us that:</p><p>\begin{equation}
+g(x) = \frac{1}{\sqrt{2\pi t} } e^{-\frac{x^{2}}{2t}}
+\end{equation}</p><p>Meaning, with convolution:</p><p>\begin{equation}
+\mathcal{F}^{-1}(\hat{f} \hat{g}) = f * g
+\end{equation}</p><h3 id=why-does-this-make-sense>why does this make sense</h3><p>We are convolving a Gaussian against \(f(x)\). Meaning, at very small \(t\) , we are taking a very small window of size \(1\) against.</p><h3 id=heavyside-function>Heavyside function</h3><p>\begin{equation}
+f(x) = \begin{cases}
+1, x\geq 0 \\
+0, x&lt;0
 \end{cases}
-\end{equation}</p><p>we can write:</p><p>\begin{equation}
-\hat{f}(\lambda) \hat{g}(\lambda) = \int_{\mathbb{R}} \qty(\int_{\mathbb{R}} f(u-y) g(y) e^{-i\lambda (u)} \dd{u})\dd{y}
-\end{equation}</p><p>Considering they the integrands are isolated and decaying, we can swap them, pulling out also \(e^{-i\lambda(u)}\) because it has no \(y\) dependence:</p><p>\begin{equation}
-\hat{f}(\lambda) \hat{g}(\lambda) = \int_{\mathbb{R}} \qty(\int_{\mathbb{R}} f(u-y) g(y) \dd{y})e^{-i\lambda (u)} \dd{u}
-\end{equation}</p><p>Notice! The inner part is a function, and the outer part is a Fourier transform! This is similar to a <a href=/posts/kbhrandom_variables/#adding-random-variables>convolution (probability)</a>!</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p><p>This gives: if we split the room by \(x\). Recall:</p><p>\begin{equation}
+U (t, x) = \frac{1}{\sqrt{2\pi} t} \int_{-\infty}^{\infty} f(y) e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
+\end{equation}</p><p>Given our \(f\), this becomes:</p><p>\begin{equation}
+U (t, x) = \frac{1}{\sqrt{2\pi} t} \int_{0}^{\infty} e^{-\frac{(x-y)^{2}}{2t}} \dd{y}
+\end{equation}</p><p>If we change variables:</p><p>\begin{align}
+\frac{(x-y)^{2}}{2t} - \qty( \frac{x}{\sqrt{2t}} - \frac{y}{\sqrt{2t}})^{2}
+\end{align}</p><p>which means:</p><p>\begin{equation}
+z = \frac{y}{2\sqrt{t}}
+\end{equation}</p><p>\begin{equation}
+\frac{1}{\sqrt{\pi}} \int_{0}^{\infty} e^{^{-\qty(\frac{x}{\sqrt{2t}} - z)^{2}}} \dd{z}
+\end{equation}</p><p>and we will also apply:</p><p>\begin{equation}
+w = z - \frac{x}{\sqrt{2t}}
+\end{equation}</p><p>which will give:</p><p>\begin{equation}
+\frac{1}{\sqrt{\pi}} \int_{-\frac{x}{\sqrt{2t}}}^{\infty} e^{-w^{2}} \dd{w}
+\end{equation}</p><p>notice, as \(x\) increases, we are integrating more of a Gaussian, which will be exceedingly close to \(1\); as \(x\) decreases, we&rsquo;ll get closer to \(0\). And also, \(t\) smoothed \(x\) out, which means as \(t\) increases the interface between \(0\) and \(1\) becomes smoother.</p><h2 id=erf>erf</h2><p><a href=#erf>erf</a></p><h2 id=convolution--kbhconvolution-dot-md><a href=/posts/kbhconvolution/#convolution>convolution</a></h2><p>see <a href=/posts/kbhconvolution/#convolution>convolution</a></p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
