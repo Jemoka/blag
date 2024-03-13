@@ -145,3 +145,8 @@ Who/what do we trust, how do we decided, what do we do when the thrust is not up
 -   OS has extreme **scale**: high amount of trust
 -   we must trust **some** things, improtant to reflect what we trust and what we value
 -   reflect on what to do when trust is violated, how can we incorporate considerations of trust into what we build
+
+
+## Next Steps {#next-steps}
+
+{{< figure src="/ox-hugo/2024-03-13_14-03-04_screenshot.png" >}}
