@@ -40,6 +40,11 @@ CS111 leverages CS107 experience to show operating systems and how they function
 -   Modern Technologies/Niceties
 
 
+## What's Next {#what-s-next}
+
+[SU-CS111 Outline]({{< relref "KBhsu_cs111_outline.md" >}})
+
+
 ## Content {#content}
 
 
