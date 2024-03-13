@@ -128,6 +128,11 @@ how do we [trust]({{< relref "KBhprivacy.md#trust" >}}) software?
 
 -   [modern OS]({{< relref "KBhmodern_os.md" >}})
 
+
+#### trust and OS {#trust-and-os}
+
+-   [trust]({{< relref "KBhprivacy.md#trust" >}})
+
 ---
 
 An example of a good time:

@@ -21,7 +21,58 @@ draft = false
     -   "fiduciary": proxy between you and a company
     -   "should anyone who has access to personal info have a fiduciary responsibility?"
 
----
+
+## key trust questions {#key-trust-questions}
+
+-   who/what do we trust?
+-   what do we do if trust isn't upheald?
+-   how to approach building trust
+
+
+## trust {#trust}
+
+**trust**: to stop questioning the responsibility of something
+
+-   intentions
+-   dependence
+-   extensions of agency
+
+We mostly don't trust software; instead, we trust the people that developed the software.
+
+
+## accountability {#accountability}
+
+a lot of people who are accountable in this chain:
+
+-   hardware designer (intel)
+-   OS developer (iOS, ec.)
+-   app developer
+-   users
+
+
+## stakeholder {#stakeholder}
+
+1.  **direct stakeholders** (people who are operating, technicians, etc.)
+2.  **indirect stakeholders**: patients
+
+purchase = long-term support ---- what do you do to get it fixed/repaired.
+
+
+## time {#time}
+
+-   support duration
+-   obsolescence (how long is the end of support)
+    -   products/services may not be garanteed forever
+    -   problems with halting use---requires deleting entire pentagram account
+
+
+## meltdown vulnerability {#meltdown-vulnerability}
+
+**meltdown**: hardware vulnerability that allows an user program to access kernel level pages of system memory.
+
+**potential ways of fixing a vulnerability/violation of trust**:
+
+<https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf>
 
 
 ## loss of privacy {#loss-of-privacy}
