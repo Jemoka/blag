@@ -46,12 +46,12 @@ a [block](#block) is a group of one or more [sector](#disk)s, which issued to ab
 
 ### internal fragmentation {#internal-fragmentation}
 
-A file can be no less than a single [block](#block) of text. As in, the files ha
+A file can be no less than a single [block](#block) of text.
 
 
 ### external fragmentation {#external-fragmentation}
 
-"no space is available even if the space in aggregate"
+"no space is available even if the space in aggregate is available"
 
 
 ## models of storage {#models-of-storage}
