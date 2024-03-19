@@ -1,0 +1,42 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-MATH53 Practice 1 Problem 4</title>
+<meta name=description content="We have:
+\begin{equation} \pdv[2]{u}{x} + \pdv[2]{u}{y} = 0 \end{equation}
+Ignoring the boundary conditions when \(u(0,y)\), we know that we have Dirichlet boundaries in \(y\). This gives:
+\begin{equation} u(x,0) = u(x,\pi) = 0 \end{equation}
+Assuming our solution takes on the shape of \(u=X(x)Y(y)\), we obtain:
+\begin{equation} X&rsquo;&rsquo;(x)Y(y) + Y&rsquo;&rsquo;(y)X(x) = 0 \end{equation}
+by plugging in derivatives of that assumption; meaning:
+\begin{equation} X&rsquo;&rsquo;(x)Y(y) = -Y&rsquo;&rsquo;(y)X(x) \end{equation}
+This gives rise to:
+\begin{align} \frac{X&rsquo;&rsquo;(x)}{X(x)} = -\frac{Y&rsquo;&rsquo;(y)}{Y(y)} = c \end{align}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-MATH53 Practice 1 Problem 4</h1><span class=tagbox></span></div><main><article><div><p>We have:</p><p>\begin{equation}
+\pdv[2]{u}{x} + \pdv[2]{u}{y} = 0
+\end{equation}</p><p>Ignoring the boundary conditions when \(u(0,y)\), we know that we have Dirichlet boundaries in \(y\). This gives:</p><p>\begin{equation}
+u(x,0) = u(x,\pi) = 0
+\end{equation}</p><p>Assuming our solution takes on the shape of \(u=X(x)Y(y)\), we obtain:</p><p>\begin{equation}
+X&rsquo;&rsquo;(x)Y(y) + Y&rsquo;&rsquo;(y)X(x) = 0
+\end{equation}</p><p>by plugging in derivatives of that assumption; meaning:</p><p>\begin{equation}
+X&rsquo;&rsquo;(x)Y(y) = -Y&rsquo;&rsquo;(y)X(x)
+\end{equation}</p><p>This gives rise to:</p><p>\begin{align}
+\frac{X&rsquo;&rsquo;(x)}{X(x)} = -\frac{Y&rsquo;&rsquo;(y)}{Y(y)} = c
+\end{align}</p><p>[you know why \(c>0\), so let&rsquo;s skip to]</p><p>We have \(c>0\), meaning:</p><p>\begin{equation}
+X&rsquo;&rsquo;(x) = cX(x)
+\end{equation}</p><p>for some positive \(c\); this will result in a linear combination of exponentials:</p><p>\begin{equation}
+X(x) = a_{1} e^{\sqrt{c}x} + a_2 e^{-\sqrt{c}x}
+\end{equation}</p><p>this is because&mldr; try it! try solving \(X&rsquo;&rsquo;(x) = cX(x)\).</p><p>Now, <strong>importantly</strong>, let&rsquo;s declare:</p><p>\begin{equation}
+\lambda = \sqrt{c}
+\end{equation}</p><p>This gives:</p><p>\begin{equation}
+c = \lambda^{2}
+\end{equation}</p><p>Meaning, we have:</p><p>\begin{equation}
+\frac{Y&rsquo;&rsquo;(y)}{Y(y)} = -\lambda^{2}
+\end{equation}</p><p>meaning:</p><p>\begin{equation}
+Y&rsquo;&rsquo;(y) = -\lambda^{2} Y(y)
+\end{equation}</p><p>Now, given we now have a negative sign in front of our second order ODE, we can see that this falls into the sinusoid case, whereby:</p><p>\begin{equation}
+Y = a_3 \cos \qty(\lambda x) + a_4 \sin \qty(\lambda x)
+\end{equation}</p><p>Our boundary condition gives:</p><p>\begin{equation}
+Y_0 = Y_{\pi} = 0 = a_3 = 0
+\end{equation}</p><p>meaning</p><p>\begin{equation}
+Y = a_4 \sin \qty(\lambda x)
+\end{equation}</p><p>and so on. You multiply them together and all&rsquo;s well that ends well.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
