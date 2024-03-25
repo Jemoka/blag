@@ -146,7 +146,7 @@ We have two important properties:
 -   if you integrate over infinity, the result should be \\(1\\)
 
 
-#### getting exact values from [PDF](#probability-density-function) {#getting-exact-values-from-pdf--orge11a5fa}
+#### getting exact values from [PDF](#probability-density-function) {#getting-exact-values-from-pdf--orga1dfd46}
 
 There is a calculus definition for \\(P(X=x)\\), if absolutely needed:
 
@@ -206,3 +206,17 @@ P(X \leq x) = \alpha
 \end{equation}
 
 That is, the [quantile function](#quantile-function) returns the minimum value of \\(x\\) at which point a certain [cumulative distribution](#cumulative-distribution-function) value desired is achieved.
+
+
+### adding [uniform distribution](#uniform-distribution) {#adding-uniform-distribution--orgfeffb45}
+
+for \\(1 < a < 2\\)
+
+\begin{equation}
+f(X+Y = a) =
+\begin{cases}
+a, 0 < a < 1, \\\\
+2-a, 1 < a < 2, \\\\
+0, otherwise
+\end{cases}
+\end{equation}
