@@ -12,12 +12,7 @@ draft = false
 
 I end up doing a lot of research these days, and so have isolated that to a different, academic homepage.
 
-For a list of my recent research, please head to the [Research Index]({{< relref "KBhresearch_index.md" >}}).
-
-
-## Media Production Projects {#media-production-projects}
-
-I produce a lot of media (videos, podcasts, blogs, live events/talks) as a part of publicizing my work or for other purposes. For those types of projects, head on over to [Production Index]({{< relref "KBhproduction_index.md" >}}).
+**For a list of my recent research, please head to my [academic homepage]({{< relref "KBhresearch_index.md" >}}). For concision they are NOT repeated here.**
 
 
 ## Large-Scale Endeavors {#large-scale-endeavors}
@@ -34,15 +29,14 @@ An open-source task management app. [Website](https://www.condution.com/).
 -   ****Key facts****: 10,000+ users, 8-person team, [featured](https://www.almanacnews.com/print/story/2021/02/26/community-briefs) in the Bay Area almanac, praised by Asana’s head of developer relations for “open-source advocacy”
 
 
-### MODAP {#modap}
+### Simon {#simon}
 
-A R&amp;D team for fireline safety during emergency fires. [Repository](https://github.com/MODAP/stack).
+Augmenting the functionality of large-language-models with Elastic. [Repository](https://github.com/shabang-systems/simon).
 
-****Motivation****: a friend approached me with an opportunity to help our local community, especially with the increased influx of fires.
+****Motivation****: LLMs have become more and more prominent, and frameworks like ReAct is finally mature enough to produce coherent, well reasoned responses.
 
--   ****Role****: Team Lead
--   ****Technologies****: Rust, Torch, ARM, electronics (i2C, UART, messaging protocols, etc.)
--   ****Key facts****: coordinated 5 engineers in developing new technology, supported by Dr. Robert G. Gann, Deputy Director, Center of Excellence for Advanced Technology Aerial Firefighting at the state of Colorado as well as Captain Mason of CalFire
+-   ****Role****: Author
+-   ****Technologies****: Huggingface, GPT-3.5, ElasticSearch
 
 
 ### CMU [batchalign]({{< relref "KBhbatchalign.md" >}}) {#cmu-batchalign--kbhbatchalign-dot-md}
@@ -54,6 +48,17 @@ A pipeline for the automated preparation of annotated CHAT transcripts from raw 
 -   ****Role****: Author
 -   ****Technologies****: Torch, Huggingface, NLTK, CLAN, computational linguistics
 -   ****Key facts****: work developed with and maintained under Prof. Brian MacWhinney at CMU's psycolinguistics department.
+
+
+### SSI Polar Rover {#ssi-polar-rover}
+
+We are sending a Rover to Antarctica! [Controller Repository](https://github.com/stanford-ssi/powertron), [Guidance and Nav Repository](https://github.com/stanford-ssi/PX4-Autopilot).
+
+****Motivation****: rovers are cool, and we can do lots of search and planning with it.
+
+-   ****Role****: Team Lead
+-   ****Technologies****: PX4, Search and Planning (Classic AI), Kalman Filters, Embedded Systems, Teensy Microcontroller
+-   ****Key facts****: work sponsored by Stanford research and are on track to be tested in Antarctica in Summer 2025
 
 
 ### AIBridge {#aibridge}
@@ -68,16 +73,6 @@ A bootcamp for non-CS students in data science. [Website]({{< relref "KBhaibridg
 
 
 ## Full-Stack Projects {#full-stack-projects}
-
-
-### Simon {#simon}
-
-Augmenting the functionality of large-language-models with Elastic. [Repository](https://github.com/shabang-systems/simon).
-
-****Motivation****: LLMs have become more and more prominent, and frameworks like ReAct is finally mature enough to produce coherent, well reasoned responses.
-
--   ****Role****: Author
--   ****Technologies****: Huggingface, GPT-3.5, ElasticSearch
 
 
 ### tractotato {#tractotato}
@@ -118,6 +113,17 @@ Library for building lightweight native apps using web tech. [Repo](https://gith
 
 -   ****Role****: author
 -   ****Technologies****: C++, GTK
+
+
+### MODAP {#modap}
+
+A R&amp;D team for fireline safety during emergency fires. [Repository](https://github.com/MODAP/stack).
+
+****Motivation****: a friend approached me with an opportunity to help our local community, especially with the increased influx of fires.
+
+-   ****Role****: Team Lead
+-   ****Technologies****: Rust, Torch, ARM, electronics (i2C, UART, messaging protocols, etc.)
+-   ****Key facts****: coordinated 5 engineers in developing new technology, supported by Dr. Robert G. Gann, Deputy Director, Center of Excellence for Advanced Technology Aerial Firefighting at the state of Colorado as well as Captain Mason of CalFire
 
 
 ## OS/Driver Development {#os-driver-development}
