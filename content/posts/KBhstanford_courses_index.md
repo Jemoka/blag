@@ -21,6 +21,14 @@ draft = false
 -   [Language Information Index]({{< relref "KBhlanguage_information_index.md" >}})
 
 
+## Stanford UG Y1, Spr {#stanford-ug-y1-spr}
+
+-   [Optimization Index]({{< relref "KBhoptimization_index.md" >}})
+-   [Rust Systems Index]({{< relref "KBhrust_systems_index.md" >}})
+-   [Signal Processing Index]({{< relref "KBhsignal_processing_index.md" >}})
+-   [NLP Index]({{< relref "KBhnlp_index.md" >}})
+
+
 ## UG Other Duties {#ug-other-duties}
 
 Here are a list of random indicies which may end up being helpful!
