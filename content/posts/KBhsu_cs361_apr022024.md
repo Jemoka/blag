@@ -37,4 +37,4 @@ x\_1 + x\_2 \leq 1
 \end{cases}
 \end{align}
 
-You can then shade out the areas of the entire problem space which doesn't satisfy the constraints, individually.
+You can then shade out the areas of the entire problem space which doesn't satisfy the consraints, individually.
