@@ -103,6 +103,8 @@ Meaning:
 \pdv{\log p(o|c)}{v\_{c}} = u\_{0} - \sum\_{x\_{j}}^{}\frac{\exp \qty(u\_{x} \cdot v\_{c}) }{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}  u\_{x}
 \end{equation}
 
+The right side is just the softmax probabilty of each \\(u\_{x}\\) times \\(u\_{x}\\), meaning its \\(\mathbb{E}[u\_{x}]\\); so, this loss just minimizes "error between output and expectation".
+
 
 ## properties {#properties}
 
