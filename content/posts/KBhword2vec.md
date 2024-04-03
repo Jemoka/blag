@@ -8,9 +8,82 @@ we will train a classifier on a binary prediction task: "is context words \\(c\_
 
 We estimate the probability that \\(w\_{0}\\) occurs within this window based on the product of the probabilities of the similarity of the embeddings between each context word and the target word.
 
-To turn [cosine similarity]({{< relref "KBhranked_information_retrieval.md#cosine-similarity" >}}) [dot product]({{< relref "KBhdot_product.md" >}})s into probability, we squish the [dot product]({{< relref "KBhdot_product.md" >}}) via the [sigmoid]({{< relref "KBhsigmoid.md" >}}) function.
+-   we have a corpus of text
+-   each word is represented by a [vector]({{< relref "KBhvector.md" >}})
+-   go through each position \\(t\\) in the text, which has a center word \\(c\\) and set of context words \\(o \in O\\)
+-   use similarity of word vectors \\(c\\) and \\(o\\) to calculate \\(P(o|c)\\)
 
-importantly, we don't actually use these results. we simply take the resulting embeddings.
+Meaning, we want to devise a model which can predict high probabilities \\(P(w\_{t-n}|w\_{t})\\) for small \\(n\\) and low probabilities for large \\(n\\)
+
+
+## Likelihood {#likelihood}
+
+If we wrote the above out:
+
+\begin{equation}
+L(\theta) = \prod\_{t=1}^{T} \prod\_{-m \leq j \leq m, j\neq 0}^{} p\_{\theta}(w\_{t+j} | w\_{t})
+\end{equation}
+
+
+### Calculating \\(p\_{\theta}\\) {#calculating-p-theta}
+
+We are going to use **TWO VECTORS** for each word:
+
+-   \\(v\_{w}\\) when \\(w\\) is the center word
+-   and \\(u\_{w}\\) when \\(w\\) is a context words
+
+These vectors are the **only parameters** of our system.
+
+Therefore:
+
+\begin{equation}
+p(o|c) = \frac{\exp\qty(u\_{o} \cdot v\_{c})}{ \sum\_{w \in V}^{} \exp \qty(u\_{w} \cdot v\_{c})}
+\end{equation}
+
+-   exponentiation makes anything positive
+-   normalize over the entire vocabulary
+
+this is a [softmax]({{< relref "KBhsoftmax.md" >}}) operation.
+
+
+## Objective Function {#objective-function}
+
+But we perform:
+
+1.  descent
+2.  and log on each value to prevent underflow
+3.  and average why not
+
+\begin{equation}
+J(\theta) = \frac{1}{T} \log L(\theta) = -\frac{1}{T} \sum\_{t=1}^{T} \sum\_{-m \leq j \leq  m, j\neq 0}^{} \log p\_{\theta}\qty(w\_{t+j} | w\_{t})
+\end{equation}
+
+Recall that:
+
+\begin{equation}
+p(o|c) = \frac{\exp\qty(u\_{o} \cdot v\_{c})}{ \sum\_{w \in V}^{} \exp \qty(u\_{w} \cdot v\_{c})}
+\end{equation}
+
+Because we need to minimize this, we need the derivative of it by the parameter:
+
+\begin{align}
+\pdv{J}{w\_{t}} &= -\frac{1}{T} \sum\_{t=1}^{T} \sum\_{-m \leq j \leq  m, j\neq 0}^{} \pdv w\_{t} \log p\_{\theta}\qty(w\_{t+j} | w\_{t})
+\end{align}
+
+meaning, we now can just calculate the inner part:
+
+\begin{equation}
+\pdv{\log p(o|c)}{v\_{c}} = \pdv v\_{c} \log \exp u\_{o} \cdot v\_{c} - \pdv v\_{c} \log \sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})
+\end{equation}
+
+Look! The first part is a log of an exp, which cancels out, so the derivative is just \\(u\_{0}\\).
+
+For the right part, by the chain rule:
+
+\begin{align}
+\pdv v\_{c} \log \sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c}) &=  \frac{\sum\_{x\_{j}}^{} \pdv v\_{c}\exp \qty(u\_{x} \cdot v\_{c}) }{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}  \\\\
+&= \frac{\sum\_{x\_{j}}^{}\exp \qty(u\_{x} \cdot v\_{c}) u\_{x}}{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}
+\end{align}
 
 
 ## properties {#properties}
