@@ -85,6 +85,24 @@ For the right part, by the chain rule:
 &= \frac{\sum\_{x\_{j}}^{}\exp \qty(u\_{x} \cdot v\_{c}) u\_{x}}{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}
 \end{align}
 
+Combining this whole thing, we have:
+
+\begin{equation}
+\pdv{\log p(o|c)}{v\_{c}} = u\_{0} - \frac{\sum\_{x\_{j}}^{}\exp \qty(u\_{x} \cdot v\_{c}) u\_{x}}{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}
+\end{equation}
+
+Rewriting this slightly:
+
+\begin{equation}
+\pdv{\log p(o|c)}{v\_{c}} = u\_{0} - \sum\_{x\_{j}}^{}\frac{\exp \qty(u\_{x} \cdot v\_{c}) }{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}  u\_{x}
+\end{equation}
+
+Meaning:
+
+\begin{equation}
+\pdv{\log p(o|c)}{v\_{c}} = u\_{0} - \sum\_{x\_{j}}^{}\frac{\exp \qty(u\_{x} \cdot v\_{c}) }{\sum\_{w\_{j}}^{} \exp \qty(u\_{w} \cdot v\_{c})}  u\_{x}
+\end{equation}
+
 
 ## properties {#properties}
 
