@@ -57,7 +57,7 @@ This is pretty much useless.
 
 ### localist representation {#localist-representation}
 
-a [localist](#localist-representation) representation means that each word appears on an individual dimension.
+a [localist](#localist-representation) representation means that each activation represents exactly one meaning; i.e. "one-hot".
 
 
 #### one-hot representation {#one-hot-representation}
