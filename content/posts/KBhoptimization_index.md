@@ -55,6 +55,30 @@ aa222.stanford.edu
 ## Lectures {#lectures}
 
 
-## Basic, Single-Objective Optimization {#basic-single-objective-optimization}
+## Derivatives, Bracketing, Descent, and Approximations {#derivatives-bracketing-descent-and-approximations}
+
+Topics: [Derivatives, Bracking, Descent, and Approximation]({{< relref "KBhderivatives_descent_and_approximation.md" >}})
+
+
+### Lectures {#lectures}
 
 -   [SU-CS361 APR022024]({{< relref "KBhsu_cs361_apr022024.md" >}})
+-   [SU-CS361 APR042024]({{< relref "KBhsu_cs361_apr042024.md" >}})
+
+
+## Direct Optimization {#direct-optimization}
+
+
+## Stochastic, Population, and Expressions {#stochastic-population-and-expressions}
+
+
+## Constraints {#constraints}
+
+
+## Sampling and Surrogates {#sampling-and-surrogates}
+
+
+## Optimization Under Uncertainty {#optimization-under-uncertainty}
+
+
+## What's Next {#what-s-next}
