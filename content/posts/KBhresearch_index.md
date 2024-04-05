@@ -16,9 +16,10 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 <div style="margin: 10px 0">
 <span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
-<span style="font-weight: 500">Feb. 26-27, 24'</span> <span>AAAI 2024! See y'all in Vancouver!</span>
+<span style="font-weight: 500">Mar. 15, 24'</span> <span>TalkBank's Mandarin <a href="https://huggingface.co/talkbank/CHATUtterance-zh_CN">utterance segmentation model</a> released. </span>
+<span style="font-weight: 500">Feb. 29, 24'</span> <span>Released Stanza <a href="https://github.com/stanfordnlp/stanza/releases/tag/v1.8.1">1.8.1</a> with PEFT support! </span>
+<span style="font-weight: 500">Feb. 26-27, 24'</span> <span>AAAI 2024. Vancouver was fun!</span>
 <span style="font-weight: 500">Dec. 15, 23'</span> <span>Paper (NACC) Accepted by W3PHAI-24</span>
-<span style="font-weight: 500">Dec. 3, 23'</span> <span>Released <a  target="_top"  target="_top" href="https://huggingface.co/talkbank/CHATUtterance-en">TalkBank Utterance Model</a></span>
 <span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a  target="_top" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/"  target="_top">Published</a> by JSLHR</span>
 </div>
 </div>
