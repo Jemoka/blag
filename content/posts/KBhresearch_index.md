@@ -8,7 +8,7 @@ layout = "blank"
 
 <h1 style="display:inline-block"> 👋 Howdy, I'm Houjun Liu! </h1>
 
-I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). I'm interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****, specifically, in making large models solve important problems through 1) building better tools for language and speech processing to democratize state-of-the-art research 2) designing improved algorithmic approaches to language model training + decoding to improve performance and 3) exploring their applications.
+I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). I'm broadly interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****; recently, I've been digging into 1) building better tools for language and speech processing make state-of-the-art classic NLP tasks accessible and useful 2) designing improved algorithmic approaches to large language model training + decoding to improve multi-hop decisions and conversation tracking and 3) exploring the applications of these models on various applied domains such as dementia and emergency medicine.
 
 Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. Check out ****[my projects](#projects)**** below. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
