@@ -16,6 +16,11 @@ We estimate the probability that \\(w\_{0}\\) occurs within this window based on
 Meaning, we want to devise a model which can predict high probabilities \\(P(w\_{t-n}|w\_{t})\\) for small \\(n\\) and low probabilities for large \\(n\\)
 
 
+## Word2Vec is a [Bag of Words]({{< relref "KBhbag_of_words.md" >}}) model! {#word2vec-is-a-bag-of-words--kbhbag-of-words-dot-md--model}
+
+This is a [Bag of Words]({{< relref "KBhbag_of_words.md" >}}) model as our training does **not** learn any information relating to the ordering and structure between words.
+
+
 ## Likelihood {#likelihood}
 
 If we wrote the above out:
@@ -32,7 +37,7 @@ We are going to use **TWO VECTORS** for each word:
 -   \\(v\_{w}\\) when \\(w\\) is the center word
 -   and \\(u\_{w}\\) when \\(w\\) is a context words
 
-These vectors are the **only parameters** of our system.
+These vectors are the **only parameters** of our system. We actually do this only to make the math easy; to get the "word vector" for a word by averaging.
 
 Therefore:
 
@@ -106,6 +111,22 @@ Meaning:
 The right side is just the softmax probabilty of each \\(u\_{x}\\) times \\(u\_{x}\\), meaning its \\(\mathbb{E}[u\_{x}]\\); so, this loss just minimizes "error between output and expectation".
 
 
+## Word2Vec Variants {#word2vec-variants}
+
+
+### Model {#model}
+
+-   [skip-gram](#skip-gram-with-negative-sampling)---predict probability of being side words \\(P(o|c)\\)
+-   CBOW---predict probability of being center word given side words
+
+
+### Objective {#objective}
+
+-   naive softmax (above)
+-   hierachichar softmax
+-   [negative sampling]({{< relref "KBhnegative_sampling.md" >}}) (see also [skip-gram with negative sampling](#skip-gram-with-negative-sampling))
+
+
 ## properties {#properties}
 
 
@@ -135,11 +156,11 @@ embeddings bake in existing biases, which leads to bias in hiring practices, etc
 
 the mechanism for training the embedding:
 
--   select some \\(k\\), which is the multiplier of the negative examples (if \\(k=2\\), ever one positive example will be matched with 2 negative examples)
+-   select some \\(k\\), which is the count of negative examples (if \\(k=2\\), every one positive example will be matched with 2 negative examples)
 -   sample a target word, and generate positive samples paired by words in its immediate window
 -   sample window size times \\(k\\) negative examples, where the noise words are chosen explicitly as not being near our target word, and weighted based on unigram frequency
 
-for each paired training sample, we minimize the loss via [cross entropy loss]({{< relref "KBhcross_entropy_loss.md" >}}):
+for each paired training sample, we minimize the loss via binary [cross entropy loss]({{< relref "KBhcross_entropy_loss.md" >}}):
 
 \begin{equation}
 L\_{CE} = -\qty[ \log (\sigma(c\_{pos} \cdot w)) + \sum\_{i=1}^{k} \log \sigma\qty(-c\_{neg} \cdot w)]
@@ -150,3 +171,20 @@ recall that:
 \begin{equation}
 \pdv{L\_{CE}}{w} = \qty[\sigma(c\_{pos} \cdot w) -1]c\_{pos} + \sum\_{i=1}^{k} \qty[\sigma(c\_{neg\_{i}}\cdot w)]c\_{neg\_{i}}
 \end{equation}
+
+Importantly, because the [softmax]({{< relref "KBhsoftmax.md" >}}) function is symmetric \\(\sigma(-x) = -\sigma(x)\\). So really our objective is:
+
+\begin{equation}
+L\_{CE} = -\qty[ \log (\sigma(c\_{pos} \cdot w)) - \sum\_{i=1}^{k} \log \sigma\qty(c\_{neg} \cdot w)]
+\end{equation}
+
+
+### how to sample \\(k\\) {#how-to-sample-k}
+
+We actually sample from:
+
+\begin{equation}
+P(w) \sim U(w)^{3/4}/Z
+\end{equation}
+
+to give the less common words slightly higher probability.

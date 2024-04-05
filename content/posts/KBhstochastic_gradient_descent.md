@@ -12,6 +12,14 @@ this terminates when theta differences becomes small, or when progress halts: li
 
 we update the weights in SGD by taking a **single random sample** and moving weights to that direction.
 
+```python
+while True:
+    subset = sample_window(corpus)
+    theta = theta - lr*subset.grad()
+```
+
+In theory this is an _approximation_ of [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >}}); however, Neural Networks works actually BETTER when you jiggle a bit.
+
 
 ## batch gradient descent {#batch-gradient-descent}
 

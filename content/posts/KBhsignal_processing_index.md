@@ -41,4 +41,10 @@ draft = false
 
 ## Lectures {#lectures}
 
+
+### Unit 1 {#unit-1}
+
+[compression]({{< relref "KBhcompression.md" >}})
+
 -   [SU-ENGR76 APR022024]({{< relref "KBhsu_engr76_apr0202024.md" >}})
+-   [SU-ENGR76 APR042024]({{< relref "KBhsu_engr76_apr042024.md" >}})

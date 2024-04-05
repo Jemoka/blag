@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-A [random variable]({{< relref "KBhrandom_variables.md" >}}) is a variable that has a value, but there are [uncertainty]({{< relref "KBhuncertainty.md" >}}) with respect to what that value is.
+A [random variable]({{< relref "KBhrandom_variables.md" >}}) is a quantity that can take on different values, whereby there is a separate probability associated with each value:
 
 -   **discrete**: finite number of values
 -   **continuous**: infinitely many possible values
