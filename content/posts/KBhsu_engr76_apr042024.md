@@ -22,8 +22,9 @@ H(X) = \sum\_{x \in X}^{} s(P(X=x)) P(X=x)
 
 #### properties of entropy {#properties-of-entropy}
 
--   \\(H(x) \geq 0\\)
--   for \\(M \sim CatUni[1, ..., n]\\), \\(p\_{i} = \frac{1}{|M|} = \frac{1}{n}\\), and \\(H(M) = \log\_{2} |M| = \log\_{2} n\\)
+-   **entropy is positive**: \\(H(x) \geq 0\\)
+-   **entropy of uniform**: for \\(M \sim CatUni[1, ..., n]\\), \\(p\_{i} = \frac{1}{|M|} = \frac{1}{n}\\), and \\(H(M) = \log\_{2} |M| = \log\_{2} n\\)
+-   **entropy is bounded**: \\(0 \leq H(X) \leq H(M)\\) where \\(|X| = |M|\\) and \\(M \sim CatUni[1 ... n]\\) ("uniform distribution has the highest entropy"); we will reach the upper bound IFF \\(X\\) is uniformly distributed.
 
 
 #### binary entropy function {#binary-entropy-function}

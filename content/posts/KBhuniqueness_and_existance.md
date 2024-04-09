@@ -27,13 +27,15 @@ A function is [continuous](#continuity) if and only if:
 
 Stronger statement.
 
+{{< figure src="/ox-hugo/2024-04-09_09-18-47_screenshot.png" >}}
+
 The [Lipschitz Condition](#lipschitz-condition) is a stronger test of [Continuity](#continuity) such that:
 
 \begin{equation}
 || F(t,x)-F(t,y)||  \leq L|| x- y||
 \end{equation}
 
-for all \\(t \in I\\), \\(x,y \in \omega\\), with \\(L \in  (0,\infty)\\) is a [Lipschitz Condition](#lipschitz-condition) in the **dependent** variable \\(x\\).
+for all \\(t \in I\\), \\(x,y \in \omega\\), with \\(L \in  (0,\infty)\\), named "[Lipschitz Constant](#lipschitz-condition)", in the **dependent** variable \\(x\\).
 
 Reshaping this into linear one-dimensional function, we have that:
 

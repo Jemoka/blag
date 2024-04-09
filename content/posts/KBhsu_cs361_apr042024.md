@@ -173,4 +173,4 @@ Say you wanted to evaluate your sequence a finite number of times to maximally l
 
 #### Golden Section Search {#golden-section-search}
 
-Shrink instead by golden ratio, which is constast.
+Shrink instead by golden ratio, which is constant.
