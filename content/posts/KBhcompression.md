@@ -18,6 +18,12 @@ draft = false
         -   [joint entropy of independent events]({{< relref "KBhsu_engr76_apr092024.md#joint-entropy-of-independent-events" >}})
 
 
-## source {#source}
+## [Source Coding]({{< relref "KBhsu_engr76_apr092024.md#source-coding" >}}) {#source-coding--kbhsu-engr76-apr092024-dot-md}
 
--   [Source Coding]({{< relref "KBhsu_engr76_apr092024.md#source-coding" >}})
+-   [non-singular code]({{< relref "KBhsu_engr76_apr092024.md#non-singular-code" >}})
+-   [uniquely decodeable]({{< relref "KBhsu_engr76_apr092024.md#uniquely-decodeable" >}})
+-   [Prefix-Free]({{< relref "KBhsu_engr76_apr092024.md#prefix-free" >}}) code, which is [uniquely decodeable]({{< relref "KBhsu_engr76_apr092024.md#uniquely-decodeable" >}}) and [instantaneously decodable]({{< relref "KBhsu_engr76_apr092024.md#instantaneously-decodable" >}})
+
+<!--listend-->
+
+-   [Average Codeword Length]({{< relref "KBhsu_engr76_apr092024.md#average-codeword-length" >}})
