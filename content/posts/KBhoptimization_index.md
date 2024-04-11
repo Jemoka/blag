@@ -64,6 +64,8 @@ Topics: [Derivatives, Bracking, Descent, and Approximation]({{< relref "KBhderiv
 
 -   [SU-CS361 APR022024]({{< relref "KBhsu_cs361_apr022024.md" >}})
 -   [SU-CS361 APR042024]({{< relref "KBhsu_cs361_apr042024.md" >}})
+-   [SU-CS361 APR092024]({{< relref "KBhsu_cs361_apr092024.md" >}})
+-   [SU-CS361 APR112024]({{< relref "KBhsu_cs361_apr112024.md" >}})
 
 
 ## Direct Optimization {#direct-optimization}
