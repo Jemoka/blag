@@ -41,7 +41,7 @@ In industry, I lead the development of [Condution](https://www.condution.com/), 
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">UC Davis Health (2023)</div>
 <div style="font-weight: 500">A Transformer Approach to Congnitive Impairment Classification and Prediction</div>
 <div><u>Liu, H.</u>, Weakley, A.M., Zhang, J., Liu, X.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://docs.google.com/presentation/d/1J5WUGUXbVlG5Fl4cQdu6FuNVFTPB2NTW/edit?usp=sharing&ouid=112528726606349722398&rtpof=true&sd=true">Talk@NACC</a></span><span class="tag">In Press@W3PHAI-24 at AAAI</span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://docs.google.com/presentation/d/1J5WUGUXbVlG5Fl4cQdu6FuNVFTPB2NTW/edit?usp=sharing&ouid=112528726606349722398&rtpof=true&sd=true">Talk@NACC</a></span><span class="tag">Talk@W3PHAI-24 at AAAI</span><span class="tag">In Press@LWW Alzheimer's Disease</span></div>
 </div>
 
 <div style="padding: 15px 0">
