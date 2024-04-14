@@ -26,3 +26,4 @@ draft = false
 
 -   [SU-CS224N APR022024]({{< relref "KBhsu_cs224n_apr022024.md" >}})
 -   [SU-CS224N APR092024]({{< relref "KBhsu_cs224n_apr092024.md" >}})
+-   [SU-CS224N APR112024]({{< relref "KBhsu_cs224n_apr112024.md" >}})
