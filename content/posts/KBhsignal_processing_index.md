@@ -50,3 +50,4 @@ draft = false
 -   [SU-ENGR76 APR042024]({{< relref "KBhsu_engr76_apr042024.md" >}})
 -   [SU-ENGR76 APR092024]({{< relref "KBhsu_engr76_apr092024.md" >}})
 -   [SU-ENGR76 APR112024]({{< relref "KBhsu_engr76_apr112024.md" >}})
+-   [SU-ENGR76 APR162024]({{< relref "KBhsu_engr76_apr162024.md" >}})

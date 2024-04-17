@@ -7,13 +7,6 @@ draft = false
 [Complex System]({{< relref "KBhcomplex_system.md" >}})
 
 
-## Language Model {#language-model}
-
-A [Language Model](#language-model) is a large neural network trained to predict the **next token** given some context.
-
-"Language models can discriminate behavior that they can't reliably generate."
-
-
 ## Coherence {#coherence}
 
 **Generative REVOLUTION**
@@ -98,7 +91,7 @@ Why aren't models controllable
 
 ### In-Context Learning {#in-context-learning}
 
-If we show the model some context which has example input output pairs, it can output. ([Language Model](#language-model) model are few shot learners)
+If we show the model some context which has example input output pairs, it can output. (model are few shot learners)
 
 
 #### Correct Scoring {#correct-scoring}

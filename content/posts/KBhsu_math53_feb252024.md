@@ -15,7 +15,7 @@ f(x) = a\_0 + \sum\_{k=1}^{\infty} a\_{k} \cos \qty( \frac{2\pi k}{L} x) + \sum\
 
 ## L-periodicity {#l-periodicity}
 
-A function is $L$-periodic if \\(f(x+L) = f(x)\\). In that case, it has period \\(L\\).
+A function is $L$-periodic if \\(f(x+L) = f(x)\\) for nonzero \\(L\\) for all \\(x\\). The **smallest** \\(L > 0\\)  which satisfies this property is called the [period](#l-periodicity) of the function.
 
 $L$-periodicity is preserved across...
 
@@ -45,6 +45,6 @@ h(x+L) = af(x+L) + bg(x+L) = af(x) + bg(x) = h(x)
 \end{equation}
 
 
-## [Fourier Series]({{< relref "KBhfourier_series.md#fourier-series" >}}) {#fourier-series--kbhfourier-series-dot-md}
+## [Fourier Series]({{< relref "KBhfourier_series.md" >}}) {#fourier-series--kbhfourier-series-dot-md}
 
-see [Fourier Series]({{< relref "KBhfourier_series.md#fourier-series" >}})
+see [Fourier Series]({{< relref "KBhfourier_series.md" >}})

@@ -64,7 +64,7 @@ a sequence being [uniquely decodeable](#uniquely-decodeable) means that any poss
 One simple scheme would be the [Prefix-Free](#prefix-free) scheme, which is [uniquely decodeable](#uniquely-decodeable) and [instantaneously decodable](#instantaneously-decodable). Not all [uniquely decodeable](#uniquely-decodeable) codes need to be [Prefix-Free](#prefix-free).
 
 
-#### every [uniquely decodeable](#uniquely-decodeable) sequence is a [non-singular code](#non-singular-code) {#every-uniquely-decodeable--org8c4287e--sequence-is-a-non-singular-code--org099f191}
+#### every [uniquely decodeable](#uniquely-decodeable) sequence is a [non-singular code](#non-singular-code) {#every-uniquely-decodeable--orgdd46e21--sequence-is-a-non-singular-code--org803d6f6}
 
 Suppose an encoding is [uniquely decodeable](#uniquely-decodeable). We desire that it is also [non-singular code](#non-singular-code). Consider sequences of length 1, each with one symbol in it. Because the encoding is [uniquely decodeable](#uniquely-decodeable), each encoding of these sequences is unique. Now we can assign that sequence encoding to the corresponding symbol.
 
@@ -185,6 +185,17 @@ For a [Block Coding](#block-coding) scheme with block size \\(n\\), we have:
 \begin{equation}
 H(X\_j) \leq \frac{\bar{\ell}}{n} \leq H(X\_j) + \frac{1}{n}
 \end{equation}
+
+
+#### Entropy Rate of the Source {#entropy-rate-of-the-source}
+
+An alternate formulation, whenever we are not drawing IID \\(X\_{j}\\), is that:
+
+\begin{equation}
+\lim\_{n \to \infty} \frac{H(X\_1, \dots, X\_{n})}{n} = \frac{\bar{\ell}\_{n}}{n}
+\end{equation}
+
+which is the average number of bits per symbol. This is call the "[Entropy Rate of the Source](#entropy-rate-of-the-source)". Most things in the world is not an [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}}) sequence, so this makes sense.
 
 
 #### Proof Sketch {#proof-sketch}
