@@ -73,6 +73,7 @@ Topics: [Derivatives, Bracking, Descent, and Approximation]({{< relref "KBhderiv
 Topics: [SU-CS361 Stochastic Methods and Constraints Index]({{< relref "KBhsu_cs361_stochastic_methods_and_constraints_index.md" >}})
 
 -   [SU-CS361 APR162024]({{< relref "KBhsu_cs361_apr162024.md" >}})
+-   [SU-CS361 APR182024]({{< relref "KBhsu_cs361_apr182024.md" >}})
 
 
 ## Direct Optimization {#direct-optimization}

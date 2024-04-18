@@ -28,7 +28,7 @@ For instance, in maximization, we can end up with sawtooths like:
 
 ## Bisection Method {#bisection-method}
 
-bisect \\(f'(x)\\) by sampling points in the middle of the "valid interval" until you find t
+bisect \\(f'(x)\\) by sampling points in the middle of the "valid interval" until you find the point which gives \\(f'(x) = 0\\).
 
 
 ## Local Descent {#local-descent}
