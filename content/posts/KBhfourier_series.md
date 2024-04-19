@@ -178,6 +178,11 @@ Here's the motivation:
 Suppose \\(f(x)\\) is an \\(L\\) periodic function with at most jump discountinuty, and \\(f'\\) continuous everywhere. Then, the associated [Fourier Series]({{< relref "KBhfourier_series.md" >}}) converges everywhere and coincides with \\(f\\) except for jump discontinuances, where the values are the average of limits from either side. This is called the [Gibbs Phenomena](#fourier-series-converges-with-l-periodic-function)
 
 
+### shifted sum of sinusoids {#shifted-sum-of-sinusoids}
+
+see [Fourier Series as exactly a shifted sum of sinusoids]({{< relref "KBhsu_engr76_apr182024.md#fourier-series--kbhfourier-series-dot-md--as-exactly-a-shifted-sum-of-sinusoids" >}})
+
+
 ## Background {#background}
 
 

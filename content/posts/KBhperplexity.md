@@ -24,11 +24,14 @@ To address this, we normalize by number of words.
 PP (W) = P(w\_1 w\_2 \dots w\_{n})^{-\frac{1}{N}}
 \end{equation}
 
-Specifically,
+We can also express it in terms of log likelyhood
 
-\begin{equation}
-PP (W) = N \sqrt{\frac{1}{P(w\_1, \dots w\_{n)}}}
-\end{equation}
+\begin{align}
+PP (W) &= \prod\_{t=1}^{T} \qty(\frac{1}{P\_{LM}(x^{(t+1)} | x^{(t), \dots, t^{(1)}})})^{\frac{1}{T}}\\\\
+&= \prod\_{t=1}^{T} \qty( \frac{1}{\hat{\bold{y}}\_{t+1}^{(t)}})^{\frac{1}{T}}\\\\
+&= \exp \qty( \frac{1}{T} \sum\_{t=1}^{T} -\log \hat{\bold{y}}\_{t+1}^{(t)}) \\\\
+&= \exp \qty(J(\theta)))
+\end{align}
 
 Notably, perplexity is inverse of probability. We want the lowest entropy possible, i.e. the highest likelihood possible. Therefore, the range of perplexity is \\([1, \infty]\\). We therefore want to **minimize perplexity**.
 

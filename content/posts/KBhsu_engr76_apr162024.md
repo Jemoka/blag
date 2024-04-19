@@ -44,6 +44,8 @@ we make a whole rotation in \\(\frac{1}{f}\\) time, and we start at \\(\phi\\), 
 
 Recall sinusoids are [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}).
 
+The units for [sinusoid](#sinusoid)s: \\(t\\) is seconds, \\(f\\) is \\(\frac{1}{s}\\), and amplitude is some unit.
+
 
 ### [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}) {#l-periodic--kbhsu-math53-feb252024-dot-md}
 

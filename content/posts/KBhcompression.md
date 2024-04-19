@@ -39,4 +39,6 @@ draft = false
 ## [signal]({{< relref "KBhsu_engr76_apr162024.md#signal" >}}) {#signal--kbhsu-engr76-apr162024-dot-md}
 
 -   [sinusoid]({{< relref "KBhsu_engr76_apr162024.md#sinusoid" >}}) and [Fourier Series]({{< relref "KBhfourier_series.md" >}})
+    -   [Fourier Series as exactly a shifted sum of sinusoids]({{< relref "KBhsu_engr76_apr182024.md#fourier-series--kbhfourier-series-dot-md--as-exactly-a-shifted-sum-of-sinusoids" >}})
+    -   [General Fourier Decomposition]({{< relref "KBhfourier_series.md#general-fourier-decomposition" >}})
 -   [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}) functions and [triangle wave]({{< relref "KBhsu_engr76_apr162024.md#triangle-wave" >}})
