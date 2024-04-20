@@ -1,5 +1,5 @@
 +++
-title = "Derivatives, Bracketing, Descent, and Approximation"
+title = "SU-CS361: Derivatives, Bracketing, Descent, and Approximation Index"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -12,6 +12,9 @@ draft = false
     -   [Directional Derivatives]({{< relref "KBhsu_cs361_apr042024.md#directional-derivative" >}})
     -   numerical methods
         -   [Finite-Difference Method]({{< relref "KBhsu_cs361_apr042024.md#finite-difference-method" >}})
+            -   [Forward Difference]({{< relref "KBhsu_cs361_apr042024.md#forward-difference" >}})
+            -   [Central Difference]({{< relref "KBhsu_cs361_apr042024.md#central-difference" >}})
+            -   [Backward Difference]({{< relref "KBhsu_cs361_apr042024.md#backward-difference" >}})
         -   [Complex-Difference Method]({{< relref "KBhsu_cs361_apr042024.md#complex-difference-method" >}})
     -   exact methods: autodiff
         -   [Forward Accumulation]({{< relref "KBhautomatic_differentiation.md#forward-accumulation" >}})

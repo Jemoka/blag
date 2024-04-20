@@ -70,6 +70,11 @@ i.e. this is "derivative along a direction"
 
 ### Finite-Difference Method {#finite-difference-method}
 
+All of these methods suffer from the fact that \\(f(x+h) - f(x)\\) cancels out at small values of \\(x\\) and \\(h\\), because of **floating point errors**. To fix this, use [Complex-Difference Method](#complex-difference-method).
+
+
+#### Forward Difference {#forward-difference}
+
 Recall the Taylor Series about \\(f(x+h)\\):
 
 \begin{equation}
@@ -79,22 +84,44 @@ f(x+h) = f(x) + \frac{f'(x)}{1} h + \frac{f''(x)}{2!} h^{2} + \dots
 Moving it around to get \\(f'(x)\\) by itself:
 
 \begin{equation}
-f'(x)h = f(x+h) - f(x) - \frac{f''(x)}{2!} h^{2} + \dots
+f'(x)h = f(x+h) - f(x) - \frac{f''(x)}{2!} h^{2} - \dots
 \end{equation}
 
 So:
 
 \begin{equation}
-f'(x) \approx \frac{f(x+h)-f(x)}{h} + \dots
+f'(x) \approx \frac{f(x+h)-f(x)}{h}
 \end{equation}
 
-where $...$ errors at \\(O(h)\\).
+where $...$ errors in the end at \\(O(h)\\). So:
+
+\begin{equation}
+f'(x) = \lim\_{h \to 0}\frac{f(x+h)-f(x)}{h}
+\end{equation}
+
+<!--list-separator-->
+
+-  Error Analysis
+
+    \\(\frac{f''(x)}{2!}h + ... h^{n}\\), the biggest error term lives with \\(h\\), so this scheme has asymtotic error at \\(O(h)\\).
 
 
-#### Two Sources of Error {#two-sources-of-error}
+#### Central Difference {#central-difference}
 
--   \\(f(x+h) - f(x)\\) cancels out at small values of \\(x\\) and \\(h\\), because of **floating point errors**
--   The \\(O(h)\\) term which is not accounted for in the end
+Slightly different formulation, which gives quadratic error \\(O(h^{2})\\), because the non-squared \\(h\\) term cancels out:
+
+\begin{equation}
+f'(x)= \lim\_{h \to 0}\frac{f\qty(x+\frac{h}{2})-f\qty(x-\frac{h}{2})}{h}
+\end{equation}
+
+
+#### Backward Difference {#backward-difference}
+
+Forward difference, backward:
+
+\begin{equation}
+f'(x) = \lim\_{h \to 0} \frac{f(x)-f(x-h)}{h}
+\end{equation}
 
 
 ### Complex-Difference Method {#complex-difference-method}
@@ -148,7 +175,7 @@ One of three things:
 
 #### Fibonacci Search {#fibonacci-search}
 
-Say you wanted to evaluate your sequence a finite number of times to maximally lower the interval.
+Say you wanted to evaluate your sequence a finite number of times to maximally lower the interval for bracketing.
 
 <!--list-separator-->
 
@@ -170,7 +197,15 @@ Say you wanted to evaluate your sequence a finite number of times to maximally l
     \end{cases}
     \end{equation}
 
+    as in; say you are allowed \\(n\\) evaluations; figure the sequence \\(\\{F\_1, \dots, F\_{n}\\}\\), and then partition your space between \\(a\\) and \\(b\\) into \\(F\_{n}\\) slices; evaluate at locations \\(\frac{F\_{n-1}}{F\_{n}}\\) and \\(1- \frac{F\_{n-1}}{F\_{n}}\\), and lop off the half-line which is to the extrema of the higher point.
+
 
 #### Golden Section Search {#golden-section-search}
 
-Shrink instead by golden ratio, which is constant.
+Because of [Binet's Formula]({{< relref "KBhbinet_s_formula.md" >}}), we can write:
+
+\begin{equation}
+\lim\_{n \to \infty} \frac{F\_{n-1}}{F\_{n}} = \frac{1}{\varphi}
+\end{equation}
+
+the inverse of the the golden ratio. So just shrink intervals by that instead.

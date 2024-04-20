@@ -11,4 +11,3 @@ draft = false
 5.  [Trust Region Methods]({{< relref "KBhsu_cs361_apr092024.md#trust-region-methods" >}}) equations
 6.  [Secant Method]({{< relref "KBhsu_cs361_apr112024.md#secant-method" >}})
 7.  the [Nelder-Mead Simplex Method]({{< relref "KBhsu_cs361_apr112024.md#nelder-mead-simplex-method" >}}) chart
-8.

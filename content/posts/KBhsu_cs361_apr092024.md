@@ -4,7 +4,10 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Quadratic search {#quadratic-search}
+## More Bracketing Methods {#more-bracketing-methods}
+
+
+### Quadratic search {#quadratic-search}
 
 if your function is [unimodal]({{< relref "KBhunimodal.md" >}})...
 
@@ -13,7 +16,7 @@ if your function is [unimodal]({{< relref "KBhunimodal.md" >}})...
 -   Now, drop any of the four resulting point
 
 
-## Shubert-Piyavskill Method {#shubert-piyavskill-method}
+### Shubert-Piyavskill Method {#shubert-piyavskill-method}
 
 This is a [Bracketing]({{< relref "KBhsu_cs361_apr042024.md#bracketing" >}}) approach which grantees optimality **WITHOUT unimodality** by using the [Lipschitz Constant]({{< relref "KBhuniqueness_and_existance.md#lipschitz-condition" >}}). But, this only works in **one dimension**.
 
@@ -26,9 +29,13 @@ For instance, in maximization, we can end up with sawtooths like:
 {{< figure src="/ox-hugo/2024-04-09_09-29-57_screenshot.png" >}}
 
 
-## Bisection Method {#bisection-method}
+### Bisection Method {#bisection-method}
+
+like [Newton's Method]({{< relref "KBhnewton_s_method.md" >}}), this is a ROOT FINDING METHOD which we are coopting to find the minima by solving for [FONC]({{< relref "KBhsu_cs361_apr042024.md#first-order-necessary-condition" >}}) within an interval.
 
 bisect \\(f'(x)\\) by sampling points in the middle of the "valid interval" until you find the point which gives \\(f'(x) = 0\\).
+
+You do this by sampling points on each edge ensuring that there is a sign switch between each edge (i.e. there is a root between the edge points), and then sampling the middle of the interval. You know that there is a sign switch somewhere by the intermediate value theorem.
 
 
 ## Local Descent {#local-descent}
@@ -83,7 +90,20 @@ We will then choose the largest \\(\alpha\\) that satisfies
 
 ### Trust Region Methods {#trust-region-methods}
 
-We often want to bound our change in \\(x\\) by some region \\(\delta\\).
+We often want to bound our change in \\(x\\) by some region \\(\delta\\) in our steps; so, we really want to...
+
+\begin{align}
+\min\_{x'}\ &f(x') \\\\
+s.t.\ & \mid x-x' \mid \leq \delta
+\end{align}
+
+To figure \\(\delta\\), we shrink our region of trust based on the quality of our function estimate (if we used a first-order local model to figure our descent direction, we will use our first order estimate for \\(\hat{f}\\)):
+
+\begin{align}
+\eta = \frac{f(x)-f(x')}{f(x)-\hat{f}(x')}
+\end{align}
+
+if \\(\eta < \eta\_{1}\\), we would scale down \\(\delta\\) by some amount as evidently our actual improvement is smaller than expected and reject our new point; if \\(\eta > \eta\_{2}\\), we will accept our new point and scale up \\(\delta\\) by some amount as our improvement is better than expected. Otherwise, we will accept the new point an do not nothing to the trust region.
 
 
 ## Termination Conditions {#termination-conditions}

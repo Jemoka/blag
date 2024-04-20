@@ -44,16 +44,16 @@ See [Newton's Method]({{< relref "KBhnewton_s_method.md" >}})
 
 ### Secant Method {#secant-method}
 
-You can estimate the [Hessian]({{< relref "KBhsu_math53_feb212024.md#hessian" >}}) by doing a thing:
+You can estimate the [Hessian]({{< relref "KBhsu_math53_feb212024.md#hessian" >}}) from the gradient to apply [Newton's Method]({{< relref "KBhnewton_s_method.md" >}}); this requires doing a thing:
 
 \begin{equation}
-f''(x\_{k}) = \frac{f'(x\_{k}) - f'(x\_{k-1})}{x\_{k} - x\_{k-1}}
+f''(x\_{k}) \approx \frac{f'(x\_{k}) - f'(x\_{k-1})}{x\_{k} - x\_{k-1}}
 \end{equation}
 
 Now, we can write:
 
 \begin{equation}
-x\_{t+1} = x\_{t} - \frac{x\_{t} - x\_{t-1} f'(x\_{t)}}{f'(x\_{t}) f'(x\_{t-1})}
+x\_{t+1} = x\_{t} - \frac{x\_{t} - x\_{t-1}}{f'(x\_{t}) -f'(x\_{t-1})} f'(x\_{t})
 \end{equation}
 
 How do we do this for Hessian? Use one of---
@@ -61,6 +61,8 @@ How do we do this for Hessian? Use one of---
 -   [Davidson-Fletcher-Powell (DFP)]({{< relref "KBhdavidson_fletcher_powell_dfp.md" >}})
 -   [Broyden-Fletcher-Goldfarb-SHanno (BFGS)]({{< relref "KBhbroyden_fletcher_goldfarb_shanno_bfgs.md" >}})
 -   [Limited Memory BFGS]({{< relref "KBhlimited_memory_bfgs.md" >}})
+
+due to approximate nature, this may take more steps to converge.
 
 
 ## Direct Methods {#direct-methods}
