@@ -182,4 +182,4 @@ so we need better metrics about democracy before beginning to argue about it. [l
 
 ### The Claim {#the-claim}
 
-Though the desire for orderly structure in the East is often cited as a central value which precludes democracy, the promotion of a structured society can be an independent factor to the spread of democracy; this conflation occurs because the desire for structure can be used by authoritarian rulers dogmatically to promote their brand of authoritarianism.
+Though the desire for orderly structure in the East is often cited as a central value which precludes democracy, the promotion of a structured society can be an independent factor to the spread of democracy; despite this, the conflation of lack of democracy with enforcement of societal structure occurs because the desire for structure can be used by authoritarian rulers dogmatically to promote their brand of authoritarianism.
