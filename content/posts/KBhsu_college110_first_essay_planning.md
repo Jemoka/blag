@@ -154,16 +154,12 @@ In fact, America also doesn't [have porportional representation either](#us-elec
 
 #### if individualism is a dogma, structure is too---one which is used to promote authoritarian control but is not necessarily connected {#if-individualism-is-a-dogma-structure-is-too-one-which-is-used-to-promote-authoritarian-control-but-is-not-necessarily-connected}
 
-example: [muslim cultural traditions characterized under "sensitivity" using structure dogma](#equates-having-diversity-with-separateness-wc-of-sensitive), and support of individualistic growth under education is characterized as [helping the family](#conflates-individual-educational-growth-with-familial-growth).
-
-In fact, Lee acknowledges that [structure is a means to freedom](#structure-as-a-means-to-freedom)---which is itself not contradictory to democracy.
-
-Indeed, [hierarchy and structure as also an element of Western thought](#describes-hierarchy-and-structure-as-also-an-element-of-western-thought)
+Lee claims that [structure is a means to freedom](#structure-as-a-means-to-freedom)---evocative of an Orwellian doublespeak to forcibly tie liberty and structure together. This tie: [muslim cultural traditions characterized under "sensitivity" using structure dogma](#equates-having-diversity-with-separateness-wc-of-sensitive) (use of the word "sensitivity"). When policy requires education, support of individualistic growth under education can also be characterized as [helping the family](#conflates-individual-educational-growth-with-familial-growth).
 
 
 #### what are the metrics? {#what-are-the-metrics}
 
-so we need better metrics about democracy before beginning to argue about it. [leadership can be effective without a correct objective](#leadership-can-be-effective-without-a-correct-objective).
+Indeed, [hierarchy and structure as also an element of Western thought](#describes-hierarchy-and-structure-as-also-an-element-of-western-thought). so we need better metrics about democracy before beginning to argue about it. [leadership can be effective without a correct objective](#leadership-can-be-effective-without-a-correct-objective).
 
 
 #### other stuff {#other-stuff}
@@ -182,4 +178,4 @@ so we need better metrics about democracy before beginning to argue about it. [l
 
 ### The Claim {#the-claim}
 
-Though the desire for orderly structure in the East is often cited as a central value which precludes democracy, the promotion of a structured society can be an independent factor to the spread of democracy; despite this, the conflation of lack of democracy with enforcement of societal structure occurs because it can be used by authoritarian rulers dogmatically to promote their brand of authoritarianism.
+Though the overriding desire for orderly social structure in the East is often cited as a central value which precludes the development of democracy in Eastern societies, the promotion of a structured society can be treated as an independent goal in society to the spread of democracy; the conflation of lack of democracy with the enforcement of societal structure, then, occurs due to its convenient use by authoritarian rulers as a dogma to promote their form of social control.
