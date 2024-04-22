@@ -125,7 +125,9 @@ If you found a minimum point once, check that point again first after going ther
 
 ### Nelder-Mead Simplex Method {#nelder-mead-simplex-method}
 
-Take a simplex to search. You have four possible actions
+Take a simplex to search. Sort its verticies by lowest to highest in terms of objective function value, with lowest point being called \\(x\_{l}\\), the \\(x\_{h}\\) the highest function value, \\(x\_{s}\\) being the second highest function value. \\(\bar{x}\\) being the mean point between all points except \\(x\_{h}\\).
+
+You have four possible actions
 
 -   **reflection**: take your worst point, and reflex across the mean line formed across the remaining points
 -   **expansion**: take your best point, and move them
