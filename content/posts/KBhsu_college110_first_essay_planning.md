@@ -122,7 +122,7 @@ We can be reasonably sure, however, that the delegates would [in 1820] have atte
 
 #### Korea and Japan cited as strong governments with strong interference {#korea-and-japan-cited-as-strong-governments-with-strong-interference}
 
-In Korea, for example, each household is required to attend monthly neighborhood meetings to receive government directives and dis cuss local affairs. Japans powerful gov ernment constantly intrudes into the business world to protect perceived national interests, to the point of causing disputes with the United States and other trading partner
+In Korea, for example, each household is required to attend monthly neighborhood meetings to receive government directives and dis cuss local affairs. Japans powerful gov ernment constantly intrudes into the business world to protect perceived national interests, to the point of causing disputes with the United States and other trading partner (Kim Dae Jung)
 
 
 #### structure as a means to freedom {#structure-as-a-means-to-freedom}
@@ -133,6 +133,11 @@ In the East the main object is to have a well-ordered society so that everybody 
 #### lack of liberty is a threat to democracy {#lack-of-liberty-is-a-threat-to-democracy}
 
 “Liberties of thought and discussion are necessary for any widespread application of what we will call deliberative democracy by the people themselves.” [Fishkin, 2018, p. 6]
+
+
+#### hairscarf {#hairscarf}
+
+“if she joined the customs or immigration department where it would be confusing to the millions of people who stream through to have some customs officer looking different, she must wear the unifor” ([⁨Zakaria⁩ and ⁨Yew⁩, 1994, p. 121](zotero://select/library/items/CRPLRJEI)) ([pdf](zotero://open-pdf/library/items/D2I7MJAM?page=14&amp;annotation=7ZKPVETK))
 
 
 ### Sub-Claim Development {#sub-claim-development}
