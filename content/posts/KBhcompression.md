@@ -43,5 +43,7 @@ draft = false
     -   [General Fourier Decomposition]({{< relref "KBhfourier_series.md#general-fourier-decomposition" >}})
 -   [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}}) functions and [triangle wave]({{< relref "KBhsu_engr76_apr162024.md#triangle-wave" >}})
 -   [Fourier Series components form a basis]({{< relref "KBhsu_engr76_apr232024.md#id-40a9278a-e67e-44da-ac09-69ba3daa24bc-fourier-series-components-form-a-basis" >}})
--   [Finite-Bandwidth Signal]({{< relref "KBhsu_engr76_apr252024.md#finite-bandwidth-signal" >}})
+-   [Bandwidth]({{< relref "KBhsu_engr76_apr252024.md#bandwidth" >}})
+    -   [Finite-Bandwidth Signal]({{< relref "KBhsu_engr76_apr252024.md#finite-bandwidth-signal" >}})
 -   [Discrete Fourier Transform]({{< relref "KBhsu_engr76_apr252024.md#discrete-fourier-transform" >}})
+-   [Lossless Sampling]({{< relref "KBhsu_engr76_apr302024.md#lossless-sampling" >}})
