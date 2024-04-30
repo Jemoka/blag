@@ -110,3 +110,8 @@ v^{(i)} = w v^{(i)} + c\_1 r\_1 \qty(x^{(i)}\_{\text{your best}} - x^{(i)}) + c\
 \end{equation}
 
 basically, this is momentum where we try to go both towards our local optima that we've seen and also in a little towards the direction that the entire swarm has seen
+
+
+### Multi-Objective [Population Method](#population-method) {#multi-objective-population-method--org59669ac}
+
+See [Multi-Objective Population Method]({{< relref "KBhsu_cs361_apr302024.md#multi-object-population-method" >}})

@@ -127,7 +127,7 @@ Meaning, our problem becomes:
 #### primal problem {#primal-problem}
 
 \begin{equation}
-\min\_{x} \max\_{\mu \geq 0} \mathcal{L}(x,\mu)
+\min\_{x} \max\_{\mu \geq 0, \lambda} \mathcal{L}(x,\mu)
 \end{equation}
 
 <!--list-separator-->

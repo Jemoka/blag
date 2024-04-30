@@ -72,17 +72,23 @@ Topics: [Derivatives, Bracking, Descent, and Approximation]({{< relref "KBhderiv
 
 Topics: [SU-CS361 Stochastic Methods and Constraints Index]({{< relref "KBhsu_cs361_stochastic_methods_and_constraints_index.md" >}})
 
+
+### Lecture {#lecture}
+
 -   [SU-CS361 APR162024]({{< relref "KBhsu_cs361_apr162024.md" >}})
 -   [SU-CS361 APR182024]({{< relref "KBhsu_cs361_apr182024.md" >}})
+-   [SU-CS361 APR252024]({{< relref "KBhsu_cs361_apr252024.md" >}})
+-   [SU-CS361 APR302024]({{< relref "KBhsu_cs361_apr302024.md" >}})
 
 
-## Direct Optimization {#direct-optimization}
+## Multi-Objective Optimization {#multi-objective-optimization}
+
+Topics: [SU-CS361 Multi-Objective Optimization, Sampling, Surrogates]({{< relref "KBhsu_cs361_multi_objective_optimization_sampling_surrogates.md" >}})
 
 
-## Stochastic, Population, and Expressions {#stochastic-population-and-expressions}
+### Lecture {#lecture}
 
-
-## Constraints {#constraints}
+-   [SU-CS361 APR302024]({{< relref "KBhsu_cs361_apr302024.md" >}})
 
 
 ## Sampling and Surrogates {#sampling-and-surrogates}
