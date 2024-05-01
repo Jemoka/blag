@@ -16,11 +16,11 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 <div style="margin: 10px 0">
 <span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
+<span style="font-weight: 500">Apr. 29, 24'</span> <span>ArXiv preprint <a href="https://arxiv.org/abs/2404.19055">released</a> on POMDP LM decoding.</span>
 <span style="font-weight: 500">Apr. 7, 24'</span> <span>Journal Article (NACC) accepted + in press at <a href="https://journals.lww.com/alzheimerjournal/pages/default.aspx">LWW AD</a></span>
 <span style="font-weight: 500">Mar. 15, 24'</span> <span>TalkBank's Mandarin <a href="https://huggingface.co/talkbank/CHATUtterance-zh_CN">utterance segmentation model</a> released. </span>
 <span style="font-weight: 500">Feb. 29, 24'</span> <span>We released Stanza <a href="https://github.com/stanfordnlp/stanza/releases/tag/v1.8.1">1.8.1</a> with PEFT support! </span>
 <span style="font-weight: 500">Feb. 26-27, 24'</span> <span>AAAI 2024. Vancouver was fun!</span>
-<span style="font-weight: 500">Dec. 15, 23'</span> <span>Paper (NACC) Accepted by W3PHAI-24</span>
 <span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a  target="_top" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/"  target="_top">Published</a> by JSLHR</span>
 </div>
 </div>
@@ -39,10 +39,17 @@ In industry, I lead the development of [Condution](https://www.condution.com/), 
 ## Projects {#projects}
 
 <div style="padding: 15px 0">
-<div style="font-weight: 500; font-size: 14px; opacity: 0.5">UC Davis Health (2023)</div>
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">UC Davis Health (2024)</div>
 <div style="font-weight: 500">A Transformer Approach to Congnitive Impairment Classification and Prediction</div>
 <div><u>Liu, H.</u>, Weakley, A.M., Zhang, J., Liu, X.</div>
 <div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://docs.google.com/presentation/d/1J5WUGUXbVlG5Fl4cQdu6FuNVFTPB2NTW/edit?usp=sharing&ouid=112528726606349722398&rtpof=true&sd=true">Talk@NACC</a></span><span class="tag">Talk@W3PHAI-24 at AAAI</span><span class="tag">In Press@LWW Alzheimer's Disease</span></div>
+</div>
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Preprint (2024)</div>
+<div style="font-weight: 500">Plan of Thoughts: Heuristic-Guided Problem Solving with Large Language Models</div>
+<div><u>Liu, H.</u></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://arxiv.org/abs/2404.19055">arXiv</a></span></div>
 </div>
 
 <div style="padding: 15px 0">
