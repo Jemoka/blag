@@ -16,7 +16,7 @@ closely related is the NLG formulation of predicting an upcoming word:
 P(w\_5|w\_1, \dots, w\_{n})
 \end{equation}
 
-either of these we call a "grammar", or "[Language Model]({{< relref "KBhnlp.md#language-model" >}})".
+either of these we call a "grammar", or "[Language Model]({{< relref "KBhlanguage_model.md" >}})".
 
 
 ## Chain Rule Language Modeling {#chain-rule-language-modeling}
@@ -122,9 +122,9 @@ Use trigrams if high probability evidence is found, otherwise bigrams or unigram
 This **DOES NOT PRODUCE A PROBABILITY** as it is not normalized. Instead of being probabilites, we consider them "scores".
 
 
-### Interpolation {#interpolation}
+### Unigram Interpolation {#unigram-interpolation}
 
-In practice, [Interpolation](#interpolation) works better. [Interpolation](#interpolation) smoothes the probability between unigram, bigram, and trigrams.
+In practice, [Interpolation](#unigram-interpolation) works better. [Interpolation](#unigram-interpolation) smoothes the probability between unigram, bigram, and trigrams.
 
 Mostly simply, we mix them with some factors \\(\lambda\_{1}, \lambda\_{2}, \lambda\_{3}\\), where \\(\sum\_{i} \lambda\_{i} = 1\\). This makes a weighted average over probabilities:
 

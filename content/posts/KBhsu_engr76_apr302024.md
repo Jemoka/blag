@@ -44,8 +44,8 @@ Moreover, **assume** that the spectrum of the signal can be represented by a **f
 By making the assumption above, we know that our resulting Fourier series has a frequency bounded by \\(\frac{j}{T} \leq B \implies j \leq BT\\), meaning, this gives:
 
 \begin{align}
-&f(x) = a\_0 + \sum\_{k=1}^{\infty} \qty( a\_{k} \cos(k \omega x) + b\_{k} \sin(k \omega x))  \\\\
-\Rightarrow\ & f(x) = a\_0 + \sum\_{k=1}^{BT} \qty( a\_{k} \cos(k \omega x) + b\_{k} \sin(k \omega x))
+&f(x) = b\_0 + \sum\_{k=1}^{\infty} \qty( a\_{k} \cos(k \omega x) + b\_{k} \sin(k \omega x))  \\\\
+\Rightarrow\ & f(x) = b\_0 + \sum\_{k=1}^{BT} \qty( a\_{k} \cos(k \omega x) + b\_{k} \sin(k \omega x))
 \end{align}
 
 Now, let us consider what would happen if we tried to sample this signal every \\(S\\) second:
@@ -53,13 +53,13 @@ Now, let us consider what would happen if we tried to sample this signal every \
 at \\(x=0\\)
 
 \begin{equation}
-y\_0 = b\_0 + \sum\_{k=1}^{BT} a\_{j} \sin 0 + b\_{j} \cos 0 = b\_0 + b\_1 + \dots + b\_{BT}
+y\_0 = b\_0 + \sum\_{j=1}^{BT} a\_{j} \sin 0 + b\_{j} \cos 0 = b\_0 + b\_1 + \dots + b\_{BT}
 \end{equation}
 
 at \\(x=S\\)
 
 \begin{equation}
-y\_{S} = b\_0 + \sum\_{k=1}^{BT} a\_{j} \sin \qty(2 \pi \frac{j}{T} S ) + b\_{j} \cos  \qty(2\pi \frac{j}{T} S)
+y\_{S} = b\_0 + \sum\_{j=1}^{BT} a\_{j} \sin \qty(2 \pi \frac{j}{T} S ) + b\_{j} \cos  \qty(2\pi \frac{j}{T} S)
 \end{equation}
 
 ...
@@ -71,3 +71,5 @@ you will note that we have \\(2BT + 1\\) unknowns (\\(b\_0, b\_1, ..., b\_{BT}, 
 \end{equation}
 
 meaning we can reconstruct our whole function as long as our sampling is at least double the [Bandwidth]({{< relref "KBhsu_engr76_apr252024.md#bandwidth" >}}) of our signal. This is the [nyquist limit](#lossless-sampling).
+
+We state this more formally in [nyquist sampling theorem]({{< relref "KBhsu_engr76_may022024.md#nyquist--org0419f3b--sampling-theorem" >}})
