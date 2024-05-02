@@ -33,6 +33,6 @@ In theory this is an _approximation_ of [gradient descent]({{< relref "KBhlogist
 mini-batches helps take advantage of both by training over groups of \\(m\\) samples
 
 
-## regularization {#regularization}
+## [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}}) {#regularization--kbhsu-cs224n-apr162024-dot-md}
 
-[regularization](#regularization) penalize large weights to reduce over-fitting
+See [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}})
