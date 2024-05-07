@@ -103,6 +103,29 @@ This gives a **smooth signal**; and if sampling was done correctly with the [nyq
 
 #### Shannon's Nyquist Theorem {#shannon-s-nyquist-theorem}
 
+Let \\(X\\) be a [Finite-Bandwidth Signal]({{< relref "KBhsu_engr76_apr252024.md#finite-bandwidth-signal" >}}) where \\([0, B]\\) Hz.
+
+if:
+
+\begin{equation}
+\hat{X}(t) = \sum\_{m=0}^{\infty} X(mTs) \text{sinc} \qty( \frac{t-mTs}{Ts})
+\end{equation}
+
+where:
+
+\begin{equation}
+\text{sinc}(t) = \frac{\sin \qty(\pi t)}{\pi t}
+\end{equation}
+
+-   if \\(Ts < \frac{1}{2B}\\), that is, \\(fs > 2B\\), then \\(\hat{X}(t) = X(t)\\) (this is a STRICT inequality!)
+-   otherwise, if \\(Ts > \frac{1}{2B}\\), then \\(\hat{X}(t) \neq X(t)\\), yet \\(\hat{X}(mTs) = X(mTs)\\), and \\(\hat{X}\\) will be bandwidth limited to \\([0, \frac{fs}{2}]\\).
+
+This second case is callled "aliasing", or "strocoscopic effect".
+
+---
+
+Alternate way of presenting the same info:
+
 \begin{equation}
 \hat{X}(t) = \sum\_{m=0}^{\infty} X(mTs) \text{sinc} \qty( \frac{t-mT\_{s}}{T\_{s}})
 \end{equation}

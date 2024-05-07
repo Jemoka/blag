@@ -4,6 +4,36 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+\begin{equation}
+\mathcal{N}(x|\mu, \Sigma) = \qty(2\pi)^{-\frac{n}{2}} |\Sigma|^{-\frac{1}{2}} \exp \qty(-\frac{1}{2} \qty(x-\mu)^{\top} \Sigma^{-1}(x-\mu))
+\end{equation}
+
+where \\(\Sigma\\) is positive semidefinite
+
+
+## conditioning Gaussian distributions {#conditioning-gaussian-distributions}
+
+For distributions that follow [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}})s, \\(a, b\\), we obtain:
+
+\begin{align}
+\mqty[a \\\ b] \sim \mathcal{N} \qty(\mqty[\mu\_{a}\\\ \mu\_{b}], \mqty(A & C \\\ C^{\top} & B))
+\end{align}
+
+meaning, each one can be marginalized as:
+
+\begin{align}
+a \sim \mathcal{N}(\mu\_{a}, A) \\\\
+b \sim \mathcal{N}(\mu\_{b}, B) \\\\
+\end{align}
+
+Conditioning works too with those terms:
+
+\begin{align}
+\mu\_{a|b} &= \mu\_a + CB^{-1}\qty(b - \mu\_{b}) \\\\
+\sigma\_{a|b} &= A - CB^{-1}C^{\top}
+\end{align}
+
+
 ## standard normal density function {#standard-normal-density-function}
 
 This is a function used to model many Gaussian distributions.
@@ -89,7 +119,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org430b977}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org2b532dd}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
