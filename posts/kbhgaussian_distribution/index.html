@@ -1,15 +1,24 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Gaussian distribution</title>
-<meta name=description content="standard normal density function This is a function used to model many Gaussian distributions.
-\begin{equation} \phi(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^{2}}{2}} \end{equation}
-This function is the CDF of the standard normal.
-standard normal density function is also symmetric:
-\begin{equation} \phi(a) = 1- \phi(a) \end{equation}
-Gaussian distribution constituents \(\mu\) the mean \(\sigma\) the variance requirements \begin{equation} X \sim N(\mu, \sigma^{2}) \end{equation}
-Its PDF is:
-\begin{equation} \mathcal{N}(x \mid \mu, \sigma^{2}) = \frac{1}{\sigma\sqrt{2\pi}} e^{ \frac{-(x-u)^{2}}{2 \sigma^{2}}} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<meta name=description content="\begin{equation} \mathcal{N}(x|\mu, \Sigma) = \qty(2\pi)^{-\frac{n}{2}} |\Sigma|^{-\frac{1}{2}} \exp \qty(-\frac{1}{2} \qty(x-\mu)^{\top} \Sigma^{-1}(x-\mu)) \end{equation}
+where \(\Sigma\) is positive semidefinite
+conditioning Gaussian distributions For distributions that follow Gaussian distributions, \(a, b\), we obtain:
+\begin{align} \mqty[a \\ b] \sim \mathcal{N} \qty(\mqty[\mu_{a}\\ \mu_{b}], \mqty(A & C \\ C^{\top} & B)) \end{align}
+meaning, each one can be marginalized as:
+\begin{align} a \sim \mathcal{N}(\mu_{a}, A) \\ b \sim \mathcal{N}(\mu_{b}, B) \\ \end{align}
+Conditioning works too with those terms:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Gaussian distribution</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#standard-normal-density-function>standard normal density function</a></li><li><a href=#gaussian-distribution>Gaussian distribution</a><ul><li><a href=#constituents>constituents</a></li><li><a href=#requirements>requirements</a></li><li><a href=#additional-information>additional information</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=standard-normal-density-function>standard normal density function</h2><p>This is a function used to model many Gaussian distributions.</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Gaussian distribution</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#conditioning-gaussian-distributions>conditioning Gaussian distributions</a></li><li><a href=#standard-normal-density-function>standard normal density function</a></li><li><a href=#gaussian-distribution>Gaussian distribution</a><ul><li><a href=#constituents>constituents</a></li><li><a href=#requirements>requirements</a></li><li><a href=#additional-information>additional information</a></li></ul></li></ul></nav></aside><main><article><div><p>\begin{equation}
+\mathcal{N}(x|\mu, \Sigma) = \qty(2\pi)^{-\frac{n}{2}} |\Sigma|^{-\frac{1}{2}} \exp \qty(-\frac{1}{2} \qty(x-\mu)^{\top} \Sigma^{-1}(x-\mu))
+\end{equation}</p><p>where \(\Sigma\) is positive semidefinite</p><h2 id=conditioning-gaussian-distributions>conditioning Gaussian distributions</h2><p>For distributions that follow <a href=/posts/kbhgaussian_distribution/>Gaussian distribution</a>s, \(a, b\), we obtain:</p><p>\begin{align}
+\mqty[a \\ b] \sim \mathcal{N} \qty(\mqty[\mu_{a}\\ \mu_{b}], \mqty(A & C \\ C^{\top} & B))
+\end{align}</p><p>meaning, each one can be marginalized as:</p><p>\begin{align}
+a \sim \mathcal{N}(\mu_{a}, A) \\
+b \sim \mathcal{N}(\mu_{b}, B) \\
+\end{align}</p><p>Conditioning works too with those terms:</p><p>\begin{align}
+\mu_{a|b} &= \mu_a + CB^{-1}\qty(b - \mu_{b}) \\
+\sigma_{a|b} &= A - CB^{-1}C^{\top}
+\end{align}</p><h2 id=standard-normal-density-function>standard normal density function</h2><p>This is a function used to model many Gaussian distributions.</p><p>\begin{equation}
 \phi(x) = \frac{1}{\sqrt{2\pi}} e^{-\frac{x^{2}}{2}}
 \end{equation}</p><p>This function is the <a href=/posts/kbhprobability_distributions/#cumulative-distribution-function>CDF</a> of the <a href=#standard-normal>standard normal.</a></p><p><a href=#standard-normal-density-function>standard normal density function</a> is also symmetric:</p><p>\begin{equation}
 \phi(a) = 1- \phi(a)
@@ -23,7 +32,7 @@ F(x) = \Phi \qty( \frac{x-\mu}{\sigma})
 Y = aX + b
 \end{equation}</p><p>where \(X \sim \mathcal{N}\)</p><p>We will end up with another normal \(Y \sim \mathcal{N}\) such that:</p><ul><li>mean: \(au + b\)</li><li>variance: \(a^{2}\sigma^{2}\)</li></ul><h4 id=standard-normal>standard normal</h4><p>The standard normal is:</p><p>\begin{equation}
 Z=\mathcal{N}(0,1)
-\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--org430b977>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
+\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--org2b532dd>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
 \end{equation}</p><p>and, we can shift it into a standard normal with:</p><p>\begin{equation}
 Z = \frac{X-\mu}{\sigma}
