@@ -91,9 +91,12 @@ def get_vertex(basis, LP:LinearProgram):
 
 ## simplex algorithm {#simplex-algorithm}
 
-1.  find vertices
-2.  check for [FONC for linear program](#fonc--kbhsu-cs361-apr042024-dot-md--for-linear-program)
+1.  find feasible sets
+2.  check for [KKT Conditions]({{< relref "KBhsu_cs361_apr182024.md#kkt-conditions" >}}) in [FONC for linear program](#fonc--kbhsu-cs361-apr042024-dot-md--for-linear-program)
 3.  if done, return
+4.  if not, try to swap possible vertices while maintaining optimality
+
+We have two sets \\(\mathcal{B}, \mathcal{V}\\), corresponding to slots in your design variable.
 
 ---
 

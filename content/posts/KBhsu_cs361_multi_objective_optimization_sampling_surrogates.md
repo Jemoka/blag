@@ -40,3 +40,9 @@ draft = false
     -   [Error Based Exploration]({{< relref "KBhsu_cs361_may072024.md#error-based-exploration" >}})
     -   [Lower Confidence Bound Exploration]({{< relref "KBhsu_cs361_may072024.md#lower-confidence-bound-exploration" >}})
     -   [Probability of Improvement Exploration]({{< relref "KBhsu_cs361_may072024.md#probability-of-improvement-exploration" >}}) and [Expected Improvement Exploration]({{< relref "KBhsu_cs361_may072024.md#probability-of-improvement-exploration" >}})
+-   [optimization uncertainty]({{< relref "KBhsu_cs361_may092024.md#optimization-uncertainty" >}})
+    -   [set-based uncertainty]({{< relref "KBhsu_cs361_may092024.md#set-based-uncertainty" >}})
+    -   [probabilistic uncertainty]({{< relref "KBhsu_cs361_may092024.md#probabilistic-uncertainty" >}})
+        -   [uncertainty expected value optimization]({{< relref "KBhsu_cs361_may092024.md#uncertainty-expected-value-optimization" >}})
+        -   [uncertainty variance optimization]({{< relref "KBhsu_cs361_may092024.md#uncertainty-variance-optimization" >}})
+    -

@@ -60,6 +60,8 @@ you can choose any transformation that keeps you into the you can choose any tra
 
 ## Lagrange multiplier {#lagrange-multiplier}
 
+"the gradient of the objective function has to be perpendicular to the gradient of the constraints"
+
 
 ### For Equality constraints {#for-equality-constraints}
 
@@ -112,6 +114,9 @@ We have (we switched the signs, but it doesn't matter):
 \begin{equation}
 \mathcal{L}(x, \mu) = f(x) + \mu g(x)
 \end{equation}
+
+
+#### Infinite step function {#infinite-step-function}
 
 We now formulate this such that boundaries outside of the constraints is infinitely large; recall that our constraint have \\(g(x) \leq 0\\). Meaning:
 
@@ -175,7 +180,7 @@ Meaning, our problem becomes:
 we can incorporate our active constraint term to write:
 
 \begin{equation}
-\mathcal{L}(x, \mu, \lambda) = f(x) + \mu g(x) + \lambda h(x)
+\mathcal{L}(x, \mu, \lambda) = f(x) + \mu \cdot g(x) + \lambda \cdot h(x)
 \end{equation}
 
 by the same principle above, we can write:
