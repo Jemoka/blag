@@ -51,7 +51,37 @@ Tx and Rx maps **boolean [signal]({{< relref "KBhsu_engr76_apr162024.md#signal" 
 "how do we map a sequence of bits 0100100.... and map it to a continuous time signal \\(X(t)\\)?"
 
 
-### simplest digital encoding approcah {#simplest-digital-encoding-approcah}
+### [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}}) {#sinc-digital-encoding--kbhsu-engr76-may092024-dot-md}
+
+see [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}})
+
+
+### on-off keying {#on-off-keying}
+
+in brief: its like [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}}), but we interpolate using the indicator function:
+
+\begin{equation}
+X(t) = \sum\_{m=1}^{\infty} X[m] F \qty( \frac{t-mT}{T})
+\end{equation}
+
+where:
+
+\begin{equation}
+F = \begin{cases}
+1, |x| < \frac{1}{2} \\\\
+0
+\end{cases}
+\end{equation}
+
+The spectrum of this type of signal would be:
+
+\begin{equation}
+\left| \text{sinc} \left (\frac{1}{T} \pi x \right) \right|
+\end{equation}
+
+We consider this signal "approximately bandwidth limited" to roughly \\(\frac{1}{T}\\), which is usually fine. The other concern with this is that, because unlike [sinc function]({{< relref "KBhsinc_function.md#sinc-function" >}}) where you can sample for twice the function bandwidth, you have to sample at the function bandwith meaning you communicate less info.
+
+---
 
 choose some voltage \\(V\\). Assign 1-bit voltage \\(V\\), assign 0-bit voltage \\(0\\), and simply play a voltage for a set amount of time \\(t\\) and move on to the next symbol for encoding.
 

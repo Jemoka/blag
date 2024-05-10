@@ -12,4 +12,5 @@ Communication System Design!
     -   [Analog Communication]({{< relref "KBhanalog_vs_digital_signal.md#analog-communication" >}})
     -   [Digital Communication]({{< relref "KBhanalog_vs_digital_signal.md#digital-communication" >}})
 -   [digital encoding]({{< relref "KBhsu_engr76_may072024.md#digital-encoding" >}})
-    -   [simplest digital encoding approcah]({{< relref "KBhsu_engr76_may072024.md#simplest-digital-encoding-approcah" >}})
+    -   [on-off keying]({{< relref "KBhsu_engr76_may072024.md#on-off-keying" >}})
+    -   [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}})
