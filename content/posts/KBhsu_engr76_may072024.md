@@ -79,7 +79,7 @@ The spectrum of this type of signal would be:
 \left| \text{sinc} \left (\frac{1}{T} \pi x \right) \right|
 \end{equation}
 
-We consider this signal "approximately bandwidth limited" to roughly \\(\frac{1}{T}\\), which is usually fine. The other concern with this is that, because unlike [sinc function]({{< relref "KBhsinc_function.md#sinc-function" >}}) where you can sample for twice the function bandwidth, you have to sample at the function bandwith meaning you communicate less info.
+We consider this signal "approximately bandwidth limited" to roughly \\(\frac{1}{T}\\), which is usually fine. The other concern with this is that, because unlike [sinc function]({{< relref "KBhsinc_function.md#sinc-function" >}}) where you can sample for twice the function bandwidth, you have to sample at the function bandwith meaning you communicate less info. of course, you can change the voltage for your signal at each \\(X[m]\\) (i.e. "pulse-amplitude modulation") to encode your signal to speed up communication.
 
 ---
 
