@@ -4,32 +4,6 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Dual Certificates {#dual-certificates}
-
-[Dual Certificates](#dual-certificates) is a method of, given some proposed solution \\(x^{\*}\\) of the [primal problem]({{< relref "KBhsu_cs361_apr182024.md#primal-problem" >}}) for a [Linear Program]({{< relref "KBhsu_cs361_apr252024.md#linear-constraint-optimization" >}}), we can verify the solution with the dual solution.
-
----
-
-Recall the [dual form of the primal problem]({{< relref "KBhsu_cs361_apr182024.md#dual-form-of-the-primal-problem" >}}):
-
-\begin{align}
-\max\_{\lambda}\ &b^{\top}\lambda\\\\
-s.t.\ &A^{\top} \lambda \leq c
-\end{align}
-
-Typically, this would give us an **lower bound** to the primal solution. However, for [Linear Program]({{< relref "KBhsu_cs361_apr252024.md#linear-constraint-optimization" >}})s, they are **equal**.
-
----
-
-So, given some \\((x^{\*}, \lambda^{\*})\\), we can verify it by checking:
-
-1.  primal feasible: \\(Ax \leq b\\), \\(x \geq 0\\)
-2.  dual feasible: \\(A^{\transpose} \lambda \leq c\\)
-3.  dual certificate:  \\(c^{\top} x^{\*} = b^{\top} \lambda^{\*}\\)
-
-This allows us to check, for a given solution, whether or not it is actually the correct solution.
-
-
 ## Multi-Objective Optimization {#multi-objective-optimization}
 
 1.  identify non-dominated individuals (individuals, for which in the multi-objective, is not **dominated**); this forms the "pareto frontier"

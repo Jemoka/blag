@@ -116,7 +116,14 @@ We have (we switched the signs, but it doesn't matter):
 \end{equation}
 
 
-#### Infinite step function {#infinite-step-function}
+### Combined {#combined}
+
+\begin{equation}
+\mathcal{L}(x, \mu, \lambda) = f(x) + \mu g(x) + \lambda h(x)
+\end{equation}
+
+
+### Infinite step function {#infinite-step-function}
 
 We now formulate this such that boundaries outside of the constraints is infinitely large; recall that our constraint have \\(g(x) \leq 0\\). Meaning:
 
@@ -129,50 +136,53 @@ this uses the fact that, at feasible \\(g\\) (i.e. non-positive \\(g\\)), the mo
 Meaning, our problem becomes:
 
 
-#### primal problem {#primal-problem}
+### primal problem {#primal-problem}
 
 \begin{equation}
-\min\_{x} \max\_{\mu \geq 0, \lambda} \mathcal{L}(x,\mu)
+\min\_{x} \max\_{\mu \geq 0, \lambda} \mathcal{L}(x,\mu, \lambda)
 \end{equation}
+
+
+#### KKT Conditions {#kkt-conditions}
 
 <!--list-separator-->
 
--  KKT Conditions
+-  feasibility
 
-    <!--list-separator-->
+    \begin{equation}
+    \begin{cases}
+    g(x^{\*}) \leq  0 \\\\
+    h(x^{\*}) = 0
+    \end{cases}
+    \end{equation}
 
-    -  feasibility
+<!--list-separator-->
 
-        \begin{equation}
-        \begin{cases}
-        g(x^{\*}) \leq  0 \\\\
-        h(x^{\*}) = 0
-        \end{cases}
-        \end{equation}
+-  dual feasibility
 
-    <!--list-separator-->
+    \begin{equation}
+    \mu \geq 0
+    \end{equation}
 
-    -  dual feasibility
+<!--list-separator-->
 
-        \begin{equation}
-        \mu \geq 0
-        \end{equation}
+-  complementary slackness
 
-    <!--list-separator-->
+    \begin{equation}
+    u \cdot g = 0
+    \end{equation}
 
-    -  complementary slackness
+<!--list-separator-->
 
-        \begin{equation}
-        u \cdot g = 0
-        \end{equation}
+-  stationarity
 
-    <!--list-separator-->
+    objective function is tangent to each constraint
 
-    -  stationarity
+    \begin{equation}
+    \nabla f(x) + \mu \nabla g(x) + \lambda \nabla h(x) = 0
+    \end{equation}
 
-        objective function is tangent to each constraint
-
-        {{< figure src="/ox-hugo/2024-04-18_09-48-21_screenshot.png" >}}
+    {{< figure src="/ox-hugo/2024-04-18_09-48-21_screenshot.png" >}}
 
 
 #### dual form of the primal problem {#dual-form-of-the-primal-problem}
