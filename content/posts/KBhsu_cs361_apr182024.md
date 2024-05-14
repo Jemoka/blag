@@ -11,7 +11,7 @@ recall [constraint]({{< relref "KBhsu_cs361_apr022024.md#constraint" >}}); our g
 
 ## active constraint {#active-constraint}
 
-an "[active constraint](#active-constraint)" is a constraint which, upon application, changes the solution to be different than the non-constrainted solution. This is always true at the equality constraint, and
+an "[active constraint](#active-constraint)" is a constraint which, upon application, changes the solution to be different than the non-constrainted solution. This is always true at the equality constraint, and not necessarily with inequality constraints.
 
 
 ## types of constraints {#types-of-constraints}
@@ -181,8 +181,6 @@ Meaning, our problem becomes:
     \begin{equation}
     \nabla f(x) + \mu \nabla g(x) + \lambda \nabla h(x) = 0
     \end{equation}
-
-    {{< figure src="/ox-hugo/2024-04-18_09-48-21_screenshot.png" >}}
 
 
 #### dual form of the primal problem {#dual-form-of-the-primal-problem}

@@ -85,4 +85,6 @@ If you have a covariance matrix and a mean vector, you can formulate:
 
 -  value at risk
 
-    best objective value which can be guaranteed with probability \\(\alpha\\) given the erro distribution.
+    best objective value which can be guaranteed with probability \\(\alpha\\) given the error distribution.
+
+    where as [conditional value at risk](#value-at-risk) [CVaR](#value-at-risk) is expected value of top \\(1-\alpha\\) quartile of the distribution

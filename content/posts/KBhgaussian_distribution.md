@@ -26,7 +26,7 @@ a \sim \mathcal{N}(\mu\_{a}, A) \\\\
 b \sim \mathcal{N}(\mu\_{b}, B) \\\\
 \end{align}
 
-Conditioning works too with those terms:
+Conditioning works too with those terms, for \\(a|b\\):
 
 \begin{align}
 \mu\_{a|b} &= \mu\_a + CB^{-1}\qty(b - \mu\_{b}) \\\\
@@ -119,7 +119,7 @@ Z=\mathcal{N}(0,1)
 mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:
 
 
-#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--org2b532dd}
+#### transformation into [standard normal](#standard-normal) {#transformation-into-standard-normal--orgc679936}
 
 \begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})

@@ -58,11 +58,13 @@ P(Y^{\*}|Y)
 
 through using [conditioning Gaussian distributions]({{< relref "KBhgaussian_distribution.md#conditioning-gaussian-distributions" >}}).
 
-Specifically:
+Specifically, with:
 
 \begin{equation}
 \mqty[\hat{y} \\\ y] \sim \mathcal{N} \qty(\mqty[m(X^{\*}) \\\ m(X)], \mqty[K(X^{\*}, X^{\*}) & K(X^{\*},X) \\\ K(X, X^{\*}) & K(X, X)])
 \end{equation}
+
+we can compute a new mean and a new covariance using [conditioning Gaussian distributions]({{< relref "KBhgaussian_distribution.md#conditioning-gaussian-distributions" >}})
 
 
 #### Noisy Measurements {#noisy-measurements}
@@ -115,12 +117,13 @@ y\_{\min} - y, \text{if}\ y < y\_{\min} \\\\
 \end{cases}
 \end{equation}
 
-And then, you choose what to look at by:
+then, we have the "probability of improvement" metric at:
 
 \begin{equation}
-P(y < y\_{\min}) = \int\_{\infty}^{y\_{\min}} \mathcal{N}(y | \hat{\mu}, \hat{\Sigma}) \dd{y}
+P(y < y\_{\min}) &= \int\_{-\infty}^{y\_{\min}} \mathcal{N}(y | \hat{\mu}, \hat{\Sigma}) \dd{y}  \\\\
+&= \Phi\qty( \frac{y\_{\min } - \hat{\mu}}{\hat{\Sigma}})
 \end{equation}
 
-(i.e. we want to find points that are very possible to improve).
+(i.e. we want to find points that are very possible to improve). This could be zero when \\(\hat{\Sigma} = 0\\), which happens when we are at a noiseless point.
 
 You can also do this by the expected value of improvement

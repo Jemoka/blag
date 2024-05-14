@@ -15,3 +15,7 @@ Communication System Design!
     -   [on-off keying]({{< relref "KBhsu_engr76_may072024.md#on-off-keying" >}})
     -   [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}})
 -   [passband digital encoding]({{< relref "KBhsu_engr76_may092024.md#passband-digital-encoding--kbhsu-engr76-may072024-dot-md" >}})
+-   [energy of signal]({{< relref "KBhsu_engr76_may142024.md#energy-of-signal" >}})
+-   [error-correction code]({{< relref "KBhsu_engr76_may142024.md#error-correction-code" >}})
+    -   [rate (error correction code)]({{< relref "KBhsu_engr76_may142024.md#rate--error-correction-code" >}})
+    -   [repetition code]({{< relref "KBhsu_engr76_may142024.md#repetition-code" >}})

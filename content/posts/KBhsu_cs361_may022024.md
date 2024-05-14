@@ -27,6 +27,8 @@ To do this, we essentially infer the weighting scheme by asking "do you like sys
 &\ w \geq 0
 \end{align}
 
+**unlike the rest of everything, we are MAXIMIZING here** idk why
+
 
 ## Sampling Plans {#sampling-plans}
 
@@ -89,7 +91,7 @@ Limitation: if there are just two points that are close together, this metric sc
 
 ### Morris-Mitchell {#morris-mitchell}
 
-We have a hype-parameter \\(q\\), which checks all of the possible norms to use between points. Consider \\(d\_{i}\\) to be the ith-pairwise distance between the points. Then, for:
+We have a hype-parameter \\(q\\), which checks all of the possible norms to use between points. Consider \\(d\_{i}\\) to be the ith-pairwise distance between the points with the [Lp Norm]({{< relref "KBhlp_norm.md" >}}) for your choice of \\(p\\). Then, for:
 
 \begin{equation}
 \Phi\_{q}(X) = \qty(\sum\_{i}^{}d\_{i}^{-q})^{\frac{1}{q}}
@@ -176,3 +178,12 @@ a radial basis function is a basis function that acts on the _distance_ to a loc
 ### [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}}) {#regularization--kbhsu-cs224n-apr162024-dot-md}
 
 Especially for noisy things, you ideally want some kind of regularization: see [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}})
+
+
+#### L2 Regularization {#l2-regularization}
+
+\begin{equation}
+\min\_{\theta} || y - B(x)\theta ||\_{2}^{2} + \lambda  || \theta ||^{2}\_{2}
+\end{equation}
+
+this is kind of a like a multi-objective [Weight Method]({{< relref "KBhsu_cs361_apr302024.md#weight-method" >}}).
