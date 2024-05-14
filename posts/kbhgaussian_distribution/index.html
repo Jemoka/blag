@@ -5,7 +5,7 @@ conditioning Gaussian distributions For distributions that follow Gaussian distr
 \begin{align} \mqty[a \\ b] \sim \mathcal{N} \qty(\mqty[\mu_{a}\\ \mu_{b}], \mqty(A & C \\ C^{\top} & B)) \end{align}
 meaning, each one can be marginalized as:
 \begin{align} a \sim \mathcal{N}(\mu_{a}, A) \\ b \sim \mathcal{N}(\mu_{b}, B) \\ \end{align}
-Conditioning works too with those terms:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+Conditioning works too with those terms, for \(a|b\):"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Gaussian distribution</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#conditioning-gaussian-distributions>conditioning Gaussian distributions</a></li><li><a href=#standard-normal-density-function>standard normal density function</a></li><li><a href=#gaussian-distribution>Gaussian distribution</a><ul><li><a href=#constituents>constituents</a></li><li><a href=#requirements>requirements</a></li><li><a href=#additional-information>additional information</a></li></ul></li></ul></nav></aside><main><article><div><p>\begin{equation}
@@ -15,7 +15,7 @@ Conditioning works too with those terms:"><meta name=author content="Houjun Liu"
 \end{align}</p><p>meaning, each one can be marginalized as:</p><p>\begin{align}
 a \sim \mathcal{N}(\mu_{a}, A) \\
 b \sim \mathcal{N}(\mu_{b}, B) \\
-\end{align}</p><p>Conditioning works too with those terms:</p><p>\begin{align}
+\end{align}</p><p>Conditioning works too with those terms, for \(a|b\):</p><p>\begin{align}
 \mu_{a|b} &= \mu_a + CB^{-1}\qty(b - \mu_{b}) \\
 \sigma_{a|b} &= A - CB^{-1}C^{\top}
 \end{align}</p><h2 id=standard-normal-density-function>standard normal density function</h2><p>This is a function used to model many Gaussian distributions.</p><p>\begin{equation}
@@ -32,7 +32,7 @@ F(x) = \Phi \qty( \frac{x-\mu}{\sigma})
 Y = aX + b
 \end{equation}</p><p>where \(X \sim \mathcal{N}\)</p><p>We will end up with another normal \(Y \sim \mathcal{N}\) such that:</p><ul><li>mean: \(au + b\)</li><li>variance: \(a^{2}\sigma^{2}\)</li></ul><h4 id=standard-normal>standard normal</h4><p>The standard normal is:</p><p>\begin{equation}
 Z=\mathcal{N}(0,1)
-\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--org2b532dd>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
+\end{equation}</p><p>mean 0, variance 1. You can transform anything into a standard normal via the following linear transform:</p><h4 id=transformation-into-standard-normal--orgc679936>transformation into <a href=#standard-normal>standard normal</a></h4><p>\begin{equation}
 X \sim \mathcal{N}(\mu, \sigma^{2})
 \end{equation}</p><p>and, we can shift it into a standard normal with:</p><p>\begin{equation}
 Z = \frac{X-\mu}{\sigma}
