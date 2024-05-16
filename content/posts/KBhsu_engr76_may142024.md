@@ -27,7 +27,7 @@ the [Hamming Distance](#hamming-distance) between two sequences is the number of
 
 an [error-correction code](#error-correction-code) is a collection of binary strings called "codewords"
 
-1.  size of the code: numer of codewords \\(M\\) (\\(M=2\\) for [repetition codes](#repetition-code)), we want this to be large because [Shannon's Source-Coding Theorem]({{< relref "KBhsu_engr76_apr092024.md#shannon-s-source-coding-theorem" >}})
+1.  size of the code: numer of codewords \\(M\\) (\\(M=2\\) for [repetition codes](#repetition-code)), we want this to be large because [Shannon's Source-Coding Theorem]({{< relref "KBhsu_engr76_apr092024.md#shannon-s-source-coding-theorem" >}}) --- the number of bits that the code can encode is \\(\log\_{2} M\\), because that's the number of combinations of a binary bit \\(\log\_{2} M\\) which you can encode with a thing of size \\(M\\)
 2.  length of the code: the length of each codeword \\(L\\) (\\(M =3\\) for [repetition codes](#repetition-code)), we want this to be small to be efficient
 3.  minimum distance of the code: the minimum distance between any two codewords in the code \\(d\_{c}\\) (measure by [Hamming Distance](#hamming-distance), [repetition codes](#repetition-code) its 3), we want this high
 
