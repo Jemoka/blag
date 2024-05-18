@@ -10,7 +10,7 @@ an [error-correction code]({{< relref "KBhsu_engr76_may142024.md#error-correctio
 
 This code allows you to correct up to:
 
--   \\(t = \left\lfloor \frac{d\_{c}-1}{t}\right\rfloor\\) one bit errors
+-   \\(t = \left\lfloor \frac{d\_{c}-1}{2}\right\rfloor\\) one bit errors
 -   and can detect up to \\(d-1\\) errors (otherwise we can't get up to a minimum size codeword
 
 
@@ -117,7 +117,7 @@ and so fourth. Each row of these matrices is a codeword.
 
 Each row will be the same amount of \\(1\\) and $0$s. This means that each row is the same distance to all \\(0\\). Any two codewords is also the same distance away from each other, which is the distance to \\(0\\).
 
-The size of the [Hadamard Code](#hadamard-code) is \\(M = 2^{h}\\) \\(L = 2^{h}\\) \\(d=2^{h-1}\\) where \\(h\\) is the Hadamard matrix you used.
+The size of the [Hadamard Code](#hadamard-code) is \\(M = 2^{h}\\), \\(L = 2^{h}\\), \\(d=2^{h-1}\\) where \\(h\\) is the Hadamard matrix you used.
 
 You will note the rate of this code is quite small:
 

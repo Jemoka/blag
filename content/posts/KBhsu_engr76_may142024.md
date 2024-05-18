@@ -40,7 +40,7 @@ Note that if we had \\(t\\) bit flips, we would have a [Hamming Distance](#hammi
 
 formally:
 
--   an error correction code can correct \\(t\\) errors [IFF]({{< relref "KBhequivalence.md" >}}) its minimum distance is \\(d\_{c} \geq 2t+1\\); meaning if you have a code error \\(d\_{c}\\), we can correct up to \\(t = \left\lfloor \frac{d\_{c}-1}{t}\right\rfloor\\)
+-   an error correction code can correct \\(t\\) errors [IFF]({{< relref "KBhequivalence.md" >}}) its minimum distance is \\(d\_{c} \geq 2t+1\\); meaning if you have a code error \\(d\_{c}\\), we can correct up to \\(t = \left\lfloor \frac{d\_{c}-1}{2}\right\rfloor\\)
 -   a code can **detect** \\(t\\) errors [IFF]({{< relref "KBhequivalence.md" >}}) \\(d\_{c} \geq t+1\\), meaning we can't accidentally end up with a random codeword
 
 
