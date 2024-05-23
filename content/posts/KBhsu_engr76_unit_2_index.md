@@ -24,3 +24,5 @@ Communication System Design!
     -   [perfect code]({{< relref "KBhsu_engr76_may162024.md#minimum-id-5122dbff-4b46-4fe1-a4b3-5dd2ed281172-error-correction-code-length" >}}): [Hamming Code]({{< relref "KBhsu_engr76_may162024.md#hamming-code" >}})
         -   [Hamming Code Rate]({{< relref "KBhsu_engr76_may162024.md#hamming-code-rate" >}})
     -   [Hadamard Code]({{< relref "KBhsu_engr76_may162024.md#hadamard-code" >}})
+-   [Convolutional Code]({{< relref "KBhsu_engr76_may232024.md#convolutional-code" >}})
+    -   [Viterbi Decoding]({{< relref "KBhsu_engr76_may232024.md#viterbi-decoding" >}})
