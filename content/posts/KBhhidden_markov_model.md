@@ -26,15 +26,17 @@ Given an observation \\(o\_1, ..., o\_{T}\\) and a model, we compute $P(O | &lam
 
 Given observations, find the state sequence \\(q1, ..., q\_{T}\\) most likely to have generated
 
+its dijisktra: for every block, label each edge in the trellis with distance to the recieved code. then we dijistra to find the shorted path based on those edge distances.
+
 
 ### training {#training}
 
-Given observations \\(O\\), find the model parameters \\(\lambda\\) that maximize \\(P(O|\lambda)\\), the [Maximum Likelihood Parameter Learning]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}).
+Given observations \\(O\\), find the model parameters \\(\lambda\\) that maximize \\(P(O|\lambda)\\), the .
 
 
 ## continuous-density [HMM]({{< relref "KBhhidden_markov_model.md" >}}) {#continuous-density-hmm--kbhhidden-markov-model-dot-md}
 
-There are some [HMM]({{< relref "KBhhidden_markov_model.md" >}})s that blend the discrete timestamps into [Gaussian mixture model]({{< relref "KBhprobability_distributions.md#gaussian-mixture-model" >}})s.
+There are some [HMM]({{< relref "KBhhidden_markov_model.md" >}})s that blend the discrete timestamps into s.
 
 
 ## continuous speech {#continuous-speech}

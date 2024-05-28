@@ -6,18 +6,16 @@ draft = false
 
 Communication System Design!
 
-[Fundamental Problem of Communication]({{< relref "KBhsu_engr76_may072024.md#fundamental-problem-of-communication" >}})
 
--   [communication]({{< relref "KBhsu_engr76_may072024.md#communication" >}})
-    -   [Analog Communication]({{< relref "KBhanalog_vs_digital_signal.md#analog-communication" >}})
-    -   [Digital Communication]({{< relref "KBhanalog_vs_digital_signal.md#digital-communication" >}})
--   [digital encoding]({{< relref "KBhsu_engr76_may072024.md#digital-encoding" >}})
-    -   [on-off keying]({{< relref "KBhsu_engr76_may072024.md#on-off-keying" >}})
-    -   [sinc digital encoding]({{< relref "KBhsu_engr76_may092024.md#sinc-digital-encoding" >}})
--   [passband digital encoding]({{< relref "KBhsu_engr76_may092024.md#passband-digital-encoding--kbhsu-engr76-may072024-dot-md" >}})
+
+-   -
+    -
+-   -
+    -
+-
 -   [energy of signal]({{< relref "KBhsu_engr76_may142024.md#energy-of-signal" >}})
 -   [error-correction code]({{< relref "KBhsu_engr76_may142024.md#error-correction-code" >}})
-    -
+    -   [rate (error correction code)]({{< relref "KBhsu_engr76_may142024.md#rate--error-correction-code" >}})
     -   [repetition code]({{< relref "KBhsu_engr76_may142024.md#repetition-code" >}})
     -   [minimum error-correction code length]({{< relref "KBhsu_engr76_may162024.md#minimum-id-5122dbff-4b46-4fe1-a4b3-5dd2ed281172-error-correction-code-length" >}})
     -   [sphere packing bound]({{< relref "KBhsu_engr76_may162024.md#minimum-id-5122dbff-4b46-4fe1-a4b3-5dd2ed281172-error-correction-code-length" >}})
@@ -26,3 +24,4 @@ Communication System Design!
     -   [Hadamard Code]({{< relref "KBhsu_engr76_may162024.md#hadamard-code" >}})
 -   [Convolutional Code]({{< relref "KBhsu_engr76_may232024.md#convolutional-code" >}})
     -   [Viterbi Decoding]({{< relref "KBhsu_engr76_may232024.md#viterbi-decoding" >}})
+-   [Bit Error Rate]({{< relref "KBhsu_engr76_may282024.md#bit-error-rate" >}})
