@@ -66,4 +66,4 @@ The average value of many, independent repeated trials is close to the true expe
 
 Because the law of large numbers, the we can transmit the number of bit flips over a binary substitution channel with probability \\(Lp\\).
 
-So: design a code with very long codewords \\(L \gg 0\\) that can correct \\(L(p+\epsilon)\\) bitflips
+So: design a code with very long codewords \\(L \gg 0\\) that can correct \\(L(p+\epsilon)\\) bitflips for some small choice of \\(\epsilon > 0\\).
