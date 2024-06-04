@@ -52,3 +52,18 @@ p(y=r\_1 \dots r\_{n} | x = t\_1 \dots t\_{k}) = p(r\_1|t\_1) p(r\_2|t\_2) \dots
 For any communication channel (characterized by \\(p(y|x)\\), for a pair of input and output), there exists a way to construct an encoder/decoder pair that make it possible to send information over this channel at some rate \\(R\\) (bits/channel use) while making the probability of error arbitrarily small as long as \\(R < C\\).
 
 Conversely, trying to send information at rate \\(R > C\\) bits/channel use, errors are inevitable.
+
+\begin{equation}
+C = \max\_{\text{dist}(X)} I (x:y)
+\end{equation}
+
+the capacity of a channel is the maximum mutual information that could be given any choice of input distribution. you should choose the input that induces the maximum mutual information between the input and output of a channel. where \\(I\\) is the [mutual information]({{< relref "KBhmutual_information.md" >}}).
+
+
+## Law of Large Numbers {#law-of-large-numbers}
+
+The average value of many, independent repeated trials is close to the true expectation.
+
+Because the law of large numbers, the we can transmit the number of bit flips over a binary substitution channel with probability \\(Lp\\).
+
+So: design a code with very long codewords \\(L \gg 0\\) that can correct \\(L(p+\epsilon)\\) bitflips

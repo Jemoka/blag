@@ -67,3 +67,4 @@ draft = false
 -   [SU-ENGR76 MAY232024]({{< relref "KBhsu_engr76_may232024.md" >}})
 -   [SU-ENGR76 MAY282024]({{< relref "KBhsu_engr76_may282024.md" >}})
 -   [SU-ENGR76 MAY302024]({{< relref "KBhsu_engr76_may302024.md" >}})
+-   [SU-ENGR76 JUN042024]({{< relref "KBhsu_engr76_june042024.md" >}})

@@ -23,9 +23,25 @@ draft = false
 I(X ; Y) = D\_{KL}(P\_{ (X, Y) } | P\_{X} \otimes P\_{Y})
 \end{equation}
 
+which can also be written as:
+
+\begin{equation}
+I(X:Y) = H(X) + H(Y)  - H(X,Y)
+\end{equation}
+
+where \\(H\\) is [entropy]({{< relref "KBhsu_engr76_apr042024.md#information-value" >}}) (recall that \\(H(X,Y) \leq H(X)+H(Y)\\) always.
+
 "[mutual information]({{< relref "KBhmutual_information.md" >}}) between \\(X\\) and \\(Y\\) is the additional information contributed by the "
 
 {{< figure src="/ox-hugo/2023-03-05_23-07-58_screenshot.png" >}}
 
 
 ## additional information {#additional-information}
+
+
+### mutual information and independence {#mutual-information-and-independence}
+
+-   if \\(X \perp Y\\), then \\(H(X)+H(Y) = H(X,Y)\\), so \\(I(X:Y) = 0\\)
+-   otherwise, we have \\(I(X:Y) > 0\\)
+
+This is important because
