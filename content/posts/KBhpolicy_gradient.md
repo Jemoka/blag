@@ -48,7 +48,7 @@ We can now write out the \\(\Delta U\\) with:
 \Delta U = \qty[U(\theta+ \Delta \theta^{1}) - U(\theta), \dots, U(\theta+ \Delta \theta^{m}) - U(\theta)]
 \end{equation}
 
-We have to compute [Roll-out utility]({{< relref "KBhpolicy_evaluation.md#roll-out-utility" >}}) for each \\(U(\theta + ...)\\)
+We have to compute [Roll-out utility]({{< relref "KBhpolicy_evaluation.md#rollout-utility" >}}) for each \\(U(\theta + ...)\\)
 
 We now want to fit a function between \\(\Delta \theta\\) to \\(\Delta U\\), because from the definition of the gradient we have:
 

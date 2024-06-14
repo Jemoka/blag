@@ -16,9 +16,9 @@ we are at an initial state, and we have a series of goal states, and we want to 
 
 We can solve this just by:
 
--   [value iteration]({{< relref "KBhvalue_iteration.md" >}})
--   simulate a trajectory and only updating reachable state: [RTDP]({{< relref "KBhltrdp.md#real-time-dynamic-programming" >}}), [LRTDP]({{< relref "KBhltrdp.md" >}})
--   [MBP]({{< relref "KBhmbp.md" >}})
+-   [value iteration]({{< relref "../../Dropbox/knowledgebase/KBhvalue_iteration.md" >}})
+-   simulate a trajectory and only updating reachable state: [RTDP]({{< relref "../../Dropbox/knowledgebase/KBhltrdp.md#real-time-dynamic-programming" >}}), [LRTDP]({{< relref "../../Dropbox/knowledgebase/KBhltrdp.md" >}})
+-   [MBP]({{< relref "../../Dropbox/knowledgebase/KBhmbp.md" >}})
 
 
 ## Problem {#problem}
@@ -34,13 +34,13 @@ MDP + Goal States
 
 ## Approach {#approach}
 
-Combining [LRTDP]({{< relref "KBhltrdp.md" >}}) with anytime dynamics
+Combining [LRTDP]({{< relref "../../Dropbox/knowledgebase/KBhltrdp.md" >}}) with anytime dynamics
 
-1.  run GPT (not the transformer, "General Planning Tool", think [LRTDP]({{< relref "KBhltrdp.md" >}})) exact solver
+1.  run GPT (not the transformer, "General Planning Tool", think [LRTDP]({{< relref "../../Dropbox/knowledgebase/KBhltrdp.md" >}})) exact solver
 2.  use GPT policy for solved states or visited more than a certain threshold
-3.  uses [MBP]({{< relref "KBhmbp.md" >}}) policy for other states
+3.  uses [MBP]({{< relref "../../Dropbox/knowledgebase/KBhmbp.md" >}}) policy for other states
 4.  policy evaluation for convergence
 
 {{< figure src="/ox-hugo/2024-02-15_09-27-58_screenshot.png" >}}
 
-"use GPT solution as much as possible, and when we haven't ever visited a place due to the search trajectories, we can use [MBP]({{< relref "KBhmbp.md" >}}) to supplement the solution"
+"use GPT solution as much as possible, and when we haven't ever visited a place due to the search trajectories, we can use [MBP]({{< relref "../../Dropbox/knowledgebase/KBhmbp.md" >}}) to supplement the solution"

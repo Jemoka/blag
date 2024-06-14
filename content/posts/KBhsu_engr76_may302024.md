@@ -34,13 +34,13 @@ Consider some input output pair:
 p(y=10 | x = 00) = p(y\_1=1 | x\_1=0, x\_2=0)p(y\_2=0| y\_1=1, x\_1=0, x\_2=0)
 \end{equation}
 
-A memoryless channel becomes
+A memoryless channel becomes[^fn:1]
 
 \begin{equation}
 p(y\_1=1 | x\_1=0, x\_2=0)p(y\_2=0| y\_1=1, x\_1=0, x\_2=0) = p(y\_1=1 | x\_1=0)p(y\_2=0|x\_2=0)
 \end{equation}
 
-This means
+This means[^fn:2]
 
 \begin{equation}
 p(y=r\_1 \dots r\_{n} | x = t\_1 \dots t\_{k}) = p(r\_1|t\_1) p(r\_2|t\_2) \dots p(r\_{n}|t\_{n})
@@ -64,6 +64,9 @@ the capacity of a channel is the maximum mutual information that could be given 
 
 The average value of many, independent repeated trials is close to the true expectation.
 
-Because the law of large numbers, the we can transmit the number of bit flips over a binary substitution channel with probability \\(Lp\\).
+Because the law of large numbers (<a href="#citeproc_bib_item_1">Wolf et al. 2020</a>), the we can transmit the number of bit flips over a binary substitution channel with probability \\(Lp\\).
 
 So: design a code with very long codewords \\(L \gg 0\\) that can correct \\(L(p+\epsilon)\\) bitflips for some small choice of \\(\epsilon > 0\\).
+
+[^fn:1]: test foonote
+[^fn:2]: its true though it may not
