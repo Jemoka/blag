@@ -4,6 +4,11 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+1.  if paper has software isolation using Rust, sort into software isolation categories
+2.  if the paper does not, scan for incorrect claims and then sort into either irrelevant or wrong mutability (keywords: mutable, borrow, reference, invariant)
+
+---
+
 1.  IM/PUI does **not** cause an issue because of narrow extension interface (NetBricks)
 2.  IM/PUI does cause an issue, and is handled
 3.  IM/PUI does cause an issue, and is deferred to future work
@@ -25,3 +30,5 @@ and recognize they are not solving it, but defer to future work. A count of this
 immutable and mutable references; an immutable refer-
 ence is a reference that when held restricts access to the
 underlying object to be read-only." -- this is straight from the splinter paper. Note that this might not mean the authors don't know about interior mutability, but they might be simplifying for the reader.
+
+---
