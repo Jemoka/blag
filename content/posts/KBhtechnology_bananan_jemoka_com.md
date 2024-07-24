@@ -2,6 +2,7 @@
 title = "Technology: bananan.jemoka.com"
 author = ["Houjun Liu"]
 draft = false
+layout = "blank"
 +++
 
 Hostname: **bananan.jemoka.com**
