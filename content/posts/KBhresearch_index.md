@@ -41,7 +41,7 @@ In industry, I lead the development of [Condution](https://www.condution.com/), 
 <div style="padding: 15px 0">
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">SISL (2024)</div>
 <div style="font-weight: 500">ASTPrompter: Weakly Supervised Automated Language Model Red-Teaming to Identify Likely Toxic Prompts</div>
-<div><u>Hardy, A.</u>, <u>Liu, H.</u>, Lange, B., Kochenderfer M. J.</div>
+<div>Hardy, A.*, <u>Liu, H.*</u>, Lange, B., Kochenderfer M. J.</div>
 <div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://arxiv.org/abs/2407.09447">arXiv</a></span></div>
 </div>
 
