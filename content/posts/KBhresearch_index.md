@@ -31,7 +31,7 @@ Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around St
 
 ## Research {#research}
 
-I'm broadly interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****; recently, I've been digging into 1) building better tools for language and speech processing make state-of-the-art classic NLP tasks accessible and useful 2) using and designing improved mechanistic approaches to large language model decoding and understanding and 3) exploring the applications of these models on various applied domains such as dementia and emergency medicine.
+I'm broadly interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****; recently, I've been digging into 1) building better tools for language and speech processing to make state-of-the-art classic NLP tasks accessible and useful 2) using and designing improved mechanistic approaches to large language model decoding and understanding and 3) exploring the applications of these models on various applied domains such as dementia and emergency medicine.
 
 
 ## Projects {#projects}
