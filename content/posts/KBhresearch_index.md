@@ -8,7 +8,7 @@ layout = "blank"
 
 <h1 style="display:inline-block"> 👋 Howdy, I'm Houjun Liu! </h1>
 
-I'm a first-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). I'm broadly interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****; recently, I've been digging into 1) building better tools for language and speech processing make state-of-the-art classic NLP tasks accessible and useful 2) designing improved algorithmic approaches to large language model training + decoding to improve multi-hop decisions and conversation tracking and 3) exploring the applications of these models on various applied domains such as dementia and emergency medicine.
+I'm a second-year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), gracious to be advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). In the course of my research, I have also had the fortunate opportunity to work under Prof. Chris Manning with Stanford NLP, CMU [TalkBank](https://talkbank.org/) under Prof. Brian MacWhinney, and Prof. Xin Liu at UC Davis Engineering. I am affiliated with the [Stanford NLP Group](https://nlp.stanford.edu/) and [Stanford Intelligent Systems Lab](https://sisl.stanford.edu/).
 
 Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. Check out ****[my projects](#projects)**** below. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
@@ -29,11 +29,9 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [grab dinner with me](https://cal.com/houjun/dinner) :)
 
 
-## About {#about}
+## Research {#research}
 
-I am a research engineer at the [TalkBank Project](https://talkbank.org/) at CMU under the supervision of Prof. Brian MacWhinney, where I develop better [models](https://huggingface.co/talkbank/) and [tools](https://github.com/talkbank/batchalign2) for clinical language sample analysis. I also work with the Stanford NLP Group, under direction of Prof. Chris Manning, on both mechanistically understanding language models and using them to efficiently solve semantic and syntax tagging tasks with [Stanza](https://github.com/stanfordnlp/stanza). Finally, I am a research assistant with Prof. [Xin Liu](https://xinliu.engineering.ucdavis.edu/) at UC Davis and at [UC Davis Health](https://health.ucdavis.edu/alzheimers/), where I use transformer models to push our understanding of dementia.
-
-In industry, I lead the development of [Condution](https://www.condution.com/), [simon](https://simon.shabang.io/), and am a managing partner at [#!/Shabang](https://www.shabang.io/). Previously, I worked as a consulting ML engineer at [Dragonfruit AI](https://www.dragonfruit.ai/) under the AI Operations team.
+I'm broadly interested in ****Natural Language Processing**** and ****Speech Language Sample Analysis****; recently, I've been digging into 1) building better tools for language and speech processing make state-of-the-art classic NLP tasks accessible and useful 2) using and designing improved mechanistic approaches to large language model decoding and understanding and 3) exploring the applications of these models on various applied domains such as dementia and emergency medicine.
 
 
 ## Projects {#projects}
