@@ -53,7 +53,6 @@ Yay! (more seriously)
 
 -   pretraining
 -   squad
--   consistency (this is weak, hence theory maybe helpful, or we can skip)
 
 
 #### Part 3: Emperics: Dropout Has Knowledge Storage Consiquences {#part-3-emperics-dropout-has-knowledge-storage-consiquences}
@@ -65,6 +64,7 @@ Yay! (more seriously)
 
 #### Part 4: Impact: look, editing is easier without dropout (no data yet) {#part-4-impact-look-editing-is-easier-without-dropout--no-data-yet}
 
+-   consistency (this is weak, hence theory maybe helpful, or we can skip)
 -   MEND (just worked yay!)
 -   Finetune (echo to squad)
 -   LoRA
