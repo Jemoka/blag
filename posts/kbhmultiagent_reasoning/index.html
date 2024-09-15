@@ -1,8 +1,46 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>multiagent reasoning</title>
-<meta name=description content="simple games constituents agent \(i \in X\) the set of agents. joint action space: \(A = A&rsquo; \times A^{2} \times &mldr; \times A^{k}\) joint action would be one per agent \(\vec{a} = (a_{1}, &mldr;, a_{k})\) joint reward function \(R(a) = R&rsquo;(\vec{a}), &mldr;, R(\vec{a})\) additional information prisoner&rsquo;s dilemma Cooperate Defect Cooperate -1, -1 -4, 0 Defect 0, -4 -3, -3 traveler&rsquo;s dilemma two people write down the price of their luggage, between 2-100 the lower amount gets that value plus 2 the higher amount gets the lower amount minus 2 joint policy agent utility for agent number \(i\)"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<meta name=description content="simple games
+constituents
+
+agent \(i \in X\) the set of agents.
+joint action space: \(A = A&rsquo; \times A^{2} \times &mldr; \times A^{k}\)
+joint action would be one per agent \(\vec{a} = (a_{1}, &mldr;, a_{k})\)
+joint reward function \(R(a) = R&rsquo;(\vec{a}), &mldr;, R(\vec{a})\)
+
+additional information
+prisoner&rsquo;s dilemma
+
+  
+      
+          
+          Cooperate
+          Defect
+      
+  
+  
+      
+          Cooperate
+          -1, -1
+          -4, 0
+      
+      
+          Defect
+          0, -4
+          -3, -3
+      
+  
+
+traveler&rsquo;s dilemma
+
+two people write down the price of their luggage, between 2-100
+the lower amount gets that value plus 2
+the higher amount gets the lower amount minus 2
+
+joint policy agent utility
+for agent number \(i\)"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
-<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>multiagent reasoning</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#simple-games>simple games</a><ul><li><a href=#constituents>constituents</a></li><li><a href=#additional-information>additional information</a></li></ul></li><li><a href=#joint-policy-agent-utility>joint policy agent utility</a></li><li><a href=#response-model>response model</a><ul><li><a href=#best-response>best-response</a></li><li><a href=#softmax-response>softmax response</a></li><li><a href=#fictitious-play>fictitious play</a></li></ul></li><li><a href=#dominant-strategy-equilibrium>Dominant Strategy Equilibrium</a></li><li><a href=#nash-equilibrium>Nash Equilibrium</a></li></ul></nav></aside><main><article><div><h2 id=simple-games>simple games</h2><h3 id=constituents>constituents</h3><ul><li>agent \(i \in X\) the set of agents.</li><li>joint action space: \(A = A&rsquo; \times A^{2} \times &mldr; \times A^{k}\)</li><li>joint action would be one per agent \(\vec{a} = (a_{1}, &mldr;, a_{k})\)</li><li>joint reward function \(R(a) = R&rsquo;(\vec{a}), &mldr;, R(\vec{a})\)</li></ul><h3 id=additional-information>additional information</h3><h4 id=prisoner-s-dilemma>prisoner&rsquo;s dilemma</h4><table><thead><tr><th></th><th>Cooperate</th><th>Defect</th></tr></thead><tbody><tr><td>Cooperate</td><td>-1, -1</td><td>-4, 0</td></tr><tr><td>Defect</td><td>0, -4</td><td>-3, -3</td></tr></tbody></table><h4 id=traveler-s-dilemma>traveler&rsquo;s dilemma</h4><ul><li>two people write down the price of their luggage, between 2-100</li><li>the lower amount gets that value plus 2</li><li>the higher amount gets the lower amount minus 2</li></ul><h2 id=joint-policy-agent-utility>joint policy agent utility</h2><p>for agent number \(i\)</p><p>\begin{equation}
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>multiagent reasoning</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#simple-games>simple games</a><ul><li><a href=#constituents>constituents</a></li><li><a href=#additional-information>additional information</a></li></ul></li><li><a href=#joint-policy-agent-utility>joint policy agent utility</a></li><li><a href=#response-model>response model</a><ul><li><a href=#best-response>best-response</a></li><li><a href=#softmax-response>softmax response</a></li><li><a href=#fictitious-play>fictitious play</a></li></ul></li><li><a href=#dominant-strategy-equilibrium>Dominant Strategy Equilibrium</a></li><li><a href=#nash-equilibrium>Nash Equilibrium</a></li></ul></nav></aside><main><article><div><h2 id=simple-games>simple games</h2><h3 id=constituents>constituents</h3><ul><li>agent \(i \in X\) the set of agents.</li><li>joint action space: \(A = A&rsquo; \times A^{2} \times &mldr; \times A^{k}\)</li><li>joint action would be one per agent \(\vec{a} = (a_{1}, &mldr;, a_{k})\)</li><li>joint reward function \(R(a) = R&rsquo;(\vec{a}), &mldr;, R(\vec{a})\)</li></ul><h3 id=additional-information>additional information</h3><h4 id=prisoner-s-dilemma>prisoner&rsquo;s dilemma</h4><table><thead><tr><th style=text-align:left></th><th style=text-align:left>Cooperate</th><th style=text-align:left>Defect</th></tr></thead><tbody><tr><td style=text-align:left>Cooperate</td><td style=text-align:left>-1, -1</td><td style=text-align:left>-4, 0</td></tr><tr><td style=text-align:left>Defect</td><td style=text-align:left>0, -4</td><td style=text-align:left>-3, -3</td></tr></tbody></table><h4 id=traveler-s-dilemma>traveler&rsquo;s dilemma</h4><ul><li>two people write down the price of their luggage, between 2-100</li><li>the lower amount gets that value plus 2</li><li>the higher amount gets the lower amount minus 2</li></ul><h2 id=joint-policy-agent-utility>joint policy agent utility</h2><p>for agent number \(i\)</p><p>\begin{equation}
 U^{i} (\vec{\pi}) = \sum_{a \in A}^{} R^{(i)}(\vec{a}) \prod_{j}^{} \pi^{(j)}(a^{(j)})
 \end{equation}</p><p>this is essentially the reward you get given you took</p><h2 id=response-model>response model</h2><p>how would other agents respond to our system?</p><ul><li>\(a^{-i}\): joint action except for agent \(i\)</li><li>\(\vec{a} = (a^{i}, a^{-i})\),</li><li>\(R(a^{i}, a^{-i}) = R(\vec{a})\)</li></ul><h3 id=best-response>best-response</h3><p>deterministic best response model for agent \(i\):</p><p>\begin{equation}
 \arg\max_{a^{i} \in A^{i}} U^{i}(a^{i}, \pi^{-i})

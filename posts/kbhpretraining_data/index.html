@@ -1,6 +1,49 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Pretraining Data</title>
-<meta name=description content="Problems of pre-training data pre-training influence downstream capabilities &mldr;and therefore can escape into model generation real world users expect novelty Changes in Distribution Big Pretraining Data GPT2 deduplicated data Removed Wikipedia (to prevent data leak) Heuristic based cleaning GPT3 Deduplicated based on leaked data Llama the usual spheal
-removed high perplexity data using wiki n-gram model removed non-English deduplicated Llama 2 removed high volue of PII Removed non-english Pretraining Curation Decisions what to include what is the timestamp being scraped heuristic based cleaning?"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<meta name=description content="Problems of pre-training data
+
+pre-training influence downstream capabilities
+&mldr;and therefore can escape into model generation
+real world users expect novelty
+
+Changes in Distribution
+Big Pretraining Data
+GPT2
+
+deduplicated data
+Removed Wikipedia (to prevent data leak)
+Heuristic based cleaning
+
+GPT3
+
+Deduplicated
+based on leaked data
+
+Llama
+the usual spheal
+
+removed high perplexity data using wiki n-gram model
+removed non-English
+deduplicated
+
+Llama 2
+
+removed high volue of PII
+Removed non-english
+
+Pretraining Curation Decisions
+
+what to include
+what is the timestamp being scraped
+heuristic based cleaning? data cleaning? etc.
+language filtering (only take English?)
+PII removal
+dedup
+Toxicity + SafeURL filtering
+&ldquo;quality filtering&rdquo;
+sampling distributions
+
+Change in Model Age
+Good alignment shown between validation year and pre-training year, even mixing in older data."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Pretraining Data</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#problems-of-pre-training-data>Problems of pre-training data</a></li><li><a href=#changes-in-distribution>Changes in Distribution</a><ul><li><a href=#big-pretraining-data>Big Pretraining Data</a></li><li><a href=#pretraining-curation-decisions>Pretraining Curation Decisions</a></li><li><a href=#change-in-model-age>Change in Model Age</a></li><li><a href=#change-in-toxicity>Change in Toxicity</a></li><li><a href=#change-in-data-distribution>Change in Data Distribution</a></li></ul></li><li><a href=#reduce-memorization>Reduce Memorization</a><ul><li><a href=#check-for-memorization>Check for memorization</a></li><li><a href=#use-rlhf-or-something>Use RLHF or something</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=problems-of-pre-training-data>Problems of pre-training data</h2><ol><li>pre-training influence downstream capabilities</li><li>&mldr;and therefore can escape into model generation</li><li>real world users expect novelty</li></ol><h2 id=changes-in-distribution>Changes in Distribution</h2><h3 id=big-pretraining-data>Big Pretraining Data</h3><h4 id=gpt2>GPT2</h4><ul><li>deduplicated data</li><li>Removed Wikipedia (to prevent data leak)</li><li>Heuristic based cleaning</li></ul><h4 id=gpt3>GPT3</h4><ul><li>Deduplicated</li><li>based on leaked data</li></ul><h4 id=llama>Llama</h4><p>the usual spheal</p><ul><li>removed high perplexity data using wiki n-gram model</li><li>removed non-English</li><li>deduplicated</li></ul><h4 id=llama-2>Llama 2</h4><ul><li>removed high volue of PII</li><li>Removed non-english</li></ul><h3 id=pretraining-curation-decisions>Pretraining Curation Decisions</h3><ul><li>what to include</li><li>what is the timestamp being scraped</li><li>heuristic based cleaning? data cleaning? etc.</li><li>language filtering (only take English?)</li><li>PII removal</li><li>dedup</li><li>Toxicity + SafeURL filtering</li><li>&ldquo;quality filtering&rdquo;</li><li>sampling distributions</li></ul><h3 id=change-in-model-age>Change in Model Age</h3><p>Good alignment shown between validation year and pre-training year, even mixing in older data.</p><p>Implication: &ldquo;fine-tuned T5 may still be worse than fine-tuned llama, because T5 was <strong>pretrained</strong> using older data&mdash;despite even if FTing is newer&rdquo;</p><h3 id=change-in-toxicity>Change in Toxicity</h3><p>Filtering toxicity made the model worst at spotting toxicity.</p><h3 id=change-in-data-distribution>Change in Data Distribution</h3><p>out of domain answers do worse on out of domain results</p><h2 id=reduce-memorization>Reduce Memorization</h2><ol><li>de-duplication using <strong>approximate matching</strong></li><li>think carefully for multiple-epoch training (what is ok to memorize?)</li><li>remove sensitive memorization from pre-training data</li></ol><p>Two iffy strategies:</p><h3 id=check-for-memorization>Check for memorization</h3><p>Trivial style transfers can get around safety checks &ldquo;do the [copyrighted thing] in French&rdquo;; &ldquo;do the [copyrighted thing] with double the spaces&rdquo;.</p><h3 id=use-rlhf-or-something>Use RLHF or something</h3><p>&ldquo;hide flaws, and not eliminate them&rdquo;&mdash;edge case problems doesn&rsquo;t eliminate the underlying vulnerability.</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>

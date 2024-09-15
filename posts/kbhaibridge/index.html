@@ -1,7 +1,38 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>AIBridge</title>
 <meta name=description content="AIBridge is an introductory AI bootcamp developed and taught by Prof. Xin Liu, yours truly, and Samuel Ren in collaboration with AIFS.
-AIBRidge Notes Pause [more] to allow some time to see if people follow did y&rsquo;all not introduce pandas? Closest to doing this without try/except:
-slide 49: what is conc? is this too much recap time? Haven&rsquo;t we been recapping for a long while already? probably good to mention what is /content/iris."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+AIBRidge Notes
+
+Pause [more] to allow some time to see if people follow
+did y&rsquo;all not introduce pandas?
+
+Closest to doing this without try/except:
+
+slide 49: what is conc?
+is this too much recap time? Haven&rsquo;t we been recapping for a long while already?
+probably good to mention what is /content/iris.data, also, just opening from ./iris.data should work and will be probably more ergonomic
+read function confusion
+
+.read() => str
+.readlines() => [str]
+the pauses feel a tad ackward?
+speak up!
+
+
+
+
+
+SSE squares and lines need to be darker: increase opacity 39
+&ldquo;very common metric&rdquo; &mdash; not a metric
+motivate confidence value better; the &ldquo;middle&rdquo; question makes sense
+I think its actually probably good to explain cross-entropy in the future
+
+(i.e. its not a lot of fancy math + I think it provides a lot of intuition w.r.t. one-hot encoding, probablitiy distributions, etc.)
+
+
+Problem with how I made the old slides: multi-Class classification (1va, ava, etc.) needs better motivation before, otherwise throwing three classes on the screen is a tad confusing
+motivate that the whole random.seed business is so that the whole class can compare answers more effectively
+LogReg = LogisticRegression(), typically, name instance variables as lower snake case; so maybe call it my_log_reg or something
+"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>AIBridge</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#aibridge-notes>AIBRidge Notes</a></li></ul></nav></aside><main><article><div><p><a href=/posts/kbhaibridge/>AIBridge</a> is an introductory AI bootcamp developed and taught by <a href=/posts/kbhprof_xin_liu/>Prof. Xin Liu</a>, yours truly, and Samuel Ren in collaboration with <a href=/posts/kbhaifs/>AIFS</a>.</p><h2 id=aibridge-notes>AIBRidge Notes</h2><ul><li>Pause [more] to allow some time to see if people follow</li><li>did y&rsquo;all not introduce pandas?</li></ul><p>Closest to doing this without try/except:</p><ul><li>slide 49: what is conc?</li><li>is this too much recap time? Haven&rsquo;t we been recapping for a long while already?</li><li>probably good to mention what is <code>/content/iris.data</code>, also, just opening from <code>./iris.data</code> should work and will be probably more ergonomic</li><li>read function confusion<ul><li>.read() => str</li><li>.readlines() => [str]</li><li>the pauses feel a tad ackward?</li><li>speak up!</li></ul></li></ul><ul><li>SSE squares and lines need to be darker: increase opacity 39</li><li>&ldquo;very common metric&rdquo; &mdash; not a metric</li><li>motivate confidence value better; the &ldquo;middle&rdquo; question makes sense</li><li>I think its actually probably good to explain cross-entropy in the future<ul><li>(i.e. its not a lot of fancy math + I think it provides a lot of intuition w.r.t. one-hot encoding, probablitiy distributions, etc.)</li></ul></li><li>Problem with how I made the old slides: multi-Class classification (1va, ava, etc.) needs better motivation before, otherwise throwing three classes on the screen is a tad confusing</li><li>motivate that the whole <code>random.seed</code> business is so that the whole class can compare answers more effectively</li><li><code>LogReg = LogisticRegression()</code>, typically, name instance variables as lower snake case; so maybe call it <code>my_log_reg</code> or something</li></ul></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>

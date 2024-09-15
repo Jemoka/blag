@@ -1,6 +1,50 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Build a System, Not a Monolith</title>
 <meta name=description content="&ldquo;How do we build well developed AI systems without a bangin&rsquo; company&rdquo;
-Two main paradigms transfer learning: (pretrain a model, and) faster convergence, better performance *monolithic models: (pretrain a model, and) just use the pretrained model Problems with monolythic models Continual development of large language models mostly don&rsquo;t exist: no incremental updates To get better improvements, we throw out the old monolythic model Most of the research community can&rsquo;t participate in their development New Alternative Paradigm A very simple routing layer A very large collection of specialist models all from a base model Collaborative model development means that a large amount of contributors can band together to contribute to the development of the models Why Specialist models are cheaper and better to train few shot parameter efficient fine tuning is better liu et al few shot fine-tuning is better than few-shot in-context learning Specialist models can be communicable, incremental updates to a base model think: PEFT each of the specialist models can only need to update a small percent of the weights think &ldquo;adapters&rdquo;: parameter efficient updates Routing task2vec: task embedding for meta learning Achille et al efficiently tuned parameters are task embeddings Zhou et al distinction between MoE instead of routing in sub-layer level routing, we are routing at the input level we look at the Novel Tasks (Model Merging) Tasks can be considered as a composition of skills."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+Two main paradigms
+
+transfer learning: (pretrain a model, and) faster convergence, better performance
+*monolithic models: (pretrain a model, and) just use the pretrained model
+
+Problems with monolythic models
+
+Continual development of large language models mostly don&rsquo;t exist: no incremental updates
+To get better improvements, we throw out the old monolythic model
+Most of the research community can&rsquo;t participate in their development
+
+New Alternative Paradigm
+
+A very simple routing layer
+A very large collection of specialist models all from a base model
+Collaborative model development means that a large amount of contributors can band together to contribute to the development of the models
+
+Why
+
+Specialist models are cheaper and better to train
+
+few shot parameter efficient fine tuning is better liu et al
+few shot fine-tuning is better than few-shot in-context learning
+
+
+Specialist models can be communicable, incremental updates to a base model
+
+think: PEFT
+each of the specialist models can only need to update a small percent of the weights
+think &ldquo;adapters&rdquo;: parameter efficient updates
+
+
+
+Routing
+
+task2vec: task embedding for meta learning Achille et al
+efficiently tuned parameters are task embeddings Zhou et al
+
+distinction between MoE
+
+instead of routing in sub-layer level routing, we are routing at the input level
+we look at the
+
+Novel Tasks (Model Merging)
+Tasks can be considered as a composition of skills."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Build a System, Not a Monolith</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#two-main-paradigms>Two main paradigms</a></li><li><a href=#problems-with-monolythic-models>Problems with monolythic models</a></li><li><a href=#new-alternative-paradigm>New Alternative Paradigm</a><ul><li><a href=#why>Why</a></li><li><a href=#routing>Routing</a></li><li><a href=#novel-tasks--model-merging>Novel Tasks (Model Merging)</a></li></ul></li><li><a href=#git-theta>Git-Theta</a></li><li><a href=#petals>Petals</a></li></ul></nav></aside><main><article><div><p>&ldquo;How do we build well developed AI systems without a bangin&rsquo; company&rdquo;</p><h2 id=two-main-paradigms>Two main paradigms</h2><ul><li><strong>transfer learning</strong>: (pretrain a model, and) faster convergence, better performance</li><li><strong>*monolithic models</strong>: (pretrain a model, and) just use the pretrained model</li></ul><h2 id=problems-with-monolythic-models>Problems with monolythic models</h2><ul><li>Continual development of large language models mostly don&rsquo;t exist: no incremental updates</li><li>To get better improvements, we throw out the old monolythic model</li><li>Most of the research community can&rsquo;t participate in their development</li></ul><h2 id=new-alternative-paradigm>New Alternative Paradigm</h2><ul><li>A very simple routing layer</li><li>A very large collection of specialist models all from a base model</li><li>Collaborative model development means that a large amount of contributors can band together to contribute to the development of the models</li></ul><h3 id=why>Why</h3><ul><li>Specialist models are cheaper and better to train<ul><li>few shot parameter efficient fine tuning is better liu et al</li><li><strong>few shot fine-tuning is better than few-shot in-context learning</strong></li></ul></li><li>Specialist models can be communicable, incremental updates to a base model<ul><li>think: <a href=/posts/kbhpeft/>PEFT</a></li><li>each of the specialist models can only need to update a small percent of the weights</li><li>think &ldquo;adapters&rdquo;: parameter efficient updates</li></ul></li></ul><h3 id=routing>Routing</h3><ul><li>task2vec: task embedding for meta learning Achille et al</li><li>efficiently tuned parameters are task embeddings Zhou et al</li></ul><h4 id=distinction-between-moe>distinction between MoE</h4><ul><li>instead of routing in sub-layer level routing, we are routing at the <strong>input level</strong></li><li>we look at the</li></ul><h3 id=novel-tasks--model-merging>Novel Tasks (Model Merging)</h3><p>Tasks can be considered as a composition of skills.</p><ol><li>each task can be encoded as a composition of skills</li><li>we can merge the skills of sub-models</li></ol><h4 id=usual-updates>Usual updates</h4><ol><li>we take a pretrained model</li><li>we adapt it to some target task</li></ol><h4 id=model-merging>Model Merging</h4><ul><li><p>Fisher-weight averaging</p><p><strong>&ldquo;Merging models with fisher-weight averaging&rdquo;, Matena et al</strong>

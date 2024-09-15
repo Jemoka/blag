@@ -1,10 +1,25 @@
 <!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Anytime Error Minimization Search</title>
 <meta name=description content="Big picture: combining off-line and on-line approaches maybe the best way to tackle large POMDPs.
 Try planning:
-only where we are only where we can reach Take into account three factors:
-uncertainty in the value function reachability from the current belief actions that are likely optimal It allows policy improvement on any base policy.
-Setup Discrete POMDPs:
-\(L\), lower bound \(U\), upper-bound \(b_0\): current belief Two main phases: the algorithm"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+
+only where we are
+only where we can reach
+
+Take into account three factors:
+
+uncertainty in the value function
+reachability from the current belief
+actions that are likely optimal
+
+It allows policy improvement on any base policy.
+Setup
+Discrete POMDPs:
+
+\(L\), lower bound
+\(U\), upper-bound
+\(b_0\): current belief
+
+Two main phases: the algorithm"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Anytime Error Minimization Search</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#setup>Setup</a><ul><li><a href=#planning-phase>Planning Phase</a></li><li><a href=#execution>Execution</a></li></ul></li></ul></nav></aside><main><article><div><p>Big picture: <strong>combining off-line and on-line approaches</strong> maybe the best way to tackle large POMDPs.</p><p>Try planning:</p><ul><li>only where we are</li><li>only where we can reach</li></ul><p>Take into account three factors:</p><ol><li>uncertainty in the value function</li><li>reachability from the current belief</li><li>actions that are likely optimal</li></ol><p>It allows policy improvement on any base policy.</p><h2 id=setup>Setup</h2><p>Discrete POMDPs:</p><ul><li>\(L\), lower bound</li><li>\(U\), upper-bound</li><li>\(b_0\): current belief</li></ul><p>Two main phases: the algorithm</p><h3 id=planning-phase>Planning Phase</h3><ul><li>at each belief point, choose a particular next node to expand (using the scheme below to score the nodes)</li><li>expand that next node that are chosen</li><li>propagate the value of the belief upwards through <a href=/posts/kbhvalue_iteration/#pomdp-bellman-update>POMDP Bellman Backup</a> up through the tree</li></ul><h4 id=best-node-selection>Best Node Selection</h4><p>We select the best node by three metrics:</p><ol><li>Uncertainty: \(\epsilon(b) = U(b)-L(b)\) we want small gap between upper and lower bound</li><li>Optimality in actions:<ul><li>AEMS1: \(p(a|b) = \frac{U(a,b)-L(b)}{U(a^{*}, b)-L(b)}\) (&ldquo;what&rsquo;s the relative optimality of our action, compared to best action&rdquo;)</li><li>AEMS2: \(p(a|b)\) = \(1\) if \(a=A^{*}\), \(0\) otherwise. (&ldquo;just take best action&rdquo;)</li></ul></li><li>Reachability: \(p(b) = \prod_{i=0}^{d} P(o^{(i)} | b^{(i)}, a^{(i)}) p(a^{(i)}|b^{(i)}})\), where small \(p\) is either AIMS 1 or 2 above, where \(a\) comes from the best action conditional plan that came so far</li></ol><p>Combining the metrics gives:</p><p>\begin{equation}

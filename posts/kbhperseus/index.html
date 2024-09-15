@@ -2,9 +2,14 @@
 <meta name=description content="The number of alpha vectors needed to perform PBVI is one for each of your belief sample. Which is a bad idea. Perseus is essentially PBVI, where this idea is explored slightly.
 The preamble is the same as PBVI:
 we keep track of a bunch of alpha vectors and belief samples (which we get from point selection):
-\begin{equation} \Gamma = \{\alpha_{1}, \dots, \alpha_{m}\} \end{equation}
+\begin{equation}
+\Gamma = \{\alpha_{1}, \dots, \alpha_{m}\}
+\end{equation}
 and
-\begin{equation} B = \{b_1, \dots, b_{m}\} \end{equation}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+\begin{equation}
+B = \{b_1, \dots, b_{m}\}
+\end{equation}
+To preserve the lower-boundedness of these alpha vectors, one should seed the alpha vectors via something like blind lower bound"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
 <a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
 <a href=https://maly.io/@jemoka class=header-social id=header-twitter><i class="ic fa-brands fa-mastodon"></i></a>
 <a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Randomized Point-Based Value Iteration</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#perseus-belief-pruning>Perseus Belief Pruning</a></li><li><a href=#slight-variation>Slight Variation?</a></li></ul></nav></aside><main><article><div><p>The number of <a href=/posts/kbhalpha_vector/>alpha vector</a>s needed to perform <a href=/posts/kbhpoint_based_value_iteration/>PBVI</a> is one for each of your belief sample. Which is a bad idea. <a href=/posts/kbhperseus/>Perseus</a> is essentially <a href=/posts/kbhpoint_based_value_iteration/>PBVI</a>, where this idea is explored slightly.</p><p>The preamble is the same as <a href=/posts/kbhpoint_based_value_iteration/>PBVI</a>:</p><p>we keep track of a bunch of <a href=/posts/kbhalpha_vector/>alpha vector</a>s and <a href=/posts/kbhbelief/>belief</a> samples (which we get from <a href=/posts/kbhpoint_selection/>point selection</a>):</p><p>\begin{equation}
