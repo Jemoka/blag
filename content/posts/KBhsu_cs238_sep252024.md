@@ -93,11 +93,11 @@ Recall a result from set theory: if \\(E \subseteq F\\), \\(F = E \cup (E^{C} \c
 Then, we have:
 
 \begin{align}
-P(F) &= P(E \union (E^{C} \cup F))   \\\\
-&= P(E) + P(E^{C} \cup F)
+P(F) &= P(E \cup (E^{C} \cap F))   \\\\
+&= P(E) + P(E^{C} \cap F)
 \end{align}
 
-\\(P(E^{C} \cup F) \geq 0\\), so:
+\\(P(E^{C} \cap F) \geq 0\\), so:
 
 \begin{equation}
 P(F) \geq P(E)

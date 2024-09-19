@@ -98,9 +98,9 @@ I'm broadly interested in ****Natural Language Processing**** and ****Speech Lan
 
 ## Teaching {#teaching}
 
--   2023- Teaching Assistant, Stanford Association for Computing Machinery (ACM) Chapter
--   2022-2023 Head TA (co-instructor and summer lecturer) at [AIFS AIBridge](https://www.jemoka.com/posts/kbhaibridge_course_website/), a program funded by UC Davis Food Science
--   2021-2023 Co-Developer, Research@Nueva, a high-school science education program
+-   Fall quarter, 2024 - TA, CS238, Stanford
+-   All year, 2024 - TA, ACM Chapter, Stanford
+-   Summer quarter, 2024 - Head TA, [AIFS AIBridge](https://www.jemoka.com/posts/kbhaibridge_course_website/), UC Davis
 
 
 ## Course Notes {#course-notes}
