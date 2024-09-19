@@ -29,9 +29,9 @@ P(E) = \lim_{n\to \infty} \frac{n(E)}{n}
 P(S) = 1 &= P(E \cup E^{C}) \\
 &= P(E) + P(E^{C})
 \end{align}</p><p>So \(1-P(E) = P(E^{C})\)</p><h3 id=probability-of-subsets>Probability of Subsets</h3><p>If \(E \subseteq F\), then \(P(F) \geq P(E)\).</p><p>Recall a result from set theory: if \(E \subseteq F\), \(F = E \cup (E^{C} \cap F)\).</p><p>Then, we have:</p><p>\begin{align}
-P(F) &= P(E \union (E^{C} \cup F)) \\
-&= P(E) + P(E^{C} \cup F)
-\end{align}</p><p>\(P(E^{C} \cup F) \geq 0\), so:</p><p>\begin{equation}
+P(F) &= P(E \cup (E^{C} \cap F)) \\
+&= P(E) + P(E^{C} \cap F)
+\end{align}</p><p>\(P(E^{C} \cap F) \geq 0\), so:</p><p>\begin{equation}
 P(F) \geq P(E)
 \end{equation}</p><h3 id=inclusion-exclusion-principle>Inclusion-Exclusion Principle</h3><p>\begin{equation}
 P(A \cup B) = P(A) + P(B) - P(A\cap B)
