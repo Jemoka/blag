@@ -5,48 +5,45 @@ draft = false
 layout = "blank"
 +++
 
-## Definitions {#definitions}
+## Random Variable {#random-variable}
+
+**random variables** takes on different values with different probabilities. Each value a **random variable** take on is an **event**.
+
+For instance, here's a random variable representing a die: \\(X\\). It can takes on the following values, with the following probabilities:
+
+\begin{align}
+P(X=1) = \frac{1}{6}\\\\
+P(X=2) = \frac{1}{6}\\\\
+\dots \\\\
+P(X=6) = \frac{1}{6}
+\end{align}
+
+where each assignment \\(X=k\\) is what we refer to above as an **event**.
+
+The set of assignments of a random variable and their associated probability is called a _distribution_: distributions "assigns probabilities to outcomes." When we say a certain random variable \\(X\\) is "distributed" following a distribution \\(D\\), we say \\(X \sim D\\). Semantically, we say \\(X\\) is a \\(D\\) random variable.
 
 
-### events {#events}
-
-For instance
-
-A: my sensor failed
-
-B: my actuator failed
-
-
-### sample space {#sample-space}
-
-set of all possible events
-
-\begin{equation}
-S = \\{A, B\\}
-\end{equation}
-
-
-### probability {#probability}
-
-say our actuator is less prone to failure. we think, then, a sensor failure is more plausible than a actuator failure.
+## notation time! {#notation-time}
 
 \begin{equation}
-P(A) > P(B) \iff A \succ B
+P(X=k)
 \end{equation}
 
-if on the otherhand we believe they occur with equal plausibility:
+"our random variable \\(X\\) takes up the value \\(k\\)". We (including the textbook!) write it as:
 
 \begin{equation}
-P(A) = P(B) \iff A \sim B
+P(x^{k})
 \end{equation}
 
+as a shorthand.
 
-### a frequentist definition {#a-frequentist-definition}
+
+## a frequentist definition {#a-frequentist-definition}
 
 say you performed \\(n\\) trials, and you are wondering what the probability of a certain event \\(E\\) is amongst those trials
 
 \begin{equation}
-P(E) = \lim\_{n\to \infty} \frac{n(E)}{n}
+P(x^{j}) = \lim\_{n\to \infty} \frac{n(x^{j})}{n}
 \end{equation}
 
 "the ratio of trials that result in the event to the number of times you tried"
@@ -54,21 +51,27 @@ P(E) = \lim\_{n\to \infty} \frac{n(E)}{n}
 
 ## Probability Axioms {#probability-axioms}
 
--   \\(0 \leq P(E) \leq 1\\): all probabilities are numbers between 0 and 1
--   \\(P(S) = 1\\), where \\(S\\) is the [sample space]({{< relref "KBhsample_space.md" >}}): all outcomes must be from the sample space
--   if \\(E\\) and \\(F\\) are mutually exclusive, \\(P(E) + P(F) = P(E\ or\ F)\\)
-    -   notation:
-        -   \\(E \cup F\\) means \\(E\\) and \\(F\\)
-        -   \\(E \cap F\\) means \\(E\\) or \\(F\\)
-    -   so: if \\(E \cap F = \emptyset\\), then \\(P(E) + P(F) = P(E \cup F)\\)
+-   \\(0 \leq P(x^j) \leq 1, \forall X, \forall j\\): all probabilities are numbers between 0 and 1
+-   \\(P(x^1 \vee \ldots \vee x^n)=1\\): set of all possible outcomes must be from the sample space
+-   if \\(x^{a}\\) and \\(x^{b}\\) are mutually exclusive, \\(P(x^a)+P(x^b) = P(x^a \vee x^b)\\)
+    -   so: if \\(if \ x^a \wedge x^b = F\\) (there's no world in with \\(x^{a}\\) and \\(x^{b}\\) is both true), then \\(P(x^a)+P(x^b) = P(x^a \vee x^b)\\)
 
 
 ## Probabilities Correlaries {#probabilities-correlaries}
 
+To prove the results in this part, we will use the language of set theory. However, axioms derived in this language directly translate into the logic language before and after.
+
 
 ### Probability of complements {#probability-of-complements}
 
-If \\(E^{C}\\) was the complement of \\(E\\) ("everything in \\(S\\) that's not \\(E\\)"), then
+Statement:
+
+\begin{equation}
+P(\neg x^j) = 1-p(x^j)
+\end{equation}
+
+Discussion:
+The worlds in which \\(\neg x^{j}\\) is the complement of the world in which \\(x^{j}\\) is true. Let the worlds in which \\(x^{j}\\) is true be \\(E\\), then, we desire:
 
 \\(P(E^{C}) = 1- P(E)\\)
 
@@ -86,7 +89,16 @@ So \\(1-P(E) = P(E^{C})\\)
 
 ### Probability of Subsets {#probability-of-subsets}
 
-If \\(E \subseteq F\\), then \\(P(F) \geq P(E)\\).
+Statement:
+
+\begin{equation}
+x^a \rightarrow x^b, P(x^a) \leq P(x^b)
+\end{equation}
+
+Discussion:
+The first part implies that the worlds in which \\(x^{a}\\) is true is a subset than the words in which \\(x^{b}\\) is true (because \\(x^{a}\\) implies \\(x^{b}\\)). Meaning, if \\(E\\) was the worlds in which \\(x^{a}\\) is true, and \\(F\\) is the world in which \\(x^{b}\\) is true, we desire:
+
+if \\(E \subseteq F\\), then \\(P(F) \geq P(E)\\).
 
 Recall a result from set theory: if \\(E \subseteq F\\), \\(F = E \cup (E^{C} \cap F)\\).
 
@@ -106,6 +118,15 @@ P(F) \geq P(E)
 
 ### Inclusion-Exclusion Principle {#inclusion-exclusion-principle}
 
+Statement:
+
+\begin{equation}
+P(x^a)+P(x^b) - P(x^a\wedge x^b) = P(x^a \vee x^b)
+\end{equation}
+
+Discussion:
+Consider \\(A\\) be the set of worlds in which \\(x^{a}\\) is true; and \\(B\\) the set of worlds in which \\(x^{b}\\) is true.
+
 \begin{equation}
 P(A \cup B) = P(A) + P(B) - P(A\cap B)
 \end{equation}
@@ -117,43 +138,42 @@ so:
 \begin{align}
 P(A\cup B) &= P(A \cup (A^{C} \cap B))   \\\\
 &= P(A) + P(A^{C} \cap B) \\\\
-&= P(A) + P(B) - P(A^{C} \cap B) \\\\
 &= P(A) + P(B) - P(A \cap B)
 \end{align}
 
 
 ## Conditional Probabilities {#conditional-probabilities}
 
-\\(E\\): loosing contact, \\(F\\): sensor failure.
+\\(x\\): loosing contact, \\(y\\): sensor failure.
 
 "what's the probability of us loosing contact given we had a sensor failure?"
 
 \begin{equation}
-P(E|F) :=  \frac{P(E \cap F)}{P(F)}
+P(x|y) :=  \frac{P(x \wedge y)}{P(y)}
 \end{equation}
 
 for simplicity we will write **AND** with a comma:
 
 \begin{equation}
-P(E|F) :=  \frac{P(E, F)}{P(F)}
+P(x|y) :=  \frac{P(x, y)}{P(y)}
 \end{equation}
 
 multiplying:
 
 \begin{equation}
-P(E|F)P(F) :=  P(E, F)
+P(x|y)P(y) :=  P(x, y)
 \end{equation}
 
 We can keep going!
 
 \begin{equation}
-P(D|E,F) P(E,F) = P(D,E,F)
+P(z|x,y) P(x,y) = P(z,x,y)
 \end{equation}
 
 stick them together:
 
 \begin{equation}
-P(D|E,F) P(E|F)P(F) = P(D,E,F)
+P(z|x,y) P(x|y)P(y) = P(z,x,y)
 \end{equation}
 
 so, in general:
@@ -162,13 +182,13 @@ so, in general:
 ### Probability chain rule {#probability-chain-rule}
 
 \begin{equation}
-P(A\_1, A\_2 \dots, A\_{n}) = P(A\_{n} \mid A\_1, A\_2 \dots A\_{n-1})P(A\_1, A\_2 \dots A\_{n-1})
+P(a^1, a^2 \dots, a^{n}) = P(a^{n} \mid a^1, a^2 \dots a^{n-1})P(a^1, a^2 \dots a^{n-1})
 \end{equation}
 
 
 ### Condition does not change axioms/results if ts consistent {#condition-does-not-change-axioms-results-if-ts-consistent}
 
--   \\(0 \leq P(E) \leq 1 \implies 0 \leq P(E|F) \leq 1\\)
+-   $0 &le; P(x) &le; 1\\(0 \leq P(x|y) \leq 1\\)
 -   ...
 
 
@@ -176,58 +196,58 @@ P(A\_1, A\_2 \dots, A\_{n}) = P(A\_{n} \mid A\_1, A\_2 \dots A\_{n-1})P(A\_1, A\
 
 "Inference!"
 
-it provides us a way of going from \\(P(E|F) \implies P(F|E)\\); let \\(F\\) be spam, and \\(E\\) be emails with the word "gold" in it. It's easy to measure \\(P(E|F)\\) (get a bunch of spam, check for the word "gold"), and by doing this we can get the more important value of \\(P(F|E)\\) (probability of spam given "gold".)
+it provides us a way of going from \\(P(x|y) \implies P(y|x)\\); let \\(y\\) be spam, and \\(x\\) be emails with the word "gold" in it. It's easy to measure \\(P(x|y)\\) (get a bunch of spam, check for the word "gold"), and by doing this we can get the more important value of \\(P(y|x)\\) (probability of spam given "gold".)
 
 Recall conditional probability:
 
 \begin{equation}
-P(E|F) :=  \frac{P(E, F)}{P(F)}
+P(x|y) :=  \frac{P(x, y)}{P(y)}
 \end{equation}
 
-and the fact that \\(P(E,F) = P(F,E)\\). so:
+and the fact that \\(P(x,y) = P(y,x)\\). so:
 
 \begin{align}
-P(E|F) &=  \frac{P(E, F)}{P(F)}  \\\\
-&= \frac{P(F,E)}{P(F)}  \\\\
-&= \frac{P(F|E) P(E)}{P(F)}
+P(x|y) &=  \frac{P(x, y)}{P(y)}  \\\\
+&= \frac{P(y,x)}{P(y)}  \\\\
+&= \frac{P(y|x) P(x)}{P(y)}
 \end{align}
 
 
 ## Independence {#independence}
 
-We define \\(F \perp E\\) if:
+We define \\(y \perp x\\) if:
 
 \begin{equation}
-P(E|F) = P(E)
+P(x|y) = P(x)
 \end{equation}
 
-"knowing \\(F\\) doesn't do anything to our knowledge of \\(E\\)"
+"knowing \\(y\\) doesn't do anything to our knowledge of \\(x\\)"
 
 Now. Consider the conditional probability:
 
 \begin{equation}
-P(E|F) P(F) = P(E,F)
+P(x|y) P(y) = P(x,y)
 \end{equation}
 
 substituting our definition in:
 
 \begin{equation}
-P(E) P(F) = P(E,F)
+P(x) P(y) = P(x,y)
 \end{equation}
 
-if \\(F \perp E\\).
+if \\(y \perp x\\).
 
 ---
 
 stuff could be **conditionally** independent:
 
 \begin{equation}
-P(E\_1, E\_2|F) = P(E\_1|F) P(E\_2|F)
+P(e^{1}, e^{2}|f) = P(e^{1}|f) P(e^{2}|f)
 \end{equation}
 
-does **not** imply \\(E\_1 \perp E\_2\\)
+does **not** imply \\(e^{1} \perp e^{2}\\)
 
-conversely, \\(E\_1\perp E\_2\\) does **not** imply \\(E\_1 | F \perp E\_{2} | F\\)
+conversely, \\(e^{1}\perp e^{2}\\) does **not** imply \\(e^{1} | f \perp e^{2} | f\\)
 
 
 ## Law of Total Probability {#law-of-total-probability}
@@ -245,7 +265,7 @@ P(x) = \sum\_{y \in Y} P(x|y) P(y)
 applying this to Bayes theorem
 
 \begin{align}
-P(E|F) &= \frac{P(F|E) P(E)}{\sum\_{E} P(F|E) P(E)}
+P(x|y) &= \frac{P(y|x) P(x)}{\sum\_{x} P(y|x) P(x)}
 \end{align}
 
 
@@ -262,26 +282,26 @@ Conditions:
 
 **What's the probability that a patient has breast cancer with a positive mammogram result?**
 
-Let \\(B\\) be the event that the patient has breast cancer, and \\(P\\) is a positive mammogram result. We want \\(P(B|P)\\).
+Let \\(x\\) be the event that the patient has breast cancer, and \\(y\\) is a positive mammogram result. We want \\(P(x|y)\\).
 
 Let's convert each of our conditions into this formalism!
 
--   \\(P(B) = 0.08\\)
--   \\(P(P|B) = 0.95\\)
--   \\(P(P|B^{C}) = 0.07\\)
+-   \\(P(x) = 0.08\\)
+-   \\(P(y|x) = 0.95\\)
+-   \\(P(y|\neg x) = 0.07\\)
 
 Now, recall we want:
 
 \begin{equation}
-P(B|P) = \frac{P(P|B)P(B)}{P(P|B)P(B)+P(P|B^{C})P(B^{C})}
+P(x|y) = \frac{P(y|x)P(x)}{P(y|x)P(x)+P(y|\neg x)P(\neg x)}
 \end{equation}
 
-The only thing we don't directly have \\(P(B^{C})\\), but recall by the properties is \\(P(B^{C}) = 1-P(B)\\). So, \\(P(B^{C}) = 1-0.08 = 0.92\\).
+The only thing we don't directly have \\(P(\neg x)\\), but recall by the properties is \\(P(\neg x) = 1-P(x)\\). So, \\(P(\neg x) = 1-0.08 = 0.92\\).
 
 Plugging everything in:
 
 \begin{equation}
-P(B|P) = \frac{0.95\cdot0.08}{0.95\cdot0.08+0.07\cdot0.92} \approx 0.5413
+P(x|y) = \frac{0.95\cdot0.08}{0.95\cdot0.08+0.07\cdot0.92} \approx 0.5413
 \end{equation}
 
 
@@ -295,12 +315,12 @@ You picked a door, and the host said another door had a midterm. Should you swit
 
 WLOG you picked door 1, host said door 3 had midterm.
 
-Let's formalize this first. Let \\(p^{(i)}\\) be the event that \\(i\\) door had prize; and \\(h^{(j)}\\) be the event that host picks \\(j\\) door.
+Let's formalize this first. Let \\(p^{i}\\) be the event that \\(i\\) door had prize; and \\(h^{j}\\) be the event that host picks \\(j\\) door.
 
 We desire to answer:
 
 \begin{equation}
-P(p^{(1)} | h^{(3)}) \stackrel{?}{\succ} P(p^{(2)} | h^{(3)})
+P(p^{1} | h^{3}) \stackrel{?}{\succ} P(p^{2} | h^{3})
 \end{equation}
 
 ---
@@ -313,27 +333,27 @@ recall: \\(P(p^{(i)}) = \frac{1}{3}\\)
 let us consider first:
 
 \begin{equation}
-P(p^{(1)} | h^{(3)}) = \frac{P(p^{(1)}, h^{(3)})}{P(h^{(3)})}
+P(p^{1} | h^{3}) = \frac{P(p^{1}, h^{3})}{P(h^{3})}
 \end{equation}
 
 Let us expand this out with the LoTP:
 
 \begin{equation}
-\frac{P(h^{(3)}|p^{(1)}) P(p^{(1)})}{P(h^{(3)}|p^{(1)}) P(p^{(1)}) + P(h^{(3)}|p^{(2)}) P(p^{(2)}) + P(h^{(3)}|p^{(3)}) P(p^{(3)})}
+\frac{P(h^{3}|p^{1}) P(p^{1})}{P(h^{3}|p^{1}) P(p^{1}) + P(h^{3}|p^{2}) P(p^{2}) + P(h^{3}|p^{3}) P(p^{3})}
 \end{equation}
 
 -   Recall all \\(P(p^{j}) = \frac{1}{3}\\)
 -   Now, let's consider each case:
-    -   \\(P(h^{(3)}|p^{(1)}) = \frac{1}{2}\\) --- the host has no bias towards opening either doors 2 or 3, just not door 1
-    -   \\(P(h^{(3)}|p^{(2)}) = 1\\) --- the host will definitely
+    -   \\(P(h^{3}|p^{1}) = \frac{1}{2}\\) --- the host has no bias towards opening either doors 2 or 3, just not door 1
+    -   \\(P(h^{3}|p^{2}) = 1\\) --- the host will definitely
         open door \\(3\\), because they can't open your door and door 2 has
         the prize
-    -   \\(P(h^{(3)}|p^{(3)}) = 0\\) --- a rational host will not open the door that has the prize
+    -   \\(P(h^{3}|p^{3}) = 0\\) --- a rational host will not open the door that has the prize
 
 Plugging this in:
 
 \begin{equation}
-P(p^{(1)} | h^{(3)}) = \frac{\frac{1}{2} \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 1 \frac{1}{3}} = \frac{1}{3}
+P(p^{1} | h^{3}) = \frac{\frac{1}{2} \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 1 \frac{1}{3}} = \frac{1}{3}
 \end{equation}
 
 
@@ -342,47 +362,29 @@ P(p^{(1)} | h^{(3)}) = \frac{\frac{1}{2} \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 
 Note that the denominator is exactly the same
 
 \begin{equation}
-P(p^{(2)} | h^{(3)}) = \frac{P(p^{(2)}, h^{(3)})}{P(h^{(3)})}
+P(p^{2} | h^{3}) = \frac{P(p^{2}, h^{3})}{P(h^{3})}
 \end{equation}
 
-Our numerator is \\(P(p^{(2)}, h^{(3)}) = P(h^{(3)}|p^{(2)}}) P(h^{(3)})\\). The left value is \\(1\\), and the right value is still \\(\frac{1}{3}\\). Plugging it in:
+Our numerator is \\(P(p^{2}, h^{3}) = P(h^{3}|p^{2}}) P(h^{3})\\). The left value is \\(1\\), and the right value is still \\(\frac{1}{3}\\). Plugging it in:
 
 \begin{equation}
-P(p^{(2)} | h^{(3)}) = \frac{1 \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 1 \frac{1}{3}} = \frac{2}{3}
+P(p^{2} | h^{3}) = \frac{1 \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 1 \frac{1}{3}} = \frac{2}{3}
 \end{equation}
 
 
 #### Conclusion {#conclusion}
 
 \begin{equation}
-P(p^{(1)} | h^{(3)}) < P(p^{(2)} | h^{(3)})
+P(p^{1} | h^{3}) < P(p^{2} | h^{3})
 \end{equation}
 
 meaning
 
 \begin{equation}
-p^{(1)} | h^{(3)} \prec p^{(2)} | h^{(3)}
+p^{1} | h^{3} \prec p^{2} | h^{3}
 \end{equation}
 
 so we should probably switch
-
-
-## Random Variable {#random-variable}
-
-**random variables** takes on different values with different probabilities. Each value a **random variable** take on is an **event**.
-
-For instance, here's a random variable representing a die: \\(X\\). It can takes on the following values, with the following probabilities:
-
-\begin{align}
-P(X=1) = \frac{1}{6}\\\\
-P(X=2) = \frac{1}{6}\\\\
-\dots \\\\
-P(X=6) = \frac{1}{6}
-\end{align}
-
-where each assignment \\(X=k\\) is what we refer to above as an **event**.
-
-The set of assignments of a random variable and their associated probability is called a _distribution_: distributions "assigns probabilities to outcomes." When we say a certain random variable \\(X\\) is "distributed" following a distribution \\(D\\), we say \\(X \sim D\\). Semantically, we say \\(X\\) is a \\(D\\) random variable.
 
 
 ## Continuous and Discrete Probabilities {#continuous-and-discrete-probabilities}

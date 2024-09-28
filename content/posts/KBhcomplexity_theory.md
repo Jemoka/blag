@@ -6,6 +6,9 @@ draft = false
 
 [complexity theory]({{< relref "KBhcomplexity_theory.md" >}}) is a theory in algorithms to analyze time classes.
 
+
+## older Notes {#older-notes}
+
 We know that \\(O(n\ log\ n)\\) is between \\(O(n)\\) and \\(O(n^2)\\) --- so we can roughly call it "polynomial time."
 
 Since the optimal comparison cannot be faster than polynomial time, we say that comparison-based sorting is a _polynomial-time_ algorithm.
@@ -17,7 +20,7 @@ Think of it as \\(P\\) is solvable with polynomial time and \\(NP\\) is verifiab
 The cool thing about \\(NP\\) problems is that solving a subset of them ("\\(NP\\) hard" problems) solves all \\(NP\\) problems.
 
 
-## reduction (algorithms) {#reduction--algorithms}
+### reduction (algorithms) {#reduction--algorithms}
 
 [reduction](#reduction--algorithms) is how you can use \\(NP-hard\\) problems to solve all \\(NP\\) problems in [complexity theory]({{< relref "KBhcomplexity_theory.md" >}}).
 
@@ -30,7 +33,7 @@ Say, multiplication:
 "Given this, do that."
 
 
-## problem classes {#problem-classes}
+### problem classes {#problem-classes}
 
 (see above)
 
