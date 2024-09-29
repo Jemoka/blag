@@ -184,6 +184,6 @@ you will note that this is [primitive recursion](#natural-numbers): the number o
 Let's write it out first:
 
 -   \\(fac\ n = fac'\ 1\ 1\ n\\)
--   \\(fac'\ a\ i\ n = if\ i > n\ then a\ else\ fac'\ (a \* i) (i + 1) n\\)
+-   \\(fac'\ a\ i\ n = if\ i > n\ then\ a\ else\ fac'\ (a \* i) (i + 1)\ n\\)
 
 [TODO]

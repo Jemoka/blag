@@ -16,11 +16,11 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 <div style="margin: 10px 0">
 <span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
+<span style="font-weight: 500">Sep. 25, 24'</span> <span>Paper (Coref) accepted to CRAC 2024; see y'all at EMNLP!</span>
 <span style="font-weight: 500">Aug. 21, 24'</span> <span>Tech report article <a href="https://ldr.lps.library.cmu.edu/article/810/galley/579/view/">released</a> on Batchalign2 engineering.</span>
 <span style="font-weight: 500">Jul. 14, 24'</span> <span>ArXiv preprint <a href="https://arxiv.org/abs/2407.09447">released</a> on LM red teaming.</span>
 <span style="font-weight: 500">May. 18, 24'</span> <span>Journal Article (NACC) <a href="https://doi.org/10.1097/WAD.0000000000000619">published@LWW AD</a></span>
 <span style="font-weight: 500">Apr. 29, 24'</span> <span>ArXiv preprint <a href="https://arxiv.org/abs/2404.19055">released</a> on POMDP LM decoding.</span>
-<span style="font-weight: 500">Mar. 15, 24'</span> <span>TalkBank's Mandarin <a href="https://huggingface.co/talkbank/CHATUtterance-zh_CN">utterance segmentation model</a> released. </span>
 <span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a  target="_top" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/"  target="_top">Published</a> by JSLHR</span>
 </div>
 </div>
@@ -35,6 +35,13 @@ I'm broadly interested in ****Natural Language Processing**** and ****Speech Lan
 
 
 ## Projects {#projects}
+
+<div style="padding: 15px 0">
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Stanford NLP (2024)</div>
+<div style="font-weight: 500">MSCAW-coref: Multilingual, Singleton and Conjunction-Aware Word-Level Coreference Resolution</div>
+<div><u>Liu, H.</u>, Bauer, J., D'Oosterlinck, K., Potts, C., Manning, C.D.</div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Talk@CRAC at EMNLP</span></div>
+</div>
 
 <div style="padding: 15px 0">
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">TalkBank (2024)</div>
