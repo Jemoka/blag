@@ -1,5 +1,5 @@
 +++
-title = "regular language (See file KBhdeterministic_finite_automata.org)"
+title = "regular language"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -169,7 +169,7 @@ Proof (by construction):
 1.  reverse the arrows of your [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}) that you want to reverse
 2.  flip the [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})'s start and accept states
 3.  you now have an [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}})
-4.  use [subset construction]({{< relref "KBhnondeterministic_finite_automata.md#dfa--kbhdeterministic-finite-automata-dot-md--s-are-equivalent-to-nfa--kbhnondeterministic-finite-automata-dot-md--s" >}}) to expand this [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}}) to a [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})
+4.  use [subset construction]({{< relref "KBhnondeterministic_finite_automata.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-dfa-s-are-equivalent-to-id-5520de84-0c82-4b31-97cb-51f7de4652dc-nfa-s" >}}) to expand this [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}}) to a [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})
 
 
 #### concatenation {#concatenation}
@@ -184,7 +184,7 @@ Proof idea:
 
 treat your [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}) as a [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}}), then glue ("add epsilon transitions between") the accept states from the first part to the start staates of the second part. then, turn the accept states in the first part into regular states.
 
-then [subset construction]({{< relref "KBhnondeterministic_finite_automata.md#dfa--kbhdeterministic-finite-automata-dot-md--s-are-equivalent-to-nfa--kbhnondeterministic-finite-automata-dot-md--s" >}}).
+then [subset construction]({{< relref "KBhnondeterministic_finite_automata.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-dfa-s-are-equivalent-to-id-5520de84-0c82-4b31-97cb-51f7de4652dc-nfa-s" >}}).
 
 
 #### clean star {#clean-star}
