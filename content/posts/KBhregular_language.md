@@ -10,6 +10,11 @@ a language \\(L'\\) is a [regular language]({{< relref "KBhregular_language.md" 
 ## additional information {#additional-information}
 
 
+### a proper subset {#a-proper-subset}
+
+a proper subset of a regular language isn't necessarily regular
+
+
 ### [regular expressions are equivalent to regular languages]({{< relref "KBhregular_expression_complexity.md#regular-expressions-are-equivalent-to-regular-languages" >}}) {#regular-expressions-are-equivalent-to-regular-languages--kbhregular-expression-complexity-dot-md}
 
 see [regular expressions are equivalent to regular languages]({{< relref "KBhregular_expression_complexity.md#regular-expressions-are-equivalent-to-regular-languages" >}})

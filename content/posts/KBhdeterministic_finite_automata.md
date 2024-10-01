@@ -44,14 +44,14 @@ the set of all [string]({{< relref "KBhalphabet.md" >}})s that \\(M\\) **accepts
 important factoid: **empty language is _not_ the empty string, the empty language contains no strings, the empty string contains no content, which means you stay at \\(q\_0\\)**
 
 
-### [regular language]({{< relref "KBhregular_language.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-regular-language" >}}) {#regular-language--kbhregular-language-dot-md}
+### [regular language]({{< relref "KBhregular_language.md" >}}) {#regular-language--kbhregular-language-dot-md}
 
-see [regular language]({{< relref "KBhregular_language.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-regular-language" >}})
+see [regular language]({{< relref "KBhregular_language.md" >}})
 
 
-### [DFAs are equivalent to NFAs]({{< relref "KBhnondeterministic_finite_automata.md#dfa--kbhdeterministic-finite-automata-dot-md--s-are-equivalent-to-nfa--kbhnondeterministic-finite-automata-dot-md--s" >}}) {#dfas-are-equivalent-to-nfas--kbhnondeterministic-finite-automata-dot-md}
+### [DFAs are equivalent to NFAs]({{< relref "KBhnondeterministic_finite_automata.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-dfa-s-are-equivalent-to-id-5520de84-0c82-4b31-97cb-51f7de4652dc-nfa-s" >}}) {#dfas-are-equivalent-to-nfas--kbhnondeterministic-finite-automata-dot-md}
 
-see [DFAs are equivalent to NFAs]({{< relref "KBhnondeterministic_finite_automata.md#dfa--kbhdeterministic-finite-automata-dot-md--s-are-equivalent-to-nfa--kbhnondeterministic-finite-automata-dot-md--s" >}})
+see [DFAs are equivalent to NFAs]({{< relref "KBhnondeterministic_finite_automata.md#id-4f5a240b-565b-4341-ab32-0b8b4540103f-dfa-s-are-equivalent-to-id-5520de84-0c82-4b31-97cb-51f7de4652dc-nfa-s" >}})
 
 [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})s recognize the same set of languages as [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}})s, that is, regular languages.
 
@@ -106,3 +106,8 @@ We show this by induction on the string length.
 {{< figure src="/ox-hugo/2024-09-30_19-48-17_screenshot.png" >}}
 
 this requires some thinking, and the trick is simply keeping track of what you saw in the states, and if you saw something contradictory backtrak if needed
+
+
+#### constructing a binary addition system {#constructing-a-binary-addition-system}
+
+{{< figure src="/ox-hugo/2024-10-01_11-42-54_screenshot.png" >}}
