@@ -12,6 +12,21 @@ combinator is a variable free programming language; it is a turing complete comp
     -   allows for illustration of ideas
 
 
+## Why do we care? {#why-do-we-care}
+
+-   no variables! its entirely compositional
+-   all computations are rewrite rules =&gt; making proofs like [confluence]({{< relref "KBhconfluence.md" >}}), etc. easier
+-   its functional: we don't reason about individual data accesses, which is a natural fit for bulk and parallel data
+    -   ...variables are often a problem is parallel computation
+
+
+## Why do we not care? {#why-do-we-not-care}
+
+Duplication is really hard in SKI; we had to use \\(S\\) and possibly a \\(K\\) to get multiple thing to be passed. This is basically the only way we can pass information around---we have to drill any data all the way down with \\(S\\) until you consume it
+
+this doesn't really match the way we build computers---memories exist.
+
+
 ## definition {#definition}
 
 Terms of SKI calculus are the smallest sets such that \\(S, K, I\\) are terms; and if \\(x, y\\) are terms, then \\(x y\\) is a term.
@@ -76,7 +91,7 @@ key: **run this algorithm in the currying order; so if we have $f x y = ...$, ru
 \\(A(b,a)\\) is an algorithm that drops **a** from the expression **b**. consider: \\(f x = E\\), we want a **combinator that does** \\(A(E,x)\\) which implements \\(f\\).
 
 -   \\(A(x,x) = I\\)
--   \\(A (E, x) = K E\\)
+-   \\(A (E, x) = K E\\), if \\(x\\) is not in \\(E\\)
 -   \\(A ( E\_1 E\_2, x) = S A(E\_1, x) A (E\_2, x)\\)
 
 (non standard) Alex's special abstraction rules
@@ -96,6 +111,8 @@ For each variable on the right time, we want to apply the abstraction algorithm 
 
 1.  \\(yx = A(y x, y) = S A (y,y) A(x,y) = SI (K x)\\)
 2.  \\(SI (K x) = A(SI (K x), x)\\) and so on
+
+we apply \\(A\\) in the currying order, meaning for \\(f x y z\\), we apply \\(A\\) first on \\(z\\), then \\(y\\), and \\(x\\). It is essentially defining \\(SKI\\) in reverse.
 
 
 ## programming with SII calculus {#programming-with-sii-calculus}
@@ -168,6 +185,53 @@ some operations
 -   \\(mul\ x\ y = x\ (add\ y)\ 0\\)
 
 you will note that this is [primitive recursion](#natural-numbers): the number of times we iterate is **fixed** (or capped, as in `break`) on entry---we cannot use control flow to stop recursion.
+
+
+## Reduction Order {#reduction-order}
+
+When do we actually apply the reduction? As in, when and how do we apply the rewrites?
+
+-   in a large expression, many rewrite rules may apply
+-   so how do we choose when to actually evaluate?
+
+    {{< figure src="/ox-hugo/2024-10-01_09-15-15_screenshot.png" >}}
+
+The process for choosing where to apply the rules is a **reduction strategy**---most languages have a fixed reduction/evaluation order. However, concurrent programming/parallel do provide multiple choices.
+
+
+### one place in C where the evaluation order is not specified {#one-place-in-c-where-the-evaluation-order-is-not-specified}
+
+```C
+f(x+1, y*3)
+```
+
+its not specified if we evaluate the arguments left to right or right to left. This causes a problem, say in globals. Suppose you had:
+
+```C
+int z;
+f(g(x), h(y));
+```
+
+suppose with side effects `g` changes `z`, and `h` reads `z`. The evaluation order, then, change the read order.
+
+
+### a good reduction strategy: normal order {#a-good-reduction-strategy-normal-order}
+
+
+#### normal order {#normal-order}
+
+-   traverse the leftmost spine of the expression tree from root to the leaf
+-   if a rewrite rule applies (i.e. backup enough rules to get your arguments, etc.), apply it, repeat
+-   otherwise, halt (yes, this can leave things unevaluated, but so does `f() { x+y }` without calling `f`)
+
+this is also called _lazy evaluation_ --- only evaluates what is absolutely necessary to get an answer; if **any reduction order terminates, normal order will terminate**
+
+other languages mostly [call by value]({{< relref "KBhcall_by_value.md" >}}) instead of lazy order (except Haskall).
+
+
+#### what could go wrong if you don't use normal order? {#what-could-go-wrong-if-you-don-t-use-normal-order}
+
+no! [confluence]({{< relref "KBhconfluence.md" >}}): [SKI exhibits one-step diamond property]({{< relref "KBhconfluence.md#ski-exhibits-id-6d79a838-4287-4370-bc51-6acfac32dfbf-one-step-diamond-property" >}})
 
 
 ## Examples {#examples}
