@@ -78,5 +78,7 @@ each edge can read not just a single symbol, but any string that corresponds to 
 
 proof idea: constructions
 
+{{< figure src="/ox-hugo/2024-09-30_23-34-36_screenshot.png" >}}
+
 -   add unique start and accept states
--
+-   for every path of length 2 that goes between the unique start and end states, pick and internal state, rip it out, and re-label arrows
