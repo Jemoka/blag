@@ -1,18 +1,10 @@
 +++
-title = "regex"
+title = "disambiguation: regular expression"
 author = ["Houjun Liu"]
 draft = false
 +++
 
-regular expressions
+regular expressions are the same thing, but can be treated in two senses
 
-did you know you can do matching inline too matching equivalent statements: `test (\w+) \1`; non-capture group `(?:test)`
-
-
-## lookaheads {#lookaheads}
-
--   (?=pattern) true if pattern matches, but doesn't touch the character pointer
--   (?!pattern) true if pattern doesn't match; also doesn't advance pointer
--   (?:pattern) will advance character pointer but will not create a capture group
--   ^beginning of line
--   end of line$
+-   the tool: [regular expression (string processing)]({{< relref "KBhregular_expression_string_processing.md" >}})
+-   complexity theory: [regular expression (complexity)]({{< relref "KBhregular_expression_complexity.md" >}})

@@ -21,6 +21,11 @@ Sidebar: [proof]({{< relref "KBhproof.md" >}})
 -   exposure to different areas of theory
 
 
+## Questions for Omer {#questions-for-omer}
+
+[Questions for Omer]({{< relref "KBhquestions_for_omer.md" >}})
+
+
 ## Content {#content}
 
 
@@ -36,6 +41,7 @@ this is a very simple model of computation (a constant amount of memory), meanin
 More modern (complexity-theoretic) perspective: streaming algorithms, communication complexity.
 
 -   [SU-CS154 Week 1]({{< relref "KBhsu_cs154_week_1.md" >}})
+-   [SU-CS154 Week 2]({{< relref "KBhsu_cs154_week_2.md" >}})
 
 
 ### Computability {#computability}

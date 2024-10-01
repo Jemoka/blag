@@ -13,3 +13,7 @@ draft = false
 \end{equation}
 
 [eigenvalue]({{< relref "KBheigenvalue.md" >}})
+
+\begin{equation}
+U(s) = \max\_{a} R(s,a) + \gamma \sum\_{s'}^{} T(s'|s,a) U(s')
+\end{equation}

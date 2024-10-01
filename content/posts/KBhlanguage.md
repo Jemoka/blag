@@ -5,3 +5,5 @@ draft = false
 +++
 
 [effability]({{< relref "KBheffability.md" >}})
+
+see also [language]({{< relref "KBhalphabet.md" >}})
