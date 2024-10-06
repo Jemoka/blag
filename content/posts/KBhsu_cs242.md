@@ -20,6 +20,8 @@ draft = false
 -   [SU-CS242 SEP242024]({{< relref "KBhsu_cs242_sep242024.md" >}})
 
 
-### [Combinator Calculus]({{< relref "KBhsu_cs242_sep262024.md#combinator-calculus" >}}) {#combinator-calculus--kbhsu-cs242-sep262024-dot-md}
+### [Combinator Calculus]({{< relref "KBhcombinator_calculus.md" >}}) {#combinator-calculus--kbhcombinator-calculus-dot-md}
 
 -   [SU-CS242 SEP262024]({{< relref "KBhsu_cs242_sep262024.md" >}})
+-   [SU-CS242 OCT012024]({{< relref "KBhsu_cs242_oct012024.md" >}})
+-   [SU-CS242 OCT032024]({{< relref "KBhsu_cs242_oct032024.md" >}})

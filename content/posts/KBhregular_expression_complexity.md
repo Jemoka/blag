@@ -15,7 +15,7 @@ Let \\(\Sigma\\) be an alphabet, we define the [regular expression]({{< relref "
 
 -   for all \\(\sigma \in \Sigma\\), \\(\sigma\\) is a regexp
 -   \\(\varepsilon\\) (empty string) is a regexp
--   \\(\varnothing\\) (empty set) is a regexp
+-   \\(\emptyset\\) (empty set) is a regexp
 
 If \\(R\_1\\), \\(R\_2\\) are regexps, then:
 
@@ -33,9 +33,9 @@ Operator precidence:
 
 ### regexp representing [language]({{< relref "KBhalphabet.md" >}})s {#regexp-representing-language--kbhalphabet-dot-md--s}
 
-The regexp \\(\sigma \in \Sigma\\) represents the language \\(\qty {\sigma}\\), the regexp \\(\varepsilon\\) represents the language \\(\qty {\epsilon }\\), the regexp \\(\varnothing\\) represents the language \\(\varnothing\\).
+The regexp \\(\sigma \in \Sigma\\) represents the language \\(\qty {\sigma}\\), the regexp \\(\varepsilon\\) represents the language \\(\qty {\epsilon }\\), the regexp \\(\emptyset\\) represents the language \\(\emptyset\\).
 
-for \\(R\_1, R\_2\\) being [regular expression]({{< relref "KBhregular_expression_complexity.md" >}})s representing a particular [regular language]({{< relref "KBhregular_language.md" >}}) $L_1, L_2$&hellip;
+for \\(R\_1, R\_2\\) being [regular expression]({{< relref "KBhregular_expression_complexity.md" >}})s representing a particular [regular language]({{< relref "KBhregular_language.md" >}}) \\(L\_1, L\_2\dots\\)
 
 -   \\((R\_1 \cdot R\_2)\\) represents concatenation \\(L\_2 \cdot L\_2\\) in the language
 -   \\((R\_1 + R\_2)\\) represents union \\(L\_1 \cup L\_2\\) in the language

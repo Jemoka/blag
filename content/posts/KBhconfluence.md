@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-could a different choice of evaluation order change the terminating result of the program.
+Could a different choice of evaluation order change the **terminating result** of the program; note that this says nothing about whether or not particular evaluation order terminates.
 
 
 ## constituents {#constituents}
@@ -35,7 +35,7 @@ go build a grid using the one step diamond property
 {{< figure src="/ox-hugo/2024-10-01_09-49-32_screenshot.png" >}}
 
 
-### SKI exhibits [one-step diamond property](#one-step-diamond-property) {#ski-exhibits-one-step-diamond-property--org237410e}
+### SKI exhibits [one-step diamond property](#one-step-diamond-property) {#ski-exhibits-one-step-diamond-property--org19aa3ca}
 
 We can't naively apply [one-step diamond property](#one-step-diamond-property).
 

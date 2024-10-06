@@ -10,4 +10,4 @@ A [binary operation]({{< relref "KBhbinary_operation.md" >}}) means that you are
 f: (\mathbb{F},\mathbb{F}) \to \mathbb{F}
 \end{equation}
 
-This is also [closed]({{< relref "KBhclosed.md" >}}), but [binary operation]({{< relref "KBhbinary_operation.md" >}})s dons't have to be.
+This is also [closed]({{< relref "KBhclosed.md" >}}), but [binary operation]({{< relref "KBhbinary_operation.md" >}})s doesn't have to be.

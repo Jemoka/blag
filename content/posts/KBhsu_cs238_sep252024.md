@@ -365,7 +365,7 @@ Note that the denominator is exactly the same
 P(p^{2} | h^{3}) = \frac{P(p^{2}, h^{3})}{P(h^{3})}
 \end{equation}
 
-Our numerator is \\(P(p^{2}, h^{3}) = P(h^{3}|p^{2}}) P(h^{3})\\). The left value is \\(1\\), and the right value is still \\(\frac{1}{3}\\). Plugging it in:
+Our numerator is \\(P(p^{2}, h^{3}) = P(h^{3}|p^{2}}) P(p^{2})\\). The left value is \\(1\\), and the right value is still \\(\frac{1}{3}\\). Plugging it in:
 
 \begin{equation}
 P(p^{2} | h^{3}) = \frac{1 \frac{1}{3}}{\frac{1}{2} \frac{1}{3} + 1 \frac{1}{3}} = \frac{2}{3}

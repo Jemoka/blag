@@ -12,6 +12,11 @@ combinator is a variable free programming language; it is a turing complete comp
     -   allows for illustration of ideas
 
 
+## combinator {#combinator}
+
+a [combinator](#combinator) is a function with no [free variables]({{< relref "KBhsu_cs242_oct032024.md#free-variables" >}})
+
+
 ## Why do we care? {#why-do-we-care}
 
 -   no variables! its entirely compositional

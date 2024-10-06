@@ -74,7 +74,7 @@ According to Jana, a third grader can add and scalar multiply [matricies]({{< re
 However, what's interesting is the fact that they actually work:
 
 -   Suppose \\(S,T \in \mathcal{L}(V,W)\\), then \\(\mathcal{M}(S+T) = \mathcal{M}(S)+\mathcal{M}(T)\\)
--   Suppose \\(\lambda  \in \mathbb{F}, T \in \mathcal{L}(V,W)\\), then \\(\mathcal{M}(\lambdaT) = \lambda \mathcal{M}(T)\\)
+-   Suppose \\(\lambda  \in \mathbb{F}, T \in \mathcal{L}(V,W)\\), then \\(\mathcal{M}(\lambda T) = \lambda \mathcal{M}(T)\\)
 
 The verification of this result, briefly, is that:
 
@@ -119,9 +119,9 @@ See [determinants]({{< relref "KBhdeterminants.md" >}})
 See [Gaussian elimination]({{< relref "KBhgaussian_elimination.md" >}})
 
 
-### [diagonal matrix]({{< relref "KBhdiagonal_matrix.md#diagonal-matrix" >}}) {#diagonal-matrix--kbhdiagonal-matrix-dot-md}
+### [diagonal matrix]({{< relref "KBhdiagonal_matrix.md" >}}) {#diagonal-matrix--kbhdiagonal-matrix-dot-md}
 
-see [diagonal matrix]({{< relref "KBhdiagonal_matrix.md#diagonal-matrix" >}})
+see [diagonal matrix]({{< relref "KBhdiagonal_matrix.md" >}})
 
 
 ### [upper-triangular matricies]({{< relref "KBhupper_triangular_matrix.md" >}}) {#upper-triangular-matricies--kbhupper-triangular-matrix-dot-md}

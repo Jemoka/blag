@@ -4,6 +4,9 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Week 3 {#week-3}
+
+
 ## Week 2 {#week-2}
 
 -   is concatenation commutative? no, right? but the symbol used \\(\cdot\\) is typically communative

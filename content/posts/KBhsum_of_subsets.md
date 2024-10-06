@@ -98,7 +98,7 @@ a\_1u\_1+ \dots + a\_{m}u\_{m} + b\_1v\_1 + \dots + b\_{j}v\_{j} =-(c\_1w\_1 + \
 
 Recall that \\(u\_1 \dots v\_{j}\\) are all [vector]({{< relref "KBhvector.md" >}})s in \\(U\_1\\). Having written \\(-(c\_1w\_1 + \dots + c\_{k}w\_{k})\\) as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) thereof, we say that \\(-(c\_1w\_1 + \dots + c\_{k}w\_{k}) \in U\_1\\) due to closure. But also, \\(w\_1 \dots w\_{k} \in U\_2\\) as they form a [basis]({{< relref "KBhbasis.md" >}}) of \\(U\_2\\). Hence, \\(-(c\_1w\_1 + \dots + c\_{k}w\_{k}) \in U\_2\\). So, \\(-(c\_1w\_1 + \dots + c\_{k}w\_{k}) \in U\_1 \cap U\_2\\).
 
-And we said that \\(u\_1, \dots u\_{m}\\) are a [basis]({{< relref "KBhbasis.md" >}}) for \\(U\_1 \cap U\_{2}\\). Therefore, we can write the \\(c\_{i}\\) sums as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of $u$s:
+And we said that \\(u\_1, \dots u\_{m}\\) are a [basis]({{< relref "KBhbasis.md" >}}) for \\(U\_1 \cap U\_{2}\\). Therefore, we can write the \\(c\_{i}\\) sums as a [linear combination]({{< relref "KBhlinear_combination.md" >}}) of \\(u\\):
 
 \begin{equation}
 d\_1u\_1 \dots + \dots + d\_{m}u\_{m} =  (c\_1w\_1 + \dots + c\_{k}w\_{k})
