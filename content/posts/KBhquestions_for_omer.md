@@ -6,6 +6,9 @@ draft = false
 
 ## Week 3 {#week-3}
 
+-   for the one to one/well-formed proofs, why are the outcomes copiable? like why is it that when I get accept on one end \\(M'\\) I must get accept on teh other end? \\(M\_{\min}\\)?
+-   why does the algorthium run for at most q^2 times? wouldn't it be q^3 because for each round you have to run the update on the entire grid? (i.e. q^2 would just be one iteration over the grid, right?)
+
 
 ## Week 2 {#week-2}
 

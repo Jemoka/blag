@@ -111,3 +111,13 @@ this requires some thinking, and the trick is simply keeping track of what you s
 #### constructing a binary addition system {#constructing-a-binary-addition-system}
 
 {{< figure src="/ox-hugo/2024-10-01_11-42-54_screenshot.png" >}}
+
+
+### [pumping lemma]({{< relref "KBhpumping_lemma.md" >}}) {#pumping-lemma--kbhpumping-lemma-dot-md}
+
+see [pumping lemma]({{< relref "KBhpumping_lemma.md" >}})
+
+
+### [Minimizing DFAs]({{< relref "KBhminimizing_dfas.md" >}}) {#minimizing-dfas--kbhminimizing-dfas-dot-md}
+
+see [Minimizing DFAs]({{< relref "KBhminimizing_dfas.md" >}})
