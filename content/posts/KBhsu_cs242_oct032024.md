@@ -18,6 +18,8 @@ meaning, we have:
 -   an **abstraction** \\(\lambda x . e\\) (a function definition)
 -   an **application** \\(e\_1 e\_2\\)
 
+we call \\((\lambda x . e)e'\\) (a function and its argument, ready for reduction) a `redex`.
+
 
 ### abstraction {#abstraction}
 
@@ -90,12 +92,23 @@ we can mostly ignore [alpha reduction](#alpha-reduction) and [eta reduction](#et
 
 #### alpha reduction {#alpha-reduction}
 
-we can rename variables to avoid collision; \\((\lambda y.e\_1) [ x: = e) = \lambda z.((e\_1 [y:=z])[x := e])\\), if \\(x \neq y\\), and \\(z\\) is fresh and never used
+we can rename variables to avoid collision; \\((\lambda y.e\_1) [ x: = e] = \lambda z.((e\_1 [y:=z])[x := e])\\), if \\(x \neq y\\), and \\(z\\) is fresh and never used
 
 
 #### eta reduction {#eta-reduction}
 
 \\(e = \lambda x . e x\\), \\(x \not \in FV(e)\\)
+
+
+### evaluation order {#evaluation-order}
+
+-   [call-by-name]({{< relref "KBhcombinator_calculus.md#normal-order" >}}) (for correct termination): evaluate the arguments only when the function can be reduced
+-   [call-by-value]({{< relref "KBhsu_cs242_oct082024.md#call-by-value" >}}) (more efficient): it evaluates the arguments _one time_ (even if the function makes copies of the arguments, we don't evaluate it again)
+
+
+### Church-Rosser Theorem {#church-rosser-theorem}
+
+[Lambda Calculus](#lambda-calculus)
 
 
 ### programming time {#programming-time}
@@ -211,6 +224,3 @@ Type List = nil |
 
 
 ### numbers {#numbers}
-
-
-###  {#d41d8c}

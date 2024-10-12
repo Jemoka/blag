@@ -15,6 +15,13 @@ draft = false
 -   basics of active research in PL
 
 
+## equal in expressive power {#equal-in-expressive-power}
+
+-   SKI calculus
+-   Lambda calculus
+-   Turing machines
+
+
 ## Lectures {#lectures}
 
 -   [SU-CS242 SEP242024]({{< relref "KBhsu_cs242_sep242024.md" >}})
@@ -24,4 +31,9 @@ draft = false
 
 -   [SU-CS242 SEP262024]({{< relref "KBhsu_cs242_sep262024.md" >}})
 -   [SU-CS242 OCT012024]({{< relref "KBhsu_cs242_oct012024.md" >}})
+
+
+### [Lambda Calculus]({{< relref "KBhsu_cs242_oct032024.md#lambda-calculus" >}}) {#lambda-calculus--kbhsu-cs242-oct032024-dot-md}
+
 -   [SU-CS242 OCT032024]({{< relref "KBhsu_cs242_oct032024.md" >}})
+-   [SU-CS242 OCT102024]({{< relref "KBhsu_cs242_oct102024.md" >}})

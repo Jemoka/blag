@@ -121,3 +121,8 @@ see [pumping lemma]({{< relref "KBhpumping_lemma.md" >}})
 ### [Minimizing DFAs]({{< relref "KBhminimizing_dfas.md" >}}) {#minimizing-dfas--kbhminimizing-dfas-dot-md}
 
 see [Minimizing DFAs]({{< relref "KBhminimizing_dfas.md" >}})
+
+
+### Learning DFA {#learning-dfa}
+
+See [PAC Learning]({{< relref "KBhpac_learning.md" >}})

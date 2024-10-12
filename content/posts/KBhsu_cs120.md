@@ -21,3 +21,4 @@ draft = false
 ## Lectures {#lectures}
 
 -   [SU-CS120 SEP242024]({{< relref "KBhsu_cs120_sep242024.md" >}})
+-   [SU-CS120 OCT082024]({{< relref "KBhsu_cs120_oct082024.md" >}})
