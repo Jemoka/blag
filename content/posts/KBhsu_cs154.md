@@ -43,7 +43,7 @@ More modern (complexity-theoretic) perspective: streaming algorithms, communicat
 -   [SU-CS154 Week 1]({{< relref "KBhsu_cs154_week_1.md" >}})
 -   [SU-CS154 Week 2]({{< relref "KBhsu_cs154_week_2.md" >}})
 -   [SU-CS154 Week 3]({{< relref "KBhsu_cs154_week_3.md" >}})
--
+-   [SU-CS154 Week 4]({{< relref "KBhsu_cs154_week_4.md" >}})
 
 
 ### Computability {#computability}
