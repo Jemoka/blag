@@ -43,10 +43,9 @@ More modern (complexity-theoretic) perspective: streaming algorithms, communicat
 -   [SU-CS154 Week 1]({{< relref "KBhsu_cs154_week_1.md" >}})
 -   [SU-CS154 Week 2]({{< relref "KBhsu_cs154_week_2.md" >}})
 -   [SU-CS154 Week 3]({{< relref "KBhsu_cs154_week_3.md" >}})
--   [SU-CS154 Week 4]({{< relref "KBhsu_cs154_week_4.md" >}})
 
 
-### Computability {#computability}
+### Turing Machines!! {#turing-machines}
 
 turing machines are super powerful, meaning we can:
 
@@ -57,6 +56,8 @@ undecidability: characterize what can't be computed (undecidability)
 -   kolomogorov complexity (universal theory of information)
 
 this builds the foundations of mathematics through computation
+
+-   [SU-CS154 Week 4]({{< relref "KBhsu_cs154_week_4.md" >}})
 
 
 ### [complexity theory]({{< relref "KBhcomplexity_theory.md" >}}) {#complexity-theory--kbhcomplexity-theory-dot-md}

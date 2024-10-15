@@ -92,7 +92,7 @@ we can mostly ignore [alpha reduction](#alpha-reduction) and [eta reduction](#et
 
 #### alpha reduction {#alpha-reduction}
 
-we can rename variables to avoid collision; \\((\lambda y.e\_1) [ x: = e] = \lambda z.((e\_1 [y:=z])[x := e])\\), if \\(x \neq y\\), and \\(z\\) is fresh and never used
+we can rename variables to avoid collision; \\(\lambda x. e = \lambda z . e [x := z]\\), with a fresh \\(z\\) (to avoid conflicting variables).
 
 
 #### eta reduction {#eta-reduction}

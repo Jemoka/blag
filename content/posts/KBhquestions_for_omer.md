@@ -4,6 +4,12 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Week 4 {#week-4}
+
+-   **go over again**: why is it that in the [memory complexity theorem]({{< relref "KBhstreaming_algorithms.md#memory-complexity-theorem" >}}) for streaming algorithms our set is bounded in size by \\(\frac{n}{2}\\)? i.e., why not for instance \\(\frac{n}{3}\\)?
+-   Distinct subsets: There are \\(2^{\Omega(kn)}\\) such distinct subsets as long as where \\(2^{k} > n^{2}\\)... why?
+
+
 ## Week 3 {#week-3}
 
 -   for the one to one/well-formed proofs, why are the outcomes copiable? like why is it that when I get accept on one end \\(M'\\) I must get accept on teh other end? \\(M\_{\min}\\)?
