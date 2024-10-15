@@ -7,6 +7,11 @@ draft = false
 [Lambda Calculus]({{< relref "KBhsu_cs242_oct032024.md#lambda-calculus" >}}), [typing]({{< relref "KBhtyping.md" >}})
 
 
+## hyperstrict {#hyperstrict}
+
+aggressively reduce everything
+
+
 ## call-by-value {#call-by-value}
 
 we recursively evaluate the argument before reducing the function application
