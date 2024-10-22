@@ -94,4 +94,4 @@ same as above---if you get the answer, let \\(m'\\) return it. otherwise, we run
 -   if A &lt;= B, if A is undecidable, then B is undecidable
 -   if A &lt;= B, if A is unrecognizable, then B is unrecognizable
 -   if A &lt;= B, B is decidable, then A is decidable
--   if A &lt;= B, B is recognizable, then A is recognizable
+-
