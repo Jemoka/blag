@@ -29,7 +29,7 @@ that is, we need to return to ourselves a new place in memory
 ## dereference {#dereference}
 
 \begin{equation}
-\frac{E, S\_0 \vdash  e \to l, S\_1}{E, S\_0 \vdash !e \to S\_{1}(l), s\_1}
+\frac{E, S\_0 \vdash  e \to l, S\_1}{E, S\_0 \vdash !e \to S\_{1}(l), S\_1}
 \end{equation}
 
 

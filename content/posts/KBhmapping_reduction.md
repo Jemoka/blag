@@ -11,6 +11,13 @@ This is sometimes called a "many-to-one" reduction because often times you want 
 We remember this as "A is weaker ("not stronger") than B"; or "A is reducable to B"
 
 
+## Recipe {#recipe}
+
+For some \\(A \leq\_{M} B\\), we have three mechanical parts:
+
+there exists some [computable function](#computable-function) \\(f\\) from \\(\Sigma^{\*} \to  \Sigma^{\*}\\) which should take \\(x \in A \Leftrightarrow f(x) \in B\\)
+
+
 ## General idea {#general-idea}
 
 prove a language \\(L\\) is undecidable by proving that if \\(L\\) is decidable, so is \\(A\_{TM}\\). In particular, we reduce \\(A\_{TM}\\) to the language \\(L\\) (i.e. make a machine for \\(A\_{TM}\\) from \\(L\\) --- \\(A\_{TM} \leq\_{M} L\\)).
@@ -84,3 +91,7 @@ same as above---if you get the answer, let \\(m'\\) return it. otherwise, we run
 -   Atm is recognizable but not decidable
 -   EmptyTM is not recognizable
 -   EqualTM (if a pair of TM is equal) is not recognizable
+-   if A &lt;= B, if A is undecidable, then B is undecidable
+-   if A &lt;= B, if A is unrecognizable, then B is unrecognizable
+-   if A &lt;= B, B is decidable, then A is decidable
+-   if A &lt;= B, B is recognizable, then A is recognizable

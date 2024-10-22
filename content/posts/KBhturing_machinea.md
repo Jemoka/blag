@@ -134,7 +134,7 @@ Proof:
 
 We pick an ordering of strings over \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\).
 
-To check if we accept \\(w\\) with \\(M\\): for all strings in \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\), check if for \\(D \in \qty {Q \cup \Gamma \cup \\#}\\), and \\(D = C\_0 \\# ... \\# C\_{k}\\), if the sequence \\(C\_0 ... C\_{k}\\) is an accepting computation history in \\(N\\) (that is, \\(C\_0\\) is a valid start configuration, and \\(C\_{k}\\) is (1) a valid accepting one) that (2) corresponds to the string \\(w\\). If so, accept.
+To check if we accept \\(w\\) with \\(M\\): for all strings in \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\), check if for \\(D \in \qty {Q \cup \Gamma \cup \\#}\\), and \\(D = C\_0 \\# ... \\# C\_{k}\\), if the sequence \\(C\_0 ... C\_{k}\\) is an accepting computation history in \\(N\\) (that is, \\(C\_0\\) is a valid start configuration, and \\(C\_{k}\\) is (1) a valid accepting one) that (2) \\(C\_{0}\\) corresponds to the string \\(w\\). If so, accept.
 
 (i.e. we precompute paths)
 
