@@ -20,7 +20,7 @@ e \to (x | \lambda x . e | e e | i | \text{new} | {!e} | e := e)
 \end{equation}</p><p>where:</p><ul><li>\(new\) allocate a new memory location \(x\) and return pointer (initialize \(x\) to \(0\))</li><li>\(!e\) deref a pointer</li><li>\(e := e\), which is assigning the pointee of the memory location at the first argument to the second argument</li></ul><h2 id=new>new</h2><p>\begin{equation}
 \frac{l \not \in dom(S)}{E,S \vdash \text{new} \to l, S[l=0]}
 \end{equation}</p><p>that is, we need to return to ourselves a new place in memory</p><h2 id=dereference>dereference</h2><p>\begin{equation}
-\frac{E, S_0 \vdash e \to l, S_1}{E, S_0 \vdash !e \to S_{1}(l), s_1}
+\frac{E, S_0 \vdash e \to l, S_1}{E, S_0 \vdash !e \to S_{1}(l), S_1}
 \end{equation}</p><h2 id=assignment>assignment</h2><p>\begin{equation}
 \frac{\begin{align}
 &amp;E, S_0 \vdash e_1 \to I, S_1 \\
