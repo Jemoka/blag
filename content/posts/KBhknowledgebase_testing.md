@@ -17,3 +17,5 @@ draft = false
 \begin{equation}
 U(s) = \max\_{a} R(s,a) + \gamma \sum\_{s'}^{} T(s'|s,a) U(s')
 \end{equation}
+
+[asynchronous value iteration]({{< relref "KBhvalue_iteration.md#asynchronous-value-iteration" >}})

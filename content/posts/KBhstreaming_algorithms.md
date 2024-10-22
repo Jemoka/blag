@@ -1,5 +1,5 @@
 +++
-title = "Streaming Algorithms"
+title = "Streaming Algorithm"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -37,7 +37,7 @@ we can do this by tracking \\(B\\) a majority bit (currently what's winning), an
 Note that for strings of length \\(n\\), you need at most \\((1+\log\_{2}n)\\) bits of space to store counters \\(b\\) (which just flips) and \\(c\\) (because the counter would basically need to store, at most, the entire string in terms of all ones into the counter, which is \\(\log n\\).)
 
 
-#### memory complexity theorem {#memory-complexity-theorem}
+#### memory complexity of ones vs zeros {#memory-complexity-of-ones-vs-zeros}
 
 every streaming algorithm for \\(L\\) (above) needs \\((\log\_{2}n)-1\\) bits of space.
 
@@ -61,12 +61,14 @@ We will be able to do this in a streaming algorithm in \\(O \qty(k \qty(\log |\S
 ---
 
 -   Initialize a set \\(T \subseteq \Sigma \times \mathbb{N}\\). It contains a symbol and a counter.
--   Read a symbol \\(\sigma\\)
-    -   if \\((\sigma, m) \in T\\), then increment: \\((\sigma, m) \to (\sigma, m+1)\\) (remove and add)
-    -   else, if \\(|T| < k-1\\), then \\(T = T+ \qty {(\sigma, 1)}\\)
-    -   else, for all \\((\sigma', m') \in T\\), we decrement them all
-        -   \\((\sigma', m') \to (\sigma', m'-1)\\)
-        -   if \\(m' = 0\\), then we remove the pair \\((\sigma', m')\\) from \\(T\\)
+
+-theorem Read a symbol \\(\sigma\\)
+
+-   if \\((\sigma, m) \in T\\), then increment: \\((\sigma, m) \to (\sigma, m+1)\\) (remove and add)
+-   else, if \\(|T| < k-1\\), then \\(T = T+ \qty {(\sigma, 1)}\\)
+-   else, for all \\((\sigma', m') \in T\\), we decrement them all
+    -   \\((\sigma', m') \to (\sigma', m'-1)\\)
+    -   if \\(m' = 0\\), then we remove the pair \\((\sigma', m')\\) from \\(T\\)
 
 notice that since each increase round increase results in \\(1\\) counters, but each decrease round decreases results in \\(k\\) counters. This means that there is at most \\(\frac{n}{k}\\) decrease rounds (because each round decreases \\(k\\) counters, by the \\(k\\) th decreasing round you have decreased all \\(n\\) of your counters.)
 

@@ -14,8 +14,7 @@ Remember: when we say \\(e: t\\), this means that as we evaluate \\(e\\), after 
 1.  start at the leaves, integers and variables
 2.  for each one above, match the expression to the [type rules]({{< relref "KBhtyping.md#type-rules" >}})
 
-
-## type inference {#type-inference}
+a\* type inference
 
 1.  for every distinct lambda variable, we name a new type
 2.  then, for function applications, we have then also substitute the output type of the function with a type variable
@@ -48,7 +47,7 @@ we want every equivalent type to be represented by one thing.
 -   \\(C(S, a) = C(S, b)\\) if \\(a = b \in S\\), and \\(a < b\\) (for some oner)
 -   \\(C(S, a) = a\\), otherwise
 
-This could go into an infinite loop---whenever you are canonicalizing something and you got the same expression twice you need to stop because you have an infinite loop. You can do this by keeping the variables around.
+This could go into an infinite loop---whenever you are canonicalizing something and you got the same expression twice you need to stop because you have an infinite loop. You can do this by keeping what you have seen of variables around.
 
 
 ## let expression {#let-expression}

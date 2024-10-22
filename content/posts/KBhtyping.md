@@ -73,7 +73,10 @@ we call \\(i\\) any int
 #### function applications {#function-applications}
 
 \begin{equation}
-\frac{A \vdash  e\_1: t \to  t', A \vdash  e\_2 : t}{A \vdash e\_1e\_2: t'}
+\frac{\begin{align}
+&A \vdash  e\_1: t \to  t'\\\\
+&A \vdash  e\_2 : t
+\end{align}}{A \vdash e\_1e\_2: t'}
 \end{equation}
 
 if my function \\(f\\) takes \\(t\\) to \\(t'\\), then applying it to a \\(t\\) will give you a \\(t'\\)
@@ -91,7 +94,10 @@ if we can prove that with a thing \\(x\\) of type \\(t\\) we can force \\(e\\) t
 #### let {#let}
 
 \begin{equation}
-\frac{A \vdash \lambda x.e : t, A, f: t \vdash  e' : t'}{A \vdash let\ f=\lambda x.e \text{ in } e' : t'}
+\frac{\begin{align}
+&A \vdash \lambda x.e : t, A \\\\
+&f: t \vdash  e' : t'
+\end{align}}{A \vdash let\ f=\lambda x.e \text{ in } e' : t'}
 \end{equation}
 
 

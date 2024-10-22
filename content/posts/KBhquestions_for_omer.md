@@ -4,9 +4,17 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Week 5 {#week-5}
+
+-   from week 4: why can't streaming provide lower bound for communication? (i.e. I can see how communication can provide streaming lower bounds because we can reduce streaming to communication by sending the memory over)
+-   do Turing machines know where they are? as in, why do we have to use a blank to mark the start? in particular, how do we figure out if we at the start if we have blanks not just in the beginning but elsewhere in the tape?
+-   isn't there infinitely many strings in \\({Q \cup \Gamma \cup \\#}^{\*}\\)
+-   how do you formalize/make a universal truing machine?
+
+
 ## Week 4 {#week-4}
 
--   **go over again**: why is it that in the [memory complexity theorem]({{< relref "KBhstreaming_algorithms.md#memory-complexity-theorem" >}}) for streaming algorithms our set is bounded in size by \\(\frac{n}{2}\\)? i.e., why not for instance \\(\frac{n}{3}\\)?
+-   **go over again**: why is it that in the [memory complexity theorem]({{< relref "KBhstreaming_algorithms.md#memory-complexity-of-ones-vs-zeros" >}}) for streaming algorithms our set is bounded in size by \\(\frac{n}{2}\\)? i.e., why not for instance \\(\frac{n}{3}\\)?
 -   Distinct subsets: There are \\(2^{\Omega(kn)}\\) such distinct subsets as long as where \\(2^{k} > n^{2}\\)... why?
 
 

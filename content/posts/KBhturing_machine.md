@@ -30,11 +30,6 @@ For the main topic, see [turing machine]({{< relref "KBhturing_machinea.md" >}})
 see [Kolomogorov Complexity]({{< relref "KBhkolomogorov_complexity.md" >}})
 
 
-## Church-Turing thesis {#church-turing-thesis}
-
-Anything that can be computed by a reasonable model of computation can also be computed by a Turing Machine.
-
-
 ## Non-deterministic Turing Machine {#non-deterministic-turing-machine}
 
 They are not really good computational system, non-determinism doesn't add that much power by normal Turing Machine.

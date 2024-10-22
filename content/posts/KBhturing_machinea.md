@@ -10,7 +10,7 @@ draft = false
 -   \\(\Sigma\\) is the input alphabet, where \\(\square \not \in \Sigma\\)
 -   \\(\Gamma\\) is the tape alphabet, where \\(\square \in \Gamma\\), and \\(\Sigma \subseteq \Gamma\\) (because we can write empty cells)
 -   \\(\delta: Q \times \Gamma \to Q \times \Gamma \times \qty {L, R}\\)
--   \\(q\_0 \in Q\\), the start statea
+-   \\(q\_0 \in Q\\), the start state
 -   \\(q\_{a} \in Q\\), the accept state
 -   \\(q\_{r} \neq q\_{a}\in Q\\), the reject state (because a Turing Machine may not terminate at end of input)
 
@@ -66,6 +66,17 @@ A language \\(L\\) is **recognizable** ("recursively enumerable") if some TM rec
 A language \\(L\\) is **recursive** if some TM decides \\(L\\)
 
 
+#### L is decidable IFF L and not L are both recognizable {#l-is-decidable-iff-l-and-not-l-are-both-recognizable}
+
+given a \\(M\_1\\) that recognizes \\(L\\), a \\(M\_{2}\\) that recognizes \\(\neg L\\), we want to build a machine \\(M\\) that decides \\(L\\).
+
+(this is easy; just run both machines at once on two tapes and then just check which one gets recognized first; accept if \\(M\_1\\) accepts and reject if \\(M\_2\\) accepts)
+
+---
+
+if \\(L\\) is decidable, \\(\neg L\\) is also decidable (because we just run \\(L\\) and return the opposite)
+
+
 ### intuition {#intuition}
 
 
@@ -109,3 +120,49 @@ L = \qty {w \\# w \mid w \in {0,1}^{\*}}
     1.  replace the first bit with X, and check the first bit to the right of the # and x is the same one
     2.  if not, reject; if so, replace the right bit with an X too
 3.  if there is a bit to the right of # that's not X, then reject; otherwise, accept
+
+
+### Non-deterministic Turing Machines {#non-deterministic-turing-machines}
+
+We have multiple transitions for a state, symbol pair in non-deterministic TMs. Theorem: every non-deterministic Turing machine \\(N\\) can be transformed into a Turing machine \\(M\\) that accepts only strings \\(N\\) accepts.
+
+(We don't care about rejection in this case, because "some rejection state" seems odd if there are some that's not a rejection state)
+
+---
+
+Proof:
+
+We pick an ordering of strings over \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\).
+
+To check if we accept \\(w\\) with \\(M\\): for all strings in \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\), check if for \\(D \in \qty {Q \cup \Gamma \cup \\#}\\), and \\(D = C\_0 \\# ... \\# C\_{k}\\), if the sequence \\(C\_0 ... C\_{k}\\) is an accepting computation history in \\(N\\) (that is, \\(C\_0\\) is a valid start configuration, and \\(C\_{k}\\) is (1) a valid accepting one) that (2) corresponds to the string \\(w\\). If so, accept.
+
+(i.e. we precompute paths)
+
+
+### Recognizability {#recognizability}
+
+
+#### decidable predicate {#decidable-predicate}
+
+A decidable predicate \\(R(x,y)\\) is a proposition about the input strings \\(x\\), \\(y\\), such that some Turing machine \\(M\\) will implement \\(R\\).
+
+That is, for all \\(x, y\\), we have \\(R(x,y)\\) is true means \\(M(x,y)\\) accepts, and \\(R(x,y)\\) is false means \\(M(x,y)\\) rejects.
+
+That is: \\(R: \Sigma^{\*} \times \Sigma^{\*} \to \qty {T,f}\\)
+
+
+#### predicate recognizability {#predicate-recognizability}
+
+a particular language \\(A\\) is **recognizable** IFF there is a **[decidable](#decidable)** (note the upgrade in strength) [predicate]({{< relref "KBhpredicates.md" >}}) \\(R(x,y)\\) such that \\(A = \qty {x \mid \exists y, R(x,y)}\\).
+
+Proof:
+
+\\(\Rightarrow\\) assume \\(A = \qty {x \mid \exists y, R(x,y)}\\), we want to show that \\(A\\) is [recognizable](#recognizable)
+
+Create a Turing machine which: enumerate all finite-length strings \\(y\\); if \\(R(x,y)\\) is true, accept it.
+
+\\(\Leftarrow\\) if \\(A\\) is recognizable, there is some decidable predicate \\(R(x,y)\\) such that \\(A = \qty {x \mid \exists y, R(x,y)}\\).
+
+By definition \\(A\\) is recognizable, so there's an \\(M\\) which recognizes \\(A\\). Define a predicate \\(R(x,y)\\) be TRUE IFF \\(M\\) accepts \\(x\\) in \\(|y|\\) steps.
+
+We now want to show that \\(R(x,y)\\) is decidable. If \\(M\\) accepts \\(x\\); it would have done so in some finite \\(y\\) steps. Hence, \\(R(x,y) = TRUE\\). If there is some \\(y\\) for which \\(R(x,y)\\) is true, we can see that we can run \\(M\\) on \\(x\\) for \\(y\\) steps and see that by definition \\(M\\) have just accepted the string. This is _decidable_ because we can check for \\(y\\) steps exactly, so we will always terminate.

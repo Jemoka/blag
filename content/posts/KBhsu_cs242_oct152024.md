@@ -23,6 +23,8 @@ and beta reductions:
 
 "why can't we have logical rules to explain how programs execute?"
 
+**bold**
+
 
 ### type judgment {#type-judgment}
 
@@ -88,3 +90,10 @@ Under a call-by-value scheme---we will first reduce function arguments.
     \begin{equation}
     \frac{}{E \vdash  \lambda x . e \to  < \lambda x . e, E >}
     \end{equation}
+
+
+## state {#state}
+
+OMG side effect smh
+
+[state]({{< relref "KBhstate.md" >}})

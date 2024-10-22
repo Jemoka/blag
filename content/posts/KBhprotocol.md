@@ -29,7 +29,7 @@ i.e: what is the input that could make running this protocol the longest? (remem
 
 the [Communication Complexity](#communication-complexity) of \\(f\\) on \\(n\\) bit strings is the minimum [protocol cost](#protocol-cost) over all possible protocols for \\(f\\) on n bit strings.
 
-the range of communication complexity is $[2, 2<sup>n</sup>]$---the former because each party has to say something to communicate, the latter because...
+the range of communication complexity is $[2, 2n]$---the former because each party has to say something to communicate, the latter because...
 
 
 ### trivial protocol {#trivial-protocol}
@@ -74,7 +74,30 @@ hence, we need to send at least \\(\log\_{2}(n)\\) bits where Alice is sending o
 \end{equation}
 
 
-## [protocol]({{< relref "KBhprotocol.md" >}})s, [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}), [Streaming Algorithms]({{< relref "KBhstreaming_algorithms.md" >}}), [Communication Complexity](#communication-complexity) {#protocol--kbhprotocol-dot-md--s-dfa--kbhdeterministic-finite-automata-dot-md--streaming-algorithms--kbhstreaming-algorithms-dot-md--communication-complexity--orgecae224}
+#### complexity of EQUALS {#complexity-of-equals}
+
+The communication complexity of EQUALS is \\(\theta (n)\\). Every protocol for EQUALS needs \\(\geq n\\) bits of communication. This also results in that every streaming algorithm for EQUALS needs \\(cn\\) bits of memory, for some constant \\(c>0\\).
+
+Let's define the _communication pattern_ to be the sequence of bits that are set. Assume for the sake of contradiction that there is a protocol for which communicating EQUALS only takes \\(\leq  n-1\\) bits.
+
+That means that there's only \\(2^{n-1}\\) possible communication patterns to communicate this protocol. By pigeonhole, there's something of length \\(n\\) exactly for which on \\((x,x)\\) and \\((y,y)\\) uses the same communication pattern when \\(x \neq y\\) (because there are \\(2^{n}\\) such pairs \\((x,x)\\), so it should produce correspondingly \\(2^{n}\\) such patterns).
+
+Notice! This means that the communication pattern of \\((x,y)\\) is also going to be the same (we induce this by noticing that each turn, if the pattern is the same, each party is going to see the same inputs and will return the same outputs.)
+
+This is contradiction because the protocol outputs the same bit for both \\((y,y)\\) and \\((x,y)\\), which is not good.
+
+<!--list-separator-->
+
+-  getting better results with randomized protocols
+
+    general idea: after applying some error correcting code, a single-bit error will result in errors in many-many bits; we then can send just a few random bits and then be able to be fairly sure that the underlying strings are roughly the same.
+
+    1.  Alice picks a random prime number
+    2.  She sends \\(p\\) to Bob, and sends \\(x \ \text{mod}\ p\\) to bob \\(O(\log n)\\) bits to send
+    3.  bob checks whether \\(y = x\ \text{mod}\ p\\)
+
+
+## [protocol]({{< relref "KBhprotocol.md" >}})s, [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}), [Streaming Algorithms]({{< relref "KBhstreaming_algorithms.md" >}}), [Communication Complexity](#communication-complexity) {#protocol--kbhprotocol-dot-md--s-dfa--kbhdeterministic-finite-automata-dot-md--streaming-algorithms--kbhstreaming-algorithms-dot-md--communication-complexity--org4ac384b}
 
 Let \\(L \subseteq \qty{0,1}^{\*}\\), let \\(f\_{L}: \qty {0,1}^{\*} \times \qty {0,1}^{\*} \to  \qty {0,1}\\)
 
@@ -93,7 +116,7 @@ L = \qty { x x \mid x \in {0,1}^{\*}}
 this is equal to the function EQUALS above.
 
 
-### bounded [Communication Complexity](#communication-complexity) {#bounded-communication-complexity--orgecae224}
+### bounded [Communication Complexity](#communication-complexity) {#bounded-communication-complexity--org4ac384b}
 
 if \\(L\\) has a [Streaming Algorithms]({{< relref "KBhstreaming_algorithms.md" >}}) using \\(\leq s\\) bits of space, then the communication complexity of \\(f\_{L}\\) is at most \\(O(s)\\).
 
@@ -108,25 +131,3 @@ If accept, then return a \\(1\\); otherwise, no.
 #### Corollary {#corollary}
 
 For every regular language, the communication complexity of \\(f\_{L}\\) is \\(O(1)\\). Because we can just send our state ID over.
-
-
-### complexity of EQUALS {#complexity-of-equals}
-
-The communication complexity of EQUALS is \\(\theta (n)\\). Every protocol for EQUALS needs \\(\geq n\\) bits of communication. This also results in that every streaming algorithm for EQUALS needs \\(cn\\) bits of memory, for some constant \\(c>0\\).
-
-Let's define the _communication pattern_ to be the sequence of bits that are set. Assume for the sake of contradiction that there is a protocol for which communicating EQUALS only takes \\(\leq  n-1\\) bits.
-
-That means that there's only \\(2^{n-1}\\) possible communication patterns to communicate this protocol. By pigeonhole, there's something of length \\(n\\) exactly for which on \\((x,x)\\) and \\((y,y)\\) uses the same communication pattern when \\(x \neq y\\) (because there are \\(2^{n}\\) such pairs \\((x,x)\\), so it should produce correspondingly \\(2^{n}\\) such patterns).
-
-Notice! This means that the communication pattern of \\((x,y)\\) is also going to be the same (we induce this by noticing that each turn, if the pattern is the same, each party is going to see the same inputs and will return the same outputs.)
-
-This is contradiction because the protocol outputs the same bit for both \\((y,y)\\) and \\((x,y)\\), which is not good.
-
-
-#### getting better results with randomized protocols {#getting-better-results-with-randomized-protocols}
-
-general idea: after applying some error correcting code, a single-bit error will result in errors in many-many bits; we then can send just a few random bits and then be able to be fairly sure that the underlying strings are roughly the same.
-
-1.  Alice picks a random prime number
-2.  She sends \\(p\\) to Bob, and sends \\(x \ \text{mod}\ p\\) to bob \\(O(\log n)\\) bits to send
-3.  bob checks whether \\(y = x\ \text{mod}\ p\\)
