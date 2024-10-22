@@ -17,11 +17,17 @@ List[Int]; importantly, List is not a type; its a &ldquo;type constructor&rdquo;
 \end{equation}</p><p>if you assume \(x:t\), then \(x:t\)</p><h4 id=integers>integers</h4><p>\begin{equation}
 \frac{}{A \vdash i: int}
 \end{equation}</p><p>we call \(i\) any int</p><h4 id=function-applications>function applications</h4><p>\begin{equation}
-\frac{A \vdash e_1: t \to t&rsquo;, A \vdash e_2 : t}{A \vdash e_1e_2: t&rsquo;}
+\frac{\begin{align}
+&amp;A \vdash e_1: t \to t&rsquo;\\
+&amp;A \vdash e_2 : t
+\end{align}}{A \vdash e_1e_2: t&rsquo;}
 \end{equation}</p><p>if my function \(f\) takes \(t\) to \(t&rsquo;\), then applying it to a \(t\) will give you a \(t&rsquo;\)</p><h4 id=abstraction>abstraction</h4><p>\begin{equation}
 \frac{A, x:t \vdash e: t&rsquo;}{A \vdash \lambda x:t . e : t \to t&rsquo;}
 \end{equation}</p><p>if we can prove that with a thing \(x\) of type \(t\) we can force \(e\) to be type \(t&rsquo;\), then the lambda wrapped around it would have the signature \(t \to t&rsquo;\).</p><h4 id=let>let</h4><p>\begin{equation}
-\frac{A \vdash \lambda x.e : t, A, f: t \vdash e&rsquo; : t&rsquo;}{A \vdash let\ f=\lambda x.e \text{ in } e&rsquo; : t&rsquo;}
+\frac{\begin{align}
+&amp;A \vdash \lambda x.e : t, A \\
+&amp;f: t \vdash e&rsquo; : t'
+\end{align}}{A \vdash let\ f=\lambda x.e \text{ in } e&rsquo; : t&rsquo;}
 \end{equation}</p><h3 id=environment>environment</h3><p>Environments gives types for free variables&mdash;an environment is a function from variables to types.</p><p>Let \(A\) be a function from <a href=/posts/kbhsu_cs242_oct032024/#free-variables>free variables</a> to <a href=/posts/kbhtyping/>type</a>. For instance, \(A \vdash e:T\), meaning &ldquo;under the assumption that variables have types by \(A\), its provable that the expression \(e\) has type \(T\).</p><p>We have then tack on this on</p><p>\begin{equation}
 \frac{A \vdash e_1 : Int, A \vdash e_2: Int}{A\vdash e_1+e_2 : Int}
 \end{equation}</p><h3 id=variables>variables</h3><p>\begin{equation}
