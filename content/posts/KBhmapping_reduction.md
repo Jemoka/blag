@@ -89,6 +89,8 @@ same as above---if you get the answer, let \\(m'\\) return it. otherwise, we run
 ### things to map to {#things-to-map-to}
 
 -   Atm is recognizable but not decidable
+-   not ATM is not recognizable because ATM is not decidable
+-   HALT_TM is recognizable but not decidable
 -   EmptyTM is not recognizable
 -   EqualTM (if a pair of TM is equal) is not recognizable
 -   if A &lt;= B, if A is undecidable, then B is undecidable
