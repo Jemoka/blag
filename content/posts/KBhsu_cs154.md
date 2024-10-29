@@ -58,6 +58,7 @@ undecidability: characterize what can't be computed (undecidability)
 this builds the foundations of mathematics through computation
 
 -   [SU-CS154 Week 4]({{< relref "KBhsu_cs154_week_4.md" >}})
+-   [SU-CS154 Week 5]({{< relref "KBhsu_cs154_week_5.md" >}})
 
 
 ### [complexity theory]({{< relref "KBhcomplexity_theory.md" >}}) {#complexity-theory--kbhcomplexity-theory-dot-md}

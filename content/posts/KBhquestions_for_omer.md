@@ -4,6 +4,16 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Week 6 {#week-6}
+
+-   [interpreter]({{< relref "KBhkolomogorov_complexity.md#interpreter" >}}) arguments: why is that changing \\(K(x)\\) up to a constant? i.e. for instance doesn't the choice of \\(K\_{p}(x)\\) matter?
+-   [Godel's consistency]({{< relref "KBhmathematics.md#godel-s-consistency" >}}): why does the
+
+{{< figure src="/ox-hugo/2024-10-28_21-56-46_screenshot.png" >}}
+
+imply that \\(\neg S\_{G,\varepsilon}\\) is true?
+
+
 ## Week 5 {#week-5}
 
 -   from week 4: why can't streaming provide lower bound for communication? (i.e. I can see how communication can provide streaming lower bounds because we can reduce streaming to communication by sending the memory over)
