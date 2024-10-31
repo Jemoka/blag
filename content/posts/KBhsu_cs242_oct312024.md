@@ -104,3 +104,58 @@ That is, baking the idea of ownership into the typ esystem.
 -   there's always a single _owner_ referencing an object (owning: responsible for the resources of the object)
 -   if an object has no owner (when the owner goes out of scope), it will be deallocated
 -   `x=y` will remove ownership from `y` and transfers it to `x` (we can't even use `y` after such a copy)
+
+Typical ownership rules are very restrictive because the program must be linear. So, we use the following techniques:
+
+-   using immutabel data structures when possible
+-   deep copies are fine
+-   borrowing creates a reference that can be used
+    -   doesn't transfer ownership
+    -   implies a borrowed reference can't deallocate an object
+    -   owner can't deallocate objects until all borrowed refrences are returned
+    -   borrowed references have a different syntax and type
+
+
+#### lifetime {#lifetime}
+
+Rust reasons about ownership through _lifetimes_: the **lifetime** of a variable is the span between its definition and its **last use**---a lifetime is a subset of the scope (i.e. if you stopped using a variable earlier than it going of scope).
+
+Unique owner: lifetime of owners of an object cannot overlap.
+
+This is called a [linear type discipline](#lifetime): you will never have an aliasing problem (beaches only one name is available at any time for an object).
+
+If there were not borrowing in rust, it would be purely linear; that also makes writing non-trivial programs impossible because you can't write things like iterators (because it needs a pointer to the root and a pointer to the current value).
+
+
+#### borrow {#borrow}
+
+"[borrow](#borrow)ing" is aliases in rust with tighter semantics. You can't call free on a borrow.
+
+-   borrow cannot outlive its owner: the lifetime of a borrow is contained within the lifetime of its owner
+-   a borrow can't deallocate its object---that's why its a borrow
+-   there can only be one mutable borrow to an object in scope, and any number of readers
+
+
+#### explicit lifetimes {#explicit-lifetimes}
+
+Suppose we want to return the longer of two strings:
+
+```rust
+fn longest(x: &str, y: &str) -> &str;
+```
+
+`x` and `y` may not have the same lifetime, and we don't know that the lifetime of the result could be.
+
+This requires some discussion of if statement:
+
+\begin{equation}
+\frac{A \vdash e\_1: Bool, A \vdash e\_2: T, A \vdash e\_3: T}{A \vdash \text{$e\_1$ then $e\_2$ else $e\_3$}:T}
+\end{equation}
+
+that is, both branches of an `if` statement must return the same type, otherwise it has n way to type check the output type.
+
+An ownership type, then, requires that the _lifetime_ of these two branches to be the same. We will therefore take in lifetime information:
+
+```rust
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str;
+```
