@@ -4,6 +4,16 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## Week 8 {#week-8}
+
+-   ask Omer to go over subset sum
+
+
+## Week 7 {#week-7}
+
+-   so in NP, "nondeterministically guess" happens in order-1 time for all possible choices?
+
+
 ## Week 6 {#week-6}
 
 -   [interpreter]({{< relref "KBhkolomogorov_complexity.md#interpreter" >}}) arguments: why is that changing \\(K(x)\\) up to a constant? i.e. for instance doesn't the choice of \\(K\_{p}(x)\\) matter?

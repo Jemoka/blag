@@ -122,23 +122,6 @@ L = \qty {w \\# w \mid w \in {0,1}^{\*}}
 3.  if there is a bit to the right of # that's not X, then reject; otherwise, accept
 
 
-### Non-deterministic Turing Machines {#non-deterministic-turing-machines}
-
-We have multiple transitions for a state, symbol pair in non-deterministic TMs. Theorem: every non-deterministic Turing machine \\(N\\) can be transformed into a Turing machine \\(M\\) that accepts only strings \\(N\\) accepts.
-
-(We don't care about rejection in this case, because "some rejection state" seems odd if there are some that's not a rejection state)
-
----
-
-Proof:
-
-We pick an ordering of strings over \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\).
-
-To check if we accept \\(w\\) with \\(M\\): for all strings in \\(\qty {Q \cup \Gamma \cup \\#}^{\*}\\), check if for \\(D \in \qty {Q \cup \Gamma \cup \\#}\\), and \\(D = C\_0 \\# ... \\# C\_{k}\\), if the sequence \\(C\_0 ... C\_{k}\\) is an accepting computation history in \\(N\\) (that is, \\(C\_0\\) is a valid start configuration, and \\(C\_{k}\\) is (1) a valid accepting one) that (2) \\(C\_{0}\\) corresponds to the string \\(w\\). If so, accept.
-
-(i.e. we precompute paths)
-
-
 ### Recognizability {#recognizability}
 
 

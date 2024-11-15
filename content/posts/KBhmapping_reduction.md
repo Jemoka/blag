@@ -31,6 +31,52 @@ a function \\(f: \Sigma^{\*} \to \Sigma^{ \*}\\) is a [computable function](#com
 ## additional info {#additional-info}
 
 
+### polynomial time mapping reduction {#polynomial-time-mapping-reduction}
+
+[polynomial time mapping reduction](#polynomial-time-mapping-reduction) is a mapping reduction!
+
+\begin{equation}
+f: \Sigma^{\*} \to \Sigma^{\*}
+\end{equation}
+
+but we also say that \\(f\\) is both computable **AND** polynomial: that there exists a [Polynomial Time]({{< relref "KBhcomputational_complexity_theory.md#polynomial-time" >}}) [turing machine]({{< relref "KBhturing_machinea.md" >}}) \\(M\\) that, on every input, halts with \\(f(w)\\) on the tape within a polynomial number of steps on \\(w\\).
+
+If \\(w \in A \Leftrightarrow f(w) \in B\\), we have that \\(f\\) is a polynomial time mapping reduction. Note that since \\(M\\) is bounded by a polynomial number of steps, we also have \\(|f(w)| \leq |w|^{k}\\) by some polynomial number of steps since the machine \\(M\\) can't take more steps than polynomial so it can't generate super long strings.
+
+Note, that this is still a normal [mapping reduction]({{< relref "KBhmapping_reduction.md" >}}), that is, we have reduced the problem of deciding \\(w \in A\\) to that of decidnig \\(f(w) \in B\\).
+
+The usual rules of [mapping reduction]({{< relref "KBhmapping_reduction.md" >}}) still applies:
+
+if \\(A \leq\_{p} B\\), and \\(B \leq\_{p} C\\), we have \\(A \leq\_{p} C\\)
+
+The important properties about this is that if some string \\(n \in A\\), after all the reduction we still have a polynomial time strings \\(f(f(n))\\) would be length \\(n^{cd}\\) which would be a polynomially bounded computation with also bounded output length.
+
+
+#### timing properties of reduction {#timing-properties-of-reduction}
+
+\begin{equation}
+A \leq\_{p} B, B \in P \implies A \in P
+\end{equation}
+
+because you can solve \\(A\\) by sending a string through \\(f\\), decide it with \\(B\\), then you have decided \\(A\\) since \\(w \in A \Leftrightarrow f(w) \in B\\); if \\(B\\) is decidable in \\(P\\) and \\(f(w)\\) is computable in \\(P\\), well then \\(A\\) have just been decided in \\(P\\)
+
+same idea
+
+\begin{equation}
+A \leq\_{p} B, B \in NP \implies A \in NP
+\end{equation}
+
+and of course the contrapositives:
+
+\begin{equation}
+A \leq\_{p} B, A \not\in NP \implies B \not\in NP
+\end{equation}
+
+\begin{equation}
+A \leq\_{p} B, A \not\in P \implies B \not\in P
+\end{equation}
+
+
 ### mapping reductions are transitive {#mapping-reductions-are-transitive}
 
 if \\(A \leq\_{m} B\\), and \\(B \leq\_{m} C\\), we have \\(A \leq\_{m} C\\)

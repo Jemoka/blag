@@ -44,4 +44,9 @@ draft = false
 ### Objects {#objects}
 
 -   [SU-CS242 OCT242024]({{< relref "KBhsu_cs242_oct242024.md" >}})
+
+
+### Programming Abstractions and Logic Programming {#programming-abstractions-and-logic-programming}
+
 -   [SU-CS242 OCT312024]({{< relref "KBhsu_cs242_oct312024.md" >}})
+-   [SU-CS242 NOV072024]({{< relref "KBhsu_cs242_nov072024.md" >}})

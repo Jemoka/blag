@@ -59,6 +59,7 @@ this builds the foundations of mathematics through computation
 
 -   [SU-CS154 Week 4]({{< relref "KBhsu_cs154_week_4.md" >}})
 -   [SU-CS154 Week 5]({{< relref "KBhsu_cs154_week_5.md" >}})
+-   [SU-CS154 Week 6]({{< relref "KBhsu_cs154_week_6.md" >}})
 
 
 ### [complexity theory]({{< relref "KBhcomplexity_theory.md" >}}) {#complexity-theory--kbhcomplexity-theory-dot-md}
@@ -71,3 +72,6 @@ this builds the foundations of mathematics through computation
 -   again, a hierachy of exceedingly hard problems
 
 also adds: space, randomness, communication, power, etc.
+
+-   [SU-CS154 Week 7]({{< relref "KBhsu_cs154_week7.md" >}})
+-   [SU-CS154 Week 8]({{< relref "KBhsu_cs154_week_8.md" >}})
