@@ -40,7 +40,7 @@ I'm broadly interested in ****Natural Language Processing**** and ****Speech Lan
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">Stanford NLP (2024)</div>
 <div style="font-weight: 500">MSCAW-coref: Multilingual, Singleton and Conjunction-Aware Word-Level Coreference Resolution</div>
 <div><u>Liu, H.</u>, Bauer, J., D'Oosterlinck, K., Potts, C., Manning, C.D.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Talk@CRAC at EMNLP</span><span class="tag"><a  target="_top" href="https://aclanthology.org/2024.crac-1.4/">Paper@ACL Anthology></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Talk@CRAC at EMNLP</span><span class="tag"><a  target="_top" href="https://aclanthology.org/2024.crac-1.4/">Paper@ACL Anthology</span></div>
 </div>
 
 <div style="padding: 15px 0">
