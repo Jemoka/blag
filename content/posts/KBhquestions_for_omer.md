@@ -7,6 +7,7 @@ draft = false
 ## Week 9 {#week-9}
 
 -   isn't \\(P^{\text{SAT}}\\) just \\(\text{SAT}\\) with more steps? i.e., because an "oracle" for \\(\text{SAT}\\) is just a system that checks SAT, and we know that can be done in P **no it isn't because checking requires a witness**
+-   can we use CLIQUE in pset
 
 
 ## Week 8 {#week-8}

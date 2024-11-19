@@ -24,7 +24,7 @@ Suppose \\(L\\) is NP-complete; then, assuming \\(P \neq NP\\), then \\(L\\) is 
 for a particular problem \\(\Pi \in NP\\), we want to find some known [NP-Hard]({{< relref "KBhnp_complete.md" >}}) thing named \\(\Sigma\\) like [3SAT]({{< relref "KBhnon_deterministic_turing_machines.md#3cnf-formula" >}}) and show that \\(\Sigma \leq\_{p} \Pi\\).
 
 
-## many, many NP-Complete thins {#many-many-np-complete-thins}
+## many, many NP-Complete things {#many-many-np-complete-things}
 
 
 ### [clique problem]({{< relref "KBhnon_deterministic_turing_machines.md#clique-problem" >}}) {#clique-problem--kbhnon-deterministic-turing-machines-dot-md}

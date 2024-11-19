@@ -50,3 +50,5 @@ draft = false
 
 -   [SU-CS242 OCT312024]({{< relref "KBhsu_cs242_oct312024.md" >}})
 -   [SU-CS242 NOV072024]({{< relref "KBhsu_cs242_nov072024.md" >}})
+-   [SU-CS242 NOV142024]({{< relref "KBhsu_cs242_nov142024.md" >}})
+-   [SU-CS242 NOV192024]({{< relref "KBhsu_cs242_nov192024.md" >}})
