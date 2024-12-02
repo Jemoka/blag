@@ -75,3 +75,9 @@ also adds: space, randomness, communication, power, etc.
 
 -   [SU-CS154 Week 7]({{< relref "KBhsu_cs154_week7.md" >}})
 -   [SU-CS154 Week 8]({{< relref "KBhsu_cs154_week_8.md" >}})
+-   [SU-CS154 Week 9]({{< relref "KBhsu_cs154_week_9.md" >}})
+
+
+### ...the end! {#dot-dot-dot-the-end}
+
+[SU-CS154 Week 10]({{< relref "KBhsu_cs154_week_10.md" >}}) and [CS154 Final Summary]({{< relref "KBhcs154_final_ummary.md" >}})

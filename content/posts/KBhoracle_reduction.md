@@ -29,7 +29,7 @@ On input \\((M,w)\\), if \\((M,w)\\) is in \\(HALT\_{TM}\\), then run \\(M(w)\\)
 On input \\((M,w)\\), we want to decide if \\(M\\) halts on \\(w\\), so we just check that \\((M, w) \in A\_{TM}\\) or swap accept and reject of \\(M\\) to get \\(M'\\), and if \\((M',w) \in A\_{TM}\\), then we also accept. Otherwise, we reject.
 
 
-## [mapping reduction]({{< relref "KBhmapping_reduction.md" >}})s and [turing reductions](#oracle-turing-machine) {#mapping-reduction--kbhmapping-reduction-dot-md--s-and-turing-reductions--org22b25ad}
+## [mapping reduction]({{< relref "KBhmapping_reduction.md" >}})s and [turing reductions](#oracle-turing-machine) {#mapping-reduction--kbhmapping-reduction-dot-md--s-and-turing-reductions--org4d3f862}
 
 
 ### mapping reduction is weaker than turing reduction {#mapping-reduction-is-weaker-than-turing-reduction}

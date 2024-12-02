@@ -286,8 +286,8 @@ we also should define inference rules, which quires a type `Proof`.
 \text{and}: \text{Type} \to \text{Type} \to \text{Type}
 \end{equation}
 
-\begin{equation}
-\text{or}: \text{Type} \to \text{Type} \to \text{Type}
+\blankbegin{equation}
+\text{or}: \text{Type} &rarr; \text{Type} &rarr; \text{Type}
 \end{equation}
 
 \begin{equation}
