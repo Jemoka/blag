@@ -52,5 +52,5 @@ every value has a &ldquo;tag&rdquo; &mdash; for instance, integers vs. functions
 </span></span></code></pre></div><p>this gets at a heart of a central issue</p><ol><li>aliasing <strong>is</strong> a symmetric relationship</li><li>subtyping <strong>is not</strong> a symmetric relationship</li></ol><p>so, you could read something as one type and read it out another place as another type. hence, mutable types in general are not covariant.</p><p>hence, on container, we have that:</p><p>\begin{equation}
 \text{List}\qty(x) \leq \text{List}\qty(y) \Leftrightarrow x = y
 \end{equation}</p><h3 id=contravariant>Contravariant</h3><p>Function types are <strong>contravariant</strong> in the domain, <strong>covariant</strong> in the range</p><p>\begin{equation}
-\text{Supertype} \to \text{Int} \leq \text{Subtype} \to Int
-\end{equation}</p><ul><li><strong>contravariance</strong>: \(A \to B \leq C \to D\) if \(C \leq A\) and \(B \leq D\)</li></ul></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\text{Point} \to \text{Int} \leq \text{Colorpoint} \to \text{Int}
+\end{equation}</p><p><strong>contravariance</strong>: \(A \to B \leq C \to D\) if \(C \leq A\) and \(B \leq D\)</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
