@@ -29,7 +29,7 @@ On input \\((M,w)\\), if \\((M,w)\\) is in \\(HALT\_{TM}\\), then run \\(M(w)\\)
 On input \\((M,w)\\), we want to decide if \\(M\\) halts on \\(w\\), so we just check that \\((M, w) \in A\_{TM}\\) or swap accept and reject of \\(M\\) to get \\(M'\\), and if \\((M',w) \in A\_{TM}\\), then we also accept. Otherwise, we reject.
 
 
-## [mapping reduction]({{< relref "KBhmapping_reduction.md" >}})s and [turing reductions](#oracle-turing-machine) {#mapping-reduction--kbhmapping-reduction-dot-md--s-and-turing-reductions--org4d3f862}
+## [mapping reduction]({{< relref "KBhmapping_reduction.md" >}})s and [turing reductions](#oracle-turing-machine) {#mapping-reduction--kbhmapping-reduction-dot-md--s-and-turing-reductions--org98c8ddb}
 
 
 ### mapping reduction is weaker than turing reduction {#mapping-reduction-is-weaker-than-turing-reduction}
@@ -64,7 +64,7 @@ because if this were to be true than \\(\neg HALT\_{TM}\\) should be recognizabl
 SUPERHALT = \qty {(M,x) | M, \text{ with an oracle for the halting problem, halts on $x$ } }
 \end{equation}
 
-We show that this problem can't be decided through nationalization. For contradiction suppose \\(H\\) decides \\(SUPERHALT\\). Let us define now a \\(D(X)\\) for which if \\(H(X,X)\\)  accepts we loop, and otherwise accept. Now, consider \\(D(D)\\). Suppose \\(D(D)\\) accepts, this means that \\(H(D,D)\\) rejected, meaning \\(D\\) didn't halt on \\(D\\), but that contradicts that \\(D(D)\\) accepts. Suppose \\(D(D)\\) rejects, that means that \\(H(D,D)\\) accepts, but that means \\(D(D)\\) is supposed to loop. Contradiction.
+We show that this problem can't be decided through diagonalization. For contradiction suppose \\(H\\) decides \\(SUPERHALT\\). Let us define now a \\(D(X)\\) for which if \\(H(X,X)\\)  accepts we loop, and otherwise accept. Now, consider \\(D(D)\\). Suppose \\(D(D)\\) accepts, this means that \\(H(D,D)\\) rejected, meaning \\(D\\) didn't halt on \\(D\\), but that contradicts that \\(D(D)\\) accepts. Suppose \\(D(D)\\) rejects, that means that \\(H(D,D)\\) accepts, but that means \\(D(D)\\) is supposed to loop. Contradiction.
 
 
 ### Given any oracle O, there's always a harder problem that cannot be decided with that oracle O {#given-any-oracle-o-there-s-always-a-harder-problem-that-cannot-be-decided-with-that-oracle-o}
