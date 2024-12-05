@@ -174,7 +174,7 @@ hence, on container, we have that:
 Function types are **contravariant** in the domain, **covariant** in the range
 
 \begin{equation}
-\text{Supertype} \to \text{Int} \leq \text{Subtype} \to  Int
+\text{Point} \to \text{Int} \leq \text{Colorpoint} \to  \text{Int}
 \end{equation}
 
--   **contravariance**: \\(A \to B \leq C \to D\\) if \\(C \leq A\\) and \\(B \leq D\\)
+**contravariance**: \\(A \to B \leq C \to D\\) if \\(C \leq A\\) and \\(B \leq D\\)
