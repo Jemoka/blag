@@ -126,6 +126,8 @@ This is called a [linear type discipline](#lifetime): you will never have an ali
 
 If there were not borrowing in rust, it would be purely linear; that also makes writing non-trivial programs impossible because you can't write things like iterators (because it needs a pointer to the root and a pointer to the current value).
 
+A larger lifetime could be subtypes for a shorter lifetime: \\(L <: L'\\) where \\(L\\) is **longer** than \\(L'\\).
+
 
 #### borrow {#borrow}
 

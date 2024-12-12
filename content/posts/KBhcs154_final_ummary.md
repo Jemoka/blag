@@ -30,7 +30,7 @@ We described the notion of information encoding though [Kolomogorov Complexity](
 
 We described [Time Complexity]({{< relref "KBhcomputational_complexity_theory.md#time-complexity" >}}), [P vs. NP]({{< relref "KBhp_vs_np.md" >}}), and [NP-Completeness]({{< relref "KBhnp_complete.md" >}}); nondeterminism came back fully. We then described [SAT]({{< relref "KBhnon_deterministic_turing_machines.md#boolean-formula-satisfiability" >}}) and [3SAT]({{< relref "KBhnon_deterministic_turing_machines.md#3cnf-formula" >}}), which were [NP-Complete]({{< relref "KBhnp_complete.md" >}})
 
-We then using [polynomial time mapping reduction]({{< relref "KBhmapping_reduction.md#polynomial-time-mapping-reduction" >}}) to come up with [many, many NP-Complete things]({{< relref "KBhnp_complete.md#many-many-np-complete-things" >}}), and saw a hierarchy of harder problems through the idea of [Oracle Polynomial Time]({{< relref "KBhoracle_polynomial_time.md" >}}) and \\(NP^{NP^{NP}^{\dots}}\\)
+We then using [polynomial time mapping reduction]({{< relref "KBhmapping_reduction.md#polynomial-time-mapping-reduction" >}}) to come up with [many, many NP-Complete things]({{< relref "KBhnp_complete.md#many-many-np-complete-things" >}}), and saw a hierarchy of harder problems through the idea of [Oracle Polynomial Time]({{< relref "KBhoracle_polynomial_time.md" >}}) and \\(NP^{NP^{{NP}^{\dots}}}\\)
 
 
 ## Other Ideas {#other-ideas}
