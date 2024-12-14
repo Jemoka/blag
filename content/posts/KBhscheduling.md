@@ -85,7 +85,7 @@ Key idea: **behavior tends to be consistent in a thread**. We build multiple **p
 Similar to [SRPT](#shortest-remaining-processing-time), this also has the good property of **giving preference to those that need it the least**: a good side effect is that it gives preference to [I/O Bound Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}}) first, so we can wait on them during disk operations while [CPU Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}})s run after the [I/O Bound Thread]({{< relref "KBhprocess_control_block.md#io-vs-dot-cpu-bound" >}}) has ran.
 
 
-#### implement based on [time slice](#round-robin) usage {#implement-based-on-time-slice--org04deec4--usage}
+#### implement based on [time slice](#round-robin) usage {#implement-based-on-time-slice--org7470572--usage}
 
 a [thread]({{< relref "KBhmultithreading.md#thread" >}}) always enters in the **highest** priority queue
 

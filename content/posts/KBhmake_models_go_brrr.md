@@ -101,6 +101,8 @@ find `runtime/zero/partitioned_param_coordinator.py` wherever your DeepSpeed cod
 
 comment the damned assertion out. Yup.
 
+Oh, also, this <https://github.com/huggingface/trl/pull/687> if you are running inference.
+
 
 ### Accelerate Device Config {#accelerate-device-config}
 
