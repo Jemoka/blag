@@ -16,11 +16,11 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 <div style="margin: 10px 0">
 <span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
+<span style="font-weight: 500">Dec. 02, 24'</span> <span>We are hosting<a href="https://sites.google.com/stanford.edu/haic2025">an ICLR workshop</a> on Human-AI Coevolution! See you in Singapore!</span>
 <span style="font-weight: 500">Sep. 25, 24'</span> <span><a href="https://aclanthology.org/2024.crac-1.4/">Paper (Coref)</a> accepted to CRAC 2024; EMNLP was fun!</span>
 <span style="font-weight: 500">Aug. 21, 24'</span> <span>Tech report article <a href="https://ldr.lps.library.cmu.edu/article/810/galley/579/view/">released</a> on Batchalign2 engineering.</span>
 <span style="font-weight: 500">Jul. 14, 24'</span> <span>ArXiv preprint <a href="https://arxiv.org/abs/2407.09447">released</a> on LM red teaming.</span>
 <span style="font-weight: 500">May. 18, 24'</span> <span>Journal Article (NACC) <a href="https://doi.org/10.1097/WAD.0000000000000619">published@LWW AD</a></span>
-<span style="font-weight: 500">Apr. 29, 24'</span> <span>ArXiv preprint <a href="https://arxiv.org/abs/2404.19055">released</a> on POMDP LM decoding.</span>
 <span style="font-weight: 500">Jun. 22, 23'</span> <span>Paper (Batchalign) <a  target="_top" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10555460/"  target="_top">Published</a> by JSLHR</span>
 </div>
 </div>
