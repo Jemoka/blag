@@ -13,26 +13,16 @@ This is a work-in-progress page listing all of my production projects.
 [Fireside Index]({{< relref "KBhfireside.md" >}})
 
 
-## Yappin: Podcast {#yappin-podcast}
-
-<https://anchor.fm/yappin/>
-
-
 ## 20MinuteRants: Blog {#20minuterants-blog}
 
 <https://medium.com/20minuterants>
 
 
-## Project80: Podcast {#project80-podcast}
+## (finished) Project80: Podcast {#finished--project80-podcast}
 
-See [Project80]({{< relref "KBhproject80.md" >}}).
-
-
-## Norman Stories: Fiction {#norman-stories-fiction}
-
-<https://hidonipothan.substack.com/>
+See .
 
 
-## (left) Director - Hillview Broadcasting: Production Studio {#left--director-hillview-broadcasting-production-studio}
+## (finished) Yappin: Podcast {#finished--yappin-podcast}
 
-<https://hillview.tv/>
+<https://anchor.fm/yappin/>
