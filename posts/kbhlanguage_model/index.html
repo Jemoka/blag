@@ -24,4 +24,4 @@ W_{n} \sim P(\cdot | w^{(t-1)}, w^{(t-2)}, \dots, w^{(1)})
 h_{t} = \sigma \qty( W_{h}h_{t-1} + W_{e} e_{t} + b)
 \end{equation}</p><p>Our LM input uses &ldquo;Teacher Forcing&rdquo;: i.e. we only generate a single input.</p><p>Usually we define our loss as a multilpying the loss with \(\frac{1}{T}\) where \(T\) is the token count per doc.</p><h4 id=problems>Problems</h4><ul><li>slow</li><li>hard to look into the past dramatically</li></ul><h4 id=gradient>Gradient</h4><p>&ldquo;gradient w.r.t. a repeated weight is the sum of the gradient for each time where it appears&rdquo;</p><p>Recall that gradient sum at outer branches, so calculate gradient at each step.</p><p>Sometimes you would give up after backdropping \(n\) steps (not all the way into history.</p><p>\begin{equation}
 \pdv{J}{W_{h}} = \sum_{i=1}^{t} \pdv{J^{(t)}}{W_{h}}
-\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2024 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
+\end{equation}</p></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
