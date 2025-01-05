@@ -21,3 +21,5 @@ U(s) = \max\_{a} R(s,a) + \gamma \sum\_{s'}^{} T(s'|s,a) U(s')
 [asynchronous value iteration]({{< relref "KBhvalue_iteration.md#asynchronous-value-iteration" >}})
 
 aoetuha ua unatoheunsato eu [eigenvalue]({{< relref "KBheigenvalue.md" >}})
+
+oanetauhnsoeut
