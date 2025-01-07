@@ -8,6 +8,8 @@ draft = false
 
 **CS109**: [machine learning]({{< relref "KBhmachine_learning.md" >}}) is the act of using some input to come up with some prediction, where the model is parameterized via a bunch of [parameter]({{< relref "KBhparameter.md" >}})s. Hence, [parameter learning]({{< relref "KBhparameter_learning.md" >}}) approaches is how machine learning works.
 
+**CS205L**: training data + model to estimate new data points with minimal error; the parallel is a "[knowledge based system]({{< relref "KBhsu_cs205l_jan072025.md#knowledge-based-system" >}})" with interpolation
+
 ---
 
 [machine learning]({{< relref "KBhmachine_learning.md" >}}) excels when we don't know how to program a computer to solve a particular problem; but, what we can do with effort is to collect input, output pairs that demonstrate what we want our programs to do.
@@ -76,6 +78,17 @@ Nothing then happened for many years. Then, ML started having impact again the l
 
 -   2000-2010: emperical progress goes with theoretical results; emphassis on theory, no specialized hardware
 -   2010-now: appreciable progress comes without theory, emphasis on benchmarks, large-scale purely experimental work
+
+
+## examples {#examples}
+
+
+### addition {#addition}
+
+-   make a 2D domain in \\(R^{2}\\), and a 1D range \\(R^{1}\\) in addition
+-   take any pair, choose a number of inputs \\((x\_i, y\_{j})\\) and output \\(z=x\_{i} + y\_{j}\\)
+-   our goal: find a model function \\(z = f(x,y)\\); in this case, \\(z = x+y\\), which means we only need 3 training points to determine a plane
+    -   ....however, if the errors exist, generalizing very much out of distribution (extremely far away), the errors will increase
 
 
 ## ImageNet {#imagenet}
@@ -150,3 +163,11 @@ Or malfunction:
 
 -   underperformance
 -   biases
+
+
+## Machine Learning with Knowledge Based System {#machine-learning-with-knowledge-based-system}
+
+1.  [knowledge based system]({{< relref "KBhsu_cs205l_jan072025.md#knowledge-based-system" >}}) is discrete, whereas machine learning is continuous math and has errors
+2.  ML is derived from continuous math, which means it may have inherent approximation errors (early ML tends to be on problems whose baseline is "random", such as ads recommendation)
+
+When you don't have any priors regarding

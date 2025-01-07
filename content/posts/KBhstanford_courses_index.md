@@ -30,10 +30,18 @@ draft = false
 -   [Democracy Index]({{< relref "KBhdemocracy_index.md" >}})
 
 
+## Stanford UG Y2, Aut {#stanford-ug-y2-aut}
+
+-   [PL Index]({{< relref "KBhsu_cs242.md" >}})
+-   [Theory of Computing Index]({{< relref "KBhsu_cs154.md" >}})
+
+
 ## Stanford UG Y2, Win {#stanford-ug-y2-win}
 
 -   [Machine Learning Index]({{< relref "KBhmachine_learning_index.md" >}})
 -   [Complexity Theory Index]({{< relref "KBhcomplexity_theory_index.md" >}})
+-   [ML Math Index]({{< relref "KBhml_math_index.md" >}})
+-   [Validation Index]({{< relref "KBhvalidation_index.md" >}})
 
 
 ## UG Other Duties {#ug-other-duties}

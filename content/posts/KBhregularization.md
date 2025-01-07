@@ -1,10 +1,17 @@
 +++
 title = "regularization"
-author = ["Houjun LIu"]
+author = ["Houjun Liu"]
 draft = false
 +++
 
-[regularization]({{< relref "KBhregularization.md" >}}) penalize large weights to reduce over-fitting
+[regularization]({{< relref "KBhregularization.md" >}}) penalize large weights to reduce [overfitting]({{< relref "KBhoverfitting.md" >}})
+
+1.  create [data interpolation]({{< relref "KBhdata_interpolation.md" >}}) that countains intentional error (by throwing away/hiding parameters), missing some/all of the data points
+2.  this makes the resulting function more "predictable"/"smooth"
+
+there is, therefore, a **trade-off** between sacrificing quality and on the ORIGINAL data and better accuracy on new points. If you regularize too much, you will [underfit]({{< relref "KBhunderfit.md" >}}).
+
+---
 
 For instance, in a linear model:
 

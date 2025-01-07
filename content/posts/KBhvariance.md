@@ -36,3 +36,14 @@ Var(X) &= E[X^{2}] - (E[X])^{2}  \\\\
 \end{align}
 
 based on the law of [Unconscious statistician]({{< relref "KBhexpectation.md#unconscious-statistician" >}}).
+
+
+## Sum of Variance {#sum-of-variance}
+
+\begin{equation}
+Var(X + Y)=Var(X)+Var(Y)+2Cov(X+Y).
+\end{equation}
+
+\begin{equation}
+Var\qty(\sum\_{j}^{} X\_{j}) = \sum\_{i}^{} \sum\_{j}^{} Cov\qty(X\_{i}, X\_{j})
+\end{equation}

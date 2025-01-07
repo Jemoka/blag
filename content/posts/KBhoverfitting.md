@@ -4,6 +4,6 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[overfitting]({{< relref "KBhoverfitting.md" >}}) is the process
+consider something like a [polynomial interpolation]({{< relref "KBhdata_interpolation.md#polynomial-interpolation" >}}):
 
-Penalty for large weight errors is a good way of mitigating overfitting
+Interpolating polynomial (or most ML models in general) are smooth, and so interpolating between points will result in "overshooting" regional points and "bouncing around"

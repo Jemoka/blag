@@ -9,6 +9,8 @@ draft = false
 
 ### Regularization {#regularization}
 
+see [regularization]({{< relref "KBhregularization.md" >}})
+
 We want to be able to manipulate our parameters so that our models learn better---for instance, we want our weights to be low:
 
 \begin{equation}

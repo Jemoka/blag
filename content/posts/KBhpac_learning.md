@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-probably approximately correct (PAC) learning is a [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}) learning scheme. Suppose you have a concept \\(c \in C\\). We desire to find a hypothesis \\(h \in H\\) which gets as close to the boundary between concepts as possible.
+probably approximately correct (PAC) [learning]({{< relref "KBhsu_cs205l_jan072025.md#learning" >}}) is a [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}}) learning scheme. Suppose you have a concept \\(c \in C\\). We desire to find a hypothesis \\(h \in H\\) which gets as close to the boundary between concepts as possible.
 
 We want to minimize false positives and false negatives.
 
