@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-An LM predicts this distribution ("what's the distribution of next word given the previous words):
+A [machine learning]({{< relref "KBhmachine_learning.md" >}}) model: **input** --- last n words, **output** --- probabilist distribution over the next word. An LM predicts this distribution ("what's the distribution of next word given the previous words):
 
 \begin{equation}
 W\_{n} \sim P(\cdot | w^{(t-1)}, w^{(t-2)}, \dots, w^{(1)})
@@ -16,6 +16,11 @@ By applying the chain rule, we can also think of the language model as assigning
 P(S) &= P(w^{(t)} | w^{(t-1)}, w^{(t-2)}, \dots, w^{(1)}) \cdot P(w^{(t-1)} | w^{(t-2)}, \dots, w^{(1)}) \dots  \\\\
 &= P(w^{(t)}, w^{(t-1)}, w^{(t-2)}, \dots, w^{(1)})
 \end{align}
+
+
+## philosophizing {#philosophizing}
+
+A striking example for the **generality of prediction**.
 
 
 ## N-Gram LM {#n-gram-lm}
@@ -85,3 +90,12 @@ Sometimes you would give up after backdropping \\(n\\) steps (not all the way in
 \begin{equation}
 \pdv{J}{W\_{h}} = \sum\_{i=1}^{t} \pdv{J^{(t)}}{W\_{h}}
 \end{equation}
+
+
+## Making a LM {#making-a-lm}
+
+1.  collect a large training set from web, books, etc.
+2.  prepare data is next-word prediction examples
+3.  train as large as a neural network as you can
+
+Seminal paper: (<a href="#citeproc_bib_item_1">Radford et al., n.d.</a>), established SOTA results on known benchmarks.
