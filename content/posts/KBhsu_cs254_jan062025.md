@@ -4,4 +4,4 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[Theory of Computing]({{< relref "KBhtheory_of_computing.md" >}})
+[Theory of Computing]({{< relref "KBhtheory_of_computing.md" >}}), [Computational Task]({{< relref "KBhcomputational_task.md" >}})

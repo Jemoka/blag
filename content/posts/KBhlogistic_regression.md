@@ -174,15 +174,6 @@ or, for neural networks in general:
 \end{equation}
 
 
-### gradient descent {#gradient-descent}
-
-\begin{equation}
-\theta^{t+1} = \theta^{t} - \eta \nabla\_{\theta} \mathcal{L}
-\end{equation}
-
-"update the weight by taking a step in the opposite direction of the gradient by weight".
-
-
 ### Weight gradient for logistic regresison {#weight-gradient-for-logistic-regresison}
 
 \begin{equation}

@@ -4,6 +4,8 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+[gradient descent]({{< relref "KBhgradient_descent.md" >}}) makes a pass over **all points** to make one gradient step. We can instead approximate gradients on a **minibatch** of data. This is the idea behind stochastic-gradient-descent.
+
 \begin{equation}
 \theta^{t+1} = \theta^{t} - \eta \nabla\_{\theta} L(f\_{\theta}(x), y)
 \end{equation}
@@ -18,7 +20,7 @@ while True:
     theta = theta - lr*subset.grad()
 ```
 
-In theory this is an _approximation_ of [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >}}); however, Neural Networks works actually BETTER when you jiggle a bit.
+In theory this is an _approximation_ of [gradient descent]({{< relref "KBhgradient_descent.md" >}}); however, Neural Networks works actually BETTER when you jiggle a bit.
 
 
 ## batch gradient descent {#batch-gradient-descent}
@@ -33,6 +35,6 @@ In theory this is an _approximation_ of [gradient descent]({{< relref "KBhlogist
 mini-batches helps take advantage of both by training over groups of \\(m\\) samples
 
 
-## [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}}) {#regularization--kbhsu-cs224n-apr162024-dot-md}
+##  {#d41d8c}
 
-See [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}})
+See

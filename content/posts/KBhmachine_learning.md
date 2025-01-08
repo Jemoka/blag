@@ -17,7 +17,16 @@ draft = false
 [machine learning]({{< relref "KBhmachine_learning.md" >}}) is a set of tools to learn programs from sets of data.
 
 
-## pros/cons {#pros-cons}
+## concepts {#concepts}
+
+-   [supervised learning]({{< relref "KBhsupervised_learning.md" >}})
+-   [evaluation]({{< relref "KBhmachine_learning_evaluation.md" >}})
+
+
+## philosophizing {#philosophizing}
+
+
+### pros/cons {#pros-cons}
 
 -   **advantage**: broadly applicable and can solve many programs
 -   **disadvantage**: need (potentially a bunch) of data, and learned results are approximations
@@ -25,36 +34,36 @@ draft = false
     -   approximate solutions maybe better than having no solution
 
 
-## applications {#applications}
+### applications {#applications}
 
 -   spam classification --- in: email, out: spam/not span
 -   sign detection (stop signs, etc.) --- in: image, output: location of stop sign
 -   [house price prediction]({{< relref "KBhhouse_price_prediction.md" >}}) --- in: house description, out: price
 
 
-## types of ML {#types-of-ml}
+### types of ML {#types-of-ml}
 
 our job is to do the things in the parentheses
 
 
-### supervised learning {#supervised-learning}
+#### supervised learning {#supervised-learning}
 
 "collect training data with both input and output examples, and make a prediction"
 
 
-### unsupervised learning {#unsupervised-learning}
+#### unsupervised learning {#unsupervised-learning}
 
 -   applies with data with **no labels**
 -   allows us to find **structure in our data** (clustering)
 
 
-### reinforcement learning {#reinforcement-learning}
+#### reinforcement learning {#reinforcement-learning}
 
 -   learn in an interactive environment (as opposed to static data)
 -   controlling and games (chess, go)
 
 
-## history of ML {#history-of-ml}
+### history of ML {#history-of-ml}
 
 Samuel 1959: "some studies in machine learning using the game of checkers"
 
@@ -65,7 +74,7 @@ Noticed a trend of the 50s? Why? [IBM704]({{< relref "KBhibm704.md" >}})!
 Nothing then happened for many years. Then, ML started having impact again the last 15 years, especially the last 3 years: this is because we now have more **compute** and more **data**.
 
 
-## Key Ideas of ML {#key-ideas-of-ml}
+### Key Ideas of ML {#key-ideas-of-ml}
 
 -   ML is largely guided by **benchmarks**
 -   several key datasets for each task (image calssification, detection, etc.)
@@ -74,16 +83,16 @@ Nothing then happened for many years. Then, ML started having impact again the l
 -   rapid progress over the decade
 
 
-### a culture shift {#a-culture-shift}
+#### a culture shift {#a-culture-shift}
 
 -   2000-2010: emperical progress goes with theoretical results; emphassis on theory, no specialized hardware
 -   2010-now: appreciable progress comes without theory, emphasis on benchmarks, large-scale purely experimental work
 
 
-## examples {#examples}
+### examples {#examples}
 
 
-### addition {#addition}
+#### addition {#addition}
 
 -   make a 2D domain in \\(R^{2}\\), and a 1D range \\(R^{1}\\) in addition
 -   take any pair, choose a number of inputs \\((x\_i, y\_{j})\\) and output \\(z=x\_{i} + y\_{j}\\)
@@ -91,12 +100,12 @@ Nothing then happened for many years. Then, ML started having impact again the l
     -   ....however, if the errors exist, generalizing very much out of distribution (extremely far away), the errors will increase
 
 
-## ImageNet {#imagenet}
+### ImageNet {#imagenet}
 
 Large image classification dataset. **1.2 million train**, **1000** classes.
 
 
-### motivation {#motivation}
+#### motivation {#motivation}
 
 WordNet was at Princeton; and so why don't we have the same thing for images?
 
@@ -105,7 +114,7 @@ WordNet was at Princeton; and so why don't we have the same thing for images?
 -   goal: **let's populate all of WordNet with 1000 images, per node**
 
 
-### how? {#how}
+#### how? {#how}
 
 "get a really really good grad student"
 
@@ -114,7 +123,7 @@ WordNet was at Princeton; and so why don't we have the same thing for images?
     -   (lots of work in task design, annotation, etc.)
 
 
-### ImageNet Large Scale Visual Recognition Challenge (ILSVRC) {#imagenet-large-scale-visual-recognition-challenge--ilsvrc}
+#### ImageNet Large Scale Visual Recognition Challenge (ILSVRC) {#imagenet-large-scale-visual-recognition-challenge--ilsvrc}
 
 -   1.2 million training images for 1,000 classes (roughly balanced)
 -   50,000 images for 1,000 classes (exactly balanced)
@@ -122,36 +131,38 @@ WordNet was at Princeton; and so why don't we have the same thing for images?
 
 top-5 accuracy: 5 predictions per image
 
+<!--list-separator-->
 
-#### AlexNet {#alexnet}
+-  AlexNet
 
-[AlexNet](#alexnet) beat [ImageNet](#imagenet) from 25 =&gt; 15% error
+    [AlexNet](#alexnet) beat [ImageNet](#imagenet) from 25 =&gt; 15% error
 
-Its a large CNN. Invented....
+    Its a large CNN. Invented....
 
-1.  ReLU
-2.  Local Response Normalization (not really used anymore)
-3.  Training on GPUs (GTX 580)
-4.  Overlapping pooling
-5.  [Dropout]({{< relref "KBhsu_cs224n_apr162024.md#dropout" >}})
-6.  Data augmentation
+    1.  ReLU
+    2.  Local Response Normalization (not really used anymore)
+    3.  Training on GPUs (GTX 580)
+    4.  Overlapping pooling
+    5.  [Dropout]({{< relref "KBhsu_cs224n_apr162024.md#dropout" >}})
+    6.  Data augmentation
 
-each of these is 0-2% improvements.
+    each of these is 0-2% improvements.
+
+<!--list-separator-->
+
+-  Networks Became Bigger
+
+    -   AleNet (8 layers)
+    -   VGG (17 layers)
+    -   ResNet (hundreds of layers)
 
 
-#### Networks Became Bigger {#networks-became-bigger}
-
--   AleNet (8 layers)
--   VGG (17 layers)
--   ResNet (hundreds of layers)
-
-
-## [Language Model]({{< relref "KBhlanguage_model.md" >}})s {#language-model--kbhlanguage-model-dot-md--s}
+### [Language Model]({{< relref "KBhlanguage_model.md" >}})s {#language-model--kbhlanguage-model-dot-md--s}
 
 see [Language Model]({{< relref "KBhlanguage_model.md" >}})
 
 
-## Risks of ML {#risks-of-ml}
+### Risks of ML {#risks-of-ml}
 
 ML can be used for **beneficial and harmful**
 
@@ -165,7 +176,7 @@ Or malfunction:
 -   biases
 
 
-## Machine Learning with Knowledge Based System {#machine-learning-with-knowledge-based-system}
+### Machine Learning with Knowledge Based System {#machine-learning-with-knowledge-based-system}
 
 1.  [knowledge based system]({{< relref "KBhsu_cs205l_jan072025.md#knowledge-based-system" >}}) is discrete, whereas machine learning is continuous math and has errors
 2.  ML is derived from continuous math, which means it may have inherent approximation errors (early ML tends to be on problems whose baseline is "random", such as ads recommendation)

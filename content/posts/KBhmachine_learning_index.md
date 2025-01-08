@@ -19,3 +19,4 @@ draft = false
 ### Basics + Linear Methods {#basics-plus-linear-methods}
 
 -   [SU-CS229 JAN062025]({{< relref "KBhsu_cs229_jan062024.md" >}})
+-   [SU-CS229 JAN082025]({{< relref "KBhsu_cs229_jan082025.md" >}})
