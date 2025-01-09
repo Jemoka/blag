@@ -4,7 +4,13 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[Cook-Levin Theorem]({{< relref "KBhcook_levin_theorem.md" >}}) states that [SAT]({{< relref "KBhnon_deterministic_turing_machines.md#boolean-formula-satisfiability" >}}) and [3SAT]({{< relref "KBhnon_deterministic_turing_machines.md#3cnf-formula" >}}) are NP-complete.
+[Cook-Levin Theorem]({{< relref "KBhcook_levin_theorem.md" >}}) states that [SAT]({{< relref "KBhnon_deterministic_turing_machines.md#boolean-formula-satisfiability" >}}) and [3SAT]({{< relref "KBhnon_deterministic_turing_machines.md#3cnf-formula" >}}) are NP-complete. That is, for NP language \\(L \in NP\\), we have \\(L \leq\_{p} SAT\\), meaning
+
+exists a poly-computable function \\(R: \qty {0,1}^{\*} \to \qty {0,1}^{\*}\\) to perform the [polynomial time mapping reduction]({{< relref "KBhmapping_reduction.md#polynomial-time-mapping-reduction" >}}) \\(x \to  \phi\_{x}\\) such that:
+
+\begin{equation}
+x \in L \Leftrightarrow R(x) = \phi\_{x} \in \text{SAT}
+\end{equation}
 
 
 ## \\(3SAT \in NP\\) {#3sat-in-np}

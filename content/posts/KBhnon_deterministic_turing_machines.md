@@ -82,7 +82,7 @@ is in \\(P\\).
 (actually all of SAT is in \\(NP\\))
 
 
-## [Time Complexity]({{< relref "KBhcomputational_complexity_theory.md#time-complexity" >}}) of [Non-deterministic Turing Machines]({{< relref "KBhnon_deterministic_turing_machines.md" >}}) {#time-complexity--kbhcomputational-complexity-theory-dot-md--of-non-deterministic-turing-machines--kbhnon-deterministic-turing-machines-dot-md}
+## [Time Complexity]({{< relref "KBhtime_complexity.md" >}}) of [Non-deterministic Turing Machines]({{< relref "KBhnon_deterministic_turing_machines.md" >}}) {#time-complexity--kbhtime-complexity-dot-md--of-non-deterministic-turing-machines--kbhnon-deterministic-turing-machines-dot-md}
 
 First,
 
@@ -104,15 +104,6 @@ accepting on [Non-deterministic Turing Machines]({{< relref "KBhnon_deterministi
 accepting in time \\(t\\) means that such a history exists.
 
 \\(N\\) has a time complexity of \\(T(n)\\) if for all \\(n\\), for all inputs of length \\(n\\) and for all histories, \\(N\\) halts in \\(T(n)\\) time. (we can get it to halt for all strings by having a clock, and computing \\(n\\) and stopping \\(T\\) as needed; if \\(n\\) is correct, then we don't actually change the language that \\(T\\) recognized)
-
-
-## Non-Polynomial Time {#non-polynomial-time}
-
-\begin{equation}
-NP = \bigcup\_{k \in N} \text{NTIME}\qty(n^{k})
-\end{equation}
-
-Meaning, these are problems with the property that once you "have" the solution, its "easy" to verify the solution.
 
 
 ## non deterministic [turing machine]({{< relref "KBhturing_machinea.md" >}})s are not more powerful than [turing machine]({{< relref "KBhturing_machinea.md" >}})s {#non-deterministic-turing-machine--kbhturing-machinea-dot-md--s-are-not-more-powerful-than-turing-machine--kbhturing-machinea-dot-md--s}
@@ -150,7 +141,7 @@ In particular, we claim that \\(\text{CLIQUE} \in \text{NTIME}\qty (n^{c})\\) fo
     -   for all pairs of \\(u,v \in S\\), if \\((u,v)\\) is not in \\(E\\), then reject
 -   accept
 
-this is [NP-Complete]({{< relref "KBhnp_complete.md" >}}), see also [many, many NP-Complete thins]({{< relref "KBhnp_complete.md#many-many-np-complete-thins" >}})
+this is [NP-Complete]({{< relref "KBhnp_complete.md" >}}), see also [many, many NP-Complete thins]({{< relref "KBhnp_complete.md#many-many-np-complete-things" >}})
 
 
 ## Hamiltonian path problem {#hamiltonian-path-problem}

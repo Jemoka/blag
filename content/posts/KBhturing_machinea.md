@@ -21,6 +21,18 @@ draft = false
 ## additional information {#additional-information}
 
 
+### why TM is awesome {#why-tm-is-awesome}
+
+1.  a Turing Machine \\(M = \qty(\Gamma, Q, S)\\) should be ready for inputs of any length \\(n\\) (in particular, when designing \\(M\\), we don't know what \\(n\\) will be)
+2.  a Turing machine's computation is "local"---you can't look at the whole input, and the composition of these many local steps
+3.  No ambiguity as to **runtime**: how many times you apply \\(\delta\\) before you get to Qaccept or Qreject
+
+
+#### Church-Turing thesis as local steps {#church-turing-thesis-as-local-steps}
+
+"computation is any process that takes place in a sequence of simple, local steps."
+
+
 ### configuration {#configuration}
 
 the [configuration](#configuration) of a Turing Machine contains its entire state:
@@ -149,3 +161,11 @@ Create a Turing machine which: enumerate all finite-length strings \\(y\\); if \
 By definition \\(A\\) is recognizable, so there's an \\(M\\) which recognizes \\(A\\). Define a predicate \\(R(x,y)\\) be TRUE IFF \\(M\\) accepts \\(x\\) in \\(|y|\\) steps.
 
 We now want to show that \\(R(x,y)\\) is decidable. If \\(M\\) accepts \\(x\\); it would have done so in some finite \\(y\\) steps. Hence, \\(R(x,y) = TRUE\\). If there is some \\(y\\) for which \\(R(x,y)\\) is true, we can see that we can run \\(M\\) on \\(x\\) for \\(y\\) steps and see that by definition \\(M\\) have just accepted the string. This is _decidable_ because we can check for \\(y\\) steps exactly, so we will always terminate.
+
+
+### Turing Machine as a universal algorithm {#turing-machine-as-a-universal-algorithm}
+
+why do we focus on a [turing machine]({{< relref "KBhturing_machinea.md" >}})?
+
+1.  its extremely simple to analyze (its possible to formalize and reason about it)
+2.  [Extended Church-Turing Thesis]({{< relref "KBhextended_church_turing_thesis.md" >}})---every "real-world" efficiently computable algorithm can be "compiled to" efficiently computable Turing Machine with only poly-slowdown

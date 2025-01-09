@@ -44,14 +44,9 @@ Let \\(w\_1, ..., w\_{n} \in \Sigma\\), and \\(w = w\_1 ... w\_{n} \in \Sigma^{\
 ...because you don't have to specify all edges; non-specified transitions means the can be automatically rejected
 
 
-### Non-deterministic Computation {#non-deterministic-computation}
-
-while deterministic computation simply asks whether a sequence of computation can be accepted or rejected, nondeterministic computations asks whether or not there exists a path to an acceptance
-
-
 ### [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})s are equivalent to [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}})s {#dfa--kbhdeterministic-finite-automata-dot-md--s-are-equivalent-to-nfa--kbhnondeterministic-finite-automata-dot-md--s}
 
-we want to show that [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})s recognize the same set of languages as [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}})s. in other words, [non-determinism](#non-deterministic-computation) does not add power for finite automata... "finite memory is very robust".
+we want to show that [DFA]({{< relref "KBhdeterministic_finite_automata.md" >}})s recognize the same set of languages as [NFA]({{< relref "KBhnondeterministic_finite_automata.md" >}})s. in other words, does not add power for finite automata... "finite memory is very robust".
 
 ---
 
