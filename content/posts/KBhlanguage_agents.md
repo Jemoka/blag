@@ -4,11 +4,6 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Definitions: Language Agents {#definitions-language-agents}
-
-Agents that uses the language to act on behave of another person or group.
-
-
 ## Transitions {#transitions}
 
 1.  Transition first from rule based learning to statistical learning
@@ -31,26 +26,7 @@ Agents that uses the language to act on behave of another person or group.
 
 ## ReAct {#react}
 
--   Recover from incorrect thought and incorrect tools
--   Allows human-in-the-loop alignment
-
-
-### Major Flaw {#major-flaw}
-
--   left-to-right one-pass decoding doesn't allow alternate solutions
--   bad properties regarding propagating hallucination
--   search and planning had been explored a lot
-
-
-### Tree of Thoughts {#tree-of-thoughts}
-
-Partial solution: [Tree of Thoughts](#tree-of-thoughts)
-
-{{< figure src="/ox-hugo/2024-01-11_11-22-35_screenshot.png" >}}
-
-evaluate sub-paths to determine most optimal paths: think A\* but with more proper heuristic bounding.
-
-**Big idea: merge classic algorithmic ideas with decision making against LLMs**
+See [ReAct]({{< relref "KBhreact.md#react" >}})
 
 
 ## Problem: agents are not robust at all {#problem-agents-are-not-robust-at-all}
@@ -58,51 +34,6 @@ evaluate sub-paths to determine most optimal paths: think A\* but with more prop
 <https://github.com/ryoungj/ToolEmu>
 
 
-## Key New Challenges for Agents {#key-new-challenges-for-agents}
+## Key Challenges {#key-challenges}
 
-
-### Evaluation {#evaluation}
-
-1.  Different from how previous NLP benchmarks: we are **not** worried about language modeling
-2.  No longer boundaries between various fields
-
-Common goals:
-
--   realistic agents---stop playing Atari games.
--   reproducible systems
--   measurability goals
--   scalable models
--   which are easy to use
-
-
-#### Web as an Interactive Environment {#web-as-an-interactive-environment}
-
--   agents on the web is both practical and scalable
--   <https://webshop-pnlp.github.io/>
--   WebShop can actually transfer with no work to training on Amazon
--   Mind2Web
-
-
-#### InterCode {#intercode}
-
-Formulation of agent decisions as POMDP in order to fully benchmark Markovian decisions:
-
-<https://arxiv.org/abs/2306.14898>
-
-
-### Agent Development {#agent-development}
-
-Agents development has no core framework
-
-
-#### production systems {#production-systems}
-
--   set of rules specificying a precondition + action
--   when preconditinons are met, perform an action
-
-Big kitchen sink proposal: <https://arxiv.org/abs/2309.02427>
-
-
-### Trust and safety {#trust-and-safety}
-
-Agents are much more powerful and dynamic
+See [History of Agents and Their Challenges]({{< relref "KBhinteractive_agent.md#challenge-of-making-agents" >}})
