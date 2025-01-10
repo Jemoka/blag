@@ -1,0 +1,25 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>MLE for Conditional Gaussian</title>
+<meta name=description content="Let&rsquo;s say we want to find MLE parameters \(\theta\) for a conditional Gaussian with constant variance. That is:
+\begin{equation}
+p\qty(y_{i} | x_{i}) = \mathcal{N} \qty(y_{i}|f_{\theta } \qty(x_{i}), \sigma^{2})
+\end{equation}
+and we have a corresponding dataset: \(\qty(x_1, y_1), &mldr;, \qty(x_{m}, y_{m})\).
+where:
+\begin{align}
+\hat{\theta} &= \arg\max_{\theta} \sum_{i=1}^{m} \log p\qty(y_{i}|x_{i})  \\
+&= \arg\max_{\theta} \sum_{i=1}^{m} \log \mathcal{N} \qty(y_{i}| f_{\theta} \qty(x_{i}), \sigma^{2})  \\
+&= \arg\max_{\theta } \sum_{i=1}^{m} \log  \frac{1}{\sqrt{{2 \pi \sigma^{2}}}} \exp \qty(- \frac{\qty(y_{i}- f_{\theta }\qty(x_{i}))^{2}}{2\sigma^{2}})
+\end{align}"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>MLE for Conditional Gaussian</h1><span class=tagbox></span></div><main><article><div><p>Let&rsquo;s say we want to find <a href=/posts/kbhmaximum_likelihood_parameter_learning/>MLE</a> parameters \(\theta\) for a conditional Gaussian with constant variance. That is:</p><p>\begin{equation}
+p\qty(y_{i} | x_{i}) = \mathcal{N} \qty(y_{i}|f_{\theta } \qty(x_{i}), \sigma^{2})
+\end{equation}</p><p>and we have a corresponding dataset: \(\qty(x_1, y_1), &mldr;, \qty(x_{m}, y_{m})\).</p><p>where:</p><p>\begin{align}
+\hat{\theta} &= \arg\max_{\theta} \sum_{i=1}^{m} \log p\qty(y_{i}|x_{i}) \\
+&= \arg\max_{\theta} \sum_{i=1}^{m} \log \mathcal{N} \qty(y_{i}| f_{\theta} \qty(x_{i}), \sigma^{2}) \\
+&= \arg\max_{\theta } \sum_{i=1}^{m} \log \frac{1}{\sqrt{{2 \pi \sigma^{2}}}} \exp \qty(- \frac{\qty(y_{i}- f_{\theta }\qty(x_{i}))^{2}}{2\sigma^{2}})
+\end{align}</p><p>taking the $log $ of an $exp $, and removing constants (since they don&rsquo;t affect optimization), this gives us:</p><p>\begin{equation}
+\arg\max_{\theta} \sum_{i=1}^{m} - \qty(y_{i} - f_{\theta} (x_{i}))^{2}
+\end{equation}</p><p>which is the&mldr;</p><p>\begin{equation}
+\arg\min_{\theta} \sum_{i=1}^{m} \qty(y_{i} - f_{\theta} (x_{i}))^{2}
+\end{equation}</p><p><a href=/posts/kbhcost_function/#least-squares-error>woah, least-squares error</a>!</p></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
