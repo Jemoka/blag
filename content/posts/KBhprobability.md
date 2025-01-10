@@ -6,6 +6,8 @@ draft = false
 
 [probability]({{< relref "KBhprobability.md" >}}) of an event is the proportion of times the event occurs in many repeated trials. It is  "our belief that an event \\(E\\) occurs".
 
+"the probability of a outcome is a number between 0-1 which highlights how likely the outcome is likely to occur realtive to other outcomes"
+
 
 ## Frequentist Definition of Probability {#frequentist-definition-of-probability}
 

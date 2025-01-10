@@ -17,6 +17,24 @@ Each distribution has three properties:
 -   parameters (how many degrees of freedom do we have)
 
 
+## Types of Distribution {#types-of-distribution}
+
+
+### [discrete distribution]({{< relref "KBhdiscrete_distribution.md" >}}) {#discrete-distribution--kbhdiscrete-distribution-dot-md}
+
+-   described by [PMF]({{< relref "KBhprobability_mass_function.md" >}})
+
+
+### [continuous distribution]({{< relref "KBhcontinuous_distribution.md" >}}) {#continuous-distribution--kbhcontinuous-distribution-dot-md}
+
+-   described by [PDF]({{< relref "KBhprobability_density_function.md" >}})
+
+
+## parametrized distribution {#parametrized-distribution}
+
+We often represent probability distribution using a set of [parameter]({{< relref "KBhparameter.md" >}})s \\(\theta\_{j}\\).  For instance, a [normal distribution]({{< relref "KBhnormal_distribution.md" >}}) is given by \\(\mu\\) and \\(\sigma\\), and a [PMF]({{< relref "KBhprobability_mass_function.md" >}}) is by the probability mass for each.
+
+
 ## Methods of Compressing the Parameters of a Distribution {#methods-of-compressing-the-parameters-of-a-distribution}
 
 So, for instance, for a binary distribution with \\(n\\) variables which we know nothing about, we have:
@@ -64,7 +82,7 @@ see [Baysian Network]({{< relref "KBhbaysian_network.md" >}})
 -   gaussian distributions
     -   [Gaussian distribution]({{< relref "KBhgaussian_distribution.md" >}})
     -   [Truncated Gaussian distribution](#truncated-gaussian-distribution)
-    -   [Gaussian mixture model](#gaussian-mixture-model)
+    -
 
 
 ### uniform distribution {#uniform-distribution}
@@ -99,7 +117,7 @@ Sometimes, we don't want to use a [Gaussian distribution]({{< relref "KBhgaussia
 X \sim N(\mu, \sigma^{2}, a, b)
 \end{equation}
 
-bounded within the interval of \\((a,b)\\). The [PDF](#probability-density-function) of this function is given by:
+bounded within the interval of \\((a,b)\\). The [PDF]({{< relref "KBhprobability_density_function.md" >}}) of this function is given by:
 
 \begin{equation}
 N(\mu, \sigma^{2}, a, b) = \frac{\frac{1}{\sigma} \phi \qty(\frac{x-\mu }{\sigma })}{\Phi \qty(\frac{b-\mu }{\sigma }) - \Phi \qty(\frac{a-\mu}{\sigma})}
@@ -114,66 +132,7 @@ where:
 and where \\(\phi\\) is the [standard normal density function]({{< relref "KBhgaussian_distribution.md#standard-normal-density-function" >}}).
 
 
-#### Gaussian mixture model {#gaussian-mixture-model}
-
-Gaussian models are typically [unimodal]({{< relref "KBhunimodal.md" >}}), meaning they have one peak (things decrease to the left of that peak, increases to the right of it).
-
-Therefore, in order to model something more complex with multiple peaks, we just weighted average multiple gaussian models
-
-\begin{equation}
-p(x | \dots ) = \sum\_{i-1}^{n}p\_i \mathcal{N}(x | u\_{i}, {\sigma\_{i}}^{2})
-\end{equation}
-
-whereby,
-
-
 ## three ways of analysis {#three-ways-of-analysis}
-
-
-### probability density function {#probability-density-function}
-
-[PDF](#probability-density-function)s is a function that maps continuous random variables to the corresponding probability.
-
-\begin{equation}
-P(a < X < b) = \int\_{x=a}^{b} f(X=x)\dd{x}
-\end{equation}
-
-note: \\(f\\) is no longer in units of [probability]({{< relref "KBhprobability.md" >}})!!! it is in units of [probability]({{< relref "KBhprobability.md" >}}) scaled by units of \\(X\\). That is, they are DERIVATIVES of probabilities. That is, the units of \\(f\\) should be \\(\frac{prob}{unit\ X}\\). So, it can be greater than \\(1\\).
-
-We have two important properties:
-
--   if you integrate over any bounds over a [probability density function](#probability-density-function), you get a [probability]({{< relref "KBhprobability.md" >}})
--   if you integrate over infinity, the result should be \\(1\\)
-
-
-#### getting exact values from [PDF](#probability-density-function) {#getting-exact-values-from-pdf--orga1dfd46}
-
-There is a calculus definition for \\(P(X=x)\\), if absolutely needed:
-
-\begin{equation}
-P(X=x) = \epsilon f(x)
-\end{equation}
-
-<!--list-separator-->
-
--  mixing discrete and continuous random variables
-
-    Let's say \\(X\\) is continuous, and \\(N\\) is discrete.
-
-    We desire:
-
-    \begin{equation}
-    P(N=n|X=x) = \frac{P(X=x|N=n)P(N=n)}{P(X=x)}
-    \end{equation}
-
-    now, to get a specific value for \\(P(X=x)\\), we can just multiply its [PMF]({{< relref "KBhprobability_mass_function.md" >}}) by a small epsilon:
-
-    \begin{align}
-    P(N=n|X=x) &= \lim\_{\epsilon \to 0} \frac{\epsilon f(X=x|N=n)P(N=n)}{\epsilon f(X=x)}  \\\\
-    &= \frac{f(X=x|N=n)P(N=n)}{f(X=x)}
-    \end{align}
-
-    this same trick works pretty much everywhere---whenever we need to get the probability of a continuous random variable with
 
 
 ### cumulative distribution function {#cumulative-distribution-function}
@@ -208,7 +167,7 @@ P(X \leq x) = \alpha
 That is, the [quantile function](#quantile-function) returns the minimum value of \\(x\\) at which point a certain [cumulative distribution](#cumulative-distribution-function) value desired is achieved.
 
 
-### adding [uniform distribution](#uniform-distribution) {#adding-uniform-distribution--orgfeffb45}
+### adding [uniform distribution](#uniform-distribution) {#adding-uniform-distribution--org6d62aae}
 
 for \\(1 < a < 2\\)
 

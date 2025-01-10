@@ -1,5 +1,5 @@
 +++
-title = "covariance"
+title = "covariance (probability)"
 author = ["Houjun Liu"]
 draft = false
 +++
@@ -23,3 +23,5 @@ Instead of using this unbounded value, we sometimes use a normalized value named
 \begin{equation}
 \rho(X,Y) =  \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}
 \end{equation}
+
+we can express this in terms of a [covariance matrix]({{< relref "KBhcovariance_matrix.md" >}})

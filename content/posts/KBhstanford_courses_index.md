@@ -38,7 +38,6 @@ draft = false
 
 ## Stanford UG Y2, Win {#stanford-ug-y2-win}
 
--   [Machine Learning Index]({{< relref "KBhmachine_learning_index.md" >}})
 -   [Complexity Theory Index]({{< relref "KBhcomplexity_theory_index.md" >}})
 -   [ML Math Index]({{< relref "KBhml_math_index.md" >}})
 -   [Validation Index]({{< relref "KBhvalidation_index.md" >}})
@@ -73,7 +72,7 @@ Here are a list of random indicies which may end up being helpful!
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2024-11-11 Mon&gt;</span></span> | Presentations                       | Sydney Katz        | [Presentations]({{< relref "KBhpresentations.md" >}})                                         |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-01-06 Mon&gt;</span></span> | Video Generation with Learned Prior | Meenakshi Sarkar   | [Priors]({{< relref "KBhpriors.md" >}})                                                       |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-01-06 Mon&gt;</span></span> | Theoretical Drone Control           |                    | [Sliding Mode UAV Control]({{< relref "KBhsliding_mode_uav_control.md" >}})                   |
-| <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-01-09 Thu&gt;</span></span> | VLM to Agents                       | Tao Yu             | [VLM to Agents]({{< relref "KBhvlm_to_agents.md" >}})                                         |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-01-09 Thu&gt;</span></span> | VLM to Agents                       | Tao Yu             |                                                                                               |
 
 
 ## Contacts {#contacts}

@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[PMF]({{< relref "KBhprobability_mass_function.md" >}}) is a function that maps possible outcomes of a discrete [random variable]({{< relref "KBhrandom_variables.md" >}})s to the corresponding probability.
+[PMF]({{< relref "KBhprobability_mass_function.md" >}}) is a function that maps possible outcomes of a discrete [random variable]({{< relref "KBhrandom_variables.md" >}})s to the corresponding **actual probabilities**.
 
 For random variable \\(Y\\), we have:
 
@@ -24,6 +24,14 @@ P(Y=k) = p(y), where\ y=k
 its written smaller \\(y\\) represents a _case_ of \\(Y\\) where \\(Y=y\\).
 
 
-## Shorthand {#shorthand}
+## Properties of PMD {#properties-of-pmd}
 
-For this to be correct, we have to
+\begin{equation}
+0 \leq P(x) \leq  1
+\end{equation}
+
+and
+
+\begin{equation}
+\sum\_{}^{} P(x) = 1
+\end{equation}

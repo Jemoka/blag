@@ -6,6 +6,14 @@ draft = false
 
 [maximum a posteriori estimate]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}}) is a [parameter learning]({{< relref "KBhparameter_learning.md" >}}) scheme that uses [Beta Distribution]({{< relref "KBhbaysian_parameter_learning.md#beta-distribution" >}}) and [Baysian inference]({{< relref "KBhbaysian_network.md" >}}) to get a distribution of the posterior of the parameter, and return the [argmax]({{< relref "KBhargmax.md" >}}) (i.e. the mode) of the [MAP]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}}).
 
+This differs from [MLE]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}}) because we are considering a _distribution_ of possible parameters:
+
+\begin{equation}
+p\qty (\theta \mid x\_1, \dots, x\_{n})
+\end{equation}
+
+---
+
 Calculating a [MAP]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}}) posterior, in general:
 
 \begin{equation}
