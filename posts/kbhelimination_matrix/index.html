@@ -1,0 +1,24 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Elimination Matricies</title>
+<meta name=description content="For matrix \(A\), we want to make a series of matrix \(M\) which will zero columns out. This is a algorithms approach for doing this, which is also applied columnwise.
+
+
+
+
+
+
+nicely, we can undo our operations
+
+
+
+and you can compose them by subtracting together
+
+
+
+*THIS IS ONLY TRUE when we are applying in the right ordering, row \(1\) to row \(2\), etc.
+pivoting
+this procedure breaks on:"><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Elimination Matricies</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#pivoting>pivoting</a></li></ul></nav></aside><main><article><div><p>For matrix \(A\), we want to make a series of matrix \(M\) which will zero columns out. This is a algorithms approach for doing this, which is also applied columnwise.</p><figure><img src=/ox-hugo/2025-01-14_12-48-49_screenshot.png></figure><figure><img src=/ox-hugo/2025-01-14_12-48-55_screenshot.png></figure><p>nicely, we can undo our operations</p><figure><img src=/ox-hugo/2025-01-14_12-49-06_screenshot.png></figure><p>and you can compose them by subtracting together</p><figure><img src=/ox-hugo/2025-01-14_12-51-37_screenshot.png></figure><p><strong>*THIS IS ONLY TRUE when we are applying in the right ordering, row \(1\) to row \(2\), etc.</strong></p><h2 id=pivoting>pivoting</h2><p>this procedure breaks on:</p><p>\begin{equation}
+A = \mqty(0 & 4 \\ 4 & 9)
+\end{equation}</p><p>because it requires dividing by \(\frac{1}{0}\); to &ldquo;fix&rdquo; this, reorder the equatinos.</p><p>you can flip both rows and columns.</p><ul><li><a href=#pivoting>partial pivoting</a>: swap rows to use the largest magnitue element in the column under consideration</li><li><a href=#pivoting>full pivoting</a>: swap rows and columns to use the largest element on the upper left</li></ul><p>Remember to change the order of \(b\) in the first case, and both \(b\) (rows) and \(c\) (columns) in the second case.</p></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
