@@ -8,9 +8,17 @@ draft = false
 \sum\_{i=1}^{10} i^{12} \int\_{0}^{10} \frac{1}{2x}\dd{x}
 \end{equation}
 
+chicken: \\(1/2\\) nice!
+
+I have $12, you have $12, we all have $12!
+
 \begin{equation}
 \frac{1}{2}
 \end{equation}
+
+\\[
+1/2
+\\]
 
 [eigenvalue]({{< relref "KBheigenvalue.md" >}})
 
