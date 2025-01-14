@@ -4,4 +4,4 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-Decentralized training semes to improve sample complexity for
+Decentralized training seems to improve sample complexity for

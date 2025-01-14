@@ -12,4 +12,4 @@ Therefore, in order to model something more complex with multiple peaks, we just
 p(x | \dots ) = \sum\_{i-1}^{n}p\_i \mathcal{N}(x | u\_{i}, {\sigma\_{i}}^{2})
 \end{equation}
 
-where we want our weights \\(p\_{j}\\) to sum up ultimate to \\(1\\).
+where we want our weights \\(p\_{j}\\) to sum up ultimate to \\(1\\) because we want the ultimate thing to still integrate to \\(1\\).

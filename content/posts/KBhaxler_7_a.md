@@ -13,7 +13,7 @@ Here's an outline:
 -   We defined the [adjoint](#adjoint)
     -   We learned some [properties of the adjoint](#properties-of-the-adjoint); importantly, that \\((A+B)^{\*} = A^{\*} + B^{\*}\\), \\((AB)^{\*} = B^{\*} A^{\*}\\), \\((\lambda T)^{\*} = \bar{\lambda}T^{\*}\\); a correlary is that \\(M^{\*}M\\) is [self-adjoint](#self-adjoint)
 -   We defined [normal, self-adjoint, and unitary](#buncha-matrix-adjectives)
--   With those definitions, we showed that [eigenvalues of self-adjoint matricies are real](#eigenvalues-of-self-adjoint--org71f113d--matricies-are-real)
+-   With those definitions, we showed that [eigenvalues of self-adjoint matricies are real](#eigenvalues-of-self-adjoint--orgd599eb4--matricies-are-real)
 -   Then, we created two mildly interesting intermediate results
     -   Over \\(\mathbb{C}\\), \\(Tv\\) is orthogonal to all \\(v\\) IFF \\(T\\) is the zero matrix
     -   Over \\(\mathbb{R}\\), \\(Tv\\) is orthogonal to all \\(v\\) **and \\(T\\) is self-adjoint**, then \\(T\\) is the zero matrix
@@ -111,10 +111,10 @@ As in, if the operator commutes with its own adjoint.
 A^{\*} = A^{-1}
 \end{equation}
 
-or, that \\(A\\) has orthonormal columns: [an unitary operator is invertible, and the inverse of its matrix representation is its transpose]({{< relref "KBhnus_math530_matrix_adjectives.md#an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose" >}})
+or, that \\(A\\) has orthonormal columns: [an unitary operator is invertible, and the inverse of its atrix representation is its transpose]({{< relref "KBhnus_math530_matrix_adjectives.md#an-unitary-operator-is-invertible-and-the-inverse-of-its-matrix-representation-is-its-transpose" >}})
 
 
-## Eigenvalues of [self-adjoint](#self-adjoint) matricies are real {#eigenvalues-of-self-adjoint--org71f113d--matricies-are-real}
+## Eigenvalues of [self-adjoint](#self-adjoint) matricies are real {#eigenvalues-of-self-adjoint--orgd599eb4--matricies-are-real}
 
 So, if we have:
 

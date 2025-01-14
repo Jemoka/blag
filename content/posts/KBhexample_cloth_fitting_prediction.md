@@ -9,6 +9,3 @@ draft = false
 **Want**: \\(\hat{f}\qty(\theta) = f\qty(\theta)\\)
 
 **Problem**: as joints rotate (which is highly nonlinear), cloth verticies move in complex and non-linear ways which are difficult to handle with a standard neural network---there are _**highly** non-linear rotations_! which is not really easy to make with standard [model functions]({{< relref "KBhmodel_function.md#model-function" >}}) using \\(\hat{f}\\).
-
-
-## intuition! {#intuition}

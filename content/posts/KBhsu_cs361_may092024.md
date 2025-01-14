@@ -80,11 +80,3 @@ If you have a covariance matrix and a mean vector, you can formulate:
     \begin{equation}
     P((x,z) \in \mathcal{F}) = \int\_{z} ((x,z) \in \mathcal{F}) p(z) \dd{z}
     \end{equation}
-
-<!--list-separator-->
-
--  value at risk
-
-    best objective value which can be guaranteed with probability \\(\alpha\\) given the error distribution.
-
-    where as [conditional value at risk](#value-at-risk) [CVaR](#value-at-risk) is expected value of top \\(1-\alpha\\) quartile of the distribution

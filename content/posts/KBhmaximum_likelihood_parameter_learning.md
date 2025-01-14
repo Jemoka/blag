@@ -27,8 +27,9 @@ If your \\(\theta\\) is a vector of more than \\(1\\) thing, take the gradient (
 \mqty[\pdv{LL(\theta)}{\theta\_{1}} \\\ \pdv{LL(\theta)}{\theta\_{2}}  \\\ \pdv{LL(\theta)}{\theta\_{3}} \\\ \dots] = \mqty[0 \\\ 0 \\\0]
 \end{equation}
 
--   [MLE for poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md#mle-for" >}})
+-   [MLE for poisson distribution]({{< relref "KBhprobability_of_k_in_x_time.md#mle-for-id-58a7600a-5169-4473-8ddc-f286534fc1f4-poisson-distribution" >}})
 -   [MLE for Bernouli]({{< relref "KBhbernoulli_random_variable.md#mle-for-bernouli" >}})
+-   [MLE for Gaussian]({{< relref "KBhmle_for_gaussian.md" >}})
 
 MLE is REALLY bad at generalizing to unseen data. Hence why MLE is good for big data where your MLE slowly converge to best parameters for your actual dataset.
 
@@ -46,7 +47,7 @@ We desire \\(\theta\\) parameter from some data \\(D\\). To do this, we simply o
 P(D|\theta) = \prod\_{i} P(o\_{i}| \theta)
 \end{equation}
 
-for each \\(o\_{i} \in D\\).  and \\(P\\) is the [likelyhood]({{< relref "KBhlikelyhood.md" >}}): [PMF]({{< relref "KBhprobability_mass_function.md" >}}) or [PDF]({{< relref "KBhprobability_distributions.md#probability-density-function" >}}) given what you are working with.
+for each \\(o\_{i} \in D\\).  and \\(P\\) is the [likelyhood]({{< relref "KBhlikelyhood.md" >}}): [PMF]({{< relref "KBhprobability_mass_function.md" >}}) or [PDF]({{< relref "KBhprobability_density_function.md" >}}) given what you are working with.
 
 That is, we want the parameter \\(\theta\\) which maximizes the likelyhood of the data. This only works, of course, if each \\(o\_{i} \in D\\) is [independent]({{< relref "KBhprobability.md#independence" >}}) from each other, which we can assume so by calling the samples from data [IID]({{< relref "KBhindependently_and_identically_distributed.md" >}}) (because they are independent draws from the underlying distribution.)
 

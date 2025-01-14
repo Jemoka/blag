@@ -18,6 +18,7 @@ draft = false
 -   [linear regression]({{< relref "KBhlinear_regression.md" >}})
 -   [gradient descent]({{< relref "KBhgradient_descent.md" >}})
     -   [stochastic gradient descent]({{< relref "KBhstochastic_gradient_descent.md" >}})
+-   [normal equation]({{< relref "KBhnormal_equation.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

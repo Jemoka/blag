@@ -22,7 +22,9 @@ draft = false
     -   [upper-triangular matricies]({{< relref "KBhupper_triangular_matrix.md" >}})
 -   [Elimination Matricies]({{< relref "KBhelimination_matrix.md" >}})
     -   [pivoting]({{< relref "KBhelimination_matrix.md#pivoting" >}})
--   [LU-Factorization]({{< relref "KBhlu_factorization.md" >}})
+    -   [LU-Factorization]({{< relref "KBhlu_factorization.md" >}})
+    -   [permutation matricies]({{< relref "KBhpermutation_matricies.md" >}})
+-   [sparsity]({{< relref "KBhsparsity.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

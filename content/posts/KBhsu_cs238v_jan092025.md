@@ -24,6 +24,7 @@ draft = false
 -   [model fitting]({{< relref "KBhmodel_fitting.md" >}})
     -   [MLE]({{< relref "KBhmaximum_likelihood_parameter_learning.md" >}})
     -   [MLE for Conditional Gaussian]({{< relref "KBhmle_for_gaussian.md" >}})
+    -   [MAP]({{< relref "KBhmaximum_a_posteriori_estimate.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}

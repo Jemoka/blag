@@ -24,9 +24,10 @@ Key question: **can multi-agent optimization problems help reinforcement learnin
 
 -   [Social Learning]({{< relref "KBhsocial_learning.md" >}})
 -   [Multi-Agent RL]({{< relref "KBhmulti_agent_rl.md" >}})
+-   [Human-AI Coordination]({{< relref "KBhhuman_ai_coordination.md" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
 
 -   [When is AI Bad?]({{< relref "KBhwhen_is_ai_bad.md" >}})
--   [Solution for Satelite Assignment Problem]({{< relref "KBhsatelite_assignment_problem.md#satelite-assignment-problem" >}})
+-   [Solution for Satelite Assignment Problem]({{< relref "KBhsatelite_assignment_problem.md" >}})
