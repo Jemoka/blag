@@ -31,3 +31,5 @@ U(s) = \max\_{a} R(s,a) + \gamma \sum\_{s'}^{} T(s'|s,a) U(s')
 aoetuha ua unatoheunsato eu [eigenvalue]({{< relref "KBheigenvalue.md" >}})
 
 oanetauhnsoeut
+
+{{< figure src="/ox-hugo/2025-01-13_22-29-58_screenshot.png" >}}

@@ -64,6 +64,15 @@ i.e.: if \\(a\_1v\_1 + ... + a\_{n} v\_{n} = 0\\), we can treat each chunk from 
 And all of this makes \\(v\_1 ... v\_{n}\\) a list of \\(\dim n\\) long that is [linearly independent]({{< relref "KBhlinear_independence.md" >}}); hence, it is a [basis]({{< relref "KBhbasis.md" >}}) of \\(V\\), as desired. \\(\blacksquare\\)
 
 
+## linear systems with diagonal matrices {#linear-systems-with-diagonal-matrices}
+
+\begin{equation}
+\mqty(5 & 0 \\\ 0 & 2) \mqty(c\_1 \\\ c\_2) = \mqty(10 \\\ 1)
+\end{equation}
+
+Each output is simply multiplying a value by th scaling factor corresponding to that row.
+
+
 ## enough eigenvalues implies diagonalizability {#enough-eigenvalues-implies-diagonalizability}
 
 If \\(T \in \mathcal{L}(V)\\) has \\(\dim V\\) distinct [eigenvalue]({{< relref "KBheigenvalue.md" >}})s, then \\(T\\) is [diagonalizable](#properties-of-diagonal-matrices).
