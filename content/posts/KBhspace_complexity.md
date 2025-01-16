@@ -134,32 +134,6 @@ Let \\(N\\) be a nondeterministic Turing machine which halts on all inputs in al
 \end{equation}
 
 
-### Savitch's Theorem {#savitch-s-theorem}
-
-For every "nice" (constructable) function \\(s: \mathbb{N} \to  \mathbb{N}\\), where \\(s(n) > n\\), for all \\(n\\), then:
-
-\begin{equation}
-\text{NSPACE}\qty(s(n)) \subseteq \text{SPACE}\qty(s(n)^{2})
-\end{equation}
-
-this is kind of [multi-tape TM theorem]({{< relref "KBhtime_complexity.md#multi-tape-tm-theorem" >}})
-
-
-#### and so, on polynomial sizes, this doesn't matter {#and-so-on-polynomial-sizes-this-doesn-t-matter}
-
-that is:
-
-\begin{equation}
-\text{NPSPACE} = \text{PSPACE}
-\end{equation}
-
-where
-
-\begin{equation}
-\text{NPSPACE} = \cup\_{k \in N} \text{NPSPACE} \qty(n^{k})
-\end{equation}
-
-
 ### examples {#examples}
 
 \begin{equation}
