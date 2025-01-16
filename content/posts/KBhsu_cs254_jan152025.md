@@ -17,9 +17,9 @@ draft = false
     -   [PATH]({{< relref "KBhstconn.md#path" >}})
 -   [NL]({{< relref "KBhnl.md" >}}) and [Non-Deterministic Space]({{< relref "KBhnon_deterministic_space.md" >}})
     -   [problems in \\(NL\\)]({{< relref "KBhnl.md#problems-in-nl" >}})
-    -   [\\(NL \subseteq P\\)]({{< relref "KBhnl.md#d41d8c" >}})
+    -   [\\(NL \subseteq P\\)]({{< relref "KBhnl.md#bounding-nl-space-by-p-time" >}})
     -   [\\(NL \subseteq \text{SPACE}\qty(\log^{2}\qty(n))\\)]({{< relref "KBhnl.md#non-determinism-buys-quadratic-savings" >}})
-    -
+    -   [\\(\text{NL} = \text{coNL}\\)]({{< relref "KBhnl.md#nl-conl" >}})
 
 
 ## Important Results / Claims {#important-results-claims}
