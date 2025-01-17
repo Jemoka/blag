@@ -60,6 +60,8 @@ A Pareto frontier is the entire set of [pareto optimal](#pareto-optimality) poin
 
 -  Weight Method
 
+    see [weighted sum method]({{< relref "KBhproperty_specification.md#weighted-sum-method" >}})
+
     you can use a linear weight to obtain _some_ Pareto optimal answers:
 
     \begin{equation}

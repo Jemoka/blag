@@ -4,30 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-## Preference Elicitation {#preference-elicitation}
-
-For the [Weight Method]({{< relref "KBhsu_cs361_apr302024.md#weight-method" >}}), for instance, we need to figure a \\(w\\) such that:
-
-\begin{equation}
-f = w^{\top}\mqty[f\_1 \\\ \dots\\\f\_{N}]
-\end{equation}
-
-where weight \\(w \in \triangle\_{N}\\).
-
-To do this, we essentially infer the weighting scheme by asking "do you like system \\(a\\) or system \\(b\\)".
-
-1.  first, we collect a series of design variables \\((a\_1, a\_2, a\_3 ...)\\) and \\((b\_1, b\_2, b\_3...)\\) and we ask "which one do you like better"
-2.  say our user WLOG chose \\(b\\) over \\(a\\)
-3.  so we want to design a \\(w\\) such that \\(w^{\top} a < w^{\top} b\\)
-4.  meaning, we solve for a \\(w\\) such that...
-
-\begin{align}
-\min\_{w}&\ \sum\_{i=1}^{n} (a\_{i}-b\_{i})w^{\top} \\\\
-\text{such that}&\ \bold{1}^{\top} w = 1 \\\\
-&\ w \geq 0
-\end{align}
-
-**unlike the rest of everything, we are MAXIMIZING here** idk why
+[Preference Elicitation]({{< relref "KBhpreference_elicitation.md#preference-elicitation" >}})
 
 
 ## Sampling Plans {#sampling-plans}
@@ -175,9 +152,9 @@ We can make this slighlty non-linear by computing some non-zero \\(B(x)\\) where
 a radial basis function is a basis function that acts on the _distance_ to a local point. You can choose any kernel \\(\psi\\) you'd like.
 
 
-### [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}}) {#regularization--kbhsu-cs224n-apr162024-dot-md}
+###  {#d41d8c}
 
-Especially for noisy things, you ideally want some kind of regularization: see [Regularization]({{< relref "KBhsu_cs224n_apr162024.md#regularization" >}})
+Especially for noisy things, you ideally want some kind of regularization: see
 
 
 #### L2 Regularization {#l2-regularization}
