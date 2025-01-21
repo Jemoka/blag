@@ -59,6 +59,23 @@ x \cdot y = x\_1 \bar{y\_{1}} + ... + x\_{n} \bar{y\_{n}}
 similar to [dot product]({{< relref "KBhdot_product.md" >}}) for the reals. This is called the [Euclidean Inner Product](#euclidean-inner-product) and has the nice parallelity properties we saw.
 
 
+### Matrix-scaled inner product {#matrix-scaled-inner-product}
+
+****THIS DOESN'T SATISFY THE INNER PRODUCT PROPERTIES****
+
+ \begin{equation}
+\langle u, v \rangle\_{A} = u \cdot Av = u^{T} Av
+\end{equation}
+
+consider \\(\langle v,v \rangle\_{A}\\), \\(v \in \text{null}\ A\\), then \\(\langle v,v \rangle =0 \not \implies v = 0\\) .
+
+But it does transpose:
+
+\begin{equation}
+\qty(\langle u,v \rangle\_{A})^{T}  = \qty(u^{T} Av)^{T} = v^{T}A^{T}u = \langle v,v \rangle\_{A^{T}}
+\end{equation}
+
+
 ### [complex number]({{< relref "KBhcomplex_number.md" >}}) shenanigans that motivate the [inner product]({{< relref "KBhinner_product.md" >}}) {#complex-number--kbhcomplex-number-dot-md--shenanigans-that-motivate-the-inner-product--kbhinner-product-dot-md}
 
 ...as both relevant and more general than the [dot product]({{< relref "KBhdot_product.md" >}}), but also different in key areas.
@@ -99,6 +116,6 @@ Recall that [L-periodic]({{< relref "KBhsu_math53_feb252024.md#l-periodicity" >}
 The work of checking this is a well-formed [inner product]({{< relref "KBhinner_product.md" >}}) is left to absolutely nobody.
 
 
-### [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#inner-product--kbhinner-product-dot-md--over-complex-valued-functions" >}}) {#inner-product-over-complex-valued-functions--kbhcomplex-exponential-dot-md}
+### [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#id-650c9b2b-2e99-4e47-b61f-36d45fcedcd0-inner-product-over-complex-valued-functions" >}}) {#inner-product-over-complex-valued-functions--kbhcomplex-exponential-dot-md}
 
-see [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#inner-product--kbhinner-product-dot-md--over-complex-valued-functions" >}})
+see [inner product over complex-valued functions]({{< relref "KBhcomplex_exponential.md#id-650c9b2b-2e99-4e47-b61f-36d45fcedcd0-inner-product-over-complex-valued-functions" >}})
