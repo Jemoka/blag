@@ -18,3 +18,5 @@ Key focus: validation of decision making systems that operate over time. See als
 -   [SU-CS238V JAN092025]({{< relref "KBhsu_cs238v_jan092025.md" >}})
 -   [SU-CS238V JAN142025]({{< relref "KBhsu_cs238v_jan142025.md" >}})
 -   [SU-CS238V JAN162025]({{< relref "KBhsu_cs238v_jan162025.md" >}})
+-   [SU-CS238V JAN212025]({{< relref "KBhsu_cs238v_jan212025.md" >}})
+-   [SU-CS238V JAN232025]({{< relref "KBhjan232025.md" >}})
