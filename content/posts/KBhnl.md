@@ -8,6 +8,8 @@ draft = false
 \text{NL} = \text{NSPACE} \qty( \log n)
 \end{equation}
 
+See also [Certificates-Based Intepretation of NL]({{< relref "KBhcertificates_based_intepretation_of_nl.md" >}})
+
 
 ## problems in \\(NL\\) {#problems-in-nl}
 
@@ -30,9 +32,6 @@ On input \\(\qty(G, s,t)\\), if \\(s = t\\), accept; otherwise,
 so we just have to remember the current node. So this whole thing is \\(O\qty(\log n)\\).
 
 
-## STCONN is NL Complete {#stconn-is-nl-complete}
-
-
 ## three statements {#three-statements}
 
 
@@ -48,7 +47,7 @@ NL \subseteq P
 
 preliminaries:
 
-Recap: \\(L \subseteq P\\): Recall the definition of [configuration]({{< relref "KBhturing_machinea.md#configuration" >}}) of TM \\(M\\) on input \\(x\\). Since \\(M\\) uses \\(O \qty(\log n)\\) space, then \\(\leq n^{k}\\) configurations because otherwise you'd run out of space.
+Recap: \\(L \subseteq P\\): Recall the definition of [configuration]({{< relref "KBhturing_machinea.md#configuration" >}}) of TM \\(M\\) which solves \\(L\\) on input \\(x\\). Since \\(M\\) uses \\(O \qty(\log n)\\) space, then \\(\leq n^{k}\\) configurations because otherwise you'd run out of space.
 
 Yet, this time, a configuration _can_ repeat on different branches within the non-determinism. Instead of a binary tree, instead, draw a digraph with each possible configuration corresponding at a vertex.
 
@@ -91,3 +90,13 @@ To do this "edge checking", we need to show that: let \\(M\\) be an NTM, given \
 \end{equation}
 
 **key insights: [STCONN]({{< relref "KBhstconn.md" >}}) is in coNL**
+
+That is, we want to show that:
+
+\begin{equation}
+\neg \text{STCONN} \in \text{NL}
+\end{equation}
+
+in particular is that we want to show a short certificate for \\(S\\) and \\(T\\) are **not** connected.
+
+see [Proof of the Immerman-Szelepscenyi Theorem]({{< relref "KBhproof_of_nl_conl.md" >}}). Since \\(\neg \text{STCONN} \in NL\\), and since [STCONN]({{< relref "KBhstconn.md" >}}) is NL complete, \\(\text{NL} = \text{coNL}\\).
