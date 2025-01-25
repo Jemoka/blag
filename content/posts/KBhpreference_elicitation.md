@@ -4,7 +4,7 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-For [weighted sum method]({{< relref "KBhproperty_specification.md#weighted-sum-method" >}}) for instance, we need to figure a \\(w\\) such that:
+For for instance, we need to figure a \\(w\\) such that:
 
 \begin{equation}
 f = w^{\top}\mqty[f\_1 \\\ \dots\\\f\_{N}]

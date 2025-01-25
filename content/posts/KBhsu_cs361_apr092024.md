@@ -144,9 +144,9 @@ Some range of acceptability.
 ## First-Order Methods {#first-order-methods}
 
 
-### [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >}}) {#gradient-descent--kbhlogistic-regression-dot-md}
+### [gradient descent]({{< relref "KBhgradient_descent.md" >}}) {#gradient-descent--kbhgradient-descent-dot-md}
 
-see [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >}})
+see [gradient descent]({{< relref "KBhgradient_descent.md" >}})
 
 \begin{equation}
 \bold{d} = \nabla f(x)
@@ -154,6 +154,10 @@ see [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >
 
 
 ### Conjugate Gradient {#conjugate-gradient}
+
+Motivation: steepest-design, but choose search directions that is orthogonal to \\(A\\)! Suppose \\(A\\) is symmetric, positive-definite. Choosing orthogonal search directions helps us preclude searching in overlapping directions (and wasting time).
+
+Essentially, we choose: \\(\langle s^{^{(q)}}, s^{^{(\hat{q})}} \rangle\_{A}\\) with \\(A\\) weighted [Matrix-scaled inner product]({{< relref "KBhinner_product.md#matrix-scaled-inner-product" >}}). ("Orthogonality carries regardless of weighting").
 
 We optimize the function as if its a gradratic function:
 
@@ -185,6 +189,31 @@ x\_{i} A x\_{j} = 0
 \end{equation}
 
 
+#### Error-Analysis for [Conjugate Gradient](#conjugate-gradient) {#error-analysis-for-conjugate-gradient--org159de0a}
+
+"Steepest Descent/gradient descent, but choose step directions to be \\(A\\) orthogonal instead"
+
+Initial error \\(e^{(1)} = \sum\_{\hat{q} = 1}^{n} \beta^{\hat{(q)}} s^{\hat{(q)}}\\) (\\(\beta\\) is the coefficients that we don't know, which are the things we want to solve for which gives us the error.)
+
+\begin{equation}
+e^{(q)} = e^{(1)} + \sum\_{\hat{q} = 1}^{q-1} \alpha^{(\hat{q})} s^{(\hat{q})}
+\end{equation}
+
+this implies that:
+
+\begin{equation}
+\langle s^{(q)}, e^{(q)} \rangle\_{A} = \langle s^{(q)}, e^{(1)} \rangle\_{A}
+\end{equation}
+
+this gives:
+
+\begin{equation}
+\alpha^{(q)} = \frac{s^{(q)}r^{(q)}}{s^{(q)} A s^{(q)}} = - \frac{\langle s^{(q)}, e^{(q)} \rangle}{\langle s^{(q)},s^{(q)} \rangle\_{A}} = -\beta^{(q)}
+\end{equation}
+
+meaning: if all \\(s\\) are \\(A\\) orthogonal, the \\(\alpha\\) choices will result in convergence in \\(n\\) steps. Note that if residuals \\(\tilde{q} < q\\), then \\(s^{\tilde{q}} \cdot r^{q} = -\langle s^{\tilde{q}}, e^{q} \rangle\_{A} = 0\\). Meaning, residuals are orthogonal to all previous search directions.
+
+
 ### Momentum {#momentum}
 
 We descent by calculating a "position" and a "velocity"
@@ -197,4 +226,4 @@ v\_{t+1} = \beta v\_{t} - \alpha \nabla\_{x\_{t}} f
 x\_{t+1} = x\_{t} + v\_{t+1}
 \end{equation}
 
-if \\(\beta\\), the momentum is set to \\(0\\), we just get normal [gradient descent]({{< relref "KBhlogistic_regression.md#gradient-descent" >}}). If there is a positive \\(\beta\\), your update vector will take on some of the previous update direction values.
+if \\(\beta\\), the momentum is set to \\(0\\), we just get normal [gradient descent]({{< relref "KBhgradient_descent.md" >}}). If there is a positive \\(\beta\\), your update vector will take on some of the previous update direction values.
