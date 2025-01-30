@@ -7,10 +7,16 @@ draft = false
 [coNP]({{< relref "KBhconp.md" >}}) is the set:
 
 \begin{equation}
-\text{coNP}= \qty {L \mid \neg L \in NP}
+\text{coNP}= \qty {\neg L \mid L \in NP}
 \end{equation}
 
-meaning, a language in coNP is of the shape "for every y of |x|^k length, we have" (because NP is "for some y of |x|^k length, we have", and negative of NP means "for every y of |x|^k length, we don't have" which is coNP)
+"\\(L\\) is in [coNP]({{< relref "KBhconp.md" >}}) if there exists a poly-time verifier for the "no" instances of this language". Formally:
+
+\begin{equation}
+L \in \text{coNP} \Leftrightarrow \exists \text{polytime} V s.t. x \in L: \exists  w \in \qty {0,1}^{\text{poly}\qty(x)}, V\qty(x,w) = 1
+\end{equation}
+
+Some [coNP]({{< relref "KBhconp.md" >}}) stuff: [UNSAT]({{< relref "KBhunsat.md" >}}), NOT-3COL, etc.
 
 
 ## \\(P \subseteq coNP\\) {#p-subseteq-conp}
@@ -18,6 +24,17 @@ meaning, a language in coNP is of the shape "for every y of |x|^k length, we hav
 Because we just invert the judgments after running \\(P\\) to get the whole set.
 
 Meaning: recall that \\(L \in P \implies  \neg L \in P \implies \neg L \in NP \implies L \in coNP\\).
+
+"Take \\(\text{P} \subseteq \text{NP}\\), 'co' both sides
+
+
+## if \\(\text{P}= \text{NP}\\), then \\(\text{NP} = \text{coNP}\\) {#if-text-p-text-np-then-text-np-text-conp}
+
+\begin{equation}
+L \in \text{NP} \underbrace{\implies}\_{\text{(given)}}\ L \in \text{P} \implies L \in \text{coNP}
+\end{equation}
+
+More importantly, this means that \\(\text{NP} \neq \text{coNP}\\) we see that the contrapositive of this statement implies \\(\text{P} \neq \text{NP}\\).
 
 
 ## coNP complete {#conp-complete}

@@ -262,3 +262,22 @@ Let's use [monte-carlo tree search]({{< relref "KBhmonte_carlo_tree_search.md" >
         -   no! select a new node which _minimizes_ \\(Q\_{\text{child}} - c \sqrt{ \frac{\log  N}{N\_{\text{child}}}}\\), which is the [Lower Confidence Bound Exploration]({{< relref "KBhsu_cs361_may072024.md#lower-confidence-bound-exploration" >}}); the reason why we are picking **lowest** is because we want to minimize \\(Q\\), instead of [UCB 1]({{< relref "KBhdirected_exploration.md#ucb-1" >}}) which is trying to maximize \\(Q\\)
 
 How do we estimate \\(Q\\)? We can do whatever we want; for instance, we can perform a bunch of roll-outs and estimate the robustness.
+
+
+#### reinforcement learning falsification {#reinforcement-learning-falsification}
+
+Technically, falsification is just RL:
+
+-   system =&gt; reward to adversary
+-   adversary =&gt; action to system
+
+Most RL algorithms are designed to be very sample efficient, which means we can find failures rather quickly.
+
+Using [MCTS]({{< relref "KBhmonte_carlo_tree_search.md" >}}) or [reinforcement learning]({{< relref "KBhreinforcement_learning.md" >}}) to search for the most likely failure is called **adaptive stress testing**.
+
+
+## how to pick a falsification method? {#how-to-pick-a-falsification-method}
+
+-   if failure is easy to come by, just do [direct falsification](#direct-falsification)
+-   if you could compute the gradient, then do that
+-   otherwise, do black box approaches / population approaches / etc.

@@ -23,7 +23,7 @@ draft = false
 
 ### study of impossibilities: _lower bounds_ {#study-of-impossibilities-lower-bounds}
 
-For instance, we want a result like "**[SAT]({{< relref "KBhnon_deterministic_turing_machines.md#boolean-formula-satisfiability" >}}) cannot be solved in [Polynomial Time]({{< relref "KBhcomputational_complexity_theory.md#polynomial-time" >}})**" (then in which case P != NP)
+For instance, we want a result like "**[SAT]({{< relref "KBhnon_deterministic_turing_machines.md#boolean-formula-satisfiability" >}}) cannot be solved in [Polynomial Time]({{< relref "KBhtime_complexity.md#polynomial-time" >}})**" (then in which case P != NP)
 
 
 ## history of the theory of computing {#history-of-the-theory-of-computing}
@@ -42,7 +42,7 @@ Its a subclass of [computability theory](#computability-theory), but only with r
 ## grand challenges of complexity theory {#grand-challenges-of-complexity-theory}
 
 1.  **P vs. NP** (belief P != NP): if the solution of a particular computational task can be verified quickly, does this mean the solution can be found quickly?
-2.  **NP vs. coNP** (belief P != coNP): are there theorems that are simple to state but require lengthy proofs?
+2.  **NP vs. coNP** (belief NP != coNP): are there theorems that are simple to state but require lengthy proofs?
 3.  **P vs. NC** (belief P != NP): is every algorithm efficiently parallelizable? or are there inherently sequential tasks?
 4.  **P vs. L** (belief P != L): can every **P** algorithm be recompiled to use "essentially no memory"
 5.  **P vs. PSPACE** (belief P != PSPACE): does solvable without much memory implies solvable without much time

@@ -28,6 +28,8 @@ p\_{n}(x) = \sum\_{i=0}^{n} \frac{f^{(n)}(0) x^{n}}{n!}
 |x(t+h) - (x(t) + h x'(t))| \leq Ch
 \end{equation}
 
+Insight: if your derivatives are bounded, then at high values of \\(j\\) we have \\(\frac{f^{(j)}\qty(0)}{n!}\\) tends eventually towards zero as \\(n\\) increases.
+
 Two constraints:
 
 1.  need \\(f^{(n)}\\) to exist infinitely

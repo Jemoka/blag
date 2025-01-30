@@ -98,6 +98,8 @@ Small algebra change; we can just combine these two things together in the first
 r^{(q)} = r^{(q-1)} - \alpha^{(q-1)} A r^{(q-1)}
 \end{equation}
 
+Challenge: since we are moving until the _residual_ to \\(0\\), its possible to oscillate since we don't know if the input parameter errors needs to be different at times.
+
 
 ## Conjugate Gradient {#conjugate-gradient}
 
