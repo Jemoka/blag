@@ -26,7 +26,7 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 </div>
 </div>
 
-Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [grab dinner with me](https://cal.com/houjun/dinner) :)
+Shoot me an email at `[firstname] at stanford dot edu`, or, if you are around Stanford, [let's find time](https://jemoka.com/meet) :)
 
 
 ## Research {#research}
