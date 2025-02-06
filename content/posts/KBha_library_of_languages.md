@@ -12,6 +12,8 @@ This is in both [NP]({{< relref "KBhnon_polynomial_time.md" >}}) and [coNP]({{< 
 
 But, [PERFECT-MATCHING](#perfect-matching) is in \\(P\\)
 
+Yet, with a [randomized algorithm]({{< relref "KBhrandomized_algorithum.md" >}}), [PERFECT-MATCHING](#perfect-matching) can be solved in parallel time \\(O\qty(\log^{2} n)\\).
+
 
 ### NP trivial {#np-trivial}
 

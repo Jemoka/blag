@@ -13,6 +13,7 @@ draft = false
 -   [SU-CS254 JAN222025]({{< relref "KBhsu_cs254_jan222025.md" >}})
 -   [SU-CS254 JAN272025]({{< relref "KBhsu_cs254_jan272025.md" >}})
 -   [SU-CS254 JAN292025]({{< relref "KBhsu_cs254_jan292025.md" >}})
+-   [SU-CS254 FEB032025]({{< relref "KBhsu_cs254_feb032025.md" >}})
 
 
 ## Logistics {#logistics}
