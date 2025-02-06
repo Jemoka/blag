@@ -45,7 +45,7 @@ funnily enough, \\(\max\\) and \\(\mathbb{E}\\) could be swapped here only up to
 
 ## RP {#rp}
 
-RP is the "one-sided error" class where we will always reject when not in the language and we will accept with some probability &gt;= 1/2.
+RP is the "one-sided error" class where we will always reject when not in the language and we will accept with some fixed probability.
 
 
 ## look, a chart! {#look-a-chart}
@@ -61,7 +61,7 @@ accept probability for...
 | RP (one-sided error) | 1-2<sup>-n</sup> | 0              |
 | NP                   | &gt; 0           | 0              |
 
-RP is essentially "NP with a lot of witnesses"---you are really really certain (up to 1/2)
+RP is essentially "NP with a lot of witnesses"---you are really really certain (up to whatever probability you'd like, since [RP success amplifies](#rp-success-amplifies)).
 
 Notice that this makes...
 
@@ -77,10 +77,10 @@ RP is "accept with high probability" and NP is "accept somehow".
 
 #### RP success amplifies {#rp-success-amplifies}
 
-if \\(M\\) is a one-sided error truing machine with error \\(\leq \frac{1}{3}\\), then just run \\(M\\) \\(k\\) times to obtain:
+if \\(M\\) is a one-sided error truing machine with error \\(\leq \frac{1}{2}\\), then just run \\(M\\) \\(k\\) times to obtain:
 
 \begin{equation}
 2^{-\theta\qty(k)}
 \end{equation}
 
-failure probability.
+failure probability. i.e. if the correct answer is accept, than the system will return accept for \\(1 - 2^{-\theta\qty(k)}\\) chance.

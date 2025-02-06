@@ -11,6 +11,8 @@ At each distribution...
 1.  sample \\(\tau ' \sim g\qty(\cdot | \tau)\\) (for instance, \\(\tau' \sim \mathcal{N}\qty(\cdot | \tau, \sigma^{2})\\))
 2.  accept the sample with probability given by \\(\frac{\bar{p} \qty(\tau') g\qty(\tau | \tau')}{\bar{p}\qty(\tau) g\qty(\tau' | \tau)}\\), otherwise keep \\(\tau\\)
 
+**remember**: \\(\bar{p}\\) is our target density, which is often the **failure distribution** \\(\bar{p} \qty(\tau \mid \tau \not \in \psi) =  \mathbb{1}\qty {\tau \not  \in \psi} p\qty(\tau)\\), meaning it has no probability sans failure!
+
 
 ## intuition {#intuition}
 
