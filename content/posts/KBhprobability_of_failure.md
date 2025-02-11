@@ -14,6 +14,10 @@ that is, the [Probability of Failure]({{< relref "KBhprobability_of_failure.md" 
 1.  [direct estimation]({{< relref "KBhdirect_estimation.md" >}}): directly approximate your failure probability from nominal distribution \\(p\\) --- \\(\tau\_{j} \sim p\qty(\cdot)\\), \\(\hat{p}\_{\text{fail}} = \frac{1}{m} \sum\_{i=1}^{m} 1\qty {\tau\_{i} \not \in \psi}\\)
 2.  [Importance Sampling]({{< relref "KBhimportance_sampling.md" >}}): design a distribution to probe failure, namely proposal distribution \\(q\\), and then reweight by how different it is from \\(p\\) --- \\(\tau\_{j} \sim q\qty(\cdot)\\), \\(\hat{p}\_{\text{fail}} = \frac{1}{m}\sum\_{i=1}^{m} w\_{i} \mathbb{1} \qty {\tau\_{i}\not \in \psi}\\), call \\(w\_{i} = \frac{p\qty(\tau\_{i})}{q\qty(\tau\_{i})}\\) (the "[importance weight]({{< relref "KBhimportance_sampling.md" >}})")
 3.  [adaptive importance sampling]({{< relref "KBhadaptive_importance_sampling.md" >}})
+4.  [multiple importance sampling]({{< relref "KBhmultiple_importance_sampling.md" >}})
+5.  [sequential monte-carlo]({{< relref "KBhsequential_monte_carlo.md#sequential-monte-carlo" >}})
+
+How do you pick a [proposal distribution]({{< relref "KBhproposal_distribution.md" >}})? See [proposal distribution]({{< relref "KBhproposal_distribution.md" >}}).
 
 
 ## evaluating estimators {#evaluating-estimators}

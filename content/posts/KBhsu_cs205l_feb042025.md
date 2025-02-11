@@ -44,7 +44,7 @@ Notice this is a vector! So to actually minimize it, we need to pick a norm. By 
 
 ---
 
-**weighted least squares**: some equations maybe more important than others---scaling the entries in the residuals (prior taking the norm); so we are actually trying to minimize \\(\Vert Dr \Vert\_{2}\\), in particular meaning we have:
+**weighted least squares**: some equations maybe more important than others---scaling the entries in the residuals (prior taking the norm); so we are actually trying to minimize \\(\Vert Dr \Vert\_{2}\\) with diagonal \\(D\\), in particular meaning we have:
 
 \begin{equation}
 Dr = Db - DAc
@@ -65,3 +65,29 @@ c^{T}A^{T} D^{2}Ac - 2b^{T} D^{2} Ac
 Critical point: \\(\nabla f = 0\\) ; any \\(c\\) that simultaneously solves all equations is a critical point.
 
 The [Hessian]({{< relref "KBhsu_math53_feb212024.md#hessian" >}}) is the Jacobian of the gradient; note that **order matters**.
+
+by then finding the critical point on \\(c\\), and setting \\(D = I\\), we obtain the normal [normal equation]({{< relref "KBhnormal_equation.md" >}})s from above.
+
+{{< figure src="/ox-hugo/2025-02-06_12-27-18_screenshot.png" >}}
+
+---
+
+For multiplying by diagonal matricies, systems with unique solutions
+
+---
+
+Since the eigenvalues of \\(A^{T}A\\) is double than that of \\(A\\) itself, the [condition number]({{< relref "KBhrobustness.md" >}})s:
+
+\begin{equation}
+\frac{\sigma^{2}\_{\text{max}}}{\sigma^{2}\_{\min}}
+\end{equation}
+
+its takes squared the amount of precision to do what you want to do.
+
+For solving least squares, we use a QR factorization, where QR is R upper triangualar and Q^T Q = I.
+
+{{< figure src="/ox-hugo/2025-02-06_13-07-41_screenshot.png" >}}
+
+intutition: Qs---orthogonal columns from \\(A\\); Rs---any part that we chopped away from the orthogonmalization.
+
+\\(Q^{T}Q = I\\); **this is NOT true** in the other direction.

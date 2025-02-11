@@ -109,7 +109,7 @@ L \in \Sigma\_{k} \text{ if } \exists \text{ {polytime verifier $V$ s.t }} x \in
 \\(\pi\_{k}\\) is just like flipped, so we have \\(\forall\\) first, and then \\(\exists\\).
 
 
-#### observations {#observations}
+### observations {#observations}
 
 \begin{equation}
 \Sigma\_{k} \subseteq \Sigma\_{k+1}
