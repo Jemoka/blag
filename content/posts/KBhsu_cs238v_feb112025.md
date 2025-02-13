@@ -15,7 +15,7 @@ draft = false
 
 ## New Concepts {#new-concepts}
 
--   [reachability analysis](#reachability-analysis)
+-
 -   [Set Propagation Techniques](#set-propagation-techniques)
 
 
@@ -27,29 +27,9 @@ draft = false
 ---
 
 
-## reachability analysis {#reachability-analysis}
-
-1.  we set a bounded set of initial states
-2.  we set a bounded set of disturbances
-
-Then, generally, we take our bounded initial state set and evolve the reachable set through disturbances.
-
----
-
-**initial states**: bounded set \\(\mathcal{S}\\) of states, and a vector of disturbances \\(x\_{a} \in \mathcal{X}\_{a}\\), \\(x\_{s} \in \mathcal{X}\_{s}\\), \\(x\_{o} \in \mathcal{X}\_{o}\\).
-
-We then have a notion of a [reachable set](#reachability-analysis):
-
-\begin{equation}
-\mathcal{R}\_{d} = \qty {s\_{d} \mid s\_{d} = \text{Rollout}\qty (\text{initial}=s, \text{disturbances}=x\_{1:d}), s \in S, x\_{t} \in \mathcal{X}\_{t}, t \in 1:d}
-\end{equation}
-
-How to actually compute this? [Set Propagation Techniques](#set-propagation-techniques)!
-
-
 ## Set Propagation Techniques {#set-propagation-techniques}
 
-Now, how exactly do we compute the [reachable set](#reachability-analysis).
+Now, how exactly do we compute the .
 
 
 ### ...for [Linear Dynamical Systems]({{< relref "KBhlinear_dynamical_system.md#linear-dynamical-system" >}}) {#dot-dot-dot-for-linear-dynamical-systems--kbhlinear-dynamical-system-dot-md}
@@ -122,7 +102,7 @@ A\mathcal{P} = \text{conv}\qty(A v \midv \in\mathcal{V})
 ^ computing this convex hull is **wayyyy** to expensive as verticies scale; we can solve this with one of two ways.
 
 1.  use a [zonotope](#zonotope) instead
-2.  overapproximate: "bound it with a box"---which do not loose our safety guarantees if it does **not** intersect with the avoid set; if it **does** intersect with the avoid set, we can't make any conclusions.
+2.  overapproximate: "bound it with a box"---which do not loose our safety guarantees if it does **not** intersect with the avoid set; if it **does** intersect with the avoid set, we can't make any conclusions. see [overapproximation]({{< relref "KBhoverapproximation.md#overapproximation" >}})
 
 
 ### zonotope {#zonotope}
