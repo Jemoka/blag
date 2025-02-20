@@ -6,15 +6,14 @@ draft = false
 
 A [circuit]({{< relref "KBhcircuits.md" >}}) is a new model of computation, like [turing machine]({{< relref "KBhturing_machinea.md" >}})s. [circuit]({{< relref "KBhcircuits.md" >}}) are defined in terms of boolean logic, with components \\(\text{AND}, \text{OR}, \text{NOT}\\).
 
+Most important quirk
+
 
 ## constituents {#constituents}
 
 -   sequence of \\(n\\) true/false inputs \\(x\_1, ..., x\_{n}\\)
 -   a graph with nodes belled AND/OR/NOT combining these things pairwise boolean gates
 -   a single output true/false
-
-
-## requirements {#requirements}
 
 
 ## complexity measures of circuits {#complexity-measures-of-circuits}
@@ -94,6 +93,8 @@ This gives us:
 P/poly = \text{SIZE}\qty(\text{poly}\qty(n))
 \end{equation}
 
+{{< figure src="/ox-hugo/2025-02-19_15-11-46_screenshot.png" >}}
+
 
 #### for all languages, it is in SIZE(2^O(n)) {#for-all-languages-it-is-in-size--2-on}
 
@@ -109,3 +110,24 @@ C\_{n}\qty(x) = \bigvee\_{y \in L} \bigwedge\_{i=1}^{n} x\_{i} = y\_{i}
 every unary language \\(L \subseteq \qty {0,1}^{\*}\\) such that \\(L \subseteq \qty {1^{n} : n \in \mathbb{N}}\\) is in P/poly. Yet, we can just create a circuit that ANDs the \\(n\\) inputs for those that we accept and \\(0\\) for those that we don't.
 
 and there are unary decidable languages---such as \\(1^{\langle M,n \rangle}\\) such that \\(\langle M,n \rangle \in \text{HALT}\\).
+
+
+#### expanding P towards P/poly {#expanding-p-towards-p-poly}
+
+an [advice-taking TM](#expanding-p-towards-p-poly) is, given an input \\(x\\), we get a read-only tape with an advice string of length \\(poly\qty(|x|)\\) which depends **solely on \\(|x|\\) and not \\(x\\) itself**
+
+an alternative definition of p/poly:
+
+\begin{equation}
+L \in p poly \implies x \in L \Leftrightarrow M(x, y\_{|x|})\text{ accepts}
+\end{equation}
+
+notably, this is different from [NP]({{< relref "KBhnon_polynomial_time.md" >}}) since our machine is not obligated to reject all \\(M\qty(x, y), \forall y, x \not \in L\\) as does NP. We just want this to work for some particular choices of \\(y\\).
+
+---
+
+all that's left is to prove that the definition above is equaivalent to the original one for p/poly
+
+\\(\Rightarrow\\) for every size \\(n\\), we just dump the circuit's code into the "advice".
+
+\\(\Leftarrow\\) we do the [Cook-Levin Theorem]({{< relref "KBhcook_levin_theorem.md" >}}) thing from [p-uniform P/poly is exactly P](#p-uniform--org4f2c0f5--p-poly--orgffe6a74--is-exactly-p--kbhtime-complexity-dot-md), and hard code the advice into a unique circut for each of the code and then reduce to a poly circuit.
