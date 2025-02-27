@@ -4,9 +4,6 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
-[Preference Elicitation]({{< relref "KBhpreference_elicitation.md#preference-elicitation" >}})
-
-
 ## Sampling Plans {#sampling-plans}
 
 Many methods requires knowing a series of samples of the objective value to calculate local model or population methods, so...
@@ -68,7 +65,7 @@ Limitation: if there are just two points that are close together, this metric sc
 
 ### Morris-Mitchell {#morris-mitchell}
 
-We have a hype-parameter \\(q\\), which checks all of the possible norms to use between points. Consider \\(d\_{i}\\) to be the ith-pairwise distance between the points with the [Lp Norm]({{< relref "KBhlp_norm.md" >}}) for your choice of \\(p\\). Then, for:
+We have a hype-parameter \\(q\\), which checks all of the possible norms to use between points. Consider \\(d\_{i}\\) to be the ith-pairwise distance between the points with the for your choice of \\(p\\). Then, for:
 
 \begin{equation}
 \Phi\_{q}(X) = \qty(\sum\_{i}^{}d\_{i}^{-q})^{\frac{1}{q}}
@@ -102,65 +99,3 @@ Choosing one best point to add to \\(S\\) which maximize \\(d\_{\max}\\), and th
 #### exchange algorithm {#exchange-algorithm}
 
 randomly initialize \\(S\\), and swap points within \\(S\\) and only in \\(X\\)
-
-
-## Surrogate Models {#surrogate-models}
-
-Once we finished sampling, we need to create a model parameterized by \\(\theta\\) which minimizes the error. In particular, we want to choose \\(\theta\\) such that:
-
-\begin{equation}
-\min\_{\theta} |y - \hat{y}|\_{p}
-\end{equation}
-
-for some model \\(\hat{y}(x)\\), with matching actual result \\(y\\).
-
-
-### Linear Model {#linear-model}
-
-\begin{equation}
-\hat{f} = w\_0 + \bold{w}^{\top}\bold{x}
-\end{equation}
-
-whereby, we now want:
-
-\begin{equation}
-\min\_{\theta} |y - X \theta|\_{2}^{2}
-\end{equation}
-
-this is CLOSE FORM! by applying the pseudo-inverse:
-
-\begin{equation}
-\theta = X^{\dagger} y
-\end{equation}
-
-
-### Basis Functions {#basis-functions}
-
-We can make this slighlty non-linear by computing some non-zero \\(B(x)\\) where a set of these basis functions all taking \\(x\\) as input (for instance, terms of a polynomial) \\(\bold{B}(\bold{x})\\) is then used for optimization:
-
-\begin{equation}
-\min\_{\theta} |y - B \theta|\_{2}^{2}
-\end{equation}
-
-
-#### Radial Basis Functions {#radial-basis-functions}
-
-\begin{equation}
-\psi(x,c) = \psi(|x - c|)
-\end{equation}
-
-a radial basis function is a basis function that acts on the _distance_ to a local point. You can choose any kernel \\(\psi\\) you'd like.
-
-
-###  {#d41d8c}
-
-Especially for noisy things, you ideally want some kind of regularization: see
-
-
-#### L2 Regularization {#l2-regularization}
-
-\begin{equation}
-\min\_{\theta} || y - B(x)\theta ||\_{2}^{2} + \lambda  || \theta ||^{2}\_{2}
-\end{equation}
-
-this is kind of a like a multi-objective [Weight Method]({{< relref "KBhsu_cs361_apr302024.md#weight-method" >}}).
