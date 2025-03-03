@@ -67,6 +67,9 @@ For \\(t > 1\\):
 P\_{t+1} \qty(s) = \sum\_{s' \in \mathcal{S}}^{} T\qty(s', s) P\_{t}\qty(s')
 \end{equation}
 
+
+### finite horizon reachability {#finite-horizon-reachability}
+
 What if we want to know the probability _any of_ an entire **set** of states is reached? Call it \\(R\_{t}\\):
 
 for \\(t = 1\\), we have:

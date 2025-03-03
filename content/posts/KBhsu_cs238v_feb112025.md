@@ -15,7 +15,7 @@ draft = false
 
 ## New Concepts {#new-concepts}
 
--
+-   [reachability analysis]({{< relref "KBhreachability_analysis.md#reachability-analysis" >}})
 -   [Set Propagation Techniques](#set-propagation-techniques)
 
 
@@ -29,7 +29,7 @@ draft = false
 
 ## Set Propagation Techniques {#set-propagation-techniques}
 
-Now, how exactly do we compute the .
+Now, how exactly do we compute the [reachable set]({{< relref "KBhreachability_analysis.md#reachability-analysis" >}}).
 
 
 ### ...for [Linear Dynamical Systems]({{< relref "KBhlinear_dynamical_system.md#linear-dynamical-system" >}}) {#dot-dot-dot-for-linear-dynamical-systems--kbhlinear-dynamical-system-dot-md}
@@ -87,7 +87,7 @@ a set of half-spaces: \\(Ax \leq b\\) for matrices \\(A, b\\), which are a serie
 
 #### V polytope {#v-polytope}
 
-the convex hull of a set of vertices: $\text{conv}\qty(\mathcal{V})$---i.e. give a set of vertices at the edges of the hull.
+the convex hull of a set of vertices: \\(\text{conv}\qty(\mathcal{V})\\) --- i.e. give a set of vertices at the edges of the hull.
 
 [set operations]({{< relref "KBhset_operations.md" >}}) for \\(\mathcal{V}\\) polytopes:
 
@@ -113,6 +113,12 @@ A [zonotope](#zonotope) is a symmetric [polytope](#polytope). A [zonotope](#zono
 -   a center point \\(c\\)
 
 for any ordering of \\(g\\), \\(g\_{j}\\), we maintain a set of active verticies \\(\qty {c}\\) in the beginning and concatenate one of the remaining $g<sub>j</sub>$s into each vertex and also in the negative direction. And then, get a convex hull.
+
+that is:
+
+\begin{equation}
+\mathcal{Z} = \qty {c + \sum\_{i=1}^{m} \alpha\_{i} g\_{i} \mid \alpha\_{i} \in \qty {-1, 1}}
+\end{equation}
 
 [set operations]({{< relref "KBhset_operations.md" >}}) for [zonotope](#zonotope)
 
