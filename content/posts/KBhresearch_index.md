@@ -106,7 +106,6 @@ I’m broadly interested in Natural Language Processing and Speech Language Samp
 ## Teaching {#teaching}
 
 -   Fall quarter, 2024 - TA, CS238, Stanford
--   All year, 2024 - TA, ACM Chapter, Stanford
 -   Summer quarter, 2024 - Head TA, [AIFS AIBridge](https://www.jemoka.com/posts/kbhaibridge_course_website/), UC Davis
 
 
