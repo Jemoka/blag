@@ -45,6 +45,10 @@ draft = false
 
 ## Stanford UG Y2, Spr {#stanford-ug-y2-spr}
 
+-   [Complexity Theory Index]({{< relref "KBhcomplexity_theory_index.md" >}})
+-   [Compilers Index]({{< relref "KBhcompilers_index.md" >}})
+-   [Moral Philosophy Index]({{< relref "KBhsu_phil2.md" >}})
+
 
 ## UG Other Duties {#ug-other-duties}
 
