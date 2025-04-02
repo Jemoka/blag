@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "jemoka.com"
 refLinksErrorLevel = "WARNING"
 enableGitInfo = true
-paginate = 5
+[pagination]
+pagerSize = 5
 
 [outputs]
 home = [ "html", "json" ]
