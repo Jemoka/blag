@@ -1,0 +1,66 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>Compilers Index</title>
+<meta name=description content="cs143.stanford.edu
+Lectures
+
+SU-CS143 APR012025
+
+Logistics
+
+programming assignments: myth
+psets: gradescope
+labs: myth.stanford.edu
+
+/afs/ir/class/cs143
+
+
+finals and midterms
+
+Textbook: the purple dragonbook
+Structure
+
+written assignments (2.5*4 = 10%)
+programming assignments (10+10+15+15 = 50%); 4 of them
+
+lexer
+parser
+semantic analysis parse
+code generator
+
+
+midterm (15%)
+final (25%)
+
+Compiler we will Build
+
+lexer: strings -> tokens
+
+built with Flex FSTs
+smallest part of the code
+
+
+parser: tokens -> AST
+
+built with Bison CFGs
+linear time parsing!
+
+
+semantic analysis: AST
+
+C++
+check types + properties
+fill in types for expressions in the tree
+
+
+[PA5: optimization - TBD]
+code generation: AST -> MIPS
+
+C++
+write MIPS
+yay!
+
+
+
+Emphasis: correctness over performance."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>Compilers Index</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#lectures>Lectures</a></li><li><a href=#logistics>Logistics</a></li><li><a href=#structure>Structure</a></li><li><a href=#compiler-we-will-build>Compiler we will Build</a></li></ul></nav></aside><main><article><div><p>cs143.stanford.edu</p><h2 id=lectures>Lectures</h2><ul><li><a href=/posts/kbhsu_cs143_apr012025/>SU-CS143 APR012025</a></li></ul><h2 id=logistics>Logistics</h2><ul><li>programming assignments: myth</li><li>psets: gradescope</li><li>labs: myth.stanford.edu<ul><li>/afs/ir/class/cs143</li></ul></li><li>finals and midterms</li></ul><p>Textbook: the purple dragonbook</p><h2 id=structure>Structure</h2><ul><li>written assignments (2.5*4 = 10%)</li><li>programming assignments (10+10+15+15 = 50%); 4 of them<ul><li>lexer</li><li>parser</li><li>semantic analysis parse</li><li>code generator</li></ul></li><li>midterm (15%)</li><li>final (25%)</li></ul><h2 id=compiler-we-will-build>Compiler we will Build</h2><ul><li>lexer: strings -> tokens<ul><li>built with Flex FSTs</li><li>smallest part of the code</li></ul></li><li>parser: tokens -> AST<ul><li>built with Bison CFGs</li><li>linear time parsing!</li></ul></li><li>semantic analysis: AST<ul><li>C++</li><li>check types + properties</li><li>fill in types for expressions in the tree</li></ul></li><li>[PA5: optimization - TBD]</li><li>code generation: AST -> MIPS<ul><li>C++</li><li>write MIPS</li><li>yay!</li></ul></li></ul><p>Emphasis: <strong>correctness</strong> over performance.</p></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
