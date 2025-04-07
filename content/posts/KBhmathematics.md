@@ -73,7 +73,7 @@ Proof: Let \\(S\_{M,w}\\) in \\(\mathcal{F}\\) be true IFF \\(M\\) accepts \\(w\
 
 accept if a proof is found
 
-Claim: S' basically says "there's no proof of S' in \\(\mathcal{F }\\)". This is another nationalization argument; if \\(S'\\) is false, we have a contradiction; if \\(S'\\) is true, then \\(S\_{G, \epsilon}\\) returned false, meaning \\(G\\) doesn't accept \\(\epsilon\\), meaning we weren't able to find a proof in \\(\mathcal{F}\\) for \\(S'\\). So the proof of \\(S'\\) mustn't be in \\(\mathcal{F}\\).
+Claim: S' basically says "there's no proof of S' in \\(\mathcal{F }\\)". This is another diagonalization argument; if \\(S'\\) is false, we have a contradiction; if \\(S'\\) is true, then \\(S\_{G, \epsilon}\\) returned false, meaning \\(G\\) doesn't accept \\(\epsilon\\), meaning we weren't able to find a proof in \\(\mathcal{F}\\) for \\(S'\\). So the proof of \\(S'\\) mustn't be in \\(\mathcal{F}\\).
 
 
 ### Godel's consistency {#godel-s-consistency}

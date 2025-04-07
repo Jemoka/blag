@@ -23,6 +23,7 @@ draft = false
 [A Tour Through 254B's Complexity Theory]({{< relref "KBhsu_cs254b_mar312025.md#a-tour-through-254b-s-complexity-theory" >}})
 
 -   [SU-CS254B MAR312025]({{< relref "KBhsu_cs254b_mar312025.md" >}})
+-   [SU-CS254B APR022025]({{< relref "KBhsu_cs254b_apr022025.md" >}})
 
 
 ## Logistics - 254 {#logistics-254}

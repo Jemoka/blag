@@ -1,5 +1,5 @@
 +++
-title = "Relativization Barrier to P vs. NP."
+title = "(NOTES COPY) Relativization Barrier to P vs. NP"
 author = ["Houjun Liu"]
 draft = false
 +++

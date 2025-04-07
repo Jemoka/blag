@@ -113,3 +113,8 @@ belief1 -> "observation" -> belief2 -> {"belief3", "belief4"};
 ```
 
 {{< figure src="/ox-hugo/phil2_apr012025_beliefs.svg" >}}
+
+
+### reflective equilibrium {#reflective-equilibrium}
+
+once figure above reaches equilibrium, that's [reflective equilibrium](#reflective-equilibrium)
