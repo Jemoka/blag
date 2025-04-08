@@ -22,6 +22,12 @@ Recap: [descritive morality]({{< relref "KBhsu_phil2_apr012025.md#descritive-mor
 2.  explain <span class="underline">why</span> the rules are the rules
 3.  "Why should you be moral?"
 4.  How does it fit in with the "rest of the world": metaphysics and epistemology
+    -   metaphysical
+        -   physical question
+        -   where does the rules come front?
+        -   what does it depended on?
+    -   epistemological questions
+        -   how do we know these rules are the rules?
 
 
 ## argument (philosophy) {#argument--philosophy}
