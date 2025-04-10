@@ -112,24 +112,55 @@ Rules:
 
     </span></div>
 
-    <div class="proof"><span>
-
-    </span></div>
-
 <!--list-separator-->
 
--  Valiant's Depth Reduction Lemma
+-  Pebbling Theorem
 
-    <div class="definition"><span>
+    <div class="theorem"><span>
 
-    The **depth** of a digraph is the length of its longest path.
-
-    </span></div>
-
-    <div class="lemma"><span>
-
-    Let \\(G\\) be a \\(v\\) vertex, \\(m\\) edge, depth \\(d\\) graph. For any parameter \\(1 \leq r \leq \log d\\), we can reduce the depth to at most \\(\leq \frac{d}{2^{r}}\\) by deleting \\(\frac{r}{\log  d} \cdot m\\) edges.
+    G = constant degree (every node has the same degree) v-vertex graph; there's a pebbling strategy for \\(G\\) using \\(\leq O\qty(\frac{v}{\log v})\\) pebbles. More generally, for a \\(k\\) degree graph, we have \\(O\qty( \frac{k v \log \log v}{\log v})\\).
 
     </span></div>
 
-    "by snipping away a few edges, there are no more long paths".
+    We state without proof the following theorem.
+
+    <!--list-separator-->
+
+    -  Valiant's Depth Reduction Lemma
+
+        <div class="definition"><span>
+
+        The **depth** of a digraph is the length of its longest path.
+
+        </span></div>
+
+        <div class="lemma"><span>
+
+        Let \\(G\\) be a \\(v\\) vertex, \\(m\\) edge, depth \\(d\\) graph. For any parameter \\(1 \leq r \leq \log d\\), we can...
+
+        1.  reduce the depth to at most \\(\leq \frac{d}{2^{r}}\\)
+        2.  by deleting \\(\frac{r}{\log  d} \cdot m\\) edges
+
+        </span></div>
+
+        "by snipping away a few edges, there are no more long paths". We
+
+    <!--list-separator-->
+
+    -  proof of the [Pebbling Theorem](#pebbling-theorem)
+
+        <div class="proof"><span>
+
+        Our goal is to show that exists subset \\(P\\) of vertices such that
+
+        1.  \\(|P| \leq O\qty( \frac{v \log \log  v}{\log v})\\)
+        2.  any path that doesn't involve the set \\(P\\) has length \\(\leq O\qty(\frac{v}{\log v}) = l\\)
+
+        If we can show that we can pebble actually all of \\(P^{\*} = P \cup \qty {\text{sink}}\\); we are done if we could do this since the sink is in \\(P^{ \*}\\). Our strategy is as follows---
+
+        1.  topologically sort \\(P^{\*} = u\_1, u\_2, ..., u\_{|p^{\*}|}\\)
+        2.  for \\(i = 1,2, ..., |P^{\*}|\\), we apply strategy \\(u\_{i}\\)
+
+        After pebbling \\(u\_{i}\\), we will keep our pebble onto the thing. In essence in between \\(u\_{i}\\) barriers, we pebble lengths of \\(l\\) and then use the pebbles.
+
+        </span></div>

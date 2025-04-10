@@ -10,6 +10,13 @@ cs143.stanford.edu
 ## Lectures {#lectures}
 
 -   [SU-CS143 APR012025]({{< relref "KBhsu_cs143_apr012025.md" >}})
+-   [SU-CS143 APR032025]({{< relref "KBhsu_cs143_apr032025.md" >}})
+
+
+### Lexing {#lexing}
+
+-   What to do: [SU-CS143 APR082025]({{< relref "KBhsu_cs143_apr082025.md" >}})
+-   How to implement it: [SU-CS143 APR102025]({{< relref "KBhsu_cs143_apr102025.md" >}})
 
 
 ## Logistics {#logistics}
