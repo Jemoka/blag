@@ -1,5 +1,5 @@
 +++
-title = "programatically compiling RegEx to DFA Houjun Liu"
+title = "programatically compiling RegEx to DFA"
 author = ["Houjun Liu"]
 draft = false
 +++
