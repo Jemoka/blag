@@ -26,6 +26,7 @@ draft = false
 -   [SU-CS254B APR022025]({{< relref "KBhsu_cs254b_apr022025.md" >}})
 -   [SU-CS254B APR072025]({{< relref "KBhsu_cs254b_apr072025.md" >}})
 -   [SU-CS254B APR092025]({{< relref "KBhsu_cs254b_apr092025.md" >}})
+-   [SU-CS254B APR142025]({{< relref "KBhsu_cs254b_apr142025.md" >}})
 
 
 ## Logistics - 254 {#logistics-254}

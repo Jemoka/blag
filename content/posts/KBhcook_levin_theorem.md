@@ -148,3 +148,12 @@ Luca Trevisan's notes
 -   Reduce CIRCUIT-SAT to 3SAT in polynomial time
 -   Therefore, 3SAT is NP hard
 -   we know 3SAT is in NP, so 3SAT in NP complete
+
+
+## Quasi-Linear Cook-Levin {#quasi-linear-cook-levin}
+
+<div class="lemma"><span>
+
+\\(\text{SAT}\\) is complete for \\(\text{NTIME}\qty( n \text{poly} \log n)\\)
+
+</span></div>
