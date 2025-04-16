@@ -13,7 +13,7 @@ I'm on the blaggosphere as [u/jemoka](https://www.reddit.com/user/Jemoka/) and [
 
 ## Who's this guy? {#who-s-this-guy}
 
-I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) interested in [linguistic analysis](http://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642), [NLP](https://aclanthology.org/2024.crac-1.4.pdf), and [user interfaces](https://www.shabang.io). I think [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Shabang](https://www.shabang.io), do [do research in NLP and model-based RL]({{< relref "KBhresearch_index.md" >}}), and am working for [TalkBank](https://www.talkbank.org/) on the intersection between speech and language.
+I am a [human](https://avatars.githubusercontent.com/u/28765741?v=4) interested in [linguistic analysis](http://pubs.asha.org/doi/10.1044/2023_JSLHR-22-00642), [NLP](https://aclanthology.org/2024.crac-1.4.pdf), and [user interfaces](https://www.shabang.io). I think [AGI](https://en.wikipedia.org/wiki/Artificial_general_intelligence) &amp; [Emacs](https://github.com/Jemoka/.emacs.d) are cool. I run [Shabang](https://www.shabang.io), do [research in NLP and model-based RL]({{< relref "KBhresearch_index.md" >}}), and am working for [TalkBank](https://www.talkbank.org/) on the intersection between speech and language.
 
 I'm currently doing my undergrad at Stanford, where I write some code for [Stanza](https://github.com/stanfordnlp/stanza), a NLP package for many human languages, and a [rover that we are sending to Antarctica](https://github.com/stanford-ssi).
 
