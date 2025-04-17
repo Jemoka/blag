@@ -33,29 +33,6 @@ if x == y then z = 1; else z = 2;
 
 ASTify the tokens --- "identifying sentences".
 
-```dot
-digraph {
-graph [bgcolor=transparent];
-node [fontcolor=white, color=white, shape=none];
-edge [fontcolor=white, color=white];
-
-assign1 [label="assign"];
-assign2 [label="assign"];
-z1 [label="z", shape=none];
-z2 [label="z", shape=none];
-x [shape=none];
-y [shape=none];
-eq [shape=none,label="=="];
-2 [shape=none,label="=="];
-1 [shape=none,label="=="];
-
-{x, eq, y} -> "relation" -> "predicate";
-{z1, 1} -> assign1  -> "then-stmt";
-{z2, 2} -> assign2 -> "else-stmt";
-{"predicate", "then-stmt", "else-stmt"} -> "if-the-else";
-}
-```
-
 {{< figure src="/ox-hugo/parse.svg" >}}
 
 
