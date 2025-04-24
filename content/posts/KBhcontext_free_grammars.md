@@ -70,7 +70,7 @@ Consider the following ambiguous grammar:
 
 ```haskell
 E -> if E then E
-   | f E then E else E
+   | if E then E else E
    | ....
 ```
 
