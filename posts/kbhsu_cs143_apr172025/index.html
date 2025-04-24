@@ -1,0 +1,41 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-CS143 APR172025</title>
+<meta name=description content="and also abstract syntax tree and top-down parsing
+error handling
+Recall! Our compiler should detect non-valid programs and to translate valid ones.
+
+  
+      
+          Error Kind
+          Example
+          Detected by&mldr;
+      
+  
+  
+      
+          Lexical
+          $ <- doesn&rsquo;t exist
+          lexer
+      
+      
+          Syntax
+          x * % <- doesnt&rsquo; make sense
+          parser
+      
+      
+          Semantic
+          int x; x(3) <- doesn&rsquo;t check
+          type checker
+      
+      
+          Correctness
+          
+          you!
+      
+  
+
+Good error handler should report errors accurately and clearly; recovering from an error quickly, and not slow down compilation of valid code."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-CS143 APR172025</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#error-handling>error handling</a><ul><li><a href=#panic-mode>panic mode</a></li><li><a href=#error-production>error production</a></li><li><a href=#local-and-global-correction>local and global correction</a></li></ul></li></ul></nav></aside><main><article><div><p>and also <a href=/posts/kbhabstract_syntax_tree/>abstract syntax tree</a> and <a href=/posts/kbhbuilding_a_parser/>top-down parsing</a></p><h2 id=error-handling>error handling</h2><p>Recall! Our compiler should detect non-valid programs and to translate valid ones.</p><table><thead><tr><th>Error Kind</th><th>Example</th><th>Detected by&mldr;</th></tr></thead><tbody><tr><td>Lexical</td><td>$ &lt;- doesn&rsquo;t exist</td><td>lexer</td></tr><tr><td>Syntax</td><td>x * % &lt;- doesnt&rsquo; make sense</td><td>parser</td></tr><tr><td>Semantic</td><td>int x; x(3) &lt;- doesn&rsquo;t check</td><td>type checker</td></tr><tr><td>Correctness</td><td></td><td>you!</td></tr></tbody></table><p>Good error handler should report errors accurately and clearly; recovering from an error quickly, and not slow down compilation of valid code.</p><p>Error handling ranges from&mldr;.</p><ul><li>panic mode</li><li>error productions</li><li>automatic local/global correction</li></ul><p>Not all parser generators support this.</p><h3 id=panic-mode>panic mode</h3><p>Consider:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#111>(</span> <span style=color:#111>1</span> <span style=color:#f92672>+</span> <span style=color:#f92672>+</span> <span style=color:#111>2</span> <span style=color:#111>)</span> <span style=color:#f92672>+</span> <span style=color:#111>3</span>
+</span></span></code></pre></div><p><a href=#panic-mode>panic mode</a> recovery involves skipping to the next integer and then continue</p><p>For instance, our CFG could be:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-haskell data-lang=haskell><span style=display:flex><span><span style=color:#00a8c8>E</span> <span style=color:#f92672>-&gt;</span> <span style=color:#111>int</span> <span style=color:#f92672>|</span> <span style=color:#00a8c8>E</span> <span style=color:#f92672>+</span> <span style=color:#00a8c8>E</span> <span style=color:#f92672>|</span> <span style=color:#111>(</span><span style=color:#00a8c8>E</span> <span style=color:#111>)</span> <span style=color:#f92672>|</span> <span style=color:#75af00>error</span> <span style=color:#111>int</span> <span style=color:#f92672>|</span> <span style=color:#111>(</span><span style=color:#75af00>error</span><span style=color:#111>)</span>
+</span></span></code></pre></div><p>The goal here is to just fast forwarding through the entire error until you see an int.</p><h3 id=error-production>error production</h3><p>This is how one could get really specific error messages. We will predict some known mistakes and then report them. For instance, people may write <code>5 x</code> instead of <code>5*x</code>. We can detect this as a <a href=/posts/kbhcontext_free_grammars/#productions>production</a> and just handle it explicitly.</p><h3 id=local-and-global-correction>local and global correction</h3><p>Idea: find the locally correct &ldquo;nearby&rdquo; program. Where we try token insertions and deletions until it works, possibly exhaustively.</p><ul><li>hard to implement</li><li>slow down complitaion, etc&mldr;</li></ul></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
