@@ -16,6 +16,8 @@ Adding demonstrations as k in-context examples.
 
 Prompt: documents, input query, final answer.
 
+Parameters: number of documents, number of in context samples, number of iterations upper bound.
+
 
 ## Iterative Demonstration Based RAG (IterDRAG) {#iterative-demonstration-based-rag--iterdrag}
 

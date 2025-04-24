@@ -26,6 +26,8 @@ They all work in 2 parst:
 -   a token **learner**: takes training corpus and derives a vocabulary set
 -   a token **segmenter** that tokenizes text according to the vocab
 
+See also [Downsides of Subword Tokenization]({{< relref "KBhiclr2025_tokenizer_free_approaches.md#downsides-of-id-ea3f9d36-0439-436e-96c1-f31ed3004346-subword-tokenization" >}})
+
 
 ## tr {#tr}
 

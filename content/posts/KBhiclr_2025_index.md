@@ -9,6 +9,8 @@ draft = false
 
 -   [ICLR2025 Keynote]({{< relref "KBhiclr2025_keynote_zico_kolter.md" >}})
 -   [ICLR2025 Adaptive Computation]({{< relref "KBhiclr2025_adaptive_computation.md" >}})
+-   [ICLR2025 Thursday Morning Posters]({{< relref "KBhiclr2025_thursday_morning_posters.md" >}})
+-   [ICLR2025 Tokenizer-Free Approaches]({{< relref "KBhiclr2025_tokenizer_free_approaches.md" >}})
 
 
 ## Surprises/Takes {#surprises-takes}
