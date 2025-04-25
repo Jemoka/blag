@@ -49,13 +49,6 @@ Instead of decoding directly into logits, which is memory intensive, there is a 
 Solve multiturn RLHF by writing the policy Q value and optimizing it over discounted features
 
 
-## ICLR2025 Jin: MOE++ zero computation experts {#iclr2025-jin-moe-plus-plus-zero-computation-experts}
-
-Instead of doing MLP in experts, instead make each expert discarding input, duplicate input, or replacing input with trainable vector
-
-Learn forwarding for adaptive computation
-
-
 ## ICLR2025 Xiao: SimPER preference alignment by removing hyper parameters {#iclr2025-xiao-simper-preference-alignment-by-removing-hyper-parameters}
 
 Remove the log term of DPO and remove thereby the hyper parameter beta that is needed

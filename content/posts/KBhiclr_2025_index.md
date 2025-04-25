@@ -11,6 +11,7 @@ draft = false
 -   [ICLR2025 Adaptive Computation]({{< relref "KBhiclr2025_adaptive_computation.md" >}})
 -   [ICLR2025 Tokenizer-Free Approaches]({{< relref "KBhiclr2025_tokenizer_free_approaches.md" >}})
 -   [ICLR2025 Context and Retrieval]({{< relref "KBhiclr2025_context_and_retrieval.md" >}})
+-   [ICLR2025 MoE]({{< relref "KBhiclr2025_moe.md" >}})
 
 
 ## Posters {#posters}
