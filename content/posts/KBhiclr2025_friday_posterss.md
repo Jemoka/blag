@@ -4,6 +4,73 @@ author = ["Houjun Liu"]
 draft = false
 +++
 
+## ICLR2025 Morris: contextual document embeddings {#iclr2025-morris-contextual-document-embeddings}
+
+Take a bunch of sentence embeddings as input to produce a new sentence embedding that is now contextual
+
+
+## ICLR2025 Noukhovich: asynchronous reinforcement learning for language models {#iclr2025-noukhovich-asynchronous-reinforcement-learning-for-language-models}
+
+Rollout and tune concurrently
+
+
+## ICLR2025 Yao: CR-CTC CONSISTENCY REGULATION {#iclr2025-yao-cr-ctc-consistency-regulation}
+
+CTC LOSS CAN BE MADE MORE ROBUST IF YOU REGULARIZE TO HAVE MINIMAL DIFFERENCE BETWEEN TWO AUGMENTED VIEWS OF THE SAME MEL SPECTRUM
+
+
+## ICLR2025 Sun: ReDeEP detecting hallucination using mechanistic interpretability {#iclr2025-sun-redeep-detecting-hallucination-using-mechanistic-interpretability}
+
+Find layers most prone to insert information, measure the information insertion using logit lens before and after passing through FFN, strong change after hallucination prone FFN means hallucination
+
+
+## ICLR2025 Fu: CHiP {#iclr2025-fu-chip}
+
+For multi model preference optimization, combine four different loss terms together a varying types of preference loss to get best results
+
+
+## ICLR2025 Faysse: ColPali {#iclr2025-faysse-colpali}
+
+Embed images of text instead of text itself during rag
+
+
+## ICLR2025 Liu: DeLLMa {#iclr2025-liu-dellma}
+
+Key insight; make a language model of POMDP by asking the language model to produce value judgments and normalizing them and doing standard value iteration
+
+
+## ICLR2025 Wijmans: cut your losses in large vocabulary language model {#iclr2025-wijmans-cut-your-losses-in-large-vocabulary-language-model}
+
+Instead of decoding directly into logits, which is memory intensive, there is a trick to allow us to not have to store the entire out projection in memory
+
+
+## ICLR2025 Gao: progressing the relative future {#iclr2025-gao-progressing-the-relative-future}
+
+Solve multiturn RLHF by writing the policy Q value and optimizing it over discounted features
+
+
+## ICLR2025 Jin: MOE++ zero computation experts {#iclr2025-jin-moe-plus-plus-zero-computation-experts}
+
+Instead of doing MLP in experts, instead make each expert discarding input, duplicate input, or replacing input with trainable vector
+
+Learn forwarding for adaptive computation
+
+
+## ICLR2025 Xiao: SimPER preference alignment by removing hyper parameters {#iclr2025-xiao-simper-preference-alignment-by-removing-hyper-parameters}
+
+Remove the log term of DPO and remove thereby the hyper parameter beta that is needed
+
+
+## ICLR2025 Xiong: from tokens to lattices {#iclr2025-xiong-from-tokens-to-lattices}
+
+Mask language models learn conditional relationships between tokens of the same entity thereby implicitly creating a graph
+
+
+## ICLR2025 Pagliardini: AdEMAMix {#iclr2025-pagliardini-ademamix}
+
+Key insight: Adam with two different betas and also use gradient information from multiple steps for stabler and faster convergence
+
+
 ## ICLR2025 Fan: loop transformers for length generalization {#iclr2025-fan-loop-transformers-for-length-generalization}
 
 Key insight: UT like approaches with loops generalize better for tasks of a specific kind
@@ -48,4 +115,4 @@ Key insight: take some jailbreak that doesn't work anymore, make semantic pururb
 
 ## ICLR2025 Georgiev: attribute to delete {#iclr2025-georgiev-attribute-to-delete}
 
-Key insight: learn a data model which then allows you to perturb what pieces of input pre-training data is relevant to the actual output, using this,, with counterfactual for what the correct unlearned outcome is, and then tune against that.
+Key; learn a data model which then allows you to perturb what pieces of input pre-training data is relevant to the actual output, using this,, with counterfactual for what the correct unlearned outcome is, and then tune against that.
