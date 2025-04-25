@@ -44,3 +44,8 @@ Intervention order influences intervention success, and composition, success; co
 ## ICLR2025 Ouyang: Projection head is an information bottleneck {#iclr2025-ouyang-projection-head-is-an-information-bottleneck}
 
 Key insight: projection head if distinct from pre-training task serves as an information bottleneck because task difference
+
+
+## ICLR2025 Xu: alignment data synthesis from scratch by prompting  aligned LLMs with nothing {#iclr2025-xu-alignment-data-synthesis-from-scratch-by-prompting-aligned-llms-with-nothing}
+
+Key insignt: roll out a bunch of samples, label them, and then fine tune on it
