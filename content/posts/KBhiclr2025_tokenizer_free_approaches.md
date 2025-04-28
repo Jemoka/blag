@@ -7,6 +7,7 @@ draft = false
 ## Talks {#talks}
 
 -   [ICLR2025 Kilani: MrT5 Tokenizer-Free]({{< relref "KBhiclr2025_kilani_mrt5_tokenizer_free.md" >}})
+-   [ICLR2025 Neitemeier: Hierachical Autoregressive Transformers]({{< relref "KBhiclr2025_neitemeier_hierachical_autoregressive_transformers.md" >}})
 
 
 ## Downsides of [Subword Tokenization]({{< relref "KBhtokenization.md#subword-tokenization" >}}) {#downsides-of-subword-tokenization--kbhtokenization-dot-md}
