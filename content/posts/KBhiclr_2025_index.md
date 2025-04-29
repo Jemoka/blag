@@ -19,6 +19,7 @@ draft = false
 
 -   [ICLR2025 Thursday Posters]({{< relref "KBhiclr2025_thursday_morning_posters.md" >}})
 -   [ICLR2025 Friday Posters]({{< relref "KBhiclr2025_friday_posterss.md" >}})
+-   [ICLR2025 Saturday Posters]({{< relref "KBhiclr2025_saturday_posters.md" >}})
 
 
 ## Surprises/Takes {#surprises-takes}

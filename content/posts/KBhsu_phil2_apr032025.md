@@ -40,7 +40,7 @@ Here are some properties of [argument](#argument--philosophy).
 the conclusion follows from the premises
 
 
-### soundness {#soundness}
+### soundness (philosophy) {#soundness--philosophy}
 
 conclusion follows from **truthful** premises; subset of [validity](#validity).
 

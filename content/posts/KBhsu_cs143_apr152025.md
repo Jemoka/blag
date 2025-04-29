@@ -24,13 +24,15 @@ Codegen
 
 ## parser {#parser}
 
+[parser](#parser) does [parsing]({{< relref "KBhcompiler.md#parsing" >}})
+
 [parser](#parser): takes sequence of tokens from the lexer and produce AST of the program. General goal is to distinguish between valid and invalid strings of tokens.
 
 Importantly, we don't really emit errors from parsing; instead we just do it at the layer below and above.
 
 NOTE: FORM of the CFGs is very important.
 
-We use [Context-Free Grammars]({{< relref "KBhcontext_free_grammars.md#context-free-grammar" >}})
+We use [Context-Free Grammars]({{< relref "KBhcontext_free_grammars.md" >}})
 
 
 ### example {#example}

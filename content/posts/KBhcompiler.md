@@ -31,33 +31,16 @@ if x == y then z = 1; else z = 2;
 
 ### parsing {#parsing}
 
-ASTify the tokens --- "identifying sentences".
+[abstract syntax tree]({{< relref "KBhabstract_syntax_tree.md" >}})ifying the tokens --- "identifying sentences".
+
+See [parser]({{< relref "KBhsu_cs143_apr152025.md#parser" >}}).
 
 {{< figure src="/ox-hugo/parse.svg" >}}
 
 
 ### semantic analysis {#semantic-analysis}
 
-lower things into LLVM IR, HLO, etc. --- "analyze the sentences"
-
--   check type
--   catch inconsistency
--   scoping rules, etc.
-
-
-#### example {#example}
-
-Look! Shadowing!!!
-
-```c
-{
-    int i = 3;
-    {
-        int i = 4;
-        cout << i;
-    }
-}
-```
+[semantic analysis]({{< relref "KBhsemantic_analysis.md#semantic-analysis" >}})
 
 
 ### optimization {#optimization}
