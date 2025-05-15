@@ -16,7 +16,7 @@ Welcome to my academic homepage! This is my little homestead on the internet abo
 <div style="margin: 10px 0">
 <span style="color: #262626; font-weight:500; color: #292929; opacity:0.6; font-size: 14px">Recent goings on</span>
 <div style="margin-top: 10px; display: grid; column-gap: 20px; row-gap: 5px; grid-template-columns: 120px auto">
-<span style="font-weight: 500">May. 15, 25'</span> <span>Our paper on dropping dropout for LM Pretraining was accepted by ACL Findings! See you in Vienna!</span>
+<span style="font-weight: 500">May. 15, 25'</span> <span>Our paper (Dropfree) was accepted by ACL Findings! See you in Vienna!</span>
 <span style="font-weight: 500">Apr. 24, 25'</span> <span>We hosted <a href="https://sites.google.com/stanford.edu/haic2025">an ICLR workshop</a> on Human-AI Coevolution! Singapore was fun too!</span>
 <span style="font-weight: 500">Sep. 25, 24'</span> <span><a href="https://aclanthology.org/2024.crac-1.4/">Paper (Coref)</a> accepted to CRAC 2024; EMNLP was fun!</span>
 <span style="font-weight: 500">Aug. 21, 24'</span> <span>Tech report article <a href="https://ldr.lps.library.cmu.edu/article/810/galley/579/view/">released</a> on Batchalign2 engineering.</span>
