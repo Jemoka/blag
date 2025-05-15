@@ -43,7 +43,7 @@ I’m broadly interested in Natural Language Processing and Speech Language Samp
 ## Projects {#projects}
 
 <div style="padding: 15px 0">
-<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Stanford NLP (2024)</div>
+<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Stanford NLP (2025)</div>
 <div style="font-weight: 500">Drop Dropout on Single Epoch Language Model Pretraining</div>
 <div><u>Liu, H.</u>, Bauer, J., Manning, C.D.</div>
 <div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Poster@ACL 2025, Findings</span></div>
