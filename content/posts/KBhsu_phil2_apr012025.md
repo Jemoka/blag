@@ -67,6 +67,8 @@ what is right and wrong
 -   how should I live?
 -   what should I do, all things considered?
 
+that is, ethics considers [morality](#morality), etc but also beauty, etc.
+
 
 ## modern morality {#modern-morality}
 

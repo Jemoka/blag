@@ -15,6 +15,7 @@ cs143.stanford.edu
 -   [SU-CS143 APR172025]({{< relref "KBhsu_cs143_apr172025.md" >}})
 -   [SU-CS143 APR242025]({{< relref "KBhsu_cs143_apr242025.md" >}})
 -   [SU-CS143 APR292025]({{< relref "KBhsu_cs143_apr292025.md" >}})
+-   [SU-CS143 MAY062025]({{< relref "KBhsu_cs143_may062025.md" >}})
 
 
 ### Lexing {#lexing}
