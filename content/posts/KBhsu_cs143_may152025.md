@@ -49,7 +49,29 @@ As you would expect:
 \frac{so,E, S \vdash  e : v, S\_1 | E\qty(id) = I\_{id} | S\_2=S\_1[v / I\_{id}]}{so, E, S \vdash  id \leftarrow e: v, S\_2}
 \end{equation}
 
-Notice! we have side effects that are **CHAINED**; if evaluating \\(e\\) has side effects, we carry them into our evaluation in the side effects.
+Notice! we have side effects that are **CHAINED**; if evaluating \\(e\\) has side effects, we carry them into our evaluation in the side effects \\(S \to S\_1 \to S\_2\\).
+
+
+### loops {#loops}
+
+We use recursion!
+
+\begin{equation}
+\frac{\begin{align}&so, E, S \vdash e\_1: true, S\_1 \\\ &so, E, S\_1, \vdash  S\_2 : v, S\_2 \\\ &so, E, S\_2 \vdash \text{ while } e\_1 \text{ loop } e\_2 \text{ pool } : void, S\_3\end{align}}{so, E, S  \vdash \text{ while } e\_1 \text{ loop } e\_2 \text{ pool } : void, S\_3}
+\end{equation}
+
+
+### how do we allocate new spaces? {#how-do-we-allocate-new-spaces}
+
+We can use the syntax
+
+\begin{align}
+&l\_{new} = \text{newloc}\qty(S\_1) \\\\
+&so, E[l\_{new} / id], S\_1[v\_1 / l\_{new}] \vdash \dots
+\end{align}
+
+
+### how do we allocate new objects? {#how-do-we-allocate-new-objects}
 
 
 ### ...what about `self`? {#dot-dot-dot-what-about-self}
@@ -57,3 +79,13 @@ Notice! we have side effects that are **CHAINED**; if evaluating \\(e\\) has sid
 \begin{equation}
 \frac{}{\text{so}, E, S \vdash \text{self}: \text{so}, S}
 \end{equation}
+
+
+## errors to check {#errors-to-check}
+
+-   dispatch on void
+-   division by zero
+-   substring out of range
+-   heap overflow
+
+generally we need to exit gracefully
