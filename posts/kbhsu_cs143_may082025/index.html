@@ -1,0 +1,57 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>SU-CS143 MAY082025</title>
+<meta name=description content="Primary Goals
+
+management of run-time resources
+correspondence between static and dynamic data structures
+storage organization
+
+Run time execution
+
+execution of a program is under the control of the OS
+when a program is invoked&mldr;
+
+the OS allocates space for the program
+the load is loaded into a part of that space
+the OS jumps to the entropy point for the first instruction
+
+
+
+Typically the order is
+Assumptions
+
+execution is sequential: control pass from one point to another
+
+concurrency break this
+
+
+when a procedure is called, control should return to the point immediately after the call
+
+exceptions break this, but we won&rsquo;t have them
+
+
+
+activation
+
+invocation of procedure \(P\) is what we call an &ldquo;activation&rdquo; of \(P\)
+lifetime of \(P\) is
+
+all steps for activating \(P\)
+all steps in \(P\)
+
+
+
+activation tree
+
+when \(P\) calls \(Q\), \(Q\) returns before \(P\)
+activation lifetimes can therefore be a tree
+
+since there&rsquo;s only ever one path from main to the current active function call, we can use a stack and keep track of information in the call stack on the stack."><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>SU-CS143 MAY082025</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#primary-goals>Primary Goals</a></li><li><a href=#run-time-execution>Run time execution</a></li><li><a href=#typically-the-order-is>Typically the order is</a></li><li><a href=#assumptions>Assumptions</a></li><li><a href=#activation>activation</a><ul><li><a href=#activation-tree>activation tree</a></li><li><a href=#what-should-be-on-the-call-stack-activation-tree--org57d5b1f>what should be on the call stack/<a href=#activation-tree>activation tree</a></a></li></ul></li><li><a href=#word-alignment>word alignment</a></li><li><a href=#stack-machines>stack machines</a><ul><li><a href=#optimization-of-the-stack-machine>optimization of the stack machine</a></li><li><a href=#invariants>invariants</a></li></ul></li></ul></nav></aside><main><article><div><h2 id=primary-goals>Primary Goals</h2><ul><li>management of run-time resources</li><li>correspondence between static and dynamic data structures</li><li>storage organization</li></ul><h2 id=run-time-execution>Run time execution</h2><ul><li>execution of a program is under the control of the OS</li><li>when a program is invoked&mldr;<ol><li>the OS allocates space for the program</li><li>the load is loaded into a part of that space</li><li>the OS jumps to the entropy point for the first instruction</li></ol></li></ul><h2 id=typically-the-order-is>Typically the order is</h2><h2 id=assumptions>Assumptions</h2><ol><li>execution is sequential: control pass from one point to another<ul><li>concurrency break this</li></ul></li><li>when a procedure is called, control should return to the point immediately after the call<ul><li>exceptions break this, but we won&rsquo;t have them</li></ul></li></ol><h2 id=activation>activation</h2><ul><li>invocation of procedure \(P\) is what we call an &ldquo;activation&rdquo; of \(P\)</li><li><a href=/posts/kbhsu_cs242_oct312024/#lifetime>lifetime</a> of \(P\) is<ol><li>all steps for activating \(P\)</li><li>all steps in \(P\)</li></ol></li></ul><h3 id=activation-tree>activation tree</h3><ul><li>when \(P\) calls \(Q\), \(Q\) returns before \(P\)</li><li>activation lifetimes can therefore be a tree</li></ul><p>since there&rsquo;s only ever one path from main to the current active function call, we can use a stack and keep track of information in the call stack on the stack.</p><h3 id=what-should-be-on-the-call-stack-activation-tree--org57d5b1f>what should be on the call stack/<a href=#activation-tree>activation tree</a></h3><p>When \(F\) calls \(G\)&mldr;</p><ol><li>\(G\) return value</li><li>actual parameters to \(G\)</li><li>pointers to the previous activation record (&ldquo;control link&rdquo;)</li><li>the return address</li><li>registers and program counter and local variables for \(F\) right before calling \(G\)</li></ol><p>So a possible design would be:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C data-lang=C><span style=display:flex><span><span style=color:#00a8c8>struct</span> <span style=color:#111>ActivationRecord</span> <span style=color:#111>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#00a8c8>int</span> <span style=color:#111>result</span><span style=color:#111>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#111>Elem</span><span style=color:#f92672>*</span> <span style=color:#111>arguments</span><span style=color:#111>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#00a8c8>char</span><span style=color:#f92672>*</span> <span style=color:#111>control_link</span><span style=color:#111>;</span> <span style=color:#75715e>// ptr to the metadat of the previous thing
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#00a8c8>char</span><span style=color:#f92672>*</span> <span style=color:#111>return_addr</span><span style=color:#111>;</span> <span style=color:#75715e>// ptr to where to return
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#111>}</span>
+</span></span></code></pre></div><p>the urge to just to <code>(char *) ActivationRecord</code> the struct and hope nothing goes wrong is strong.</p><h2 id=word-alignment>word alignment</h2><p>remember! stuff needs to be 4-byte aligned</p><h2 id=stack-machines>stack machines</h2><p>a simple evaluation model for expressions</p><ol><li>no variables or registers</li><li>a stack of values to store intermediate results</li><li>for each instruction&mldr;<ul><li>take its operands from the top of the stack</li><li>removes these operads from the stack</li><li>does something</li><li>puts the result back onto the stack</li></ul></li></ol><h3 id=optimization-of-the-stack-machine>optimization of the stack machine</h3><p>the top of the stack will always be in an register (we call it an &ldquo;accumulator)</p><h3 id=invariants>invariants</h3><ul><li>results of expressions is in the accumulator</li><li>expression evaluation preserves the stack</li></ul><p>this dicplin allows you to write left and r</p></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
