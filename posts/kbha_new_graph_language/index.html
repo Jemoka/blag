@@ -1,0 +1,38 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;300;400;500;700&family=IBM+Plex+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer><script src=https://code.jquery.com/jquery-3.6.0.min.js integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin=anonymous></script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel=stylesheet><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={loader:{load:["[tex]/physics"]},tex:{packages:{"[+]":["physics"]}}}</script><title>yet another flowchart abstraction</title>
+<meta name=description content='yafa!
+Syntax
+[ (Circle) -> [square] -> (Circle) | (Circle) ]
+[ (circle) ]
+[ <lt1>(self loop) -> <lt1> ]
+EXPRESSION = EXPRESSION&#39; ARROW NODE | EXPRESSION&#39; ALTERNATION NODE | STRING
+EXPRESSION&#39; = EXPRESSION&#39; ARROW NODE | EXPRESSION&#39; ALTERNATION NODE | NODE
+
+NODE = SQUARE | CIRCLE | ANCHOR
+SQUARE = "[" EXPRESSION "] | ANCHOR "[" EXPRESSION "]
+ANCHOR = "<" LABEL ">"
+
+ALTERNATION = "|"
+ARROW = SARROW | DARROW
+SARROW = "->"
+DARROW = "=>"
+
+LABEL = r"[\w\d]+"
+STRING = LABEL | "\"" ".*" "\""
+Semantics'><meta name=author content="Houjun Liu"><link rel=stylesheet href=/css/global.css><link rel=stylesheet href=/css/syntax.css></head><body><div class=center-clearfix><header><span id=header-name onclick='window.location.href="/"' style=cursor:pointer>Houjun Liu</span><div id=socialpanel><a href=https://www.jemoka.com/search/ class=header-social id=header-search><i class="ic fa-solid fa-magnifying-glass"></i></i></a>
+<a href=https://github.com/Jemoka/ class=header-social id=header-github><i class="ic fa-brands fa-github"></i></a>
+<a href=https://bsky.app/profile/jemoka.com class=header-social id=header-twitter><i class="ic fa-brands fa-bluesky"></i></a>
+<a href=https://www.reddit.com/user/Jemoka/ class=header-social id=header-reddit><i class="ic fa-brands fa-reddit"></i></a></div></header><div id=title><h1>yet another flowchart abstraction</h1><span class=tagbox></span></div><aside id=toc><h1 id=toc-title>table of contents</h1><nav id=TableOfContents><ul><li><a href=#syntax>Syntax</a></li><li><a href=#semantics>Semantics</a></li></ul></nav></aside><main><article><div><p>yafa!</p><h2 id=syntax>Syntax</h2><p>[ (Circle) -> [square] -> (Circle) | (Circle) ]</p><p>[ (circle) ]</p><p>[ &lt;lt1>(self loop) -> &lt;lt1> ]</p><pre tabindex=0><code class=language-bison data-lang=bison>EXPRESSION = EXPRESSION&#39; ARROW NODE | EXPRESSION&#39; ALTERNATION NODE | STRING
+EXPRESSION&#39; = EXPRESSION&#39; ARROW NODE | EXPRESSION&#39; ALTERNATION NODE | NODE
+
+NODE = SQUARE | CIRCLE | ANCHOR
+SQUARE = &#34;[&#34; EXPRESSION &#34;] | ANCHOR &#34;[&#34; EXPRESSION &#34;]
+ANCHOR = &#34;&lt;&#34; LABEL &#34;&gt;&#34;
+
+ALTERNATION = &#34;|&#34;
+ARROW = SARROW | DARROW
+SARROW = &#34;-&gt;&#34;
+DARROW = &#34;=&gt;&#34;
+
+LABEL = r&#34;[\w\d]+&#34;
+STRING = LABEL | &#34;\&#34;&#34; &#34;.*&#34; &#34;\&#34;&#34;
+</code></pre><h2 id=semantics>Semantics</h2></div></article></main><footer><p id=footer>&copy; 2019-2025 Houjun Liu. Licensed CC BY-NC-SA 4.0.</p></footer></div></body></html>
