@@ -8,7 +8,7 @@ layout = "blank"
 
 <h1 style="display:inline-block"> 👋 Howdy, I'm Houjun Liu! </h1>
 
-I'm a second year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), grateful to be advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). In the course of my research, I have also had the fortunate opportunity to work with Stanford NLP under Prof. [Chris Manning](https://nlp.stanford.edu/~manning/), CMU [TalkBank](https://talkbank.org/) under Prof. Brian MacWhinney, and Prof. Xin Liu at UC Davis Engineering. I am affiliated with the [Stanford NLP Group](https://nlp.stanford.edu/) and [Stanford Intelligent Systems Lab](https://sisl.stanford.edu/).
+I'm an third year undergraduate student in the Computer Science Department at [Stanford University](https://www.stanford.edu/), grateful to be advised by Prof. [Mykel Kochenderfer](https://mykel.kochenderfer.com/). In the course of my research, I have also had the fortunate opportunity to work with Stanford NLP under Prof. [Chris Manning](https://nlp.stanford.edu/~manning/), CMU [TalkBank](https://talkbank.org/) under Prof. Brian MacWhinney, and Prof. Xin Liu at UC Davis Engineering. I am affiliated with the [Stanford NLP Group](https://nlp.stanford.edu/) and [Stanford Intelligent Systems Lab](https://sisl.stanford.edu/).
 
 Welcome to my academic homepage! This is my little homestead on the internet about my academic interests. Check out ****[my projects](#projects)**** below. If you want to know more about the rest of my life, feel free to [visit my website](https://www.jemoka.com/)!
 
