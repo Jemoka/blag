@@ -19,6 +19,7 @@ If you are looking for a formal homepage, you may find my [website](https://www.
 -   Your most high value action is to be a cheerleader and steelman of your friends
     -   this frequently means that contextualized harsh feedback is often the best thing you can tell someone
 -   Relentlessly question assumptions, and understand things from first principles
+-   Guard your time fiercely, partition it consciously, otherwise it'll disappear on you
 -   It's really fun to be fast!
 
 Having now spewn forth very Bay-Area classic takes, I now have some Bay Area revisionism for you: I think the Bay has its own very groupthink mentality which is conducive to high velocity, but perhaps have lost some of the high-impact (read: "hippy") stuff it did in the 80s and 90s. And so...
@@ -27,16 +28,15 @@ Having now spewn forth very Bay-Area classic takes, I now have some Bay Area rev
     -   ...and so work to make sure you have 3 bowls of ricenoodles everyday, and then let's talk
 -   The trend to be "tech native" [enshittifies your shit](https://techcrunch.com/2020/10/06/googles-new-logos-are-bad/), knock it off. You know what's an enduring brand for the last 100 years, and will for the next 100? a nice [bottle of Coke](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png).
 -   No, its not cool to sleep at the office. We stay because we have to and the work is important (perhaps [the most important we can do as a species](https://agi.safe.ai/)), not because we want to.
--   Guard your time fiercely, partition it consciously, otherwise it'll disappear on you
 
 Work to maximize living good life, and sadly, a pre-scarcity world means you have to actually try. So let's fucking ball 🏀
 
 
 ## Friends? {#friends}
 
-Contrary to popular belief I actually spend a decent amount of time going outside and having friends. You should meet some of them, they are very cool.
+Contrary to popular belief I actually spend a decent amount of time going outside and having friends. You should meet them, they are very cool.
 
--   [Sanity](https://www.jklsnt.com/) ([David](https://www.quantumi.sh/), [Hux](https://www.huxley.sh/), [Alb](https://exr0n.com/), and ) is a friend group formed over COVID that I still consider my best friends
+-   [Sanity](https://www.jklsnt.com/) ([David](https://www.quantumi.sh/), [Hux](https://www.huxley.sh/), [Alb](https://exr0n.com/), and [Zach](https://github.com/zbuster05)) is a friend group formed over COVID that I still consider my best friends
 -   I feel very privileged to have met many legendary friends during my time at Stanford, including [Joseph](https://shetaye.me/), [Mason](https://www.kc3wny.com/), [Danny](https://kdrag0n.dev/) and [John](https://www.linkedin.com/in/john-corso-3591b0293/); some are so legendary they won't let me list them here, you know who you are
 -   I'm privileged to have enjoyed a long and productive friendship with two close collaborators, [Amelia](https://ameliahardy.github.io/) and [Robert](https://robertcsordas.github.io/), and very grateful to friends and colleges at [SISL](https://sisl.stanford.edu/) and [Stanford NLP](https://nlp.stanford.edu/)
 
