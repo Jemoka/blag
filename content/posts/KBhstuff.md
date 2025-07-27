@@ -24,9 +24,9 @@ If you are looking for a formal homepage, you may find my [website](https://www.
 
 Having now spewn forth very Bay-Area classic takes, I now have some Bay Area revisionism for you: I think the Bay has its own very groupthink mentality which is conducive to high velocity, but perhaps have lost some of the high-impact (read: "hippy") stuff it did in the 80s and 90s. And so...
 
--   Fun fact: you need 2 bowls of ricenoodles a day to survive; 10 bowls today will result in wasted ricenoodles.
-    -   ...and so work to make sure you have 3 bowls of ricenoodles everyday, and then let's talk
--   The trend to be "tech native" [enshittifies your shit](https://techcrunch.com/2020/10/06/googles-new-logos-are-bad/), knock it off. You know what's an enduring brand for the last 100 years, and will for the next 100? a nice [bottle of Coke](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png).
+-   Fun fact: you need 2 bowls of ricenoodles a day to survive; a sudden glut of 10 bowls will just result in wasted ricenoodles
+    -   ...and so work to win the long race, not just to have fun now
+-   The trend to be "tech native" [enshittifies your shit](https://techcrunch.com/2020/10/06/googles-new-logos-are-bad/), [knock it off](https://x.com/usgraphics/status/1946611727967412296). You know what's an enduring brand for the last 100 years, and will for the next 100? a nice [bottle of Coke](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/2560px-Coca-Cola_logo.svg.png).
 -   No, its not cool to sleep at the office. We stay because we have to and the work is important (perhaps [the most important we can do as a species](https://agi.safe.ai/)), not because we want to.
 
 Work to maximize living good life, and sadly, a pre-scarcity world means you have to actually try. So let's fucking ball 🏀
