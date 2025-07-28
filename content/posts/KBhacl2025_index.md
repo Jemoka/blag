@@ -12,6 +12,8 @@ draft = false
 
 ## Posters {#posters}
 
+-   [ACL2025 Monday Morning Posters]({{< relref "KBhacl2025_monday_morning_posters.md" >}})
+
 
 ## Takes {#takes}
 
