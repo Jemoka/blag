@@ -40,7 +40,7 @@ I’m broadly interested in Natural Language Processing and Speech Language Samp
 <div style="font-weight: 500; font-size: 14px; opacity: 0.5">Stanford NLP (2025)</div>
 <div style="font-weight: 500">Drop Dropout on Single Epoch Language Model Pretraining</div>
 <div><u>Liu, H.</u>, Bauer, J., Manning, C.D.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Poster@ACL Findings</span><span class="tag"><a  target="_top" href="https://arxiv.org/abs/2505.24788">arXiv</a></span></div>
+<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag">Poster@ACL Findings</span><span class="tag"><a  target="_top" href="https://aclanthology.org/2025.findings-acl.111/">Paper@ACL Anthology</a></span></div>
 </div>
 
 <div style="padding: 15px 0">
