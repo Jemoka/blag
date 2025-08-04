@@ -85,6 +85,7 @@ Here are a list of random indicies which may end up being helpful!
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-03-03 Mon&gt;</span></span> |                                      |                                                                                         | [Planning for Learning]({{< relref "KBhplanning_for_learning.md" >}})                             |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-03-06 Thu&gt;</span></span> | Theorem Proving                      |                                                                                         | [Self-Play Conjection Generalization]({{< relref "KBhself_play_conjection_generalization.md" >}}) |
 | <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-04-10 Thu&gt;</span></span> | Safety for Trucks                    | [Safety for Autonomous Trucking]({{< relref "KBhsafety_for_autonomous_trucking.md" >}}) |                                                                                                   |
+| <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-08-04 Mon&gt;</span></span> | Collaborate Multiagent DM            | [Collaborative Multiagent DM]({{< relref "KBhcollaborative_multiagent_dm.md" >}})       |                                                                                                   |
 
 
 ## Contacts {#contacts}
