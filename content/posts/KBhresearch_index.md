@@ -95,20 +95,6 @@ I’m broadly interested in Natural Language Processing and Speech Language Samp
 <div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1044/2022_AJSLP-22-00281">Journal Article@AJSLP</a></span></div>
 </div>
 
-<div style="padding: 15px 0">
-<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Nueva (2022)</div>
-<div style="font-weight: 500">ConDef: Automated Context-Aware Lexicography Using Large Online Encyclopedias</div>
-<div><u>Liu, H.</u>, Sayyah, Z.</div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://doi.org/10.1007/978-3-031-10464-0_41">Book Chapter@LNNS</a></span><span class="tag"><a  target="_top" href="https://github.com/jklsnt/dictembed">Code@GitHub</a></span><span class="tag">Talk@SAI</span></div>
-</div>
-
-<div style="padding: 15px 0">
-<div style="font-weight: 500; font-size: 14px; opacity: 0.5">Preprint (2021)</div>
-<div style="font-weight: 500">Towards Automated Psychotherapy via Language Modeling</div>
-<div><u>Liu, H.</u></div>
-<div style="padding-top: 5px; transform: translateX(-2px)"><span class="tag"><a  target="_top" href="https://arxiv.org/abs/2104.10661">arXiv</a></span></div>
-</div>
-
 
 ## Teaching {#teaching}
 
